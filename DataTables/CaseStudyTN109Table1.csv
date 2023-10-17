@@ -1,0 +1,42 @@
+Seg ID,From/To,Hwy Seg Type,Two-Lane Seg Type,# Dir Lanes,Length (ft),Length (mi),Terrain,Vertical Align Class,Posted Speed (mi/h)
+1,Start Point - Clear Lake Meadows Dr.,MultilaneHwy,---,2,1853,0.3509,Level,NA,55
+2,Clear Lake Meadows Dr. - Ryan Ave.,MultilaneHwy,---,2,4444,0.8417,Level,NA,55
+3,Ryan Ave - Hancock St,MultilaneHwy,---,2,1517,0.2873,Rolling,NA,55
+4,Hancock St.,SigIntersection,---,2,800,0.1515,NA,NA,55
+5,Hancock St. - Nashville Turnpike Off Ramp,MultilaneHwy,---,2,2440,0.4621,Rolling,NA,55
+6,Nashville Turnpike Off Ramp - Nashville Turnpike On Ramp,MultilaneHwy,---,2,897,0.1699,Rolling,NA,55
+7,Nashville Turnpike On Ramp - Long Hollow Pike Off Ramp,MultilaneHwy,---,2,1430,0.2708,Rolling,NA,55
+8,Hollow Point Pike Off Ramp - Hollow Point Pike On Ramp,MultilaneHwy,---,2,2196,0.4159,Rolling,NA,55
+9,Hollow Point Pike On Ramp - Red River Road,MultilaneHwy,---,2,3303,0.6256,Level,NA,55
+10,Red River Rd.,SigIntersection,---,2,300,0.0568,NA,NA,55
+11,Red River Rd. - Albert Gallatin Ave Off Ramp,MultilaneHwy,---,2,3369,0.6381,Level,NA,55
+12,Albert Gallatin Ave Off Ramp - Albert Gallatin Ave On Ramp,MultilaneHwy,---,2,1595,0.3021,Rolling,NA,55
+13,Albert Gallatin Ave On Ramp - Old Douglas Rd.,MultilaneHwy,---,2,5377,1.0184,Rolling,NA,55
+14,Old Douglas Rd - Old Hwy 109 N (Before),MultilaneHwy,---,2,1340,0.2538,Rolling,NA,55
+15,Old Hwy 109 N (End) - S Tunnel Rd,MultilaneHwy,---,2,16760,3.1742,Rolling,NA,55
+16,S Tunnel Rd - Scotty Parker Rd,MultilaneHwy,---,2,8175,1.5483,Rolling,NA,55
+17,Scotty Parker Rd - Old Tennessee 109,MultilaneHwy,---,2,847,0.1604,Rolling,NA,55
+18,Old Tenessee Rd - Hollis Chapel Rd,MultilaneHwy,---,2,1182,0.2239,Rolling,NA,55
+19,Hollis Chapel Rd - Roberts Rd,MultilaneHwy,---,2,2130,0.4034,Level,NA,55
+20,Roberts Rd - Boiling Springs Rd,MultilaneHwy,---,2,8130,1.5398,Level,NA,55
+21,Boiling Springs Rd - N Centerpoint Rd,MultilaneHwy,---,2,3505,0.6638,Rolling,NA,55
+22,N Centerpoint Rd - PSL Decrease (55 to 45),MultilaneHwy,---,2,5545,1.0502,Rolling,NA,55
+23,PSL Drop (55 to 45) - SR-76,MultilaneHwy,---,2,2880,0.5455,Rolling,NA,45
+24,SR-76/Fountainhead Rd,SigIntersection,---,2,300,0.0568,NA,NA,45
+25,SR-76 - Longview Dr.,MultilaneHwy,---,2,4040,0.7652,Level,NA,45
+26,Longview Dr.,SigIntersection,---,2,1400,0.2652,NA,NA,45
+27,Longview Dr - SR-52,MultilaneHwy,---,2,5715,1.0824,Level,NA,45
+28,SR-52,SigIntersection,---,2,225,0.0426,NA,NA,45
+29,SR-52 - Morningside Dr,Arterial,---,2,5405,1.0237,NA,NA,30
+30,Morningside Dr - Oakhill Dr,TwoLaneHwy,PassingConstrained,1,3633,0.6881,NA,1,45
+31,Oakhill Dr - National Barn Company Driveway,TwoLaneHwy,PassingZone,1,2290,0.4337,NA,1,45
+32,Kirby Dr,SigIntersection,---,1,1515,0.2869,NA,NA,45
+33, - ,TwoLaneHwy,PassingZone,1,1664,0.3152,NA,1,45
+34, - ,TwoLaneHwy,PassingConstrained,1,1170,0.2216,NA,1,45
+35, - Kenwood Dr,TwoLaneHwy,PassingZone,1,1264,0.2394,NA,1,45
+36,Kenwood Dr - Woods Dr,TwoLaneHwy,PassingConstrained,1,970,0.1837,NA,1,45
+37,Woods Dr - PSL Decrease (45 to 40),TwoLaneHwy,PassingZone,1,1497,0.2835,NA,1,45
+38, - Magnolia Springs Rd,TwoLaneHwy,PassingConstrained,1,1590,0.3011,NA,1,40
+39,Magnolia Springs Rd - Hwy 31 W,MultilaneHwy,---,2,3452,0.6538,Level,NA,40
+40,Hwy 31 W,SigIntersection,---,2,425,0.0805,NA,NA,40
+41,Hwy 31 W - I-65 (End Point),MultilaneHwy,---,2,1628,0.3083,Level,NA,40

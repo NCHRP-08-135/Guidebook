@@ -1,0 +1,199 @@
+# Case Study: Montana US-287 {#CaseStudyMT287}
+
+## Route Description
+
+This route extends from 1.0 mile south of the small rural town of [Townsend](https://www.google.com/maps/place/46%C2%B017'36.9%22N+111%C2%B030'15.2%22W/@46.293643,-111.5045169,19z/data=!4m4!3m3!8m2!3d46.2935846!4d-111.5042084?entry=ttu) to the center of [East Helena, Montana](https://www.google.com/maps/place/46%C2%B035'25.4%22N+111%C2%B056'15.9%22W/@46.5917945,-111.9566068,13.5z/data=!4m4!3m3!8m2!3d46.5903932!4d-111.9377508?entry=ttu). US-287 serves as an important connection between Helena and I-90. This section of US-287 is approximately 30 miles in length.
+
+The highest posted speed limit is 70 mi/h for the rural parts of the corridor (majority distance by length) and the lowest posted speed limit is 25 mi/h in the town of Townsend. The route is shown in Figure \@ref(fig:US287RouteMap), as well as the [linked online map](https://www.google.com/maps/dir/46.293584644800966,+-111.50420836367195/46.59039324407053,+-111.93775081845547/@46.4923603,-111.8630877,10.75z/data=!4m10!4m9!1m3!2m2!1d-111.5042084!2d46.2935846!1m3!2m2!1d-111.9377508!2d46.5903932!3e0?hl=en&authuser=0).
+
+```{r US287RouteMap, echo=FALSE, fig.cap='Montanta US-287 Study Route Boundaries. Source: Map data from [©OpenStreetMap](https://www.openstreetmap.org/copyright)',out.width="60%", fig.align='center'}
+knitr::include_graphics("./Images/CaseStudyMT287/US-287.png")
+```
+
+## Level of service
+
+### Segmentation {-}
+
+This route is mainly comprised of a two-lane highway segments--passing constrained, passing zones, and two stretches of passing lanes. Unlike the other case study routes, this route contains an All-Way Stop-Control (AWSC) intersection, in the town of Townsend.
+
+The facility segmentation, in the northbound direction, for this route was performed based on the change in cross-section, change in passing restrictions, and change in the posted speed limit. This resulted in a total of 38 segments including two passing lane segments, seven segments (with different speed limits) through the town of Townsend, two signal-control intersections, two multilane highway segments, and one All-Way Stop-Control (AWSC) intersection in Townsend. The remaining segments are two-lane highways (with passing or no-passing restrictions).
+
+The final segmentation is shown in Table \@ref(tab:SegmentationUS287). The total length is 30.934 mi.
+
+
+```{r SegmentationUS287, echo=FALSE}
+
+Filename <- "./DataTables/CaseStudyMT287Table1.csv"
+HighwayData <- read.csv(file = Filename, header = TRUE)
+
+ColumnLabels <- c("Seg ID","Hwy Seg Type","Two-Lane Seg Type","# Dir Lanes","Length (ft)","Grade (%)","Vertical Align Class","# Horiz Curves","Posted Speed (mi/h)")
+
+knitr::kable(
+  HighwayData,
+  col.names = ColumnLabels,
+  booktabs = TRUE,
+  caption = 'Final Segmentation for Montana US-287 Study Route') %>%
+  row_spec(0, angle = TableColumnHeaderTextAngle) %>%
+  kable_styling(latex_options = "scale_down") %>%
+  scroll_box(width = "100%", box_css = "border: 0px;")
+```
+
+
+#### Segmentation Through the Town of Townsend, MT {-}
+
+Townsend is a small rural town on US-287 Highway, about 32 miles southeast of Helena. The total population of Townsend is 2080 people (according to 2020 census data). The stretch of road through the town of Townsend is comprised of 8 segments as indicated in Table \@ref(tab:TownsendSegmentation) (starting at the southeast end of the town).
+
+```{r TownsendSegmentation, echo=FALSE}
+
+Filename <- "./DataTables/CaseStudyMT287Table2.csv"
+HighwayData <- read.csv(file = Filename, header = TRUE)
+
+ColumnLabels <- c("Seg ID","Hwy Seg Type","Two-Lane Seg Type","# Dir Lanes","Length (ft)","Grade (%)","Vertical Align Class","Posted Speed (mi/h)")
+
+knitr::kable(
+  HighwayData,
+  col.names = ColumnLabels,
+  booktabs = TRUE,
+  caption = 'Segments through Townsend, MT (US-287)') %>%
+  row_spec(0, angle = TableColumnHeaderTextAngle) %>%
+  kable_styling(latex_options = "scale_down") %>%
+  scroll_box(width = "100%", box_css = "border: 0px;")
+```
+
+The stretch of road through the town of Townsend is approximately 1.9 mi in length, as shown in Figure \@ref(fig:US287Townsend).
+
+```{r US287Townsend, echo=FALSE, fig.cap='US-287 Stretch Through Townsend. Source: Map data ©2022 Google',out.width="60%", fig.align='center'}
+knitr::include_graphics("./Images/CaseStudyMT287/US-287throughTownsend.png")
+```
+
+The speed limits are 45, 35, and 25 mi/h entering the town and in the reverse order exiting the town. The roadway characteristics through the town are as follows:
+
+- 1 lane in the analysis direction
+- Two-way left-turn lane in the center
+- AWSC intersection 
+- No curb and gutter in the beginning of town, and then curb on both sides (starts at E-street)
+- Sidewalk on the east-side of the roadway only
+- Numerous driveways and access roads within the town limits
+- 25 mi/h zone in Townsend is about 0.32 mi (1700 ft) long
+
+
+***Influence area and adjusted length calculations***
+
+For the AWSC intersection (Segment 8), the upstream and downstream influence areas are initially calculated per Eq. \@ref(eq:InfluenceAreaEq5) and Eq. \@ref(eq:InfluenceAreaEq6), respectively. However, because of the low posted speed limit in this location, the practical braking and acceleration distance equations govern (Eq. \@ref(eq:BrakingDistance) and Eq. \@ref(eq:AccelDistance)). For the signal control intersections (Segments 35 and 37), the upstream influence area is calculated per Eq. \@ref(eq:InfluenceAreaEq1) and the downstream influence area per Eq. \@ref(eq:InfluenceAreaEq2).
+
+The resulting influence area values are:
+
+- Segment 8, Upstream influence area = 151 ft (0.0286 mi), Downstream influence area = 125 ft (0.0237 mi)
+- Segment 35, Upstream influence area = 1220 ft (0.2309 mi), Downstream influence area = 1906 ft (0.2077 mi)
+- Segment 37, Upstream influence area = 643 ft (0.1218 mi), Downstream influence area = 1114 ft (0.2110 mi)
+
+
+### Traffic Data {-}
+
+Traffic data were obtained from the Montana Department of Transportation (MDOT) [Traffic Data Portal](https://www.mdt.mt.gov/publications/datastats/traffic-maps.aspx). Traffic sensor coverage of the area is shown in Figure \@ref(fig:TrafficDataSensorsMT287).
+
+
+```{r TrafficDataSensorsMT287, echo=FALSE, fig.cap='Traffic Data Sensors on US-287 - Townsend Route', out.width="60%", fig.align='center'}
+knitr::include_graphics("./Images/CaseStudyMT287/TrafficDataSensorsMT287.png")
+```
+
+Detector data from the study route are summarized in Table \@ref(tab:TrafficDataMT287).
+
+Table: (\#tab:TrafficDataMT287) US-287 Townsend Route Traffic Data
+
+**Sensor No.**|**Sensor ID**|**AADT (veh/day)**|**K (%)**|**D (%)**|**Truck (%)**|**Dir. Demand (veh/h)**|**Opp. Demand (veh/h)**
+:-----:|:------|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+1|04-1-011|4381|11|60|10|289|193
+2|04-1-010|6863|12|60|6|494|329
+3|04-1-009|7531|11|60|6|497|331
+4|04-1-008|7169|11|60|6|473|315
+5|04-1-002|6431|11|60|7|424|283
+6|W-101|6537|12|54|7|471|314
+7|A-002|7055|11|54|6|419|357
+8|25-7B-002|11445|9|60|4|618|412
+9|25-7B-024|14013|10|63|8|883|518
+10|25-7B-019|17196|10|63|7|1083|636
+
+The assignment of volumes to segments are as follows:
+
+**Sensor No.**|**Corresponding Segment(s) for Volume**|
+:-----:|:-----:|
+1|1-2|
+2|3-7|
+3|8-10|
+4|11-12|
+5|13-16|
+6|17-30|
+7|31-33|
+8|34-35|
+9|36-37|
+10|38|
+
+
+### Results {-}
+
+The segment LOS results are shown in Tables \@ref(tab:MT287LOSresults1) and \@ref(tab:MT287LOSresults2).
+
+
+```{r MT287LOSresults1, echo=FALSE}
+
+Filename <- "./DataTables/CaseStudyMT287Table5.csv"
+HighwayData <- read.csv(file = Filename, header = TRUE)
+
+ColumnLabels <- c("Seg ID","Hwy Seg Type","Two-Lane Seg Type","# Dir Lanes","Length (mi)","Eff. Len. Upstream (mi)","Eff. Len. Downstream (mi)","Adj. Length (mi)","Posted Speed (mi/h)","Dir Volume (veh/h)","Opp Volume (veh/h)","PHF","Dir Truck%","Analysis Flow Rate (veh/h/ln)","Analysis Flow Rate (pc/h/ln)","Vertical Align Class","FFS (mi/h)","Free-Flow Trav Time (s)","Avg Speed (mi/h)","Avg Travel Time (s)")
+
+knitr::kable(
+  HighwayData,
+  col.names = ColumnLabels,
+  booktabs = TRUE,
+  caption = 'US-287 Segment LOS Analysis Results, Part 1') %>%
+  row_spec(0, angle = TableColumnHeaderTextAngle) %>%
+  kable_styling(latex_options = "scale_down") %>%
+  scroll_box(width = "100%", box_css = "border: 0px;")
+```
+
+
+```{r MT287LOSresults2, echo=FALSE}
+
+Filename <- "./DataTables/CaseStudyMT287Table6.csv"
+HighwayData2 <- read.csv(file = Filename, header = TRUE)
+
+ColumnLabels2 <- c("Seg ID","% Followers","Density (pc/mi/ln)","Density (veh/mi/ln)","Follower Density (veh/mi/ln)","Adj. Follower Density (veh/mi/ln)","Avg. Thresh. Delay (s/veh)","Avg. Thresh. Delay (%)","Avg. FFS Delay (s/veh)","Avg. FFS Delay (%)","LOS","LOS Value","Demand/Capacity","Available Capacity (veh/h)","Momentum (vol x speed)","VMT","VHT","VHD")
+
+knitr::kable(
+  HighwayData2,
+  col.names = ColumnLabels2,
+  booktabs = TRUE,
+  caption = 'US-287 Segment LOS Analysis Results, Part 2') %>%
+  row_spec(0, angle = TableColumnHeaderTextAngle) %>%
+  kable_styling(latex_options = "scale_down") %>%
+  scroll_box(width = "100%", box_css = "border: 0px;")
+```
+
+
+The facility LOS results are shown in Table \@ref(tab:MT287FacilityResults)
+
+Table: (\#tab:MT287FacilityResults) US-287 Facility Analysis Results
+
+**Performance Measure**|**Value**
+:-----|:-----:
+Free Flow Travel Time (s)|1571.8
+Avg. Travel Time (s)|1693.79
+Avg. Speed (mi/h)|65.75
+VMT (veh-mi)|15660.32
+VHT (veh-h)|244.907
+Delay (veh-h)|19.839
+Avg. FFS Delay (s/veh)|122.02
+Avg. FFS Delay (%)|7.8
+Avg. Threshold Delay (s/veh)|64.52
+Avg. Threshold Delay (%)|4.1
+LOS Score (Weighted-Travel Time)|1.493
+LOS Constancy|0.479
+LOS Adjustment Factor|1.056
+LOS Score (Weighted-Travel Time and Adjusted)|1.577
+Maximum d/c|0.781
+
+
+**Discussion**
+
+The overall facility LOS, based on a LOS score of 1.58, is B. This is indicative of very good operations of the overall facility. This conclusion is further corroborated by an average facility speed of 65.8 mi/h and an average free-flow speed delay of 7.8%. Further, LOS at the segment level indicates that all segments operate at LOS C or better except for three segments in the rural town of Townsend that were found to operate at LOS D. These three segments have a posted speed limit of 25 mi/h. Notably, the maximum d/c of 0.781 occurs at the AWSC intersection located within Townsend. The signal-control intersections in East Helena operate at LOS C, whereas the segments of multilane highway have densities of 8.8 veh/mi/ln and 11.3 veh/mi/ln with LOS A and B, respectively. The LOS constancy of the facility is 0.479. This relatively low value suggests minimal variability or fluctuations in the LOS from one segment to another along the facility.

@@ -1,0 +1,286 @@
+# Signalized Intersection Analysis Methodology {#HCMsignal}
+
+The core signalized intersection analysis methodology is contained in Chapter 19 (Signalized Intersections). The motorized vehicle analysis methodology process is given in Exhibit 19-18 (p. 19-42). The methodology applied for the analysis of signalized intersections within the context of a rural highway analysis makes use of elements from both the operations-level and planning-level analysis methodologies. The planning-level elements are contained in Chapter 31 (Signalized Intersections: Supplemental). The specific equation and exhibit numbers utilized in the methodology, in the general order in which they are applied, are as follows.
+
+## Equations and Exhibits
+
+**Step 1: Determine Movement Groups and Lane Groups**
+
+- Exhibit 19-19: Typical Movement Groups and Lane Groups
+
+Exhibit 19-19 shows typical movement and lane group designations for a varying number of approach lanes. It, however, is not an exhaustive list. Follow the guidance as provided in the HCM text under this step. Apply engineering judgement as necessary. The analysis is based on the through movement in the analysis direction.
+
+**Step 2: Determine Movement Group Flow Rate**
+
+Follow the guidance as provided in the HCM text under this step. Apply engineering judgement as necessary.
+
+**Step 3: Determine Lane Group Flow Rate**
+
+Follow the guidance as provided in the HCM text under this step. Apply engineering judgement as necessary. 
+
+**Step 4: Determine Adjusted Saturation Flow Rate**
+
+- Equation 19-8: Estimate adjusted saturation flow rate; Uses results from Eq. 19-9 - 19-14 and Exhibit 19-20
+
+$$s = s_{o} f_{w} f_{HVg} f_{p} f_{bb} f_{a} f_{LU} f_{LT} f_{RT} f_{Lpb} f_{Rpb} f_{wz} f_{ms} f_{sp} \tag{HCM Eq. 19-8}$$
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Simplification**
+:::
+For intersections located along rural highways, the following factors are not considered. Thus, the corresponding adjustment factor value for each variable is assumed to be 1.0.
+
+$f_{a}$ = adjustment factor for area type (adjustment usually only applied to intersections in central business districts)
+$f_{bb}$ = adjustment factor for bus blockage (Equation 19-12)  
+$f_{Lpb}$ = pedestrian adjustment factor for left-turn groups (procedure in HCM Chapter 31)  
+$f_{Rpb}$ = pedestrian–bicycle adjustment factor for right-turn groups (procedure in HCM Chapter 31)  
+$f_{wz}$ = adjustment factor for work zone presence at the intersection (procedure in HCM Chapter 31)  
+$f_{ms}$ = adjustment factor for downstream lane blockage (procedure in HCM Chapter 30)  
+$f_{sp}$ = adjustment factor for sustained spillback (procedure in HCM Chapter 29)  
+
+Consequently, Eq. 19-8 simplifies to $s = s_{o} f_{w} f_{HVg} f_{p} f_{LU} f_{LT} f_{RT}$
+::::
+
+  - Base saturation flow rate: Per Exhibit 19-11, a value of 1750 pc/h/ln is used (applies to areas with a population less than 250,000)
+  - Exhibit 19-20: Lane Width Adjustment Factor
+  
+**Average Lane Width (ft) **|**Adjustment Factor $f_w$**
+:-----:|:-----:
+< 10.0 |0.96
+≥ 10.0-12.9 |1.00
+> 12.9 |1.04
+
+Note: Factors apply to average lane widths of 8.0 ft or more
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Simplification**
+:::
+The adjustment for heavy vehicles uses the inverse of Eq. 31-158 in lieu of Eqs. 19-9 and 19-20. With this simplification, the roadway grade is also not considered in the impact of heavy vehicles on saturation flow rate.
+::::
+
+  - Adjustment for Heavy Vehicles
+    - First calculate the heavy vehicle equivalency factor using Equation 31-158. For planning, $E_T$, the equivalent number of through cars for each heavy vehicle, is assumed to be 2.0.
+  
+$$E_{HV} = 1+0.01 P_{HV} (E_T-1) \tag{HCM Eq. 31-158}$$
+In the full planning approach, this value is applied directly to adjust the demand volume. However, in this approach, the inverse of this value is applied as an adjustment to the base saturation flow rate, as follows.
+
+$$f_{HV} = \frac{1}{E_{HV}}$$
+$f_{HV}$ is used for $f_{HVg}$ in Eq. 19-8.
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Simplification**
+:::
+Exhibit 31-35 is used in lieu of Equation 19-11 (adjustment factor for parking)
+::::
+
+  - Exhibit 31-35: Equivalency Factor for Parking Activity (Planning-Level Analysis); The $f_{p}$ value is calculated as the inverse of the value selected from Exhibit 31-25
+  
+**On-Street Parking Presence**|**No. of Lanes in Lane Group**|**Equivalency Factor for Parking Activity $E_p$**
+:-----:|:-----:|:-----:
+No|All|1.0
+Yes|1|1.2
+Yes|2|1.1
+Yes|3|1.05
+  
+  - Adjustment for area type: A value of 1.0 is used, for non-Central Business District (CBD) areas
+  
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Simplification**
+:::
+Exhibit 19-15 is used in lieu of Equation 19-7 (adjustment factor for lane utilization)
+::::
+
+  - Exhibit 19-15: Default Lane Utilization Adjustment Factors
+  
+**Movement Group**|**No. of Lanes in Movement Group (ln)**|**Traffic in Most Heavily Traveled Lane (%)**|**Lane Utilization Adjustment Factor $f_{LU}$**
+:-----:|:-----:|:-----:|:-----:
+Exclusive through    |1|100.0|1.000
+Exclusive through    |2|52.5 |0.952
+Exclusive through    |3|36.7 |0.908
+Exclusive left turn  |1|100.0|1.000
+Exclusive left turn  |2|51.5 |0.971
+Exclusive right turn |1|100.0|1.000
+Exclusive right turn |2|56.5 |0.88
+
+
+  - Equation 19-13: Adjustment for right turns
+    - The equivalent number of through cars for a protected right-turning vehicle ($E_{R}$) is set to a value of 1.18 for protected right-turning vehicles; If the right-turn movement is permitted or shares a lane with another movement, the $E_{R}$ value is selected from Exhibit 31-34. In the latter case, it is assumed that pedestrian activity at rural intersections is low; thus, $E_R$ = 1.2. 
+    
+$$f_{RT} = \frac{1}{E_{R}} \tag{HCM Eq. 19-13}$$
+
+  - Exhibit 31-34: Planning-Level Analysis--Equivalency Factor for Right Turns
+  
+**Level of Pedestrian Activity**|**Pedestrian Volume (p/h)**|**Equivalency Factor for Right Turns $E_RT$**
+:----------|:-----:|:-----:
+None or low|0-199|1.2
+Moderate   |200-399|1.3
+High       |400-799|1.5
+Extreme    |$\geq$ 800|2.1
+ 
+  - Equation 19-14: Adjustment for left turns
+    - The equivalent number of through cars for a protected left-turning vehicle ($E_{L}$) is set to a value of 1.05 for protected left-turning vehicles; If the left-turn movement is permitted or shares a lane with another movement, the $E_{L}$ value is selected from Exhibit 31-33
+    
+$$f_{LT} = \frac{1}{E_{L}} \tag{HCM Eq. 19-14}$$
+
+  - Exhibit 31-33: Planning-Level Analysis--Equivalency Factor for Left Turns
+
+**Left-Turn Operation**|**Total Opposing Volume $V_o$ (veh/h)^**|**Equivalency Factor for Left Turns $E_LT$**
+|:-----------------------------|:-------|:-----:
+|Protected—with left-turn phase|Any|1.05
+|Protected—split phasing       |Any|1.05
+|Permitted—no left-turn phase  |< 200|1.1
+|                              |200–599|2.0
+|                              |600–799|3.0
+|                              |800–999|4.0
+|                              |$\geq$ 1,000|5.0
+
+^ Includes the sum of through and right-turn volumes on the opposing approach, regardless of whether the right-turn volume is served in an exclusive right-turn lane
+
+**Step 5: Determine Proportion Arriving During Green**
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Simplification**
+:::
+For isolated intersections as well as intersections that are part of a coordinated system (the latter is discussed further under the Urban Street Facilities section), the arrival type is used as a simplification for estimating the proportion of vehicle arrivals on green. Thus, an analyst-selected arrival type is used to obtain a platoon ratio, $R_{p}$, value, from Exhibit 19-13 (Relationship between arrival type and progression quality). This platoon ratio is used with the $g/C$ ratio in Equation 19-15 to estimate the proportion of vehicle arrivals on green.
+::::
+
+Exhibit 19-13: Relationship Between Arrival Type and Progression Quality
+
+**Platoon Ratio**|**Arrival Type**|**Progression Quality**
+:-----:|:-----:|:-----:
+0.33|1|Very poor
+0.67|2|Unfavorable
+1.00|3|Random arrivals
+1.33|4|Favorable
+1.67|5|Highly favorable
+2.00|6|Exceptionally favorable
+
+The platoon ratio ($R_{p}$) and effective green-to-cycle length ratio ($g/C$) are used with equation 19-15 to calculate the proportion of vehicle arrivals on green ($P$ or $PVG$).
+
+ - Equation 19-15: Proportion Arriving During Green
+ 
+$$P = R_{p}(g/C) \tag{HCM Eq. 19-15}$$
+
+**Step 6: Determine Signal Phase Duration**
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Simplification**
+:::
+Pre-timed signal control is assumed. If the signal is actuated, use field-measured average green times for the analysis period of interest.
+::::
+
+The effective green time (*g*) for the major roadway through movement, in the analysis direction, and signal cycle length (*C*) need to be input directly by the analyst. Thus, the yellow and all-red times should be reflected in the effective green time input as appropriate. If signal timing data are not readily available, refer to HCM equations 31-67 - 31-69 (from Chapter 31, Signalized Intersections: Supplemental) to estimate green times and cycle length.
+
+**Step 7: Determine Capacity and Volume-to-Capacity Ratio**
+
+- Equation 19-16: Estimate lane group capacity; This equation is applied to the lane group serving the major roadway through movement, for the analysis direction.
+
+$$c = {N}{s} \frac{g}{C} \tag{HCM Eq. 19-16}$$
+
+- Equation 19-17: Estimate volume-to-capacity ratio; This equation is applied to the lane group serving the major roadway through movement, for the analysis direction; Uses result from Eq. 19-16 
+
+$$X = \frac{v}{c} \tag{HCM Eq. 19-17}$$
+
+**Step 8: Determine Delay**
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Simplification**
+:::
+Because it is highly unlikely for signalized intersections along rural highways to experience sustained oversaturated conditions, the $d_3$ term (initial queue delay) in Eq. 19-18 below is assumed to be zero.
+::::
+
+- Equation 19-18: Estimate control delay; This equation is applied to the lane group serving the major roadway through movement, for the analysis direction.
+
+$$d = d_{1} + d_{2} + d_{3} \tag{HCM Eq. 19-18}$$
+
+- Equation 19-19: Estimate uniform delay; Uses result from Eq. 19-20
+
+$$d_{1} = {P}{F} \frac{0.5 {C}(1-g/C)^2} {1- [\text{min}(1,X) g/C]} \tag{HCM Eq. 19-19}$$
+
+- Equation 19-20: Estimate progression adjustment factor; Uses result from Eq. 19-21
+
+$${P}{F} = \frac{1-P}{1- g/C} \times \frac{1-y}{1-\text{min}(1,X){P}} \times \left[ 1 + y \frac {1-{P} C/g} {1-g/C} \right] \tag{HCM Eq. 19-20}$$
+
+- Equation 19-21: Estimate flow ratio
+
+$$y = \text{min}(1,X) g/C \tag{HCM Eq. 19-21}$$
+
+- Equation 19-26: Estimate incremental delay; Uses results from Eq. 19-27
+
+$$d_{2} = 900T \left[ (X_{A}-1) + \sqrt{(X_{A}-1)^2 + \frac{8kIX_{A}}{c_{A}T}} \right] \tag{HCM Eq. 19-26}$$
+
+  - Equation 19-27: Estimate average volume-to-capacity ratio; No initial queue is assumed, thus result will be same as that calculated with equation 19-17
+  
+$$X_{A} = v/c_{A} \tag{HCM Eq. 19-27}$$
+  
+  - The incremental delay factor (*k*) used in this equation is set to 0.5, for pretimed control
+  - The upstream filtering adjustment factor (*I*) used in this equation is set to 1.0, for isolated intersection
+
+**Step 9: Determine Level of Service**
+
+- Exhibit 19-8: LOS Criteria (Motorized Vehicle Mode); The LOS is determined for the major roadway through movement, for the analysis direction.
+
+**Control Delay (s/veh)**|**LOS**
+:-----:|:-----:
+$\leq$ 10 |A 
+> 10-20 |B 
+> 20-35 |C 
+> 35-55 |D 
+> 55-80 |E 
+> 80 |F 
+
+If the $v/c$ > 1.0, the LOS is F.
+
+
+## Nomenclature
+
+$C$ = cycle length (s)  
+$c$ = capacity (veh/h)  
+$c_{A}$ = average lane-group capacity (veh/h)  
+$d$ = control delay (s/veh)   
+$d_{1}$ = uniform delay (s/veh)  
+$d_{2}$ = incremental delay (s/veh)  
+$d_{3}$ = initial queue delay (s/veh)  
+$d_{i}$ = control delay for approach *i* (s/veh)  
+$d_{intersection}$ = control delay for the entire intersection (s/veh)  
+$E_{HV}$ = equivalency factor for heavy vehicles  
+$E_{L}$ = equivalent number of through cars for a protected left-turning vehicle (= 1.05)  
+$E_{R}$ = equivalent number of through cars for a protected right-turning vehicle (= 1.18)  
+$f_{a}$ = adjustment factor for area type  
+$f_{bb}$ = adjustment factor for blocking effect of local buses that stop within intersection area  
+$f_{HV}$ = adjustment factor for heavy vehicles   
+$f_{HVg}$ = adjustment factor for heavy vehicles and grade  
+$f_{Lpb}$ = pedestrian adjustment factor for left-turn groups  
+$f_{LT}$ = adjustment factor for left-turn vehicle presence in a lane group  
+$f_{LU}$ = adjustment factor for lane utilization  
+$f_{ms}$ = adjustment factor for downstream lane blockage  
+$f_{p}$ = adjustment factor for existence of a parking lane and parking activity adjacent to lane group  
+$f_{Rpb}$ = pedestrian-bicycle adjustment factor for right-turn groups  
+$f_{RT}$ = adjustment factor for right-turn vehicle presence in a lane group  
+$f_{sp}$ = adjustment factor for sustained spillback  
+$f_{w}$ = adjustment factor for lane width  
+$f_{wz}$ = adjustment factor for work zone presence at the intersection  
+$g$ = effective green time (s)  
+$I$ = upstream filtering adjustment factor, standalone $I$ = 1.0; for urban streets *I* is calculated per HCM Equation 19-6, $I = 1.0 - 0.91X_{u}^{2.68} \geq 0.090$  
+$k$ = incremental delay factor  
+$N$ = number of lanes in lane group (ln)  
+$N_{b}$ = bus stopping rate on the subject approach (buses/h)  
+$P$ = proportion of vehicles arriving during the green indication (decimal)  
+$P_{g}$ = approach grade for the corresponding movement group (%)  
+$P_{HV}$ = percentage of heavy vehicles in the corresponding movement group (%)  
+$PF$ = progression adjustment factor  
+$R_{p}$ = platoon ratio   
+$s$ = adjusted saturation flow rate (veh/h/ln)  
+$s_{o}$ = base saturation flow rate (pc/h/ln)  
+$T$ = analysis period (h) (T=0.25 h for 15-min analysis)  
+$v$ = demand flow rate (veh/h)  
+$X$ = volume-to-capacity ratio  
+$X_{A}$ = average volume-to-capacity ratio  
+$X_{u}$ = weighted volume-to-capacity ratio for all upstream movements contributing to the volume in the subject movement group  
+$y$ = flow ratio  

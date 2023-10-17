@@ -1,0 +1,30 @@
+Seg ID,From/To,Hwy Seg Type,Two-Lane Seg Type,# Dir Lanes,Length (ft),Length (mi),Terrain,Vertical Align Class,Posted Speed (mi/h)
+1, - ,TwoLaneHwy,PassingConstrained,1,6794,1.2867,NA,1,50
+2,London Rd,SigIntersection,---,1,2547,0.4824,NA,NA,50
+3, - ,TwoLaneHwy,PassingZone,1,1182,0.2239,NA,1,50
+4, - ,TwoLaneHwy,PassingConstrained,1,1428,0.2705,NA,1,50
+5,Sawmill Pkwy,SigIntersection,---,1,500,0.0947,NA,NA,50
+6, - ,TwoLaneHwy,PassingConstrained,1,1355,0.2566,NA,1,50
+7, - ,TwoLaneHwy,PassingZone,1,6171,1.1688,NA,1,55
+8,S Section Line Rd,SigIntersection,---,1,1646,0.3117,NA,NA,55
+9, - ,TwoLaneHwy,PassingZone,1,3714,0.7034,NA,1,55
+10,Riverside Dr/Klondike Rd,SigIntersection,---,1,2920,0.553,NA,NA,55
+11,Dublin Rd,SigIntersection,---,1,2862,0.542,NA,NA,55
+12, - ,TwoLaneHwy,PassingZone,1,7727,1.4634,NA,1,55
+13,Watkins Rd,SigIntersection,---,1,2070,0.392,NA,NA,55
+14, - ,TwoLaneHwy,PassingZone,1,3142,0.5951,NA,1,55
+15, - ,TwoLaneHwy,PassingConstrained,1,1988,0.3765,NA,1,55
+16, - ,TwoLaneHwy,PassingZone,1,13643,2.5839,NA,1,55
+17, - ,TwoLaneHwy,PassingConstrained,1,605,0.1146,NA,1,55
+18, - ,TwoLaneHwy,PassingZone,1,3470,0.6572,NA,1,55
+19, - ,TwoLaneHwy,PassingConstrained,1,1263,0.2392,NA,1,55
+20,US-33 W,SigIntersection,---,2,776,0.147,NA,NA,55
+21,US-33 E,SigIntersection,---,2,734,0.139,NA,NA,55
+22,Industrial Pkwy,SigIntersection,---,1,1600,0.303,NA,NA,55
+23, - ,TwoLaneHwy,PassingConstrained,1,11697,2.2153,NA,1,55
+24, - ,TwoLaneHwy,PassingZone,1,2031,0.3847,NA,1,55
+25, - ,TwoLaneHwy,PassingConstrained,1,2590,0.4905,NA,1,55
+26, - ,TwoLaneHwy,PassingConstrained,1,4535,0.8589,NA,1,50
+27,W Main St,SigIntersection,---,1,879,0.1665,NA,NA,35
+28, - ,TwoLaneHwy,PassingConstrained,1,1729,0.3275,NA,1,35
+29,West Ave,SigIntersection,---,1,413,0.0782,NA,NA,35

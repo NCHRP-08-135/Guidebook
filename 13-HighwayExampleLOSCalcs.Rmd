@@ -1,0 +1,665 @@
+# Rural Highway Example Calculations {#ExampleCalcs}
+
+This appendix presents the calculation results for a hypothetical rural highway facility, one which contains all of the component segment types except for an arterial.
+
+The HCM-CALC file, 'TestHighway.xhf', for this example can be found at https://github.com/NCHRP-08-135/Resources/HCMCalcFiles.
+
+The facility segmentation and corresponding input data are summarized in Table \@ref(tab:ExampleFacilitySummary).
+
+
+```{r ExampleFacilitySummary, echo=FALSE}
+
+Filename <- "./DataTables/ExampleCalcsTable1.csv"
+HighwayData <- read.csv(file = Filename, header = TRUE)
+# "# Horiz Curves"
+ColumnLabels <- c("Seg ID","From/To","Hwy Seg Type","Two-Lane Seg Type","# Dir Lanes","Length (ft)","Length (mi)","Grade (%)","Terrain","Vertical Align Class","Posted Speed (mi/h)","Dir Volume (veh/h)","Dir Truck%","Opp Volume (veh/h)","Opp Truck%","PHF")
+
+knitr::kable(
+  HighwayData,
+  col.names = ColumnLabels,
+  booktabs = TRUE,
+  caption = 'Example Rural Highway segmentation and Input Data') %>%
+  row_spec(0, angle = TableColumnHeaderTextAngle) %>%
+  kable_styling(latex_options = "scale_down") %>%
+  scroll_box(width = "100%", box_css = "border: 0px;") %>%
+  landscape()
+```
+
+
+```{r, echo=FALSE}
+# Load calculation files into memory
+
+source("./HCMCalcs/HCM-Functions-MLHwy.R")
+source("./HCMCalcs/HCM-Functions-Signal.R")
+source("./HCMCalcs/HCM-Functions-TwoLaneHwy.R")
+source("./HCMCalcs/HCM-Functions-Roundabout.R")
+source("./HCMCalcs/HCM-Functions-AWSC.R")
+source("./HCMCalcs/InfluenceAreaCalculations.R")
+```
+
+```{r InitVars}
+NumSegments <- 16
+SegResultsDataList <- list()
+SegInputDataList <- list()
+InfluenceAreaUpStream <- vector()
+InfluenceAreaDownStream <- vector()
+InfluenceAreaList <- list()
+InfluenceAreaTotalList <- list()
+AdjustedLength <- vector()
+FeetInMiles <- 5280
+SecondsPerHour <- 3600
+```
+
+## Segment Input Data
+
+```{r SegmentInputData}
+#Segment 1: Multilane Highway
+SegInputDataList[[1]] <- list("SegmentType" = "MultilaneHwy", "SegmentLengthMi" = 1.0, "SegmentLengthFt" = 5280, "DirVolume" = 1100, "OppVolume" = 0, "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = 0, "HVPropMultiplierFL" = 0, "Terrain" = "Level", "NumberofLanes" = 2, "PostedSpeedLimit" = 55, "LaneWidth" = 12, "ShoulderWidth" = 6, "RightSideLateralClearance" = 6, "LeftSideLateralClearance" = 6, "MedianType" = "Divided", "AccessPointDensity" = 4, "VertAlignmentClass" = 0, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0)
+
+#Segment 2: Multilane Highway
+SegInputDataList[[2]] <- list("SegmentType" = "MultilaneHwy", "SegmentLengthMi" = 1.0, "SegmentLengthFt" = 5280, "DirVolume" = 1100, "OppVolume" = 0, "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = 5.0, "HVPropMultiplierFL" = 0, "Terrain" = "Level", "NumberofLanes" = 2, "PostedSpeedLimit" = 55, "LaneWidth" = 12, "ShoulderWidth" = 0, "RightSideLateralClearance" = 6, "LeftSideLateralClearance" = 6, "MedianType" = "Divided", "AccessPointDensity" = 4, "VertAlignmentClass" = 0, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0)
+
+#For intersections, "DirVolume" is the through movement volume
+
+#Segment 3: Signalized Intersection
+SegInputDataList[[3]] <- list("SegmentType" = "SignalizedInt", "SegmentLengthMi" = 0.3314, "SegmentLengthFt" = 1750, "DirVolume" = 960, "OppVolume" = 0, "LeftTurnVolume" = 100, "RightTurnVolume" = 80, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 1.0, "PercentHeavyVehicles" = 0, "HVPropMultiplierFL" = 0, "Terrain" = 0, "NumberofLanes" = 2, "PostedSpeedLimit" = 35, "LaneWidth" = 12, "ShoulderWidth" = 0, "RightSideLateralClearance" = 0, "LeftSideLateralClearance" = 0, "MedianType" = 0, "AccessPointDensity" = 0, "VertAlignmentClass" = 0, "BaseSatFlowRate" = 1900, "CycleLengthSec" = 120, "EffectiveGreenTime" = 48, "ArrivalType" = 4, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0, "GeometricUpstreamDistFt" = 750, "GeometricDownstreamDistFt" = 1000)
+
+#Segment 4: Two-Lane Highway, Passing Constrained
+SegInputDataList[[4]] <- list("SegmentType" = "NPZ", "SegmentLengthMi" = 0.6538787, "SegmentLengthFt" = 3960, "DirVolume" = 700, "OppVolume" = 1500, "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = 3, "HVPropMultiplierFL" = 0, "Terrain" = 0, "NumberofLanes" = 1, "PostedSpeedLimit" = 55, "LaneWidth" = 12, "ShoulderWidth" = 6, "RightSideLateralClearance" = 6, "LeftSideLateralClearance" = 6, "MedianType" = "Divided", "AccessPointDensity" = 0, "VertAlignmentClass" = 2, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0)
+
+#Segment 5: Two-Lane Highway, Passing Lane
+SegInputDataList[[5]] <- list("SegmentType" = "PL", "SegmentLengthMi" = 1, "SegmentLengthFt" = 5280, "DirVolume" = 700, "OppVolume" = 0, "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = 3, "HVPropMultiplierFL" = 0.4, "Terrain" = 0, "NumberofLanes" = 2, "PostedSpeedLimit" = 55, "LaneWidth" = 12, "ShoulderWidth" = 6, "RightSideLateralClearance" = 0, "LeftSideLateralClearance" = 0, "MedianType" = 0, "AccessPointDensity" = 0, "VertAlignmentClass" = 2, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0)
+
+#Segment 6: Two-Lane Highway, Passing Constrained
+SegInputDataList[[6]] <- list("SegmentType" = "NPZ", "SegmentLengthMi" = 1.25, "SegmentLengthFt" = 6600, "DirVolume" = 700, "OppVolume" = 1500, "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = 0, "HVPropMultiplierFL" = 0, "Terrain" = 0, "NumberofLanes" = 1, "PostedSpeedLimit" = 55, "LaneWidth" = 12, "ShoulderWidth" = 6, "RightSideLateralClearance" = 0, "LeftSideLateralClearance" = 0, "MedianType" = 0, "AccessPointDensity" = 0, "VertAlignmentClass" = 1, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0)
+
+#Segment 7: Two-Lane Highway, Passing Zone
+SegInputDataList[[7]] <- list("SegmentType" = "PZ", "SegmentLengthMi" = 1.4906, "SegmentLengthFt" = 7920, "DirVolume" = 700, "OppVolume" = 400, "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = 0, "HVPropMultiplierFL" = 0, "Terrain" = 0, "NumberofLanes" = 1, "PostedSpeedLimit" = 55, "LaneWidth" = 12, "ShoulderWidth" = 6, "RightSideLateralClearance" = 0, "LeftSideLateralClearance" = 0, "MedianType" = 0, "AccessPointDensity" = 0, "VertAlignmentClass" = 1, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0)
+
+#Segment 8: Signalized Intersection
+SegInputDataList[[8]] <- list("SegmentType" = "SignalizedInt", "SegmentLengthMi" = 0.3788, "SegmentLengthFt" = 2000, "DirVolume" = 740, "OppVolume" = 0, "LeftTurnVolume" = 40, "RightTurnVolume" = 40, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 1.0, "PercentHeavyVehicles" = 2, "HVPropMultiplierFL" = 0, "Terrain" = 0, "NumberofLanes" = 2, "PostedSpeedLimit" = 40, "LaneWidth" = 12, "ShoulderWidth" = 0, "RightSideLateralClearance" = 0, "LeftSideLateralClearance" = 0, "MedianType" = 0, "AccessPointDensity" = 0, "VertAlignmentClass" = 0, "BaseSatFlowRate" = 1900, "CycleLengthSec" = 120, "EffectiveGreenTime" = 48, "ArrivalType" = 4, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0, "GeometricUpstreamDistFt" = 800, "GeometricDownstreamDistFt" = 1200)
+
+#Segment 9: Multilane Highway
+SegInputDataList[[9]] <- list("SegmentType" = "MultilaneHwy", "SegmentLengthMi" = 2, "SegmentLengthFt" = 10560, "DirVolume" = 1040, "OppVolume" = 0, "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = 0, "HVPropMultiplierFL" = 0, "Terrain" = "Level", "NumberofLanes" = 2, "PostedSpeedLimit" = 55, "LaneWidth" = 12, "ShoulderWidth" = 6, "RightSideLateralClearance" = 6, "LeftSideLateralClearance" = 6, "MedianType" = "Divided", "AccessPointDensity" = 2, "VertAlignmentClass" = 0, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0)
+
+#Segment 10: Multilane Highway
+SegInputDataList[[10]] <- list("SegmentType" = "MultilaneHwy", "SegmentLengthMi" = 3, "SegmentLengthFt" = 15840, "DirVolume" = 1040, "OppVolume" = 0, "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = 5.0, "HVPropMultiplierFL" = 0, "Terrain" = "Level", "NumberofLanes" = 2, "PostedSpeedLimit" = 55, "LaneWidth" = 12, "ShoulderWidth" = 6, "RightSideLateralClearance" = 6, "LeftSideLateralClearance" = 6, "MedianType" = "Divided", "AccessPointDensity" = 3, "VertAlignmentClass" = 0, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0)
+
+#Segment 11: Signalized Intersection
+SegInputDataList[[11]] <- list("SegmentType" = "SignalizedInt", "SegmentLengthMi" = 0.1894, "SegmentLengthFt" = 1000, "DirVolume" = 865, "OppVolume" = 0, "LeftTurnVolume" = 175, "RightTurnVolume" = 145, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 1.0, "PercentHeavyVehicles" = 5, "HVPropMultiplierFL" = 0, "Terrain" = 0, "NumberofLanes" = 2, "PostedSpeedLimit" = 35, "LaneWidth" = 12, "ShoulderWidth" = 0, "RightSideLateralClearance" = 0, "LeftSideLateralClearance" = 0, "MedianType" = 0, "AccessPointDensity" = 0, "VertAlignmentClass" = 0, "BaseSatFlowRate" = 1900, "CycleLengthSec" = 120, "EffectiveGreenTime" = 48, "ArrivalType" = 4, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0, "GeometricUpstreamDistFt" = 450, "GeometricDownstreamDistFt" = 550)
+
+#Segment 12: Two-Lane Highway, Passing Constrained
+SegInputDataList[[12]] <- list("SegmentType" = "NPZ", "SegmentLengthMi" = 0.7631, "SegmentLengthFt" = 5280, "DirVolume" = 720, "OppVolume" = 1500, "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = 5, "HVPropMultiplierFL" = 0, "Terrain" = 0, "NumberofLanes" = 1, "PostedSpeedLimit" = 55, "LaneWidth" = 12, "ShoulderWidth" = 6, "RightSideLateralClearance" = 0, "LeftSideLateralClearance" = 0, "MedianType" = 0, "AccessPointDensity" = 0, "VertAlignmentClass" = 1, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0)
+
+#Segment 13: Roundabout Intersection
+SegInputDataList[[13]] <- list("SegmentType" = "Roundabout", "SegmentLengthMi" = 0.1894, "SegmentLengthFt" = 1000, "DirVolume" = c(70, 600, 50), "OppVolume" = c(50, 350, 75), "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = c(50, 350, 75), "SBVolume" = c(50, 275, 175), "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = 0.05, "HVPropMultiplierFL" = 0.4, "Terrain" = 0, "NumberofLanes" = 1, "PostedSpeedLimit" = 35, "LaneWidth" = 12, "ShoulderWidth" = 0, "RightSideLateralClearance" = 0, "LeftSideLateralClearance" = 0, "MedianType" = 0, "AccessPointDensity" = 0, "VertAlignmentClass" = 0, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = "Heavy Vehicle", "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0, "GeometricUpstreamDistFt" = 500, "GeometricDownstreamDistFt" = 500)
+
+#Segment 14: Two-Lane Highway, Passing Zone
+SegInputDataList[[14]] <- list("SegmentType" = "PZ", "SegmentLengthMi" = 1.7137, "SegmentLengthFt" = 10560, "DirVolume" = 600, "OppVolume" = 450, "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = 5, "HVPropMultiplierFL" = 0, "Terrain" = 0, "NumberofLanes" = 2, "PostedSpeedLimit" = 55, "LaneWidth" = 12, "ShoulderWidth" = 6, "RightSideLateralClearance" = 0, "LeftSideLateralClearance" = 0, "MedianType" = 0, "AccessPointDensity" = 0, "VertAlignmentClass" = 1, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0)
+
+#Segment 15: All-Way-Stop-Controlled Intersection
+SegInputDataList[[15]] <- list("SegmentType" = "AWSC", "SegmentLengthMi" = 0.1894, "SegmentLengthFt" = 1000, "DirVolume" = c(60, 500, 40), "OppVolume" = c(40, 300, 45), "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = c(35, 75, 25), "SBVolume" = c(30, 60, 20), "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = c(0.03, 0.02, 0.03, 0.02), "HVPropMultiplierFL" = 0.4, "Terrain" = 0, "NumberofLanes" = 1, "PostedSpeedLimit" = 35, "LaneWidth" = 12, "ShoulderWidth" = 0, "RightSideLateralClearance" = 0, "LeftSideLateralClearance" = 0, "MedianType" = 0, "AccessPointDensity" = 0, "VertAlignmentClass" = 0, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = "Heavy Vehicle", "BaseSatHeadway" = c(3.9, 4.7, 5.8, 7.0, 9.6), "Convergence" = FALSE, "ConvergenceCriteria" = 0.01, "DepartureHeadwayLast" = c(3.2, 3.2, 3.2, 3.2), "MoveUpTime14" = 2, "GeometricUpstreamDistFt" = 400, "GeometricDownstreamDistFt" = 600)
+
+#Segment 16: Two-Lane Highway, Passing Constrained
+SegInputDataList[[16]] <- list("SegmentType" = "NPZ", "SegmentLengthMi" = 1.2970, "SegmentLengthFt" = 7920, "DirVolume" = 650, "OppVolume" = 1500, "LeftTurnVolume" = 0, "RightTurnVolume" = 0, "NBVolume" = 0, "SBVolume" = 0, "PeakHourFactor" = 0.95, "PercentHeavyVehicles" = 5, "HVPropMultiplierFL" = 0, "Terrain" = 0, "NumberofLanes" = 1, "PostedSpeedLimit" = 55, "LaneWidth" = 12, "ShoulderWidth" = 6, "RightSideLateralClearance" = 0, "LeftSideLateralClearance" = 0, "MedianType" = 0, "AccessPointDensity" = 0, "VertAlignmentClass" = 1, "BaseSatFlowRate" = 0, "CycleLengthSec" = 0, "EffectiveGreenTime" = 0, "ArrivalType" = 0, "VehicleType" = 0, "BaseSatHeadway" = 0, "Convergence" = 0, "ConvergenceCriteria" = 0, "DepartureHeadwayLast" = 0, "MoveUpTime14" = 0)
+```
+
+
+## Segment LOS Calculations
+### First iteration uses input segment lengths
+
+**Segment 1: Multilane Highway**
+
+```{r MHSeg1Calcs}
+ReturnedResults <- vector(length = 3)
+ReturnedResults <- MLMainFcn(SegInputDataList[[1]]$PostedSpeedLimit, SegInputDataList[[1]]$LaneWidth, SegInputDataList[[1]]$RightSideLateralClearance , SegInputDataList[[1]]$LeftSideLateralClearance, SegInputDataList[[1]]$NumberofLanes, SegInputDataList[[1]]$MedianType, SegInputDataList[[1]]$AccessPointDensity, SegInputDataList[[1]]$Terrain, SegInputDataList[[1]]$PercentHeavyVehicles, SegInputDataList[[1]]$DirVolume, SegInputDataList[[1]]$PeakHourFactor)
+
+SegResultsDataList[[1]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[1]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[1]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[1]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[1]]$NumberofLanes, "LOSNumber" = ReturnedResults[3])
+```
+
+**Segment 2: Multilane Highway**
+
+```{r MHSeg2Calcs}
+ReturnedResults <- vector(length = 3)
+ReturnedResults <- MLMainFcn(SegInputDataList[[2]]$PostedSpeedLimit, SegInputDataList[[2]]$LaneWidth, SegInputDataList[[2]]$RightSideLateralClearance , SegInputDataList[[2]]$LeftSideLateralClearance, SegInputDataList[[2]]$NumberofLanes, SegInputDataList[[2]]$MedianType, SegInputDataList[[2]]$AccessPointDensity, SegInputDataList[[2]]$Terrain, SegInputDataList[[2]]$PercentHeavyVehicles, SegInputDataList[[2]]$DirVolume, SegInputDataList[[2]]$PeakHourFactor)
+
+SegResultsDataList[[2]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[2]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[2]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[2]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[2]]$NumberofLanes,"LOSNumber" = ReturnedResults[3])
+```
+
+**Segment 3: Signalized Intersection**
+
+```{r SignalSeg3Calcs}
+ReturnedResults <- vector(length=2)
+ReturnedResults <- SignalMainFcn(SegInputDataList[[3]]$LeftTurnVolume, SegInputDataList[[3]]$DirVolume, SegInputDataList[[3]]$RightTurnVolume, SegInputDataList[[3]]$PeakHourFactor, SegInputDataList[[3]]$PercentHeavyVehicles, SegInputDataList[[3]]$BaseSatFlowRate, SegInputDataList[[3]]$NumberofLanes, SegInputDataList[[3]]$EffectiveGreenTime, SegInputDataList[[3]]$CycleLengthSec, SegInputDataList[[3]]$ArrivalType)
+
+SegResultsDataList[[3]] <- list("Segment Free Flow Speed (mi/h)" = SegInputDataList[[3]]$PostedSpeedLimit*1.1, "Segment Average Travel Speed (mi/h)" = SegInputDataList[[3]]$SegmentLengthFt/(ReturnedResults[1]+(SegInputDataList[[3]]$SegmentLengthFt/SegInputDataList[[3]]$PostedSpeedLimit*1.1)), "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[3]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[3]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[3]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[3]]$NumberofLanes, "LOSNumber" = ReturnedResults[2])
+```
+
+**Segment 4: Two-Lane Highway, Passing Constrained**
+
+```{r TwoLaneSeg4Calcs}
+IsPassingLaneUpStream <- FALSE
+UpstreamSegResults <- as.numeric(ReturnedResults)
+
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[4]]$SegmentType, SegInputDataList[[4]]$DirVolume, SegInputDataList[[4]]$OppVolume, SegInputDataList[[4]]$PeakHourFactor, SegInputDataList[[4]]$PercentHeavyVehicles, SegInputDataList[[4]]$PostedSpeedLimit, SegInputDataList[[4]]$SegmentLengthMi, SegInputDataList[[4]]$AccessPointDensity, SegInputDataList[[4]]$LaneWidth, SegInputDataList[[4]]$ShoulderWidth, SegInputDataList[[4]]$VertAlignmentClass, UpstreamSegResults, IsPassingLaneUpStream, 0, 0, 0)
+
+SegResultsDataList[[4]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[4]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[4]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[4]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[4]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+**Segment 5: Two-Lane Highway, Passing Lane**
+
+```{r TwoLaneSeg5Calcs}
+UpstreamSegResults <- as.numeric(ReturnedResults)
+EffectiveLengthPL <- PassingLaneEffectiveLengthFcn(UpstreamSegResults[6], UpstreamSegResults[2], UpstreamSegResults[3], UpstreamSegResults[4], SegInputDataList[[5]]$SegmentLengthMi) 
+
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[5]]$SegmentType, SegInputDataList[[5]]$DirVolume, SegInputDataList[[5]]$OppVolume, SegInputDataList[[5]]$PeakHourFactor, SegInputDataList[[5]]$PercentHeavyVehicles, SegInputDataList[[5]]$PostedSpeedLimit, SegInputDataList[[5]]$SegmentLengthMi, SegInputDataList[[5]]$AccessPointDensity, SegInputDataList[[5]]$LaneWidth, SegInputDataList[[5]]$ShoulderWidth, SegInputDataList[[5]]$VertAlignmentClass, UpstreamSegResults, FALSE, 0, 0, 0)
+
+SegResultsDataList[[5]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[5]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[5]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[5]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[5]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+**Segment 6: Two-Lane Highway, Passing Constrained**
+
+```{r TwoLaneSeg6Calcs}
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[6]]$SegmentType, SegInputDataList[[6]]$DirVolume, SegInputDataList[[6]]$OppVolume, SegInputDataList[[6]]$PeakHourFactor, SegInputDataList[[6]]$PercentHeavyVehicles, SegInputDataList[[6]]$PostedSpeedLimit, SegInputDataList[[6]]$SegmentLengthMi, SegInputDataList[[5]]$AccessPointDensity, SegInputDataList[[6]]$LaneWidth, SegInputDataList[[6]]$ShoulderWidth, SegInputDataList[[6]]$VertAlignmentClass, UpstreamSegResults, TRUE, SegInputDataList[[5]]$SegmentLengthMi, SegInputDataList[[5]]$SegmentLengthMi+SegInputDataList[[6]]$SegmentLengthMi, EffectiveLengthPL)
+
+SegResultsDataList[[6]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[6]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[6]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[6]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[6]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+**Segment 7: Two-Lane Highway, Passing Zone**
+
+```{r TwoLaneSeg7Calcs}
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[7]]$SegmentType, SegInputDataList[[7]]$DirVolume, SegInputDataList[[7]]$OppVolume, SegInputDataList[[7]]$PeakHourFactor, SegInputDataList[[7]]$PercentHeavyVehicles, SegInputDataList[[7]]$PostedSpeedLimit, SegInputDataList[[7]]$SegmentLengthMi, SegInputDataList[[5]]$AccessPointDensity, SegInputDataList[[7]]$LaneWidth, SegInputDataList[[7]]$ShoulderWidth, SegInputDataList[[7]]$VertAlignmentClass, UpstreamSegResults, TRUE, SegInputDataList[[5]]$SegmentLengthMi, SegInputDataList[[5]]$SegmentLengthMi+SegInputDataList[[6]]$SegmentLengthMi+SegInputDataList[[7]]$SegmentLengthMi, EffectiveLengthPL)
+
+SegResultsDataList[[7]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[7]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[7]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[7]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[7]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+**Segment 8: Signalized Intersection**
+
+```{r SignalSeg8Calcs}
+ReturnedResults <- vector(length=2)
+ReturnedResults <- SignalMainFcn(SegInputDataList[[8]]$LeftTurnVolume, SegInputDataList[[8]]$DirVolume, SegInputDataList[[8]]$RightTurnVolume, SegInputDataList[[8]]$PeakHourFactor, SegInputDataList[[8]]$PercentHeavyVehicles, SegInputDataList[[8]]$BaseSatFlowRate, SegInputDataList[[8]]$NumberofLanes, SegInputDataList[[8]]$EffectiveGreenTime, SegInputDataList[[8]]$CycleLengthSec, SegInputDataList[[8]]$ArrivalType)
+
+SegResultsDataList[[8]] <- list("Segment Free Flow Speed (mi/h)" = SegInputDataList[[8]]$PostedSpeedLimit*1.1, "Segment Average Travel Speed (mi/h)" = SegInputDataList[[8]]$SegmentLengthFt/(ReturnedResults[1]+(SegInputDataList[[8]]$SegmentLengthFt/SegInputDataList[[8]]$PostedSpeedLimit*1.1)), "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[8]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[8]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[8]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[8]]$NumberofLanes, "LOSNumber" = ReturnedResults[2], "AvgSpeedCalc" = (ReturnedResults[1]+(SegInputDataList[[8]]$SegmentLengthFt/SegInputDataList[[8]]$PostedSpeedLimit*1.1)))
+```
+
+**Segment 9: Multilane Highway**
+
+```{r MHSeg9Calcs}
+ReturnedResults <- vector(length = 3)
+ReturnedResults <- MLMainFcn(SegInputDataList[[9]]$PostedSpeedLimit, SegInputDataList[[9]]$LaneWidth, SegInputDataList[[9]]$RightSideLateralClearance, SegInputDataList[[9]]$LeftSideLateralClearance, SegInputDataList[[9]]$NumberofLanes, SegInputDataList[[9]]$MedianType, SegInputDataList[[9]]$AccessPointDensity, SegInputDataList[[9]]$Terrain, SegInputDataList[[9]]$PercentHeavyVehicles, SegInputDataList[[9]]$DirVolume, SegInputDataList[[9]]$PeakHourFactor)
+
+SegResultsDataList[[9]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[9]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[9]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[9]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[9]]$NumberofLanes, "LOSNumber" = ReturnedResults[3])
+```
+
+**Segment 10: Multilane Highway**
+
+```{r MHSeg10Calcs}
+ReturnedResults <- vector(length = 3)
+ReturnedResults <- MLMainFcn(SegInputDataList[[10]]$PostedSpeedLimit, SegInputDataList[[10]]$LaneWidth, SegInputDataList[[10]]$RightSideLateralClearance , SegInputDataList[[10]]$LeftSideLateralClearance, SegInputDataList[[10]]$NumberofLanes, SegInputDataList[[10]]$MedianType, SegInputDataList[[10]]$AccessPointDensity, SegInputDataList[[10]]$Terrain, SegInputDataList[[10]]$PercentHeavyVehicles, SegInputDataList[[10]]$DirVolume, SegInputDataList[[10]]$PeakHourFactor)
+
+SegResultsDataList[[10]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[10]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[10]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[10]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[10]]$NumberofLanes, "LOSNumber" = ReturnedResults[3])
+```
+
+**Segment 11: Signalized Intersection**
+
+```{r SignalSeg11Calcs}
+ReturnedResults <- vector(length=2)
+ReturnedResults <- SignalMainFcn(SegInputDataList[[11]]$LeftTurnVolume, SegInputDataList[[11]]$DirVolume, SegInputDataList[[11]]$RightTurnVolume, SegInputDataList[[11]]$PeakHourFactor, SegInputDataList[[11]]$PercentHeavyVehicles, SegInputDataList[[11]]$BaseSatFlowRate, SegInputDataList[[11]]$NumberofLanes, SegInputDataList[[11]]$EffectiveGreenTime, SegInputDataList[[11]]$CycleLengthSec, SegInputDataList[[11]]$ArrivalType)
+
+SegResultsDataList[[11]] <- list("Segment Free Flow Speed (mi/h)" = SegInputDataList[[11]]$PostedSpeedLimit*1.1, "Segment Average Travel Speed (mi/h)" = SegInputDataList[[11]]$SegmentLengthFt/(ReturnedResults[1]+(SegInputDataList[[11]]$SegmentLengthFt/SegInputDataList[[11]]$PostedSpeedLimit*1.1)), "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[11]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[11]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[11]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[11]]$NumberofLanes, "LOSNumber" = ReturnedResults[2], "AvgSpeedCalc" = (ReturnedResults[1]+(SegInputDataList[[11]]$SegmentLengthFt/SegInputDataList[[11]]$PostedSpeedLimit*1.1)))
+```
+
+**Segment 12: Two-Lane Highway, Passing Constrained**
+
+```{r TwoLaneSeg12Calcs}
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[12]]$SegmentType, SegInputDataList[[12]]$DirVolume, SegInputDataList[[12]]$OppVolume, SegInputDataList[[12]]$PeakHourFactor, SegInputDataList[[12]]$PercentHeavyVehicles, SegInputDataList[[12]]$PostedSpeedLimit, SegInputDataList[[12]]$SegmentLengthMi, SegInputDataList[[12]]$AccessPointDensity, SegInputDataList[[12]]$LaneWidth, SegInputDataList[[12]]$ShoulderWidth, SegInputDataList[[12]]$VertAlignmentClass, UpstreamSegResults, IsPassingLaneUpStream, 0, 0, 0)
+
+SegResultsDataList[[12]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[12]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[12]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[12]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[12]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+**Segment 13: Roundabout Intersection**
+
+```{r RoundaboutSeg13Calcs}
+ReturnedResults <- vector(length = 2)
+ReturnedResults <- RoundaboutMainFcn(SegInputDataList[[13]]$VehicleType, SegInputDataList[[13]]$PercentHeavyVehicles, SegInputDataList[[13]]$PeakHourFactor, SegInputDataList[[13]]$DirVolume[2], SegInputDataList[[13]]$DirVolume[1], SegInputDataList[[13]]$DirVolume[3], SegInputDataList[[13]]$NBVolume[2], SegInputDataList[[13]]$NBVolume[1], SegInputDataList[[13]]$NBVolume[3], SegInputDataList[[13]]$OppVolume[2], SegInputDataList[[13]]$OppVolume[1], SegInputDataList[[13]]$OppVolume[3], SegInputDataList[[13]]$SBVolume[2], SegInputDataList[[13]]$SBVolume[1], SegInputDataList[[13]]$SBVolume[3])
+
+SegResultsDataList[[13]] <- list("Segment Free Flow Speed (mi/h)" = SegInputDataList[[13]]$PostedSpeedLimit*1.1, "Segment Average Travel Speed (mi/h)" = SegInputDataList[[13]]$SegmentLengthFt/(ReturnedResults[1]+(SegInputDataList[[13]]$SegmentLengthFt/SegInputDataList[[13]]$PostedSpeedLimit*1.1)), "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[13]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[13]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[13]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[13]]$NumberofLanes, "LOSNumber" = ReturnedResults[2], "AvgSpeedCalc" = (ReturnedResults[1]+(SegInputDataList[[13]]$SegmentLengthFt/SegInputDataList[[13]]$PostedSpeedLimit*1.1)))
+```
+
+**Segment 14: Two-Lane Highway, Passing Zone**
+
+```{r TwoLaneSeg14Calcs}
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[14]]$SegmentType, SegInputDataList[[14]]$DirVolume, SegInputDataList[[14]]$OppVolume, SegInputDataList[[14]]$PeakHourFactor, SegInputDataList[[14]]$PercentHeavyVehicles, SegInputDataList[[14]]$PostedSpeedLimit, SegInputDataList[[14]]$SegmentLengthMi, SegInputDataList[[14]]$AccessPointDensity, SegInputDataList[[14]]$LaneWidth, SegInputDataList[[14]]$ShoulderWidth, SegInputDataList[[14]]$VertAlignmentClass, UpstreamSegResults, IsPassingLaneUpStream, 0, 0, 0)
+
+SegResultsDataList[[14]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[14]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[14]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[14]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[14]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+**Segment 15: All-Way-Stop-Controlled Intersection**
+
+```{r AWSCSeg15Calcs}
+ReturnedResults <- vector(length = 2)
+ReturnedResults <- AWSCMainFunction(SegInputDataList[[15]]$PeakHourFactor, SegInputDataList[[15]]$DirVolume[2], SegInputDataList[[15]]$DirVolume[1], SegInputDataList[[15]]$DirVolume[3], SegInputDataList[[15]]$NBVolume[2], SegInputDataList[[15]]$NBVolume[1], SegInputDataList[[15]]$NBVolume[3], SegInputDataList[[15]]$OppVolume[2], SegInputDataList[[15]]$OppVolume[1], SegInputDataList[[15]]$OppVolume[3], SegInputDataList[[15]]$SBVolume[2], SegInputDataList[[15]]$SBVolume[1], SegInputDataList[[15]]$SBVolume[3], SegInputDataList[[15]]$BaseSatHeadway, SegInputDataList[[15]]$Convergence, SegInputDataList[[15]]$ConvergenceCriteria, SegInputDataList[[15]]$DepartureHeadwayLast, SegInputDataList[[15]]$PercentHeavyVehicles[1], SegInputDataList[[15]]$PercentHeavyVehicles[2], SegInputDataList[[15]]$PercentHeavyVehicles[3], SegInputDataList[[15]]$PercentHeavyVehicles[4], SegInputDataList[[15]]$MoveUpTime14)
+
+SegResultsDataList[[15]] <- list("Segment Free Flow Speed (mi/h)" = SegInputDataList[[15]]$PostedSpeedLimit*1.1, "Segment Average Travel Speed (mi/h)" = SegInputDataList[[15]]$SegmentLengthFt/(ReturnedResults[1]+(SegInputDataList[[15]]$SegmentLengthFt/SegInputDataList[[15]]$PostedSpeedLimit*1.1)), "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[15]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[15]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[15]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[15]]$NumberofLanes, "LOSNumber" = ReturnedResults[2], "AvgSpeedCalc" = SegInputDataList[[15]]$SegmentLengthFt/(ReturnedResults[1]+(SegInputDataList[[15]]$SegmentLengthFt/(SegInputDataList[[15]]$PostedSpeedLimit*1.1))))
+```
+
+**Segment 16: Two-Lane Highway, Passing Constrained**
+
+```{r TwoLaneSeg16Calcs}
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[16]]$SegmentType, SegInputDataList[[16]]$DirVolume, SegInputDataList[[16]]$OppVolume, SegInputDataList[[16]]$PeakHourFactor, SegInputDataList[[16]]$PercentHeavyVehicles, SegInputDataList[[16]]$PostedSpeedLimit, SegInputDataList[[16]]$SegmentLengthMi, SegInputDataList[[16]]$AccessPointDensity, SegInputDataList[[16]]$LaneWidth, SegInputDataList[[16]]$ShoulderWidth, SegInputDataList[[16]]$VertAlignmentClass, UpstreamSegResults, IsPassingLaneUpStream, 0, 0, 0)
+
+SegResultsDataList[[16]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[16]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[16]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[16]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[16]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+## Influence Area Calculations
+```{r InfluenceAreaCalcs}
+InfluenceAreaUpStream[3] <- InfAreaSignalUSFcn(SegResultsDataList[[2]]$`Segment Average Travel Speed (mi/h)`, SegResultsDataList[[3]]$`Segment Percent HV`, SegResultsDataList[[2]]$`Number of Lanes`)
+InfluenceAreaDownStream[3] <- InfAreaSignalDSFcn(SegResultsDataList[[4]]$`Segment Average Travel Speed (mi/h)`, SegResultsDataList[[3]]$`Segment Percent HV`, SegResultsDataList[[4]]$`Number of Lanes`)
+InfluenceAreaUpStream[8] <- InfAreaSignalUSFcn(SegResultsDataList[[7]]$`Segment Average Travel Speed (mi/h)`, SegResultsDataList[[8]]$`Segment Percent HV`, SegResultsDataList[[7]]$`Number of Lanes`)
+InfluenceAreaDownStream[8] <- InfAreaSignalDSFcn(SegResultsDataList[[9]]$`Segment Average Travel Speed (mi/h)`, SegResultsDataList[[8]]$`Segment Percent HV`, SegResultsDataList[[9]]$`Number of Lanes`)
+InfluenceAreaUpStream[11] <- InfAreaSignalUSFcn(SegResultsDataList[[10]]$`Segment Average Travel Speed (mi/h)`, SegResultsDataList[[11]]$`Segment Percent HV`, SegResultsDataList[[10]]$`Number of Lanes`)
+InfluenceAreaDownStream[11] <- InfAreaSignalDSFcn(SegResultsDataList[[12]]$`Segment Average Travel Speed (mi/h)`, SegResultsDataList[[11]]$`Segment Percent HV`, SegResultsDataList[[12]]$`Number of Lanes`)
+InfluenceAreaUpStream[13] <- InfAreaRoundaboutUSFcn(SegResultsDataList[[12]]$`Segment Average Travel Speed (mi/h)`)
+InfluenceAreaDownStream[13] <- InfAreaRoundaboutDSFcn(SegResultsDataList[[14]]$`Segment Average Travel Speed (mi/h)`)
+InfluenceAreaUpStream[15] <- InfAreaAWSCUSFcn(SegResultsDataList[[14]]$`Segment Average Travel Speed (mi/h)`)
+InfluenceAreaDownStream[15] <- InfAreaAWSCDSFcn(SegResultsDataList[[16]]$`Segment Average Travel Speed (mi/h)`)
+
+InfluenceAreaList[[1]] <- list("Segment3UpStreamInfluenceArea" = InfluenceAreaUpStream[3]/FeetInMiles, "Segment3DownStreamInfluenceArea" = InfluenceAreaDownStream[3]/FeetInMiles) 
+InfluenceAreaTotalList[[1]] <- list("Segment3 Influence Area (mi)" = DifferenceInAreaFcn(InfluenceAreaList[[1]]$Segment3UpStreamInfluenceArea,InfluenceAreaList[[1]]$Segment3DownStreamInfluenceArea))
+
+InfluenceAreaList[[2]] <- list("Segment8UpstreamInfluenceArea" = InfluenceAreaUpStream[8]/FeetInMiles, "Segment8DownStreamInfluenceArea" = InfluenceAreaDownStream[8]/FeetInMiles) 
+InfluenceAreaTotalList[[2]] <- list("Segment 8 Influence Area (mi)" = DifferenceInAreaFcn(InfluenceAreaList[[2]]$Segment8UpstreamInfluenceArea,InfluenceAreaList[[2]]$Segment8DownStreamInfluenceArea))
+
+InfluenceAreaList[[3]] <- list("Segment11UpstreamInfluenceArea" = InfluenceAreaUpStream[11]/FeetInMiles, "Segment11DownStreamInfluenceArea" = InfluenceAreaDownStream[11]/FeetInMiles)
+InfluenceAreaTotalList[[3]] <- list("Segment 11 Influence Area (mi)" = DifferenceInAreaFcn(InfluenceAreaList[[3]]$Segment11UpstreamInfluenceArea,InfluenceAreaList[[3]]$Segment11DownStreamInfluenceArea))
+
+InfluenceAreaList[[4]] <- list("Segment13UpstreamInfluenceArea" = InfluenceAreaUpStream[13]/FeetInMiles, "Segment13DownStreamInfluenceArea" = InfluenceAreaDownStream[13]/FeetInMiles)
+InfluenceAreaTotalList[[4]] <- list("Segment 13 Influence Area (mi)" = DifferenceInAreaFcn(InfluenceAreaList[[4]]$Segment13UpstreamInfluenceArea,InfluenceAreaList[[4]]$Segment13DownStreamInfluenceArea))
+
+InfluenceAreaList[[5]] <- list("Segment15UpstreamInfluenceArea" = InfluenceAreaUpStream[15]/FeetInMiles, "Segment15DownStreamInfluenceArea" = InfluenceAreaDownStream[15]/FeetInMiles)
+InfluenceAreaTotalList[[5]] <- list("Segment 15 Influence Area (mi)" = DifferenceInAreaFcn(InfluenceAreaList[[5]]$Segment15UpstreamInfluenceArea,InfluenceAreaList[[5]]$Segment15DownStreamInfluenceArea))
+```
+
+## Adjusted Segment Length Calculations
+```{r AdjustedSegmentLength}
+AdjustedLength[1] <- SegInputDataList[[1]]$SegmentLengthMi
+AdjustedLength[2] <- ((SegInputDataList[[2]]$SegmentLengthFt)-(InfluenceAreaUpStream[3]-SegInputDataList[[3]]$GeometricUpstreamDistFt))/FeetInMiles
+AdjustedLength[3] <- IntAdjustedLengthFcn(InfluenceAreaUpStream[3], InfluenceAreaDownStream[3])
+AdjustedLength[4] <- ((SegInputDataList[[4]]$SegmentLengthFt)-(InfluenceAreaDownStream[3]-SegInputDataList[[3]]$GeometricDownstreamDistFt))/FeetInMiles
+AdjustedLength[5] <- SegInputDataList[[5]]$SegmentLengthMi
+AdjustedLength[6] <- SegInputDataList[[6]]$SegmentLengthMi
+AdjustedLength[7] <- ((SegInputDataList[[7]]$SegmentLengthFt)-(InfluenceAreaUpStream[8]-SegInputDataList[[8]]$GeometricUpstreamDistFt))/FeetInMiles
+AdjustedLength[8] <- IntAdjustedLengthFcn(InfluenceAreaUpStream[8], InfluenceAreaDownStream[8])
+AdjustedLength[9] <- ((SegInputDataList[[9]]$SegmentLengthFt)-(InfluenceAreaDownStream[8]-SegInputDataList[[8]]$GeometricDownstreamDistFt))/FeetInMiles
+AdjustedLength[10] <- ((SegInputDataList[[10]]$SegmentLengthFt)- (InfluenceAreaUpStream[11]-SegInputDataList[[11]]$GeometricUpstreamDistFt))/FeetInMiles
+AdjustedLength[11] <- IntAdjustedLengthFcn(InfluenceAreaUpStream[11], InfluenceAreaDownStream[11])
+AdjustedLength[12] <- ((SegInputDataList[[12]]$SegmentLengthFt) - (InfluenceAreaDownStream[11]-SegInputDataList[[11]]$GeometricDownstreamDistFt) - (InfluenceAreaUpStream[13] - SegInputDataList[[13]]$GeometricUpstreamDistFt))/FeetInMiles
+AdjustedLength[13] <- IntAdjustedLengthFcn(InfluenceAreaUpStream[13], InfluenceAreaDownStream[13])
+AdjustedLength[14] <- ((SegInputDataList[[14]]$SegmentLengthFt) - (InfluenceAreaDownStream[13] - SegInputDataList[[13]]$GeometricDownstreamDistFt) - (InfluenceAreaUpStream[15] - SegInputDataList[[15]]$GeometricUpstreamDistFt))/FeetInMiles
+AdjustedLength[15] <- IntAdjustedLengthFcn(InfluenceAreaUpStream[15], InfluenceAreaDownStream[15])
+AdjustedLength[16] <- ((SegInputDataList[[16]]$SegmentLengthFt)-(InfluenceAreaDownStream[15] - SegInputDataList[[15]]$GeometricDownstreamDistFt))/FeetInMiles
+```
+
+```{r, echo=FALSE}
+SegResultsDataList <- list()
+```
+
+## Segment LOS Calculations
+### Second iteration uses adjusted segment lengths
+
+**Segment 1: Multilane Highway**
+
+```{r MHSeg1Calcs2}
+ReturnedResults <- vector(length = 3)
+ReturnedResults <- MLMainFcn(SegInputDataList[[1]]$PostedSpeedLimit, SegInputDataList[[1]]$LaneWidth, SegInputDataList[[1]]$RightSideLateralClearance , SegInputDataList[[1]]$LeftSideLateralClearance, SegInputDataList[[1]]$NumberofLanes, SegInputDataList[[1]]$MedianType, SegInputDataList[[1]]$AccessPointDensity, SegInputDataList[[1]]$Terrain, SegInputDataList[[1]]$PercentHeavyVehicles, SegInputDataList[[1]]$DirVolume, SegInputDataList[[1]]$PeakHourFactor)
+
+SegResultsDataList[[1]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[1]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[1]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[1]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[1]]$NumberofLanes, "LOSNumber" = ReturnedResults[3])
+```
+
+**Segment 2: Multilane Highway**
+
+```{r MHSeg2Calcs2}
+ReturnedResults <- vector(length = 3)
+ReturnedResults <- MLMainFcn(SegInputDataList[[2]]$PostedSpeedLimit, SegInputDataList[[2]]$LaneWidth, SegInputDataList[[2]]$RightSideLateralClearance , SegInputDataList[[2]]$LeftSideLateralClearance, SegInputDataList[[2]]$NumberofLanes, SegInputDataList[[2]]$MedianType, SegInputDataList[[2]]$AccessPointDensity, SegInputDataList[[2]]$Terrain, SegInputDataList[[2]]$PercentHeavyVehicles, SegInputDataList[[2]]$DirVolume, SegInputDataList[[2]]$PeakHourFactor)
+
+SegResultsDataList[[2]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[2]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[2]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[2]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[2]]$NumberofLanes,"LOSNumber" = ReturnedResults[3])
+```
+
+**Segment 3: Signalized Intersection**
+
+```{r SignalSeg3Calcs2}
+ReturnedResults <- vector(length=2)
+ReturnedResults <- SignalMainFcn(SegInputDataList[[3]]$LeftTurnVolume, SegInputDataList[[3]]$DirVolume, SegInputDataList[[3]]$RightTurnVolume, SegInputDataList[[3]]$PeakHourFactor, SegInputDataList[[3]]$PercentHeavyVehicles, SegInputDataList[[3]]$BaseSatFlowRate, SegInputDataList[[3]]$NumberofLanes, SegInputDataList[[3]]$EffectiveGreenTime, SegInputDataList[[3]]$CycleLengthSec, SegInputDataList[[3]]$ArrivalType)
+
+SegResultsDataList[[3]] <- list("Segment Free Flow Speed (mi/h)" = SegInputDataList[[3]]$PostedSpeedLimit*1.1, "Segment Average Travel Speed (mi/h)" = AdjustedLength[3]/((ReturnedResults[1]/SecondsPerHour)+(AdjustedLength[3]/(SegInputDataList[[3]]$PostedSpeedLimit*1.1))), "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[3]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[3]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[3]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[3]]$NumberofLanes, "LOSNumber" = ReturnedResults[2])
+```
+
+**Segment 4: Two-Lane Highway, Passing Constrained**
+
+```{r TwoLaneSeg4Calcs2}
+IsPassingLaneUpStream <- FALSE
+UpstreamSegResults <- as.numeric(ReturnedResults)
+
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[4]]$SegmentType, SegInputDataList[[4]]$DirVolume, SegInputDataList[[4]]$OppVolume, SegInputDataList[[4]]$PeakHourFactor, SegInputDataList[[4]]$PercentHeavyVehicles, SegInputDataList[[4]]$PostedSpeedLimit, SegInputDataList[[4]]$SegmentLengthMi, SegInputDataList[[4]]$AccessPointDensity, SegInputDataList[[4]]$LaneWidth, SegInputDataList[[4]]$ShoulderWidth, SegInputDataList[[4]]$VertAlignmentClass, UpstreamSegResults, IsPassingLaneUpStream, 0, 0, 0)
+
+SegResultsDataList[[4]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[4]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[4]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[4]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[4]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+**Segment 5: Two-Lane Highway, Passing Lane**
+
+```{r TwoLaneSeg5Calcs2}
+UpstreamSegResults <- as.numeric(ReturnedResults)
+EffectiveLengthPL <- PassingLaneEffectiveLengthFcn(UpstreamSegResults[6], UpstreamSegResults[2], UpstreamSegResults[3], UpstreamSegResults[4], SegInputDataList[[5]]$SegmentLengthMi) 
+#cat("Effective Length =", format(round(EffectiveLengthPL, 1), nsmall=1), "\n")
+
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[5]]$SegmentType, SegInputDataList[[5]]$DirVolume, SegInputDataList[[5]]$OppVolume, SegInputDataList[[5]]$PeakHourFactor, SegInputDataList[[5]]$PercentHeavyVehicles, SegInputDataList[[5]]$PostedSpeedLimit, SegInputDataList[[5]]$SegmentLengthMi, SegInputDataList[[5]]$AccessPointDensity, SegInputDataList[[5]]$LaneWidth, SegInputDataList[[5]]$ShoulderWidth, SegInputDataList[[5]]$VertAlignmentClass, UpstreamSegResults, FALSE, 0, 0, 0)
+
+SegResultsDataList[[5]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[5]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[5]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[5]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[5]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+**Segment 6: Two-Lane Highway, Passing Constrained**
+
+```{r TwoLaneSeg6Calcs2}
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[6]]$SegmentType, SegInputDataList[[6]]$DirVolume, SegInputDataList[[6]]$OppVolume, SegInputDataList[[6]]$PeakHourFactor, SegInputDataList[[6]]$PercentHeavyVehicles, SegInputDataList[[6]]$PostedSpeedLimit, SegInputDataList[[6]]$SegmentLengthMi, SegInputDataList[[5]]$AccessPointDensity, SegInputDataList[[6]]$LaneWidth, SegInputDataList[[6]]$ShoulderWidth, SegInputDataList[[6]]$VertAlignmentClass, UpstreamSegResults, TRUE, SegInputDataList[[5]]$SegmentLengthMi, SegInputDataList[[5]]$SegmentLengthMi+SegInputDataList[[6]]$SegmentLengthMi, EffectiveLengthPL)
+
+SegResultsDataList[[6]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[6]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[6]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[6]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[6]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+**Segment 7: Two-Lane Highway, Passing Zone**
+
+```{r TwoLaneSeg7Calcs2}
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[7]]$SegmentType, SegInputDataList[[7]]$DirVolume, SegInputDataList[[7]]$OppVolume, SegInputDataList[[7]]$PeakHourFactor, SegInputDataList[[7]]$PercentHeavyVehicles, SegInputDataList[[7]]$PostedSpeedLimit, SegInputDataList[[7]]$SegmentLengthMi, SegInputDataList[[5]]$AccessPointDensity, SegInputDataList[[7]]$LaneWidth, SegInputDataList[[7]]$ShoulderWidth, SegInputDataList[[7]]$VertAlignmentClass, UpstreamSegResults, TRUE, SegInputDataList[[5]]$SegmentLengthMi, SegInputDataList[[5]]$SegmentLengthMi+SegInputDataList[[6]]$SegmentLengthMi+SegInputDataList[[7]]$SegmentLengthMi, EffectiveLengthPL)
+
+SegResultsDataList[[7]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[7]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[7]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[7]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[7]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+**Segment 8: Signalized Intersection**
+
+```{r SignalSeg8Calcs2}
+ReturnedResults <- vector(length=2)
+ReturnedResults <- SignalMainFcn(SegInputDataList[[8]]$LeftTurnVolume, SegInputDataList[[8]]$DirVolume, SegInputDataList[[8]]$RightTurnVolume, SegInputDataList[[8]]$PeakHourFactor, SegInputDataList[[8]]$PercentHeavyVehicles, SegInputDataList[[8]]$BaseSatFlowRate, SegInputDataList[[8]]$NumberofLanes, SegInputDataList[[8]]$EffectiveGreenTime, SegInputDataList[[8]]$CycleLengthSec, SegInputDataList[[8]]$ArrivalType)
+
+SegResultsDataList[[8]] <- list("Segment Free Flow Speed (mi/h)" = SegInputDataList[[8]]$PostedSpeedLimit*1.1, "Segment Average Travel Speed (mi/h)" = AdjustedLength[8]/((ReturnedResults[1]/SecondsPerHour)+(AdjustedLength[8]/(SegInputDataList[[8]]$PostedSpeedLimit*1.1))), "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[8]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[8]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[8]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[8]]$NumberofLanes, "LOSNumber" = ReturnedResults[2])
+```
+
+**Segment 9: Multilane Highway**
+
+```{r MHSeg9Calcs2}
+ReturnedResults <- vector(length = 3)
+ReturnedResults <- MLMainFcn(SegInputDataList[[9]]$PostedSpeedLimit, SegInputDataList[[9]]$LaneWidth, SegInputDataList[[9]]$RightSideLateralClearance , SegInputDataList[[9]]$LeftSideLateralClearance, SegInputDataList[[9]]$NumberofLanes, SegInputDataList[[9]]$MedianType, SegInputDataList[[9]]$AccessPointDensity, SegInputDataList[[9]]$Terrain, SegInputDataList[[9]]$PercentHeavyVehicles, SegInputDataList[[9]]$DirVolume, SegInputDataList[[9]]$PeakHourFactor)
+
+SegResultsDataList[[9]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[9]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[9]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[9]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[9]]$NumberofLanes, "LOSNumber" = ReturnedResults[3])
+```
+
+**Segment 10: Multilane Highway**
+
+```{r MHSeg10Calcs2}
+ReturnedResults <- vector(length = 3)
+ReturnedResults <- MLMainFcn(SegInputDataList[[10]]$PostedSpeedLimit, SegInputDataList[[10]]$LaneWidth, SegInputDataList[[10]]$RightSideLateralClearance , SegInputDataList[[10]]$LeftSideLateralClearance, SegInputDataList[[10]]$NumberofLanes, SegInputDataList[[10]]$MedianType, SegInputDataList[[10]]$AccessPointDensity, SegInputDataList[[10]]$Terrain, SegInputDataList[[10]]$PercentHeavyVehicles, SegInputDataList[[10]]$DirVolume, SegInputDataList[[10]]$PeakHourFactor)
+
+SegResultsDataList[[10]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[10]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[10]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[10]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[10]]$NumberofLanes, "LOSNumber" = ReturnedResults[3])
+```
+
+**Segment 11: Signalized Intersection**
+
+```{r SignalSeg11Calcs2}
+ReturnedResults <- vector(length=2)
+ReturnedResults <- SignalMainFcn(SegInputDataList[[11]]$LeftTurnVolume, SegInputDataList[[11]]$DirVolume, SegInputDataList[[11]]$RightTurnVolume, SegInputDataList[[11]]$PeakHourFactor, SegInputDataList[[11]]$PercentHeavyVehicles, SegInputDataList[[11]]$BaseSatFlowRate, SegInputDataList[[11]]$NumberofLanes, SegInputDataList[[11]]$EffectiveGreenTime, SegInputDataList[[11]]$CycleLengthSec, SegInputDataList[[11]]$ArrivalType)
+
+SegResultsDataList[[11]] <- list("Segment Free Flow Speed (mi/h)" = SegInputDataList[[11]]$PostedSpeedLimit*1.1, "Segment Average Travel Speed (mi/h)" = AdjustedLength[11]/((ReturnedResults[1]/SecondsPerHour)+(AdjustedLength[11]/(SegInputDataList[[11]]$PostedSpeedLimit*1.1))), "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[11]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[11]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[11]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[11]]$NumberofLanes, "LOSNumber" = ReturnedResults[2])
+```
+
+**Segment 12: Two-Lane Highway, Passing Constrained**
+
+```{r TwoLaneSeg12Calcs2}
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[12]]$SegmentType, SegInputDataList[[12]]$DirVolume, SegInputDataList[[12]]$OppVolume, SegInputDataList[[12]]$PeakHourFactor, SegInputDataList[[12]]$PercentHeavyVehicles, SegInputDataList[[12]]$PostedSpeedLimit, SegInputDataList[[12]]$SegmentLengthMi, SegInputDataList[[12]]$AccessPointDensity, SegInputDataList[[12]]$LaneWidth, SegInputDataList[[12]]$ShoulderWidth, SegInputDataList[[12]]$VertAlignmentClass, UpstreamSegResults, IsPassingLaneUpStream, 0, 0, 0)
+
+SegResultsDataList[[12]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[12]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[12]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[12]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[12]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+**Segment 13: Roundabout Intersection**
+
+```{r RoundaboutSeg13Calcs2}
+ReturnedResults <- vector(length = 2)
+ReturnedResults <- RoundaboutMainFcn(SegInputDataList[[13]]$VehicleType, SegInputDataList[[13]]$PercentHeavyVehicles, SegInputDataList[[13]]$PeakHourFactor, SegInputDataList[[13]]$DirVolume[2], SegInputDataList[[13]]$DirVolume[1], SegInputDataList[[13]]$DirVolume[3], SegInputDataList[[13]]$NBVolume[2], SegInputDataList[[13]]$NBVolume[1], SegInputDataList[[13]]$NBVolume[3], SegInputDataList[[13]]$OppVolume[2], SegInputDataList[[13]]$OppVolume[1], SegInputDataList[[13]]$OppVolume[3], SegInputDataList[[13]]$SBVolume[2], SegInputDataList[[13]]$SBVolume[1], SegInputDataList[[13]]$SBVolume[3])
+
+SegResultsDataList[[13]] <- list("Segment Free Flow Speed (mi/h)" = SegInputDataList[[13]]$PostedSpeedLimit*1.1, "Segment Average Travel Speed (mi/h)" = AdjustedLength[13]/((ReturnedResults[1]/SecondsPerHour)+(AdjustedLength[13]/(SegInputDataList[[13]]$PostedSpeedLimit*1.1))), "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[13]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[13]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[13]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[13]]$NumberofLanes, "LOSNumber" = ReturnedResults[2])
+```
+
+**Segment 14: Two-Lane Highway, Passing Zone**
+
+```{r TwoLaneSeg14Calcs2}
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[14]]$SegmentType, SegInputDataList[[14]]$DirVolume, SegInputDataList[[14]]$OppVolume, SegInputDataList[[14]]$PeakHourFactor, SegInputDataList[[14]]$PercentHeavyVehicles, SegInputDataList[[14]]$PostedSpeedLimit, SegInputDataList[[14]]$SegmentLengthMi, SegInputDataList[[14]]$AccessPointDensity, SegInputDataList[[14]]$LaneWidth, SegInputDataList[[14]]$ShoulderWidth, SegInputDataList[[14]]$VertAlignmentClass, UpstreamSegResults, IsPassingLaneUpStream, 0, 0, 0)
+
+SegResultsDataList[[14]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[14]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[14]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[14]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[14]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+**Segment 15: All-Way-Stop-Controlled Intersection**
+
+```{r AWSCSeg15Calcs2}
+ReturnedResults <- vector(length = 2)
+ReturnedResults <- AWSCMainFunction(SegInputDataList[[15]]$PeakHourFactor, SegInputDataList[[15]]$DirVolume[2], SegInputDataList[[15]]$DirVolume[1], SegInputDataList[[15]]$DirVolume[3], SegInputDataList[[15]]$NBVolume[2], SegInputDataList[[15]]$NBVolume[1], SegInputDataList[[15]]$NBVolume[3], SegInputDataList[[15]]$OppVolume[2], SegInputDataList[[15]]$OppVolume[1], SegInputDataList[[15]]$OppVolume[3], SegInputDataList[[15]]$SBVolume[2], SegInputDataList[[15]]$SBVolume[1], SegInputDataList[[15]]$SBVolume[3], SegInputDataList[[15]]$BaseSatHeadway, SegInputDataList[[15]]$Convergence, SegInputDataList[[15]]$ConvergenceCriteria, SegInputDataList[[15]]$DepartureHeadwayLast, SegInputDataList[[15]]$PercentHeavyVehicles[1], SegInputDataList[[15]]$PercentHeavyVehicles[2], SegInputDataList[[15]]$PercentHeavyVehicles[3], SegInputDataList[[15]]$PercentHeavyVehicles[4], SegInputDataList[[15]]$MoveUpTime14)
+
+SegResultsDataList[[15]] <- list("Segment Free Flow Speed (mi/h)" = SegInputDataList[[15]]$PostedSpeedLimit*1.1, "Segment Average Travel Speed (mi/h)" = AdjustedLength[15]/((ReturnedResults[1]/SecondsPerHour)+(AdjustedLength[15]/(SegInputDataList[[15]]$PostedSpeedLimit*1.1))), "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[15]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[15]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[15]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[15]]$NumberofLanes, "LOSNumber" = ReturnedResults[2])
+```
+
+**Segment 16: Two-Lane Highway, Passing Constrained**
+
+```{r TwoLaneSeg16Calcs2}
+ReturnedResults <- vector(length = 7)
+ReturnedResults <- TwoLaneMainFcn(SegInputDataList[[16]]$SegmentType, SegInputDataList[[16]]$DirVolume, SegInputDataList[[16]]$OppVolume, SegInputDataList[[16]]$PeakHourFactor, SegInputDataList[[16]]$PercentHeavyVehicles, SegInputDataList[[16]]$PostedSpeedLimit, SegInputDataList[[16]]$SegmentLengthMi, SegInputDataList[[16]]$AccessPointDensity, SegInputDataList[[16]]$LaneWidth, SegInputDataList[[16]]$ShoulderWidth, SegInputDataList[[16]]$VertAlignmentClass, UpstreamSegResults, IsPassingLaneUpStream, 0, 0, 0)
+
+SegResultsDataList[[16]] <- list("Segment Free Flow Speed (mi/h)" = ReturnedResults[1], "Segment Average Travel Speed (mi/h)" = ReturnedResults[2], "Segment Posted Speed Limit (mi/h)" = SegInputDataList[[16]]$PostedSpeedLimit, "Segment Length (mi)" = SegInputDataList[[16]]$SegmentLengthFt/FeetInMiles, "Segment Percent HV" = SegInputDataList[[16]]$PercentHeavyVehicles, "Number of Lanes" = SegInputDataList[[16]]$NumberofLanes, "LOSNumber" = ReturnedResults[6])
+```
+
+## Facility Calculations
+
+### Posted Speed Travel Time (s) 
+$$TT_{PSL} = \frac{Length}{S_{PSL}}$$
+
+```{r PostedTravelTime}
+PostedTravelTimeSec <- vector()
+PostedTotalTravTime <- 0
+for(i in 1:NumSegments){
+  PostedTravelTimeSec[i] <- AdjustedLength[i]/SegResultsDataList[[i]]$`Segment Posted Speed Limit (mi/h)` * SecondsPerHour
+  PostedTotalTravTime <- PostedTotalTravTime+PostedTravelTimeSec[i]
+}
+cat("Posted speed travel time (s) =", format(round(PostedTotalTravTime, 1), nsmall=1))
+```
+
+### Free-Flow Travel Time (s)
+$$TT_{FFS} = \frac{Length}{S_{FFS}}$$
+
+```{r FFTravelTime}
+FFTravelTimeSec <- vector()
+TotalFFTravTime <- 0
+for(i in 1:NumSegments){
+  FFTravelTimeSec[i] <- AdjustedLength[i]/SegResultsDataList[[i]]$`Segment Free Flow Speed (mi/h)` * SecondsPerHour
+  TotalFFTravTime <- TotalFFTravTime+FFTravelTimeSec[i]
+}
+cat("Free-flow travel time (s) =", format(round(TotalFFTravTime, 1), nsmall=1))
+```
+
+### Average Travel Time (s)
+$$TT_{Avg} = \frac{Length}{S_{Avg}}$$
+
+```{r AvgTravelTime}
+AvgTravelTimeSec <- vector()
+TotalAvgTravTime <- 0
+for(i in 1:NumSegments){
+  AvgTravelTimeSec[i] <- (AdjustedLength[i])/SegResultsDataList[[i]]$`Segment Average Travel Speed (mi/h)` * SecondsPerHour
+  TotalAvgTravTime <- TotalAvgTravTime+AvgTravelTimeSec[i]
+}
+cat("Average travel time (s) =", format(round(TotalAvgTravTime, 1), nsmall=1))
+```
+
+### Travel Time Segment Weights
+```{r TravelTimeWeight}
+TravelTimeWeight <- vector()
+WeightingSum <- 0
+for(i in 1:NumSegments){
+  TravelTimeWeight[i] <- AvgTravelTimeSec[i]/TotalAvgTravTime
+  WeightingSum <- WeightingSum+TravelTimeWeight[i]
+}
+print(TravelTimeWeight)
+cat("WeightingSum =", format(round(WeightingSum, 2), nsmall=2))
+```
+
+### Adjusted Demand Volumes
+```{r AdjustedDemandVols}
+DirDemandVol <- 0
+DirDemandVolAdj <- vector()
+for(i in 1:NumSegments){
+  if(i==13 || i==15){ #Roundabout and AWSC intersections include L/T/R volumes in array
+    DirDemandVol <- SegInputDataList[[i]]$DirVolume[1] + SegInputDataList[[i]]$DirVolume[2] + SegInputDataList[[i]]$DirVolume[3]
+    DirDemandVolAdj[i] <- DirDemandVol/SegInputDataList[[i]]$PeakHourFactor
+  } else{
+    DirDemandVol <- SegInputDataList[[i]]$DirVolume+SegInputDataList[[i]]$LeftTurnVolume+SegInputDataList[[i]]$RightTurnVolume
+    DirDemandVolAdj[i] <- DirDemandVol/SegInputDataList[[i]]$PeakHourFactor
+  }
+}
+```
+
+### Vehicle Hours Traveled (veh-h)
+$$VHT = \sum_{i=1}^{n} (TT_{Avg_i} \times V)$$
+
+```{r VHT}
+VehilceHoursTraveled <- vector()
+TotalVHT <- 0
+for(i in 1:NumSegments){
+  VehilceHoursTraveled[i] <- (AvgTravelTimeSec[i]/SecondsPerHour)*DirDemandVolAdj[i]
+  TotalVHT <- TotalVHT+VehilceHoursTraveled[i]
+  #print(VehilceHoursTraveled[i])
+}
+cat("Vehicle hours traveled (veh-h) =", format(round(TotalVHT, 1), nsmall=1))
+```
+
+### Total Delay (veh-h)
+$$VHD = \sum_{i=1}^{n}((TT_{Avg}-TT_{FFS}) \times V)$$
+
+```{r VHD}
+VehilceHoursDelayed <- vector()
+TotalVHD <- 0
+for(i in 1:NumSegments){
+  VehilceHoursDelayed[i] <- (AvgTravelTimeSec[i]-FFTravelTimeSec[i])*DirDemandVolAdj[i]/SecondsPerHour
+  TotalVHD <- TotalVHD+VehilceHoursDelayed[i]
+}
+cat("Vehicle hours delayed (veh-h) =", format(round(TotalVHD, 1), nsmall=1))
+```
+
+### Vehicle Miles Traveled (veh-mi)
+$$VMT = \sum_{i=1}^{n}(V_i \times Length_i)$$
+
+```{r VMT}
+VehicleMilesTraveled <- vector()
+TotalVMT <- 0
+for(i in 1:NumSegments){
+  VehicleMilesTraveled[i] <- DirDemandVolAdj[i]*AdjustedLength[i]
+  TotalVMT <- TotalVMT+VehicleMilesTraveled[i]
+}
+cat("Vehicle miles traveled (veh-mi) =", format(round(TotalVMT, 1), nsmall=1))
+```
+
+### Space Mean Speed (mi/h)
+$$S_{Avg} = \frac{VMT}{VHT}$$
+
+```{r AvgSpeed}
+SpaceMeanSpeed <- TotalVMT/TotalVHT
+cat("Average speed (mi/h) =", format(round(SpaceMeanSpeed, 1), nsmall=1))
+```
+
+### FFS Delay (s/veh)
+$$Delay_{FFS} = TT_{Avg}-TT_{FFS}$$
+
+```{r FFSDelay}
+AvgFFSDelay <- vector()
+TotalFFSDelay <- 0
+for (i in 1:NumSegments){
+  AvgFFSDelay[i] <- AvgTravelTimeSec[i]-FFTravelTimeSec[i]
+  TotalFFSDelay <- TotalFFSDelay+AvgFFSDelay[i]
+}
+cat("Average FFS delay (s/veh) =", format(round(TotalFFSDelay, 1), nsmall=1))
+```
+
+### Threshold Delay (s/veh)
+$$Delay_{Threshold} = TT_{Avg}-TT_{PSL}$$
+
+```{r AvgThreshDelay}
+AvgThreshDelay <- vector()
+TotalThreshDelay <- 0
+for (i in 1:NumSegments){
+  AvgThreshDelay[i] <- max(AvgTravelTimeSec[i]-PostedTravelTimeSec[i],0)
+  TotalThreshDelay <- TotalThreshDelay+AvgThreshDelay[i]
+}
+cat("Average threshold delay (s/veh) =", format(round(TotalThreshDelay, 1), nsmall=1))
+```
+
+```{r FacilityCalcs}
+SegLOSWeighted <- vector()
+FacilityLOSScore <- 0
+for(i in 1:16){
+  SegLOSWeighted[i] <- SegResultsDataList[[i]]$LOSNumber*TravelTimeWeight[i]
+  FacilityLOSScore <- FacilityLOSScore+SegLOSWeighted[i]
+}
+cat("LOS Score, weighted by travel time =", format(round(FacilityLOSScore, 3), nsmall=3))
+```
+
+### LOS Constancy
+```{r LOSconstancy}
+LOSconst <- 0
+CumulativeLOSscoreDiff <- 0
+PrevLOSscore <- SegResultsDataList[[1]]$LOSNumber
+for (i in 2:NumSegments){
+  CumulativeLOSscoreDiff <- CumulativeLOSscoreDiff + abs(SegResultsDataList[[i]]$LOSNumber-PrevLOSscore)
+  PrevLOSscore <- SegResultsDataList[[i]]$LOSNumber
+}
+LOSconst <- CumulativeLOSscoreDiff/(NumSegments-1)
+cat("LOS Constancy =", format(round(LOSconst, 3), nsmall=3))
+```
+
+### LOS Adjustment Factor
+```{r LOSAdjFact}
+
+LOSadjFact <- 0
+if(LOSconst<=0.2){
+  LOSadjFact <- 1.0
+}else if(LOSconst>=1.2){
+  LOSadjFact <- 1.2
+}else{
+  LOSadjFact <- 0.96+0.2*LOSconst
+}
+cat("LOS Adjustment Factor =", format(round(LOSadjFact, 3), nsmall=3))
+```
+
+### Final LOS Score
+```{r LOSfinal}
+cat("LOS Score Adjusted =", format(round(FacilityLOSScore*LOSadjFact, 3), nsmall=3))
+```
+
+**Variable Definitions**
+
+$Length$ = segment length (mi)\
+$S_{PSL}$ = posted speed limit (mi/h)\
+$S_{FFS}$ = free flow speed (mi/h)\
+$S_{Avg}$ = average speed (mi/h)\
+$TT_{PSL}$ = posted speed limit travel time (s)\
+$TT_{FFS}$ = free flow travel time (s)\
+$TT_{Avg}$ = average travel time (s)\
+$V$ = traffic demand volume (veh/h)\
+$VHT$ = vehicle hours traveled (veh-h)\
+$VHD$ = vehicle hours delayed (veh-h)\
+$VMT$ = vehicle miles traveled (veh-mi)\
+$Delay_{FFS}$ = free flow speed delay (s/veh)\
+$Delay_{Threshold}$ = threshold delay (s/veh)\

@@ -1,0 +1,467 @@
+# Two-Lane Highway Segment Analysis Methodology {#HCMtwolaneHwy}
+
+The core two-lane highway analysis methodology is contained in Chapter 15 (Two-Lane Highways). The motorized vehicle analysis methodology process is given in Exhibit 15-9 (p. 15-16). The specific equation and exhibit numbers utilized in the methodology, in the general order in which they are applied, are as follows.
+
+## Equations and Exhibits
+
+**Step 1: Identify Facility Study Boundaries and Corresponding Segmentation**
+
+- Exhibit 15-10: Minimum and Maximum Segment Lengths for Use in Computing Segment Speeds and Percent Followers
+
+**Vertical Class**|**Passing Constrained: Minimum - Maximum (mi)**|**Passing Zone: Minimum - Maximum (mi)**|**Passing Lane: Minimum - Maximum (mi)**| 
+:-----:|:-----:|:-----:|:-----:|
+1| 0.25 - 3.0| 0.25 - 2.0| 0.5 - 3.0|
+2| 0.25 - 3.0| 0.25 - 2.0| 0.5 - 3.0|
+3| 0.25 - 1.1| 0.25 - 1.1| 0.5 - 1.1|
+4| 0.5 - 3.0| 0.5	- 2.0| 0.5 - 3.0|
+5| 0.5 - 3.0| 0.5	- 2.0| 0.5 - 3.0|
+
+**Step 2: Determine Demand Flow Rates, Capacity, and d/c Ratio**
+
+- Equation 15-1: Analysis flow rate estimation; Uses results from Eq. 4-2
+
+$$v_{d} = \frac{V_{d}}{PHF} \tag{HCM Eq. 15-1}$$
+
+  - Equation 4-2: Peak hour factor (PHF); In HCM Chapter 4 (Traffic Operations and Capacity Concepts)
+  
+$$PHF = \frac{V}{V_{15} \times 4} \tag{HCM Eq. 4-2}$$
+
+**Step 3: Determine Vertical Alignment Classification**
+
+- Exhibit 15-11: Classifications for Vertical Alignment
+
+|**Segment Length (mi)**| |**Segment**|**Grade**|**(%)**|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| |$\leq$ 1|>1 $\leq$ 2|>2 $\leq$ 3|>3 $\leq$ 4|>4 $\leq$ 5|>5 $\leq$ 6|>6 $\leq$ 7|>7 $\leq$ 8|>8 $\leq$ 9|>9|
+$\leq$ 0.1|1 (1)|1 (1)|1 (1)|1 (1)|1 (1)|1 (1)|1 (1)|2 (1)|2 (2)|2 (2)
+>0.1 $\leq$ 0.2|1 (1)|1 (1)|1 (1)|1 (1)|2 (1)|2 (2)|2 (2)|3 (2)|3 (3)|3 (3)
+>0.2 $\leq$ 0.3|1 (1)|1 (1)|1 (1)|2 (1)|2 (2)|3 (2)|3 (3)|4 (3)|4 (4)|5 (5)
+>0.3 $\leq$ 0.4|1 (1)|1 (1)|2 (1)|2 (2)|3 (2)|3 (3)|4 (4)|5 (4)|5 (5)|5 (5)
+>0.4 $\leq$ 0.5|1 (1)|1 (1)|2 (1)|2 (2)|3 (3)|4 (3)|5 (4)|5 (5)|5 (5)|5 (5)
+>0.5 $\leq$ 0.6|1 (1)|1 (1)|2 (1)|3 (2)|3 (3)|4 (4)|5 (5)|5 (5)|5 (5)|5 (5)
+>0.6 $\leq$ 0.7|1 (1)|1 (1)|2 (1)|3 (2)|4 (3)|4 (4)|5 (5)|5 (5)|5 (5)|5 (5)
+>0.7 $\leq$ 0.8|1 (1)|1 (1)|2 (1)|3 (3)|4 (4)|5 (4)|5 (5)|5 (5)|5 (5)|5 (5)
+>0.8 $\leq$ 0.9|1 (1)|1 (1)|2 (1)|3 (3)|4 (4)|5 (5)|5 (5)|5 (5)|5 (5)|5 (5)
+>0.9 $\leq$ 1.0|1 (1)|1 (1)|2 (2)|3 (3)|4 (4)|5 (5)|5 (5)|5 (5)|5 (5)|5 (5)
+>1.0 $\leq$ 1.1|1 (1)|1 (1)|2 (2)|3 (3)|4 (4)|5 (5)|5 (5)|5 (5)|5 (5)|5 (5)
+>1.1|1 (1)|1 (1)|2 (2)|4 (4)|4 (4)|5 (5)|5 (5)|5 (5)|5 (5)|5 (5)
+
+**Step 4: Determine the Free-Flow Speed**
+
+- Equation 15-3: Free-flow speed (FFS) estimation; Uses results from Eqs. 15-2, 15-4, 15-5, 15-6 and Exhibit 15-12
+
+$$FFS = BFFS-a(HV\%)-f_{ls}-f_A \tag{HCM Eq. 15-3}$$
+
+  - Equation 15-2: Base free-flow speed (BFFS) estimation
+  
+$$BFFS = 1.14 \times S_{\text{p}} \tag{HCM Eq. 15-2}$$
+  
+  - Equation 15-4: Coefficient estimation for heavy vehicle percentage (HV%) parameter in Eq. 15-3
+  
+$$a = \text{max} \bigg\lbrack 0.0333,\ a_{0} + a_{1} \times BFFS + a_{2}\times L + \text{max}(0,\ a_{3} + a_{4} \times BFFS + a_{5}\times L) \times \frac{ {v_{0}}}{1,000}\bigg] \tag{HCM Eq. 15-4}$$
+  
+  - Exhibit 15-12: Coefficient Values for Eq. 15-4
+  
+**Vertical Class**|**$a_0$**|**$a_1$**|**$a_2$**|**$a_3$**|**$a_4$**|**$a_5$**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+1|0.00000|0.00000|0.00000|0.00000|0.00000|0.00000
+2|-0.45036|0.00814|0.01543|0.01358|0.00000|0.00000
+3|-0.29591|0.00743|0.00000|0.01246|0.00000|0.00000
+4|-0.40902|0.00975|0.00767|-0.18363|0.00423|0.00000
+5|-0.38360|0.01074|0.01945|-0.69848|0.01069|0.12700
+  
+  - Equation 15-5: Adjustment for lane and shoulder width
+  
+$$f_{LS} = 0.6 \times (12 - LW) + 0.7 \times (6 - SW) \tag{HCM Eq. 15-5}$$
+  
+  - Equation 15-6: Adjustment for access points
+
+$$f_{A} = \text{min}\left( \frac{ {APD}}{4},10 \right) \tag{HCM Eq. 15-6}$$
+
+**Step 5: Estimate the Average Speed**
+
+- Equation 15-7: Average speed estimation; Uses results from Eqs. 15-8 - 15-16 and Exhibits 15-13 - 15-22
+
+$$S=\left\{\begin{array}{l l}
+FFS&{v_{d} \leq {100}} \\
+FFS - m \bigg(\frac{v_{d}}{1,000}-0.1 \bigg)^{p} & {v_{d} > 100}\end{array}\right. \tag{HCM Eq. 15-7}$$
+
+  - Equation 15-8: Slope coefficient (*m*) for Eq. 15-7
+  
+$$m = \text{max}\left\lbrack b_{5},b_{0} + b_{1} \times FFS + b_{2} \times \sqrt{\frac{v_{o}}{1,000}} + \text{max}\left( 0,b_{3} \right) \times \sqrt{L} + \text{max}\left( 0,b_{4} \right) \times \sqrt{HV\%} \right\rbrack \tag{HCM Eq. 15-8}$$
+  
+  - Exhibit 15-13: Coefficient Values for Eq. 15-8 for Passing Zone and Passing Constrained Segments
+
+**Vertical Class**|**$b_0$**|**$b_1$**|**$b_2$**|**$b_3$**|**$b_4$**|**$b_5$**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+1|0.0558|0.0542|0.3278|0.1029|0|0
+2|5.728|-0.0809|0.7404|Equation 15-9|Equation 15-10|3.1155
+3|9.3079|-0.1706|1.1292|Equation 15-9|Equation 15-10|3.1155
+4|9.0115|-0.1994|1.8252|Equation 15-9|Equation 15-10|3.2685
+5|23.9144|-0.6925|1.9473|Equation 15-9|Equation 15-10|3.5115
+
+  - Exhibit 15-14: Coefficient Values for Eq. 15-8 for Passing Lane Segments
+  
+**Vertical Class**|**$b_0$**|**$b_1$**|**$b_2$**|**$b_3$**|**$b_4$**|**$b_5$**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+1|-1.1379|0.0941|0|Equation 15-9|Equation 15-10|0
+2|-2.0688|0.1053|0|Equation 15-9|Equation 15-10|0
+3|-0.5074|0.0935|0|0|Equation 15-10|0
+4|8.0354|-0.0860|0|Equation 15-9|Equation 15-10|4.19
+5|7.2991|-0.3535|0|Equation 15-9|Equation 15-10|4.87
+
+  - Equation 15-9: Segment length coefficient ($b_3$) for Eq. 15-8
+  
+$$b_{3} = c_{0} + c_{1} \times \sqrt{L} + c_{2} \times FFS + c_{3} \times (FFS \times \sqrt{L}) \tag{HCM Eq. 15-9}$$
+  
+  - Exhibit 15-15: Coefficient Values for Eq. 15-9 for Passing Zone and Passing Constrained Segments
+  
+**Vertical Class**|**$c_0$**|**$c_1$**|**$c_2$**|**$c_3$**
+:-----:|:-----:|:-----:|:-----:|:-----:
+1|0.1029|0|0|0
+2|-13.8036|0|0.2446|0
+3|-11.9703|0|0.2542|0
+4|-12.5113|0|0.2656|0
+5|-14.8961|0|0.437|0
+
+  - Exhibit 15-16: Coefficient Values for Eq. 15-9 for Passing Lane Segments
+  
+**Vertical Class**|**$c_0$**|**$c_1$**|**$c_2$**|**$c_3$**
+:-----:|:-----:|:-----:|:-----:|:-----:
+1|0|0.2667|0|0
+2|0|0.4479|0|0
+3|0|0|0|0
+4|-27.1244|11.5196|0.4681|-0.1873
+5|-45.3391|17.3749|1.0587|-0.3729
+
+  - Equation 15-10: Heavy vehicle percentage coefficient ($b_4$) for Eq. 15-8
+  
+$$b_{4} = d_{0} + d_{1} \times \sqrt{HV\%} + d_{2} \times FFS + d_{3} \times (FFS \times \sqrt{HV\%}) \tag{HCM Eq. 15-10}$$
+  
+  - Exhibit 15-17: Coefficient Values for Eq. 15-10 for Passing Zone and Passing Constrained Segments
+  
+**Vertical Class**|**$d_0$**|**$d_1$**|**$d_2$**|**$d_3$**
+:-----:|:-----:|:-----:|:-----:|:-----:
+1|0|0|0|0
+2|-1.7765|0|0.0392|0
+3|-3.5550|0|0.0826|0
+4|-5.7775|0|0.1373|0
+5|-18.2910|2.3875|0.4494|-0.0520
+
+  - Exhibit 15-18: Coefficient Values for Eq. 15-10 for Passing Lane Segments
+  
+**Vertical Class**|**$d_0$**|**$d_1$**|**$d_2$**|**$d_3$**
+:-----:|:-----:|:-----:|:-----:|:-----:
+1|0|0.1252|0|0
+2|0|0.1631|0|0
+3|0|-0.2201|0|0.0072
+4|0|-0.7506|0|0.0193
+5|3.8457|-0.9112|0|0.017
+
+  - Equation 15-11: Power coefficient (*p*) for Eq. 15-7
+  
+$$p = \text{max}\left\lbrack f_{8},f_{0} + f_{1} \times FFS + f_{2} \times L + f_{3} \times \frac{v_{o}}{1,000} + f_{4} \times \sqrt{\frac{v_{o}}{1,000}} \\ + f_{5} \times HV\% + f_{6} \times \sqrt{HV\%} + f_{7} \times (L \times HV\%) \right\rbrack \tag{HCM Eq. 15-11}$$
+  
+  - Exhibit 15-19: Coefficient Values for Eq. 15-11 for Passing Zone and Passing Constrained Segments
+  
+**Vertical Class**|**$f_0$**|**$f_1$**|**$f_2$**|**$f_3$**|**$f_4$**|**$f_5$**|**$f_6$**|**$f_7$**|**$f_8$**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+1|0.67576|0|0|0.1206|−0.35919|0|0|0|0
+2|0.34524|0.00591|0.02031|0.14911|-0.43784|−0.00296|0.02956|0|0.41622
+3|0.17291|0.00917|0.05698|0.27734|-0.61893|−0.00918|0.09184|0|0.41622
+4|0.67689|0.00534|-0.13037|0.25699|-0.68465|−0.00709|0.07087|0|0.3395
+5|1.13262|0|-0.26367|0.18811|-0.64304|-0.00867|0.08675|0|0.3059
+
+  - Exhibit 15-20: Coefficient Values for Eq. 15-11 for Passing Lane Segments
+  
+**Vertical Class**|**$f_0$**|**$f_1$**|**$f_2$**|**$f_3$**|**$f_4$**|**$f_5$**|**$f_6$**|**$f_7$**|**$f_8$**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+1|0.91793|-0.00557|0.36862|0|0|0.00611|0|-0.00419|0
+2|0.65105|0|0.34931|0|0|0.00722|0|-0.00391|0
+3|0.40117|0|0.68633|0|0|0.0235|0|-0.02088|0
+4|1.13282|-0.00798|0.35425|0|0|0.01521|0|-0.00987|0
+5|1.12077|-0.00550|0.25431|0|0|0.01269|0|-0.01053|0
+
+The remainder of the calculations in step apply only if the segment contains horizontal curvature. Exhibit 15-21 provides a flowchart of the calculation procedure to adjust segment average speed for horizontal curvature. In lieu of presenting the flowchart here, the steps to the flowchart are described in the text as follows.
+
+For all horizontal curves within the segment:
+
+  - Determine the alignment classification using Exhibit 15-22
+  - Exhibit 15-22: Horizontal Alignment Classifications
+    
+**Radius (ft)**|**Superelevation (%)**|
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+| |<1|$\geq$ 1 <2|$\geq$ 2 <3|$\geq$ 3 <4|$\geq$ 4 <5|$\geq$ 5 <6|$\geq$ 6 <7|$\geq$ 7 <8|$\geq$ 8 <9|$\geq$ 9 <10|$\geq$ 10
+<300|5|5|5|5|5|5|5|5|5|5|5
+300-449|4|4|4|4|4|4|4|4|4|4|4
+450-599|4|3|3|3|3|3|3|3|3|3|3
+600-749|3|3|3|3|3|3|2|2|2|2|2
+750-899|2|2|2|2|2|2|2|2|2|2|2
+900-1,049|2|2|2|2|2|2|2|2|1|1|1
+1,050-1,199|2|2|2|2|1|1|1|1|1|1|1
+1,200-1,349|2|2|1|1|1|1|1|1|1|1|1
+1,350-1,499|1|1|1|1|1|1|1|1|1|1|—
+1,500-1,649|1|1|1|1|1|1|1|1|—|—|—
+1,650-1,799|1|1|1|1|1|1|—|—|—|—|—
+1,800-1,949|1|1|1|1|1|—|—|—|—|—|—
+1,950-2,099|1|1|1|1|—|—|—|—|—|—|—
+2,100-2,249|1|1|1|—|—|—|—|—|—|—|—
+2,250-2,399|1|1|—|—|—|—|—|—|—|—|—
+2,400-2,549|1|—|—|—|—|—|—|—|—|—|—
+≥2550|—|—|—|—|—|—|—|—|—|—|—
+
+ - Calculate the horizontal curve base free-flow speed (BFFS) using Equation 15-14; Uses result from Exhibit 15-22
+
+$${BFFS}_{{HCi}} = \text{min}\left( {BFFS}_{T},44.32 + 0.3728 \times {BFFS}_{T} - 6.868 \times {HorizClass}_{i} \right) \tag{HCM Eq. 15-14}$$
+
+ - Calculate the horizontal curve free-flow speed (FFS) using Equation 15-13; Uses result from Eq. 15-14
+    
+$${FFS}_{HCi} = {BFFS}_{HCi} - 0.0255 \times HV\% \tag{HCM Eq. 15-13}$$
+
+ - Calculate the *m* coefficient for Equation 15-12, using Equation 15-15
+    
+$$m = \text{max}\left( 0.277, - 25.8993 - 0.7756 \times {FFS}_{HCi} + 10.6294 \times \sqrt{{FFS}_{HCi}} + 2.4766 \times {HorizClass}_{i} \\ - 9.8238 \times \sqrt{{HorizClass}_{i}} \right) \tag{HCM Eq. 15-15}$$
+
+  - Calculate the average speed on horizontal curve subsegment using Equation 15-12; Uses results from Eq. 15-13, 15-15
+  
+$$S_{{HCi}} = \text{min}\left( S,{FFS}_{{HCi}} - m \times \sqrt{\frac{v_{d}}{1,000} - 0.1} \right) \tag{HCM Eq. 15-12}$$
+  - Set the horizontal curve average speed to the minimum value between the horizontal curve average speed and a comparable tangent segment.
+    
+  - Once the above calculations have been performed for all horizontal curve subsegments within the segment, calculate the adjusted average speed for the segment using Equation 15-16.
+
+$$S = \frac{\sum_{i} \left({SubsegSpeed}_{i} \times{SubsegLength}_{i} \right)}{L} \tag{HCM Eq. 15-16}$$
+
+**Step 6: Estimate the Percent Followers**
+
+- Equation 15-17: Percent followers estimation; Uses results from Eqs. 15-22, 15-23
+
+$$PF = 100 \times \left\lbrack 1 - e^{\left( m\  \times \left\{ \ \frac{v_{d}}{1,000} \right\}^{p} \right)} \right\rbrack \tag{HCM Eq. 15-17}$$
+
+  - Equation 15-18: Percent followers at capacity flow rate for passing zone and passing constrained segments; Uses results from Exhibit 15-24
+  
+$${PF}_{cap} = b_{0} + b_{1}(L) + b_{2}\left(\sqrt{L} \right) + b_{3}\left({FFS} \right) \\+ b_{4}\left( \sqrt{FFS} \right) + b_{5}(HV\%) + \ b_{6}\left( FFS \times \frac{v_{o}}{1,000} \right) + b_{7}\left( \sqrt{\frac{v_{0}}{1,000}} \right) \tag{HCM Eq. 15-18}$$
+  
+  - Exhibit 15-24: Coefficient Values for Eq. 15-18
+  
+**Vertical Class**|**$b_0$**|**$b_1$**|**$b_2$**|**$b_3$**|**$b_4$**|**$b_5$**|**$b_6$**|**$b_7$**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+1|37.6808|3.05089|-7.90866|-0.94321|13.64266|-0.00050|-0.05500|7.13758
+2|58.21104|5.73387|-13.66293|-0.66126|9.08575|-0.00950|-0.03602|7.14619
+3|113.20439|10.01778|-18.90000|0.46542|-6.75338|-0.03000|-0.05800|10.03239
+4|58.29978|-0.53611|7.35076|-0.27046|4.4985|-0.01100|-0.02968|8.89680
+5|3.32968|-0.84377|7.08952|-1.32089|19.98477|-0.01250|-0.02960|9.99453
+
+  - Equation 15-19: Percent followers at capacity flow rate for passing lane segments; Uses results from Exhibit 15-25
+  
+$${PF}_{cap} = b_{0} + b_{1}(L) + b_{2}\left(\sqrt{L} \right) + b_{3}\left({FFS} \right) + b_{4}\left( \sqrt{FFS} \right) + b_{5}(HV\%) + \ b_{6}(\sqrt{HV\%}) + b_{7}(FFS \times HV\%) \tag{HCM Eq. 15-19}$$
+  
+  - Exhibit 15-25: Coefficient Values for Eq. 15-19
+  
+**Vertical Class**|**$b_0$**|**$b_1$**|**$b_2$**|**$b_3$**|**$b_4$**|**$b_5$**|**$b_6$**|**$b_7$**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+1|61.73075|6.73922|-23.68853|-0.84126|11.44533|-1.05124|1.5039|0.00491
+2|12.30096|9.57465|-30.79427|-1.79448|25.76436|-0.66350|1.26039|-0.00323
+3|206.07369|-4.29885|0|1.96483|-30.32556|-0.75812|1.06453|-0.00839
+4|263.13428|5.38749|-19.04859|2.73018|-42.76919|-1.31277|-0.32242|0.01412
+5|126.95629|5.95754|-19.22229|0.43238|-7.35636|-1.03017|-2.66026|0.01389
+
+  - Equation 15-20: Percent followers at 25% of capacity flow rate for passing zone and passing constrained segments; Uses results from Exhibit 15-26
+  
+$${PF}_{25cap} = c_{0} + c_{1}(L) + c_{2}\left( \sqrt{L} \right) + c_{3}\left({FFS} \right) + c_{4}\left( \sqrt{\text{FFS}} \right) + c_{5}(HV\%) + c_{6}\left( FFS \times \frac{v_{o}}{1,000} \right) + c_{7}\left( \sqrt{\frac{v_{0}}{1,000}} \right) \tag{HCM Eq. 15-20}$$
+  
+  - Exhibit 15-26: Coefficient Values for Eq. 15-20
+  
+**Vertical Class**|**$c_0$**|**$c_1$**|**$c_2$**|**$c_3$**|**$c_4$**|**$c_5$**|**$c_6$**|**$c_7$**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+1|18.01780|10.00000|-21.60000|-0.97853|12.05214|-0.00750|-0.06700|11.60405
+2|47.83887|12.80000|-28.20000|-0.61758|5.8|-0.04550|-0.03344|11.35573
+3|125.40000|19.50000|-34.90000|0.90672|-16.10000|-0.11000|-0.06200|14.71136
+4|103.13534|14.68459|-23.72704|0.664436|-11.95763|-0.10000|0.00172|14.70067
+5|89|19.02642|-34.54240|0.29792|-6.62528|-0.16000|0.00480|17.56611
+
+  - Equation 15-21: Percent followers at 25% of capacity flow rate for passing lane segments; Uses results from Exhibit 15-27
+  
+$${PF}_{25cap} = c_{0} + c_{1}(L) + c_{2}\left( \sqrt{L} \right) + c_{3}\left({FFS} \right) + c_{4}\left( \sqrt{\text{FFS}} \right) + c_{5}(HV\%) + c_{6}(\sqrt{HV\%}) + c_{7}({FFS} \times {HV\%}) \tag{HCM Eq. 15-21}$$
+  
+  - Exhibit 15-27: Coefficient Values for Eq. 15-21
+  
+**Vertical Class**|**$c_0$**|**$c_1$**|**$c_2$**|**$c_3$**|**$c_4$**|**$c_5$**|**$c_6$**|**$c_7$**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+1|80.37105|14.44997|-46.41831|-0.23367|0.84914|-0.56747|0.89427|0.00119
+2|18.37886|14.71856|-47.78892|-1.43373|18.3204|-0.13226|0.77217|-0.00778
+3|239.9893|15.90683|-46.87525|2.73582|-42.88130|-0.53746|0.76271|-0.00428
+4|223.68435|10.26908|-35.60830|2.31877|-38.30034|-0.60275|-0.67758|0.00117
+5|137.37633|11.00106|-38.89043|0.78501|-14.88672|-0.72576|-2.49546|0.00872
+
+  - Equation 15-22: Slope coefficient (*m*) for Eq. 15-17; Uses results from Exhibit 15-28
+  
+$$m = d_{1}\left( \frac{0 - \text{ln}\left\lbrack 1 - \frac{{PF}_{25cap}}{100} \right\rbrack}{0.25\left\lbrack \frac{{cap}}{1,000} \right\rbrack} \right) + d_{2}\left( \frac{0 - \text{ln}\left\lbrack 1 - \frac{{PF}_{\text{cap}}}{100} \right\rbrack}{\left\lbrack \frac{{cap}}{1,000} \right\rbrack} \right) \tag{HCM Eq. 15-22}$$
+  
+  - Exhibit 15-28: Coefficient Values for Eq. 15-22
+  
+**Segment Type**|**$d_1$**|**$d_2$**
+:-----:|:-----:|:-----:
+Passing Zone and Passing Constrained|-0.29764|-0.71917
+Passing Lane|-0.15808|-0.83732
+
+  - Equation 15-23: Power coefficient (*p*) for Eq. 15-17; Uses results from Exhibit 15-29
+  
+$$p = e_{0} + e_{1}\left( \frac{0 - \text{ln}\left\lbrack 1 - \frac{{PF}_{25cap}}{100} \right\rbrack}{0.25\left\lbrack \frac{cap}{1,000} \right\rbrack} \right) + e_{2}\left( \frac{0 - \text{ln}\left\lbrack 1 - \frac{{PF}_{{cap}}}{100} \right\rbrack}{\left\lbrack \frac{cap}{1,000} \right\rbrack} \right) + \ e_{3}\sqrt{\frac{0 - \text{ln}\left( 1 - \frac{{PF}_{25cap}}{100} \right)}{0.25\left\lbrack \frac{cap}{1,000} \right\rbrack}} \\ + e_{4}\sqrt{\frac{0 - \text{ln}\left( 1 - \frac{{PF}_{cap}}{100} \right)}{\left\lbrack \frac{{cap}}{1,000} \right\rbrack}} \tag{HCM Eq. 15-23}$$
+  
+  - Exhibit 15-29: Coefficient Values for Eq. 15-23
+  
+**Segment Type**|**$e_0$**|**$e_1$**|**$e_2$**|**$e_3$**|**$e_4$**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+Passing Zone and Passing Constrained|0.81165|0.3792|-0.49524|-2.11289|2.41146
+Passing Lane|-1.63246|1.6496|-4.45823|-4.89119|10.33057
+
+**Step 7: Calculate Additional Performance Measure Values for a Passing Lane Segment**
+
+- Equation 15-24: Estimate number of heavy vehicles entering the passing lane segment
+
+$$NumHV = {v}_d \times \frac{{HV\%}}{100} \tag{HCM Eq. 15-24}$$
+
+- Equation 15-25: Estimate proportion of the demand flow in the faster lane (i.e., the lane used by passing vehicles); Uses result from Eq. 15-24
+
+$$PropFlowRate_{FL} = 0.92183 - 0.05022 \times \ln(v_{d})-0.00030 \times NumHV \tag{HCM Eq. 15-25}$$
+
+- Equation 15-26: Estimate demand flow rate in the faster lane; Uses result from Eq. 15-25
+
+$$FlowRate_{FL} = v_{d} \times PropFlowRate_{FL} \tag{HCM Eq. 15-26}$$
+
+- Equation 15-27: Estimate demand flow rate in the slower lane (i.e., the lane used by non-passing vehicles); Uses result from Eq. 15-25
+
+$$FlowRate_{SL} = v_{d} \times (1- PropFlowRate_{FL}) \tag{HCM Eq. 15-27}$$
+
+- Equation 15-28: Estimate percentage of heavy vehicles in the faster lane
+
+$$HV\%_{FL} = HV\% \times HVPropMultiplier_{FL} \tag{HCM Eq. 15-28}$$
+
+- Equation 15-29: Estimate number of heavy vehicles in the slower lane; Uses result from Eq. 15-28
+
+$$NumHV_{SL} = NumHV - \bigg(FlowRate_{FL} \times \frac{{HV\%_{FL}}}{100}\bigg) \tag{HCM Eq. 15-29}$$
+
+- Equation 15-30: Estimate percentage of heavy vehicles in the slower lane; Uses result from Eq. 15-29
+
+$$HV\%_{SL} = \frac{{NumHV_{SL}}}{FlowRate_{SL}} \times {100} \tag{HCM Eq. 15-30}$$
+
+- Equation 15-31: Estimate average speed lane differential adjustment
+
+$$AvgSpeedDiffAdj = 2.750 + 0.00056 \times v_{d} + 3.8521 \times \frac{HV\%}{100} \tag{HCM Eq. 15-31}$$
+
+- Equation 15-32: Estimate average speed in the faster lane at the midpoint of the passing lane segment; Uses result from Eq. 15-31
+
+$$S_{PLmid\_FL} = S_{init\_FL} + \frac{AvgSpeedDiffAdj}{2} \tag{HCM Eq. 15-32}$$
+
+- Equation 15-33: Estimate average speed in the slower lane at the midpoint of the passing lane segment; Uses result from Eq. 15-31
+
+$$S_{PLmid\_SL} = S_{init\_SL} - \frac{AvgSpeedDiffAdj}{2} \tag{HCM Eq. 15-33}$$
+
+**Step 8: Calculate Follower Density**
+
+- Equation 15-34: Follower density estimation for passing lane segment midpoint
+
+$$FD_{PLmid} = \frac{ \left(\frac{PF_{PLmid\_FL}}{100} \times \frac{FlowRate_{FL}}{S_{PLmid\_FL}}\right) + \left(\frac{PF_{PLmid\_SL}}{100} \times \frac{FlowRate_{SL}}{S_{PLmid\_SL}}\right)}{2} \tag{HCM Eq. 15-34}$$
+
+- Equation 15-35: Follower density estimation for passing zone and passing constrained segments
+
+$$FD = \frac {PF}{100} \times \frac{v_{d}}{S} \tag{HCM Eq. 15-35}$$
+
+**Step 9: Determine Potential Adjustment to Follower Density**
+
+- Equation 15-36: Estimate percentage improvement to percent followers on a segment downstream of a passing lane segment
+
+$$\%Improve_{PF} = \text{max}(0,27 - 8.75 \times \ln[\text{max}(0.1,DownstreamDistance)] \\ +0.1 \times \text{max}[0,PF-30] + 3.5 \times \ln[\text{max}(0.3,PassLaneLength)] - 0.01 \times FlowRate) \tag{HCM Eq. 15-36}$$
+
+- Equation 15-37: Estimate percentage improvement to the average speed on a segment downstream of a passing lane segment
+
+$$\%Improve_{s} = \text{max}(0,3 - 0.8 \times DownstreamDistance +0.1 \\ \times \text{max}[0,PF-30] + 0.75 \times PassLaneLength - 0.005 \times FlowRate) \tag{HCM Eq. 15-37}$$
+
+- Equation 15-38: Adjusted follower density on a segment downstream of a passing lane segment; Uses results from Eqs. 15-36 and 15-37
+
+$$FD_{adj} = \frac{PF}{100} \times \left(1 - \frac {\%Improve_{PF}}{100}\right) \times \frac {FlowRate}{{S} \times \left(1 + \frac {\%Improve_{S}}{100}\right)} \tag{HCM Eq. 15-38}$$
+
+**Step 10: Determine LOS**
+
+- Exhibit 15-6: Motorized Vehicle LOS Criteria for Two-Lane Highways
+
+Follower Density (followers/mi/ln)
+
+**LOS**|**Posted Speed Limit $\geq$ 50 mi/h**|**Posted Speed Limit < 50 mi/h**
+:-----:|:-----:|:-----:
+A|$\leq$ 2.0|$\leq$ 2.5
+B|> 2.0 - 4.0|> 2.5 - 5.0
+C|> 4.0 - 8.0|> 5.0 - 10.0
+D|> 8.0 - 12.0|> 10.0 - 15.0
+E|> 12.0|> 15.0
+
+**Step 11: Facility Analysis**
+
+This step is not included in the rural highway facility analysis
+
+
+## Nomenclature
+
+$a_{0}-a_{5}$ =	coefficient values from Exhibit 15-12  
+$APD$ = access-point density (access points/mi)  
+$b_{0}-b_{5}$	=	coefficients for speed-flow slope model, from Exhibit 15-13 for Passing Zone and Passing Constrained segments, and from Exhibit 15-14 for Passing Lane segments  
+$b_{0}-b_{7}$ = coefficient values for Equation 15-18, from Exhibit 15-24  
+$b_{0}-b_{7}$ = coefficient values for Equation 15-19, from Exhibit 15-25  
+$b_{3}$	=	segment length coefficient for speed-flow slope model (decimal)  
+$b_{4}$	=	heavy vehicle percentage coefficient for speed-flow slope model (decimal)  
+$BFFS$ = base free-flow speed (mi/h)   
+$BFFS_{HCi}$ = base free-flow speed on horizontal curve subsegment *i* in the analysis direction (mi/h), from Equation 15-14  
+$BFFS_{T}$ = base free-flow speed on preceding tangent subsegment in the analysis direction (mi/h)  
+$c_{0}-c_{3}$	= coefficients for the b3 segment length coefficient model, from Exhibit 15-15 for Passing Zone and Passing Constrained segments, and from Exhibit 15-16 for Passing Lane segments  
+$c_{0}-c_{7}$ = coefficient values for Equation 15-20, from Exhibit 15-26  
+$c_{0}-c_{7}$ = coefficient values for Equation 15-21, from Exhibit 15-27  
+$d_{0}-d_{3}$	= coefficients for the b4 heavy vehicle percentage coefficient model, from Exhibit 15-17 for Passing Zone and Passing Constrained segments, and from Exhibit 15-18 for Passing Lane segments  
+$d_{1}-d_{2}$ = coefficient values for Equation 15-22, from Exhibit 15-28  
+$DownstreamDistance$ = distance downstream from the start of the passing lane segment (mi)  
+$e_{0}-e_{4}$ = coefficient values for Equation 15-23, from Exhibit 15-29  
+$f_{0}-f_{8}$ =	coefficients for the power coefficient model, from Exhibit 15-19 for Passing Zone and Passing Constrained segments, and from Exhibit 15-20 for Passing Lane segments  
+$f_{A}$ = adjustment for access point density, from Equation 15-6 (mi/h)  
+$f_{LS}$ = adjustment for lane and shoulder width (mi/h), from Equation 15-5  
+$FD_{adj}$ = adjusted follower density on a segment downstream of a passing lane segment (followers/mi)  
+$FD_{F}$ = average follower density for the facility in the analysis direction (followers/mi)  
+$FD_{i}$ = follower density, or adjusted follower density, for segment *i* in the analysis direction (followers/mi)  
+$FFS$ = free-flow speed in the analysis direction (mi/h)  
+$FFS_{HCi}$ =	free-flow speed on horizontal curve subsegment *i* in the analysis direction (mi/h), from Equation 15-13  
+$FlowRate$ = demand flow rate (veh/h)  
+$FlowRate_{FL}$	=	demand flow rate in the faster lane (veh/h)  
+$FlowRate_{SL}$	=	demand flow rate in the slower lane (i.e., the lane used by non-passing vehicles) (veh/h)  
+$HorizClass_{i}$ = horizontal classification for subsegment *i*  
+$HV\%$ = percentage of heavy vehicles in the analysis direction (%)  
+$HV\%_{FL}$	=	percentage of heavy vehicles in the faster lane (%)  
+$HV\%_{SL}$ = percentage of heavy vehicles in the faster lane (%)  
+$HVPropMultiplier_{FL}$	=	0.4  
+$\%Improve_{PF}$ = % improvement to percent followers on a segment downstream of a passing lane segment  
+$\%Improve_{S}$	= % improvement to the average speed on a segment downstream of a passing lane segment  
+$L$	=	segment length (mi), subject to minima and maxima given in Step 1  
+$L_{i}$	=	actual segment length for segment *i* (mi)  
+$LW$ = lane width (ft), constrained to minimum and maximum values of 9 ft and 12 ft, respectively  
+$m$	=	slope coefficient (decimal), from Step 5a  
+$NumHV$ = number of heavy vehicles entering the passing lane segment (veh)  
+$NumHV_{SL}$ = number of heavy vehicles in the slower lane (veh)  
+$p$	=	power coefficient (decimal), from Step 5b  
+$PassLaneLength$ = length of passing lane segment (mi)  
+$PF$ = percent followers in the analysis direction (%)  
+$PF_{cap}$ = percent followers at capacity flow rate in the analysis direction (%)  
+$PF_{PLmid\_FL}$ = percent followers in the faster lane at the midpoint of the passing lane segment (%)  
+$PF_{PLmid\_SL}$ = percent followers in the slower lane at the midpoint of the passing lane segment (%)  
+$PF_{25cap}$ = percent followers of 25% of the capacity flow rate in the analysis direction (%)  
+$PHF$ = peak hour factor (decimal)  
+$PropFlowRate_{FL}$	=	proportion of the demand flow in the faster lane (i.e., the lane used by passing vehicles) (decimal)  
+$S$ = average speed in the analysis direction (mi/h), with consideration of horizontal curvature  
+$S_{HCi}$ =	average speed on horizontal curve subsegment *i* in the analysis direction (mi/h)  
+$S_{init\_FL}$ =	initial average speed in the faster lane (mi/h)  
+$S_{init\_SL}$	=	initial average speed in the slower lane (mi/h)  
+$S_{pl}$ = posted speed limit (mi/h)  
+$S_{PLmid-FL}$ = average speed in the faster lane at the midpoint of the passing lane segment (mi/h)  
+$S_{PLmid-SL}$ = average speed in the slower lane at the midpoint of the passing lane segment (mi/h)  
+$SubsegLength_{i}$ = length of subsegment (horizontal curve or tangent) *i* (mi/h)  
+$SubsegSpeed_{i}$ =	speed of subsegment (horizontal curve or tangent) *i* (mi/h)  
+$SW$ = shoulder width (ft), constrained to minimum and maximum values of 0 ft and 6 ft, respectively  
+$V_{15}$ = volume during the peak 15 min of the analysis hour (veh/15 min)   
+$v_{d}$ =	flow rate in the analysis direction (veh/h)  
+$v_{o}$ = demand flow rate in opposing direction (veh/h); $v_{o}$ = 1,500 in Passing Constrained segments and $v_{o}$ = 0 in Passing Lane segments

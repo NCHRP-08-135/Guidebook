@@ -1,0 +1,6 @@
+Package: placeholder
+Type: Book
+Title: Guidebook for Quality of Service and Reliability Analyses of Rural Highways
+Version: 1.0.0
+Imports: bookdown
+Remotes: rstudio/bookdown

@@ -1,0 +1,208 @@
+# Roundabout Intersection Analysis Methodology {#HCMroundabout}
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Limitations**
+:::
+For the roundabout intersection calculations, the planning-level analysis methodology from *NCHRP Report 825: Planning and Preliminary Engineering Applications Guide to the Highway Capacity Manual* [@NCHRPRep825] was implemented. The simplifications to the full operational analysis methodology include the following:
+
+-	one lane on each approach and within the roundabout (this is the predominant configuration in rural highway situations),
+-	pedestrian crossings are not considered, and
+-	right-turn by-pass lanes are not considered.
+::::
+
+## Equations and Exhibits
+  
+**Step 1: Convert Movement Demand Volumes to Flow Rates**
+
+- Equation 22-8: Demand flow rate for movement *i*
+
+$$v_{i} = \frac{V_{i}}{PHF} \tag{HCM Eq. 22-8}$$
+
+**Step 2: Adjust Flow Rates for Heavy Vehicles**
+
+- Equation 22-9: Passenger car equivalent demand flow rate for movement *i*; Uses results from Eq. 22-10 and Exhibit 22-11
+
+$$v_{i,pce} = \frac{v_{i}}{f_{HV}} \tag{HCM Eq. 22-9}$$
+
+  - Exhibit 22-11: Passenger Car Equivalencies
+  
+**Vehicle Type **|**Passenger Car Equivalent (PCE), $E_T$**
+:-----:|:-----:
+Passenger car |1
+Heavy vehicle |2
+  
+  - Equation 22-10: Heavy vehicle adjustment factor
+  
+$$f_{hv} = \frac{1}{1 + P_{T}(E_{T} - 1)} \tag{HCM Eq. 22-10}$$
+
+**Step 3: Determine Circulating and Exiting Flow Rates**
+
+The circulating flow rate ($v_c$) that opposes traffic entering the roundabout from a given leg is comprised of the following movements (assuming a four-leg roundabout):
+
+- the U turn movement of the leg immediately to the right of the subject leg
+- the U turn and left turn movements of the leg opposite of the subject leg
+- the U turn, left turn, and through movements of the leg immediately to the left of the subject leg
+
+For example, the calculation of the circulating flow rate opposing the northbound entry leg is given by Equation 22-11 (uses results from Eq. 22-9)
+
+$v_{c,NB,pce} = v_{WBU,pce} + v_{SBL,pce} + v_{SBU,pce} + v_{EBT,pce} + v_{EBL,pce} + v_{EBU,pce}$
+
+The exiting flow rate ($v_{ex}$) for a given leg is comprised of the following movements (assuming a four-leg roundabout):
+
+- the U turn movement of the subject leg
+- the left turn movement of the leg immediately to the right of the subject leg
+- the through movement of the leg opposite of the subject leg
+- the right turn movement of the leg immediately to the left of the subject leg
+
+For example, the calculation of the exiting flow rate for the southbound exit leg is given by Equation 22-12 (uses results from Eq. 22-9). Note that if a bypass lane is present on the immediate upstream entry (e.g., eastbound entry leg for a southbound exit leg), the right-turning flow using the bypass lane is deducted from the exiting flow.
+
+$v_{ex,SB,pce} = v_{NBU,pce} + v_{WBL,pce} + v_{SBT,pce} + v_{EBR,pce} - v_{EBR,pce,bypass}$
+
+**Step 4: Determine Entry Flow Rates by Lane**
+
+- Exhibit 22-14: Assumed (de facto) Lane Assignments
+- Exhibit 22-15: Volume Assignments for Two-Lane Entries
+
+**Step 5: Determine the Capacity of Each Entry Lane and Bypass Lane as Appropriate in Passenger Car Equivalents**
+
+- Exhibit 22-16: Capacity Equations for Entry Lanes
+
+This exhibit identifies the capacity equation to use for different combinations of number of entry lanes (1 or 2) and number of circulating lanes (1 or 2). Due to the simplification of this analysis methodology for rural highways, that is, only considering roundabouts with single lane entries (with no bypass lane) and single circulating lanes, only Eq. 22-1 is applicable.
+
+$$c_{e,pce} = 1380e^{(-1.02 \times 10^{-3})v_{c,pce}} \tag{HCM Eq. 22-1}$$
+
+- Exhibit 22-17: Capacity Equations for Bypass Lanes
+
+Again, because bypass lanes are not considered in the rural highway methodology, this calculation is skipped.
+
+**Step 6: Determine Pedestrian Impedance to Vehicles**
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Limitation**
+:::
+This step is not implemented.
+
+- Exhibit 22-18: Model of Entry Capacity Adjustment Factor for Pedestrians Crossing a One-Lane Entry (Assuming Pedestrian Priority) 
+- Exhibit 22-19: Illustration of Entry Capacity Adjustment Factor for Pedestrians Crossing a One-Lane Entry (Assuming Pedestrian Priority) 
+- Exhibit 22-20: Model of Entry Capacity Adjustment Factor for Pedestrians Crossing a Two-Lane Entry (Assuming Pedestrian Priority) 
+- Exhibit 22-21: Illustration of Entry Capacity Adjustment Factor for Pedestrians Crossing a Two-Lane Entry (Assuming Pedestrian Priority) 
+::::
+  
+**Step 7: Convert Lane Flow Rates and Capacities into Vehicles per Hour**
+
+- Equation 22-13: Convert lane *i* flow rate from units of pc/h to veh/h; Uses results from Eq. 22-9 and Eq. 22-15
+
+$$v_{i} = v_{i,PCE}\times f_{hv,e} \tag{HCM Eq. 22-13}$$
+
+- Equation 22-14: Calculate lane *i* capacity, in units of veh/h; Uses results from Eq. 22-15
+
+$$c_{i} = c_{i,PCE}\times f_{hv,e} \times f_{ped} \tag{HCM Eq. 22-14}$$
+
+- Equation 22-15: Heavy vehicle adjustment factor for the entry lane; Uses results from Eq. 22-9
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Limitation**
+:::
+This equation is not implemented because the percentage of heavy vehicles is only specified for the approach lane, not for each individual movement within the approach lane. Thus, $f_{hv,e}$ is equal to $f_{hv}$ calculated in Step 2.
+::::
+
+
+**Step 8: Compute Volume-to-Capacity Ratio for Each Lane**
+
+- Equation 22-16: Calculation of the volume-to-capacity ratio for lane *i*
+
+$$x_{i} = \frac{v_{i}}{c_{i}} \tag{HCM Eq. 22-16}$$
+
+**Step 9: Compute the Average Control Delay for Each Lane** 
+
+- Equation 22-17: Calculation of the control delay for lane *i*
+
+$$d_i = \frac{3600}{c}+900T\left[x-1+\sqrt{(x-1)^2+\frac{(\frac{3600}{c})x}{450T}}\right]+5 \times \text{min}[x,1] \tag{HCM Eq. 22-17}$$
+
+**Step 10: Determine LOS for Each Lane on Each Approach**
+
+The LOS for each approach, limited to a single lane per approach, is determined from Exhibit 22-8 based on the corresponding values of control delay. 
+
+**Step 11: Compute the Average Control Delay and Determine LOS for Each Approach and the Roundabout As a Whole**
+
+- Equation 22-18: Calculation of the control delay for approach
+
+Because the analysis is limited to single-lane approaches, the approach delay value is equal to the lane delay value from Step 9.
+
+- Equation 22-19: Calculation of the control delay for intersection
+
+$$d_{intersection} = \frac{\sum d_{i}v_{i}}{\sum v_{i}} \tag{HCM Eq. 22-19}$$
+- Exhibit 22-8: LOS Criteria (Motorized Vehicle Mode); The LOS is determined for the major roadway through movement, for the analysis direction.
+
+**Control Delay (s/veh)**|**LOS**| |
+:---:|:---:|:---
+0–10 |A | |
+>10–15 |B | | 
+>15–25 |C | |
+>25–35 |D | |
+>35–50 |E | |
+>50 |F | |
+
+If the $v/c$ > 1.0, the LOS is F.
+
+**Step 12: Compute 95th Percentile Queues for Each Lane**
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Limitation**
+:::
+This step is not implemented.
+
+- Equation 22-20: Calculation of the 95th percentile queue
+::::
+
+
+
+## Nomenclature
+
+$c$ =	capacity (pc/h/ln)  
+$c_{e,pce}$ = lane capacity, adjusted for heavy vehicles (pc/h)  
+$c_{i}$ = capacity for lane *i* (veh/h)  
+$c_{i,PCE}$ = capacity for lane *i* (pc/h)  
+$d_{i}$ = control delay for lane *i* (s/veh)  
+$E_{T}$ = passenger car equivalent of one heavy vehicle in the traffic stream (PCEs)  
+$f_{HV}$ = heavy-vehicle adjustment factor  
+$f_{HV,e}$ = heavy-vehicle adjustment factor for the entry lane  
+$f_{HV,i}$ = heavy-vehicle adjustment factor for movement *i*  
+$f_{ped}$ = pedestrian impedance factor  
+$PHF$ = peak hour factor (decimal)  
+$P_{T}$ = proportion of SUTs and TTs in traffic stream (decimal)  
+$T$ = analysis period (h) (T=0.25 h for 15-min analysis)  
+$v_{c,NB,pce}$ = circulating flow rate for the northbound direction (pc/h)  
+$v_{c,pce}$ = conflicting flow rate (pc/h)  
+$v_{e,i,pce}$ = entry flow rate for movement *i* (pc/h)  
+$v_{ex,i,pce}$ = exit flow rate for movement *i* (pc/h)  
+$v_{i}$ =	demand flow rate in direction *i* (veh/h)  
+$v_{i,pce}$ = demand flow rate for movement *i* (pc/h)  
+$V_{i}$ =	demand volume for direction *i* (veh/h)  
+$x$ = volume-to-capacity ratio of the subject lane  
+
+The following notations are used, individually or in combination, to designate vehicle movements and lanes at the roundabout:
+
+* pce - passenger car equivalent
+
+**Direction**
+
+* NB - Northbound
+* EB - Eastbound
+* SB - Southbound
+* WB - Westbound
+
+**Movement**
+
+* T - Through
+* L - Left turn
+* R - Right turn
+* U - U turn
+
+
+For example, the circulating flow rate for the northbound approach, in units of passenger cars, would be notated as $v_{c,NB,pce}$. The volume for the southbound left turn movement would be notated as 
+$v_{SBL}$.

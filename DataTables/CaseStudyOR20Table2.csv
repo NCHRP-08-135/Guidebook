@@ -1,0 +1,34 @@
+Seg ID,From/To,Hwy Seg Type,Two-Lane Seg Type,# Dir Lanes,Length (ft),Length (mi),Terrain,Vertical Align Class,Posted Speed (mi/h)
+1,1 (McAllister Rd) - 2,TwoLaneHwy,PassingConstrained,1,1007,0.1907,NA,1,55
+2,2 - 3,TwoLaneHwy,PassingZone,1,8276,1.5674,NA,1,55
+3,3 - 4 (Hawks Beard Rd),TwoLaneHwy,PassingConstrained,1,4785,0.9063,NA,1,55
+4,4 (Hawks Beard Rd) - 5,TwoLaneHwy,PassingConstrained,1,8260,1.5644,NA,1,55
+5,5 (downgrade) - 6,TwoLaneHwy,PassingConstrained,1,2779,0.5263,NA,3,55
+6,6 - 7,TwoLaneHwy,PassingConstrained,1,18620,3.5265,NA,1,55
+7,7 - 8,TwoLaneHwy,PassingZone,1,5109,0.9676,NA,1,55
+8,8 - 9 (Roundabout),TwoLaneHwy,PassingConstrained,1,2177,0.4123,NA,1,35
+9,W Barclay Dr,Roundabout,---,1,797,0.1509,NA,NA,35
+10,10 - 11,TwoLaneHwy,PassingConstrained,1,1495,0.2831,NA,1,35
+11,11 (McKenzie Hwy) - 12,Arterial,---,1,4050,0.767,NA,NA,20
+12,12 - 13,TwoLaneHwy,PassingConstrained,1,1460,0.2765,NA,1,35
+13,13 - 14,TwoLaneHwy,PassingConstrained,1,944,0.1788,NA,1,45
+14,14 - 15,TwoLaneHwy,PassingZone,1,1836,0.3477,NA,1,55
+15,15 - 16,TwoLaneHwy,PassingConstrained,1,2984,0.5652,NA,1,55
+16,16 - 17,TwoLaneHwy,PassingZone,1,5235,0.9915,NA,1,55
+17,17 - 18,TwoLaneHwy,PassingConstrained,1,4148,0.7856,NA,1,55
+18,18 - 19,TwoLaneHwy,PassingZone,1,4039,0.765,NA,1,55
+19,19 - 20,TwoLaneHwy,PassingConstrained,1,6695,1.268,NA,1,55
+20,20 - 21,TwoLaneHwy,PassingZone,1,1542,0.292,NA,1,55
+21,21 - 22,TwoLaneHwy,PassingConstrained,1,674,0.1277,NA,1,55
+22,22 - 23,TwoLaneHwy,PassingZone,1,1991,0.3771,NA,1,55
+23,23 - 24,TwoLaneHwy,PassingConstrained,1,1231,0.2331,NA,1,55
+24,24 - 25,TwoLaneHwy,PassingLane,2,6116,1.1583,NA,1,55
+25,25 - 26,TwoLaneHwy,PassingConstrained,1,3120,0.5909,NA,1,55
+26,26 - 27,TwoLaneHwy,PassingZone,1,7688,1.4561,NA,1,55
+27,27 - 28,TwoLaneHwy,PassingConstrained,1,4540,0.8598,NA,1,55
+28,28 - 29,TwoLaneHwy,PassingLane,2,6783,1.2847,NA,2,55
+29,29 - 30,TwoLaneHwy,PassingConstrained,1,7416,1.4045,NA,1,55
+30,30 - 31,TwoLaneHwy,PassingZone,1,2178,0.4125,NA,1,55
+31,31 - 32,TwoLaneHwy,PassingConstrained,1,5468,1.0356,NA,3,55
+32,32 - 33,TwoLaneHwy,PassingConstrained,1,674,0.1277,NA,1,55
+33,33 - End,TwoLaneHwy,PassingConstrained,1,1373,0.26,NA,1,45

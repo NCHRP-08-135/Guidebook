@@ -1,0 +1,22 @@
+bookdown::gitbook:
+  global_numbering: FALSE
+  split_bib: yes
+  css: style.css
+  config:
+    toc_depth: 2
+    toc:
+      before: |
+        <li><a href="./">Rural Highway Analysis Guidebook</a></li>
+      after: |
+        <li><a href="https://github.com/NCHRP-08-135/Guidebook" target="blank">View Book Source</a></li>
+    edit: https://github.com/NCHRP-08-135/Guidebook/edit/master/%s
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+  pandoc_args: --listings
+bookdown::epub_book: default
+bookdown::bs4_book: default

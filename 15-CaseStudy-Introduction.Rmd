@@ -1,0 +1,126 @@
+# (PART\*) Part III: Case Studies {-}
+
+# Introduction {#CaseStudyIntro}
+
+This part of the Guidebook presents several case studies for the purpose of demonstrating the application of the analysis methods presented in Part 1 of the Guidebook. The case studies include rural highway routes from several locations around the United States and consist of a variety of configurations. The case studies include the following:
+
+***US-20 in Oregon***
+
+This section of rural highway is an approximately 26-mile section of US-20 in central Oregon. The route generally extends from the Jefferson County line to Cline Falls Hwy/OB Riley Rd in Tumalo (44.399010616037145, -121.68160872108665; 44.12954543870768, -121.32386641302361). The route is shown in Figure \@ref(fig:IntroUS20RouteMap), as well as the [linked online map](https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&route=44.4164%2C-121.6997%3B44.1296%2C-121.3238#map=11/44.2735/-121.5119).
+
+```{r IntroUS20RouteMap, echo=FALSE, fig.cap='Oregon US-20 Study Route Boundaries. Source: Map data from [©OpenStreetMap](https://www.openstreetmap.org/copyright)',out.width="35%", fig.align='center'}
+knitr::include_graphics("./Images/CaseStudyUS20/US-20.png")
+```
+
+This route serves as a connection between western Oregon cities such as Salem and Eugene and the western-central city of Bend, Oregon. This route serves heavy recreational and truck traffic as all traffic to central Oregon from the central and southern Willamette Valley travels through this area. The facility runs through the small town of Sisters, Oregon (Deschutes county). There are several hotels, lodges, shopping complexes and tourist attractions located along the route. On a regional level Sisters, Oregon is a popular tourist destination and provides access to several national parks, hiking, and other outdoor sporting activities. The Mt. Bachelor resort is in the nearby Bend area.
+
+This route consists of sections of two-lane highway, with passing constrained, passing zone, and passing lane segments, as well as an arterial street section that passes through the small city of Sisters, Oregon. The arterial section includes several two-way stop-controlled intersections (control only on the minor street). Just prior to the downtown area of Sisters, the route also includes a roundabout intersection.
+
+***SR-109 in Tennessee***
+
+SR-109 is a rural highway approximately 30 miles east of Nashville, TN. It runs primarily north-south between I-65 (at the north, 36.63005995380142, -86.57224654711138) and I-840 (at the south, 36.13174756486397, -86.40076816231978). The route is shown in Figure \@ref(fig:IntroTN109RouteMap), as well as the [linked online map](https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&route=36.1310%2C-86.3998%3B36.6287%2C-86.5706#map=11/36.3804/-86.4847). It is approximately 40 miles in length. More background information about this route can be found in a report that documents an access management study for this corridor [@SR109AccessStudy].
+
+```{r IntroTN109RouteMap, echo=FALSE, fig.cap='Tennesse SR-109 Study Route Boundaries. Source: Map data from [©OpenStreetMap](https://www.openstreetmap.org/copyright)',out.width="35%", fig.align='center'}
+knitr::include_graphics("./Images/CaseStudyTN109/TN-109.png")
+```
+
+This route consists of sections of multilane highway, two-lane highway, with passing constrained and passing zone segments, several isolated signalized intersections, an arterial section through the small town of [Portland](https://www.google.com/maps/place/36%C2%B034'54.7%22N+86%C2%B030'53.2%22W/@36.5818741,-86.5173601,17z/data=!3m1!4b1!4m4!3m3!8m2!3d36.5818698!4d-86.5147852?entry=ttu), and several interchange ramp connections.
+
+***US-42 in Ohio***
+
+The stretch of US-42 examined for level of service and/or reliability connects the cities of [Delaware](https://www.google.com/maps/place/40%C2%B017'54.6%22N+83%C2%B004'00.5%22W/@40.2985073,-83.0693663,17z/data=!3m1!4b1!4m4!3m3!8m2!3d40.2985032!4d-83.0667914?entry=ttu) and [London](https://www.google.com/maps/place/39%C2%B053'11.8%22N+83%C2%B026'52.1%22W/@39.8866002,-83.4503831,17z/data=!3m1!4b1!4m4!3m3!8m2!3d39.8865961!4d-83.4478082?entry=ttu). This route serves a significant percentage of a variety of trip purposes--commuter, recreational, freight, and traffic bypassing the Columbus area. The route is shown in Figure \@ref(fig:IntroUS42RouteMap), as well as the [linked online map](https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&route=40.2870%2C-83.0672%3B39.9082%2C-83.4341#map=11/40.0962/-83.2506). It is approximately 35 miles in length.
+
+```{r IntroUS42RouteMap, echo=FALSE, fig.cap='Ohio US-42 Route Boundaries. Source: Map data from [©OpenStreetMap](https://www.openstreetmap.org/copyright)',out.width="35%", fig.align='center'}
+knitr::include_graphics("./Images/CaseStudyUS42/US-42a.png")
+```
+
+This route consists of sections of two-lane highway, with passing constrained and passing zone segments, and numerous signalized intersections.
+
+***US-287 in Montana***
+
+This route extends from 1.0 mile south of the small rural town of [Townsend](https://www.google.com/maps/place/46%C2%B017'36.9%22N+111%C2%B030'15.2%22W/@46.293643,-111.5045169,19z/data=!4m4!3m3!8m2!3d46.2935846!4d-111.5042084?entry=ttu) to the center of [East Helena, Montana](https://www.google.com/maps/place/46%C2%B035'25.4%22N+111%C2%B056'15.9%22W/@46.5917945,-111.9566068,13.5z/data=!4m4!3m3!8m2!3d46.5903932!4d-111.9377508?entry=ttu). US-287 serves as an important connection between Helena and I-90. This section of US-287 is approximately 30 miles in length.
+
+The route is shown in Figure \@ref(fig:IntroUS287RouteMap), as well as the [linked online map](https://www.google.com/maps/dir/46.293584644800966,+-111.50420836367195/46.59039324407053,+-111.93775081845547/@46.4923603,-111.8630877,10.75z/data=!4m10!4m9!1m3!2m2!1d-111.5042084!2d46.2935846!1m3!2m2!1d-111.9377508!2d46.5903932!3e0?hl=en&authuser=0).
+
+```{r IntroUS287RouteMap, echo=FALSE, fig.cap='Montanta US-287 Study Route Boundaries. Source: Map data from [©OpenStreetMap](https://www.openstreetmap.org/copyright)',out.width="35%", fig.align='center'}
+knitr::include_graphics("./Images/CaseStudyMT287/US-287.png")
+```
+
+This route is mainly comprised of a two-lane highway segments--passing constrained, passing zones, and two stretches of passing lanes. Unlike the other case study routes, this route contains an All-Way Stop-Control (AWSC) intersection, in the town of Townsend.
+
+## Supporting Material
+
+### KML Files {-}
+
+For each of the case studies, supporting information for the segmentation process is included in a KML file^[A Keyhole Markup Language (KML) file contains geographic and supporting data for use with geographic software visualization tools. More information can be found at https://en.wikipedia.org/wiki/Keyhole_Markup_Language]. This type of file can be opened in several different software programs, but for best results, it is recommended to use Google Earth^[https://www.google.com/earth/versions/]. The KML files are included in the project resources archive (https://github.com/NCHRP-08-135-Team/Data). Because satellite imagery is updated regularly and changes to the subject routes may have been made since the time of this study, it is recommended to use the ['time slider'](https://support.google.com/earth/answer/148094?hl=en&sjid=5311301203438362685-NA) feature to set the displayed imagery to a date no later than December 2022.
+
+**Files**
+
+A separate KML file is provided for each case study. The file names are:
+
+- Oregon-US-20-SEB.kml
+- Tenn-SR-109-NB.kml
+- Ohio-US-42-SWB.kml
+- Montana-US-287-NB.kml
+
+The files can be downloaded from https://github.com/NCHRP-08-135/Resources/KMLfiles  
+
+**Contents**
+
+After opening a KML file in Google Earth, a table of contents will be displayed in the sidebar, within the 'Places' panel. If the sidebar is not visible, it can displayed by checking 'Sidebar' under the 'View' menu. 
+
+In this sidebar, a table of contents will be displayed for the file under the 'Temporary Places' entry.
+
+An overview of the content of each KML file is provided here.
+
+Each KML file generally includes the following data items:
+
+- Start Point: The start point for the route for the analysis direction. Indicated with a red pin with an 'A' on it.
+- End Point: The end point for the route for the analysis direction. Indicated with a red pin with an 'B' on it.
+- Intersection Locations: A pin marks the location of any intersection where there is a control for the major street through movement.
+- Interchange Locations: A pin marks the location where an interchange on-ramp or off-ramp connects to the highway.
+- Traffic Sensor Locations: A pin marks the location of a traffic stream measurement location.
+- Mile Marker Locations: A pin marks the location of a specific milepost value.
+- Grades: A pair of pins mark start and end points of any significant grade--generally a grade more significant than the HCM definition for rolling terrain.
+- Horizontal Curves: Pins mark the start and end points of any horizontal curves that have more than just a gradual rate of curvature.
+- Posted Speed Limits: A pin marks the location of a change in the posted speed limit or the speed limit at the start of the route. 
+- Segment Type: A path element (linear or curvilinear line) marks the length of the individual segment, per the HCM segment type definitions. These paths are color-coded as follows:  
+  - *Orange:* Multilane highway
+  - *Red:* Two-lane highway, passing not permitted in opposing direction  
+  - *Yellow:* Two-lane highway, can pass using the opposing lane  
+  - *Green:* Two-lane highway with designated passing lane  
+  - *Cyan:* Arterial (also referred to as an urban street) 
+  - *Blue:* Isolated intersection (signalized, roundabout, stop-controlled)
+
+A KML file may also include the following:
+
+Elevation vs. Distance Plot:
+- Right-click on the entry titled "Total Path (Elevation Profile)"
+- Select 'Show Elevation Profile' from the drop-down menu
+- A graph will appear on the bottom half of the screen plotting the elevation vs the distance along the path.
+ 
+Inrix XD Traffic Message Channel (TMC) Data:
+- The *Inrix TMCs* subfolder shows the locations of the start and end points of each Inrix XD TMC segments.
+
+These data items are set up as separate layers; thus, each one can be displayed individually or in any combination with one another in the mapping software.
+
+
+### Computational Engine Input Files {-}
+
+All of the level of service calculations described in this report are available in a software tool, HCM-CALC. This tool can be downloaded, at no cost, from https://github.com/swash17/HCM-CALC. Instructions for installing the software are also at this site.
+
+An overview of how to use the software for running a rural highway analysis is contained [here](#CompEngine).
+
+The HCM-CALC input data files provided for the case studies are:
+
+- Oregon-US-20.xhf, Oregon-US-20-Arterial.xap
+- Tenn-SR-109.xhf, Tenn-SR-109-Arterial.xap
+- Ohio-US-42.xhf, Ohio-US-42 +25% Vol.xhf, Ohio-US-42 +50% Vol.xhf
+- MT-US-287.xhf
+
+The files can be downloaded from https://github.com/NCHRP-08-135/Resources/HCM-CALCfiles
+
+
+### Probe Vehicle Data Analysis Scripting Code {-}
+
+The files can be downloaded from https://github.com/NCHRP-08-135/Resources/Reliability  

@@ -1,0 +1,315 @@
+# Multilane Highway Segment Analysis Methodology {#HCMmultilaneHwy}
+
+The core multilane highway analysis methodology is contained in Chapter 12 (Basic Freeway and Multilane Highway Segments). While this chapter also covers basic freeway segments, such segments are not included in the rural highway analysis methodology. 
+
+The motorized vehicle analysis methodology process is given in Exhibit 12-19 (p. 12-26). The specific equation and exhibit numbers utilized in the methodology (multilane highway only), in the general order in which they are applied, are as follows.
+
+## Equations and Exhibits
+
+**Step 1: Input Data** 
+
+- No applicable equations or exhibits
+
+**Step 2: Estimate and Adjust Free-Flow Speed**
+
+The following equations apply only to free-flow speed (FFS) estimation. There are no applicable equations or exhibits for measured FFS, as this is a direct user input.
+
+- Equation 12-3: FFS estimation; Uses results from Eq. 12-4 and Exhibits 12-20, 12-22, 12-23, 12-24
+
+$$FFS = BFFS - f_{LW} - f_{TLC} - f_{M} - f_{A} \tag{HCM Eq. 12-3}$$
+
+  - Exhibit 12-20: Adjustment to FFS for Average Lane Width
+  
+| **Lane width (ft)** |	**Reduction in free-flow speed, $f_{LW}$ (mi/h)** |
+| :-: | :-: |
+| 12 | 0.0 |
+| 11 | 1.9 |
+| 10 | 6.6 |
+  
+  - Equation 12-4: Total lateral clearance for use with Exhibit 12-22
+  
+$$TLC = LC_R + LC_L \tag{HCM Eq. 12-4}$$
+
+The maximum value for $LC_R$ and $LC_L$ is 6 ft. Thus, the maximum value for $TLC$ is 12 ft.
+  
+  - Exhibit 12-22: Adjustment to FFS for Lateral Clearance
+
+**Total lateral clearance (ft)**| **Reduction in free-flow speed, $f_{TLC}$ (mi/h), Four-lane highways** | **Total lateral clearance (ft)**| **Reduction in free-flow speed, $f_{TLC}$ (mi/h), Six-lane highways**
+:-----:|:-----:|:-----:|:-----:
+12| 0.0| 12 | 0.0 |
+10| 0.4| 10 | 0.4 |
+8 | 0.9| 8 | 0.9 |
+6 | 1.3| 6 | 1.3 |
+4 | 1.8| 4 | 1.7 |
+2 | 3.6| 2 | 2.8 |
+0 | 5.4| 0 | 3.9 |
+
+  - Exhibit 12-23: Adjustment to FFS for Median Type
+  
+**Median type** | **Reduction in free-flow speed, $f_M$ (mi/h)**
+:-----:|:-----:
+Undivided highways |1.6
+Divided highways (including TWLTLs)	| 0
+
+  - Exhibit 12-24: Adjustment to FFS for Access Point Density
+  
+**Access points/mile** | **Reduction in free-flow speed, $f_A$ (mi/h)**
+:-----:|:-----:
+0|0.0
+10|2.5
+20|5.0
+30|7.5
+$\ge$ 40|10.0
+  
+**Step 3: Estimate and Adjust Capacity**
+
+- Equation 12-7: Capacity estimation; Uses result from Eq. 12-3
+
+$$c = \text{Min}\left\lbrack 1900 + 20\left({FF}S_{adj} - 45 \right),2300 \right\rbrack {~~~~~ 45 \leq {FFS} \leq 70} \tag{HCM Eq. 12-7}$$
+
+**Step 4: Adjust Demand Volume**
+
+- Equation 12-9: Analysis flow rate estimation; Uses results from Eq. 4-2, Eq. 12-10, and Exhibits 12-25 - 12-28
+
+$$v_{p} = \frac{V}{{PHF} \times N \times f_{HV}} \tag{HCM Eq. 12-9}$$
+
+  - Equation 4-2: Peak hour factor (PHF); In HCM Chapter 4 (Traffic Operations and Capacity Concepts)
+  
+$$PHF = \frac{V}{V_{15} \times 4} \tag{HCM Eq. 4-2}$$
+  
+  - Equation 12-10: Heavy-vehicle adjustment factor
+  
+$$f_{HV} = \frac{1}{1 + P_{T}\left(E_{T} - 1 \right)} \tag{HCM Eq. 12-10}$$
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Simplification**
+:::
+Current ‘level’ and ‘rolling’ terrain guidelines will apply; for steeper/longer grades, only the specific grade approach will be applied-the ‘mixed flow’ model will not be applied because of its complexity; when there are consecutive grades that should be analyzed with the specific grade approach, the following guidance applies: if the individual grades are less than or equal to 0.5 miles, they are combined into a single segment and the highest grade percentage is applied over the entire length. If a grade is longer than 0.5 miles, it is treated as an individual segment. 
+::::
+
+  
+  - Exhibit 12-25: Passenger Car Equivalents (PCEs) for General Terrain Segments
+
+**General Terrain**
+
+| Terrain | *E<sub>T</sub>* |
+| :-:     | :-: |
+| Level   | 2.0 | 
+| Rolling | 3.0 |
+
+**Specific Grades**
+
+When the analysis segment consists of terrain that cannot be considered as an extended general segment (i.e., level, rolling), Exhibits 12-26, 12-27, and 12-28 can be used to determine PCE values for specific upgrades and/or downgrades.  
+
+\newpage
+**Exhibit 12-26** Passenger Car Equivalents (*E~T~*) for Heavy Vehicles\
+(30% SUTs/70% TTs) on Specific Grades
+
+|    |    | Percentage of Heavy Vehicles |  |  |  |  |  |
+|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----
+
+**Grade (%)**|**Length (mi)**|**2**|**4**|**5**|**6**|**8**|**10**|**15**|**20**|**$\geq$ 25**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+$\leq$ 0|$\leq$ 0.125|2.62|2.37|2.3|2.24|2.17|2.12|2.04|1.99|1.97
+| |0.375|2.62|2.37|2.3|2.24|2.17|2.12|2.04|1.99|1.97
+| |0.625|2.62|2.37|2.3|2.24|2.17|2.12|2.04|1.99|1.97
+| |0.875|2.62|2.37|2.3|2.24|2.17|2.12|2.04|1.99|1.97
+| |1.25|2.62|2.37|2.3|2.24|2.17|2.12|2.04|1.99|1.97
+| |$\geq$ 1.5|2.62|2.37|2.3|2.24|2.17|2.12|2.04|1.99|1.97
+2 |$\leq$ 0.125|2.62|2.37|2.3|2.24|2.17|2.12|2.04|1.99|1.97
+| |0.375|3.76|2.96|2.78|2.65|2.48|2.38|2.22|2.14|2.09
+| |0.625|4.47|3.33|3.08|2.91|2.68|2.54|2.34|2.23|2.17
+| |0.875|4.8|3.5|3.22|3.03|2.77|2.61|2.39|2.28|2.21
+| |1.25|5|3.6|3.3|3.09|2.83|2.66|2.42|2.3|2.23
+| |$\geq$ 1.5|5.04|3.62|3.32|3.11|2.84|2.67|2.43|2.31|2.23
+2.5|$\leq$ 0.125|2.62|2.37|2.3|2.24|2.17|2.12|2.04|1.99|1.97
+| |0.375|4.11|3.14|2.93|2.78|2.58|2.46|2.28|2.19|2.13
+| |0.625|5.04|3.62|3.32|3.11|2.84|2.67|2.43|2.31|2.23
+| |0.875|5.48|3.85|3.51|3.27|2.96|2.77|2.5|2.36|2.28
+| |1.25|5.73|3.98|3.61|3.36|3.03|2.83|2.54|2.4|2.31
+| |$\geq$ 1.5|5.8|4.02|3.64|3.38|3.05|2.84|2.55|2.41|2.32
+3.5|$\leq$ 0.125|2.62|2.37|2.3|2.24|2.17|2.12|2.04|1.99|1.97
+| |0.375|4.88|3.54|3.25|3.05|2.8|2.63|2.41|2.29|2.22
+| |0.625|6.34|4.3|3.87|3.58|3.2|2.97|2.64|2.48|2.38
+| |0.875|7.03|4.66|4.16|3.83|3.39|3.12|2.76|2.57|2.46
+| |1.25|7.44|4.87|4.33|3.97|3.5|3.22|2.82|2.62|2.5
+| |$\geq$ 1.5|7.53|4.92|4.38|4.01|3.53|3.24|2.84|2.63|2.51
+4.5|$\leq$ 0.125|2.62|2.37|2.3|2.24|2.17|2.12|2.04|1.99|1.97
+| |0.375|5.8|4.02|3.64|3.38|3.05|2.84|2.55|2.41|2.32
+| |0.625|7.9|5.11|4.53|4.14|3.63|3.32|2.9|2.68|2.55
+| |0.875|8.91|5.64|4.96|4.5|3.92|3.56|3.07|2.82|2.67
+| |$\geq$ 1.0|9.19|5.78|5.08|4.6|3.99|3.62|3.11|2.85|2.7
+5.5|$\leq$ 0.125|2.62|2.37|2.3|2.24|2.17|2.12|2.04|1.99|1.97
+| |0.375|6.87|4.58|4.1|3.77|3.35|3.09|2.73|2.55|2.44
+| |0.625|9.78|6.09|5.33|4.82|4.16|3.76|3.21|2.93|2.77
+| |0.875|11.2|6.83|5.94|5.33|4.56|4.09|3.45|3.12|2.93
+| |$\geq$ 1.0|11.6|7.04|6.11|5.47|4.67|4.18|3.51|3.17|2.97
+≥ 6|$\leq$ 0.125|2.62|2.37|2.3|2.24|2.17|2.12|2.04|1.99|1.97
+| |0.375|7.48|4.9|4.36|3.99|3.52|3.23|2.83|2.63|2.51
+| |0.625|10.87|6.66|5.79|5.21|4.46|4.01|3.39|3.08|2.89
+| |0.875|12.54|7.54|6.51|5.81|4.94|4.4|3.67|3.3|3.08
+| |$\geq$ 1.0|13.02|7.78|6.71|5.99|5.07|4.51|3.75|3.37|3.14
+
+\newpage
+**Exhibit 12-27** Passenger Car Equivalents (*E~T~*) for Heavy Vehicles\
+(50% SUTs/50% TTs) on Specific Grades
+
+**Grade (%)**|**Length (mi)**|**2**|**4**|**5**|**6**|**8**|**10**|**15**|**20**|**$\geq$ 25**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+$\leq$ 0|$\leq$ 0.125|2.67|2.38|2.31|2.25|2.16|2.11|2.02|1.97|1.93
+| |0.375|2.67|2.38|2.31|2.25|2.16|2.11|2.02|1.97|1.93
+| |0.625|2.67|2.38|2.31|2.25|2.16|2.11|2.02|1.97|1.93
+| |0.875|2.67|2.38|2.31|2.25|2.16|2.11|2.02|1.97|1.93
+| |1.25|2.67|2.38|2.31|2.25|2.16|2.11|2.02|1.97|1.93
+| |$\geq$ 1.5|2.67|2.38|2.31|2.25|2.16|2.11|2.02|1.97|1.93
+2|$\leq$ 0.125|2.67|2.38|2.31|2.25|2.16|2.11|2.02|1.97|1.93
+| |0.375|3.76|2.95|2.77|2.64|2.47|2.36|2.2|2.11|2.06
+| |0.625|4.32|3.24|3.01|2.84|2.63|2.49|2.29|2.19|2.12
+| |0.875|4.57|3.37|3.11|2.93|2.7|2.55|2.33|2.22|2.15
+| |1.25|4.71|3.45|3.17|2.99|2.74|2.58|2.36|2.24|2.17
+| |$\geq$ 1.5|4.74|3.47|3.19|3|2.75|2.59|2.36|2.24|2.17
+2.5|$\leq$ 0.125|2.67|2.38|2.31|2.25|2.16|2.11|2.02|1.97|1.93
+| |0.375|4.1|3.13|2.92|2.77|2.57|2.44|2.26|2.16|2.1
+| |0.625|4.84|3.52|3.23|3.03|2.77|2.61|2.38|2.26|2.18
+| |0.875|5.17|3.69|3.37|3.15|2.87|2.69|2.43|2.3|2.22
+| |1.25|5.36|3.79|3.45|3.22|2.92|2.73|2.47|2.33|2.24
+| |$\geq$ 1.5|5.4|3.81|3.47|3.24|2.93|2.74|2.47|2.33|2.25
+3.5|$\leq$ 0.125|2.67|2.38|2.31|2.25|2.16|2.11|2.02|1.97|1.93
+| |0.375|4.89|3.54|3.25|3.05|2.79|2.62|2.39|2.26|2.19
+| |0.625|6.05|4.15|3.75|3.47|3.11|2.89|2.58|2.42|2.32
+| |0.875|6.58|4.43|3.97|3.66|3.26|3.01|2.67|2.49|2.39
+| |1.25|6.88|4.58|4.1|3.77|3.35|3.09|2.72|2.53|2.42
+| |$\geq$ 1.5|6.95|4.62|4.13|3.8|3.37|3.1|2.73|2.54|2.43
+4.5|$\leq$ 0.125|2.67|2.38|2.31|2.25|2.16|2.11|2.02|1.97|1.93
+| |0.375|5.83|4.03|3.65|3.39|3.05|2.84|2.55|2.39|2.3
+| |0.625|7.53|4.92|4.38|4.01|3.53|3.24|2.83|2.62|2.5
+| |0.875|8.32|5.34|4.72|4.29|3.75|3.42|2.97|2.73|2.59
+| |$\geq$ 1.0|8.53|5.45|4.81|4.37|3.81|3.47|3|2.76|2.62
+5.5|$\leq$ 0.125|2.67|2.38|2.31|2.25|2.16|2.11|2.02|1.97|1.93
+| |0.375|6.97|4.63|4.14|3.81|3.38|3.11|2.74|2.55|2.43
+| |0.625|9.37|5.89|5.16|4.68|4.05|3.67|3.14|2.88|2.72
+| |0.875|10.49|6.48|5.65|5.09|4.37|3.93|3.34|3.03|2.85
+| |$\geq$ 1.0|10.8|6.64|5.78|5.2|4.46|4.01|3.39|3.08|2.89
+$\geq$ 6|$\leq$ 0.125|2.67|2.38|2.31|2.25|2.16|2.11|2.02|1.97|1.93
+| |0.375|7.64|4.98|4.43|4.05|3.56|3.26|2.85|2.64|2.51
+| |0.625|10.45|6.45|5.63|5.07|4.36|3.92|3.33|3.03|2.85
+| |0.875|11.78|7.16|6.2|5.56|4.74|4.24|3.56|3.22|3.01
+| |$\geq$ 1.0|12.15|7.35|6.36|5.69|4.85|4.33|3.62|3.27|3.05 
+
+\newpage
+**Exhibit 12-28** Passenger Car Equivalents (*E~T~*) for Heavy Vehicles\
+(70% SUTs/30% TTs) on Specific Grades
+
+**Grade (%)**|**Length (mi)**|**2**|**4**|**5**|**6**|**8**|**10**|**15**|**20**|**$\geq$ 25**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+$\leq$ 0|$\leq$ 0.125|2.39|2.18|2.12|2.07|2.01|1.96|1.89|1.85|1.83
+| |0.375|2.39|2.18|2.12|2.07|2.01|1.96|1.89|1.85|1.83
+| |0.625|2.39|2.18|2.12|2.07|2.01|1.96|1.89|1.85|1.83
+| |0.875|2.39|2.18|2.12|2.07|2.01|1.96|1.89|1.85|1.83
+| |1.25|2.39|2.18|2.12|2.07|2.01|1.96|1.89|1.85|1.83
+| |$\geq$ 1.5|2.39|2.18|2.12|2.07|2.01|1.96|1.89|1.85|1.83
+2|$\leq$ 0.125|2.67|2.32|2.23|2.17|2.08|2.03|1.94|1.89|1.86
+| |0.375|3.63|2.82|2.64|2.52|2.35|2.25|2.1|2.02|1.97
+| |0.625|4.12|3.08|2.85|2.69|2.49|2.36|2.18|2.08|2.02
+| |0.875|4.37|3.21|2.96|2.78|2.56|2.42|2.22|2.11|2.05
+| |1.25|4.53|3.29|3.02|2.84|2.6|2.45|2.24|2.13|2.07
+| |$\geq$ 1.5|4.58|3.31|3.04|2.86|2.61|2.46|2.25|2.14|2.07
+2.5|$\leq$ 0.125|2.75|2.36|2.27|2.2|2.11|2.04|1.95|1.9|1.87
+| |0.375|4.01|3.02|2.8|2.65|2.46|2.33|2.16|2.06|2.01
+| |0.625|4.66|3.35|3.08|2.88|2.64|2.48|2.26|2.15|2.08
+| |0.875|4.99|3.52|3.21|3|2.73|2.56|2.32|2.19|2.12
+| |1.25|5.2|3.64|3.3|3.08|2.79|2.6|2.35|2.22|2.14
+| |$\geq$ 1.5|5.26|3.67|3.33|3.1|2.8|2.62|2.36|2.23|2.15
+3.5|$\leq$ 0.125|2.93|2.45|2.34|2.26|2.16|2.09|1.98|1.92|1.89
+| |0.375|4.86|3.46|3.16|2.96|2.69|2.53|2.3|2.18|2.1
+| |0.625|5.88|3.99|3.59|3.32|2.98|2.76|2.46|2.31|2.22
+| |0.875|6.4|4.26|3.81|3.51|3.12|2.88|2.55|2.38|2.28
+| |1.25|6.74|4.43|3.96|3.63|3.21|2.96|2.6|2.42|2.32
+| |$\geq$ 1.5|6.83|4.48|3.99|3.66|3.24|2.98|2.62|2.44|2.33
+4.5|$\leq$ 0.125|3.13|2.56|2.43|2.34|2.21|2.13|2.01|1.95|1.91
+| |0.375|5.88|3.99|3.59|3.32|2.98|2.76|2.46|2.31|2.22
+| |0.625|7.35|4.75|4.22|3.85|3.39|3.1|2.71|2.51|2.39
+| |0.875|8.11|5.15|4.54|4.13|3.6|3.27|2.83|2.61|2.47
+| |≥ 1.0|8.33|5.27|4.63|4.21|3.66|3.33|2.87|2.64|2.5
+5.5|$\leq$ 0.125|3.37|2.69|2.53|2.42|2.28|2.19|2.05|1.98|1.94
+| |0.375|7.09|4.62|4.11|3.76|3.31|3.04|2.66|2.47|2.36
+| |0.625|9.13|5.68|4.97|4.49|3.88|3.51|3|2.74|2.59
+| |0.875|10.21|6.24|5.43|4.88|4.18|3.76|3.18|2.89|2.71
+| |$\geq$ 1.0|10.52|6.41|5.57|5|4.27|3.83|3.24|2.93|2.75
+$\geq$ 6|$\leq$ 0.125|3.51|2.76|2.59|2.47|2.32|2.22|2.08|2|1.95
+| |0.375|7.78|4.98|4.4|4.01|3.51|3.2|2.78|2.56|2.44
+| |0.625|10.17|6.23|5.42|4.87|4.17|3.75|3.18|2.88|2.71
+| |0.875|11.43|6.88|5.95|5.32|4.53|4.04|3.39|3.06|2.86
+| |$\geq$ 1.0|11.81|7.08|6.11|5.46|4.64|4.13|3.45|3.11|2.9
+  
+
+**Step 5: Estimate Speed and Density**
+
+- Equation 12-1: Average speed estimation
+
+$$S=\left\{\begin{array}{l l}
+FFS & {\text {if }v_p \leq {BP}} \\
+FFS - \frac{\big({FFS} - \frac{c}{D_{c}} \big)\big(v_{p} - {BP}\big)^{2.0}}{\left(c - BP \right)^{1.31}} & {\text {if } BP < v_p \leq c}
+\end{array}\right. \tag{HCM Eq. 12-1}$$
+
+  - Exhibit 12-6: Parameter Values Used in Equation 12-1
+
+**Parameter**|**Definition and Units**|**Value/Calculation**
+|:-----|:-----|:-----
+$FFS$ |Base segment free-flow speed (mi/h)| Measured OR predicted using Equation 12-3
+$FFS_{adj}$ |Adjusted free-flow speed (mi/h) | No adjustments
+$SAF$ |Speed adjustment factor (decimal) | 1.00
+$c$ |Base segment capacity (pc/h/ln) | $c$ = 1,900 + 20($FFS$–45), c $\leq$ 2,300, 45 $\leq FFS \leq$ 70
+$c_{adj}$ |Adjusted segment capacity (pc/h/ln) | No adjustments
+$CAF$ |Capacity adjustment factor (decimal) | 1.00
+$D_c$ |Density at capacity (pc/mi/ln) | 45
+$BP$ |Breakpoint (pc/h/ln) | 1,400
+$a$|Exponent calibration parameter (decimal) | 1.31
+
+  
+- Equation 12-11: Density estimation
+
+$$D = \frac{v_{p}}{S} \tag{HCM Eq. 12-11}$$
+
+**Step 6: Determine LOS**
+
+- Exhibit 12-15: Level of Service (LOS) Criteria
+
+**Level of Service**|**Density (pc/mi/ln)**
+:-----:|:-----
+A |$\leq$ 11
+B |> 11-18
+C |> 18-26
+D |> 26-35
+E |> 35-45
+F |> 45 or Demand exceeds capacity
+
+
+
+## Nomenclature
+
+$BFFS$ = base FFS for the segment (mi/h)  
+$BP$ = Linear to curvilinear flow rate breakpoint value (1400 pc/h/ln)  
+$c$ =	capacity (pc/h/ln)  
+$D$ = density (pc/mi/ln)  
+$D_c$	=	Density at capacity (45 pc/mi/ln)  
+$E_{T}$ = passenger car equivalent of one heavy vehicle in the traffic stream (PCEs)  
+$f_{A}$ = adjustment for access point density, from Exhibit 12-24 (mi/h)  
+$f_{HV}$ = adjustment factor for presence of heavy vehicles (decimal)  
+$f_{LW}$ = adjustment for lane width (mi/h)  
+$f_{M}$ = adjustment for median type (mi/h)  
+$f_{TLC}$ = adjustment for total lateral clearance (mi/h)  
+$FFS$ = free-flow speed of the segment (mi/h)  
+$FFS_{adj}$ = adjusted free flow speed (mi/h)  
+$LC_{L}$ = left-side lateral clearance (ft)  
+$LC_{R}$ = right-side lateral clearance (ft)  
+$N$ = number of lanes in analysis direction (ln)  
+$P_{T}$ = proportion of SUTs and TTs in traffic stream (decimal)  
+$PHF$ = peak hour factor (decimal)  
+$S$ = space mean speed of the traffic stream (mi/h)  
+$SAF$ = free flow speed adjustment factor  
+$TLC$ = total lateral clearance (ft)  
+$V$ = demand volume under prevailing conditions (veh/h)  
+$V_{15}$ = volume during the peak 15 min of the analysis hour (veh/15 min)   
+$v_p$	= 15-min passenger car equivalent flow rate (pc/h/ln)  

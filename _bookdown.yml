@@ -1,0 +1,31 @@
+book_filename: "Rural Highway Analysis Guidebook"
+language:
+  label:
+    proof: 'Case Study Figure'
+  ui:
+    chapter_name: ""
+delete_merged_file: false
+rmd_files:
+- index.Rmd
+- 01-Introduction.Rmd
+- 02-LevelOfService.Rmd
+- 03-Reliability.Rmd
+- 04-BicycleRecommendations.Rmd
+- 05-HCMmethods-Intro.Rmd
+- 06-HCMmethods-MultilaneHwy.Rmd
+- 07-HCMmethods-TwoLaneHwy.Rmd
+- 08-HCMmethods-Signal.Rmd
+- 09-HCMmethods-Roundabout.Rmd
+- 10-HCMmethods-AWStopControl.Rmd
+- 11-HCMmethods-UrbanStreets.Rmd
+- 12-HCMmethods-Bicycle.Rmd
+- 13-HighwayExampleLOSCalcs.Rmd
+- 14-ComputationalEngine.Rmd
+- 15-CaseStudy-Introduction.Rmd
+- 16-CaseStudy-OregonUS20.Rmd
+- 17-CaseStudy-TN109.Rmd
+- 18-CaseStudy-OhioUS42.Rmd
+- 19-CaseStudy-MontanaUS287.Rmd
+- 20-MitigationStrategies.Rmd
+
+

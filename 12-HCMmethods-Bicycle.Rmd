@@ -1,0 +1,140 @@
+# Bicycle LOS Methodologies {#HCMbicycle}
+
+This chapter contains a consolidated overview of the applicable analysis methodologies within the Highway Capacity Manual (HCM) for bicycle operations on rural highways.
+
+#### Multilane and Two-Lane Highways {-}
+
+The calculation of bicycle LOS on multilane and two-lane highways shares the same methodology. Full details on the bicycle LOS methodology and calculation procedures are provided in HCM Chapter 15 (Two-Lane Highways). The bicycle analysis methodology process is given in Exhibit 15-31. 
+
+The specific equation and exhibit numbers utilized in the methodology, in the general order in which they are applied, are as follows.
+
+**Step 1: Gather Input Data**
+- Exhibit 15-31: Required input data and default values when neither site-specific data nor local default values are available.
+
+The following data, and applicable ranges, are required:
+- Width of the outside through lane: 10 to 16 ft,
+- Shoulder width: 0 to 6 ft,
+- Motorized vehicle volumes: up to 36,000 annual average daily traffic (AADT),
+- Number of directional through lanes (for multilane),
+- Posted speed: 25 to 50 mi/h,
+- Heavy-vehicle percentage: 0% to 2%, and
+- Pavement condition: 2 to 5 on the Federal Highway Administration (FHWA) 5-point pavement rating scale
+
+**Step 2: Calculate the Directional Flow Rate in the Outside Lane**
+- Equation 15-40: Directional demand flow rate in the outside lane 
+
+**Step 3: Calculate the Effective Width**
+
+Uses Eq. 15-41, 15-42, 15-43 or 15-44 depending on paved shoulder width and hourly directional volume
+- Equation 15-41: If paved shoulder width is greater than or equal to 8 ft
+- Equation 15-42: If paved shoulder width is greater than or equal to 4 ft and less than 8 ft
+- Equation 15-43: If paved shoulder width is less than 4 ft. Uses Eq. 15-44 or 15-45 to determine effective width as a function of traffic volume
+- Equation 15-44: If hourly directional volume is greater than 150 veh/h
+- Equation 15-44: Otherwise
+
+**Step 4: Calculate the Effective Speed Factor**
+- Equation 15-46: Effective Speed Factor 
+
+**Step 5: Determine the LOS**
+- Equation 15-47: Bicycle Level of Service Score (BLOS)
+- Exhibit 15-7: Bicycle LOS criteria for two-lane highways [\@ref(tab:BLOSscore2)]
+
+Table: (\#tab:BLOSscore2) HCM Bicycle LOS Score Thresholds for Multilane and Two-Lane Highways
+
+|**LOS**|  **BLOS Score**    |
+|:---:|:----------------------:|
+| A   | BLOS Score $\leq$ 1.5       |
+| B   | 1.5 < BLOS Score $\leq$ 2.5 |
+| C   | 2.5 < BLOS Score $\leq$ 3.5 |
+| D   | 3.5 < BLOS Score $\leq$ 4.5 |
+| E   | 4.5 < BLOS Score $\leq$ 5.5 |
+| F   |  BLOS Score > 5.5      |
+Source: HCM Exhibit 12-31 and 15-7
+
+#### Urban Street Segments {-}
+
+The bicycle signalized intersection analysis methodology is contained in Chapter 18 (Urban Street Segments). The bicycle analysis methodology process is given in Exhibit 18-24. The methodology can be used to evaluate the service provided to bicyclists when sharing a lane with motorized vehicles or when traveling in an exclusive bicycle lane.
+
+The specific equation and exhibit numbers utilized in the methodology, in the general order in which they are applied, are as follows.
+
+**Step 1: Determine Bicycle Running Speed**
+Based on field measurement of midsegment bicycle speed on representative streets in the vicinity of the subject street. A default value of 15 mi/h could be used in absence of data.
+
+**Step 2: Determine Bicycle Delay at Intersection**
+If the boundary intersection is two-way STOP controlled (where the subject approach is uncontrolled), the delay is equal to 0.0 s/bicycle. If the boundary intersection is signalized, the delay is computed by using the motorized vehicle methodology described in Chapter 19.
+
+**Step 3: Determine Bicycle Travel Speed**
+- Equation 18-40: travel speed of through bicycles along the segment
+
+**Step 4: Determine Bicycle LOS Score for Intersection**
+If the boundary intersection is two-way STOP controlled (where the subject approach is uncontrolled), the score is equal to 0.0. If the boundary intersection is signalized, the score is computed by using the bicycle methodology described in Chapter 19.
+
+**Step 5: Determine Bicycle LOS Score for Link**
+- Equation 18-41: bicycle LOS score for link. Uses Eq. 18-42, 18-43 and 18-44
+- Equation 18-42: cross-section adjustment factor. Uses Exhibit 18-25
+- Exhibit 18-25: Variables for Bicycle LOS Score for Link
+- Equation 18-43: motorized vehicle volume adjustment factor. Uses Exhibit 18-25
+- Equation 18-44: motorized vehicle speed adjustment factor. Uses Exhibit 18-25
+- Equation 18-45: pavement condition adjustment factor
+
+**Step 6: Determine Link LOS**
+- Exhibit 18-3: Variables for Bicycle LOS criteria for link
+
+**Step 7: Determine Bicycle LOS Score for Segment**
+- Equation 18-46: bicycle LOS score for segment. Uses Eq. 18-47
+- Equation 18-47: unsignalized conflicts factor
+
+**Step 8: Determine Segment LOS**
+- Exhibit 18-3: Variables for Bicycle LOS criteria for segment
+
+
+#### Signalized Intersections {-}
+
+The bicycle signalized intersection analysis methodology is contained in Chapter 19 (Signalized Intersections). The bicycle analysis methodology process is given in Exhibit 19-40. The methodology can be used to evaluate the service provided to bicyclists when sharing a lane with motorized vehicles or when traveling in an exclusive bicycle lane.
+
+The specific equation and exhibit numbers utilized in the methodology, in the general order in which they are applied, are as follows.
+
+**Step 1: Determine Bicycle Delay**
+Bicycle delay can be calculated only for intersection approaches that have an on-street bicycle lane or a shoulder that can be used by bicyclists as a bicycle lane. Bicyclists who share a lane with motorized vehicle traffic will incur the same delay as the motorized vehicles.
+
+- Equation 19-107: Bicycle delay. Uses result from Eq. 19-106.
+- Equation 19-106: Capacity of the bicycle lane.
+
+**Step 2: Determine Bicycle LOS Score for Intersection**
+- Equation 19-108: bicycle LOS score for intersection. Uses results from Eq. 19-109, 19-110 and 19-111.
+- Equation 19-109: cross-section adjustment factor
+- Equation 19-110: motorized vehicle volume  adjustment factor
+- Equation 19-111: total width of the outside through lane, bicycle lane, and paved shoulder 
+
+**Step 3: Determine LOS**
+- Exhibit 19-9: Bicycle LOS criteria for signalized intersections
+
+
+#### All-Way Stop-Controlled Intersections {-}
+
+There is no specific analysis procedure for bicycle mode. The procedures described to estimate motor vehicle delay can be applied to bicycles that queue with motor vehicles on AWSC approaches. Specific considerations could be applied as bicycles do not queue linearly at STOP signs or the presence of a bicycle lane may reduce bicycle delay.
+
+#### Roundabout Intersections {-}
+
+No methodology specific to bicyclists has been developed to assess the performance of bicyclists at roundabouts, as limited data are available in the United States to support model calibration. A bicyclist may either navigate the roundabout in the same manner as a motorized vehicle or use sidewalks and crossings as would a pedestrian. If bicyclists are circulating in the same manner as motorized vehicles, their effect can be approximated by combining bicyclist flow rates with other vehicles by using a passenger-car-equivalent factor of 0.5 for the bicycles. If bicyclists are navigating the roundabout in the same manner as pedestrians, their effect can be analyzed by using the methodology described previously for pedestrians. 
+
+#### Urban Street Facilities {-}
+
+The bicycle urban street facility analysis methodology is contained in Chapter 16 (Urban Street Facility). The bicycle analysis methodology process is given in Exhibit 16-13. The bicycle methodology aggregates the performance of the segments that make up the facility. In this regard, it considers the performance of each link and boundary intersection. The methodologies for evaluating the link and boundary intersection are described in Chapters 18 and 19, respectively.
+
+The methodology can be used to evaluate the service provided to bicyclists when sharing a lane with motorized vehicles or when traveling in an exclusive bicycle lane.
+
+The specific equation and exhibit numbers utilized in the methodology, in the general order in which they are applied, are as follows.
+
+**Step 1: Determine Bicycle Travel Speed**
+
+- Equation 16-9: Travel speed of through bicycles for the facility 
+
+**Step 2: Determine Bicycle LOS Score**
+
+- Equation 16-10: Bicycle LOS score for the facility. Uses Eq. 16-11
+- Equation 16-11: Travel-time-weighted average bicycle LOS score for segment *i*
+
+**Step 3: Determine Bicycle LOS**
+
+- Exhibit 16-5: Bicycle LOS criteria for urban street facilities

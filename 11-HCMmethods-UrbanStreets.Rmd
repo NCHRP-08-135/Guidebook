@@ -1,0 +1,194 @@
+# Urban Street Facility Analysis Methodology {#HCMurbanStreet}
+
+The urban street analysis methodology is contained in Chapters 16 (Urban Street Facilities) and 18 (Urban Street Segments). Chapter 16 (Urban Street Facilities) describes the aggregation of urban street segments into an urban street facility. Chapter 18 (Urban Street Segments) describes the calculation of link performance, namely running time, and the aggregation of link running time with downstream intersection control delay to arrive at a segment average travel time and average speed. Intersection control delay values are obtained from the methodologies described in the individual intersection sections of Part 3 of this document.
+
+## Equations and Exhibits
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Revision**
+:::
+The Urban Streets analysis methodology contains a model, generally termed the 'platoon dispersion model', to estimate traffic flow progression through a series of closely-spaced signalized intersections that are coordinated. This model estimates a departure flow profile from an upstream intersection, the traffic flow progression along the link, and then the arrival flow profile at the downstream intersection. The departure flow profile and resultant arrival flow profile is a function of signal phasing and timing settings and link traffic and roadway characteristics. Ultimately, the arrival flow profile is used to adjust the signalized intersection control delay value, relative to a random traffic arrival pattern.
+
+This platoon dispersion model is input data intensive and computationally intensive. Thus, for an urban street analysis within the context of a rural highway analysis, it is not recommended as the preferred analysis alternative. Instead, it is recommended that the planning-level analysis methodology for urban streets be applied. The primary difference between the planning- and operational-level methodologies is the simplification of the process to account for signal progression quality on signal delay. Instead of the more complex platoon dispersion model, the planning-level analysis makes use of the simplified progression adjustment factor (PF). This is discussed further in the [signalized intersection methodology section](#HCMsignal).
+::::
+
+
+The planning-level analysis methodology is described in Section 5 of Chapter 30 (Urban Street Segments: Supplemental) of the HCM. The motorized vehicle analysis methodology process is given in Exhibit 30-8 (p. 30-31). The specific equation and exhibit numbers utilized in the methodology, in the general order in which they are applied, are as follows. This section focuses on the calculation of running speeds along the arterial links in between intersections. The delay calculations for the arterial intersections are covered in their respective methodology sections.
+
+
+**Step 1: Determine Traffic Demand Adjustments**
+
+This step generally involves adjusting traffic demand volumes to reflect capacity constraints, volume balancing, origin-destination distributions, and spillback occurrence.
+
+See HCM Chapter 18, Section 3 for more information about this step.  
+
+**Step 2: Determine Running Time**
+
+- Equation 18-3: Estimate base free-flow speed (BFFS); Uses value from Exhibit 18-11
+
+$$S_{fo} = {S_{calib}} + {S_{0}} + {f_{cs}} + {f_{A}} + {f_{pk}} \tag{HCM Eq. 18-3}$$
+
+- Exhibit 18-11: BFFS Adjustment Factors for Eq. 18-3
+
+The values contained in Exhibit 18-11 were generated from the equations shown in the notes section beneath the table. Those equations are shown here.
+
+Speed constant: $S_0 = 25.6 + 0.47S_{pl}$  
+Adjustment for cross section: $f_{cs} = 1.5 p_{rm} - 0.47 p_{curb} - 3.7 p_{curb} p_{rm}$  
+Adjustment for access points: $f_A = -0.078 D_a/N_{th}$  
+
+$D_a = 5,280 (N_{ap,s} + N_{ap,o})/(L - W_i)$ 
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Simplification**
+:::
+To simplify the data collection process, the access point density, $D_a$, can be determined from Exhibit 18-7 (the Suburban/Rural section) rather than counting the number of access points.
+::::
+
+
+- Exhibit 18-7: Default Access Point Density (points/mi) by Speed Limit (mi/h)
+
+**Area Type**|**Median Type**|**25**|**30**|**35**|**40**|**45**|**50**|**55**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+Urban |Restrictive |62|50|41|35|30|26|22
+Urban |Other |73|61|52|46|41|37|33
+Suburban or rural|Restrictive |40|27|19|12|7|3|0
+Suburban or rural|Other |51|38|30|23|18|14|11
+
+$N_{ap,s}$ and $N_{ap,o}$ are determined from Exhibit 18-7.
+
+Adjustment for on-street parking: $f_{pk} = -3.0 \times \text{proportion of link length with on-street parking available on the right-hand side (decimal)}$ 
+
+
+The variable definitions for these equations are shown [here.](#Exhibit18-11equations)
+
+- Equation 18-4: Estimate signal spacing adjustment factor; Uses result from Eq. 18-3
+
+$$f_{L} = 1.02 - 4.7 \frac{S_{fo}-19.5}{\text{max}(L_{s},400)} \leq 1.0 \tag{HCM Eq. 18-4}$$
+
+- Equation 18-5: Estimate free-flow speed (FFS); Uses result from Eq. 18-4
+
+$$ S_{f} = S_{fo} f_{L} \geq S_{pl} \tag{HCM Eq. 18-5}$$
+
+- Equation 18-6: Estimate proximity adjustment factor; Uses result from Eq. 18-5
+
+$$f_{v} = \frac{2}{1 + \bigg(1- \frac{v_{m}}{52.8 {N_{th} {S_{f}}}}\bigg)^{0.21}} \tag{HCM Eq. 18-6}$$
+
+- Equation 18-7: Estimate segment running time; Uses results from Eqs. 18-6 and 18-8 and Exhibit 18-13 (see discussion below about this exhibit)
+
+$$t_{R} = \frac{6.0 - l_{1}}{0.0025L}{f_{x}} + \frac{3,600L}{5,280 S_{f}}{f_{v}} + \sum^{N_{ap}}_{i=1}{d_{ap,i}}+{d_{other}} \tag{HCM Eq. 18-7}$$
+
+The $d_{other}$ term is intended to account for a variety of factors that are currently not explicitly accounted for in the analysis methodology. For example, this term can be used to include the effects of mid-segment delay due to on-street parking maneuvers (different from the term used in FFS estimation to account for additional speed friction from the presence of on-street parking) or pedestrian crosswalk activity, or impacts from bicycle activity.  
+
+- Equation 18-8: Control-type adjustment factor
+
+$$f_{x}= \left\{\begin{array}{l l l}
+1.00 & {\text{(signalized or STOP-controlled through movement)}} \\
+0.00 & {\text {(uncontrolled through movement)}} \\
+\text{min}\left[\frac{v_{th}}{c_{th}},1.00  \right] & {\text {(YIELD-controlled through movement)}}
+\end{array}\right. \tag{HCM Eq. 18-8}$$
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Simplification**
+:::
+Equation 18-7 includes a term to account for the delay imposed on through traffic by vehicles turning into access points. A very detailed procedure for estimating the delay due to turning vehicles is provided in Chapter 30, Section 4. The default is to use the values provided in Exhibit 18-13--approximate values considered appropriate for planning and preliminary engineering applications.
+::::
+
+
+- Exhibit 18-13: Through Vehicle Delay (s/veh/pt) by Number of Through Lanes
+
+**Midsegment Volume (veh/h/ln)**|**1 Lane**|**2 Lanes**|**3 Lanes**
+:-----:|:-----:|:-----:|:-----:
+200|0.04|0.04|0.05
+300|0.08|0.08|0.09
+400|0.12|0.15|0.15
+500|0.18|0.25|0.15
+600|0.27|0.41|0.15
+700|0.39|0.72|0.15
+
+
+**Step 3: Determine the Proportion Arriving During Green**
+
+If the intersection is unsignalized, this step is skipped. If the intersection is signalized, the simplification discussed at the beginning of this page is applied. This calculation is described in Step 8 of the signalized intersection analysis methodology.
+
+**Step 4: Determine Signal Phase Duration**
+
+If the intersection is unsignalized, this step is skipped. If the intersection is signalized, see Step 6 of the signalized intersection analysis methodology.
+
+**Step 5: Determine Through Delay**
+
+Calculated per corresponding intersection analysis methodology.
+
+**Step 6: Determine Through Stop Rate**
+
+This step is not implemented.
+
+**Step 7: Determine Travel Speed**
+
+- Equation 18-15: Estimate travel speed for the subject direction of travel along the segment; Uses results from Eq. 18-7 and through delay value from Step 5
+
+$$S_{T,seg} = \frac{3,600L}{5,280(t_R+d_t)} \tag{HCM Eq. 18-15}$$
+
+**Step 8: Determine Spatial Stop Rate**
+
+This step is not implemented.
+
+**Step 9: Determine Level of Service**
+
+- Exhibit 18-1: LOS Criteria (Motorized Vehicle Mode); The LOS is determined for the major roadway through movement, for the analysis direction.
+
+| | **Travel Speed Threshold by Base Free-Flow Speed (mi/h)**| 
+:-------:|:-----:|
+
+**LOS**|**55**|**50**|**45**|**40**|**35**|**30**|**25**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+A |>44 |>40 |>36 |>32 |>28 |>24 |>20 
+B |>37 |>34 |>30 |>27 |>23 |>20 |>17
+C |>28 |>25 |>23 |>20 |>18 |>15 |>13
+D |>22 |>20 |>18 |>16 |>14 |>12 |>10
+E |>17 |>15 |>14 |>12 |>11 |>9 |>8
+F |$\leq$ 17 |$\leq$ 15 |$\leq$ 14 |$\leq$ 12 |$\leq$ 11 |$\leq$ 9 |$\leq$ 8
+
+If the $v/c$ > 1.0, the LOS is F.
+
+## Nomenclature
+
+[Exhibit 18-11 Equations]{#Exhibit18-11equations}
+
+$p_{rm}$ = proportion of link length with restrictive median (decimal)  
+$p_{curb}$ = proportion of segment with curb on the right-hand side (decimal)  
+$D_a$ = access point density on segment (points/mi)  
+$N_{th}$ = number of through lanes on the segment in the subject direction of travel (ln)  
+$N_{ap,s}$ = number of access point approaches on the right side in the subject direction of travel (points)  
+$N_{ap,o}$ = number of access point approaches on the right side in the opposing direction of travel (points)  
+$L$ = segment length (ft)  
+$W_i$ = width of signalized intersection (ft)
+
+Some of the above variables may also be used with other equations in the methodology
+
+$c_{th}$ = through-movement capacity (veh/h)  
+$d_{ap,i}$ = delay due to left and right turns from  the street into access point intersection *i* (s/veh)    
+$d_{other}$ = delay due to other sources along the segment (e.g., curb parking or pedestrians) (s/veh)  
+$d_t$ = through delay (s/veh)  
+$f_{A}$ = adjustment for access points (mi/h)  
+$f_{CS}$ = adjustment for cross section (mi/h)  
+$f_{L}$ = signal spacing adjustment factor  
+$f_{pk}$ = adjustment for on-street parking (mi/h)  
+$f_{v}$ = proximity adjustment factor  
+$f_{x}$ = control-type adjustment factor  
+$l_{1}$ = start-up lost time = 2.0 if signalized, 2.5 if STOP or YIELD controlled (s)   
+$L_{s}$ = distance between adjacent signalized intersections (ft)  
+$N_{ap}$ = number of influential access point approaches along the segment = $N_{ap,s} + p_{ap,lt} N_{ap,o}$ (points)  
+$N_{th}$ = number of through lanes on the segment in the subject direction of travel (ln)  
+$p_{ap,lt}$ = proportion of $N_{ap,o}$ that can be accessed by a left turn from the subject direction of travel  
+$S_{0}$ = speed constant (mi/h)  
+$S_{calib}$ = base free-flow speed calibration factor (mi/h)  
+$S_{f}$ = free-flow speed (mi/h)  
+$S_{fo}$ = base free-flow speed (mi/h)  
+$S_{pl}$ = posted speed limit (mi/h)  
+$S_{T,seg}$ = travel speed of through vehicles for the segment (mi/h)  
+$t_{R}$ = segment running time (s)  
+$v_{m}$ = midsegment demand flow rate (veh/h)  
+$v_{th}$ = through-demand flow rate (veh/h)  

@@ -1,0 +1,39 @@
+# (PART\*) Part II: HCM Calculations {-} 
+
+# HCM Automobile LOS Methodologies {#HCMmethodsIntro}
+
+## Introduction
+
+This part of the Guidebook provides an overview of the existing Highway Capacity Manual (HCM) analysis methods that are utilized in the rural highway level of service methodology for automobiles. Those analysis methodologies are:
+
+- [Multilane Highways](#HCMmultilaneHwy)
+- [Two-lane Highways](#HCMtwolaneHwy)
+- [Signalized Intersections](#HCMsignal)
+- [Roundabout Intersections](#HCMroundabout)
+- [All-way Stop Control (AWSC) Intersections](#HCMawsc)
+- [Urban Streets](#HCMurbanStreet)
+
+This part also contains a consolidated overview of the applicable analysis methodologies within the HCM for [bicycle operations on rural highways](#HCMbicycle).
+
+This part of the Guidebook is not intended to duplicate in full the analysis methodology material provided in the HCM, but rather to provide a concise summary of the applicable equations and exhibits for each analysis methodology utilized in the rural highway LOS methodology. The specific equation and exhibit numbers utilized in the respective methodology are presented in the general order in which they are applied. All equation variable definitions are included in a nomenclature section at the end of each methodology chapter.
+
+In addition, any simplifying assumptions and/or revision from the HCM methodologies are described in the corresponding methodology sections. The methodology simplifications or revisions are identified in a shaded box, for example:
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Simplification**
+:::
+This step is simplified by... 
+::::
+
+\
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Revision**
+:::
+This methodology is revised by... 
+::::
+
+\
+Note that the analysis methodology is direction specific. That is, results are specific to a single direction. For some roadway configurations, information about other directions of travel (traffic, roadway, control) may be needed to determine the operational quality for the analysis direction of travel. For example, for a two-lane highway passing zone, it is necessary to know the traffic volume in the opposing direction. Likewise, for intersections, such as roundabouts and all-way stop controlled, traffic operations on a given approach are affected by traffic demands and lane configurations on other approaches.

@@ -1,0 +1,245 @@
+# All-Way Stop-Controlled Intersection Analysis Methodology {#HCMawsc}
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Limitations**
+:::
+The simplifications to the full operational analysis methodology include the following:
+
+-	one lane on each approach (this is the predominant configuration in rural highway situations), and
+-	pedestrian crossings are not considered.
+
+::::
+
+## Equations and Exhibits
+
+**Step 1: Convert Movement Demand Volumes to Flow Rates**
+
+- Equation 21-12: Demand Flow Rate for Movement
+
+$$v_{i} = \frac{V_{i}}{PHF} \tag{HCM Eq. 21-12}$$
+
+**Step 2: Determine Lane Flow Rates**
+
+With only single-lane approaches considered in this methodology, this step is skipped. 
+
+**Step 3: Determining Geometry Group for Each Approach**
+
+- Exhibit 21-11: Geometry Groups
+
+This exhibit identifies the geometry group for each approach, as a function of the intersection configuration (four leg or T) and the number of lanes on the subject, opposing, and conflicting approaches. The possible geometry group classifications are 1, 2, 3a, 4a, 3b, 4b, 5, and 6. Intersection approaches with a single lane are classified as geometry group '1'.
+
+**Step 4: Determine Saturation Headway Adjustments**
+
+- Equation 21-13: Saturation Headway Adjustment; Uses results from Exhibit 21-12
+
+$$h_{adj} = h_{LT,adj}P_{LT}+h_{RT,adj}P_{RT}+h_{HV,adj}P_{HV} \tag{HCM Eq. 21-13}$$
+
+- Exhibit 21-12: Saturation Headway Adjustments by Geometry Group
+
+Values for $h_{LT,adj}$, $h_{RT,adj}$, and $h_{HV,adj}$ are obtained from Exhibit 21-12. The values for geometry group 1 are as follows:
+
+- $h_{LT,adj} = 0.2$  
+- $h_{RT,adj} = -0.6$  
+- $h_{HV,adj} = 1.7$
+
+**Step 5: Determine Initial Departure Headway**
+
+The process of determining departure headways (and thus service times) for each of the lanes on each of the approaches is iterative. For the first iteration, an initial departure headway of 3.2 s should be assumed. For subsequent iterations, the calculated values of departure headway from the previous iteration should be used if the calculation has not converged (see Step 11). 
+
+**Step 6: Calculate Initial Degree of Utilization**
+
+- Equation 21-14: Degree of Utilization
+
+$$x=\frac{vh_{d}}{3600} \tag{HCM Eq. 21-14}$$
+
+**Step 7: Compute Probability States**
+
+- Equation 21-15: Probability State; Uses results from Exhibit 21-13 and Exhibit 21-14
+
+$$P(i)=\prod_{j}P(a_{j}) \tag{HCM Eq. 21-15}$$
+
+- Exhibit 21-13: Probability of $a_j$ (Two Lane Approaches)
+
+**$a_j$**|**$V_j$**|**$P(a_j)$**
+:-----:|:-----:|:-----:
+1|0|0
+0|0|1
+1|> 0 |$x_j$
+0|> 0 |1 – $x_j$
+
+- Exhibit 21-14: Probability of Degree-of-Conflict Case: Multilane AWSC Intersections (Two-Lane Approaches, by Lane)
+
+The full exhibit contains 64 combinations of vehicle presence on three approach legs, with two lanes per approach, that can conflict with traffic on a subject approach. Since this method considers only single-lane approaches, just 8 degree of conflict (DOC) cases are applicable. These cases are shown below.
+
+**$i$**|**DOC Case**|**Number of Vehicles**|**Opposing Approach**|**Conflicting Left Approach**|**Conflicting Right Approach**|
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+1|1|0|0|0|0|
+2|2|1|1|0|0|
+5|3|1|0|1|0|
+7|3|1|0|0|1|
+13|4|2|0|1|1|
+16|4|2|1|1|0|
+21|4|2|1|0|1|
+45|5|3|1|1|1|
+
+**Step 8: Compute Probability Adjustment Factors**
+
+- Equation 21-16: Probability of Degree-of-Conflict C1; Uses results from Eq. 21-15 and Exhibit 21-14
+
+$$P(C_{1})=P(1) \tag{HCM Eq. 21-16}$$
+
+- Equation 21-17: Probability of Degree-of-Conflict C2; Uses results from Eq. 21-15 and Exhibit 21-14
+
+$$P(C_{2})=\sum^{4}_{i=2}P(i) \tag{HCM Eq. 21-17}$$
+
+- Equation 21-18: Probability of Degree-of-Conflict C3; Uses results from Eq. 21-15 and Exhibit 21-14
+
+$$P(C_{3})=\sum^{10}_{i=5}P(i) \tag{HCM Eq. 21-18}$$
+
+- Equation 21-19: Probability of Degree-of-Conflict C4; Uses results from Eq. 21-15 and Exhibit 21-14
+
+$$P(C_{4})=\sum^{37}_{i=11}P(i) \tag{HCM Eq. 21-19}$$
+
+- Equation 21-20: Probability of Degree-of-Conflict C5; Uses results from Eq. 21-15 and Exhibit 21-14
+
+$$P(C_{5})=\sum^{64}_{i=38}P(i) \tag{HCM Eq. 21-20}$$
+
+- Equation 21-21: Probability Adjustment Factor 1; Uses results from Eq. 21-16, 21-17, 21-18, 21-19, and 21-20
+
+$$AdjP(1)=\alpha[P(C_{2})+2P(C_{3})+3P(C_{4})+4P(C_{5})]/1 \tag{HCM Eq. 21-21}$$
+
+- Equation 21-22: Probability Adjustment Factor 2-4; Uses results from Eq. 21-16, 21-17, 21-18, 21-19, and 21-20
+
+$$AdjP(2) \text{ through } AdjP(4)=\alpha[P(C_{3})+2P(C_{4})+3P(C_{5})-P(C_{2})]/3 \tag{HCM Eq. 21-22}$$
+
+- Equation 21-23: Probability Adjustment Factor 5-10; Uses results from Eq. 21-16, 21-17, 21-18, 21-19, and 21-20
+
+$$AdjP(5) \text{ through } AdjP(10)=\alpha[P(C_{4})+2P(C_{5})-3P(C_{3})]/6 \tag{HCM Eq. 21-23}$$
+
+- Equation 21-24: Probability Adjustment Factor 11-37; Uses results from Eq. 21-16, 21-17, 21-18, 21-19, and 21-20
+
+$$AdjP(11) \text{ through } AdjP(37)=\alpha[P(C_{5})-6P(C_{4})]/27 \tag{HCM Eq. 21-24}$$
+
+- Equation 21-25: Probability Adjustment Factor 38-64; Uses results from Eq. 21-16, 21-17, 21-18, 21-19, and 21-20
+
+$$AdjP(38) \text{ through } AdjP(64)=-\alpha[10P(C_{5})]/27 \tag{HCM Eq. 21-25}$$
+
+- Equation 21-26: Adjusted Probability; Uses results from Eq. 21-16, 21-17, 21-18, 21-19, 21-20, 21-21, 21-22, 21-23, 21-24, and 21-25
+
+$$P^{'}(i)=P(i)+AdjP(i) \tag{HCM Eq. 21-26}$$
+
+**Step 9: Compute Saturation Headways** 
+
+- Equation 21-27: Saturation Headway; Uses results from Exhibit 21-15 and Eq. 21-13
+
+$$h_{si}=h_{base}+h_{adj} \tag{HCM Eq. 21-27}$$
+
+- Exhibit 21-15: Saturation Headway Values by Case and Geometry Group 
+
+Values for $h_{base}$ are obtained from Exhibit 21-15. The values for geometry group 1 are as follows:
+
+**Case**|**Base Headway (s)**|
+:-----:|:-----:|
+1| 3.9
+2| 4.7
+3| 5.8
+4| 7.0
+5| 9.6
+
+**Step 10: Compute Departure Headways**
+
+- Equation 21-28: Departure Headway; Uses results from Eq. 21-26 and 21-27
+
+$$h_{d}=\sum^{64}_{i=1}P^{'}(i)h_{si} \tag{HCM Eq. 21-28}$$
+
+**Step 11: Check for Convergence**
+
+The calculated values of $h_d$ are checked against the initial values assumed for $h_d$. If the values change by more than 0.1 s (or a more precise measure of convergence), Steps 5 through 10 are repeated until the values of departure headway for each lane do not change significantly.
+
+**Step 12: Compute Capacity**
+
+This is an iterative procedure. Check the HCM for more information.
+
+**Step 13: Compute Service Times**
+
+- Equation 21-29: Service Time; Uses results from Eq. 21-28
+
+$$t_{s}= h_{d}-m \tag{HCM Eq. 21-29}$$
+
+**Step 14: Compute Control Delay and Determine LOS for Each Lane**
+
+- Equation 21-30: Calculation of the control delay; Uses results from Eq. 21-14, 21-28, 21-29
+
+$$d=t_{s}+900T\left[(x-1)+\sqrt{(x-1)^2+\frac{h_{d}x}{450T}}\right]+5 \tag{HCM Eq. 21-30}$$
+
+**Step 15: Compute Control Delay and Determine LOS for Each Approach and the Intersection**
+
+- Equation 21-31: Control Delay for an Approach; Uses results from Eq. 21-30 and 21-12
+
+$$d_{a} = \frac{\sum d_{i}v_{i}}{\sum v_{i}} \tag{HCM Eq. 21-31}$$
+
+- Equation 21-32: Control Delay for the Intersection; Uses results from Eq. 21-30 and 21-12
+
+$$d_{intersection} = \frac{\sum d_{a}v_{a}}{\sum v_{a}} \tag{HCM Eq. 21-32}$$
+
+- Exhibit 21-8: LOS Criteria (Motorized Vehicle Mode); The LOS is determined for the major roadway through movement, for the analysis direction.
+
+**Control Delay (s/veh)**|**LOS**
+:-----:|:-----:
+0–10 |A 
+>10–15 |B 
+>15–25 |C 
+>25–35 |D 
+>35–50 |E 
+>50 |F 
+
+If the $v/c$ > 1.0, the LOS is F.
+
+**Step 16: Compute Queue Lengths**
+
+:::: {.graybox data-latex=""}
+::: {.center data-latex=""}
+**Methodology Limitation**
+:::
+This step is not implemented.
+
+- Equation 21-33: 95th Percentile Queue; Uses results from Eq. 21-14 and 21-28
+::::
+
+
+
+## Nomenclature
+
+$\alpha$ = 0.01 (or 0.00 if correlation among saturation headways is not taken into account)  
+$a_{j}$ = 1 (indicating a vehicle present in the lane) or 0 (indicating no vehicle present in the lane) (values of $a_{j}$ for each lane in each combination *i* are listed in Exhibit 21-14)  
+$AdjP(1)$ = probability adjustment factor 1  
+$AdjP(2)throughAdjP(4)$ = probability adjustment factor 2 through 4  
+$AdjP(5)throughAdjP(10)$ = probability adjustment factor 5 through 10  
+$AdjP(11)throughAdjP(37)$ = probability adjustment factor 11 through 37  
+$AdjP(38)throughAdjP(64)$ = probability adjustment factor 38 through 464  
+$h_{adj}$ = headway adjustment (s)  
+$h_{base}$ = base saturation headway (s)  
+$h_{d}$ = departure headway (s)  
+$h_{LT,adj}$ = headway adjustment for left turns (see Exhibit 21-12) (s)  
+$h_{RT,adj}$ = headway adjustment for right turns (see Exhibit 21-12) (s)  
+$h_{HV,adj}$ = headway adjustment for heavy vehicles (see Exhibit 21-12) (s)  
+$h_{si}$ = saturation headway (s)  
+$j$ = O1 (opposing approach, Lane 1), O2 (opposing approach, Lane 2), CL1 (conflicting left approach, Lane 1), CL2 (conflicting left approach, Lane 2), CR1 (conflicting right approach, Lane 1), and CR2 (conflicting right approach, Lane 2) for a two-lane, two-way AWSC intersection  
+$m$ = move-up time (2.0 s for Geometry Groups 1 through 4; 2.3 s for Geometry Groups 5 and 6)  
+$P(a_{j})$ = probability of $a_{j}$, computed on the basis of Exhibit 21-13, where $V_{j}$ is the lane flow rate  
+$P(C_{1})$ = probability of degree-of-conflict case 1  
+$P(C_{2})$ = probability of degree-of-conflict case 2  
+$P(C_{3})$ = probability of degree-of-conflict case 3  
+$P(C_{4})$ = probability of degree-of-conflict case 4  
+$P(C_{5})$ = probability of degree-of-conflict case 5  
+$P_{HV}$ =  proportion of heavy vehicles in the lane  
+$P(i)$ = probability state  
+$P'(i)$ = adjusted probability for each combination  
+$P_{LT}$ = proportion of left-turning vehicles in the lane  
+$P_{RT}$ = proportion of right-turning vehicles in the lane  
+$PHF$ = peak hour factor (decimal)  
+$t_{s}$ = service time (s)  
+$v_{i}$ =	demand flow rate for movement *i* (veh/h)  
+$V_{i}$ =	demand volume for movement *i* (veh/h)  
+$x$ = degree of utilization  
