@@ -1,0 +1,7732 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>17 Case Study: Tennessee SR-109 | Rural-Highway-Analysis-Guidebook.knit</title>
+  <meta name="description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="17 Case Study: Tennessee SR-109 | Rural-Highway-Analysis-Guidebook.knit" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="17 Case Study: Tennessee SR-109 | Rural-Highway-Analysis-Guidebook.knit" />
+  
+  <meta name="twitter:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+<meta name="author" content="" />
+
+
+<meta name="date" content="2023-09-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="CaseStudyOR20.html"/>
+<link rel="next" href="CaseStudyOH42.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Rural Highway Analysis Guidebook</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="chapter" data-level="1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#purpose-of-guidebook"><i class="fa fa-check"></i><b>1.1</b> Purpose of Guidebook</a></li>
+<li class="chapter" data-level="1.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-scope-and-limitations"><i class="fa fa-check"></i><b>1.2</b> Guidebook Scope and Limitations</a></li>
+<li class="chapter" data-level="1.3" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-organization"><i class="fa fa-check"></i><b>1.3</b> Guidebook Organization</a></li>
+<li class="chapter" data-level="1.4" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-format"><i class="fa fa-check"></i><b>1.4</b> Guidebook Format</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#navigating-the-document"><i class="fa fa-check"></i><b>1.4.1</b> Navigating the document</a></li>
+<li class="chapter" data-level="1.4.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#ProvidingFeedback"><i class="fa fa-check"></i><b>1.4.2</b> How to provide feedback on this document</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#SupportingResources"><i class="fa fa-check"></i><b>1.5</b> Supporting Resources and Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html"><i class="fa fa-check"></i><b>2</b> Rural Highway Level of Service for Automobiles</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#LOSIntro"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#Segmentation"><i class="fa fa-check"></i><b>2.2</b> Facility Segmentation</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#CrossSection"><i class="fa fa-check"></i><b>2.2.1</b> Cross Section</a></li>
+<li class="chapter" data-level="2.2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#passing-accommodations-for-two-lane-highways"><i class="fa fa-check"></i><b>2.2.2</b> Passing Accommodations for Two-Lane Highways</a></li>
+<li class="chapter" data-level="2.2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#posted-speed-limit-changes"><i class="fa fa-check"></i><b>2.2.3</b> Posted Speed Limit Changes</a></li>
+<li class="chapter" data-level="2.2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#geometric-alignment-considerations"><i class="fa fa-check"></i><b>2.2.4</b> Geometric Alignment Considerations</a></li>
+<li class="chapter" data-level="2.2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#IntxInfluenceArea"><i class="fa fa-check"></i><b>2.2.5</b> Intersections and their Influence Area</a></li>
+<li class="chapter" data-level="2.2.6" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#UrbanStreetClassification"><i class="fa fa-check"></i><b>2.2.6</b> Classification of Urban Street</a></li>
+<li class="chapter" data-level="2.2.7" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#SegMinLength"><i class="fa fa-check"></i><b>2.2.7</b> Practical Minimum Segment Length</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#FacilityLOS"><i class="fa fa-check"></i><b>2.3</b> Segment and Facility LOS Calculation</a></li>
+<li class="chapter" data-level="2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#HotSpots"><i class="fa fa-check"></i><b>2.4</b> Hot Spot Identification</a></li>
+<li class="chapter" data-level="2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#additional-performance-measures-for-facility-evaluation"><i class="fa fa-check"></i><b>2.5</b> Additional Performance Measures for Facility Evaluation</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#emergency-traffic-demand-surge"><i class="fa fa-check"></i><b>2.5.1</b> Emergency Traffic Demand Surge</a></li>
+<li class="chapter" data-level="2.5.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#short-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.2</b> Short-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#seasonal-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.3</b> Seasonal Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#long-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.4</b> Long-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#use-of-probe-vehicle-measured-travel-timesspeeds"><i class="fa fa-check"></i><b>2.5.5</b> Use of Probe-Vehicle Measured Travel Times/Speeds</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html"><i class="fa fa-check"></i><b>3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityIntro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#approach-for-rural-highways"><i class="fa fa-check"></i><b>3.2</b> Approach for Rural Highways</a></li>
+<li class="chapter" data-level="3.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityData"><i class="fa fa-check"></i><b>3.3</b> Data Examined</a></li>
+<li class="chapter" data-level="3.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilitySegmentation"><i class="fa fa-check"></i><b>3.4</b> Segmentation</a></li>
+<li class="chapter" data-level="3.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityDataOverview"><i class="fa fa-check"></i><b>3.5</b> Data Overview</a></li>
+<li class="chapter" data-level="3.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityMethods"><i class="fa fa-check"></i><b>3.6</b> Evaluation Methodologies</a></li>
+<li class="chapter" data-level="3.7" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityHowTo"><i class="fa fa-check"></i><b>3.7</b> Assessing Reliability</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#load-the-data"><i class="fa fa-check"></i><b>3.7.1</b> Load the data</a></li>
+<li class="chapter" data-level="3.7.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#aggregate-the-data"><i class="fa fa-check"></i><b>3.7.2</b> Aggregate the data</a></li>
+<li class="chapter" data-level="3.7.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#heatmaps"><i class="fa fa-check"></i><b>3.7.3</b> Heatmaps</a></li>
+<li class="chapter" data-level="3.7.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.7.4</b> Box-and-Whisker Plots</a></li>
+<li class="chapter" data-level="3.7.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#speed-confidence-band-plots"><i class="fa fa-check"></i><b>3.7.5</b> Speed Confidence Band Plots</a></li>
+<li class="chapter" data-level="3.7.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#travel-time-index-plots"><i class="fa fa-check"></i><b>3.7.6</b> Travel Time Index Plots</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html"><i class="fa fa-check"></i><b>4</b> Bicycle Operations Analysis on Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#overview-of-bicycle-operations-analysis-methods"><i class="fa fa-check"></i><b>4.1</b> Overview of Bicycle Operations Analysis Methods</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#highway-capacity-manual-level-of-service-analysis-methodologies"><i class="fa fa-check"></i><b>4.1.1</b> Highway Capacity Manual Level of Service Analysis Methodologies</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.1.2</b> Level of Traffic Stress Analysis Methodology</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#bicycle-compatibility-index-analysis-methodology"><i class="fa fa-check"></i><b>4.1.3</b> Bicycle Compatibility Index Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#BikeLOS"><i class="fa fa-check"></i><b>4.2</b> Bicycle Level of Service Research Recommendations</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-highway-capacity-manual-level-of-service-for-rural-highways"><i class="fa fa-check"></i><b>4.2.1</b> Revisions to Highway Capacity Manual Level of Service for Rural Highways</a></li>
+<li class="chapter" data-level="4.2.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.2.2</b> Revisions to Level of Traffic Stress Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#guidance-on-current-methods-for-rural-highways"><i class="fa fa-check"></i><b>4.3</b> Guidance on Current Methods for Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#adaptation-to-rural-conditions"><i class="fa fa-check"></i><b>4.3.1</b> Adaptation to Rural Conditions</a></li>
+<li class="chapter" data-level="4.3.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#data-requirements"><i class="fa fa-check"></i><b>4.3.2</b> Data Requirements</a></li>
+<li class="chapter" data-level="4.3.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#applications"><i class="fa fa-check"></i><b>4.3.3</b> Applications</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Part II: HCM Calculations</b></span></li>
+<li class="chapter" data-level="5" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html"><i class="fa fa-check"></i><b>5</b> HCM Automobile LOS Methodologies</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html"><i class="fa fa-check"></i><b>6</b> Multilane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#equations-and-exhibits"><i class="fa fa-check"></i><b>6.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="6.2" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#nomenclature"><i class="fa fa-check"></i><b>6.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html"><i class="fa fa-check"></i><b>7</b> Two-Lane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#equations-and-exhibits-1"><i class="fa fa-check"></i><b>7.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="7.2" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#nomenclature-1"><i class="fa fa-check"></i><b>7.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="HCMsignal.html"><a href="HCMsignal.html"><i class="fa fa-check"></i><b>8</b> Signalized Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="HCMsignal.html"><a href="HCMsignal.html#equations-and-exhibits-2"><i class="fa fa-check"></i><b>8.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="8.2" data-path="HCMsignal.html"><a href="HCMsignal.html#nomenclature-2"><i class="fa fa-check"></i><b>8.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="HCMroundabout.html"><a href="HCMroundabout.html"><i class="fa fa-check"></i><b>9</b> Roundabout Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="HCMroundabout.html"><a href="HCMroundabout.html#equations-and-exhibits-3"><i class="fa fa-check"></i><b>9.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="9.2" data-path="HCMroundabout.html"><a href="HCMroundabout.html#nomenclature-3"><i class="fa fa-check"></i><b>9.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="HCMawsc.html"><a href="HCMawsc.html"><i class="fa fa-check"></i><b>10</b> All-Way Stop-Controlled Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="HCMawsc.html"><a href="HCMawsc.html#equations-and-exhibits-4"><i class="fa fa-check"></i><b>10.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="10.2" data-path="HCMawsc.html"><a href="HCMawsc.html#nomenclature-4"><i class="fa fa-check"></i><b>10.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html"><i class="fa fa-check"></i><b>11</b> Urban Street Facility Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#equations-and-exhibits-5"><i class="fa fa-check"></i><b>11.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="11.2" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#nomenclature-5"><i class="fa fa-check"></i><b>11.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="HCMbicycle.html"><a href="HCMbicycle.html"><i class="fa fa-check"></i><b>12</b> Bicycle LOS Methodologies</a></li>
+<li class="chapter" data-level="13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html"><i class="fa fa-check"></i><b>13</b> Rural Highway Example Calculations</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-input-data"><i class="fa fa-check"></i><b>13.1</b> Segment Input Data</a></li>
+<li class="chapter" data-level="13.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations"><i class="fa fa-check"></i><b>13.2</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#first-iteration-uses-input-segment-lengths"><i class="fa fa-check"></i><b>13.2.1</b> First iteration uses input segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#influence-area-calculations"><i class="fa fa-check"></i><b>13.3</b> Influence Area Calculations</a></li>
+<li class="chapter" data-level="13.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-segment-length-calculations"><i class="fa fa-check"></i><b>13.4</b> Adjusted Segment Length Calculations</a></li>
+<li class="chapter" data-level="13.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations-1"><i class="fa fa-check"></i><b>13.5</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#second-iteration-uses-adjusted-segment-lengths"><i class="fa fa-check"></i><b>13.5.1</b> Second iteration uses adjusted segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#facility-calculations"><i class="fa fa-check"></i><b>13.6</b> Facility Calculations</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#posted-speed-travel-time-s"><i class="fa fa-check"></i><b>13.6.1</b> Posted Speed Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#free-flow-travel-time-s"><i class="fa fa-check"></i><b>13.6.2</b> Free-Flow Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#average-travel-time-s"><i class="fa fa-check"></i><b>13.6.3</b> Average Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#travel-time-segment-weights"><i class="fa fa-check"></i><b>13.6.4</b> Travel Time Segment Weights</a></li>
+<li class="chapter" data-level="13.6.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-demand-volumes"><i class="fa fa-check"></i><b>13.6.5</b> Adjusted Demand Volumes</a></li>
+<li class="chapter" data-level="13.6.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-hours-traveled-veh-h"><i class="fa fa-check"></i><b>13.6.6</b> Vehicle Hours Traveled (veh-h)</a></li>
+<li class="chapter" data-level="13.6.7" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#total-delay-veh-h"><i class="fa fa-check"></i><b>13.6.7</b> Total Delay (veh-h)</a></li>
+<li class="chapter" data-level="13.6.8" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-miles-traveled-veh-mi"><i class="fa fa-check"></i><b>13.6.8</b> Vehicle Miles Traveled (veh-mi)</a></li>
+<li class="chapter" data-level="13.6.9" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#space-mean-speed-mih"><i class="fa fa-check"></i><b>13.6.9</b> Space Mean Speed (mi/h)</a></li>
+<li class="chapter" data-level="13.6.10" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#ffs-delay-sveh"><i class="fa fa-check"></i><b>13.6.10</b> FFS Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.11" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#threshold-delay-sveh"><i class="fa fa-check"></i><b>13.6.11</b> Threshold Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.12" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-constancy"><i class="fa fa-check"></i><b>13.6.12</b> LOS Constancy</a></li>
+<li class="chapter" data-level="13.6.13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-adjustment-factor"><i class="fa fa-check"></i><b>13.6.13</b> LOS Adjustment Factor</a></li>
+<li class="chapter" data-level="13.6.14" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#final-los-score"><i class="fa fa-check"></i><b>13.6.14</b> Final LOS Score</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="CompEngine.html"><a href="CompEngine.html"><i class="fa fa-check"></i><b>14</b> Computational Engine Overview</a></li>
+<li class="part"><span><b>Part III: Case Studies</b></span></li>
+<li class="chapter" data-level="15" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html"><i class="fa fa-check"></i><b>15</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#supporting-material"><i class="fa fa-check"></i><b>15.1</b> Supporting Material</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#kml-files"><i class="fa fa-check"></i>KML Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#computational-engine-input-files"><i class="fa fa-check"></i>Computational Engine Input Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#probe-vehicle-data-analysis-scripting-code"><i class="fa fa-check"></i>Probe Vehicle Data Analysis Scripting Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html"><i class="fa fa-check"></i><b>16</b> Case Study: Oregon US-20</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#route-description"><i class="fa fa-check"></i><b>16.1</b> Route Description</a></li>
+<li class="chapter" data-level="16.2" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#level-of-service"><i class="fa fa-check"></i><b>16.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#segmentation"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#traffic-data"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#additional-data-inputs-for-intersections"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#results"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#reliability"><i class="fa fa-check"></i><b>16.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-heatmaps"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-difference-heatmaps"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#box-and-whisker-speed-plots"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-confidence-band"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#travel-time-index"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html"><i class="fa fa-check"></i><b>17</b> Case Study: Tennessee SR-109</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#route-description-1"><i class="fa fa-check"></i><b>17.1</b> Route Description</a></li>
+<li class="chapter" data-level="17.2" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#level-of-service-1"><i class="fa fa-check"></i><b>17.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#segmentation-1"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#traffic-data-1"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#additional-data-inputs-for-intersections-1"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#results-1"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#reliability-1"><i class="fa fa-check"></i><b>17.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-heatmaps-1"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-difference-heatmaps-1"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#box-and-whisker-speed-plots-1"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-confidence-band-1"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#travel-time-index-1"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#summary-1"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html"><i class="fa fa-check"></i><b>18</b> Case Study: Ohio US-42</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#route-description-2"><i class="fa fa-check"></i><b>18.1</b> Route Description</a></li>
+<li class="chapter" data-level="18.2" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#level-of-service-2"><i class="fa fa-check"></i><b>18.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#segmentation-2"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#traffic-data-2"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#additional-data-inputs-for-intersections-2"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#results-2"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#reliability-2"><i class="fa fa-check"></i><b>18.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-heatmaps-2"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-difference-heatmaps-2"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#box-and-whisker-speed-plots-2"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-confidence-band-2"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#travel-time-index-2"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#summary-2"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html"><i class="fa fa-check"></i><b>19</b> Case Study: Montana US-287</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#route-description-3"><i class="fa fa-check"></i><b>19.1</b> Route Description</a></li>
+<li class="chapter" data-level="19.2" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#level-of-service-3"><i class="fa fa-check"></i><b>19.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#segmentation-3"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#traffic-data-3"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#results-3"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Appendixes</b></span></li>
+<li class="chapter" data-level="A" data-path="AppendixA.html"><a href="AppendixA.html"><i class="fa fa-check"></i><b>A</b> Mitigation Strategies</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="AppendixA.html"><a href="AppendixA.html#general"><i class="fa fa-check"></i><b>A.1</b> General</a></li>
+<li class="chapter" data-level="A.2" data-path="AppendixA.html"><a href="AppendixA.html#multilane-highways"><i class="fa fa-check"></i><b>A.2</b> Multilane Highways</a></li>
+<li class="chapter" data-level="A.3" data-path="AppendixA.html"><a href="AppendixA.html#two-lane-highways"><i class="fa fa-check"></i><b>A.3</b> Two-Lane Highways</a></li>
+<li class="chapter" data-level="A.4" data-path="AppendixA.html"><a href="AppendixA.html#intersections"><i class="fa fa-check"></i><b>A.4</b> Intersections</a></li>
+<li class="chapter" data-level="A.5" data-path="AppendixA.html"><a href="AppendixA.html#arterials"><i class="fa fa-check"></i><b>A.5</b> Arterials</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/NCHRP-08-135/Guidebook" target="blank">View Book Source</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="CaseStudyTN109" class="section level1 hasAnchor" number="17">
+<h1><span class="header-section-number">17</span> Case Study: Tennessee SR-109<a href="CaseStudyTN109.html#CaseStudyTN109" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="route-description-1" class="section level2 hasAnchor" number="17.1">
+<h2><span class="header-section-number">17.1</span> Route Description<a href="CaseStudyTN109.html#route-description-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>SR-109 is a rural highway approximately 30 miles east of Nashville, TN. It runs primarily north-south between I-65 (at the north, 36.63005995380142, -86.57224654711138) and I-840 (at the south, 36.13174756486397, -86.40076816231978). The route is shown in Figure <a href="CaseStudyTN109.html#fig:TN109RouteMap">17.1</a>, as well as the <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&amp;route=36.1310%2C-86.3998%3B36.6287%2C-86.5706#map=11/36.3804/-86.4847">linked online map</a>. It is approximately 40 miles in length. More background information about this route can be found in a report that documents an access management study for this corridor <span class="citation">(<a href="#ref-SR109AccessStudy">Gresham Smith and Partners 2016</a>)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:TN109RouteMap"></span>
+<img src="Images/CaseStudyTN109/TN-109.png" alt="Tennessee SR-109 Study Route Boundaries. Source: Map data from [©OpenStreetMap](https://www.openstreetmap.org/copyright)" width="40%" />
+<p class="caption">
+Figure 17.1: Tennessee SR-109 Study Route Boundaries. Source: Map data from <a href="https://www.openstreetmap.org/copyright">©OpenStreetMap</a>
+</p>
+</div>
+</div>
+<div id="level-of-service-1" class="section level2 hasAnchor" number="17.2">
+<h2><span class="header-section-number">17.2</span> Level of service<a href="CaseStudyTN109.html#level-of-service-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The level of service analysis focuses on the section of SR-109 between I-65 and the southern end of the city of <a href="https://www.google.com/maps/place/36%C2%B023&#39;18.3%22N+86%C2%B026&#39;47.4%22W/@36.3884329,-86.4490612,17z/data=!3m1!4b1!4m4!3m3!8m2!3d36.3884286!4d-86.4464863?entry=ttu">Gallatin</a>. This section is approximately 22 miles in length. The selected route is mostly contained within Sumner country. The northern terminus of the selected route, where it intersects with I-65, is just across the border of Robertson county. The southern portion of SR-109, not included in this analysis, is contained within Wilson county. The route is shown in Figure <a href="CaseStudyTN109.html#fig:TN109RouteMapLOS">17.2</a>, as well as the <a href="https://www.openstreetmap.org/directions?engine=fossgis_osrm_car&amp;route=36.3644%2C-86.4401%3B36.6287%2C-86.5706#map=12/36.5008/-86.4773">linked online map</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:TN109RouteMapLOS"></span>
+<img src="Images/CaseStudyTN109/TN109RouteMapLOS.png" alt="Tennessee SR-109 LOS Study Route Boundaries. Source: Map data from [©OpenStreetMap](https://www.openstreetmap.org/copyright)" width="40%" />
+<p class="caption">
+Figure 17.2: Tennessee SR-109 LOS Study Route Boundaries. Source: Map data from <a href="https://www.openstreetmap.org/copyright">©OpenStreetMap</a>
+</p>
+</div>
+<div id="segmentation-1" class="section level3 unnumbered hasAnchor">
+<h3>Segmentation<a href="CaseStudyTN109.html#segmentation-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This route consists of sections of multilane highway, two-lane highway, with passing constrained and passing zone segments, several isolated signalized intersections, an arterial section through the small town of <a href="https://www.google.com/maps/place/36%C2%B034&#39;54.7%22N+86%C2%B030&#39;53.2%22W/@36.5818741,-86.5173601,17z/data=!3m1!4b1!4m4!3m3!8m2!3d36.5818698!4d-86.5147852?entry=ttu">Portland</a>, and several interchange ramp connections.</p>
+<p>The general geometric configuration of the roadway through this section of SR-109 is as follows (from south to north):</p>
+<ul>
+<li>multilane highway in rural developed area (city of Gallatin), S Water Ave - Scotty Parker Rd/Old Hwy 109 N, approximately 5.93 mi<br />
+</li>
+<li>multilane highway in rural undeveloped area, intersection with SR-52, approximately 11.38 mi<br />
+</li>
+<li>arterial through city of Portland, SR-52 - Morningside Dr, approximately 1.02 mi<br />
+</li>
+<li>two-lane highway in rural undeveloped area, Morningside Dr - Magnolia Springs Rd, approximately 2.84 mi<br />
+</li>
+<li>multilane highway in rural undeveloped area, Magnolia Springs Rd - I-65 on-ramp, approximately 1.04 mi</li>
+</ul>
+<p>The following photos<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> illustrate the variety of geometric configurations found along this route. Note that these photos are from a vehicle traveling in the southbound direction of the route.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:1"></span>
+<img src="Images/CaseStudyTN109/TN-109(4).jpg" alt="Tennessee SR-109, two-lane highway cross-section, north of Kirby Dr" width="50%" />
+<p class="caption">
+Figure 17.3: Tennessee SR-109, two-lane highway cross-section, north of Kirby Dr
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:2"></span>
+<img src="Images/CaseStudyTN109/TN-109(8).jpg" alt="Tennessee SR-109, transition from two-lane to multilane highway, at Morningside Dr" width="50%" />
+<p class="caption">
+Figure 17.4: Tennessee SR-109, transition from two-lane to multilane highway, at Morningside Dr
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:3"></span>
+<img src="Images/CaseStudyTN109/TN-109(11)_CollegeSt.jpg" alt="Tennessee SR-109, signalized intersection within city of Portland, at College St, no left-turn bays" width="50%" />
+<p class="caption">
+Figure 17.5: Tennessee SR-109, signalized intersection within city of Portland, at College St, no left-turn bays
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:4"></span>
+<img src="Images/CaseStudyTN109/TN-109(12)_EMarketSt.jpg" alt="Tennessee SR-109, signalized intersection within city of Portland, at Market St, no left-turn bays" width="50%" />
+<p class="caption">
+Figure 17.6: Tennessee SR-109, signalized intersection within city of Portland, at Market St, no left-turn bays
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:5"></span>
+<img src="Images/CaseStudyTN109/TN-109(15).jpg" alt="Tennessee SR-109, multilane highway with TWLTL, curb and gutter, city of Portland, south of Village Dr" width="50%" />
+<p class="caption">
+Figure 17.7: Tennessee SR-109, multilane highway with TWLTL, curb and gutter, city of Portland, south of Village Dr
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:6"></span>
+<img src="Images/CaseStudyTN109/TN-109(21).jpg" alt="Tennessee SR-109, multilane highway with grass median, no curb and gutter, city of Portland, south of Academy Rd" width="50%" />
+<p class="caption">
+Figure 17.8: Tennessee SR-109, multilane highway with grass median, no curb and gutter, city of Portland, south of Academy Rd
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:7"></span>
+<img src="Images/CaseStudyTN109/TN-109(26).jpg" alt="Tennessee SR-109, multilane highway with ieft-turn and u-turn treatments, south of Scotty Parker Rd/Old Hwy 109 N" width="50%" />
+<p class="caption">
+Figure 17.9: Tennessee SR-109, multilane highway with ieft-turn and u-turn treatments, south of Scotty Parker Rd/Old Hwy 109 N
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:8"></span>
+<img src="Images/CaseStudyTN109/TN-109(31)_WAlbertGallatinAve.jpg" alt="Tennessee SR-109, exit ramp at diamond interchange, W Albert Gallatin Ave" width="50%" />
+<p class="caption">
+Figure 17.10: Tennessee SR-109, exit ramp at diamond interchange, W Albert Gallatin Ave
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:9"></span>
+<img src="Images/CaseStudyTN109/TN-109(36)_WedgewoodDr.jpg" alt="Tennessee SR-109, multilane highway with ieft-turn treatment, at Wedgewood Dr" width="50%" />
+<p class="caption">
+Figure 17.11: Tennessee SR-109, multilane highway with ieft-turn treatment, at Wedgewood Dr
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:10"></span>
+<img src="Images/CaseStudyTN109/TN-109(71).jpg" alt="Tennessee SR-109, multilane highway with TWLTL, no curb and gutter, north of Academy Rd" width="50%" />
+<p class="caption">
+Figure 17.12: Tennessee SR-109, multilane highway with TWLTL, no curb and gutter, north of Academy Rd
+</p>
+</div>
+<p>The final segmentation is shown in Table <a href="CaseStudyTN109.html#tab:SegmentationTN109">17.1</a>. The total length is 22.386 mi.</p>
+<div style="border: 0px;overflow-x: scroll; width:100%; ">
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:SegmentationTN109">Table 17.1: </span>Final Segmentation for Tennessee SR-109 Study Route
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Seg ID
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+From/To
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Hwy Seg Type
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Two-Lane Seg Type
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+# Dir Lanes
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Length (ft)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Length (mi)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Terrain
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Vertical Align Class
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Posted Speed (mi/h)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Start Point - Clear Lake Meadows Dr. 
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1853
+</td>
+<td style="text-align:right;">
+0.3509
+</td>
+<td style="text-align:left;">
+Level
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Clear Lake Meadows Dr. - Ryan Ave.
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+4444
+</td>
+<td style="text-align:right;">
+0.8417
+</td>
+<td style="text-align:left;">
+Level
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Ryan Ave - Hancock St
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1517
+</td>
+<td style="text-align:right;">
+0.2873
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Hancock St. 
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+800
+</td>
+<td style="text-align:right;">
+0.1515
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Hancock St. - Nashville Turnpike Off Ramp
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2440
+</td>
+<td style="text-align:right;">
+0.4621
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Nashville Turnpike Off Ramp - Nashville Turnpike On Ramp
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+897
+</td>
+<td style="text-align:right;">
+0.1699
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Nashville Turnpike On Ramp - Long Hollow Pike Off Ramp
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1430
+</td>
+<td style="text-align:right;">
+0.2708
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+Hollow Point Pike Off Ramp - Hollow Point Pike On Ramp
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2196
+</td>
+<td style="text-align:right;">
+0.4159
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:left;">
+Hollow Point Pike On Ramp - Red River Road
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3303
+</td>
+<td style="text-align:right;">
+0.6256
+</td>
+<td style="text-align:left;">
+Level
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+Red River Rd.
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+300
+</td>
+<td style="text-align:right;">
+0.0568
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+Red River Rd. - Albert Gallatin Ave Off Ramp
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3369
+</td>
+<td style="text-align:right;">
+0.6381
+</td>
+<td style="text-align:left;">
+Level
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+Albert Gallatin Ave Off Ramp - Albert Gallatin Ave On Ramp
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1595
+</td>
+<td style="text-align:right;">
+0.3021
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+Albert Gallatin Ave On Ramp - Old Douglas Rd.
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+5377
+</td>
+<td style="text-align:right;">
+1.0184
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+Old Douglas Rd - Old Hwy 109 N (Before)
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1340
+</td>
+<td style="text-align:right;">
+0.2538
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:left;">
+Old Hwy 109 N (End) - S Tunnel Rd
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+16760
+</td>
+<td style="text-align:right;">
+3.1742
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:left;">
+S Tunnel Rd - Scotty Parker Rd
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+8175
+</td>
+<td style="text-align:right;">
+1.5483
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:left;">
+Scotty Parker Rd - Old Tennessee 109
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+847
+</td>
+<td style="text-align:right;">
+0.1604
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:left;">
+Old Tenessee Rd - Hollis Chapel Rd
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1182
+</td>
+<td style="text-align:right;">
+0.2239
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:left;">
+Hollis Chapel Rd - Roberts Rd
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2130
+</td>
+<td style="text-align:right;">
+0.4034
+</td>
+<td style="text-align:left;">
+Level
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+Roberts Rd - Boiling Springs Rd
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+8130
+</td>
+<td style="text-align:right;">
+1.5398
+</td>
+<td style="text-align:left;">
+Level
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:left;">
+Boiling Springs Rd - N Centerpoint Rd
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3505
+</td>
+<td style="text-align:right;">
+0.6638
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:left;">
+N Centerpoint Rd - PSL Decrease (55 to 45)
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+5545
+</td>
+<td style="text-align:right;">
+1.0502
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:left;">
+PSL Drop (55 to 45) - SR-76
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+2880
+</td>
+<td style="text-align:right;">
+0.5455
+</td>
+<td style="text-align:left;">
+Rolling
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:left;">
+SR-76/Fountainhead Rd
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+300
+</td>
+<td style="text-align:right;">
+0.0568
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:left;">
+SR-76 - Longview Dr. 
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+4040
+</td>
+<td style="text-align:right;">
+0.7652
+</td>
+<td style="text-align:left;">
+Level
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:left;">
+Longview Dr. 
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1400
+</td>
+<td style="text-align:right;">
+0.2652
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:left;">
+Longview Dr - SR-52
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+5715
+</td>
+<td style="text-align:right;">
+1.0824
+</td>
+<td style="text-align:left;">
+Level
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:left;">
+SR-52
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+225
+</td>
+<td style="text-align:right;">
+0.0426
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:left;">
+SR-52 - Morningside Dr
+</td>
+<td style="text-align:left;">
+Arterial
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+5405
+</td>
+<td style="text-align:right;">
+1.0237
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+30
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:left;">
+Morningside Dr - Oakhill Dr
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3633
+</td>
+<td style="text-align:right;">
+0.6881
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:left;">
+Oakhill Dr - National Barn Company Driveway
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2290
+</td>
+<td style="text-align:right;">
+0.4337
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:left;">
+Kirby Dr
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1515
+</td>
+<td style="text-align:right;">
+0.2869
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1664
+</td>
+<td style="text-align:right;">
+0.3152
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:left;">
+<ul>
+<li></td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1170
+</td>
+<td style="text-align:right;">
+0.2216
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:left;">
+<ul>
+<li>Kenwood Dr
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1264
+</td>
+<td style="text-align:right;">
+0.2394
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:left;">
+Kenwood Dr - Woods Dr
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+970
+</td>
+<td style="text-align:right;">
+0.1837
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:left;">
+Woods Dr - PSL Decrease (45 to 40)
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1497
+</td>
+<td style="text-align:right;">
+0.2835
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:left;">
+<ul>
+<li>Magnolia Springs Rd
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1590
+</td>
+<td style="text-align:right;">
+0.3011
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:left;">
+Magnolia Springs Rd - Hwy 31 W
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3452
+</td>
+<td style="text-align:right;">
+0.6538
+</td>
+<td style="text-align:left;">
+Level
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:left;">
+Hwy 31 W
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+425
+</td>
+<td style="text-align:right;">
+0.0805
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+Hwy 31 W - I-65 (End Point)
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1628
+</td>
+<td style="text-align:right;">
+0.3083
+</td>
+<td style="text-align:left;">
+Level
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+</tbody>
+</table>
+</div></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>The vertical alignment generally ranges from level to rolling terrain. The changes in terrain along the route are shown in Table <a href="CaseStudyTN109.html#tab:TerrainTN109">17.2</a></p>
+<table>
+<caption><span id="tab:TerrainTN109">Table 17.2: </span> Terrain changes for Tennessee SR-109 Study Route</caption>
+<thead>
+<tr class="header">
+<th align="center"><strong>Segment Range</strong></th>
+<th align="center"><strong>Terrain</strong></th>
+<th align="center"><strong>Approximate Starting Location</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1-2</td>
+<td align="center">Level</td>
+<td align="center">Start of route</td>
+</tr>
+<tr class="even">
+<td align="center">3-8</td>
+<td align="center">Rolling</td>
+<td align="center">Ryan Rd</td>
+</tr>
+<tr class="odd">
+<td align="center">9-11</td>
+<td align="center">Level</td>
+<td align="center">Long Hollow Pike on-ramp</td>
+</tr>
+<tr class="even">
+<td align="center">12-18</td>
+<td align="center">Rolling</td>
+<td align="center">Albert Gallatin Ave</td>
+</tr>
+<tr class="odd">
+<td align="center">19-20</td>
+<td align="center">Level</td>
+<td align="center">Holis Chapel Rd End</td>
+</tr>
+<tr class="even">
+<td align="center">21-23</td>
+<td align="center">Rolling</td>
+<td align="center">Boiling Spring Rd</td>
+</tr>
+<tr class="odd">
+<td align="center">24-41</td>
+<td align="center">Level</td>
+<td align="center">SR-76 intersection</td>
+</tr>
+</tbody>
+</table>
+<p>The screen captures of the graphical representation of the segmentation from Google Earth are not included here, as was done for the Oregon US-20 case study. Instead, the reader is referred to the KML file, at (<a href="https://github.com/NCHRP-08-135/Resources" class="uri">https://github.com/NCHRP-08-135/Resources</a>).</p>
+<p><strong>Discussion</strong></p>
+<p>Although there are not many changes to the number of lanes along this route, there are a relatively high number of segments because of changes in posted speed limit, terrain, signalized intersections, locations where significant changes in traffic volume occur (such as interchanges), and several changes in passing restrictions along the two-lane highway portion of the route.</p>
+<p>Segments 17 and 18 are relatively short, 847 ft and 1182 ft, respectively. This is to accommodate changes in demand volumes. The intersections separating these segments provide separate left-turn bays.</p>
+<p>The intersection at Kirby Dr (36°36’13.10”N, 86°32’13.06”W) is within a stretch of two-lane highway. Starting 645 ft upstream of the stop bar, the centerline striping changes from dashed yellow to solid yellow. Likewise, the solid yellow striping continues for 755 ft downstream of the intersection area before changing to dashed yellow. These three distances, 645 ft (upstream approach), 115 ft (intersection area), 755 ft (downstream approach) are combined together to represent the signalized intersection segment. If the directly adjacent upstream and downstream distances corresponding to the dashed yellow striping were coded as separate passing constrained segments, these segments would would be assigned a negative adjusted length because the calculated upstream and downstream influence area distances would exceed these passing constrained distances.</p>
+<p>A posted speed limit (PSL) reduction (45 to 40 mi/h) occurs in Segment 38. Normally, a new segment would be started at the point of a PSL change; however, the passing zone from this point only continues for approximately 310 ft before changing to a passing constrained zone. Thus, this additional 310 ft of passing zone is included as part of Segment 38. From a practical perspective, drivers would treat this continuation of the passing zone beyond the PSL as part of the same stretch of passing zone upstream of the PSL change.</p>
+<p>The arterial segment (29) ends at Morningside Dr, where two directional travel lanes transition to a single lane. At this point, a two-lane highway passing constrained segment begins. However, the arterial posted speed limit of 30 mi/h continues for approximately 590 ft after the end of the arterial segment before changing to 45 mi/h. Because this is a relatively short distance, this short stretch of passing constrained roadway at 30 mi/h is part of Segment 30, for which the remaining approximately 3040 ft of passing constrained roadway is signed for a speed limit of 45 mi/h.</p>
+<div id="segmentation-through-town-of-portland-tn" class="section level4 unnumbered hasAnchor">
+<h4>Segmentation through town of Portland, TN<a href="CaseStudyTN109.html#segmentation-through-town-of-portland-tn" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The arterial segment through the town of Portland consists of the following sub-segments:</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>#</strong></th>
+<th align="left"><strong>Cross Street Boundaries</strong></th>
+<th align="center"><strong># Dir Lanes</strong></th>
+<th align="center"><strong>Length (ft)</strong></th>
+<th align="center"><strong>Cross Street Width</strong></th>
+<th align="left"><strong>Posted Speed (mi/h)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="left">SR-52 - Market St</td>
+<td align="center">2</td>
+<td align="center">1065</td>
+<td align="center">75</td>
+<td align="left">30</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="left">Market St - McGlothin St</td>
+<td align="center">2</td>
+<td align="center">600</td>
+<td align="center">105</td>
+<td align="left">30</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="left">McGlothin St - College St</td>
+<td align="center">2</td>
+<td align="center">315</td>
+<td align="center">130</td>
+<td align="left">30</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="left">College St - Morningside Dr</td>
+<td align="center">2</td>
+<td align="center">3055</td>
+<td align="center">60</td>
+<td align="left">30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="traffic-data-1" class="section level3 unnumbered hasAnchor">
+<h3>Traffic Data<a href="CaseStudyTN109.html#traffic-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Traffic data were obtained from the Tennessee Department of Transportation (TDOT) <a href="https://tdot.public.ms2soft.com/tcds">Transportation Data Management System</a>.</p>
+<p>There are nine sensor locations along highway limits for the LOS analysis, as summarized in Table <a href="CaseStudyTN109.html#tab:TN109Sensors">17.3</a>. Note that detectors are listed in order of northern most to southern most location along the route.</p>
+<table>
+<caption><span id="tab:TN109Sensors">Table 17.3: </span> SR-109 Sensor Locations</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Location ID</strong></th>
+<th align="center"><strong>Location Description</strong></th>
+<th align="center"><strong>Approx. Location</strong></th>
+<th align="center"><strong>Sensor Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">83000133</td>
+<td align="center">SR109 North Portland</td>
+<td align="center">36.60000902671167, -86.53358761270735</td>
+<td align="center">Axle/Tube</td>
+</tr>
+<tr class="even">
+<td align="center">83000189</td>
+<td align="center">SR109 Portland</td>
+<td align="center">36.579966780040124, -86.51573967563627</td>
+<td align="center">Axle/Tube</td>
+</tr>
+<tr class="odd">
+<td align="center">83000018</td>
+<td align="center">SR109 Portland</td>
+<td align="center">36.564557580338835, -86.51077679030027</td>
+<td align="center">ATR Class</td>
+</tr>
+<tr class="even">
+<td align="center">83000268</td>
+<td align="center">SR109 SR-109</td>
+<td align="center">36.52242136573732, -86.5098920651874</td>
+<td align="center">Axle/Tube</td>
+</tr>
+<tr class="odd">
+<td align="center">83000267</td>
+<td align="center">SR109 SR-109</td>
+<td align="center">36.47830136284571, -86.4773957598811</td>
+<td align="center">Axle/Tube</td>
+</tr>
+<tr class="even">
+<td align="center">83000197</td>
+<td align="center">SR109 Gallatin</td>
+<td align="center">36.412250456982775, -86.47193224334912</td>
+<td align="center">Axle/Tube</td>
+</tr>
+<tr class="odd">
+<td align="center">83000196</td>
+<td align="center">SR109 Gallatin</td>
+<td align="center">36.393181597974774, -86.47892312861133</td>
+<td align="center">Axle/Tube</td>
+</tr>
+<tr class="even">
+<td align="center">83000195</td>
+<td align="center">SR109 Gallatin</td>
+<td align="center">36.38150742324095, -86.47010146756689</td>
+<td align="center">Axle/Tube</td>
+</tr>
+<tr class="odd">
+<td align="center">83000194</td>
+<td align="center">SR109 Gallatin</td>
+<td align="center">36.36778239584337, -86.45912407493229</td>
+<td align="center">Axle/Tube</td>
+</tr>
+</tbody>
+</table>
+<p>Table <a href="CaseStudyTN109.html#tab:TN109TrafficAADT">17.4</a> summarizes the most recently available values for annual average daily traffic (AADT), percentage of traffic volume occurring in the peak hour of the day (<em>K</em>), and percentage of traffic volume traveling in the peak direction of the peak hour (<em>D</em>). The values shown in this table are for the most recent years for which actual field measurements were taken, not values estimated from growth projections.</p>
+<table>
+<caption><span id="tab:TN109TrafficAADT">Table 17.4: </span> SR-109 Sensor Data – <em>K</em>, <em>D</em>, AADT</caption>
+<thead>
+<tr class="header">
+<th align="center"><strong>Location ID:</strong></th>
+<th align="center"><strong>Year</strong></th>
+<th align="center"><strong>K (%)</strong></th>
+<th align="center"><strong>D (%)</strong></th>
+<th align="center"><strong>AADT (veh/day)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">83000133</td>
+<td align="center">2022</td>
+<td align="center">8</td>
+<td align="center">65</td>
+<td align="center">15,415</td>
+</tr>
+<tr class="even">
+<td align="center">83000189</td>
+<td align="center">2022</td>
+<td align="center">8</td>
+<td align="center">54</td>
+<td align="center">19,423</td>
+</tr>
+<tr class="odd">
+<td align="center">83000018</td>
+<td align="center">2022</td>
+<td align="center">9</td>
+<td align="center">50</td>
+<td align="center">15,956</td>
+</tr>
+<tr class="even">
+<td align="center">83000268</td>
+<td align="center">2020</td>
+<td align="center">10</td>
+<td align="center">57</td>
+<td align="center">10,990</td>
+</tr>
+<tr class="odd">
+<td align="center">83000267</td>
+<td align="center">2021</td>
+<td align="center">9</td>
+<td align="center">57</td>
+<td align="center">14,719</td>
+</tr>
+<tr class="even">
+<td align="center">83000197</td>
+<td align="center">2022</td>
+<td align="center">9</td>
+<td align="center">58</td>
+<td align="center">19,048</td>
+</tr>
+<tr class="odd">
+<td align="center">83000196</td>
+<td align="center">2022</td>
+<td align="center">9</td>
+<td align="center">57</td>
+<td align="center">25,048</td>
+</tr>
+<tr class="even">
+<td align="center">83000195</td>
+<td align="center">2022</td>
+<td align="center">9</td>
+<td align="center">58</td>
+<td align="center">34,979</td>
+</tr>
+<tr class="odd">
+<td align="center">83000194</td>
+<td align="center">2021</td>
+<td align="center">8</td>
+<td align="center">63</td>
+<td align="center">25,734</td>
+</tr>
+</tbody>
+</table>
+<p>The PM peak hour volumes generally occurred between the hours of 4-6 PM, with the highest hour typically being 5-6 PM. Again, the values shown are generally based on the most recent field measurements. If multiple measurements were taken during a given year, common dates across detectors were selected if possible. For example, if one sensor had counts taken during May and September of a given year and another sensor had counts taken during just May of the same year, the counts for May would be selected for both sensors. Furthermore, if multiple days of data were available in the same month of the same year, the same day of the week would be chosen across the sensors if possible.</p>
+<p>The PHF values range from approximately 0.87-0.96. Because specific traffic peaking times will likely vary over a route of this length, as well as to not over complicate the process of ‘conserving’ vehicles throughout the full length of the route when setting traffic demand values, a single PHF value is used. For this analysis, an approximate mid-range value of 0.91 is used. Consequently, this value effectively increases the demand flow rate for analysis purposes by 10%. The original PM peak hour volumes and corresponding values as adjusted by the PHF (rounded to the nearest 50 veh) are shown in Table <a href="CaseStudyTN109.html#tab:TN109TrafficHourlyVolumes">17.5</a>. The PHF values are then set to a value of 1.0 in the input data settings.</p>
+<table>
+<caption><span id="tab:TN109TrafficHourlyVolumes">Table 17.5: </span> SR-109 Sensor Data – Northbound PM Peak Hourly Volumes</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Location ID:</strong></th>
+<th align="center"><strong>Count Date</strong></th>
+<th align="center"><strong>Hourly Volume (veh/h)</strong></th>
+<th align="center"><strong>Adjusted Hourly Volume (veh/h)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">83000133</td>
+<td align="center">Mon 5/23/2022</td>
+<td align="center">652*</td>
+<td align="center">700</td>
+</tr>
+<tr class="even">
+<td align="center">83000189</td>
+<td align="center">Wed 6/8/2022</td>
+<td align="center">826</td>
+<td align="center">950</td>
+</tr>
+<tr class="odd">
+<td align="center">83000018</td>
+<td align="center">Thu 6/9/2022</td>
+<td align="center">779</td>
+<td align="center">850</td>
+</tr>
+<tr class="even">
+<td align="center">83000268</td>
+<td align="center">Thu 5/14/2020</td>
+<td align="center">677</td>
+<td align="center">750</td>
+</tr>
+<tr class="odd">
+<td align="center">83000267</td>
+<td align="center">Thu 5/6/2021</td>
+<td align="center">906</td>
+<td align="center">1,000</td>
+</tr>
+<tr class="even">
+<td align="center">83000197</td>
+<td align="center">Wed 5/4/2022</td>
+<td align="center">1,142</td>
+<td align="center">1,250</td>
+</tr>
+<tr class="odd">
+<td align="center">83000196</td>
+<td align="center">Wed 5/4/2022</td>
+<td align="center">1,429</td>
+<td align="center">1,550</td>
+</tr>
+<tr class="even">
+<td align="center">83000195</td>
+<td align="center">Wed 5/4/2022</td>
+<td align="center">1,887</td>
+<td align="center">2,050</td>
+</tr>
+<tr class="odd">
+<td align="center">83000194</td>
+<td align="center">Wed 5/19/2021</td>
+<td align="center">909</td>
+<td align="center">1,000</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Data not available, so value imputed based on AADT relationship to adjacent detector</li>
+</ul>
+<p>With a total of nine sensor locations spatially distributed across 22 miles of highway, determining locations to affect volume changes along the route is a very approximate process. To inform this process, satellite photography of the route and its surrounding area was reviewed. More major intersecting roadways–indicated by number of lanes, turning movement accommodation from the major roadway, and/or density of land use accessed by intersecting road within immediate area–were typically chosen as the locations to implement the volume changes.</p>
+<p>For two-lane highway segments, the opposing direction volume is needed. Based on Detector 83000133 (in Segment 34), the one sensor within the two-lane highway portion of the route, the <em>D</em> factor value of 65% was used to set the opposing direction volume for the PM peak hour; that is, opposing direction volume = peak direction volume / 0.65 - peak direction volume (rounded to the nearest 50 veh).</p>
+<p>The assignment of volumes (rounded to nearest 50 vehicles) to segments, and locations where volume changes are implemented are as follows:</p>
+<ul>
+<li>Sensor 83000194 is located within Segment 2. Its volume of 1000 veh/h is applied to Segments 1-5.</li>
+<li>Sensor 83000195 is located within Segment 7. There is a net volume increase of 1050 veh/h at this sensor. This net volume change of +1000 is implemented by assigning an exit volume of -250 at the Nashville Pike interchange (start of Segment 6) and an entrance volume of +1300 at the Nashville Pike interchange (start of Segment 7).
+<ul>
+<li>Volume in Segment 6 is 750 veh/h.</li>
+<li>Volume in Segment 7 is 2050 veh/h.</li>
+</ul></li>
+<li>Sensor 83000196 is located within Segment 9. There is a net volume decrease of 500 veh/h at this sensor. This net volume change of -500 is implemented by assigning an exit volume of -900 at the Long Hollow Pike interchange (start of Segment 8) and an entrance volume of +400 at the Long Hollow Pike interchange (start of Segment 9).
+<ul>
+<li>Volume in Segment 8 is 1150 veh/h.</li>
+<li>Volume in Segment 9 is 1550 veh/h.</li>
+</ul></li>
+<li>Sensor 83000197 is located within Segment 13. There is a net volume decrease of 300 veh/h at this sensor. This net volume change of -300 is implemented by assuming a net volume change of -100 veh/h at the intersection with Red River Rd (Segment 10), assigning an exit volume of -300 at the Albert Gallatin Ave interchange (start of Segment 12) and an entrance volume of +100 at the Albert Gallatin Ave interchange (start of Segment 13).
+<ul>
+<li>Volume in Segment 10 is 1450 veh/h.</li>
+<li>Volume in Segment 11 is 1450 veh/h.</li>
+<li>Volume in Segment 12 is 1150 veh/h.</li>
+<li>Volume in Segment 13 is 1250 veh/h.</li>
+</ul></li>
+<li>Sensor 83000267 is located within Segment 16. There is a net volume decrease of 250 veh/h at this sensor. This net volume change of -250 is implemented by assuming a net volume change of -150 veh/h at the intersection with Old Hwy 109 N/Scotty Parker Rd (start of Segment 15) and a net volume change of -100 veh/h at the intersection with S Tunnel Rd (start of Segment 16).
+<ul>
+<li>Volume in Segment 14 is 1250 veh/h.</li>
+<li>Volume in Segment 15 is 1100 veh/h.</li>
+<li>Volume in Segment 16 is 1000 veh/h.</li>
+</ul></li>
+<li>Sensor 83000268 is located within Segment 21. There is a net volume decrease of 250 veh/h at this sensor. This net volume change of -250 is implemented by assuming a net volume change of -150 veh/h at the intersection with Roberts Rd (start of Segment 20) and a net volume change of -100 veh/h at the intersection with Boiling Springs Rd (start of Segment 21).
+<ul>
+<li>Volume in Segment 17 is 1000 veh/h.</li>
+<li>Volume in Segment 18 is 1000 veh/h.</li>
+<li>Volume in Segment 19 is 850 veh/h.</li>
+<li>Volume in Segment 20 is 850 veh/h.</li>
+<li>Volume in Segment 21 is 750 veh/h.</li>
+</ul></li>
+<li>Sensor 83000018 is located within Segment 27. There is a net volume increase of 100 veh/h at this sensor. This net volume change of +100 is implemented by assuming a net volume change of +100 veh/h at the intersection with SR-76 intersection (Segment 24).
+<ul>
+<li>Volume in Segment 22 is 750 veh/h.</li>
+<li>Volume in Segment 23 is 750 veh/h.</li>
+<li>Volume in Segment 24 is 750 veh/h.</li>
+<li>Volume in Segment 25 is 850 veh/h.</li>
+<li>Volume in Segment 26 is 850 veh/h.</li>
+<li>Volume in Segment 27 is 850 veh/h.</li>
+</ul></li>
+<li>Sensor 83000189 is located within Segment 29. There is a net volume increase of 100 veh/h at this sensor. This net volume change of +100 is implemented by assuming a net volume change of +100 veh/h at the intersection with SR-52 intersection (Segment 28).
+<ul>
+<li>Volume in Segment 28 is 850 veh/h.</li>
+<li>Volume in Segment 29 is 950 veh/h.</li>
+</ul></li>
+<li>Sensor 83000133 is located within Segment 31. There is a net volume decrease of 250 veh/h at this sensor. This net volume change of -250 is implemented by assuming a net volume change of -250 veh/h at the intersection with Freedom Dr (within arterial segment, Segment 29)
+<ul>
+<li>Volume in Segment 30 is 700 veh/h. Opposing direction volume is 400 veh/h.</li>
+<li>Volume in Segment 31 is 700 veh/h. Opposing direction volume is 400 veh/h.</li>
+</ul></li>
+<li>Volume in Segments 32-41 is 700 veh/h. For segments 33-38, opposing direction volume is 400 veh/h.</li>
+</ul>
+<p>Vehicle classification data are available from five sensor locations (83000133, 83000018, 83000267, 83000196, 83000195). The truck percentages for the hour of 5:00-6:00 PM for the northbound direction, rounded to the nearest integer value, and the segments to which they are applied, are given in Table <a href="CaseStudyTN109.html#tab:TN109TruckPercentages">17.6</a>.</p>
+<table style="width:100%;">
+<caption><span id="tab:TN109TruckPercentages">Table 17.6: </span> SR-109 Sensor Data – PM Peak Hour Truck Percentages</caption>
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Location ID:</strong></th>
+<th align="center"><strong>Date</strong></th>
+<th align="center"><strong>Small Truck %</strong></th>
+<th align="center"><strong>Large Truck %</strong></th>
+<th align="center"><strong>Total Truck %</strong></th>
+<th align="center"><strong>Applicable Segment(s)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">83000195</td>
+<td align="center">4/22/2020</td>
+<td align="center">2</td>
+<td align="center">6</td>
+<td align="center">8</td>
+<td align="center">1-8</td>
+</tr>
+<tr class="even">
+<td align="center">83000196</td>
+<td align="center">4/16/2020</td>
+<td align="center">1</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">9-14</td>
+</tr>
+<tr class="odd">
+<td align="center">83000267</td>
+<td align="center">6/9/2022</td>
+<td align="center">1</td>
+<td align="center">5</td>
+<td align="center">6</td>
+<td align="center">15-23</td>
+</tr>
+<tr class="even">
+<td align="center">83000018</td>
+<td align="center">6/9/2022</td>
+<td align="center">1</td>
+<td align="center">13</td>
+<td align="center">14</td>
+<td align="center">24-28</td>
+</tr>
+<tr class="odd">
+<td align="center">83000133</td>
+<td align="center">5/20/2019</td>
+<td align="center">2</td>
+<td align="center">7</td>
+<td align="center">9</td>
+<td align="center">29-41</td>
+</tr>
+</tbody>
+</table>
+<p>Note that for all but the multilane highway segment type, only the total truck percentage is used in the corresponding segment analysis methodology calculations. For multilane highways, the separate percentages for small and large trucks are used when performing an analysis for a segment with a specific grade (i.e., explicit consideration of grade percentage and length of grade). For a segment that using the ‘general terrain’ classification (i.e., level, rolling), just the total truck percentage is utilized.</p>
+<div id="Note" class="ThreshValue message" style="color: orange;">
+<p>The Albert Gallatin Ave interchange may not have been open at the time of these volume counts. Satellite photo shows construction vehicles on connecting road. This interchange probably changed turning volumes at Red River Rd (to the south) and Old Hwy 109 N/Scotty Parker Rd (to the north)</p>
+</div>
+</div>
+<div id="additional-data-inputs-for-intersections-1" class="section level3 unnumbered hasAnchor">
+<h3>Additional Data Inputs for Intersections<a href="CaseStudyTN109.html#additional-data-inputs-for-intersections-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Signalized Intersections</strong></p>
+<p>The following is assumed about turning movement volumes from SR-109 onto cross streets:</p>
+<ul>
+<li>10% total (5% left, 5% right) at intersections with minor roads</li>
+<li>20% total (10% left, 10% right) at intersections with major roads</li>
+<li>If the intersection is not at a location where a net volume difference is implemented (according to information above), then it is assumed that a volume equal to the volume turning from the major roadway enters the major roadway from the cross street.</li>
+</ul>
+<p>The route includes isolated signalized intersections at the following cross streets:</p>
+<ul>
+<li>Hancock St</li>
+<li>Red River Rd</li>
+<li>SR-76/Fountainhead Rd</li>
+<li>Longview Rd</li>
+<li>SR-52</li>
+<li>Kirby Dr (essentially 3-leg)</li>
+<li>Highway 31W</li>
+</ul>
+<p>All of these intersections include two through lanes and a left turn bay for the major street approaches. The major street approaches at the intersections with Hancock St, SR-52, and Highway 31W also include a right turn bay.</p>
+<p>The intersection with Kirby Dr. is, for practical purposes, a 3-leg intersection. The eastbound leg just serves as an access to a very small business; thus, the traffic volume into and out of this leg of the intersection is negligible for analysis purposes.</p>
+<p>The route includes several intersections that are included within the arterial segment (29), which runs through the town of Portland. These intersections are located at the following cross streets:</p>
+<ul>
+<li>Market St</li>
+<li>McGlothin St</li>
+<li>College St (3-leg)</li>
+</ul>
+<p>All of these intersections include two through lanes for the major street approaches. However, none of them include left or right turn bays.</p>
+<p>Specific signal timing data were not available, so the following assumptions were made.</p>
+<p>Isolated Intersections:</p>
+<ul>
+<li>Cycle length: 90 seconds</li>
+<li>Effective green/cycle length ratio: 0.44</li>
+<li>Arrival type: 3 (random arrivals)</li>
+</ul>
+<p>Arterial intersections (no turn bays)</p>
+<ul>
+<li>Cycle length: 60 seconds</li>
+<li>Effective green/cycle length ratio: 0.48 (higher than for isolated intersections because of lack of exclusive left turn phasing)</li>
+<li>Arrival type: 4 (favorable progression)</li>
+</ul>
+<p><strong>Two-Way Stop Controlled (TWSC) Intersections</strong></p>
+<p>These locations are typically used as segment break points to allow for a change in traffic volume. However, because it assumed that the major through movement does not incur delay due to any turning vehicles, no specific intersection analysis is required at these locations. For locations where intersection geometry upgrades are necessary because of delay due to turning movements, the reader is referred to some recommended studies listed in <a href="AppendixA.html#AppendixA">Appendix A</a>.</p>
+<p><strong>All-Way Stop Controlled (AWSC) Intersections</strong></p>
+<p>No AWSC intersections are present along this route.</p>
+<p><strong>Roundabout Intersections</strong></p>
+<p>No roundabout intersections are present along this route.</p>
+</div>
+<div id="results-1" class="section level3 unnumbered hasAnchor">
+<h3>Results<a href="CaseStudyTN109.html#results-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For multilane highway segments, the base free-flow speed (BFFS) was set per the HCM guidance; that is BFFS = Posted Speed Limit (PSL) + 5, for posted speeds &lt;= 45 mi/h and BFFS = PSL + 7 for posted speeds &gt; 45 mi/h.</p>
+<p>The segment LOS results are shown in Tables <a href="CaseStudyTN109.html#tab:TN109LOSresults1">17.7</a> and <a href="CaseStudyTN109.html#tab:TN109LOSresults2">17.8</a>.</p>
+<div style="border: 0px;overflow-x: scroll; width:100%; ">
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:TN109LOSresults1">Table 17.7: </span>SR-109 Segment LOS Analysis Results, Part 1
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Seg ID
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Hwy Seg Type
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Two-Lane Seg Type
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+# Dir Lanes
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Length (mi)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Eff. Len. Upstream (mi)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Eff. Len. Downstream (mi)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Adj. Length (mi)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Posted Speed (mi/h)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Dir Volume (veh/h)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Opp Volume (veh/h)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+PHF
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Dir Truck%
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Analysis Flow Rate (veh/h/ln)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Analysis Flow Rate (pc/h/ln)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Vertical Align Class
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+FFS (mi/h)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Free-Flow Trav Time (s)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Avg Speed (mi/h)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Avg Travel Time (s)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.3509000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.3509
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+540
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+58.2000
+</td>
+<td style="text-align:right;">
+21.71
+</td>
+<td style="text-align:right;">
+58.20
+</td>
+<td style="text-align:right;">
+21.71
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.8417000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.8417
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+540
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+52.70
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+52.70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.2873000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.2155
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+580
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+13.49
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+13.49
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.1515152
+</td>
+<td style="text-align:left;">
+0.1475
+</td>
+<td style="text-align:left;">
+0.2724
+</td>
+<td style="text-align:right;">
+0.4200
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+900
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+60.5000
+</td>
+<td style="text-align:right;">
+24.99
+</td>
+<td style="text-align:right;">
+32.84
+</td>
+<td style="text-align:right;">
+46.04
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.4621000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.2654
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+580
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+16.62
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+16.62
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.1699000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.1699
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+750
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+750
+</td>
+<td style="text-align:left;">
+435
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+10.64
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+10.64
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.2708000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.2708
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+2050
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+2050
+</td>
+<td style="text-align:left;">
+1189
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+16.95
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+16.95
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.4159000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.4159
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1150
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+1150
+</td>
+<td style="text-align:left;">
+667
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+26.04
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+26.04
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.6256000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.5065
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1550
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1550
+</td>
+<td style="text-align:left;">
+806
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+31.71
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+31.71
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.0568182
+</td>
+<td style="text-align:left;">
+0.1475
+</td>
+<td style="text-align:left;">
+0.267
+</td>
+<td style="text-align:right;">
+0.4145
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1450
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1378
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+60.5000
+</td>
+<td style="text-align:right;">
+24.66
+</td>
+<td style="text-align:right;">
+27.31
+</td>
+<td style="text-align:right;">
+54.64
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.6381000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.3996
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1450
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1450
+</td>
+<td style="text-align:left;">
+754
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+25.02
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+25.02
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.3021000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.3021
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1150
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1150
+</td>
+<td style="text-align:left;">
+621
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+18.91
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+18.91
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.0184000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1.0184
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1250
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1250
+</td>
+<td style="text-align:left;">
+675
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+63.76
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+63.76
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.2538000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.2538
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1250
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+1250
+</td>
+<td style="text-align:left;">
+675
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+15.89
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+15.89
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3.1742000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+3.1742
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1100
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1100
+</td>
+<td style="text-align:left;">
+616
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+198.73
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+198.73
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.5483000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1.5483
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+560
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+96.94
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+96.94
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.1604000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.1604
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+560
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+10.04
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+10.04
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.2239000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.2239
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:left;">
+560
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+14.02
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+14.02
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.4034000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.4034
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+850
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+850
+</td>
+<td style="text-align:left;">
+450.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+25.26
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+25.26
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.5398000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1.5398
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+850
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+850
+</td>
+<td style="text-align:left;">
+450.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+96.40
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+96.40
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.6638000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.6638
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+750
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+750
+</td>
+<td style="text-align:left;">
+420
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+41.56
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+41.56
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.0502000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1.0502
+</td>
+<td style="text-align:right;">
+55
+</td>
+<td style="text-align:right;">
+750
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+750
+</td>
+<td style="text-align:left;">
+420
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+57.5000
+</td>
+<td style="text-align:right;">
+65.75
+</td>
+<td style="text-align:right;">
+57.50
+</td>
+<td style="text-align:right;">
+65.75
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.5455000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.4663
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+750
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+750
+</td>
+<td style="text-align:left;">
+420
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+49.5000
+</td>
+<td style="text-align:right;">
+33.92
+</td>
+<td style="text-align:right;">
+49.50
+</td>
+<td style="text-align:right;">
+33.92
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.0568182
+</td>
+<td style="text-align:left;">
+0.1076
+</td>
+<td style="text-align:left;">
+0.1894
+</td>
+<td style="text-align:right;">
+0.2969
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+750
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+712
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+49.5000
+</td>
+<td style="text-align:right;">
+21.60
+</td>
+<td style="text-align:right;">
+26.02
+</td>
+<td style="text-align:right;">
+41.07
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.7652000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.5251
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+850
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+850
+</td>
+<td style="text-align:left;">
+484.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+49.5000
+</td>
+<td style="text-align:right;">
+38.19
+</td>
+<td style="text-align:right;">
+49.50
+</td>
+<td style="text-align:right;">
+38.19
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.2651515
+</td>
+<td style="text-align:left;">
+0.1076
+</td>
+<td style="text-align:left;">
+0.1894
+</td>
+<td style="text-align:right;">
+0.2969
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+850
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+807
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+49.5000
+</td>
+<td style="text-align:right;">
+21.60
+</td>
+<td style="text-align:right;">
+25.33
+</td>
+<td style="text-align:right;">
+42.21
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.0824000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1.0782
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+850
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+850
+</td>
+<td style="text-align:left;">
+484.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+49.5000
+</td>
+<td style="text-align:right;">
+78.42
+</td>
+<td style="text-align:right;">
+49.50
+</td>
+<td style="text-align:right;">
+78.42
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.0426136
+</td>
+<td style="text-align:left;">
+0.0942
+</td>
+<td style="text-align:left;">
+0.0489
+</td>
+<td style="text-align:right;">
+0.1431
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+850
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+807
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+49.5000
+</td>
+<td style="text-align:right;">
+10.40
+</td>
+<td style="text-align:right;">
+16.60
+</td>
+<td style="text-align:right;">
+31.01
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:left;">
+Arterial
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1.0236742
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:right;">
+0.9748
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+800
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+950
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+37.3300
+</td>
+<td style="text-align:right;">
+98.72
+</td>
+<td style="text-align:right;">
+25.21
+</td>
+<td style="text-align:right;">
+146.16
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.6881000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.6881
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+400
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+51.0003
+</td>
+<td style="text-align:right;">
+48.57
+</td>
+<td style="text-align:right;">
+48.33
+</td>
+<td style="text-align:right;">
+51.26
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.4337000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.3980
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+400
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+51.0003
+</td>
+<td style="text-align:right;">
+28.10
+</td>
+<td style="text-align:right;">
+48.60
+</td>
+<td style="text-align:right;">
+29.48
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.2869318
+</td>
+<td style="text-align:left;">
+0.1578
+</td>
+<td style="text-align:left;">
+0.2016
+</td>
+<td style="text-align:right;">
+0.3594
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+49.5000
+</td>
+<td style="text-align:right;">
+26.14
+</td>
+<td style="text-align:right;">
+17.66
+</td>
+<td style="text-align:right;">
+73.26
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.3152000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.2784
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+400
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+51.0003
+</td>
+<td style="text-align:right;">
+19.65
+</td>
+<td style="text-align:right;">
+48.61
+</td>
+<td style="text-align:right;">
+20.62
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.2216000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.2216
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+400
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+51.0003
+</td>
+<td style="text-align:right;">
+15.64
+</td>
+<td style="text-align:right;">
+48.36
+</td>
+<td style="text-align:right;">
+16.50
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.2394000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.2394
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+400
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+51.0003
+</td>
+<td style="text-align:right;">
+16.90
+</td>
+<td style="text-align:right;">
+48.61
+</td>
+<td style="text-align:right;">
+17.73
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.1837000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.1837
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+400
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+51.0003
+</td>
+<td style="text-align:right;">
+12.97
+</td>
+<td style="text-align:right;">
+48.36
+</td>
+<td style="text-align:right;">
+13.68
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.2835000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.2835
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+400
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+51.0003
+</td>
+<td style="text-align:right;">
+20.01
+</td>
+<td style="text-align:right;">
+48.61
+</td>
+<td style="text-align:right;">
+21.00
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.3011000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.3011
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+400
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+45.3003
+</td>
+<td style="text-align:right;">
+23.93
+</td>
+<td style="text-align:right;">
+42.90
+</td>
+<td style="text-align:right;">
+25.27
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.6538000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.6059
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+381.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+44.5000
+</td>
+<td style="text-align:right;">
+49.02
+</td>
+<td style="text-align:right;">
+44.50
+</td>
+<td style="text-align:right;">
+49.02
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.0804924
+</td>
+<td style="text-align:left;">
+0.0858
+</td>
+<td style="text-align:left;">
+0.1255
+</td>
+<td style="text-align:right;">
+0.2113
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+665
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+44.0000
+</td>
+<td style="text-align:right;">
+17.28
+</td>
+<td style="text-align:right;">
+21.22
+</td>
+<td style="text-align:right;">
+35.84
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.3083000
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.2255
+</td>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+700
+</td>
+<td style="text-align:left;">
+381.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+44.5000
+</td>
+<td style="text-align:right;">
+18.24
+</td>
+<td style="text-align:right;">
+44.50
+</td>
+<td style="text-align:right;">
+18.24
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="border: 0px;overflow-x: scroll; width:100%; ">
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:TN109LOSresults2">Table 17.8: </span>SR-109 Segment LOS Analysis Results, Part 2
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Seg ID
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+% Followers
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Density (pc/mi/ln)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Density (veh/mi/ln)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Follower Density (veh/mi/ln)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Adj. Follower Density (veh/mi/ln)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Avg. Thresh. Delay (s/veh)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Avg. Thresh. Delay (%)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Avg. FFS Delay (s/veh)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Avg. FFS Delay (%)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+LOS
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+LOS Value
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Demand/Capacity
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Available Capacity (veh/h)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Momentum (vol x speed)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+VMT
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+VHT
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+VHD
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+9.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.84
+</td>
+<td style="text-align:right;">
+0.250
+</td>
+<td style="text-align:right;">
+3007
+</td>
+<td style="text-align:right;">
+58200.0
+</td>
+<td style="text-align:right;">
+350.9
+</td>
+<td style="text-align:right;">
+6.03
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+9.4
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.85
+</td>
+<td style="text-align:right;">
+0.251
+</td>
+<td style="text-align:right;">
+2981
+</td>
+<td style="text-align:right;">
+57500.0
+</td>
+<td style="text-align:right;">
+841.7
+</td>
+<td style="text-align:right;">
+14.64
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+10.1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.92
+</td>
+<td style="text-align:right;">
+0.270
+</td>
+<td style="text-align:right;">
+2707
+</td>
+<td style="text-align:right;">
+57500.0
+</td>
+<td style="text-align:right;">
+215.5
+</td>
+<td style="text-align:right;">
+3.75
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+18.6
+</td>
+<td style="text-align:right;">
+67.5
+</td>
+<td style="text-align:right;">
+21.1
+</td>
+<td style="text-align:right;">
+84.2
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:right;">
+2.07
+</td>
+<td style="text-align:right;">
+0.600
+</td>
+<td style="text-align:right;">
+589
+</td>
+<td style="text-align:right;">
+29554.1
+</td>
+<td style="text-align:right;">
+378.0
+</td>
+<td style="text-align:right;">
+11.51
+</td>
+<td style="text-align:right;">
+5.263
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+10.1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.92
+</td>
+<td style="text-align:right;">
+0.270
+</td>
+<td style="text-align:right;">
+2707
+</td>
+<td style="text-align:right;">
+57500.0
+</td>
+<td style="text-align:right;">
+265.4
+</td>
+<td style="text-align:right;">
+4.62
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+7.6
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.69
+</td>
+<td style="text-align:right;">
+0.202
+</td>
+<td style="text-align:right;">
+2957
+</td>
+<td style="text-align:right;">
+43125.0
+</td>
+<td style="text-align:right;">
+127.4
+</td>
+<td style="text-align:right;">
+2.22
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+20.7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:right;">
+2.33
+</td>
+<td style="text-align:right;">
+0.553
+</td>
+<td style="text-align:right;">
+1657
+</td>
+<td style="text-align:right;">
+117875.0
+</td>
+<td style="text-align:right;">
+555.1
+</td>
+<td style="text-align:right;">
+9.65
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+11.6
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+1.09
+</td>
+<td style="text-align:right;">
+0.310
+</td>
+<td style="text-align:right;">
+2557
+</td>
+<td style="text-align:right;">
+66125.0
+</td>
+<td style="text-align:right;">
+478.3
+</td>
+<td style="text-align:right;">
+8.32
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+1.43
+</td>
+<td style="text-align:right;">
+0.375
+</td>
+<td style="text-align:right;">
+2585
+</td>
+<td style="text-align:right;">
+89125.0
+</td>
+<td style="text-align:right;">
+785.0
+</td>
+<td style="text-align:right;">
+13.65
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+27.5
+</td>
+<td style="text-align:right;">
+101.4
+</td>
+<td style="text-align:right;">
+30.0
+</td>
+<td style="text-align:right;">
+121.5
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:right;">
+2.66
+</td>
+<td style="text-align:right;">
+0.870
+</td>
+<td style="text-align:right;">
+199
+</td>
+<td style="text-align:right;">
+37635.2
+</td>
+<td style="text-align:right;">
+571.2
+</td>
+<td style="text-align:right;">
+20.91
+</td>
+<td style="text-align:right;">
+11.472
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+13.1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+1.30
+</td>
+<td style="text-align:right;">
+0.351
+</td>
+<td style="text-align:right;">
+2685
+</td>
+<td style="text-align:right;">
+83375.0
+</td>
+<td style="text-align:right;">
+579.4
+</td>
+<td style="text-align:right;">
+10.08
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+10.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.98
+</td>
+<td style="text-align:right;">
+0.289
+</td>
+<td style="text-align:right;">
+2831
+</td>
+<td style="text-align:right;">
+66125.0
+</td>
+<td style="text-align:right;">
+347.4
+</td>
+<td style="text-align:right;">
+6.04
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+11.7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+1.11
+</td>
+<td style="text-align:right;">
+0.314
+</td>
+<td style="text-align:right;">
+2731
+</td>
+<td style="text-align:right;">
+71875.0
+</td>
+<td style="text-align:right;">
+1273.0
+</td>
+<td style="text-align:right;">
+22.14
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+11.7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+1.11
+</td>
+<td style="text-align:right;">
+0.314
+</td>
+<td style="text-align:right;">
+2731
+</td>
+<td style="text-align:right;">
+71875.0
+</td>
+<td style="text-align:right;">
+317.3
+</td>
+<td style="text-align:right;">
+5.52
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+10.7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.97
+</td>
+<td style="text-align:right;">
+0.287
+</td>
+<td style="text-align:right;">
+2739
+</td>
+<td style="text-align:right;">
+63250.0
+</td>
+<td style="text-align:right;">
+3491.6
+</td>
+<td style="text-align:right;">
+60.72
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+9.7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.89
+</td>
+<td style="text-align:right;">
+0.260
+</td>
+<td style="text-align:right;">
+2839
+</td>
+<td style="text-align:right;">
+57500.0
+</td>
+<td style="text-align:right;">
+1548.3
+</td>
+<td style="text-align:right;">
+26.93
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+9.7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.89
+</td>
+<td style="text-align:right;">
+0.260
+</td>
+<td style="text-align:right;">
+2839
+</td>
+<td style="text-align:right;">
+57500.0
+</td>
+<td style="text-align:right;">
+160.4
+</td>
+<td style="text-align:right;">
+2.79
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+9.7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.89
+</td>
+<td style="text-align:right;">
+0.260
+</td>
+<td style="text-align:right;">
+2839
+</td>
+<td style="text-align:right;">
+57500.0
+</td>
+<td style="text-align:right;">
+223.9
+</td>
+<td style="text-align:right;">
+3.89
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+7.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.71
+</td>
+<td style="text-align:right;">
+0.210
+</td>
+<td style="text-align:right;">
+3207
+</td>
+<td style="text-align:right;">
+48875.0
+</td>
+<td style="text-align:right;">
+342.9
+</td>
+<td style="text-align:right;">
+5.96
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+7.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.71
+</td>
+<td style="text-align:right;">
+0.210
+</td>
+<td style="text-align:right;">
+3207
+</td>
+<td style="text-align:right;">
+48875.0
+</td>
+<td style="text-align:right;">
+1308.8
+</td>
+<td style="text-align:right;">
+22.76
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+7.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.66
+</td>
+<td style="text-align:right;">
+0.195
+</td>
+<td style="text-align:right;">
+3089
+</td>
+<td style="text-align:right;">
+43125.0
+</td>
+<td style="text-align:right;">
+497.9
+</td>
+<td style="text-align:right;">
+8.66
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+7.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.66
+</td>
+<td style="text-align:right;">
+0.195
+</td>
+<td style="text-align:right;">
+3089
+</td>
+<td style="text-align:right;">
+43125.0
+</td>
+<td style="text-align:right;">
+787.7
+</td>
+<td style="text-align:right;">
+13.70
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+8.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.77
+</td>
+<td style="text-align:right;">
+0.211
+</td>
+<td style="text-align:right;">
+2804
+</td>
+<td style="text-align:right;">
+37125.0
+</td>
+<td style="text-align:right;">
+349.8
+</td>
+<td style="text-align:right;">
+7.07
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+17.3
+</td>
+<td style="text-align:right;">
+72.9
+</td>
+<td style="text-align:right;">
+19.5
+</td>
+<td style="text-align:right;">
+90.2
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+1.95
+</td>
+<td style="text-align:right;">
+0.510
+</td>
+<td style="text-align:right;">
+692
+</td>
+<td style="text-align:right;">
+18529.5
+</td>
+<td style="text-align:right;">
+211.4
+</td>
+<td style="text-align:right;">
+8.12
+</td>
+<td style="text-align:right;">
+3.853
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+9.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.89
+</td>
+<td style="text-align:right;">
+0.243
+</td>
+<td style="text-align:right;">
+2641
+</td>
+<td style="text-align:right;">
+42075.0
+</td>
+<td style="text-align:right;">
+446.3
+</td>
+<td style="text-align:right;">
+9.02
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+18.5
+</td>
+<td style="text-align:right;">
+77.7
+</td>
+<td style="text-align:right;">
+20.6
+</td>
+<td style="text-align:right;">
+95.4
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:right;">
+2.04
+</td>
+<td style="text-align:right;">
+0.570
+</td>
+<td style="text-align:right;">
+597
+</td>
+<td style="text-align:right;">
+20439.0
+</td>
+<td style="text-align:right;">
+239.6
+</td>
+<td style="text-align:right;">
+9.46
+</td>
+<td style="text-align:right;">
+4.620
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+9.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.89
+</td>
+<td style="text-align:right;">
+0.243
+</td>
+<td style="text-align:right;">
+2641
+</td>
+<td style="text-align:right;">
+42075.0
+</td>
+<td style="text-align:right;">
+916.5
+</td>
+<td style="text-align:right;">
+18.51
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+19.6
+</td>
+<td style="text-align:right;">
+171.0
+</td>
+<td style="text-align:right;">
+20.6
+</td>
+<td style="text-align:right;">
+198.1
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:right;">
+2.04
+</td>
+<td style="text-align:right;">
+0.570
+</td>
+<td style="text-align:right;">
+597
+</td>
+<td style="text-align:right;">
+13399.9
+</td>
+<td style="text-align:right;">
+115.4
+</td>
+<td style="text-align:right;">
+6.95
+</td>
+<td style="text-align:right;">
+4.620
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+23.3
+</td>
+<td style="text-align:right;">
+19.0
+</td>
+<td style="text-align:right;">
+47.4
+</td>
+<td style="text-align:right;">
+48.1
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:right;">
+1.46
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+23953.4
+</td>
+<td style="text-align:right;">
+972.5
+</td>
+<td style="text-align:right;">
+38.57
+</td>
+<td style="text-align:right;">
+12.518
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:left;">
+65.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+14.5
+</td>
+<td style="text-align:left;">
+9.5
+</td>
+<td style="text-align:left;">
+9.5
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+2.7
+</td>
+<td style="text-align:right;">
+5.5
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:right;">
+2.90
+</td>
+<td style="text-align:right;">
+0.412
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+33829.4
+</td>
+<td style="text-align:right;">
+481.7
+</td>
+<td style="text-align:right;">
+9.97
+</td>
+<td style="text-align:right;">
+0.522
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:left;">
+64.1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+14.4
+</td>
+<td style="text-align:left;">
+9.2
+</td>
+<td style="text-align:left;">
+9.2
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+1.4
+</td>
+<td style="text-align:right;">
+4.9
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:right;">
+2.85
+</td>
+<td style="text-align:right;">
+0.412
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+34020.9
+</td>
+<td style="text-align:right;">
+278.6
+</td>
+<td style="text-align:right;">
+5.73
+</td>
+<td style="text-align:right;">
+0.270
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+44.5
+</td>
+<td style="text-align:right;">
+154.8
+</td>
+<td style="text-align:right;">
+47.1
+</td>
+<td style="text-align:right;">
+180.3
+</td>
+<td style="text-align:left;">
+D
+</td>
+<td style="text-align:right;">
+3.61
+</td>
+<td style="text-align:right;">
+0.950
+</td>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:right;">
+12362.7
+</td>
+<td style="text-align:right;">
+251.6
+</td>
+<td style="text-align:right;">
+14.24
+</td>
+<td style="text-align:right;">
+9.162
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:left;">
+65
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+14.4
+</td>
+<td style="text-align:left;">
+9.4
+</td>
+<td style="text-align:left;">
+9.4
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+<td style="text-align:right;">
+4.9
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:right;">
+2.87
+</td>
+<td style="text-align:right;">
+0.412
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+34026.7
+</td>
+<td style="text-align:right;">
+194.9
+</td>
+<td style="text-align:right;">
+4.01
+</td>
+<td style="text-align:right;">
+0.188
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:left;">
+67.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+14.5
+</td>
+<td style="text-align:left;">
+9.8
+</td>
+<td style="text-align:left;">
+9.8
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.9
+</td>
+<td style="text-align:right;">
+5.5
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:right;">
+2.97
+</td>
+<td style="text-align:right;">
+0.412
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+33848.6
+</td>
+<td style="text-align:right;">
+155.1
+</td>
+<td style="text-align:right;">
+3.21
+</td>
+<td style="text-align:right;">
+0.166
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:left;">
+65.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+14.4
+</td>
+<td style="text-align:left;">
+9.4
+</td>
+<td style="text-align:left;">
+9.4
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.8
+</td>
+<td style="text-align:right;">
+4.9
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:right;">
+2.88
+</td>
+<td style="text-align:right;">
+0.412
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+34028.2
+</td>
+<td style="text-align:right;">
+167.6
+</td>
+<td style="text-align:right;">
+3.45
+</td>
+<td style="text-align:right;">
+0.161
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:left;">
+67.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+14.5
+</td>
+<td style="text-align:left;">
+9.8
+</td>
+<td style="text-align:left;">
+9.8
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.7
+</td>
+<td style="text-align:right;">
+5.5
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:right;">
+2.97
+</td>
+<td style="text-align:right;">
+0.412
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+33848.6
+</td>
+<td style="text-align:right;">
+128.6
+</td>
+<td style="text-align:right;">
+2.66
+</td>
+<td style="text-align:right;">
+0.138
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:left;">
+64.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+14.4
+</td>
+<td style="text-align:left;">
+9.4
+</td>
+<td style="text-align:left;">
+9.4
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+1.0
+</td>
+<td style="text-align:right;">
+4.9
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:right;">
+2.87
+</td>
+<td style="text-align:right;">
+0.412
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+34026.4
+</td>
+<td style="text-align:right;">
+198.5
+</td>
+<td style="text-align:right;">
+4.08
+</td>
+<td style="text-align:right;">
+0.191
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:left;">
+68.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+16.3
+</td>
+<td style="text-align:left;">
+11.2
+</td>
+<td style="text-align:left;">
+11.2
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+1.3
+</td>
+<td style="text-align:right;">
+5.6
+</td>
+<td style="text-align:left;">
+D
+</td>
+<td style="text-align:right;">
+3.23
+</td>
+<td style="text-align:right;">
+0.412
+</td>
+<td style="text-align:right;">
+1000
+</td>
+<td style="text-align:right;">
+30030.5
+</td>
+<td style="text-align:right;">
+210.8
+</td>
+<td style="text-align:right;">
+4.91
+</td>
+<td style="text-align:right;">
+0.260
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+39
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+8.6
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.78
+</td>
+<td style="text-align:right;">
+0.202
+</td>
+<td style="text-align:right;">
+2768
+</td>
+<td style="text-align:right;">
+31150.0
+</td>
+<td style="text-align:right;">
+424.1
+</td>
+<td style="text-align:right;">
+9.53
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+40
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+16.8
+</td>
+<td style="text-align:right;">
+88.5
+</td>
+<td style="text-align:right;">
+18.6
+</td>
+<td style="text-align:right;">
+107.3
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:right;">
+1.86
+</td>
+<td style="text-align:right;">
+0.450
+</td>
+<td style="text-align:right;">
+820
+</td>
+<td style="text-align:right;">
+14111.7
+</td>
+<td style="text-align:right;">
+140.5
+</td>
+<td style="text-align:right;">
+6.62
+</td>
+<td style="text-align:right;">
+3.427
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+41
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+8.6
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:right;">
+0.0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:right;">
+0.78
+</td>
+<td style="text-align:right;">
+0.202
+</td>
+<td style="text-align:right;">
+2768
+</td>
+<td style="text-align:right;">
+31150.0
+</td>
+<td style="text-align:right;">
+157.8
+</td>
+<td style="text-align:right;">
+3.55
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table <a href="CaseStudyTN109.html#tab:TN109ArterialResults">17.9</a> provides the results for the individual subsegments within the arterial segment, again specific to the major street through movement.</p>
+<table>
+<caption><span id="tab:TN109ArterialResults">Table 17.9: </span> SR-109 Arterial Segment (29) LOS Analysis Results</caption>
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>#</strong></th>
+<th align="left"><strong>Cross Street Boundaries</strong></th>
+<th align="center"><strong>Analysis Flow Rate (veh/h)</strong></th>
+<th align="center"><strong>Adj. Sat. Flow Rate (veh/h)</strong></th>
+<th align="center"><strong>v/c</strong></th>
+<th align="center"><strong>Control Delay (s/veh)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="left">SR-52 - Market St</td>
+<td align="center">950</td>
+<td align="center">2433</td>
+<td align="center">0.814</td>
+<td align="center">11.9</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="left">Market St - McGlothin St</td>
+<td align="center">2433</td>
+<td align="center">0.814</td>
+<td align="center">11.9</td>
+<td align="center">16.5</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="left">McGlothin St - College St</td>
+<td align="center">2433</td>
+<td align="center">0.814</td>
+<td align="center">11.9</td>
+<td align="center">11.8</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="left">College St - Morningside Dr</td>
+<td align="center">NA</td>
+<td align="center">0.814</td>
+<td align="center">–</td>
+<td align="center">38.4</td>
+</tr>
+</tbody>
+</table>
+<p>The facility LOS results are shown in Table <a href="CaseStudyTN109.html#tab:TN109FacilityResults">17.10</a></p>
+<table>
+<caption><span id="tab:TN109FacilityResults">Table 17.10: </span> SR-109 Facility Analysis Results</caption>
+<thead>
+<tr class="header">
+<th align="left"><strong>Performance Measure</strong></th>
+<th align="center"><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Free Flow Travel Time (s)</td>
+<td align="center">1511.1</td>
+</tr>
+<tr class="even">
+<td align="left">Avg. Travel Time (s)</td>
+<td align="center">1745.66</td>
+</tr>
+<tr class="odd">
+<td align="left">Avg. Speed (mi/h)</td>
+<td align="center">46.17</td>
+</tr>
+<tr class="even">
+<td align="left">VMT (veh-mi)</td>
+<td align="center">21488.24</td>
+</tr>
+<tr class="odd">
+<td align="left">VHT (veh-h)</td>
+<td align="center">454.152</td>
+</tr>
+<tr class="even">
+<td align="left">Delay (veh-h)</td>
+<td align="center">56.833</td>
+</tr>
+<tr class="odd">
+<td align="left">Avg. FFS Delay (s/veh)</td>
+<td align="center">234.59</td>
+</tr>
+<tr class="even">
+<td align="left">Avg. FFS Delay (%)</td>
+<td align="center">15.5</td>
+</tr>
+<tr class="odd">
+<td align="left">Avg. Threshold Delay (s/veh)</td>
+<td align="center">186.05</td>
+</tr>
+<tr class="even">
+<td align="left">Avg. Threshold Delay (%)</td>
+<td align="center">12.3</td>
+</tr>
+<tr class="odd">
+<td align="left">LOS Score (Weighted-Travel Time)</td>
+<td align="center">1.478</td>
+</tr>
+<tr class="even">
+<td align="left">LOS Constancy</td>
+<td align="center">0.601</td>
+</tr>
+<tr class="odd">
+<td align="left">LOS Adjustment Factor</td>
+<td align="center">1.08</td>
+</tr>
+<tr class="even">
+<td align="left">LOS Score (Weighted-Travel Time and Adjusted)</td>
+<td align="center">1.596</td>
+</tr>
+<tr class="odd">
+<td align="left">Maximum d/c</td>
+<td align="center">0.95</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Discussion</strong></p>
+<p>The overall facility LOS, based on a score of 1.596, is B. FFS and threshold delays, 15.5% and 12.3%, are relatively low. The several large signalized intersections and slow speed through the city of Portland are the primary contributors to an average speed of just 46 mi/h along this route.</p>
+<p>Density values for the multilane highway segments generally range approximately from 7-12 veh/mi/ln, with LOS values of A and B. Volume to capacity ratios range approximately from 0.2-0.5. Density and follower density values for the two-lane highway segments are approximately 14 veh/mi/ln and 10 followers/mi/ln, with LOS values of C. Volume to capacity ratios are approximately 0.4.</p>
+<p>The highest v/c ratios along the route generally occur at signalized intersection locations. The isolated signalized intersection results are extracted from the previous tables (<a href="CaseStudyTN109.html#tab:TN109LOSresults1">17.7</a> and <a href="CaseStudyTN109.html#tab:TN109LOSresults2">17.8</a>) and summarized as follows.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><strong>Seg ID</strong></th>
+<th align="center"><strong>Control Delay (s/veh)</strong></th>
+<th align="center"><strong>LOS</strong></th>
+<th align="center"><strong>v/c</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Segment 4 (Hancock St)</td>
+<td align="center">21.1</td>
+<td align="center">C</td>
+<td align="center">0.600</td>
+</tr>
+<tr class="even">
+<td align="left">Segment 10 (Red River Rd.)</td>
+<td align="center">30.0</td>
+<td align="center">C</td>
+<td align="center">0.870</td>
+</tr>
+<tr class="odd">
+<td align="left">Segment 24 (SR-76)</td>
+<td align="center">19.5</td>
+<td align="center">B</td>
+<td align="center">0.510</td>
+</tr>
+<tr class="even">
+<td align="left">Segment 26 (Longview Dr)</td>
+<td align="center">22.3</td>
+<td align="center">C</td>
+<td align="center">0.550</td>
+</tr>
+<tr class="odd">
+<td align="left">Segment 28 (SR-52)</td>
+<td align="center">20.6</td>
+<td align="center">C</td>
+<td align="center">0.570</td>
+</tr>
+<tr class="even">
+<td align="left">Segment 32 (Kirby Dr)</td>
+<td align="center">29.3</td>
+<td align="center">C</td>
+<td align="center">0.850</td>
+</tr>
+<tr class="odd">
+<td align="left">Segment 40 (Hwy 31 W)</td>
+<td align="center">18.6</td>
+<td align="center">B</td>
+<td align="center">0.450</td>
+</tr>
+</tbody>
+</table>
+<p>Additionally, the signalized intersections that are part of the arterial segment that runs through the town of Portland have delays of approximately 12 s/veh and <span class="math inline">\(v/c\)</span> ratios of approximately 0.8 (also shown in Table <a href="CaseStudyTN109.html#tab:TN109ArterialResults">17.9</a>). The <span class="math inline">\(v/c\)</span> ratios are relatively high for these intersections because of the lack of exclusive left-turn bays and phasing. However, the control delay values are still relatively low due to the low traffic volumes. It should also be noted that the average speed for McGlothin St-College St is very low, despite relatively low control delay, due to the short link length (315 ft). The average speed for the entire arterial of 25.2 mi/h (LOS B), however, is still very reasonable for a section of roadway with a posted speed limit of 30 mi/h.</p>
+<p>It also needs to be noted that this route has some characteristics that currently are not explicitly considered in the HCM urban streets analysis methodology. For example, much of this section is without curb and gutter and has essentially continuous frontage of business access. While the through traffic volumes are currently relatively low and the local businesses do not appear to be high traffic generators, should one or both of the traffic demand characteristics increase significantly, the lack of access management along this section of roadway could lead to some operational complications.</p>
+<p>Furthermore, if there is any considerable growth in traffic demand in this area, the signalized intersections in the city of Portland will likely need to be upgraded to include left turn bays.</p>
+</div>
+</div>
+<div id="reliability-1" class="section level2 hasAnchor" number="17.3">
+<h2><span class="header-section-number">17.3</span> Reliability<a href="CaseStudyTN109.html#reliability-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The reliability analysis examines a 4-mile stretch of SR-109 in the rural town of Gallatin, Tennessee (see Figure <a href="CaseStudyTN109.html#fig:TN109ReliabilitySection1">17.13</a>). For the analysis, the facility was divided into 9 segments with each segment measuring approximately 0.3-0.6 miles in length.</p>
+<p><a href="https://www.google.com/maps/dir/36.3636023,-86.4408041/36.4036951,-86.4771867/@36.3885173,-86.4682693,2516m/data=!3m1!1e3!4m2!4m1!3e0" class="uri">https://www.google.com/maps/dir/36.3636023,-86.4408041/36.4036951,-86.4771867/@36.3885173,-86.4682693,2516m/data=!3m1!1e3!4m2!4m1!3e0</a></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:TN109ReliabilitySection1"></span>
+<img src="Images/CaseStudyTN109/Reliability/TN109ReliabilitySection1.png" alt="Reliability Analysis Section, Through Gallatin, TN, along SR-109. Source: Map data ©2022 Google"  />
+<p class="caption">
+Figure 17.13: Reliability Analysis Section, Through Gallatin, TN, along SR-109. Source: Map data ©2022 Google
+</p>
+</div>
+<p>The facility was evaluated using five data analysis and visualization techniques that convert the raw speed and travel time data into charts and graphics for analysis and interpretation. These methods are described in Section <a href="Chapter3Reliability.html#ReliabilityMethods">3.6</a>).</p>
+<div id="speed-heatmaps-1" class="section level3 unnumbered hasAnchor">
+<h3>Speed Heatmaps<a href="CaseStudyTN109.html#speed-heatmaps-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Speed heatmaps are shown in Figure <a href="CaseStudyTN109.html#fig:SpeedsHeatMapTN109">17.14</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:SpeedsHeatMapTN109"></span>
+<img src="Images/CaseStudyTN109/Reliability/Speed.png" alt="Speed Heatmaps" width="95%" />
+<p class="caption">
+Figure 17.14: Speed Heatmaps
+</p>
+</div>
+</div>
+<div id="speed-difference-heatmaps-1" class="section level3 unnumbered hasAnchor">
+<h3>Speed Difference Heatmaps<a href="CaseStudyTN109.html#speed-difference-heatmaps-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Speed difference heatmaps shown in Figure <a href="CaseStudyTN109.html#fig:SpeedDiffTN109">17.15</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:SpeedDiffTN109"></span>
+<img src="Images/CaseStudyTN109/Reliability/SpeedDiff.png" alt="Speed Difference Heatmaps" width="95%" />
+<p class="caption">
+Figure 17.15: Speed Difference Heatmaps
+</p>
+</div>
+</div>
+<div id="box-and-whisker-speed-plots-1" class="section level3 unnumbered hasAnchor">
+<h3>Box-and-Whisker Speed Plots<a href="CaseStudyTN109.html#box-and-whisker-speed-plots-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In the box-and-whisker weekly speed plots shown in Figure <a href="CaseStudyTN109.html#fig:BoxWhiskerWeeklyAvgTN109">17.16</a>, speed (mi/h) is shown on the x-axis and time (in weeks) is shown on y-axis. The chart uses box-and-whisker plots to provide a summary of the weekly speeds for the analysis period.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:BoxWhiskerWeeklyAvgTN109"></span>
+<img src="Images/CaseStudyTN109/Reliability/BoxWhiskerWeeklyAvg.png" alt="Box-and-Whisker Weekly Speed Averages Plot" width="95%" />
+<p class="caption">
+Figure 17.16: Box-and-Whisker Weekly Speed Averages Plot
+</p>
+</div>
+</div>
+<div id="speed-confidence-band-1" class="section level3 unnumbered hasAnchor">
+<h3>Speed Confidence Band<a href="CaseStudyTN109.html#speed-confidence-band-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The speed confidence plots are shown in Figure <a href="CaseStudyTN109.html#fig:SpeedConfidenceBandsTN109">17.17</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:SpeedConfidenceBandsTN109"></span>
+<img src="Images/CaseStudyTN109/Reliability/SpeedConfidenceBands.png" alt="Speed Confidence Bands" width="95%" />
+<p class="caption">
+Figure 17.17: Speed Confidence Bands
+</p>
+</div>
+</div>
+<div id="travel-time-index-1" class="section level3 unnumbered hasAnchor">
+<h3>Travel Time Index<a href="CaseStudyTN109.html#travel-time-index-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The TTI plots are shown in Figure <a href="CaseStudyTN109.html#fig:TravelTimeIndexTN109">17.18</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:TravelTimeIndexTN109"></span>
+<img src="Images/CaseStudyTN109/Reliability/TTI.png" alt="Travel Time Index (TTI) Plots" width="95%" />
+<p class="caption">
+Figure 17.18: Travel Time Index (TTI) Plots
+</p>
+</div>
+</div>
+<div id="summary-1" class="section level3 unnumbered hasAnchor">
+<h3>Summary<a href="CaseStudyTN109.html#summary-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This case study presented a data-driven approach to explore travel time reliability on a rural highway in Tennessee (i.e., SR-109) as it traverses the small town of Gallatin, three grade-separated interchanges, and rural areas. Five different visualization techniques were used to derive insights from higher-resolution vehicular probe data from INRIX XD. Segments outside Gallatin generally maintain free-flow speeds in the range of 50-60 mi/h. The interchanges are associated with some of the sharpest slowdowns, particularly in the PM peak period.</p>
+<p>Over the course of the analysis year (October 2021-March 2022), this corridor did not experience a major disruption such as a natural disaster or a spike in demand. Seasonal slowdowns were noted over the winter months, from December 2021 through March 2022. These contributed to higher variability in travel times, as evidenced by the higher travel time indices.</p>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-SR109AccessStudy" class="csl-entry">
+Gresham Smith and Partners. 2016. <em>SR 109 Access Management Study, Final Report, Prepared for the Nashville Area Metropolitan Planning Organization</em>.
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="5">
+<li id="fn5"><p>Photos courtesy of Scott Washburn.<a href="CaseStudyTN109.html#fnref5" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="CaseStudyOR20.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="CaseStudyOH42.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/NCHRP-08-135/Guidebook/edit/master/17-CaseStudy-TN109.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Rural Highway Analysis Guidebook.pdf", "Rural Highway Analysis Guidebook.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"toc_depth": 2
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

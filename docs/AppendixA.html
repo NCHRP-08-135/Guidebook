@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>A Mitigation Strategies | Rural-Highway-Analysis-Guidebook.knit</title>
+  <meta name="description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="A Mitigation Strategies | Rural-Highway-Analysis-Guidebook.knit" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Mitigation Strategies | Rural-Highway-Analysis-Guidebook.knit" />
+  
+  <meta name="twitter:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+<meta name="author" content="" />
+
+
+<meta name="date" content="2023-09-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="CaseStudyMT287.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Rural Highway Analysis Guidebook</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="chapter" data-level="1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#purpose-of-guidebook"><i class="fa fa-check"></i><b>1.1</b> Purpose of Guidebook</a></li>
+<li class="chapter" data-level="1.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-scope-and-limitations"><i class="fa fa-check"></i><b>1.2</b> Guidebook Scope and Limitations</a></li>
+<li class="chapter" data-level="1.3" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-organization"><i class="fa fa-check"></i><b>1.3</b> Guidebook Organization</a></li>
+<li class="chapter" data-level="1.4" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-format"><i class="fa fa-check"></i><b>1.4</b> Guidebook Format</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#navigating-the-document"><i class="fa fa-check"></i><b>1.4.1</b> Navigating the document</a></li>
+<li class="chapter" data-level="1.4.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#ProvidingFeedback"><i class="fa fa-check"></i><b>1.4.2</b> How to provide feedback on this document</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#SupportingResources"><i class="fa fa-check"></i><b>1.5</b> Supporting Resources and Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html"><i class="fa fa-check"></i><b>2</b> Rural Highway Level of Service for Automobiles</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#LOSIntro"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#Segmentation"><i class="fa fa-check"></i><b>2.2</b> Facility Segmentation</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#CrossSection"><i class="fa fa-check"></i><b>2.2.1</b> Cross Section</a></li>
+<li class="chapter" data-level="2.2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#passing-accommodations-for-two-lane-highways"><i class="fa fa-check"></i><b>2.2.2</b> Passing Accommodations for Two-Lane Highways</a></li>
+<li class="chapter" data-level="2.2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#posted-speed-limit-changes"><i class="fa fa-check"></i><b>2.2.3</b> Posted Speed Limit Changes</a></li>
+<li class="chapter" data-level="2.2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#geometric-alignment-considerations"><i class="fa fa-check"></i><b>2.2.4</b> Geometric Alignment Considerations</a></li>
+<li class="chapter" data-level="2.2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#IntxInfluenceArea"><i class="fa fa-check"></i><b>2.2.5</b> Intersections and their Influence Area</a></li>
+<li class="chapter" data-level="2.2.6" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#UrbanStreetClassification"><i class="fa fa-check"></i><b>2.2.6</b> Classification of Urban Street</a></li>
+<li class="chapter" data-level="2.2.7" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#SegMinLength"><i class="fa fa-check"></i><b>2.2.7</b> Practical Minimum Segment Length</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#FacilityLOS"><i class="fa fa-check"></i><b>2.3</b> Segment and Facility LOS Calculation</a></li>
+<li class="chapter" data-level="2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#HotSpots"><i class="fa fa-check"></i><b>2.4</b> Hot Spot Identification</a></li>
+<li class="chapter" data-level="2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#additional-performance-measures-for-facility-evaluation"><i class="fa fa-check"></i><b>2.5</b> Additional Performance Measures for Facility Evaluation</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#emergency-traffic-demand-surge"><i class="fa fa-check"></i><b>2.5.1</b> Emergency Traffic Demand Surge</a></li>
+<li class="chapter" data-level="2.5.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#short-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.2</b> Short-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#seasonal-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.3</b> Seasonal Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#long-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.4</b> Long-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#use-of-probe-vehicle-measured-travel-timesspeeds"><i class="fa fa-check"></i><b>2.5.5</b> Use of Probe-Vehicle Measured Travel Times/Speeds</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html"><i class="fa fa-check"></i><b>3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityIntro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#approach-for-rural-highways"><i class="fa fa-check"></i><b>3.2</b> Approach for Rural Highways</a></li>
+<li class="chapter" data-level="3.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityData"><i class="fa fa-check"></i><b>3.3</b> Data Examined</a></li>
+<li class="chapter" data-level="3.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilitySegmentation"><i class="fa fa-check"></i><b>3.4</b> Segmentation</a></li>
+<li class="chapter" data-level="3.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityDataOverview"><i class="fa fa-check"></i><b>3.5</b> Data Overview</a></li>
+<li class="chapter" data-level="3.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityMethods"><i class="fa fa-check"></i><b>3.6</b> Evaluation Methodologies</a></li>
+<li class="chapter" data-level="3.7" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityHowTo"><i class="fa fa-check"></i><b>3.7</b> Assessing Reliability</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#load-the-data"><i class="fa fa-check"></i><b>3.7.1</b> Load the data</a></li>
+<li class="chapter" data-level="3.7.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#aggregate-the-data"><i class="fa fa-check"></i><b>3.7.2</b> Aggregate the data</a></li>
+<li class="chapter" data-level="3.7.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#heatmaps"><i class="fa fa-check"></i><b>3.7.3</b> Heatmaps</a></li>
+<li class="chapter" data-level="3.7.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.7.4</b> Box-and-Whisker Plots</a></li>
+<li class="chapter" data-level="3.7.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#speed-confidence-band-plots"><i class="fa fa-check"></i><b>3.7.5</b> Speed Confidence Band Plots</a></li>
+<li class="chapter" data-level="3.7.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#travel-time-index-plots"><i class="fa fa-check"></i><b>3.7.6</b> Travel Time Index Plots</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html"><i class="fa fa-check"></i><b>4</b> Bicycle Operations Analysis on Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#overview-of-bicycle-operations-analysis-methods"><i class="fa fa-check"></i><b>4.1</b> Overview of Bicycle Operations Analysis Methods</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#highway-capacity-manual-level-of-service-analysis-methodologies"><i class="fa fa-check"></i><b>4.1.1</b> Highway Capacity Manual Level of Service Analysis Methodologies</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.1.2</b> Level of Traffic Stress Analysis Methodology</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#bicycle-compatibility-index-analysis-methodology"><i class="fa fa-check"></i><b>4.1.3</b> Bicycle Compatibility Index Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#BikeLOS"><i class="fa fa-check"></i><b>4.2</b> Bicycle Level of Service Research Recommendations</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-highway-capacity-manual-level-of-service-for-rural-highways"><i class="fa fa-check"></i><b>4.2.1</b> Revisions to Highway Capacity Manual Level of Service for Rural Highways</a></li>
+<li class="chapter" data-level="4.2.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.2.2</b> Revisions to Level of Traffic Stress Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#guidance-on-current-methods-for-rural-highways"><i class="fa fa-check"></i><b>4.3</b> Guidance on Current Methods for Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#adaptation-to-rural-conditions"><i class="fa fa-check"></i><b>4.3.1</b> Adaptation to Rural Conditions</a></li>
+<li class="chapter" data-level="4.3.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#data-requirements"><i class="fa fa-check"></i><b>4.3.2</b> Data Requirements</a></li>
+<li class="chapter" data-level="4.3.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#applications"><i class="fa fa-check"></i><b>4.3.3</b> Applications</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Part II: HCM Calculations</b></span></li>
+<li class="chapter" data-level="5" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html"><i class="fa fa-check"></i><b>5</b> HCM Automobile LOS Methodologies</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html"><i class="fa fa-check"></i><b>6</b> Multilane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#equations-and-exhibits"><i class="fa fa-check"></i><b>6.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="6.2" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#nomenclature"><i class="fa fa-check"></i><b>6.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html"><i class="fa fa-check"></i><b>7</b> Two-Lane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#equations-and-exhibits-1"><i class="fa fa-check"></i><b>7.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="7.2" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#nomenclature-1"><i class="fa fa-check"></i><b>7.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="HCMsignal.html"><a href="HCMsignal.html"><i class="fa fa-check"></i><b>8</b> Signalized Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="HCMsignal.html"><a href="HCMsignal.html#equations-and-exhibits-2"><i class="fa fa-check"></i><b>8.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="8.2" data-path="HCMsignal.html"><a href="HCMsignal.html#nomenclature-2"><i class="fa fa-check"></i><b>8.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="HCMroundabout.html"><a href="HCMroundabout.html"><i class="fa fa-check"></i><b>9</b> Roundabout Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="HCMroundabout.html"><a href="HCMroundabout.html#equations-and-exhibits-3"><i class="fa fa-check"></i><b>9.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="9.2" data-path="HCMroundabout.html"><a href="HCMroundabout.html#nomenclature-3"><i class="fa fa-check"></i><b>9.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="HCMawsc.html"><a href="HCMawsc.html"><i class="fa fa-check"></i><b>10</b> All-Way Stop-Controlled Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="HCMawsc.html"><a href="HCMawsc.html#equations-and-exhibits-4"><i class="fa fa-check"></i><b>10.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="10.2" data-path="HCMawsc.html"><a href="HCMawsc.html#nomenclature-4"><i class="fa fa-check"></i><b>10.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html"><i class="fa fa-check"></i><b>11</b> Urban Street Facility Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#equations-and-exhibits-5"><i class="fa fa-check"></i><b>11.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="11.2" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#nomenclature-5"><i class="fa fa-check"></i><b>11.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="HCMbicycle.html"><a href="HCMbicycle.html"><i class="fa fa-check"></i><b>12</b> Bicycle LOS Methodologies</a></li>
+<li class="chapter" data-level="13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html"><i class="fa fa-check"></i><b>13</b> Rural Highway Example Calculations</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-input-data"><i class="fa fa-check"></i><b>13.1</b> Segment Input Data</a></li>
+<li class="chapter" data-level="13.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations"><i class="fa fa-check"></i><b>13.2</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#first-iteration-uses-input-segment-lengths"><i class="fa fa-check"></i><b>13.2.1</b> First iteration uses input segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#influence-area-calculations"><i class="fa fa-check"></i><b>13.3</b> Influence Area Calculations</a></li>
+<li class="chapter" data-level="13.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-segment-length-calculations"><i class="fa fa-check"></i><b>13.4</b> Adjusted Segment Length Calculations</a></li>
+<li class="chapter" data-level="13.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations-1"><i class="fa fa-check"></i><b>13.5</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#second-iteration-uses-adjusted-segment-lengths"><i class="fa fa-check"></i><b>13.5.1</b> Second iteration uses adjusted segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#facility-calculations"><i class="fa fa-check"></i><b>13.6</b> Facility Calculations</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#posted-speed-travel-time-s"><i class="fa fa-check"></i><b>13.6.1</b> Posted Speed Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#free-flow-travel-time-s"><i class="fa fa-check"></i><b>13.6.2</b> Free-Flow Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#average-travel-time-s"><i class="fa fa-check"></i><b>13.6.3</b> Average Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#travel-time-segment-weights"><i class="fa fa-check"></i><b>13.6.4</b> Travel Time Segment Weights</a></li>
+<li class="chapter" data-level="13.6.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-demand-volumes"><i class="fa fa-check"></i><b>13.6.5</b> Adjusted Demand Volumes</a></li>
+<li class="chapter" data-level="13.6.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-hours-traveled-veh-h"><i class="fa fa-check"></i><b>13.6.6</b> Vehicle Hours Traveled (veh-h)</a></li>
+<li class="chapter" data-level="13.6.7" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#total-delay-veh-h"><i class="fa fa-check"></i><b>13.6.7</b> Total Delay (veh-h)</a></li>
+<li class="chapter" data-level="13.6.8" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-miles-traveled-veh-mi"><i class="fa fa-check"></i><b>13.6.8</b> Vehicle Miles Traveled (veh-mi)</a></li>
+<li class="chapter" data-level="13.6.9" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#space-mean-speed-mih"><i class="fa fa-check"></i><b>13.6.9</b> Space Mean Speed (mi/h)</a></li>
+<li class="chapter" data-level="13.6.10" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#ffs-delay-sveh"><i class="fa fa-check"></i><b>13.6.10</b> FFS Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.11" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#threshold-delay-sveh"><i class="fa fa-check"></i><b>13.6.11</b> Threshold Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.12" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-constancy"><i class="fa fa-check"></i><b>13.6.12</b> LOS Constancy</a></li>
+<li class="chapter" data-level="13.6.13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-adjustment-factor"><i class="fa fa-check"></i><b>13.6.13</b> LOS Adjustment Factor</a></li>
+<li class="chapter" data-level="13.6.14" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#final-los-score"><i class="fa fa-check"></i><b>13.6.14</b> Final LOS Score</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="CompEngine.html"><a href="CompEngine.html"><i class="fa fa-check"></i><b>14</b> Computational Engine Overview</a></li>
+<li class="part"><span><b>Part III: Case Studies</b></span></li>
+<li class="chapter" data-level="15" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html"><i class="fa fa-check"></i><b>15</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#supporting-material"><i class="fa fa-check"></i><b>15.1</b> Supporting Material</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#kml-files"><i class="fa fa-check"></i>KML Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#computational-engine-input-files"><i class="fa fa-check"></i>Computational Engine Input Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#probe-vehicle-data-analysis-scripting-code"><i class="fa fa-check"></i>Probe Vehicle Data Analysis Scripting Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html"><i class="fa fa-check"></i><b>16</b> Case Study: Oregon US-20</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#route-description"><i class="fa fa-check"></i><b>16.1</b> Route Description</a></li>
+<li class="chapter" data-level="16.2" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#level-of-service"><i class="fa fa-check"></i><b>16.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#segmentation"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#traffic-data"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#additional-data-inputs-for-intersections"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#results"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#reliability"><i class="fa fa-check"></i><b>16.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-heatmaps"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-difference-heatmaps"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#box-and-whisker-speed-plots"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-confidence-band"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#travel-time-index"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html"><i class="fa fa-check"></i><b>17</b> Case Study: Tennessee SR-109</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#route-description-1"><i class="fa fa-check"></i><b>17.1</b> Route Description</a></li>
+<li class="chapter" data-level="17.2" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#level-of-service-1"><i class="fa fa-check"></i><b>17.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#segmentation-1"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#traffic-data-1"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#additional-data-inputs-for-intersections-1"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#results-1"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#reliability-1"><i class="fa fa-check"></i><b>17.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-heatmaps-1"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-difference-heatmaps-1"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#box-and-whisker-speed-plots-1"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-confidence-band-1"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#travel-time-index-1"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#summary-1"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html"><i class="fa fa-check"></i><b>18</b> Case Study: Ohio US-42</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#route-description-2"><i class="fa fa-check"></i><b>18.1</b> Route Description</a></li>
+<li class="chapter" data-level="18.2" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#level-of-service-2"><i class="fa fa-check"></i><b>18.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#segmentation-2"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#traffic-data-2"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#additional-data-inputs-for-intersections-2"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#results-2"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#reliability-2"><i class="fa fa-check"></i><b>18.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-heatmaps-2"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-difference-heatmaps-2"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#box-and-whisker-speed-plots-2"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-confidence-band-2"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#travel-time-index-2"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#summary-2"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html"><i class="fa fa-check"></i><b>19</b> Case Study: Montana US-287</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#route-description-3"><i class="fa fa-check"></i><b>19.1</b> Route Description</a></li>
+<li class="chapter" data-level="19.2" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#level-of-service-3"><i class="fa fa-check"></i><b>19.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#segmentation-3"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#traffic-data-3"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#results-3"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Appendixes</b></span></li>
+<li class="chapter" data-level="A" data-path="AppendixA.html"><a href="AppendixA.html"><i class="fa fa-check"></i><b>A</b> Mitigation Strategies</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="AppendixA.html"><a href="AppendixA.html#general"><i class="fa fa-check"></i><b>A.1</b> General</a></li>
+<li class="chapter" data-level="A.2" data-path="AppendixA.html"><a href="AppendixA.html#multilane-highways"><i class="fa fa-check"></i><b>A.2</b> Multilane Highways</a></li>
+<li class="chapter" data-level="A.3" data-path="AppendixA.html"><a href="AppendixA.html#two-lane-highways"><i class="fa fa-check"></i><b>A.3</b> Two-Lane Highways</a></li>
+<li class="chapter" data-level="A.4" data-path="AppendixA.html"><a href="AppendixA.html#intersections"><i class="fa fa-check"></i><b>A.4</b> Intersections</a></li>
+<li class="chapter" data-level="A.5" data-path="AppendixA.html"><a href="AppendixA.html#arterials"><i class="fa fa-check"></i><b>A.5</b> Arterials</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/NCHRP-08-135/Guidebook" target="blank">View Book Source</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="AppendixA" class="section level1 hasAnchor" number="20">
+<h1><span class="header-section-number">A</span> Mitigation Strategies<a href="AppendixA.html#AppendixA" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>While the analysis methodologies of the Highway Capacity Manual accommodate a wide range of geometric, traffic, and control characteristics, it generally does not provide specific warrants/guidelines for geometric and/or control characteristics revisions to implement to potentially address poor operational issues. Probably the most well-known example of this kind of guidance are the signal warrants provided in the Manual for Uniform Traffic Control Devices (MUTCD).</p>
+<p>The purpose of this appendix is to help direct the analyst to resources that may help them determine appropriate strategies, particularly with respect to geometric and control characteristics, that will potentially result in improved operational conditions along rural highways. These resources are generally consist of published NCHRP project reports and peer-reviewed journal articles.</p>
+<p>It is expected that the content in this appendix will be regularly updated when relevant publications become available. If you would like to make us aware of reference material that we should consider including in this section, please contact us as described in <a href="Chapter1Intro.html#ProvidingFeedback">Section 1.4.2</a>.</p>
+<div id="general" class="section level2 hasAnchor" number="20.1">
+<h2><span class="header-section-number">A.1</span> General<a href="AppendixA.html#general" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The material listed in this section address rural highway issues more generally.</p>
+<p><strong>Rural Transportation Issues: Research Roadmap <span class="citation">(<a href="#ref-NAP26343">Transportation Research Board and National Academies of Sciences, Engineering, and Medicine 2022</a>)</span></strong><br />
+<em>Abstract: Although only 19% of the population live in rural areas, more than 70% of the U.S.’s four million miles of roadways are in rural areas. The rural transportation system also includes numerous airports; railways; inland and coastal waterways; rural and intercity buses; and bicycle, pedestrian, and multi-use paths and trails. In addition, approximately 47% of the nation019s motor vehicle fatalities occur in rural areas.The TRB National Cooperative Highway Research Program’s NCHRP Research Report 988: Rural Transportation Issues: Research Roadmap is designed to assist state departments of transportation and other public agencies and help inform policy-driven investment decisions.</em></p>
+<p><strong>America’s Rural Roads: Beautiful and Deadly</strong>
+<em>This report examines the extent of the safety problem on our nation’s rural roads. It discusses rural roads’ unique challenges and offers strategies to help SHSOs and their partners address behavioral highway safety issues.</em><br />
+<a href="https://www.ghsa.org/sites/default/files/2022-09/America%E2%80%99s%20Rural%20Roads%20-%20Beautiful%20and%20Deadly%20FNL.pdf" class="uri">https://www.ghsa.org/sites/default/files/2022-09/America%E2%80%99s%20Rural%20Roads%20-%20Beautiful%20and%20Deadly%20FNL.pdf</a></p>
+</div>
+<div id="multilane-highways" class="section level2 hasAnchor" number="20.2">
+<h2><span class="header-section-number">A.2</span> Multilane Highways<a href="AppendixA.html#multilane-highways" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong><em>Accommodating turning movements</em></strong></p>
+<p><strong>Criteria and Guidelines for Three-Lane Road Design and Operation <span class="citation">(<a href="#ref-DavisMNDOT">G. A. Davis, Hourdos, and Gao 2023</a>)</span></strong><br />
+<em>Abstract: A 4-3 conversion involves changing a four-lane undivided road into one with two general travel lanes separated by a two-way left turn lane. A commonly-used guideline states that a 4-3 conversion can be considering as long as the road’s average annual daily traffic (AADT) volume does not exceed 15,000 vehicles/day but opinions vary, from lowering the AADT threshold to 10,000 vehicles/day to anecdotal evidence for successful 4-3 conversions with AADTs as high as 20,000. The main objective of this project was to identify conditions where 4-3 conversions might be feasible at AADTs greater than 15,000. After reviewing the literature, we conducted simulation studies on three different roads to identify combinations of major and minor road flow where three-lane configurations provided acceptable levels of service. Eight intersections, with 16 approaches, were then selected to represent our findings. These results were presented as summary tables that practitioners could use to make initial assessments regarding 4-3 conversion feasibility.</em></p>
+</div>
+<div id="two-lane-highways" class="section level2 hasAnchor" number="20.3">
+<h2><span class="header-section-number">A.3</span> Two-Lane Highways<a href="AppendixA.html#two-lane-highways" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong><em>Passing Zones</em></strong></p>
+<p><strong>Design Criteria for Minimum Passing Zone Lengths: Operational Efficiency and Safety Considerations <span class="citation">(<a href="#ref-Moreno2015">Moreno et al. 2015</a>)</span></strong><br />
+<em>Abstract: Passing zones are provided to improve operational efficiency of two-lane highways where passes can be performed safely. Minimum passing zone lengths of 120 m were established in MUTCD and Green Book, although some studies indicate a potential need to increase them. However, no changes have been recommended pending further research on the safety of short passing zones. The objective of this study is to develop design and marking criteria for minimum passing zone lengths that consider traffic operational efficiency and safety. In the first part of this study, a traffic microsimulation was carried out with Aimsun software. The calibration and validation included the observation of 1,750 passing maneuvers in Spain. The results indicate that passing zones shorter than 250 m add very little to operational efficiency. In the second part of the study, a reliability analysis was applied. It quantified the probability that a passing maneuver was completed beyond the end of the passing zone (non-compliant passing maneuvers). Afterwards, the number of non-compliant passing maneuvers was calculated. Traffic flow as well as passing zone length were contributing factors. Findings from the analysis indicate that the minimum passing zone length should be increased to a minimum of 275 m, for high traffic volumes, 300 m for medium traffic volumes and 350 m for low traffic volumes. From this length, the number of non-compliant passing maneuvers decreases. The marginal increase in the minimum length of passing zones can potentially improve safety without significantly reducing the operational efficiency. The results can be directly used by practitioners to establish the minimum passing zone length based on the range of hourly volumes and the level of risk willing to assume.</em></p>
+<p><strong><em>Passing/Climbing Lanes</em></strong></p>
+<p>The new two-lane highway analysis methodology chapter in the Highway Capacity Manual (7th edition) contains some guidance passing/climbing lanes. See Appendix A (Guidance on Optimizing Passing Lane Performance) of Chapter 15. More detail on some this content can be found in the following reference.</p>
+<p><strong>Passing Lane Optimum Length on Two-Lane Highways <span class="citation">(<a href="#ref-Jafari2018">Jafari, Al-Kaisy, and Washburn 2018</a>)</span></strong><br />
+<em>Abstract: An investigation into the optimum length of passing lanes on rural two-lane highways is presented in this paper. A passing lane is a short length of added lane to improve passing opportunities on two-lane two-way highways. The study utilized field data and traffic simulation in this investigation, with field data primarily used in calibrating and validating the traffic simulation program. A sensitivity analysis was conducted using traffic level and length of passing lane as the primary variables. The level of association between the reduction in platooning and study variables was examined. Study results showed that, within the range of passing lane length investigated in this study (0.5 mi to 3.0 mi), traffic performance continued to improve with the increase in passing lane length. Moreover, for the same target improvement in performance, the required passing lane length increases with the increase in traffic volume. The passing lane optimum lengths developed in this study all varied in the range between 0.80 and 2.0 miles depending on traffic volume.</em></p>
+<p>HCM Chapter 15 also contains calculations for determining the effective length of a passing lane (see Step 9 of the analysis methodology). Note that these calculations are included in the methodology described in this Guidebook.</p>
+<p>HCM Chapter 15 also introduces some preliminary techniques for analyzing a 2+1 roadway configurations (also in Appendix) While this type of configuration is currently rare in the U.S., it has been successfully employed in many locations throughout Europe. Such a configuration can provide significant improvements to operations at a lower cost than converting to a multilane highway in some situations.</p>
+</div>
+<div id="intersections" class="section level2 hasAnchor" number="20.4">
+<h2><span class="header-section-number">A.4</span> Intersections<a href="AppendixA.html#intersections" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A common location for operational hot-spots or slowdowns are intersections. The following references are focused on comparisons between different intersection configurations.</p>
+<p><strong><em>Type of Control</em></strong></p>
+<p><strong>Intersection Control Evaluation [Federal Highway Administration]</strong><br />
+<em>Abstract: Intersection control evaluation (ICE) is a data–driven, performance–based framework to screen intersection alternatives and identify an optimal solution.</em><br />
+<a href="https://highways.dot.gov/safety/intersection-safety/ice" class="uri">https://highways.dot.gov/safety/intersection-safety/ice</a></p>
+<p><strong>NCHRP 17-98: Guide for Intersection Control Evaluation</strong><br />
+<em>Abstract: A variety of intersection control evaluation processes and metrics are used by highway agencies for evaluating intersection geometry and control alternatives and identifying an optimal geometric and control solution for an intersection. These processes usually address safety, operational, multimodal, environmental, right-of-way, and cost impacts and other considerations. However, there is no widely accepted procedure or guide for evaluating new intersections or modifications to an intersection. The objective of this research was to develop a guide for intersection control evaluation. The guide includes associated processes and tools, in a format appropriate for consideration and adoption by the American Association of State Highway and Transportation Officials (AASHTO). For the purpose of this research intersections include interchanges.</em></p>
+<p>This project was completed on 7/31/23 and publication materials are forthcoming. For the current status, see <a href="https://apps.trb.org/cmsfeed/TRBNetProjectDisplay.asp?ProjectID=4974" class="uri">https://apps.trb.org/cmsfeed/TRBNetProjectDisplay.asp?ProjectID=4974</a></p>
+<p><strong>Gray Areas in Isolated Intersection Control-Type Selection: Complementary Decision-Support Tool <span class="citation">(<a href="#ref-Bae2017">Bae, Whetsel, and Han 2017</a>)</span></strong><br />
+<em>Abstract: The intersection control-type selections for future facilities can be determined by comparison of a common measure of effectiveness that is average control delay. However, rigid comparisons of such measures tend to mislead the decision-making process in practice, since there must be latent factors in quantification. To this end, this paper proposes the performance comparison framework of different transportation facility alternatives using a common quantitative measure. By considering the uncertainties in a quantification process, the proposed framework provides gray areas (i.e., intuitively visualized information, which decision-makers can use to assist in their engineering decisions). The average control delay of two-way stop control, all-way stop control, signal control types, and roundabouts were compared with contour lines of delay differences. It is found that the delay of a roundabout increases rapidly as the traffic demand increases. Hence, a signal control type has the minimum delay level in that case, despite the fact that the roundabout outperforms for most of the low-demand conditions. When the signal timing plan is optimized, this feature becomes evident. With consideration of the margin of error in the delay, a gray area on the minimum delay surface between the signal control and roundabout types enlarges in the low-demand area. The gray areas can be utilized by practitioners to decide the best intersection control type with consideration of construction and maintenance costs over delay reduction benefit.</em></p>
+<p><strong>Identifying the Adaptability of Different Control Types Based on Delay and Capacity for Isolated Intersection <span class="citation">(<a href="#ref-Danesh2023">Danesh, Ma, and Wang 2023</a>)</span></strong><br />
+<em>Abstract: In urban road networks, intersections are the main bottlenecks. Selecting an appropriate intersection control type can significantly improve the performance of an isolated intersection. Therefore, this paper offers recommendations for selecting the most efficient control type among two-way stop control, signalized intersection (SIG), roundabout (RB), and signalized roundabout (SIGRB) based on capacity and delay. The procedure to calculate delay and capacity is taken from the Highway Capacity Manual 6th edition (2016), or developed separately if needed. Two flow patterns are assumed: fixed and time-varying demand. For fixed demand, the results show that SIGRB outperforms other control types both in capacity and delay at higher demand levels. It was also observed that increase in left-turn ratio increases the delay and decreases the capacity of all control types while its impact on SIGRB was the least. Considering time-varying demand, traffic volume fluctuates over the 5-h period of the analysis. It was found that using both RB and SIGRB together creates significantly less delay compared with the other options. Additionally, using RB provides less variability in delay when there is fluctuation in demand. The major finding of this research is that RB and SIGRB have potential benefits for delay in conditions of (i) high traffic volume, (ii) high left-turn ratio, and (iii) demand fluctuation. Furthermore, it is suggested that SIG should be used if the left-turn ratio is relatively low. The results of this study could help decision-makers to choose the best control type for an isolated intersection under various traffic conditions.</em></p>
+<p><strong>Comparison of Delays at Signal-Controlled Intersection and Roundabout <span class="citation">(<a href="#ref-Ištoka_Otković_Dadić_2012">Ištoka Otković and Dadić 2012</a>)</span></strong><br />
+<em>Abstract: Delays belong to standard parameters used for the evaluation of any type of intersection and they are taken in the evaluation of the level of service of an intersection. Intersections with shorter delays bring about economical benefits both for the users and the community, and enable greater efficiency of a traffic system, which is becoming a significant criterion with the in-creasing motorization. The case studies carried out in Europe and worldwide reveal that roundabouts bring delay savings if compared with other intersections of the same operational level and nearly the same traffic volume. The paper shows the results of the comparison analysis of the roundabout and the signal-controlled intersection in the city of Osijek, Croatia. The statistical indicators have given the basis for the evaluation of delays at the observed intersections, offering at the same time the possibility to compare the analysis conclusions on the local level with the conclusions of the case studies carried out throughout Europe and worldwide.</em></p>
+<p><strong>Comparing Roundabouts and Signalized Intersections Through Multiple-Model Simulation <span class="citation">(<a href="#ref-Zhou2022">Zhou, Zhang, and Liu 2022</a>)</span></strong><br />
+<em>Abstract: In modern transportation systems, more and more vehicles result in severe traffic congestion, affecting our daily life and modern logistics. Well-designed traffic infrastructures play an important role in implementing safe and efficient traffic systems. From subjective experience, roundabouts are more efficient than conventional signalized intersections because vehicles do not wait for traffic signals, decreasing which is the main reason for time-loss at signalized crossroads. This paper aims to further investigate the differences between intersections and roundabouts in the capacity of vehicle passing and other performance. Two scenarios with different traffic volumes are considered, including a large volume of traffic flow (2.44 vehicles per second) and a small volume of traffic flow (0.52 vehicles per second). In each scenario, we build six junction models including four intersections with different traffic light time and two roundabouts with different numbers of lanes. Multiple evaluation metrics (i.e., number of passing vehicles over time, mean speed of passing vehicles, mean number of halts per vehicle, mean time-loss per vehicle, and total time for all vehicles to pass) are considered to compare these models’ performance. Results illustrate that roundabouts have a higher capability of vehicle passing than intersections, especially for a large traffic volume. But roundabouts bring more halts per vehicle than signalized intersections when the traffic volume is large. When the volume of traffic flow is small, there is no significant efficiency difference between intersections and roundabouts. These results tend to be applied to future traffic junction designs to improve system efficiency.</em></p>
+<p><strong>Evaluating the Conversion of All-Way Stop-Controlled Intersections into Roundabouts <span class="citation">(<a href="#ref-Vlahos2008">Vlahos et al. 2008</a>)</span></strong><br />
+<em>Abstract: Roundabouts are becoming increasingly popular in the United States and have been considered for use at intersections facing operational or safety problems. A comparative analysis was performed on all-way stop-controlled (AWSC) intersections and roundabouts on the basis of aaSIDRA software after calibration against local conditions in Delaware and Maryland. A decision support system was developed in the form of a knowledge-based expert system on the basis of the results of the analysis to evaluate the performance of AWSC intersections and their potential success if converted into roundabouts. The results of the comparative analysis are in line with some previous researchers’ findings that AWSC intersections always perform worse than signal-controlled or roundabout type intersections under the same set of traffic conditions and geometric limitations.</em></p>
+<p><strong>Control-Type Selection at Isolated Intersections Based on Control Delay Under Various Demand Levels <span class="citation">(<a href="#ref-Han2008">Han, Li, and Thomas Urbanik 2008</a>)</span></strong><br />
+<em>Abstract: The Highway Capacity Manual (HCM 2000) displayed the figure Exhibit 10-15 for the purpose of forecasting the likely intersection control types for future facilities. Because this figure is from a source external to HCM, to verify it, this paper employs HCM methodologies for the estimation and comparison of control delay, the choice measure of effectiveness at intersections controlled by signal, all-way stop signs, and two-way stop signs. After detailed analyses of more than 5,000 cases using Highway Capacity Software, results of control delay with various control types under a wide range of demand conditions were charted for comparison with Exhibit 10-15. It is found that Exhibit 10-15 is inconsistent with the results from HCM methodologies and, perhaps, should be replaced with the figures developed in this paper. On the basis of the criterion of minimizing delay alone, it is found that if demand is unbalanced between major and minor streets and if the traffic is low on minor streets, two-way-stop control should be used; if demand is somewhat balanced and minor streets see low to medium traffic, all-way-stop control is preferred; otherwise, signal control should be favored. The paper also demonstrates that the percentage of left-turning traffic has a significant effect on decisions involving intersection control types.</em></p>
+<p><strong>Effects of Approach Speed at Rural High-Speed Intersections: Roundabouts Versus Two-Way-Stop Control <span class="citation">(<a href="#ref-Isebrands2014">Isebrands, Hallmark, and Hawkins 2014</a>)</span></strong><br />
+<em>Abstract: Speed can increase the risk of injury-producing crashes, especially at intersections where vehicles may be approaching and entering the intersection with high speed differentials. It is known that roundabouts force all drivers to reduce their speed in the intersection; however, speed data in advance of the roundabout approach were not available for roundabouts with high-speed approaches to verify this phenomenon. In this research, a comparative evaluation of the difference in the average approach speeds between rural roundabouts and rural two-way-stop-controlled intersections and between rural roundabouts with and without rumble strips on the intersection approaches was performed. Approach speed data proved that drivers could slow down in advance of roundabouts on rural roadways. The mean speed 100 ft from the yield line of the roundabouts was 2.5 mph lower than the mean speed 100 ft from the stop bar at stop-controlled approaches. Additionally, a comparison of roundabout approaches with and without rumble strips showed mean speeds 4.3 and 3.3 mph lower 100 and 250 ft from the yield line, respectively, for approaches with rumble strips; however, the variation in speeds increased with the introduction of rumble strips.</em></p>
+<p><strong><em>Turn/Auxillary Lanes</em></strong></p>
+<p>There have been several NCHRP-funded projects that examined driveway and turn lane design issues for highway corridors; however, these studies are generally focused on geometric design and safety elements. Operational issues are largely discussed only in qualitative terms. A brief summary of these studies follows.</p>
+<p><span class="citation">Bonneson and Fontaine (<a href="#ref-NCHRPRep457">2001</a>)</span> developed an engineering study guide for evaluating intersection improvements, as part of NCHRP Project 3-58. The objectives of the guide are “(1) to define the steps involved in an engineering study of a problem intersection and (2) to provide guidelines for using capacity analysis or simulation to determine the most effective alternative on the basis of operational considerations.” This guide provides several warrants to assist with identifying when turn lanes may be appropriate, and if so, how much storage they should provide. Warrants are also provided to assist in identifying the appropriate type of intersection (signalized, stop controlled, roundabout).</p>
+<p><span class="citation">Fitzpatrick et al. (<a href="#ref-NAP22296">2014</a>)</span> examined design guidance for intersection auxiliary lanes. This work was performed under NCHRP Project 3-102. The results of this project expand on guidance provided in the AASHTO Green Book and highlights information regarding bypass lanes, channelized right-turn lanes, deceleration and taper length, design and capacity of multiple left-turn lanes, and alternative intersection designs.</p>
+<p><span class="citation">Fitzpatrick et al. (<a href="#ref-NAP22608">2013</a>)</span> developed guidance for the selection and design of left-turn accommodations at unsignalized intersections, as part of NCHRP Project 3-91. The report includes 11 case studies of typical situations that illustrate the use of the guidance.</p>
+<p><span class="citation">Gattis et al. (<a href="#ref-NAP14399">2010</a>)</span> developed a design guide as a by-product of the research for NCHRP Project 15-35, “Geometric Design of Driveways.” This guide provides recommendations for the geometric design of driveways that consider standard engineering practice and accessibility needs and provide for safe and efficient travel on the affected roadway. The research included a literature review, a survey of street and highway departments, and field studies leading to an improved understanding of the state of the practice. This guide presents changes to that state of practice based on the evolving requirements for driveways.
+The report includes driveway-related terms and definitions, an examination of basic geometric controls, a summary of access spacing principles, and detailed discussions of various geometric design elements. This publication complements documents such as the AASHTO Policy on the Geometric Design of Streets and Highways and the Access Management Manual. This guide is intended for use in both the public and private sectors.</p>
+<p><span class="citation">Kikuchi and Chakroborty (<a href="#ref-KikuchiChakroborty">1991</a>)</span> examined warrant criteria for justifying a left-turn lane on a major two-lane roadway that intersects a minor roadway, in a ‘T’ configuration. Three criteria were considered: (a) probability that one or more waiting through vehicles are present on the approach; (b) delay (average delay to the “caught” through vehicles, average delay to all through vehicles, and delay savings due to the left-turn lane); and (c) degradation of the level of service. Volume combinations (through, left-turn, and opposing flow) that would justify a left-turn lane under each of the criteria are presented.</p>
+</div>
+<div id="arterials" class="section level2 hasAnchor" number="20.5">
+<h2><span class="header-section-number">A.5</span> Arterials<a href="AppendixA.html#arterials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Access Management Manual <span class="citation">(<a href="#ref-TRBAccessManagement">Transportation Research Board and National Academies of Sciences, Engineering, and Medicine 2014a</a>)</span></strong><br />
+<em>Abstract: TRB’s Access Management Manual,second edition, provides guidance on a coordinated approach to transportation and community design that is designed to help enhance mobility, provide greater mode choice, and improve environmental quality. The content is interdisciplinary, with guidance pertinent to various levels of government as well as to pedestrians, bicyclists, and motorized vehicles, including trucks and buses. Access management is addressed comprehensively, as a critical part of network and land use planning.</em></p>
+<p><strong>Evaluating the Performance of Corridors with Roundabouts <span class="citation">(<a href="#ref-NAP22348">Transportation Research Board and National Academies of Sciences, Engineering, and Medicine 2014b</a>)</span></strong><br />
+<em>Abstract: TRB’s National Cooperative Highway Research Program (NCHRP) Report 772: Evaluating the Performance of Corridors with Roundabouts provides measurement and evaluation methods for comparing the performance of a corridor with a functionally interdependent series of roundabouts to a corridor with signalized intersections in order to arrive at a design solution.For the purposes of this research, a series of roundabouts is defined as at least three roundabouts that function interdependently on an arterial.</em></p>
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div class="csl-entry">
+AASHTO. 2018. <em>A Policy on Geometric Design of Highways and Streets</em>. 7th ed. Washington, D.C.: American Association of State Highway; Transportation Officials; The National Academies Press.
+</div>
+<div class="csl-entry">
+Allen, D. Patrick, Nagui Rouphail, Joseph E. Hummer, and Joseph S. Milazzo. 1998. <span>“Operational <span>Analysis</span> of <span>Uninterrupted</span> <span>Bicycle</span> <span>Facilities</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 1636 (1): 29–36. <a href="https://doi.org/10.3141/1636-05">https://doi.org/10.3141/1636-05</a>.
+</div>
+<div class="csl-entry">
+Bae, Bumjoon, Brandon C. Whetsel, and Lee D. Han. 2017. <span>“Gray Areas in Isolated Intersection Control-Type Selection: Complementary Decision-Support Tool.”</span> <em>Journal of Transportation Engineering, Part A: Systems</em> 143 (11): 04017055. <a href="https://doi.org/10.1061/JTEPBS.0000085">https://doi.org/10.1061/JTEPBS.0000085</a>.
+</div>
+<div class="csl-entry">
+(BEQI), Bicycle Environmental Quality Index, and Draft. 2009. <em>San Francisco Department of Public Health, San Francisco, California</em>.
+</div>
+<div class="csl-entry">
+Bonneson, James A., and Michael D. Fontaine. 2001. <em>NCHRP Report 457: Engineering Study Guide for Evaluating Intersection Improvements</em>. Washington, DC: The National Academies Press, Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://trid.trb.org/view/688871">https://trid.trb.org/view/688871</a>.
+</div>
+<div class="csl-entry">
+Borgman, Frank. 2003. <span>“<span class="nocase">The Cycle Balance: benchmarking local cycling conditions</span>.”</span> In <em>Sustainable Transport: Planning for Walking and Cycling in Urban Environments</em>, 713. Taylor &amp; Francis Inc.
+</div>
+<div class="csl-entry">
+Botma, Hein. 1995. <span>“<span class="nocase">Method to determine level of service for bicycle paths and pedestrian-bicycle paths</span>.”</span> <em>Transportation Research Record</em>, no. 1502: 38–44.
+</div>
+<div class="csl-entry">
+Callister, D, and M Lowry. 2013. <span>“Tools and <span>Strategies</span> for <span>Wide</span>-<span>Scale</span> <span>Bicycle</span> <span>Level</span>-of-<span>Service</span> <span>Analysis</span>”</span> 139: 250–57.
+</div>
+<div class="csl-entry">
+Danesh, Ali, Wanjing Ma, and Ling Wang. 2023. <span>“Identifying the Adaptability of Different Control Types Based on Delay and Capacity for Isolated Intersection.”</span> <em>Transportation Research Record</em> 2677 (3): 33–45. <a href="https://doi.org/10.1177/03611981221099915">https://doi.org/10.1177/03611981221099915</a>.
+</div>
+<div class="csl-entry">
+Davis, Gary A., John Hourdos, and Jingru Gao. 2023. <em>Criteria and Guidelines for Three-Lane Road Design and Operation</em>. Vol. MN 2023–9. 395 John Ireland Boulevard, MS 330, St. Paul, Minnesota 55155-1899: Minnesota Department of Transportation, Office of Research &amp; Innovation. <a href="https://mdl.mndot.gov/items/202309">https://mdl.mndot.gov/items/202309</a>.
+</div>
+<div class="csl-entry">
+Davis, J. 1987. <span>“Bicycle <span>Safety</span> <span>Evaluation</span>,”</span> June.
+</div>
+<div class="csl-entry">
+Dixon, Linda B. 1996. <span>“Bicycle and <span>Pedestrian</span> <span>Level</span>-of-<span>Service</span> <span>Performance</span> <span>Measures</span> and <span>Standards</span> for <span>Congestion</span> <span>Management</span> <span>Systems</span>.”</span> <em>Transportation Research Record</em> 1538 (1): 1–9. <a href="https://doi.org/10.1177/0361198196153800101">https://doi.org/10.1177/0361198196153800101</a>.
+</div>
+<div class="csl-entry">
+Dowling, Richard, Paul Ryus, Bastian Schroeder, Michael Kyte, Thomas Creasey, Nagui Rouphail, Ali Hajbabaie, and Danica Rhoades. 2016. <em>Planning and Preliminary Engineering Applications Guide to the Highway Capacity Manual</em>. Washington, DC: The National Academies Press. <a href="https://doi.org/10.17226/23632">https://doi.org/10.17226/23632</a>.
+</div>
+<div class="csl-entry">
+Epperson, Bruce. 1994. <span>“Evaluating Suitability of Roadways for Bicycle Use: Toward a Cycling Level-of-Service Standard.”</span> <em>Transportatio6 Research Record</em> 1438: 9–16. <a href="http://dx.doi.org/">http://dx.doi.org/</a>.
+</div>
+<div class="csl-entry">
+FHWA. 2009. <em>Manual on Uniform Traffic Control Devices</em>. 2009th ed. Washington, D.C.: Federal Highway Administration; FHWA. <a href="https://mutcd.fhwa.dot.gov/pdfs/2009/pdf_index.htm">https://mutcd.fhwa.dot.gov/pdfs/2009/pdf_index.htm</a>.
+</div>
+<div class="csl-entry">
+Fitzpatrick, Kay, Marcus A. Brewer, Paul Dorothy, and Eun Sug Park. 2014. <em>NCHRP Report 780: Design Guidance for Intersection Auxiliary Lanes</em>. Washington, DC: The National Academies Press, Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://doi.org/10.17226/22296">https://doi.org/10.17226/22296</a>.
+</div>
+<div class="csl-entry">
+Fitzpatrick, Kay, Marcus A. Brewer, William L. Eisele, Herbert S. Levinson, Jerome S. Gluck, and Matthew R. Lorenz. 2013. <em>NCHRP Report 745: Left-Turn Accommodations at Unsignalized Intersections</em>. Washington, DC: The National Academies Press, Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://doi.org/10.17226/22608">https://doi.org/10.17226/22608</a>.
+</div>
+<div class="csl-entry">
+Florida Department of Transportation Forecasting and Trends Office. 2023. <em>Methodologies for the FDOT Source Book, a Technical Report</em>. Tallahassee, FL: Florida Department of Transportation. <a href="https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/planning/fto/sourcebook/sbmethodology.pdf">https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/planning/fto/sourcebook/sbmethodology.pdf</a>.
+</div>
+<div class="csl-entry">
+Foster, Nick, Christopher M. Monsere, Jennifer Dill, and Kelly Clifton. 2015. <span>“Level-of-<span>Service</span> <span>Model</span> for <span>Protected</span> <span>Bike</span> <span>Lanes</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 2520 (1): 90–99. <a href="https://doi.org/10.3141/2520-11">https://doi.org/10.3141/2520-11</a>.
+</div>
+<div class="csl-entry">
+Furth, Peter G., Maaza C. Mekuria, and Hilary Nixon. 2016. <span>“Network <span>Connectivity</span> for <span>Low</span>-<span>Stress</span> <span>Bicycling</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 2587 (1): 41–49. <a href="https://doi.org/10.3141/2587-06">https://doi.org/10.3141/2587-06</a>.
+</div>
+<div class="csl-entry">
+Gattis, J. L., Jerome S. Gluck, Janet M. Barlow, Ronald W. Eck, William F. Hecker, and Herbert S. Levinson. 2010. <em>NCHRP Report 659: Guide for the Geometric Design of Driveways</em>. Washington, DC: The National Academies Press, Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://doi.org/10.17226/14399">https://doi.org/10.17226/14399</a>.
+</div>
+<div class="csl-entry">
+Geller, Roger. 2006. <span>“<span class="nocase">Four Types of Cyclists</span>.”</span> Portland, Oregon: Portland Office of Transportation. <a href="https://www.portland.gov/sites/default/files/2022/Four Types of Cyclists updated 2009.pdf">https://www.portland.gov/sites/default/files/2022/Four Types of Cyclists updated 2009.pdf</a>.
+</div>
+<div class="csl-entry">
+Gresham Smith and Partners. 2016. <em>SR 109 Access Management Study, Final Report, Prepared for the Nashville Area Metropolitan Planning Organization</em>.
+</div>
+<div class="csl-entry">
+Groot, R. de, and en Wegenbouw en de Verkeerstechniek Centrum voor Regelgeving en Onderzoek in de Grond-Water-. 2007. <em>Design Manual for Bicycle Traffic</em>. C.r.o.w. Record. CROW. <a href="https://books.google.de/books?id=v69iNAAACAAJ">https://books.google.de/books?id=v69iNAAACAAJ</a>.
+</div>
+<div class="csl-entry">
+Groot, R. de, and vervoer en infrastructuur CROW kenniscentrum voor verkeer. 2016. <em>Design Manual for Bicycle Traffic</em>. C.r.o.w. Record. CROW. <a href="https://books.google.de/books?id=FMZOtAEACAAJ">https://books.google.de/books?id=FMZOtAEACAAJ</a>.
+</div>
+<div class="csl-entry">
+Han, Lee D., Jan-Mou (James) Li, and II Thomas Urbanik. 2008. <span>“Control-Type Selection at Isolated Intersections Based on Control Delay Under Various Demand Levels.”</span> <em>Transportation Research Record</em> 2071 (1): 109–16. <a href="https://doi.org/10.3141/2071-13">https://doi.org/10.3141/2071-13</a>.
+</div>
+<div class="csl-entry">
+Harkey, David L. 1998. <span>“<span class="nocase">The Bicycle Compatibility Index: A Level of Service Concept</span>,”</span> no. December 1998: 4. <a href="http://www.hsrc.unc.edu/research/pedbike/98095 and http://www.hsrc.unc.edu/research/pedbike/98072">http://www.hsrc.unc.edu/research/pedbike/98095 and http://www.hsrc.unc.edu/research/pedbike/98072</a>.
+</div>
+<div class="csl-entry">
+Hoedl, Simon, Sylvia Titze, and Pekka Oja. 2010. <span>“The <span>Bikeability</span> and <span>Walkability</span> <span>Evaluation</span> <span>Table</span>.”</span> <em>American Journal of Preventive Medicine</em> 39 (5): 457–59. <a href="https://doi.org/10.1016/j.amepre.2010.07.005">https://doi.org/10.1016/j.amepre.2010.07.005</a>.
+</div>
+<div class="csl-entry">
+Institute of Transportation Engineers (ITE). 2016. <em>Traffic Engineering Handbook</em>. 7th ed. Hoboken, New Jersey: John Wiley &amp; Sons.
+</div>
+<div class="csl-entry">
+Isebrands, Hillary, Shauna Hallmark, and Neal Hawkins. 2014. <span>“Effects of Approach Speed at Rural High-Speed Intersections: Roundabouts Versus Two-Way-Stop Control.”</span> <em>Transportation Research Record</em> 2402 (1): 67–77. <a href="https://doi.org/10.3141/2402-08">https://doi.org/10.3141/2402-08</a>.
+</div>
+<div class="csl-entry">
+Ištoka Otković, Irena, and Ivan Dadić. 2012. <span>“Comparison of Delays at Signal-Controlled Intersection and Roundabout.”</span> <em>Promet - Traffic &amp; Transportation</em> 21 (3): 157–65. <a href="https://doi.org/10.7307/ptt.v21i3.221">https://doi.org/10.7307/ptt.v21i3.221</a>.
+</div>
+<div class="csl-entry">
+Jafari, Amir, Ahmed Al-Kaisy, and Scott S. Washburn. 2018. <span>“Passing Lane Optimum Length on Two-Lane Highways.”</span> <em>Canadian Journal of Civil Engineering</em>. <a href="https://doi.org/10.1139/cjce-2017-0723">https://doi.org/10.1139/cjce-2017-0723</a>.
+</div>
+<div class="csl-entry">
+Jensen, Soren Underlien. 2007. <span>“Pedestrian and <span>Bicyclist</span> <span>Level</span> of <span>Service</span> on <span>Roadway</span> <span>Segments</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 2031 (1): 43–51. <a href="https://doi.org/10.3141/2031-06">https://doi.org/10.3141/2031-06</a>.
+</div>
+<div class="csl-entry">
+Jones, Elizabeth G., and Timothy D. Carlson. 2003. <span>“Development of <span>Bicycle</span> <span>Compatibility</span> <span>Index</span> for <span>Rural</span> <span>Roads</span> in <span>Nebraska</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 1828 (1): 124–32. <a href="https://doi.org/10.3141/1828-15">https://doi.org/10.3141/1828-15</a>.
+</div>
+<div class="csl-entry">
+Kang, Kyungwoo, and Kyeora Lee. 2012. <span>“Development of a Bicycle Level of Service Model from the User’s Perspective.”</span> <em>KSCE Journal of Civil Engineering</em> 16 (6): 1032–39. <a href="https://doi.org/10.1007/s12205-012-1146-z">https://doi.org/10.1007/s12205-012-1146-z</a>.
+</div>
+<div class="csl-entry">
+Kikuchi, Shinya, and Partha Chakroborty. 1991. <span>“Analysis of Left-Turn-Lane Warrants at Unsignalized t-Intersections on Two-Lane Roadways.”</span> <em>Transportation Research Record</em> 1327: 80–88. <a href="https://trid.trb.org/view/365918">https://trid.trb.org/view/365918</a>.
+</div>
+<div class="csl-entry">
+Kittelson &amp; Associates, and Toole Design Group. 2014. <em><span>Montgomery County Bicycle Planning Guidance</span></em>. 1st ed. Montgomery. <a href="http://www.montgomeryplanning.org/transportation/bikeways/documents/FINALBicyclePlanningGuidance.pdf">http://www.montgomeryplanning.org/transportation/bikeways/documents/FINALBicyclePlanningGuidance.pdf</a>.
+</div>
+<div class="csl-entry">
+Landis, Bruce W. 1994. <span>“<span>Bicycle</span> <span>Interaction</span> <span>Hazard</span> <span>Score</span>: <span>A</span> <span>Theoretical</span> <span>Model</span>.”</span> <em>Transportation Research Record</em>, no. 1438. <a href="https://trid.trb.org/view/413761">https://trid.trb.org/view/413761</a>.
+</div>
+<div class="csl-entry">
+Landis, Bruce W., Venkat R. Vattikuti, and Michael T. Brannick. 1997. <span>“Real-<span>Time</span> <span>Human</span> <span>Perceptions</span>: <span>Toward</span> a <span>Bicycle</span> <span>Level</span> of <span>Service</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 1578 (1): 119–26. <a href="https://doi.org/10.3141/1578-15">https://doi.org/10.3141/1578-15</a>.
+</div>
+<div class="csl-entry">
+Lowry, Michael, Daniel Callister, Maureen Gresham, and Brandon Moore. 2012. <span>“<span class="nocase">Assessment of communitywide bikeability with bicycle level of service</span>.”</span> <em>Transportation Research Record</em>, no. 2314: 41–48. <a href="https://doi.org/10.3141/2314-06">https://doi.org/10.3141/2314-06</a>.
+</div>
+<div class="csl-entry">
+Maryland Department of Transportation. 2022. <em><span>MDOT LTS Technical Memo</span></em>. 1st ed. <a href="https://www.mdot.maryland.gov/OPCP/MDOT_LTS_Metadata_Methodology_Full.pdf">https://www.mdot.maryland.gov/OPCP/MDOT_LTS_Metadata_Methodology_Full.pdf</a>.
+</div>
+<div class="csl-entry">
+Massachusetts Department of Transportation. 2015. <em><span>Separated Bike Lane Planning &amp; Design Guide</span></em>. <a href="https://www.mass.gov/lists/separated-bike-lane-planning-design-guide">https://www.mass.gov/lists/separated-bike-lane-planning-design-guide</a>.
+</div>
+<div class="csl-entry">
+Mekuria, Maaza C., Bruce Appleyard, and Hilary Nixon. 2017. <em>Improving Livability Using Green and Active Modes: A Traffic Stress Level Analysis of Transit, Bicycle, and Pedestrian Access and Mobility</em>.
+</div>
+<div class="csl-entry">
+Mekuria, Maaza C, Peter G Furth, and Hilary Nixon. 2012. <span>“<span>Low</span>-<span>Stress</span> <span>Bicycling</span> <span class="nocase">and</span> <span>Network</span> <span>Connectivity</span>,”</span> 84. <a href="https://rosap.ntl.bts.gov/view/dot/24453/dot_24453_DS1.pdf">https://rosap.ntl.bts.gov/view/dot/24453/dot_24453_DS1.pdf</a>.
+</div>
+<div class="csl-entry">
+Minnesota Department of Transportation. 2020.<em><span> 2020 Minnesota Bicycle Facility Design Manual</span></em>. 5th ed. <a href="https://www.dot.state.mn.us/bike/bicycle-facility-design-manual.html">https://www.dot.state.mn.us/bike/bicycle-facility-design-manual.html</a>.
+</div>
+<div class="csl-entry">
+Moreno, Ana Tsui, Santiago Linares-Ramirez, Scott S. Washburn, Ahmed Al-Kaisy, Jorge Barrios, and Bastian Schroeder. 2023. <span>“<a href="">Identification of Potential Improvements to the Highway Capacity Manual Methodology for Rural Bicyclists and Bicyclist Classification</a>.”</span> In <em>Annual Meeting of the Transportation Research Board</em>.
+</div>
+<div class="csl-entry">
+Moreno, Ana Tsui, Carlos Llorca, Annique Lenorzer, Jordi Casas, and Alfredo Garcia. 2015. <span>“Design Criteria for Minimum Passing Zone Lengths: Operational Efficiency and Safety Considerations.”</span> <em>Transportation Research Record</em> 2486: 19–27. <a href="https://doi.org/10.3141/2486-03">https://doi.org/10.3141/2486-03</a>.
+</div>
+<div class="csl-entry">
+Nathalie Noël, Carole Leclerc, and Martin Lee-Gosselin. 2003. <span>“<span>CRC</span> <span>INDEX</span> : <span>Compatibility</span> of <span>Roads</span> for <span>Cyclists</span> in <span>Rural</span> and <span>Urban</span> <span>Fringe</span> <span>Areas</span>.”</span> <em>TRB 2003 Annual Meeting CD-ROM</em>.
+</div>
+<div class="csl-entry">
+New Jersey Department of Transportation. 1980. <em><span class="nocase">NJ DOT Bicycle Compatible Roadways and Bikeways</span></em>. 5th ed. <a href="https://www.state.nj.us/transportation/about/publicat/pdf/BikeComp/introtofac.pdf">https://www.state.nj.us/transportation/about/publicat/pdf/BikeComp/introtofac.pdf</a>.
+</div>
+<div class="csl-entry">
+New Jork State Department of Transportation. 2015. <em><span>Highway Design Manual. Chapter 17 - Bicycle Facility Design</span></em>. 83rd ed. <a href="https://www.dot.ny.gov/divisions/engineering/design/dqab/hdm/hdm-repository/chapt_17.pdf">https://www.dot.ny.gov/divisions/engineering/design/dqab/hdm/hdm-repository/chapt_17.pdf</a>.
+</div>
+<div class="csl-entry">
+Oregon Department of Transportation. 2020. <span>“Analysis Procedures Manual.”</span> In, 2nd ed., 1–1205.
+</div>
+<div class="csl-entry">
+Petritsch, Theodore A., Bruce W. Landis, Herman F. Huang, Peyton S. McLeod, Daniel Lamb, Waddah Farah, and Martin Guttenplan. 2007. <span>“Bicycle <span>Level</span> of <span>Service</span> for <span>Arterials</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 2031 (1): 34–42. <a href="https://doi.org/10.3141/2031-05">https://doi.org/10.3141/2031-05</a>.
+</div>
+<div class="csl-entry">
+Saelens, Brian E., James F. Sallis, Jennifer B. Black, and Diana Chen. 2003. <span>“Neighborhood-<span>Based</span> <span>Differences</span> in <span>Physical</span> <span>Activity</span>: <span>An</span> <span>Environment</span> <span>Scale</span> <span>Evaluation</span>.”</span> <em>American Journal of Public Health</em> 93 (9): 1552–58. <a href="https://doi.org/10.2105/AJPH.93.9.1552">https://doi.org/10.2105/AJPH.93.9.1552</a>.
+</div>
+<div class="csl-entry">
+Sagar Onta, (Denver Engineering). 2018. <span>“<span>2018 AASHTO Bike Guide</span>.”</span>
+</div>
+<div class="csl-entry">
+Schultheiss, Bill, Dan Goodman, Lauren Blackburn, Wood Adam, Dan Reed, and Mary Elbech. 2019. <em>Bikeway Selection Guide</em>. Washington, D.C.: Federal Highway Administration. <a href="https://highways.dot.gov/sites/fhwa.dot.gov/files/2022-07/fhwasa18077.pdf">https://highways.dot.gov/sites/fhwa.dot.gov/files/2022-07/fhwasa18077.pdf</a>.
+</div>
+<div class="csl-entry">
+Stamatiadis, Nikiforos, Adam Kirk, Don Hartman, Jeff Jasper, Samantha Wright, Michael King, and Rick Chellman. 2018. <em>An Expanded Functional Classification System for Highways and Streets</em>. Washington, DC: The National Academies Press. <a href="https://doi.org/10.17226/24775">https://doi.org/10.17226/24775</a>.
+</div>
+<div class="csl-entry">
+Strassen und Verkehrswesen, Forschungsgesellschaft für. 2015. <em>Handbuch f<span>ü</span>r Die Bemessung von Stra<span>ß</span>enverkehrsanlagen:stadtstra<span>ß</span>en. Buch. Teil <span>S</span></em>. Forschungsgesellschaft für Strassen und Verkehrswesen.
+</div>
+<div class="csl-entry">
+Transportation Research Board. 2022. <em>Highway Capacity Manual 7th Edition: A Guide for Multimodal Mobility Analysis</em>. 7th ed. Washington, DC: National Academies of Sciences, Engineering,; Medicine; The National Academies Press. <a href="https://doi.org/10.17226/26432">https://doi.org/10.17226/26432</a>.
+</div>
+<div class="csl-entry">
+Transportation Research Board and National Academies of Sciences, Engineering, and Medicine. 2010. <em>Highway Capacity Manual 2010 (HCM2010)</em>. Washington, DC: The National Academies Press.
+</div>
+<div class="csl-entry">
+———. 2014a. <em>Access Management Manual</em>. Washington, DC: The National Academies Press. <a href="https://www.mytrb.org/MyTRB/Store/Product.aspx?ID=7507">https://www.mytrb.org/MyTRB/Store/Product.aspx?ID=7507</a>.
+</div>
+<div class="csl-entry">
+———. 2014b. <em>Evaluating the Performance of Corridors with Roundabouts</em>. Edited by Lee A. Rodegerdts, Pete M. Jenior, Zachary H. Bugg, Brian L. Ray, Bastian J. Schroeder, and Marcus A. Brewer. Washington, DC: The National Academies Press. <a href="https://doi.org/10.17226/22348">https://doi.org/10.17226/22348</a>.
+</div>
+<div class="csl-entry">
+———. 2022. <em>Rural Transportation Issues: Research Roadmap</em>. Edited by Jaime Sullivan, Karalyn Clouser, and John Shaw. Washington, DC: The National Academies Press. <a href="https://doi.org/10.17226/26343">https://doi.org/10.17226/26343</a>.
+</div>
+<div class="csl-entry">
+Vale, David S., Miguel Saraiva, and Mauro Pereira. 2015. <span>“Active Accessibility: <span>A</span> Review of Operational Measures of Walking and Cycling Accessibility.”</span> <em>Journal of Transport and Land Use</em>, June. <a href="https://doi.org/10.5198/jtlu.2015.593">https://doi.org/10.5198/jtlu.2015.593</a>.
+</div>
+<div class="csl-entry">
+Vlahos, Evdokia, Abhishai Polus, Dan Lacombe, Prakash Ranjitkar, Ardeshir Faghri, and III Bernard R. Fortunato. 2008. <span>“Evaluating the Conversion of All-Way Stop-Controlled Intersections into Roundabouts.”</span> <em>Transportation Research Record</em> 2078 (1): 80–89. <a href="https://doi.org/10.3141/2078-11">https://doi.org/10.3141/2078-11</a>.
+</div>
+<div class="csl-entry">
+Washburn, Scott S. 2005. <em>Improvement of Planning Level Analysis Procedures for Two-Lane Highways, Final Report, Prepared for the Florida Department of Transportation</em>. Tallahassee, FL.
+</div>
+<div class="csl-entry">
+Washburn, Scott S., Ahmed Al-Kaisy, Sajid Raza, Ana Moreno, Bastian Schroeder, and Jorge Barrios. 2023. <em>Reliability and Quality of Service Evaluation Methods for Rural Highways</em>. Washington, D.C.: Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://doi.org/10.17226/">https://doi.org/10.17226/</a>.
+</div>
+<div class="csl-entry">
+Washburn, Scott S., Donald Watson, Zilin Bian, Tapio Luttinen, Ahmed Al-Kaisy, Amirhossein Jafari, Richard Dowling, and Aaron Elias. 2018. <em>Improved Analysis of Two-Lane Highway Capacity and Operational Performance</em>. Washington, D.C.: Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://doi.org/10.17226/25179">https://doi.org/10.17226/25179</a>.
+</div>
+<div class="csl-entry">
+Washington State Department of Transportation. 2020. <em><span class="nocase">Washington State Active Transportation Plan: 2020 and Beyond</span></em>. <span>Washington State Department of Transportation</span>. <a href="https://wsdot.wa.gov/sites/default/files/2021-12/ATP-2020-and-Beyond.pdf">https://wsdot.wa.gov/sites/default/files/2021-12/ATP-2020-and-Beyond.pdf</a>.
+</div>
+<div class="csl-entry">
+———. 2021. <span>“<span>Chapter 1520. Roadway Bicycle Facilities</span>.”</span> In <em>WSDOT Design Manual m 22-01.20</em>, 30. <a href="https://wsdot.wa.gov/publications/manuals/fulltext/M22-01/1520.pdf">https://wsdot.wa.gov/publications/manuals/fulltext/M22-01/1520.pdf</a>.
+</div>
+<div class="csl-entry">
+Xie, Yihui. 2023. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.
+</div>
+<div class="csl-entry">
+Zhou, Longfei, Lin Zhang, and Chun Sen Liu. 2022. <span>“Comparing Roundabouts and Signalized Intersections Through Multiple-Model Simulation.”</span> <em>IEEE Transactions on Intelligent Transportation Systems</em> 23 (7): 7931–40. <a href="https://doi.org/10.1109/TITS.2021.3074787">https://doi.org/10.1109/TITS.2021.3074787</a>.
+</div>
+<div class="csl-entry">
+Zolnik, Edmund J., and Ellen K. Cromley. 2007. <span>“Poisson <span>Multilevel</span> <span>Methodology</span> of <span>Bicycle</span> <span>Levels</span> of <span>Service</span> for <span>Road</span> <span>Networks</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 2031 (1): 1–8. <a href="https://doi.org/10.3141/2031-01">https://doi.org/10.3141/2031-01</a>.
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Bae2017" class="csl-entry">
+Bae, Bumjoon, Brandon C. Whetsel, and Lee D. Han. 2017. <span>“Gray Areas in Isolated Intersection Control-Type Selection: Complementary Decision-Support Tool.”</span> <em>Journal of Transportation Engineering, Part A: Systems</em> 143 (11): 04017055. <a href="https://doi.org/10.1061/JTEPBS.0000085">https://doi.org/10.1061/JTEPBS.0000085</a>.
+</div>
+<div id="ref-NCHRPRep457" class="csl-entry">
+Bonneson, James A., and Michael D. Fontaine. 2001. <em>NCHRP Report 457: Engineering Study Guide for Evaluating Intersection Improvements</em>. Washington, DC: The National Academies Press, Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://trid.trb.org/view/688871">https://trid.trb.org/view/688871</a>.
+</div>
+<div id="ref-Danesh2023" class="csl-entry">
+Danesh, Ali, Wanjing Ma, and Ling Wang. 2023. <span>“Identifying the Adaptability of Different Control Types Based on Delay and Capacity for Isolated Intersection.”</span> <em>Transportation Research Record</em> 2677 (3): 33–45. <a href="https://doi.org/10.1177/03611981221099915">https://doi.org/10.1177/03611981221099915</a>.
+</div>
+<div id="ref-DavisMNDOT" class="csl-entry">
+Davis, Gary A., John Hourdos, and Jingru Gao. 2023. <em>Criteria and Guidelines for Three-Lane Road Design and Operation</em>. Vol. MN 2023–9. 395 John Ireland Boulevard, MS 330, St. Paul, Minnesota 55155-1899: Minnesota Department of Transportation, Office of Research &amp; Innovation. <a href="https://mdl.mndot.gov/items/202309">https://mdl.mndot.gov/items/202309</a>.
+</div>
+<div id="ref-NAP22296" class="csl-entry">
+Fitzpatrick, Kay, Marcus A. Brewer, Paul Dorothy, and Eun Sug Park. 2014. <em>NCHRP Report 780: Design Guidance for Intersection Auxiliary Lanes</em>. Washington, DC: The National Academies Press, Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://doi.org/10.17226/22296">https://doi.org/10.17226/22296</a>.
+</div>
+<div id="ref-NAP22608" class="csl-entry">
+Fitzpatrick, Kay, Marcus A. Brewer, William L. Eisele, Herbert S. Levinson, Jerome S. Gluck, and Matthew R. Lorenz. 2013. <em>NCHRP Report 745: Left-Turn Accommodations at Unsignalized Intersections</em>. Washington, DC: The National Academies Press, Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://doi.org/10.17226/22608">https://doi.org/10.17226/22608</a>.
+</div>
+<div id="ref-NAP14399" class="csl-entry">
+Gattis, J. L., Jerome S. Gluck, Janet M. Barlow, Ronald W. Eck, William F. Hecker, and Herbert S. Levinson. 2010. <em>NCHRP Report 659: Guide for the Geometric Design of Driveways</em>. Washington, DC: The National Academies Press, Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://doi.org/10.17226/14399">https://doi.org/10.17226/14399</a>.
+</div>
+<div id="ref-Han2008" class="csl-entry">
+Han, Lee D., Jan-Mou (James) Li, and II Thomas Urbanik. 2008. <span>“Control-Type Selection at Isolated Intersections Based on Control Delay Under Various Demand Levels.”</span> <em>Transportation Research Record</em> 2071 (1): 109–16. <a href="https://doi.org/10.3141/2071-13">https://doi.org/10.3141/2071-13</a>.
+</div>
+<div id="ref-Isebrands2014" class="csl-entry">
+Isebrands, Hillary, Shauna Hallmark, and Neal Hawkins. 2014. <span>“Effects of Approach Speed at Rural High-Speed Intersections: Roundabouts Versus Two-Way-Stop Control.”</span> <em>Transportation Research Record</em> 2402 (1): 67–77. <a href="https://doi.org/10.3141/2402-08">https://doi.org/10.3141/2402-08</a>.
+</div>
+<div id="ref-Ištoka_Otković_Dadić_2012" class="csl-entry">
+Ištoka Otković, Irena, and Ivan Dadić. 2012. <span>“Comparison of Delays at Signal-Controlled Intersection and Roundabout.”</span> <em>Promet - Traffic &amp; Transportation</em> 21 (3): 157–65. <a href="https://doi.org/10.7307/ptt.v21i3.221">https://doi.org/10.7307/ptt.v21i3.221</a>.
+</div>
+<div id="ref-Jafari2018" class="csl-entry">
+Jafari, Amir, Ahmed Al-Kaisy, and Scott S. Washburn. 2018. <span>“Passing Lane Optimum Length on Two-Lane Highways.”</span> <em>Canadian Journal of Civil Engineering</em>. <a href="https://doi.org/10.1139/cjce-2017-0723">https://doi.org/10.1139/cjce-2017-0723</a>.
+</div>
+<div id="ref-KikuchiChakroborty" class="csl-entry">
+Kikuchi, Shinya, and Partha Chakroborty. 1991. <span>“Analysis of Left-Turn-Lane Warrants at Unsignalized t-Intersections on Two-Lane Roadways.”</span> <em>Transportation Research Record</em> 1327: 80–88. <a href="https://trid.trb.org/view/365918">https://trid.trb.org/view/365918</a>.
+</div>
+<div id="ref-Moreno2015" class="csl-entry">
+Moreno, Ana Tsui, Carlos Llorca, Annique Lenorzer, Jordi Casas, and Alfredo Garcia. 2015. <span>“Design Criteria for Minimum Passing Zone Lengths: Operational Efficiency and Safety Considerations.”</span> <em>Transportation Research Record</em> 2486: 19–27. <a href="https://doi.org/10.3141/2486-03">https://doi.org/10.3141/2486-03</a>.
+</div>
+<div id="ref-TRBAccessManagement" class="csl-entry">
+———. 2014a. <em>Access Management Manual</em>. Washington, DC: The National Academies Press. <a href="https://www.mytrb.org/MyTRB/Store/Product.aspx?ID=7507">https://www.mytrb.org/MyTRB/Store/Product.aspx?ID=7507</a>.
+</div>
+<div id="ref-NAP22348" class="csl-entry">
+———. 2014b. <em>Evaluating the Performance of Corridors with Roundabouts</em>. Edited by Lee A. Rodegerdts, Pete M. Jenior, Zachary H. Bugg, Brian L. Ray, Bastian J. Schroeder, and Marcus A. Brewer. Washington, DC: The National Academies Press. <a href="https://doi.org/10.17226/22348">https://doi.org/10.17226/22348</a>.
+</div>
+<div id="ref-NAP26343" class="csl-entry">
+———. 2022. <em>Rural Transportation Issues: Research Roadmap</em>. Edited by Jaime Sullivan, Karalyn Clouser, and John Shaw. Washington, DC: The National Academies Press. <a href="https://doi.org/10.17226/26343">https://doi.org/10.17226/26343</a>.
+</div>
+<div id="ref-Vlahos2008" class="csl-entry">
+Vlahos, Evdokia, Abhishai Polus, Dan Lacombe, Prakash Ranjitkar, Ardeshir Faghri, and III Bernard R. Fortunato. 2008. <span>“Evaluating the Conversion of All-Way Stop-Controlled Intersections into Roundabouts.”</span> <em>Transportation Research Record</em> 2078 (1): 80–89. <a href="https://doi.org/10.3141/2078-11">https://doi.org/10.3141/2078-11</a>.
+</div>
+<div id="ref-Zhou2022" class="csl-entry">
+Zhou, Longfei, Lin Zhang, and Chun Sen Liu. 2022. <span>“Comparing Roundabouts and Signalized Intersections Through Multiple-Model Simulation.”</span> <em>IEEE Transactions on Intelligent Transportation Systems</em> 23 (7): 7931–40. <a href="https://doi.org/10.1109/TITS.2021.3074787">https://doi.org/10.1109/TITS.2021.3074787</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="CaseStudyMT287.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/NCHRP-08-135/Guidebook/edit/master/20-MitigationStrategies.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Rural Highway Analysis Guidebook.pdf", "Rural Highway Analysis Guidebook.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"toc_depth": 2
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

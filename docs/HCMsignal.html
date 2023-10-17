@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>8 Signalized Intersection Analysis Methodology | Rural-Highway-Analysis-Guidebook.knit</title>
+  <meta name="description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="8 Signalized Intersection Analysis Methodology | Rural-Highway-Analysis-Guidebook.knit" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="8 Signalized Intersection Analysis Methodology | Rural-Highway-Analysis-Guidebook.knit" />
+  
+  <meta name="twitter:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+<meta name="author" content="" />
+
+
+<meta name="date" content="2023-09-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="HCMtwolaneHwy.html"/>
+<link rel="next" href="HCMroundabout.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Rural Highway Analysis Guidebook</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="chapter" data-level="1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#purpose-of-guidebook"><i class="fa fa-check"></i><b>1.1</b> Purpose of Guidebook</a></li>
+<li class="chapter" data-level="1.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-scope-and-limitations"><i class="fa fa-check"></i><b>1.2</b> Guidebook Scope and Limitations</a></li>
+<li class="chapter" data-level="1.3" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-organization"><i class="fa fa-check"></i><b>1.3</b> Guidebook Organization</a></li>
+<li class="chapter" data-level="1.4" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-format"><i class="fa fa-check"></i><b>1.4</b> Guidebook Format</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#navigating-the-document"><i class="fa fa-check"></i><b>1.4.1</b> Navigating the document</a></li>
+<li class="chapter" data-level="1.4.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#ProvidingFeedback"><i class="fa fa-check"></i><b>1.4.2</b> How to provide feedback on this document</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#SupportingResources"><i class="fa fa-check"></i><b>1.5</b> Supporting Resources and Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html"><i class="fa fa-check"></i><b>2</b> Rural Highway Level of Service for Automobiles</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#LOSIntro"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#Segmentation"><i class="fa fa-check"></i><b>2.2</b> Facility Segmentation</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#CrossSection"><i class="fa fa-check"></i><b>2.2.1</b> Cross Section</a></li>
+<li class="chapter" data-level="2.2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#passing-accommodations-for-two-lane-highways"><i class="fa fa-check"></i><b>2.2.2</b> Passing Accommodations for Two-Lane Highways</a></li>
+<li class="chapter" data-level="2.2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#posted-speed-limit-changes"><i class="fa fa-check"></i><b>2.2.3</b> Posted Speed Limit Changes</a></li>
+<li class="chapter" data-level="2.2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#geometric-alignment-considerations"><i class="fa fa-check"></i><b>2.2.4</b> Geometric Alignment Considerations</a></li>
+<li class="chapter" data-level="2.2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#IntxInfluenceArea"><i class="fa fa-check"></i><b>2.2.5</b> Intersections and their Influence Area</a></li>
+<li class="chapter" data-level="2.2.6" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#UrbanStreetClassification"><i class="fa fa-check"></i><b>2.2.6</b> Classification of Urban Street</a></li>
+<li class="chapter" data-level="2.2.7" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#SegMinLength"><i class="fa fa-check"></i><b>2.2.7</b> Practical Minimum Segment Length</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#FacilityLOS"><i class="fa fa-check"></i><b>2.3</b> Segment and Facility LOS Calculation</a></li>
+<li class="chapter" data-level="2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#HotSpots"><i class="fa fa-check"></i><b>2.4</b> Hot Spot Identification</a></li>
+<li class="chapter" data-level="2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#additional-performance-measures-for-facility-evaluation"><i class="fa fa-check"></i><b>2.5</b> Additional Performance Measures for Facility Evaluation</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#emergency-traffic-demand-surge"><i class="fa fa-check"></i><b>2.5.1</b> Emergency Traffic Demand Surge</a></li>
+<li class="chapter" data-level="2.5.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#short-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.2</b> Short-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#seasonal-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.3</b> Seasonal Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#long-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.4</b> Long-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#use-of-probe-vehicle-measured-travel-timesspeeds"><i class="fa fa-check"></i><b>2.5.5</b> Use of Probe-Vehicle Measured Travel Times/Speeds</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html"><i class="fa fa-check"></i><b>3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityIntro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#approach-for-rural-highways"><i class="fa fa-check"></i><b>3.2</b> Approach for Rural Highways</a></li>
+<li class="chapter" data-level="3.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityData"><i class="fa fa-check"></i><b>3.3</b> Data Examined</a></li>
+<li class="chapter" data-level="3.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilitySegmentation"><i class="fa fa-check"></i><b>3.4</b> Segmentation</a></li>
+<li class="chapter" data-level="3.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityDataOverview"><i class="fa fa-check"></i><b>3.5</b> Data Overview</a></li>
+<li class="chapter" data-level="3.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityMethods"><i class="fa fa-check"></i><b>3.6</b> Evaluation Methodologies</a></li>
+<li class="chapter" data-level="3.7" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityHowTo"><i class="fa fa-check"></i><b>3.7</b> Assessing Reliability</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#load-the-data"><i class="fa fa-check"></i><b>3.7.1</b> Load the data</a></li>
+<li class="chapter" data-level="3.7.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#aggregate-the-data"><i class="fa fa-check"></i><b>3.7.2</b> Aggregate the data</a></li>
+<li class="chapter" data-level="3.7.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#heatmaps"><i class="fa fa-check"></i><b>3.7.3</b> Heatmaps</a></li>
+<li class="chapter" data-level="3.7.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.7.4</b> Box-and-Whisker Plots</a></li>
+<li class="chapter" data-level="3.7.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#speed-confidence-band-plots"><i class="fa fa-check"></i><b>3.7.5</b> Speed Confidence Band Plots</a></li>
+<li class="chapter" data-level="3.7.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#travel-time-index-plots"><i class="fa fa-check"></i><b>3.7.6</b> Travel Time Index Plots</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html"><i class="fa fa-check"></i><b>4</b> Bicycle Operations Analysis on Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#overview-of-bicycle-operations-analysis-methods"><i class="fa fa-check"></i><b>4.1</b> Overview of Bicycle Operations Analysis Methods</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#highway-capacity-manual-level-of-service-analysis-methodologies"><i class="fa fa-check"></i><b>4.1.1</b> Highway Capacity Manual Level of Service Analysis Methodologies</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.1.2</b> Level of Traffic Stress Analysis Methodology</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#bicycle-compatibility-index-analysis-methodology"><i class="fa fa-check"></i><b>4.1.3</b> Bicycle Compatibility Index Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#BikeLOS"><i class="fa fa-check"></i><b>4.2</b> Bicycle Level of Service Research Recommendations</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-highway-capacity-manual-level-of-service-for-rural-highways"><i class="fa fa-check"></i><b>4.2.1</b> Revisions to Highway Capacity Manual Level of Service for Rural Highways</a></li>
+<li class="chapter" data-level="4.2.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.2.2</b> Revisions to Level of Traffic Stress Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#guidance-on-current-methods-for-rural-highways"><i class="fa fa-check"></i><b>4.3</b> Guidance on Current Methods for Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#adaptation-to-rural-conditions"><i class="fa fa-check"></i><b>4.3.1</b> Adaptation to Rural Conditions</a></li>
+<li class="chapter" data-level="4.3.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#data-requirements"><i class="fa fa-check"></i><b>4.3.2</b> Data Requirements</a></li>
+<li class="chapter" data-level="4.3.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#applications"><i class="fa fa-check"></i><b>4.3.3</b> Applications</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Part II: HCM Calculations</b></span></li>
+<li class="chapter" data-level="5" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html"><i class="fa fa-check"></i><b>5</b> HCM Automobile LOS Methodologies</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html"><i class="fa fa-check"></i><b>6</b> Multilane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#equations-and-exhibits"><i class="fa fa-check"></i><b>6.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="6.2" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#nomenclature"><i class="fa fa-check"></i><b>6.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html"><i class="fa fa-check"></i><b>7</b> Two-Lane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#equations-and-exhibits-1"><i class="fa fa-check"></i><b>7.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="7.2" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#nomenclature-1"><i class="fa fa-check"></i><b>7.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="HCMsignal.html"><a href="HCMsignal.html"><i class="fa fa-check"></i><b>8</b> Signalized Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="HCMsignal.html"><a href="HCMsignal.html#equations-and-exhibits-2"><i class="fa fa-check"></i><b>8.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="8.2" data-path="HCMsignal.html"><a href="HCMsignal.html#nomenclature-2"><i class="fa fa-check"></i><b>8.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="HCMroundabout.html"><a href="HCMroundabout.html"><i class="fa fa-check"></i><b>9</b> Roundabout Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="HCMroundabout.html"><a href="HCMroundabout.html#equations-and-exhibits-3"><i class="fa fa-check"></i><b>9.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="9.2" data-path="HCMroundabout.html"><a href="HCMroundabout.html#nomenclature-3"><i class="fa fa-check"></i><b>9.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="HCMawsc.html"><a href="HCMawsc.html"><i class="fa fa-check"></i><b>10</b> All-Way Stop-Controlled Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="HCMawsc.html"><a href="HCMawsc.html#equations-and-exhibits-4"><i class="fa fa-check"></i><b>10.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="10.2" data-path="HCMawsc.html"><a href="HCMawsc.html#nomenclature-4"><i class="fa fa-check"></i><b>10.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html"><i class="fa fa-check"></i><b>11</b> Urban Street Facility Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#equations-and-exhibits-5"><i class="fa fa-check"></i><b>11.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="11.2" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#nomenclature-5"><i class="fa fa-check"></i><b>11.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="HCMbicycle.html"><a href="HCMbicycle.html"><i class="fa fa-check"></i><b>12</b> Bicycle LOS Methodologies</a></li>
+<li class="chapter" data-level="13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html"><i class="fa fa-check"></i><b>13</b> Rural Highway Example Calculations</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-input-data"><i class="fa fa-check"></i><b>13.1</b> Segment Input Data</a></li>
+<li class="chapter" data-level="13.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations"><i class="fa fa-check"></i><b>13.2</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#first-iteration-uses-input-segment-lengths"><i class="fa fa-check"></i><b>13.2.1</b> First iteration uses input segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#influence-area-calculations"><i class="fa fa-check"></i><b>13.3</b> Influence Area Calculations</a></li>
+<li class="chapter" data-level="13.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-segment-length-calculations"><i class="fa fa-check"></i><b>13.4</b> Adjusted Segment Length Calculations</a></li>
+<li class="chapter" data-level="13.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations-1"><i class="fa fa-check"></i><b>13.5</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#second-iteration-uses-adjusted-segment-lengths"><i class="fa fa-check"></i><b>13.5.1</b> Second iteration uses adjusted segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#facility-calculations"><i class="fa fa-check"></i><b>13.6</b> Facility Calculations</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#posted-speed-travel-time-s"><i class="fa fa-check"></i><b>13.6.1</b> Posted Speed Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#free-flow-travel-time-s"><i class="fa fa-check"></i><b>13.6.2</b> Free-Flow Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#average-travel-time-s"><i class="fa fa-check"></i><b>13.6.3</b> Average Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#travel-time-segment-weights"><i class="fa fa-check"></i><b>13.6.4</b> Travel Time Segment Weights</a></li>
+<li class="chapter" data-level="13.6.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-demand-volumes"><i class="fa fa-check"></i><b>13.6.5</b> Adjusted Demand Volumes</a></li>
+<li class="chapter" data-level="13.6.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-hours-traveled-veh-h"><i class="fa fa-check"></i><b>13.6.6</b> Vehicle Hours Traveled (veh-h)</a></li>
+<li class="chapter" data-level="13.6.7" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#total-delay-veh-h"><i class="fa fa-check"></i><b>13.6.7</b> Total Delay (veh-h)</a></li>
+<li class="chapter" data-level="13.6.8" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-miles-traveled-veh-mi"><i class="fa fa-check"></i><b>13.6.8</b> Vehicle Miles Traveled (veh-mi)</a></li>
+<li class="chapter" data-level="13.6.9" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#space-mean-speed-mih"><i class="fa fa-check"></i><b>13.6.9</b> Space Mean Speed (mi/h)</a></li>
+<li class="chapter" data-level="13.6.10" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#ffs-delay-sveh"><i class="fa fa-check"></i><b>13.6.10</b> FFS Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.11" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#threshold-delay-sveh"><i class="fa fa-check"></i><b>13.6.11</b> Threshold Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.12" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-constancy"><i class="fa fa-check"></i><b>13.6.12</b> LOS Constancy</a></li>
+<li class="chapter" data-level="13.6.13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-adjustment-factor"><i class="fa fa-check"></i><b>13.6.13</b> LOS Adjustment Factor</a></li>
+<li class="chapter" data-level="13.6.14" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#final-los-score"><i class="fa fa-check"></i><b>13.6.14</b> Final LOS Score</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="CompEngine.html"><a href="CompEngine.html"><i class="fa fa-check"></i><b>14</b> Computational Engine Overview</a></li>
+<li class="part"><span><b>Part III: Case Studies</b></span></li>
+<li class="chapter" data-level="15" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html"><i class="fa fa-check"></i><b>15</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#supporting-material"><i class="fa fa-check"></i><b>15.1</b> Supporting Material</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#kml-files"><i class="fa fa-check"></i>KML Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#computational-engine-input-files"><i class="fa fa-check"></i>Computational Engine Input Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#probe-vehicle-data-analysis-scripting-code"><i class="fa fa-check"></i>Probe Vehicle Data Analysis Scripting Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html"><i class="fa fa-check"></i><b>16</b> Case Study: Oregon US-20</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#route-description"><i class="fa fa-check"></i><b>16.1</b> Route Description</a></li>
+<li class="chapter" data-level="16.2" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#level-of-service"><i class="fa fa-check"></i><b>16.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#segmentation"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#traffic-data"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#additional-data-inputs-for-intersections"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#results"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#reliability"><i class="fa fa-check"></i><b>16.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-heatmaps"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-difference-heatmaps"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#box-and-whisker-speed-plots"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-confidence-band"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#travel-time-index"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html"><i class="fa fa-check"></i><b>17</b> Case Study: Tennessee SR-109</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#route-description-1"><i class="fa fa-check"></i><b>17.1</b> Route Description</a></li>
+<li class="chapter" data-level="17.2" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#level-of-service-1"><i class="fa fa-check"></i><b>17.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#segmentation-1"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#traffic-data-1"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#additional-data-inputs-for-intersections-1"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#results-1"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#reliability-1"><i class="fa fa-check"></i><b>17.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-heatmaps-1"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-difference-heatmaps-1"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#box-and-whisker-speed-plots-1"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-confidence-band-1"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#travel-time-index-1"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#summary-1"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html"><i class="fa fa-check"></i><b>18</b> Case Study: Ohio US-42</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#route-description-2"><i class="fa fa-check"></i><b>18.1</b> Route Description</a></li>
+<li class="chapter" data-level="18.2" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#level-of-service-2"><i class="fa fa-check"></i><b>18.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#segmentation-2"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#traffic-data-2"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#additional-data-inputs-for-intersections-2"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#results-2"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#reliability-2"><i class="fa fa-check"></i><b>18.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-heatmaps-2"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-difference-heatmaps-2"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#box-and-whisker-speed-plots-2"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-confidence-band-2"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#travel-time-index-2"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#summary-2"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html"><i class="fa fa-check"></i><b>19</b> Case Study: Montana US-287</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#route-description-3"><i class="fa fa-check"></i><b>19.1</b> Route Description</a></li>
+<li class="chapter" data-level="19.2" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#level-of-service-3"><i class="fa fa-check"></i><b>19.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#segmentation-3"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#traffic-data-3"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#results-3"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Appendixes</b></span></li>
+<li class="chapter" data-level="A" data-path="AppendixA.html"><a href="AppendixA.html"><i class="fa fa-check"></i><b>A</b> Mitigation Strategies</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="AppendixA.html"><a href="AppendixA.html#general"><i class="fa fa-check"></i><b>A.1</b> General</a></li>
+<li class="chapter" data-level="A.2" data-path="AppendixA.html"><a href="AppendixA.html#multilane-highways"><i class="fa fa-check"></i><b>A.2</b> Multilane Highways</a></li>
+<li class="chapter" data-level="A.3" data-path="AppendixA.html"><a href="AppendixA.html#two-lane-highways"><i class="fa fa-check"></i><b>A.3</b> Two-Lane Highways</a></li>
+<li class="chapter" data-level="A.4" data-path="AppendixA.html"><a href="AppendixA.html#intersections"><i class="fa fa-check"></i><b>A.4</b> Intersections</a></li>
+<li class="chapter" data-level="A.5" data-path="AppendixA.html"><a href="AppendixA.html#arterials"><i class="fa fa-check"></i><b>A.5</b> Arterials</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/NCHRP-08-135/Guidebook" target="blank">View Book Source</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="HCMsignal" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">8</span> Signalized Intersection Analysis Methodology<a href="HCMsignal.html#HCMsignal" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The core signalized intersection analysis methodology is contained in Chapter 19 (Signalized Intersections). The motorized vehicle analysis methodology process is given in Exhibit 19-18 (p. 19-42). The methodology applied for the analysis of signalized intersections within the context of a rural highway analysis makes use of elements from both the operations-level and planning-level analysis methodologies. The planning-level elements are contained in Chapter 31 (Signalized Intersections: Supplemental). The specific equation and exhibit numbers utilized in the methodology, in the general order in which they are applied, are as follows.</p>
+<div id="equations-and-exhibits-2" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Equations and Exhibits<a href="HCMsignal.html#equations-and-exhibits-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Step 1: Determine Movement Groups and Lane Groups</strong></p>
+<ul>
+<li>Exhibit 19-19: Typical Movement Groups and Lane Groups</li>
+</ul>
+<p>Exhibit 19-19 shows typical movement and lane group designations for a varying number of approach lanes. It, however, is not an exhaustive list. Follow the guidance as provided in the HCM text under this step. Apply engineering judgement as necessary. The analysis is based on the through movement in the analysis direction.</p>
+<p><strong>Step 2: Determine Movement Group Flow Rate</strong></p>
+<p>Follow the guidance as provided in the HCM text under this step. Apply engineering judgement as necessary.</p>
+<p><strong>Step 3: Determine Lane Group Flow Rate</strong></p>
+<p>Follow the guidance as provided in the HCM text under this step. Apply engineering judgement as necessary.</p>
+<p><strong>Step 4: Determine Adjusted Saturation Flow Rate</strong></p>
+<ul>
+<li>Equation 19-8: Estimate adjusted saturation flow rate; Uses results from Eq. 19-9 - 19-14 and Exhibit 19-20</li>
+</ul>
+<p><span class="math display">\[s = s_{o} f_{w} f_{HVg} f_{p} f_{bb} f_{a} f_{LU} f_{LT} f_{RT} f_{Lpb} f_{Rpb} f_{wz} f_{ms} f_{sp} \tag{HCM Eq. 19-8}\]</span></p>
+<div class="graybox">
+<div class="center">
+<p><strong>Methodology Simplification</strong></p>
+</div>
+<p>For intersections located along rural highways, the following factors are not considered. Thus, the corresponding adjustment factor value for each variable is assumed to be 1.0.</p>
+<p><span class="math inline">\(f_{a}\)</span> = adjustment factor for area type (adjustment usually only applied to intersections in central business districts)
+<span class="math inline">\(f_{bb}\)</span> = adjustment factor for bus blockage (Equation 19-12)<br />
+<span class="math inline">\(f_{Lpb}\)</span> = pedestrian adjustment factor for left-turn groups (procedure in HCM Chapter 31)<br />
+<span class="math inline">\(f_{Rpb}\)</span> = pedestrian–bicycle adjustment factor for right-turn groups (procedure in HCM Chapter 31)<br />
+<span class="math inline">\(f_{wz}\)</span> = adjustment factor for work zone presence at the intersection (procedure in HCM Chapter 31)<br />
+<span class="math inline">\(f_{ms}\)</span> = adjustment factor for downstream lane blockage (procedure in HCM Chapter 30)<br />
+<span class="math inline">\(f_{sp}\)</span> = adjustment factor for sustained spillback (procedure in HCM Chapter 29)</p>
+<p>Consequently, Eq. 19-8 simplifies to <span class="math inline">\(s = s_{o} f_{w} f_{HVg} f_{p} f_{LU} f_{LT} f_{RT}\)</span></p>
+</div>
+<ul>
+<li>Base saturation flow rate: Per Exhibit 19-11, a value of 1750 pc/h/ln is used (applies to areas with a population less than 250,000)</li>
+<li>Exhibit 19-20: Lane Width Adjustment Factor</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Average Lane Width (ft) </strong></th>
+<th align="center"><strong>Adjustment Factor <span class="math inline">\(f_w\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">&lt; 10.0</td>
+<td align="center">0.96</td>
+</tr>
+<tr class="even">
+<td align="center">≥ 10.0-12.9</td>
+<td align="center">1.00</td>
+</tr>
+<tr class="odd">
+<td align="center">&gt; 12.9</td>
+<td align="center">1.04</td>
+</tr>
+</tbody>
+</table>
+<p>Note: Factors apply to average lane widths of 8.0 ft or more</p>
+<div class="graybox">
+<div class="center">
+<p><strong>Methodology Simplification</strong></p>
+</div>
+<p>The adjustment for heavy vehicles uses the inverse of Eq. 31-158 in lieu of Eqs. 19-9 and 19-20. With this simplification, the roadway grade is also not considered in the impact of heavy vehicles on saturation flow rate.</p>
+</div>
+<ul>
+<li>Adjustment for Heavy Vehicles
+<ul>
+<li>First calculate the heavy vehicle equivalency factor using Equation 31-158. For planning, <span class="math inline">\(E_T\)</span>, the equivalent number of through cars for each heavy vehicle, is assumed to be 2.0.</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[E_{HV} = 1+0.01 P_{HV} (E_T-1) \tag{HCM Eq. 31-158}\]</span>
+In the full planning approach, this value is applied directly to adjust the demand volume. However, in this approach, the inverse of this value is applied as an adjustment to the base saturation flow rate, as follows.</p>
+<p><span class="math display">\[f_{HV} = \frac{1}{E_{HV}}\]</span>
+<span class="math inline">\(f_{HV}\)</span> is used for <span class="math inline">\(f_{HVg}\)</span> in Eq. 19-8.</p>
+<div class="graybox">
+<div class="center">
+<p><strong>Methodology Simplification</strong></p>
+</div>
+<p>Exhibit 31-35 is used in lieu of Equation 19-11 (adjustment factor for parking)</p>
+</div>
+<ul>
+<li>Exhibit 31-35: Equivalency Factor for Parking Activity (Planning-Level Analysis); The <span class="math inline">\(f_{p}\)</span> value is calculated as the inverse of the value selected from Exhibit 31-25</li>
+</ul>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>On-Street Parking Presence</strong></th>
+<th align="center"><strong>No. of Lanes in Lane Group</strong></th>
+<th align="center"><strong>Equivalency Factor for Parking Activity <span class="math inline">\(E_p\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">No</td>
+<td align="center">All</td>
+<td align="center">1.0</td>
+</tr>
+<tr class="even">
+<td align="center">Yes</td>
+<td align="center">1</td>
+<td align="center">1.2</td>
+</tr>
+<tr class="odd">
+<td align="center">Yes</td>
+<td align="center">2</td>
+<td align="center">1.1</td>
+</tr>
+<tr class="even">
+<td align="center">Yes</td>
+<td align="center">3</td>
+<td align="center">1.05</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Adjustment for area type: A value of 1.0 is used, for non-Central Business District (CBD) areas</li>
+</ul>
+<div class="graybox">
+<div class="center">
+<p><strong>Methodology Simplification</strong></p>
+</div>
+<p>Exhibit 19-15 is used in lieu of Equation 19-7 (adjustment factor for lane utilization)</p>
+</div>
+<ul>
+<li>Exhibit 19-15: Default Lane Utilization Adjustment Factors</li>
+</ul>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Movement Group</strong></th>
+<th align="center"><strong>No. of Lanes in Movement Group (ln)</strong></th>
+<th align="center"><strong>Traffic in Most Heavily Traveled Lane (%)</strong></th>
+<th align="center"><strong>Lane Utilization Adjustment Factor <span class="math inline">\(f_{LU}\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Exclusive through</td>
+<td align="center">1</td>
+<td align="center">100.0</td>
+<td align="center">1.000</td>
+</tr>
+<tr class="even">
+<td align="center">Exclusive through</td>
+<td align="center">2</td>
+<td align="center">52.5</td>
+<td align="center">0.952</td>
+</tr>
+<tr class="odd">
+<td align="center">Exclusive through</td>
+<td align="center">3</td>
+<td align="center">36.7</td>
+<td align="center">0.908</td>
+</tr>
+<tr class="even">
+<td align="center">Exclusive left turn</td>
+<td align="center">1</td>
+<td align="center">100.0</td>
+<td align="center">1.000</td>
+</tr>
+<tr class="odd">
+<td align="center">Exclusive left turn</td>
+<td align="center">2</td>
+<td align="center">51.5</td>
+<td align="center">0.971</td>
+</tr>
+<tr class="even">
+<td align="center">Exclusive right turn</td>
+<td align="center">1</td>
+<td align="center">100.0</td>
+<td align="center">1.000</td>
+</tr>
+<tr class="odd">
+<td align="center">Exclusive right turn</td>
+<td align="center">2</td>
+<td align="center">56.5</td>
+<td align="center">0.88</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Equation 19-13: Adjustment for right turns
+<ul>
+<li>The equivalent number of through cars for a protected right-turning vehicle (<span class="math inline">\(E_{R}\)</span>) is set to a value of 1.18 for protected right-turning vehicles; If the right-turn movement is permitted or shares a lane with another movement, the <span class="math inline">\(E_{R}\)</span> value is selected from Exhibit 31-34. In the latter case, it is assumed that pedestrian activity at rural intersections is low; thus, <span class="math inline">\(E_R\)</span> = 1.2.</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[f_{RT} = \frac{1}{E_{R}} \tag{HCM Eq. 19-13}\]</span></p>
+<ul>
+<li>Exhibit 31-34: Planning-Level Analysis–Equivalency Factor for Right Turns</li>
+</ul>
+<table>
+<colgroup>
+<col width="44%" />
+<col width="28%" />
+<col width="28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><strong>Level of Pedestrian Activity</strong></th>
+<th align="center"><strong>Pedestrian Volume (p/h)</strong></th>
+<th align="center"><strong>Equivalency Factor for Right Turns <span class="math inline">\(E_RT\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">None or low</td>
+<td align="center">0-199</td>
+<td align="center">1.2</td>
+</tr>
+<tr class="even">
+<td align="left">Moderate</td>
+<td align="center">200-399</td>
+<td align="center">1.3</td>
+</tr>
+<tr class="odd">
+<td align="left">High</td>
+<td align="center">400-799</td>
+<td align="center">1.5</td>
+</tr>
+<tr class="even">
+<td align="left">Extreme</td>
+<td align="center"><span class="math inline">\(\geq\)</span> 800</td>
+<td align="center">2.1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Equation 19-14: Adjustment for left turns
+<ul>
+<li>The equivalent number of through cars for a protected left-turning vehicle (<span class="math inline">\(E_{L}\)</span>) is set to a value of 1.05 for protected left-turning vehicles; If the left-turn movement is permitted or shares a lane with another movement, the <span class="math inline">\(E_{L}\)</span> value is selected from Exhibit 31-33</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[f_{LT} = \frac{1}{E_{L}} \tag{HCM Eq. 19-14}\]</span></p>
+<ul>
+<li>Exhibit 31-33: Planning-Level Analysis–Equivalency Factor for Left Turns</li>
+</ul>
+<table>
+<colgroup>
+<col width="66%" />
+<col width="17%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><strong>Left-Turn Operation</strong></th>
+<th align="left"><strong>Total Opposing Volume <span class="math inline">\(V_o\)</span> (veh/h)^</strong></th>
+<th align="center"><strong>Equivalency Factor for Left Turns <span class="math inline">\(E_LT\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Protected—with left-turn phase</td>
+<td align="left">Any</td>
+<td align="center">1.05</td>
+</tr>
+<tr class="even">
+<td align="left">Protected—split phasing</td>
+<td align="left">Any</td>
+<td align="center">1.05</td>
+</tr>
+<tr class="odd">
+<td align="left">Permitted—no left-turn phase</td>
+<td align="left">&lt; 200</td>
+<td align="center">1.1</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">200–599</td>
+<td align="center">2.0</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">600–799</td>
+<td align="center">3.0</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">800–999</td>
+<td align="center">4.0</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><span class="math inline">\(\geq\)</span> 1,000</td>
+<td align="center">5.0</td>
+</tr>
+</tbody>
+</table>
+<p>^ Includes the sum of through and right-turn volumes on the opposing approach, regardless of whether the right-turn volume is served in an exclusive right-turn lane</p>
+<p><strong>Step 5: Determine Proportion Arriving During Green</strong></p>
+<div class="graybox">
+<div class="center">
+<p><strong>Methodology Simplification</strong></p>
+</div>
+<p>For isolated intersections as well as intersections that are part of a coordinated system (the latter is discussed further under the Urban Street Facilities section), the arrival type is used as a simplification for estimating the proportion of vehicle arrivals on green. Thus, an analyst-selected arrival type is used to obtain a platoon ratio, <span class="math inline">\(R_{p}\)</span>, value, from Exhibit 19-13 (Relationship between arrival type and progression quality). This platoon ratio is used with the <span class="math inline">\(g/C\)</span> ratio in Equation 19-15 to estimate the proportion of vehicle arrivals on green.</p>
+</div>
+<p>Exhibit 19-13: Relationship Between Arrival Type and Progression Quality</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Platoon Ratio</strong></th>
+<th align="center"><strong>Arrival Type</strong></th>
+<th align="center"><strong>Progression Quality</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0.33</td>
+<td align="center">1</td>
+<td align="center">Very poor</td>
+</tr>
+<tr class="even">
+<td align="center">0.67</td>
+<td align="center">2</td>
+<td align="center">Unfavorable</td>
+</tr>
+<tr class="odd">
+<td align="center">1.00</td>
+<td align="center">3</td>
+<td align="center">Random arrivals</td>
+</tr>
+<tr class="even">
+<td align="center">1.33</td>
+<td align="center">4</td>
+<td align="center">Favorable</td>
+</tr>
+<tr class="odd">
+<td align="center">1.67</td>
+<td align="center">5</td>
+<td align="center">Highly favorable</td>
+</tr>
+<tr class="even">
+<td align="center">2.00</td>
+<td align="center">6</td>
+<td align="center">Exceptionally favorable</td>
+</tr>
+</tbody>
+</table>
+<p>The platoon ratio (<span class="math inline">\(R_{p}\)</span>) and effective green-to-cycle length ratio (<span class="math inline">\(g/C\)</span>) are used with equation 19-15 to calculate the proportion of vehicle arrivals on green (<span class="math inline">\(P\)</span> or <span class="math inline">\(PVG\)</span>).</p>
+<ul>
+<li>Equation 19-15: Proportion Arriving During Green</li>
+</ul>
+<p><span class="math display">\[P = R_{p}(g/C) \tag{HCM Eq. 19-15}\]</span></p>
+<p><strong>Step 6: Determine Signal Phase Duration</strong></p>
+<div class="graybox">
+<div class="center">
+<p><strong>Methodology Simplification</strong></p>
+</div>
+<p>Pre-timed signal control is assumed. If the signal is actuated, use field-measured average green times for the analysis period of interest.</p>
+</div>
+<p>The effective green time (<em>g</em>) for the major roadway through movement, in the analysis direction, and signal cycle length (<em>C</em>) need to be input directly by the analyst. Thus, the yellow and all-red times should be reflected in the effective green time input as appropriate. If signal timing data are not readily available, refer to HCM equations 31-67 - 31-69 (from Chapter 31, Signalized Intersections: Supplemental) to estimate green times and cycle length.</p>
+<p><strong>Step 7: Determine Capacity and Volume-to-Capacity Ratio</strong></p>
+<ul>
+<li>Equation 19-16: Estimate lane group capacity; This equation is applied to the lane group serving the major roadway through movement, for the analysis direction.</li>
+</ul>
+<p><span class="math display">\[c = {N}{s} \frac{g}{C} \tag{HCM Eq. 19-16}\]</span></p>
+<ul>
+<li>Equation 19-17: Estimate volume-to-capacity ratio; This equation is applied to the lane group serving the major roadway through movement, for the analysis direction; Uses result from Eq. 19-16</li>
+</ul>
+<p><span class="math display">\[X = \frac{v}{c} \tag{HCM Eq. 19-17}\]</span></p>
+<p><strong>Step 8: Determine Delay</strong></p>
+<div class="graybox">
+<div class="center">
+<p><strong>Methodology Simplification</strong></p>
+</div>
+<p>Because it is highly unlikely for signalized intersections along rural highways to experience sustained oversaturated conditions, the <span class="math inline">\(d_3\)</span> term (initial queue delay) in Eq. 19-18 below is assumed to be zero.</p>
+</div>
+<ul>
+<li>Equation 19-18: Estimate control delay; This equation is applied to the lane group serving the major roadway through movement, for the analysis direction.</li>
+</ul>
+<p><span class="math display">\[d = d_{1} + d_{2} + d_{3} \tag{HCM Eq. 19-18}\]</span></p>
+<ul>
+<li>Equation 19-19: Estimate uniform delay; Uses result from Eq. 19-20</li>
+</ul>
+<p><span class="math display">\[d_{1} = {P}{F} \frac{0.5 {C}(1-g/C)^2} {1- [\text{min}(1,X) g/C]} \tag{HCM Eq. 19-19}\]</span></p>
+<ul>
+<li>Equation 19-20: Estimate progression adjustment factor; Uses result from Eq. 19-21</li>
+</ul>
+<p><span class="math display">\[{P}{F} = \frac{1-P}{1- g/C} \times \frac{1-y}{1-\text{min}(1,X){P}} \times \left[ 1 + y \frac {1-{P} C/g} {1-g/C} \right] \tag{HCM Eq. 19-20}\]</span></p>
+<ul>
+<li>Equation 19-21: Estimate flow ratio</li>
+</ul>
+<p><span class="math display">\[y = \text{min}(1,X) g/C \tag{HCM Eq. 19-21}\]</span></p>
+<ul>
+<li>Equation 19-26: Estimate incremental delay; Uses results from Eq. 19-27</li>
+</ul>
+<p><span class="math display">\[d_{2} = 900T \left[ (X_{A}-1) + \sqrt{(X_{A}-1)^2 + \frac{8kIX_{A}}{c_{A}T}} \right] \tag{HCM Eq. 19-26}\]</span></p>
+<ul>
+<li>Equation 19-27: Estimate average volume-to-capacity ratio; No initial queue is assumed, thus result will be same as that calculated with equation 19-17</li>
+</ul>
+<p><span class="math display">\[X_{A} = v/c_{A} \tag{HCM Eq. 19-27}\]</span></p>
+<ul>
+<li>The incremental delay factor (<em>k</em>) used in this equation is set to 0.5, for pretimed control</li>
+<li>The upstream filtering adjustment factor (<em>I</em>) used in this equation is set to 1.0, for isolated intersection</li>
+</ul>
+<p><strong>Step 9: Determine Level of Service</strong></p>
+<ul>
+<li>Exhibit 19-8: LOS Criteria (Motorized Vehicle Mode); The LOS is determined for the major roadway through movement, for the analysis direction.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Control Delay (s/veh)</strong></th>
+<th align="center"><strong>LOS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\leq\)</span> 10</td>
+<td align="center">A</td>
+</tr>
+<tr class="even">
+<td align="center">&gt; 10-20</td>
+<td align="center">B</td>
+</tr>
+<tr class="odd">
+<td align="center">&gt; 20-35</td>
+<td align="center">C</td>
+</tr>
+<tr class="even">
+<td align="center">&gt; 35-55</td>
+<td align="center">D</td>
+</tr>
+<tr class="odd">
+<td align="center">&gt; 55-80</td>
+<td align="center">E</td>
+</tr>
+<tr class="even">
+<td align="center">&gt; 80</td>
+<td align="center">F</td>
+</tr>
+</tbody>
+</table>
+<p>If the <span class="math inline">\(v/c\)</span> &gt; 1.0, the LOS is F.</p>
+</div>
+<div id="nomenclature-2" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Nomenclature<a href="HCMsignal.html#nomenclature-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(C\)</span> = cycle length (s)<br />
+<span class="math inline">\(c\)</span> = capacity (veh/h)<br />
+<span class="math inline">\(c_{A}\)</span> = average lane-group capacity (veh/h)<br />
+<span class="math inline">\(d\)</span> = control delay (s/veh)<br />
+<span class="math inline">\(d_{1}\)</span> = uniform delay (s/veh)<br />
+<span class="math inline">\(d_{2}\)</span> = incremental delay (s/veh)<br />
+<span class="math inline">\(d_{3}\)</span> = initial queue delay (s/veh)<br />
+<span class="math inline">\(d_{i}\)</span> = control delay for approach <em>i</em> (s/veh)<br />
+<span class="math inline">\(d_{intersection}\)</span> = control delay for the entire intersection (s/veh)<br />
+<span class="math inline">\(E_{HV}\)</span> = equivalency factor for heavy vehicles<br />
+<span class="math inline">\(E_{L}\)</span> = equivalent number of through cars for a protected left-turning vehicle (= 1.05)<br />
+<span class="math inline">\(E_{R}\)</span> = equivalent number of through cars for a protected right-turning vehicle (= 1.18)<br />
+<span class="math inline">\(f_{a}\)</span> = adjustment factor for area type<br />
+<span class="math inline">\(f_{bb}\)</span> = adjustment factor for blocking effect of local buses that stop within intersection area<br />
+<span class="math inline">\(f_{HV}\)</span> = adjustment factor for heavy vehicles<br />
+<span class="math inline">\(f_{HVg}\)</span> = adjustment factor for heavy vehicles and grade<br />
+<span class="math inline">\(f_{Lpb}\)</span> = pedestrian adjustment factor for left-turn groups<br />
+<span class="math inline">\(f_{LT}\)</span> = adjustment factor for left-turn vehicle presence in a lane group<br />
+<span class="math inline">\(f_{LU}\)</span> = adjustment factor for lane utilization<br />
+<span class="math inline">\(f_{ms}\)</span> = adjustment factor for downstream lane blockage<br />
+<span class="math inline">\(f_{p}\)</span> = adjustment factor for existence of a parking lane and parking activity adjacent to lane group<br />
+<span class="math inline">\(f_{Rpb}\)</span> = pedestrian-bicycle adjustment factor for right-turn groups<br />
+<span class="math inline">\(f_{RT}\)</span> = adjustment factor for right-turn vehicle presence in a lane group<br />
+<span class="math inline">\(f_{sp}\)</span> = adjustment factor for sustained spillback<br />
+<span class="math inline">\(f_{w}\)</span> = adjustment factor for lane width<br />
+<span class="math inline">\(f_{wz}\)</span> = adjustment factor for work zone presence at the intersection<br />
+<span class="math inline">\(g\)</span> = effective green time (s)<br />
+<span class="math inline">\(I\)</span> = upstream filtering adjustment factor, standalone <span class="math inline">\(I\)</span> = 1.0; for urban streets <em>I</em> is calculated per HCM Equation 19-6, <span class="math inline">\(I = 1.0 - 0.91X_{u}^{2.68} \geq 0.090\)</span><br />
+<span class="math inline">\(k\)</span> = incremental delay factor<br />
+<span class="math inline">\(N\)</span> = number of lanes in lane group (ln)<br />
+<span class="math inline">\(N_{b}\)</span> = bus stopping rate on the subject approach (buses/h)<br />
+<span class="math inline">\(P\)</span> = proportion of vehicles arriving during the green indication (decimal)<br />
+<span class="math inline">\(P_{g}\)</span> = approach grade for the corresponding movement group (%)<br />
+<span class="math inline">\(P_{HV}\)</span> = percentage of heavy vehicles in the corresponding movement group (%)<br />
+<span class="math inline">\(PF\)</span> = progression adjustment factor<br />
+<span class="math inline">\(R_{p}\)</span> = platoon ratio<br />
+<span class="math inline">\(s\)</span> = adjusted saturation flow rate (veh/h/ln)<br />
+<span class="math inline">\(s_{o}\)</span> = base saturation flow rate (pc/h/ln)<br />
+<span class="math inline">\(T\)</span> = analysis period (h) (T=0.25 h for 15-min analysis)<br />
+<span class="math inline">\(v\)</span> = demand flow rate (veh/h)<br />
+<span class="math inline">\(X\)</span> = volume-to-capacity ratio<br />
+<span class="math inline">\(X_{A}\)</span> = average volume-to-capacity ratio<br />
+<span class="math inline">\(X_{u}\)</span> = weighted volume-to-capacity ratio for all upstream movements contributing to the volume in the subject movement group<br />
+<span class="math inline">\(y\)</span> = flow ratio</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="HCMtwolaneHwy.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="HCMroundabout.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/NCHRP-08-135/Guidebook/edit/master/08-HCMmethods-Signal.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Rural Highway Analysis Guidebook.pdf", "Rural Highway Analysis Guidebook.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"toc_depth": 2
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

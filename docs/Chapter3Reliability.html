@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Reliability | Rural-Highway-Analysis-Guidebook.knit</title>
+  <meta name="description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Reliability | Rural-Highway-Analysis-Guidebook.knit" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Reliability | Rural-Highway-Analysis-Guidebook.knit" />
+  
+  <meta name="twitter:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+<meta name="author" content="" />
+
+
+<meta name="date" content="2023-09-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="Chapter2LOS.html"/>
+<link rel="next" href="Chapter4Bicycle.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Rural Highway Analysis Guidebook</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="chapter" data-level="1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#purpose-of-guidebook"><i class="fa fa-check"></i><b>1.1</b> Purpose of Guidebook</a></li>
+<li class="chapter" data-level="1.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-scope-and-limitations"><i class="fa fa-check"></i><b>1.2</b> Guidebook Scope and Limitations</a></li>
+<li class="chapter" data-level="1.3" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-organization"><i class="fa fa-check"></i><b>1.3</b> Guidebook Organization</a></li>
+<li class="chapter" data-level="1.4" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-format"><i class="fa fa-check"></i><b>1.4</b> Guidebook Format</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#navigating-the-document"><i class="fa fa-check"></i><b>1.4.1</b> Navigating the document</a></li>
+<li class="chapter" data-level="1.4.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#ProvidingFeedback"><i class="fa fa-check"></i><b>1.4.2</b> How to provide feedback on this document</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#SupportingResources"><i class="fa fa-check"></i><b>1.5</b> Supporting Resources and Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html"><i class="fa fa-check"></i><b>2</b> Rural Highway Level of Service for Automobiles</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#LOSIntro"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#Segmentation"><i class="fa fa-check"></i><b>2.2</b> Facility Segmentation</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#CrossSection"><i class="fa fa-check"></i><b>2.2.1</b> Cross Section</a></li>
+<li class="chapter" data-level="2.2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#passing-accommodations-for-two-lane-highways"><i class="fa fa-check"></i><b>2.2.2</b> Passing Accommodations for Two-Lane Highways</a></li>
+<li class="chapter" data-level="2.2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#posted-speed-limit-changes"><i class="fa fa-check"></i><b>2.2.3</b> Posted Speed Limit Changes</a></li>
+<li class="chapter" data-level="2.2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#geometric-alignment-considerations"><i class="fa fa-check"></i><b>2.2.4</b> Geometric Alignment Considerations</a></li>
+<li class="chapter" data-level="2.2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#IntxInfluenceArea"><i class="fa fa-check"></i><b>2.2.5</b> Intersections and their Influence Area</a></li>
+<li class="chapter" data-level="2.2.6" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#UrbanStreetClassification"><i class="fa fa-check"></i><b>2.2.6</b> Classification of Urban Street</a></li>
+<li class="chapter" data-level="2.2.7" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#SegMinLength"><i class="fa fa-check"></i><b>2.2.7</b> Practical Minimum Segment Length</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#FacilityLOS"><i class="fa fa-check"></i><b>2.3</b> Segment and Facility LOS Calculation</a></li>
+<li class="chapter" data-level="2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#HotSpots"><i class="fa fa-check"></i><b>2.4</b> Hot Spot Identification</a></li>
+<li class="chapter" data-level="2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#additional-performance-measures-for-facility-evaluation"><i class="fa fa-check"></i><b>2.5</b> Additional Performance Measures for Facility Evaluation</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#emergency-traffic-demand-surge"><i class="fa fa-check"></i><b>2.5.1</b> Emergency Traffic Demand Surge</a></li>
+<li class="chapter" data-level="2.5.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#short-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.2</b> Short-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#seasonal-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.3</b> Seasonal Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#long-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.4</b> Long-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#use-of-probe-vehicle-measured-travel-timesspeeds"><i class="fa fa-check"></i><b>2.5.5</b> Use of Probe-Vehicle Measured Travel Times/Speeds</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html"><i class="fa fa-check"></i><b>3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityIntro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#approach-for-rural-highways"><i class="fa fa-check"></i><b>3.2</b> Approach for Rural Highways</a></li>
+<li class="chapter" data-level="3.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityData"><i class="fa fa-check"></i><b>3.3</b> Data Examined</a></li>
+<li class="chapter" data-level="3.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilitySegmentation"><i class="fa fa-check"></i><b>3.4</b> Segmentation</a></li>
+<li class="chapter" data-level="3.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityDataOverview"><i class="fa fa-check"></i><b>3.5</b> Data Overview</a></li>
+<li class="chapter" data-level="3.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityMethods"><i class="fa fa-check"></i><b>3.6</b> Evaluation Methodologies</a></li>
+<li class="chapter" data-level="3.7" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityHowTo"><i class="fa fa-check"></i><b>3.7</b> Assessing Reliability</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#load-the-data"><i class="fa fa-check"></i><b>3.7.1</b> Load the data</a></li>
+<li class="chapter" data-level="3.7.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#aggregate-the-data"><i class="fa fa-check"></i><b>3.7.2</b> Aggregate the data</a></li>
+<li class="chapter" data-level="3.7.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#heatmaps"><i class="fa fa-check"></i><b>3.7.3</b> Heatmaps</a></li>
+<li class="chapter" data-level="3.7.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.7.4</b> Box-and-Whisker Plots</a></li>
+<li class="chapter" data-level="3.7.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#speed-confidence-band-plots"><i class="fa fa-check"></i><b>3.7.5</b> Speed Confidence Band Plots</a></li>
+<li class="chapter" data-level="3.7.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#travel-time-index-plots"><i class="fa fa-check"></i><b>3.7.6</b> Travel Time Index Plots</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html"><i class="fa fa-check"></i><b>4</b> Bicycle Operations Analysis on Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#overview-of-bicycle-operations-analysis-methods"><i class="fa fa-check"></i><b>4.1</b> Overview of Bicycle Operations Analysis Methods</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#highway-capacity-manual-level-of-service-analysis-methodologies"><i class="fa fa-check"></i><b>4.1.1</b> Highway Capacity Manual Level of Service Analysis Methodologies</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.1.2</b> Level of Traffic Stress Analysis Methodology</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#bicycle-compatibility-index-analysis-methodology"><i class="fa fa-check"></i><b>4.1.3</b> Bicycle Compatibility Index Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#BikeLOS"><i class="fa fa-check"></i><b>4.2</b> Bicycle Level of Service Research Recommendations</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-highway-capacity-manual-level-of-service-for-rural-highways"><i class="fa fa-check"></i><b>4.2.1</b> Revisions to Highway Capacity Manual Level of Service for Rural Highways</a></li>
+<li class="chapter" data-level="4.2.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.2.2</b> Revisions to Level of Traffic Stress Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#guidance-on-current-methods-for-rural-highways"><i class="fa fa-check"></i><b>4.3</b> Guidance on Current Methods for Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#adaptation-to-rural-conditions"><i class="fa fa-check"></i><b>4.3.1</b> Adaptation to Rural Conditions</a></li>
+<li class="chapter" data-level="4.3.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#data-requirements"><i class="fa fa-check"></i><b>4.3.2</b> Data Requirements</a></li>
+<li class="chapter" data-level="4.3.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#applications"><i class="fa fa-check"></i><b>4.3.3</b> Applications</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Part II: HCM Calculations</b></span></li>
+<li class="chapter" data-level="5" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html"><i class="fa fa-check"></i><b>5</b> HCM Automobile LOS Methodologies</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html"><i class="fa fa-check"></i><b>6</b> Multilane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#equations-and-exhibits"><i class="fa fa-check"></i><b>6.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="6.2" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#nomenclature"><i class="fa fa-check"></i><b>6.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html"><i class="fa fa-check"></i><b>7</b> Two-Lane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#equations-and-exhibits-1"><i class="fa fa-check"></i><b>7.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="7.2" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#nomenclature-1"><i class="fa fa-check"></i><b>7.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="HCMsignal.html"><a href="HCMsignal.html"><i class="fa fa-check"></i><b>8</b> Signalized Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="HCMsignal.html"><a href="HCMsignal.html#equations-and-exhibits-2"><i class="fa fa-check"></i><b>8.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="8.2" data-path="HCMsignal.html"><a href="HCMsignal.html#nomenclature-2"><i class="fa fa-check"></i><b>8.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="HCMroundabout.html"><a href="HCMroundabout.html"><i class="fa fa-check"></i><b>9</b> Roundabout Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="HCMroundabout.html"><a href="HCMroundabout.html#equations-and-exhibits-3"><i class="fa fa-check"></i><b>9.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="9.2" data-path="HCMroundabout.html"><a href="HCMroundabout.html#nomenclature-3"><i class="fa fa-check"></i><b>9.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="HCMawsc.html"><a href="HCMawsc.html"><i class="fa fa-check"></i><b>10</b> All-Way Stop-Controlled Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="HCMawsc.html"><a href="HCMawsc.html#equations-and-exhibits-4"><i class="fa fa-check"></i><b>10.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="10.2" data-path="HCMawsc.html"><a href="HCMawsc.html#nomenclature-4"><i class="fa fa-check"></i><b>10.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html"><i class="fa fa-check"></i><b>11</b> Urban Street Facility Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#equations-and-exhibits-5"><i class="fa fa-check"></i><b>11.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="11.2" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#nomenclature-5"><i class="fa fa-check"></i><b>11.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="HCMbicycle.html"><a href="HCMbicycle.html"><i class="fa fa-check"></i><b>12</b> Bicycle LOS Methodologies</a></li>
+<li class="chapter" data-level="13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html"><i class="fa fa-check"></i><b>13</b> Rural Highway Example Calculations</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-input-data"><i class="fa fa-check"></i><b>13.1</b> Segment Input Data</a></li>
+<li class="chapter" data-level="13.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations"><i class="fa fa-check"></i><b>13.2</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#first-iteration-uses-input-segment-lengths"><i class="fa fa-check"></i><b>13.2.1</b> First iteration uses input segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#influence-area-calculations"><i class="fa fa-check"></i><b>13.3</b> Influence Area Calculations</a></li>
+<li class="chapter" data-level="13.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-segment-length-calculations"><i class="fa fa-check"></i><b>13.4</b> Adjusted Segment Length Calculations</a></li>
+<li class="chapter" data-level="13.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations-1"><i class="fa fa-check"></i><b>13.5</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#second-iteration-uses-adjusted-segment-lengths"><i class="fa fa-check"></i><b>13.5.1</b> Second iteration uses adjusted segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#facility-calculations"><i class="fa fa-check"></i><b>13.6</b> Facility Calculations</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#posted-speed-travel-time-s"><i class="fa fa-check"></i><b>13.6.1</b> Posted Speed Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#free-flow-travel-time-s"><i class="fa fa-check"></i><b>13.6.2</b> Free-Flow Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#average-travel-time-s"><i class="fa fa-check"></i><b>13.6.3</b> Average Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#travel-time-segment-weights"><i class="fa fa-check"></i><b>13.6.4</b> Travel Time Segment Weights</a></li>
+<li class="chapter" data-level="13.6.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-demand-volumes"><i class="fa fa-check"></i><b>13.6.5</b> Adjusted Demand Volumes</a></li>
+<li class="chapter" data-level="13.6.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-hours-traveled-veh-h"><i class="fa fa-check"></i><b>13.6.6</b> Vehicle Hours Traveled (veh-h)</a></li>
+<li class="chapter" data-level="13.6.7" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#total-delay-veh-h"><i class="fa fa-check"></i><b>13.6.7</b> Total Delay (veh-h)</a></li>
+<li class="chapter" data-level="13.6.8" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-miles-traveled-veh-mi"><i class="fa fa-check"></i><b>13.6.8</b> Vehicle Miles Traveled (veh-mi)</a></li>
+<li class="chapter" data-level="13.6.9" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#space-mean-speed-mih"><i class="fa fa-check"></i><b>13.6.9</b> Space Mean Speed (mi/h)</a></li>
+<li class="chapter" data-level="13.6.10" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#ffs-delay-sveh"><i class="fa fa-check"></i><b>13.6.10</b> FFS Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.11" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#threshold-delay-sveh"><i class="fa fa-check"></i><b>13.6.11</b> Threshold Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.12" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-constancy"><i class="fa fa-check"></i><b>13.6.12</b> LOS Constancy</a></li>
+<li class="chapter" data-level="13.6.13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-adjustment-factor"><i class="fa fa-check"></i><b>13.6.13</b> LOS Adjustment Factor</a></li>
+<li class="chapter" data-level="13.6.14" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#final-los-score"><i class="fa fa-check"></i><b>13.6.14</b> Final LOS Score</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="CompEngine.html"><a href="CompEngine.html"><i class="fa fa-check"></i><b>14</b> Computational Engine Overview</a></li>
+<li class="part"><span><b>Part III: Case Studies</b></span></li>
+<li class="chapter" data-level="15" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html"><i class="fa fa-check"></i><b>15</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#supporting-material"><i class="fa fa-check"></i><b>15.1</b> Supporting Material</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#kml-files"><i class="fa fa-check"></i>KML Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#computational-engine-input-files"><i class="fa fa-check"></i>Computational Engine Input Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#probe-vehicle-data-analysis-scripting-code"><i class="fa fa-check"></i>Probe Vehicle Data Analysis Scripting Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html"><i class="fa fa-check"></i><b>16</b> Case Study: Oregon US-20</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#route-description"><i class="fa fa-check"></i><b>16.1</b> Route Description</a></li>
+<li class="chapter" data-level="16.2" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#level-of-service"><i class="fa fa-check"></i><b>16.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#segmentation"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#traffic-data"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#additional-data-inputs-for-intersections"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#results"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#reliability"><i class="fa fa-check"></i><b>16.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-heatmaps"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-difference-heatmaps"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#box-and-whisker-speed-plots"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-confidence-band"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#travel-time-index"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html"><i class="fa fa-check"></i><b>17</b> Case Study: Tennessee SR-109</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#route-description-1"><i class="fa fa-check"></i><b>17.1</b> Route Description</a></li>
+<li class="chapter" data-level="17.2" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#level-of-service-1"><i class="fa fa-check"></i><b>17.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#segmentation-1"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#traffic-data-1"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#additional-data-inputs-for-intersections-1"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#results-1"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#reliability-1"><i class="fa fa-check"></i><b>17.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-heatmaps-1"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-difference-heatmaps-1"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#box-and-whisker-speed-plots-1"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-confidence-band-1"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#travel-time-index-1"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#summary-1"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html"><i class="fa fa-check"></i><b>18</b> Case Study: Ohio US-42</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#route-description-2"><i class="fa fa-check"></i><b>18.1</b> Route Description</a></li>
+<li class="chapter" data-level="18.2" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#level-of-service-2"><i class="fa fa-check"></i><b>18.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#segmentation-2"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#traffic-data-2"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#additional-data-inputs-for-intersections-2"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#results-2"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#reliability-2"><i class="fa fa-check"></i><b>18.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-heatmaps-2"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-difference-heatmaps-2"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#box-and-whisker-speed-plots-2"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-confidence-band-2"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#travel-time-index-2"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#summary-2"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html"><i class="fa fa-check"></i><b>19</b> Case Study: Montana US-287</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#route-description-3"><i class="fa fa-check"></i><b>19.1</b> Route Description</a></li>
+<li class="chapter" data-level="19.2" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#level-of-service-3"><i class="fa fa-check"></i><b>19.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#segmentation-3"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#traffic-data-3"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#results-3"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Appendixes</b></span></li>
+<li class="chapter" data-level="A" data-path="AppendixA.html"><a href="AppendixA.html"><i class="fa fa-check"></i><b>A</b> Mitigation Strategies</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="AppendixA.html"><a href="AppendixA.html#general"><i class="fa fa-check"></i><b>A.1</b> General</a></li>
+<li class="chapter" data-level="A.2" data-path="AppendixA.html"><a href="AppendixA.html#multilane-highways"><i class="fa fa-check"></i><b>A.2</b> Multilane Highways</a></li>
+<li class="chapter" data-level="A.3" data-path="AppendixA.html"><a href="AppendixA.html#two-lane-highways"><i class="fa fa-check"></i><b>A.3</b> Two-Lane Highways</a></li>
+<li class="chapter" data-level="A.4" data-path="AppendixA.html"><a href="AppendixA.html#intersections"><i class="fa fa-check"></i><b>A.4</b> Intersections</a></li>
+<li class="chapter" data-level="A.5" data-path="AppendixA.html"><a href="AppendixA.html#arterials"><i class="fa fa-check"></i><b>A.5</b> Arterials</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/NCHRP-08-135/Guidebook" target="blank">View Book Source</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Chapter3Reliability" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Reliability<a href="Chapter3Reliability.html#Chapter3Reliability" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="ReliabilityIntro" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Introduction<a href="Chapter3Reliability.html#ReliabilityIntro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Prior to the HCM 6th Edition, predicting travel time reliability (TTR) would typically involve microsimulation with extensive new data collection and calibration of the simulation model. With the HCM Chapters 11 (Freeway Facilities) and 17 (Urban Streets) methodologies, it is now possible to predict the reliability effects of infrastructure investments without developing a microsimulation model.</p>
+<p>The HCM covers various performance measures that can be obtained from the distribution of travel times along a facility and in some cases, the vehicular volumes matching travel time observations. Some of the measures discussed in the HCM are:</p>
+<ul>
+<li>95th percentile travel time index (also known as Planning Time Index or PTI): the ratio of 95th percentile travel time to free-flow travel time.</li>
+<li>50th percentile travel time index (TTI): the ratio of median (50th percentile) travel time to free-flow travel time.</li>
+<li>Level of Travel Time Reliability or LOTTR (80th percentile travel time divided by 50th percentile travel time)</li>
+<li>Reliability rating: how often the facility performs satisfactorily. Often defined as the fraction of facility VMT operating below a TTI of 1.33</li>
+<li>Failure and on-time measures (%)</li>
+<li>Misery Index: average of the worse 5% TTI’s</li>
+<li>Semi-Standard Deviation– standard deviation from TTI=1</li>
+<li>Standard Deviation</li>
+<li>%VMT at TTI&gt;2</li>
+</ul>
+<p>Figure <a href="Chapter3Reliability.html#fig:HCMTTRDistribution">3.1</a> illustrates how these measures may be obtained from a distribution of travel times.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HCMTTRDistribution"></span>
+<img src="Images/Reliability/HCMTTRdist.jpg" alt="Derivation of Time-Based Reliability Performance Measures from the Travel Time Distribution (Source: HCM Exhibit 11-3)" width="50%" />
+<p class="caption">
+Figure 3.1: Derivation of Time-Based Reliability Performance Measures from the Travel Time Distribution (Source: HCM Exhibit 11-3)
+</p>
+</div>
+<p>In addition to the guidance on measuring past reliability performance, the HCM provides methods to evaluate changes in reliability that may result from changes to the facility (e.g., the addition of a lane). The HCM method is heavily reliant on generating hundreds of analysis scenarios with differing demand, weather, work zones, and incident conditions. The core HCM procedures are then applied to those scenarios to obtain distributions of various performance measures, including those described above. HCM Exhibit 11-7 <em>Freeway Reliability Methodology Framework</em> provides an overview of this approach, which is conceptually similar to that of arterials.</p>
+<p>For agencies with limited data, the HCM provides defaults that can serve as a starting point for predicting reliability.</p>
+<ul>
+<li>HCM Exhibit 11-20 has default capacity adjustment factors by weather condition</li>
+<li>HCM Exhibit 11-21 has default speed adjustment factors by weather condition</li>
+<li>Volume 4 Technical Reference Library contains default weather data for 101 US metropolitan areas based on 2001-2010 records</li>
+<li>HCM Chapter 25 has default day-of-week and month-of-year demand factors that can be applied to model seasonal traffic variation.</li>
+</ul>
+</div>
+<div id="approach-for-rural-highways" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Approach for Rural Highways<a href="Chapter3Reliability.html#approach-for-rural-highways" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The HCM Chapter 11 methodology is well established and supported for freeway facilities. The arterial reliability methodology (HCM Chapter 17) is also covered in the HCM, although the tools and data to predict reliability on arterials are not as readily available as for freeways. There is currently no equivalent methodology for rural highways.</p>
+<p>Travel time reliability on rural highways is generally much different than on urban arterials and freeways. In congested urban settings, travel times tend to be highly variable over time—both over the course of a day and over the course of a year due to seasonality, adverse weather, and similar. Roadways operating at or close to capacity are more susceptible to disruptions that can significantly increase travel time. But few rural highways operate at or close to capacity during an average day. Instead, travel time reliability on rural highways is highly dependent on the origins and destinations served by the rural highway, natural disasters on or around the corridor, and disruptions such as crashes or work zones on parallel facilities. Furthermore, due to the lower volumes and sparser sensor coverage on rural highways, a predictive reliability methodology that requires a large number of data inputs is not likely to see much usage among agencies operating rural highways.</p>
+<p>Because of these fundamental differences, the travel time reliability performance measures typically associated with urban travel are less relevant to rural highways. In addition, the differences noted in <a href="Chapter1Intro.html#Chapter1Intro">Chapter 1</a> regarding the higher variability in horizontal and vertical alignment, intersection traffic control, and lane configuration throughout a rural highway contribute to the need for a different methodology for assessing travel time reliability on rural highways.</p>
+<p>Whereas the freeway and arterial reliability methods rely heavily on scenario generation and batch application of HCM methodologies, the rural highway methodology described in this chapter is more concerned with historical reliability performance and with applying LOS methods in a way that captures the full experience of a traveler traversing the often varied segments of a rural highway. The approaches outlined in <a href="Chapter2LOS.html#Chapter2LOS">Chapter 2</a> and this chapter can be applied with data that is generally available to rural transportation agencies. By combining the <a href="Chapter2LOS.html#Chapter2LOS">Chapter 2</a> methods to evaluate LOS and available capacity with the methods of this chapter to compute and visualize historical reliability performance, it is possible to identify seasonal patterns or spatial hot-spots that might result in poor reliability performance in future years.</p>
+<p>The remainder of this chapter covers data sources and analysis and visualization techniques that may be used in understanding travel time reliability for rural highways.</p>
+</div>
+<div id="ReliabilityData" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Data Examined<a href="Chapter3Reliability.html#ReliabilityData" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Historical reliability analyses are usually based on vehicular probe data, obtained from cell phone location-based services (LBS), and to a lesser degree connected vehicles and fleets. These devices “ping” their approximate locations at regular intervals, enabling the estimation of travel times and speeds along roadways. Although there are errors associated with the reported positions and timestamps, the high penetration rate of cell phones can produce large sample sizes that can accurately track average speeds and travel times. This is especially true for freeways and principal arterials, but lower-volume rural and residential roadways might not have enough samples to confidently estimate speeds and travel times. Most probe data are aggregated and sold by commercial vendors like HERE, INRIX, and TomTom. In support of the MAP-21 performance reporting requirements, the Federal Highway Administration provides its <a href="https://ops.fhwa.dot.gov/publications/fhwahop20028/index.htm">National Performance Management Research Data Set</a> (NPMRDS) free of charge to transportation agencies.</p>
+<p>Higher-resolution probe vehicle data were examined for its potential to be used for travel time reliability assessments along rural highways. Unlike traditional probe data sources reporting on traffic message channels (TMCs) spanning from one major intersection to the next, the higher-resolution probe data sources report on segments up to one kilometer (0.62 miles) in length. Furthermore, the temporal resolution of the data is higher as well, with data points every minute as opposed to every five or fifteen minutes.</p>
+<p>The data used for analysis was obtained from the INRIX XD Monitoring program. INRIX XD data is very similar to INRIX TMC data, with a key difference being that it uses smaller spatial segments for data reporting. The underlying XD Monitoring program provides real-time insight into traffic speeds, travel times, and the location of incidents and back-ups for every major road type and class from highways, ramps and interchanges to arterials, city streets and other secondary roads. INRIX XD data are currently available through <a href="https://www.ritis.org">RITIS</a> in about 16 states, with varying route coverage within each state. It is expected that this coverage, both within state and across states, will continue to increase.</p>
+<p>The analysis of the sample data from several sample corridors presented in Part 3 of the document (see Chapter <a href="CaseStudyIntro.html#CaseStudyIntro">15</a>) suggested that the higher-resolution probe data can improve travel time reliability analyses, especially when recurring congestion, queues, and queue spillbacks are primary contributors to reliability issues. With the traditional probe data sources, it is not often possible to observe queue spillback on rural highways, as the TMCs usually span several miles and the congested travel times (and resulting speeds) get averaged out with those at free-flow segments.</p>
+<p>The data also supported more detailed understanding of non-recurring congestion due to adverse weather events (i.e., snowstorms) and holiday travel (i.e., Thanksgiving) on the sample corridors. Although higher spatial resolution is not as important for weather events and holidays, it would be valuable in understanding the impact of other types of non-recurring congestion—such as flooding, landslides, and other events limited to short segments of roadway.</p>
+<p>Another key advantage of the higher resolution is that the data can pinpoint delays at intersections. On rural highways, most intersections do not impose delay on the highway (major street) travelers, but rather on side street traffic only. However, there are isolated intersections—including roundabouts, all-way stops, and traffic signals—that do result in delays to highway travelers. The higher-resolution probe data can be used to quickly understand the location and magnitude of those intersection delays without requiring additional data sources (e.g., GIS layers, traffic volumes, signal timings, etc.) or field visits.</p>
+</div>
+<div id="ReliabilitySegmentation" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Segmentation<a href="Chapter3Reliability.html#ReliabilitySegmentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Segmentation (see Section <a href="Chapter2LOS.html#Segmentation">2.2</a>) is also a critical step when developing summaries of reliability data. Unlike in the <a href="Chapter2LOS.html#Chapter2LOS">Chapter 2</a> analyses, segmentation will not change the method that is used to analyze the data, but it is important to consider as it will impact the outcome of the analysis. For example, if an exceedingly long segment is analyzed, it is likely that travel times on the segment will be reliable, as subsegments with poor reliability are typically washed out by much longer subsegments that are reliable. In addition, a very long segment spanning many TMCs will have fewer times when all TMCs have enough samples to report accurate travel times or speeds.</p>
+<p>Best practices for segmenting facilities include those listed in the <a href="Chapter2LOS.html#Segmentation">2.2</a> section, such as considering area context, posted speed limit, or changes in cross section. Fundamentally, the segmentation selected should be intuitive to travelers. This might be achieved by using segment starting and ending points that are also popular starting and ending points for trips (e.g., towns, major cross-streets, major attractions, etc.). In general, segments up to ten miles long can be readily analyzed and their results conveyed to users in an intuitive manner.</p>
+</div>
+<div id="ReliabilityDataOverview" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Data Overview<a href="Chapter3Reliability.html#ReliabilityDataOverview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The data contains the following fields.</p>
+<ul>
+<li>XD Segment Identifier</li>
+<li>Timestamp (options for 5 mins, 15 mins, and 60 mins aggregations)</li>
+<li>Speed</li>
+<li>Historical Average Speed</li>
+<li>Reference Speed</li>
+<li>Travel Time (in seconds or minutes)</li>
+<li>Confidence score
+<ul>
+<li>10-Speeds showing the reference speed due to lack of real-time data</li>
+<li>20-Speeds showing the historical average speed due to lack of real-time data</li>
+<li>30-Speeds showing real-time data</li>
+</ul></li>
+<li>C-Value (only when confidence score is 30)
+<ul>
+<li>0-100, denotes whether probe data is representing actual roadway conditions</li>
+</ul></li>
+</ul>
+</div>
+<div id="ReliabilityMethods" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Evaluation Methodologies<a href="Chapter3Reliability.html#ReliabilityMethods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The case study facilities were evaluated using five data analysis and visualization techniques that convert the INRIX XD speed and travel time data into charts and graphics for analysis and interpretation:</p>
+<ul>
+<li><strong>Speed heatmaps</strong> provide an overview of the overall facility and can be used to quickly identify recurring bottlenecks. Combined with local knowledge about facility geometry and information on weather, construction, activities, events, etc. speed heatmaps can help paint a picture on facility reliability and potential patterns of recurring and non-recurring congestion. The speed heatmaps developed for the case study facilities consist of time of day on the y-axis and date on the x-axis. They thus create a visual representation of the 24-hour speed performance (y-axis) across the entire period of analysis (x-axis), with each cell of the heatmap representing an individual INRIX XD speed observation. On these visualizations, speeds are aggregated to the hour and are visualized by a color scale from green (fast) to red (slow).</li>
+<li><strong>Speed difference heatmaps</strong> normalize the heatmap patterns using a reference speed for each segment—in this case the 85th percentile speed from the data as an approximation of free-flow speed. This technique is particularly appropriate on long rural highways with a wide range of speed limits. The speed difference heatmaps more clearly highlight recurring and non-recurring congestion patterns across segments, and avoid potential visual bias introduced when traversing different speed limits and geometry-induced speed reductions along the corridor.</li>
+<li><strong>Box-and-whisker speed plots</strong> help in identifying and narrowing down periods with poor reliability in the overall analysis period. It also complements inferences made using other visualizing metrics.</li>
+<li><strong>Speed confidence band plots</strong> highlight the reliability of speeds at different hours using a years’ worth of data. They are a more easily interpreted visualization by removing the date dimension in the reliability data and showing reliability patterns by time-of-day only. The speed confidence band plots are especially useful when combined with a speed difference heatmap. In this combination, the speed confidence band plot can be used to infer which segment and which time periods experience unreliable travel; the speed difference heatmap can then be used to infer what date ranges contribute to the unreliability.</li>
+<li><strong>Travel time index plots</strong> show the cumulative distribution of travel times along the segment, normalized by the free-flow travel time—which was estimated from the data as the 15th percentile travel time. The travel time index (TTI) metric is commonly used in congestion and reliability reporting and is defined in the <a href="https://ops.fhwa.dot.gov/perf_measurement/reliability_measures/index.htm">FHWA Travel Time Reliability guidance</a>. Due to its simple line representation, a TTI plot can be an effective tool to convey before-after comparisons.</li>
+</ul>
+<p>Python snippets to load, analyze, and visualize probe data using these five techniques are included in their respective sections. A complete Python script can be obtained from <a href="https://github.com/NCHRP-08-135-Team/Rural-Highway-Analysis-Guidebook/blob/ae2697ed69fbc3295905b37f61a8d1dca503d1da/docs/script/ReliabilityScript.py">this</a> link.</p>
+</div>
+<div id="ReliabilityHowTo" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Assessing Reliability<a href="Chapter3Reliability.html#ReliabilityHowTo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section provides specific guidance and scripts that may be used to produce the reliability visualizations in the <a href="Chapter3Reliability.html#ReliabilityMethods">Evaluation Methodologies</a> section. As shown below, the Python Pandas and Matplotlib libraries can be used to efficiently process and visualize probe data (in this case the INRIX XD data described above).</p>
+<div id="load-the-data" class="section level3 hasAnchor" number="3.7.1">
+<h3><span class="header-section-number">3.7.1</span> Load the data<a href="Chapter3Reliability.html#load-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>First, the probe data and metadata files must be obtained. For the case studies presented here, INRIX XD data was obtained through RITIS. Once on hand, the files can be loaded onto a Pandas dataframe using the code below.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="Chapter3Reliability.html#cb1-1" tabindex="-1"></a><span class="co"># Import Libraries</span></span>
+<span id="cb1-2"><a href="Chapter3Reliability.html#cb1-2" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="Chapter3Reliability.html#cb1-3" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-4"><a href="Chapter3Reliability.html#cb1-4" tabindex="-1"></a>pd.plotting.deregister_matplotlib_converters()</span>
+<span id="cb1-5"><a href="Chapter3Reliability.html#cb1-5" tabindex="-1"></a><span class="im">from</span> matplotlib.cm <span class="im">import</span> ScalarMappable</span>
+<span id="cb1-6"><a href="Chapter3Reliability.html#cb1-6" tabindex="-1"></a><span class="im">import</span> matplotlib.colors <span class="im">as</span> mc  <span class="co"># For the legend</span></span>
+<span id="cb1-7"><a href="Chapter3Reliability.html#cb1-7" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-8"><a href="Chapter3Reliability.html#cb1-8" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
+<span id="cb1-9"><a href="Chapter3Reliability.html#cb1-9" tabindex="-1"></a>matplotlib.use(<span class="st">&#39;Agg&#39;</span>)</span>
+<span id="cb1-10"><a href="Chapter3Reliability.html#cb1-10" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="Chapter3Reliability.html#cb1-11" tabindex="-1"></a><span class="co"># Specify inputs</span></span>
+<span id="cb1-12"><a href="Chapter3Reliability.html#cb1-12" tabindex="-1"></a>data_file <span class="op">=</span> <span class="co">#Path to data CSV</span></span>
+<span id="cb1-13"><a href="Chapter3Reliability.html#cb1-13" tabindex="-1"></a>id_file <span class="op">=</span> <span class="co">#Path to TMC identification CSV</span></span>
+<span id="cb1-14"><a href="Chapter3Reliability.html#cb1-14" tabindex="-1"></a>id_list <span class="op">=</span> <span class="co">#List of TMC IDs to process, for example: [450198212, 450198213, 450198214]</span></span>
+<span id="cb1-15"><a href="Chapter3Reliability.html#cb1-15" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="Chapter3Reliability.html#cb1-16" tabindex="-1"></a><span class="co">#Method to load data into a Pandas dataframe</span></span>
+<span id="cb1-17"><a href="Chapter3Reliability.html#cb1-17" tabindex="-1"></a><span class="kw">def</span> read_input_file(id_file, data_file, id_list):</span>
+<span id="cb1-18"><a href="Chapter3Reliability.html#cb1-18" tabindex="-1"></a>    df <span class="op">=</span> pd.read_csv(data_file, low_memory<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-19"><a href="Chapter3Reliability.html#cb1-19" tabindex="-1"></a>    id_df <span class="op">=</span> pd.read_csv(id_file, low_memory<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-20"><a href="Chapter3Reliability.html#cb1-20" tabindex="-1"></a>    df <span class="op">=</span> df[df[<span class="st">&quot;xd_id&quot;</span>].isin(id_list)]</span>
+<span id="cb1-21"><a href="Chapter3Reliability.html#cb1-21" tabindex="-1"></a>    df[<span class="st">&quot;measurement_tstamp&quot;</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">&quot;measurement_tstamp&quot;</span>])</span>
+<span id="cb1-22"><a href="Chapter3Reliability.html#cb1-22" tabindex="-1"></a>    df[<span class="st">&quot;day&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;measurement_tstamp&quot;</span>].dt.day</span>
+<span id="cb1-23"><a href="Chapter3Reliability.html#cb1-23" tabindex="-1"></a>    df[<span class="st">&quot;hour&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;measurement_tstamp&quot;</span>].dt.hour</span>
+<span id="cb1-24"><a href="Chapter3Reliability.html#cb1-24" tabindex="-1"></a>    df[<span class="st">&quot;date&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;measurement_tstamp&quot;</span>].dt.date</span>
+<span id="cb1-25"><a href="Chapter3Reliability.html#cb1-25" tabindex="-1"></a>    df[<span class="st">&quot;time&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;measurement_tstamp&quot;</span>].dt.time</span>
+<span id="cb1-26"><a href="Chapter3Reliability.html#cb1-26" tabindex="-1"></a>    df[<span class="st">&quot;month&quot;</span>] <span class="op">=</span> pd.DatetimeIndex(df[<span class="st">&quot;measurement_tstamp&quot;</span>]).month</span>
+<span id="cb1-27"><a href="Chapter3Reliability.html#cb1-27" tabindex="-1"></a>    df[<span class="st">&quot;dayofweek&quot;</span>] <span class="op">=</span> df[<span class="st">&quot;measurement_tstamp&quot;</span>].dt.dayofweek <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb1-28"><a href="Chapter3Reliability.html#cb1-28" tabindex="-1"></a>    <span class="cf">return</span> id_df, df</span></code></pre></div>
+</div>
+<div id="aggregate-the-data" class="section level3 hasAnchor" number="3.7.2">
+<h3><span class="header-section-number">3.7.2</span> Aggregate the data<a href="Chapter3Reliability.html#aggregate-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The INRIX XD data comes at a high temporal resolution (one minute), which is beneficial for fine-grained analyses of individual incidents or special events, but can be cumbersome to display in visualizations covering one year of data or more. As such, the data is first aggregated to a suitable resolution for the analysis being conducted. In this case, an hourly resolution was considered adequate for these reliability analyses.</p>
+<p>In addition to aggregating across time, the code below adds several calculated columns that simplify visualization of the data in later stages of the process. These include speed differences (from 50th, 85th, and 95th percentile speeds) and travel time indices (relative to 15th and 50th percentile travel times).</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="Chapter3Reliability.html#cb2-1" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="Chapter3Reliability.html#cb2-2" tabindex="-1"></a><span class="kw">def</span> percentile(n):</span>
+<span id="cb2-3"><a href="Chapter3Reliability.html#cb2-3" tabindex="-1"></a>    <span class="kw">def</span> percentile_(x):</span>
+<span id="cb2-4"><a href="Chapter3Reliability.html#cb2-4" tabindex="-1"></a>        <span class="cf">return</span> np.percentile(x, n)</span>
+<span id="cb2-5"><a href="Chapter3Reliability.html#cb2-5" tabindex="-1"></a>    percentile_.<span class="va">__name__</span> <span class="op">=</span> <span class="st">&#39;percentile_</span><span class="sc">%s</span><span class="st">&#39;</span> <span class="op">%</span> n</span>
+<span id="cb2-6"><a href="Chapter3Reliability.html#cb2-6" tabindex="-1"></a>    <span class="cf">return</span> percentile_</span>
+<span id="cb2-7"><a href="Chapter3Reliability.html#cb2-7" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="Chapter3Reliability.html#cb2-8" tabindex="-1"></a><span class="kw">def</span> data_agg(id_df, df, idx, col, pivot):</span>
+<span id="cb2-9"><a href="Chapter3Reliability.html#cb2-9" tabindex="-1"></a>    df_perc <span class="op">=</span> df.groupby([<span class="st">&quot;xd_id&quot;</span>]).agg({<span class="st">&quot;speed&quot;</span>: [percentile(<span class="dv">5</span>), percentile(<span class="dv">15</span>), <span class="st">&quot;median&quot;</span>, percentile(<span class="dv">85</span>), percentile(<span class="dv">95</span>)],</span>
+<span id="cb2-10"><a href="Chapter3Reliability.html#cb2-10" tabindex="-1"></a>                                         <span class="st">&quot;travel_time_seconds&quot;</span>: [percentile(<span class="dv">15</span>), percentile(<span class="dv">5</span>)]})</span>
+<span id="cb2-11"><a href="Chapter3Reliability.html#cb2-11" tabindex="-1"></a>    df_perc.columns <span class="op">=</span> df_perc.columns.<span class="bu">map</span>(<span class="st">&#39;|&#39;</span>.join).<span class="bu">str</span>.strip(<span class="st">&#39;|&#39;</span>)</span>
+<span id="cb2-12"><a href="Chapter3Reliability.html#cb2-12" tabindex="-1"></a>    df_perc.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-13"><a href="Chapter3Reliability.html#cb2-13" tabindex="-1"></a>    df_perc <span class="op">=</span> df_perc.rename(columns<span class="op">=</span>{<span class="st">&#39;speed|percentile_5&#39;</span>: <span class="st">&#39;speed_5th&#39;</span>, <span class="st">&#39;speed|percentile_15&#39;</span>: <span class="st">&#39;speed_15th&#39;</span>,</span>
+<span id="cb2-14"><a href="Chapter3Reliability.html#cb2-14" tabindex="-1"></a>                                      <span class="st">&#39;speed|median&#39;</span>: <span class="st">&#39;speed_median&#39;</span>, <span class="st">&#39;speed|percentile_85&#39;</span>: <span class="st">&#39;speed_85th&#39;</span>,</span>
+<span id="cb2-15"><a href="Chapter3Reliability.html#cb2-15" tabindex="-1"></a>                                      <span class="st">&#39;speed|percentile_95&#39;</span>: <span class="st">&#39;speed_95th&#39;</span>,</span>
+<span id="cb2-16"><a href="Chapter3Reliability.html#cb2-16" tabindex="-1"></a>                                      <span class="st">&#39;travel_time_seconds|percentile_5&#39;</span>: <span class="st">&#39;travel_time_seconds_5th&#39;</span>,</span>
+<span id="cb2-17"><a href="Chapter3Reliability.html#cb2-17" tabindex="-1"></a>                                      <span class="st">&#39;travel_time_seconds|percentile_15&#39;</span>: <span class="st">&#39;travel_time_seconds_15th&#39;</span>})</span>
+<span id="cb2-18"><a href="Chapter3Reliability.html#cb2-18" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="Chapter3Reliability.html#cb2-19" tabindex="-1"></a>    df_grouped <span class="op">=</span> df.merge(df_perc, how<span class="op">=</span><span class="st">&quot;left&quot;</span>, on<span class="op">=</span><span class="st">&quot;xd_id&quot;</span>)</span>
+<span id="cb2-20"><a href="Chapter3Reliability.html#cb2-20" tabindex="-1"></a>    df_grouped[<span class="st">&quot;speed_diff_median&quot;</span>] <span class="op">=</span> df_grouped[<span class="st">&#39;speed_median&#39;</span>] <span class="op">-</span> df_grouped[<span class="st">&quot;speed&quot;</span>]</span>
+<span id="cb2-21"><a href="Chapter3Reliability.html#cb2-21" tabindex="-1"></a>    df_grouped[<span class="st">&quot;speed_diff_85&quot;</span>] <span class="op">=</span> df_grouped[<span class="st">&#39;speed_85th&#39;</span>] <span class="op">-</span> df_grouped[<span class="st">&quot;speed&quot;</span>]</span>
+<span id="cb2-22"><a href="Chapter3Reliability.html#cb2-22" tabindex="-1"></a>    df_grouped[<span class="st">&quot;speed_diff_95&quot;</span>] <span class="op">=</span> df_grouped[<span class="st">&#39;speed_95th&#39;</span>] <span class="op">-</span> df_grouped[<span class="st">&quot;speed&quot;</span>]</span>
+<span id="cb2-23"><a href="Chapter3Reliability.html#cb2-23" tabindex="-1"></a>    df_grouped[<span class="st">&quot;tti_15&quot;</span>] <span class="op">=</span> df_grouped[<span class="st">&quot;travel_time_seconds&quot;</span>] <span class="op">/</span> df_grouped[<span class="st">&quot;travel_time_seconds_15th&quot;</span>]</span>
+<span id="cb2-24"><a href="Chapter3Reliability.html#cb2-24" tabindex="-1"></a>    df_grouped[<span class="st">&quot;tti_5&quot;</span>] <span class="op">=</span> df_grouped[<span class="st">&quot;travel_time_seconds&quot;</span>] <span class="op">/</span> df_grouped[<span class="st">&quot;travel_time_seconds_5th&quot;</span>]</span>
+<span id="cb2-25"><a href="Chapter3Reliability.html#cb2-25" tabindex="-1"></a>    df_grouped[<span class="st">&quot;speedi_85&quot;</span>] <span class="op">=</span> df_grouped[<span class="st">&#39;speed&#39;</span>] <span class="op">/</span> df_grouped[<span class="st">&quot;speed_85th&quot;</span>]</span>
+<span id="cb2-26"><a href="Chapter3Reliability.html#cb2-26" tabindex="-1"></a>    df_grouped[<span class="st">&quot;speedi_95&quot;</span>] <span class="op">=</span> df_grouped[<span class="st">&#39;speed&#39;</span>] <span class="op">/</span> df_grouped[<span class="st">&quot;speed_95th&quot;</span>]</span>
+<span id="cb2-27"><a href="Chapter3Reliability.html#cb2-27" tabindex="-1"></a>    df_grouped_2 <span class="op">=</span> df_grouped.groupby([<span class="st">&quot;xd_id&quot;</span>, idx, col]).agg({<span class="st">&quot;speed&quot;</span>: [<span class="st">&quot;mean&quot;</span>], <span class="st">&quot;speed_diff_median&quot;</span>: [<span class="st">&quot;mean&quot;</span>],</span>
+<span id="cb2-28"><a href="Chapter3Reliability.html#cb2-28" tabindex="-1"></a>                                                              <span class="st">&quot;speed_diff_85&quot;</span>: [<span class="st">&quot;mean&quot;</span>], <span class="st">&quot;speed_diff_95&quot;</span>: [<span class="st">&quot;mean&quot;</span>],</span>
+<span id="cb2-29"><a href="Chapter3Reliability.html#cb2-29" tabindex="-1"></a>                                                              <span class="st">&quot;tti_5&quot;</span>: [<span class="st">&quot;mean&quot;</span>], <span class="st">&quot;tti_15&quot;</span>: [<span class="st">&quot;mean&quot;</span>],</span>
+<span id="cb2-30"><a href="Chapter3Reliability.html#cb2-30" tabindex="-1"></a>                                                              <span class="st">&quot;speedi_85&quot;</span>: [<span class="st">&quot;mean&quot;</span>], <span class="st">&quot;speedi_95&quot;</span>: [<span class="st">&quot;mean&quot;</span>]})</span>
+<span id="cb2-31"><a href="Chapter3Reliability.html#cb2-31" tabindex="-1"></a>    df_grouped_2.columns <span class="op">=</span> df_grouped_2.columns.<span class="bu">map</span>(<span class="st">&#39;|&#39;</span>.join).<span class="bu">str</span>.strip(<span class="st">&#39;|&#39;</span>)</span>
+<span id="cb2-32"><a href="Chapter3Reliability.html#cb2-32" tabindex="-1"></a>    df_grouped_2.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-33"><a href="Chapter3Reliability.html#cb2-33" tabindex="-1"></a>    df_grouped_2 <span class="op">=</span> df_grouped_2.rename(columns<span class="op">=</span>{<span class="st">&quot;xd_id&quot;</span>: <span class="st">&quot;xd&quot;</span>, <span class="st">&#39;speed|mean&#39;</span>: <span class="st">&#39;speed&#39;</span>,</span>
+<span id="cb2-34"><a href="Chapter3Reliability.html#cb2-34" tabindex="-1"></a>                                            <span class="st">&#39;speed_diff_median|mean&#39;</span>: <span class="st">&#39;speed_diff_median&#39;</span>,</span>
+<span id="cb2-35"><a href="Chapter3Reliability.html#cb2-35" tabindex="-1"></a>                                            <span class="st">&#39;speed_diff_85|mean&#39;</span>: <span class="st">&#39;speed_diff_85&#39;</span>,</span>
+<span id="cb2-36"><a href="Chapter3Reliability.html#cb2-36" tabindex="-1"></a>                                            <span class="st">&#39;speed_diff_95|mean&#39;</span>: <span class="st">&#39;speed_diff_95&#39;</span>, <span class="st">&#39;tti_5|mean&#39;</span>: <span class="st">&#39;tti_5&#39;</span>,</span>
+<span id="cb2-37"><a href="Chapter3Reliability.html#cb2-37" tabindex="-1"></a>                                            <span class="st">&#39;tti_15|mean&#39;</span>: <span class="st">&#39;tti_15&#39;</span>, <span class="st">&quot;speedi_85|mean&quot;</span>: <span class="st">&quot;speedi_85&quot;</span>,</span>
+<span id="cb2-38"><a href="Chapter3Reliability.html#cb2-38" tabindex="-1"></a>                                            <span class="st">&quot;speedi_95|mean&quot;</span>: <span class="st">&quot;speedi_95&quot;</span>})</span>
+<span id="cb2-39"><a href="Chapter3Reliability.html#cb2-39" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="Chapter3Reliability.html#cb2-40" tabindex="-1"></a>    df_grouped_2 <span class="op">=</span> df_grouped_2.merge(id_df, how<span class="op">=</span><span class="st">&quot;left&quot;</span>, on<span class="op">=</span><span class="st">&quot;xd&quot;</span>)</span>
+<span id="cb2-41"><a href="Chapter3Reliability.html#cb2-41" tabindex="-1"></a>    <span class="co"># df_grouped_2[&quot;delay_spm_85&quot;] = 3600 * ((df_grouped_2[&quot;miles&quot;] / df_grouped_2[&quot;speed&quot;]) -</span></span>
+<span id="cb2-42"><a href="Chapter3Reliability.html#cb2-42" tabindex="-1"></a>    <span class="co">#                                   (df_grouped_2[&quot;miles&quot;] / df_grouped_2[&#39;speed_diff_85&#39;]))</span></span>
+<span id="cb2-43"><a href="Chapter3Reliability.html#cb2-43" tabindex="-1"></a>    <span class="co"># print(df_grouped_2[[&quot;speed&quot;, &quot;speed_85th&quot;, &quot;delay_spm&quot;]].describe())</span></span>
+<span id="cb2-44"><a href="Chapter3Reliability.html#cb2-44" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="Chapter3Reliability.html#cb2-45" tabindex="-1"></a>    <span class="cf">if</span> pivot:</span>
+<span id="cb2-46"><a href="Chapter3Reliability.html#cb2-46" tabindex="-1"></a>        <span class="bu">print</span>(pd.pivot_table(df_grouped_2, index<span class="op">=</span>[idx], columns<span class="op">=</span>[col], values<span class="op">=</span><span class="st">&#39;speed&#39;</span>).reset_index())</span>
+<span id="cb2-47"><a href="Chapter3Reliability.html#cb2-47" tabindex="-1"></a>        <span class="cf">return</span> df_grouped, df_grouped_2</span>
+<span id="cb2-48"><a href="Chapter3Reliability.html#cb2-48" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-49"><a href="Chapter3Reliability.html#cb2-49" tabindex="-1"></a>        <span class="cf">return</span> df_grouped, df_grouped_2</span></code></pre></div>
+</div>
+<div id="heatmaps" class="section level3 hasAnchor" number="3.7.3">
+<h3><span class="header-section-number">3.7.3</span> Heatmaps<a href="Chapter3Reliability.html#heatmaps" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The two types of reliability heatmaps described above (i.e., speed and speed difference) can be generated with a single Python function. The <em>value</em> parameter can be set to either “speed” or “speed_diff_85” to instruct the function to use the appropriate column to generate a speed or a speed difference heatmap, respectively.</p>
+<p>As is the case with the other visualizations presented below, the Matplotlib library offers several options to customize the chart’s area, title, legend, and more.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="Chapter3Reliability.html#cb3-1" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="Chapter3Reliability.html#cb3-2" tabindex="-1"></a><span class="kw">def</span> create_heatmap(df_grouped, xd_id_list, output,  min_lim, max_lim, cmap, value, xticks, cmap_label):</span>
+<span id="cb3-3"><a href="Chapter3Reliability.html#cb3-3" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Creating Heatmaps ...&quot;</span>)</span>
+<span id="cb3-4"><a href="Chapter3Reliability.html#cb3-4" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, segments):</span>
+<span id="cb3-5"><a href="Chapter3Reliability.html#cb3-5" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="Chapter3Reliability.html#cb3-6" tabindex="-1"></a>        ip_df_plot <span class="op">=</span> df_grouped[df_grouped[<span class="st">&quot;xd&quot;</span>] <span class="op">==</span> xd_id_list[i]].reset_index()</span>
+<span id="cb3-7"><a href="Chapter3Reliability.html#cb3-7" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;XD ID:&quot;</span>, xd_id_list[i])</span>
+<span id="cb3-8"><a href="Chapter3Reliability.html#cb3-8" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="Chapter3Reliability.html#cb3-9" tabindex="-1"></a>        table <span class="op">=</span> pd.pivot_table(ip_df_plot, index<span class="op">=</span>[<span class="st">&#39;hour&#39;</span>], columns<span class="op">=</span>[<span class="st">&#39;date&#39;</span>], values<span class="op">=</span>value)</span>
+<span id="cb3-10"><a href="Chapter3Reliability.html#cb3-10" tabindex="-1"></a>        time <span class="op">=</span> table.to_numpy()</span>
+<span id="cb3-11"><a href="Chapter3Reliability.html#cb3-11" tabindex="-1"></a>        xgrid <span class="op">=</span> np.arange(<span class="bu">len</span>(ip_df_plot[<span class="st">&quot;date&quot;</span>].unique().tolist()) <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb3-12"><a href="Chapter3Reliability.html#cb3-12" tabindex="-1"></a>        ygrid <span class="op">=</span> np.arange(<span class="bu">len</span>(ip_df_plot[<span class="st">&quot;hour&quot;</span>].unique().tolist()) <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb3-13"><a href="Chapter3Reliability.html#cb3-13" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="Chapter3Reliability.html#cb3-14" tabindex="-1"></a>        c_map <span class="op">=</span> plt.cm.get_cmap(cmap)</span>
+<span id="cb3-15"><a href="Chapter3Reliability.html#cb3-15" tabindex="-1"></a>        fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="fl">7.5</span>))</span>
+<span id="cb3-16"><a href="Chapter3Reliability.html#cb3-16" tabindex="-1"></a>        ax.pcolormesh(xgrid, ygrid, time, cmap<span class="op">=</span>c_map, vmin<span class="op">=</span>min_lim, vmax<span class="op">=</span>max_lim)</span>
+<span id="cb3-17"><a href="Chapter3Reliability.html#cb3-17" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="Chapter3Reliability.html#cb3-18" tabindex="-1"></a>        ax.yaxis.set_ticks([i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(ip_df_plot[<span class="st">&quot;hour&quot;</span>].unique().tolist()))])</span>
+<span id="cb3-19"><a href="Chapter3Reliability.html#cb3-19" tabindex="-1"></a>        ax.set_yticklabels(ip_df_plot[<span class="st">&quot;hour&quot;</span>].unique().tolist())</span>
+<span id="cb3-20"><a href="Chapter3Reliability.html#cb3-20" tabindex="-1"></a>        ax.set_ylabel(<span class="st">&quot;Hour&quot;</span>)</span>
+<span id="cb3-21"><a href="Chapter3Reliability.html#cb3-21" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="Chapter3Reliability.html#cb3-22" tabindex="-1"></a>        ax.xaxis.set_ticks([i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(ip_df_plot[<span class="st">&quot;date&quot;</span>].unique().tolist()))][::xticks])</span>
+<span id="cb3-23"><a href="Chapter3Reliability.html#cb3-23" tabindex="-1"></a>        xlabels <span class="op">=</span> ip_df_plot[<span class="st">&quot;date&quot;</span>].unique().tolist()</span>
+<span id="cb3-24"><a href="Chapter3Reliability.html#cb3-24" tabindex="-1"></a>        ax.set_xticklabels(xlabels[::xticks], rotation<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb3-25"><a href="Chapter3Reliability.html#cb3-25" tabindex="-1"></a>        ax.set_xlabel(<span class="st">&quot;Date&quot;</span>)</span>
+<span id="cb3-26"><a href="Chapter3Reliability.html#cb3-26" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="Chapter3Reliability.html#cb3-27" tabindex="-1"></a>        fig.subplots_adjust(bottom<span class="op">=</span><span class="fl">0.15</span>)</span>
+<span id="cb3-28"><a href="Chapter3Reliability.html#cb3-28" tabindex="-1"></a>        norm <span class="op">=</span> mc.Normalize(min_lim, max_lim)</span>
+<span id="cb3-29"><a href="Chapter3Reliability.html#cb3-29" tabindex="-1"></a>        cb <span class="op">=</span> fig.colorbar(</span>
+<span id="cb3-30"><a href="Chapter3Reliability.html#cb3-30" tabindex="-1"></a>            ScalarMappable(norm<span class="op">=</span>norm, cmap<span class="op">=</span>c_map),</span>
+<span id="cb3-31"><a href="Chapter3Reliability.html#cb3-31" tabindex="-1"></a>        )</span>
+<span id="cb3-32"><a href="Chapter3Reliability.html#cb3-32" tabindex="-1"></a>        cb.set_label(cmap_label, size<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb3-33"><a href="Chapter3Reliability.html#cb3-33" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="Chapter3Reliability.html#cb3-34" tabindex="-1"></a>        title <span class="op">=</span> <span class="st">&quot;EB Seg: &quot;</span> <span class="op">+</span> <span class="bu">str</span>(i<span class="op">+</span><span class="dv">1</span>) <span class="op">+</span> <span class="st">&quot;, &quot;</span> <span class="op">+</span> <span class="bu">str</span>(ip_df_plot[<span class="st">&quot;road-name&quot;</span>][<span class="dv">0</span>]) <span class="op">+</span> <span class="st">&quot; ,&quot;</span> <span class="op">+</span> <span class="bu">str</span>(ip_df_plot[<span class="st">&quot;county&quot;</span>][<span class="dv">0</span>]) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb3-35"><a href="Chapter3Reliability.html#cb3-35" tabindex="-1"></a>                <span class="st">&quot; COUNTY, &quot;</span> <span class="op">+</span> <span class="bu">str</span>(ip_df_plot[<span class="st">&quot;state&quot;</span>][<span class="dv">0</span>]) <span class="op">+</span> <span class="st">&quot;, &quot;</span> <span class="op">+</span> <span class="bu">str</span>(ip_df_plot[<span class="st">&quot;zip&quot;</span>][<span class="dv">0</span>]) <span class="op">+</span> <span class="st">&quot; - XD Id: &quot;</span> <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb3-36"><a href="Chapter3Reliability.html#cb3-36" tabindex="-1"></a>                <span class="bu">str</span>(ip_df_plot[<span class="st">&quot;xd&quot;</span>][<span class="dv">0</span>]) <span class="op">+</span> <span class="st">&quot;, LEN: &quot;</span> <span class="op">+</span> <span class="bu">str</span>(<span class="bu">round</span>(ip_df_plot[<span class="st">&quot;miles&quot;</span>][<span class="dv">0</span>], <span class="dv">2</span>))<span class="op">+</span><span class="st">&quot; miles&quot;</span></span>
+<span id="cb3-37"><a href="Chapter3Reliability.html#cb3-37" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="Chapter3Reliability.html#cb3-38" tabindex="-1"></a>        <span class="bu">print</span>(title)</span>
+<span id="cb3-39"><a href="Chapter3Reliability.html#cb3-39" tabindex="-1"></a>        plt.title(title)</span>
+<span id="cb3-40"><a href="Chapter3Reliability.html#cb3-40" tabindex="-1"></a>        plt.savefig(output <span class="op">+</span> value <span class="op">+</span> <span class="st">&quot;_&quot;</span> <span class="op">+</span> <span class="bu">str</span>(i<span class="op">+</span><span class="dv">1</span>)<span class="op">+</span><span class="st">&quot;.png&quot;</span>, bbox_inches<span class="op">=</span><span class="st">&#39;tight&#39;</span>, pad_inches<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb3-41"><a href="Chapter3Reliability.html#cb3-41" tabindex="-1"></a>        plt.show()</span>
+<span id="cb3-42"><a href="Chapter3Reliability.html#cb3-42" tabindex="-1"></a>        plt.close()</span>
+<span id="cb3-43"><a href="Chapter3Reliability.html#cb3-43" tabindex="-1"></a></span>
+<span id="cb3-44"><a href="Chapter3Reliability.html#cb3-44" tabindex="-1"></a>create_heatmap(df_agg_dt_hr, xd_id, op_path, min_lim<span class="op">=</span><span class="dv">10</span>, max_lim<span class="op">=</span><span class="dv">60</span>, cmap<span class="op">=</span><span class="st">&quot;RdYlGn&quot;</span>, value<span class="op">=</span><span class="st">&quot;speed&quot;</span>, xticks<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb3-45"><a href="Chapter3Reliability.html#cb3-45" tabindex="-1"></a>                   cmap_label<span class="op">=</span><span class="st">&quot;Speed (mi/h)&quot;</span>)</span>
+<span id="cb3-46"><a href="Chapter3Reliability.html#cb3-46" tabindex="-1"></a></span>
+<span id="cb3-47"><a href="Chapter3Reliability.html#cb3-47" tabindex="-1"></a>create_heatmap(df_agg_dt_hr, xd_id, op_path, min_lim<span class="op">=</span><span class="dv">0</span>, max_lim<span class="op">=</span><span class="dv">15</span>, cmap<span class="op">=</span><span class="st">&quot;cool&quot;</span>, value<span class="op">=</span><span class="st">&quot;speed_diff_85&quot;</span>, xticks<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb3-48"><a href="Chapter3Reliability.html#cb3-48" tabindex="-1"></a>                   cmap_label<span class="op">=</span><span class="st">&quot;85th </span><span class="sc">%i</span><span class="st">le Speed - Measured Speed (mi/h)&quot;</span>)</span></code></pre></div>
+<p>The resulting heatmaps can be seen below as Figure <a href="Chapter3Reliability.html#fig:SpeedHeatmapOH42">3.2</a> (speed) and Figure <a href="Chapter3Reliability.html#fig:SpeedDiffHeatmapOH42">3.3</a> (speed difference).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:SpeedHeatmapOH42"></span>
+<img src="Images/Reliability/speed_48.png" alt="Speed Heatmap Plot Example" width="50%" />
+<p class="caption">
+Figure 3.2: Speed Heatmap Plot Example
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:SpeedDiffHeatmapOH42"></span>
+<img src="Images/Reliability/speed_diff_85_48.png" alt="Speed Difference Heatmap Plot Example" width="50%" />
+<p class="caption">
+Figure 3.3: Speed Difference Heatmap Plot Example
+</p>
+</div>
+</div>
+<div id="box-and-whisker-plots" class="section level3 hasAnchor" number="3.7.4">
+<h3><span class="header-section-number">3.7.4</span> Box-and-Whisker Plots<a href="Chapter3Reliability.html#box-and-whisker-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Box-and-whisker plots display the minimum value, maximum value and three in-between percentiles, usually the 25th, 50th, and 75th percentiles as shown in Figure <a href="Chapter3Reliability.html#fig:BoxWhisker">3.4</a>. For purposes of reliability analysis, the 15th and 85th percentile were considered more suitable as a representation of congested and free-flow speeds, respectively.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:BoxWhisker"></span>
+<img src="Images/Reliability/BoxWhisker.png" alt="Box-and-Whisker Plot Interpretation"  />
+<p class="caption">
+Figure 3.4: Box-and-Whisker Plot Interpretation
+</p>
+</div>
+<p>The following code can be used to create weekly box-and-whisker plots to display the spread in travel times. The <em>lower_df</em> and _upper_df parameters can be modified to display the desired lower and upper percentile bounds. In this case, the 15th and 85th percentile travel times are used.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="Chapter3Reliability.html#cb4-1" tabindex="-1"></a><span class="kw">def</span> create_box_whisker_weekly(df, xd_id_list, output, lower_df, upper_df, name):</span>
+<span id="cb4-2"><a href="Chapter3Reliability.html#cb4-2" tabindex="-1"></a>    xaxis <span class="op">=</span> <span class="st">&quot;start_date&quot;</span></span>
+<span id="cb4-3"><a href="Chapter3Reliability.html#cb4-3" tabindex="-1"></a>    df_perc <span class="op">=</span> df.groupby([<span class="st">&quot;xd_id&quot;</span>, xaxis]).agg({<span class="st">&quot;speed&quot;</span>: [percentile(lower_df), percentile(upper_df), <span class="st">&quot;median&quot;</span>]})</span>
+<span id="cb4-4"><a href="Chapter3Reliability.html#cb4-4" tabindex="-1"></a>    df_perc.columns <span class="op">=</span> df_perc.columns.<span class="bu">map</span>(<span class="st">&#39;|&#39;</span>.join).<span class="bu">str</span>.strip(<span class="st">&#39;|&#39;</span>)</span>
+<span id="cb4-5"><a href="Chapter3Reliability.html#cb4-5" tabindex="-1"></a>    df_perc.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-6"><a href="Chapter3Reliability.html#cb4-6" tabindex="-1"></a>    df_perc <span class="op">=</span> df_perc.rename(columns<span class="op">=</span>{<span class="st">&#39;speed|percentile_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(lower_df): <span class="st">&#39;speed_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(lower_df) <span class="op">+</span> <span class="st">&#39;th&#39;</span>,</span>
+<span id="cb4-7"><a href="Chapter3Reliability.html#cb4-7" tabindex="-1"></a>                                      <span class="st">&#39;speed|percentile_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(upper_df): <span class="st">&#39;speed_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(upper_df) <span class="op">+</span> <span class="st">&#39;th&#39;</span>,</span>
+<span id="cb4-8"><a href="Chapter3Reliability.html#cb4-8" tabindex="-1"></a>                                      <span class="st">&#39;speed|median&#39;</span>: <span class="st">&#39;speed_median&#39;</span>})</span>
+<span id="cb4-9"><a href="Chapter3Reliability.html#cb4-9" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="Chapter3Reliability.html#cb4-10" tabindex="-1"></a>    colors <span class="op">=</span> [<span class="st">&#39;#e6194B&#39;</span>, <span class="st">&#39;#3cb44b&#39;</span>, <span class="st">&#39;#ffe119&#39;</span>, <span class="st">&#39;#4363d8&#39;</span>, <span class="st">&#39;#f58231&#39;</span>, <span class="st">&#39;#911eb4&#39;</span>, <span class="st">&#39;#42d4f4&#39;</span>, <span class="st">&#39;#f032e6&#39;</span>, <span class="st">&#39;#bfef45&#39;</span>, <span class="st">&#39;#fabed4&#39;</span>, <span class="st">&#39;#469990&#39;</span>, <span class="st">&#39;#dcbeff&#39;</span>]</span>
+<span id="cb4-11"><a href="Chapter3Reliability.html#cb4-11" tabindex="-1"></a>    df_perc[<span class="st">&quot;start_date&quot;</span>] <span class="op">=</span> pd.to_datetime(df_perc[<span class="st">&quot;start_date&quot;</span>])</span>
+<span id="cb4-12"><a href="Chapter3Reliability.html#cb4-12" tabindex="-1"></a>    df_perc[<span class="st">&quot;start_date_month&quot;</span>] <span class="op">=</span> df_perc[<span class="st">&quot;start_date&quot;</span>].dt.month</span>
+<span id="cb4-13"><a href="Chapter3Reliability.html#cb4-13" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="Chapter3Reliability.html#cb4-14" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Creating &quot;</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">&quot; Box-Whiskers Plot ...&quot;</span>)</span>
+<span id="cb4-15"><a href="Chapter3Reliability.html#cb4-15" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, segments):  <span class="co"># segments instead of 1</span></span>
+<span id="cb4-16"><a href="Chapter3Reliability.html#cb4-16" tabindex="-1"></a>        df_print <span class="op">=</span> df_perc[df_perc[<span class="st">&quot;xd_id&quot;</span>] <span class="op">==</span> xd_id_list[i]]</span>
+<span id="cb4-17"><a href="Chapter3Reliability.html#cb4-17" tabindex="-1"></a>        df_print.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-18"><a href="Chapter3Reliability.html#cb4-18" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="Chapter3Reliability.html#cb4-19" tabindex="-1"></a>        box_colors <span class="op">=</span> []</span>
+<span id="cb4-20"><a href="Chapter3Reliability.html#cb4-20" tabindex="-1"></a>        <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(df_print[<span class="st">&quot;start_date_month&quot;</span>])):</span>
+<span id="cb4-21"><a href="Chapter3Reliability.html#cb4-21" tabindex="-1"></a>            <span class="co"># print()</span></span>
+<span id="cb4-22"><a href="Chapter3Reliability.html#cb4-22" tabindex="-1"></a>            box_colors.append(colors[df_print[<span class="st">&quot;start_date_month&quot;</span>][k]<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb4-23"><a href="Chapter3Reliability.html#cb4-23" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="Chapter3Reliability.html#cb4-24" tabindex="-1"></a>        <span class="co"># bins = np.linspace(1, len(df_print), num=len(df_print))</span></span>
+<span id="cb4-25"><a href="Chapter3Reliability.html#cb4-25" tabindex="-1"></a>        fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">12</span>))</span>
+<span id="cb4-26"><a href="Chapter3Reliability.html#cb4-26" tabindex="-1"></a>        ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>)</span>
+<span id="cb4-27"><a href="Chapter3Reliability.html#cb4-27" tabindex="-1"></a>        box_data <span class="op">=</span> []</span>
+<span id="cb4-28"><a href="Chapter3Reliability.html#cb4-28" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(df_print)):</span>
+<span id="cb4-29"><a href="Chapter3Reliability.html#cb4-29" tabindex="-1"></a>            temp_box_data <span class="op">=</span> []</span>
+<span id="cb4-30"><a href="Chapter3Reliability.html#cb4-30" tabindex="-1"></a>            temp_box_data.append(df_print[<span class="st">&#39;speed_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(lower_df) <span class="op">+</span> <span class="st">&#39;th&#39;</span>][j])</span>
+<span id="cb4-31"><a href="Chapter3Reliability.html#cb4-31" tabindex="-1"></a>            temp_box_data.append(df_print[<span class="st">&quot;speed_median&quot;</span>][j])</span>
+<span id="cb4-32"><a href="Chapter3Reliability.html#cb4-32" tabindex="-1"></a>            temp_box_data.append(df_print[<span class="st">&#39;speed_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(upper_df) <span class="op">+</span> <span class="st">&#39;th&#39;</span>][j])</span>
+<span id="cb4-33"><a href="Chapter3Reliability.html#cb4-33" tabindex="-1"></a>            box_data.append(temp_box_data)</span>
+<span id="cb4-34"><a href="Chapter3Reliability.html#cb4-34" tabindex="-1"></a></span>
+<span id="cb4-35"><a href="Chapter3Reliability.html#cb4-35" tabindex="-1"></a>        bp <span class="op">=</span> ax.boxplot(box_data, vert<span class="op">=</span><span class="dv">0</span>, patch_artist<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-36"><a href="Chapter3Reliability.html#cb4-36" tabindex="-1"></a>        <span class="cf">for</span> patch, color <span class="kw">in</span> <span class="bu">zip</span>(bp[<span class="st">&#39;boxes&#39;</span>], box_colors):</span>
+<span id="cb4-37"><a href="Chapter3Reliability.html#cb4-37" tabindex="-1"></a>            patch.set_facecolor(color)</span>
+<span id="cb4-38"><a href="Chapter3Reliability.html#cb4-38" tabindex="-1"></a></span>
+<span id="cb4-39"><a href="Chapter3Reliability.html#cb4-39" tabindex="-1"></a>        <span class="cf">for</span> median <span class="kw">in</span> bp[<span class="st">&#39;medians&#39;</span>]:</span>
+<span id="cb4-40"><a href="Chapter3Reliability.html#cb4-40" tabindex="-1"></a>            median.<span class="bu">set</span>(color<span class="op">=</span><span class="st">&#39;black&#39;</span>,</span>
+<span id="cb4-41"><a href="Chapter3Reliability.html#cb4-41" tabindex="-1"></a>                       linewidth<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb4-42"><a href="Chapter3Reliability.html#cb4-42" tabindex="-1"></a></span>
+<span id="cb4-43"><a href="Chapter3Reliability.html#cb4-43" tabindex="-1"></a>        <span class="cf">for</span> whisker <span class="kw">in</span> bp[<span class="st">&#39;whiskers&#39;</span>]:</span>
+<span id="cb4-44"><a href="Chapter3Reliability.html#cb4-44" tabindex="-1"></a>            whisker.<span class="bu">set</span>(color<span class="op">=</span><span class="st">&#39;black&#39;</span>,</span>
+<span id="cb4-45"><a href="Chapter3Reliability.html#cb4-45" tabindex="-1"></a>                       linewidth<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb4-46"><a href="Chapter3Reliability.html#cb4-46" tabindex="-1"></a></span>
+<span id="cb4-47"><a href="Chapter3Reliability.html#cb4-47" tabindex="-1"></a>        plt.legend(loc<span class="op">=</span><span class="st">&quot;best&quot;</span>, fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb4-48"><a href="Chapter3Reliability.html#cb4-48" tabindex="-1"></a>        plt.ylabel(<span class="st">&quot;Date&quot;</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb4-49"><a href="Chapter3Reliability.html#cb4-49" tabindex="-1"></a>        plt.xlabel(<span class="st">&quot;Speed (mi/h)&quot;</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb4-50"><a href="Chapter3Reliability.html#cb4-50" tabindex="-1"></a>        plt.title(name <span class="op">+</span> <span class="st">&quot; Box-Whisker Plot Seg: &quot;</span> <span class="op">+</span> <span class="bu">str</span>(i <span class="op">+</span> <span class="dv">1</span>) <span class="op">+</span> <span class="st">&quot; XD: &quot;</span> <span class="op">+</span> <span class="bu">str</span>(xd_id_list[i]))</span>
+<span id="cb4-51"><a href="Chapter3Reliability.html#cb4-51" tabindex="-1"></a>        plt.grid()</span>
+<span id="cb4-52"><a href="Chapter3Reliability.html#cb4-52" tabindex="-1"></a>        plt.xlim(<span class="dv">0</span>, <span class="dv">80</span>)</span>
+<span id="cb4-53"><a href="Chapter3Reliability.html#cb4-53" tabindex="-1"></a>        ytics <span class="op">=</span> df_print[xaxis].astype(<span class="bu">str</span>)</span>
+<span id="cb4-54"><a href="Chapter3Reliability.html#cb4-54" tabindex="-1"></a>        ax.set_yticklabels(ytics)</span>
+<span id="cb4-55"><a href="Chapter3Reliability.html#cb4-55" tabindex="-1"></a>        ax.get_yaxis().tick_left()</span>
+<span id="cb4-56"><a href="Chapter3Reliability.html#cb4-56" tabindex="-1"></a>        ax.legend([<span class="st">&quot;15th|---Median---|85th </span><span class="sc">%i</span><span class="st">le&quot;</span>])</span>
+<span id="cb4-57"><a href="Chapter3Reliability.html#cb4-57" tabindex="-1"></a>        plt.savefig(output <span class="op">+</span> name <span class="op">+</span> <span class="st">&quot;_&quot;</span> <span class="op">+</span> <span class="bu">str</span>(lower_df) <span class="op">+</span> <span class="st">&quot;_&quot;</span> <span class="op">+</span> <span class="bu">str</span>(upper_df) <span class="op">+</span> <span class="st">&quot;_&quot;</span> <span class="op">+</span> <span class="bu">str</span>(i <span class="op">+</span> <span class="dv">1</span>) <span class="op">+</span> <span class="st">&quot;.png&quot;</span>,</span>
+<span id="cb4-58"><a href="Chapter3Reliability.html#cb4-58" tabindex="-1"></a>                    bbox_inches<span class="op">=</span><span class="st">&#39;tight&#39;</span>, pad_inches<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb4-59"><a href="Chapter3Reliability.html#cb4-59" tabindex="-1"></a>                    </span>
+<span id="cb4-60"><a href="Chapter3Reliability.html#cb4-60" tabindex="-1"></a></span>
+<span id="cb4-61"><a href="Chapter3Reliability.html#cb4-61" tabindex="-1"></a>create_box_whisker_weekly(ip_df, xd_id, op_path, <span class="dv">15</span>, <span class="dv">85</span>, <span class="st">&quot;Speed_bw&quot;</span>)</span></code></pre></div>
+<p>An example of the box-and-whisker plot for a segment of Ohio US 42 is shown below in Figure <a href="Chapter3Reliability.html#fig:BoxWhiskerOH42">3.5</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:BoxWhiskerOH42"></span>
+<img src="Images/Reliability/Speed_bw_15_85_48.png" alt="Box-and-Whisker Plot Example"  />
+<p class="caption">
+Figure 3.5: Box-and-Whisker Plot Example
+</p>
+</div>
+</div>
+<div id="speed-confidence-band-plots" class="section level3 hasAnchor" number="3.7.5">
+<h3><span class="header-section-number">3.7.5</span> Speed Confidence Band Plots<a href="Chapter3Reliability.html#speed-confidence-band-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Speed confidence bands can be configured to use different bounds depending on the goal of the analysis. For example, in a scenario where a reasonable best and worst case scenario are sought, using a low percentile (e.g., 5th) and a high percentile (e.g., 95th) achives the objective by covering 9 out of every 10 values in the data. In analyses that aim to describe typical conditions, a narrower band can be used (e.g., 15th through 85th percentiles). The code below supports these different use cases by entering different (integer) values in the <em>lower_df</em> and _upper_df function parameters.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="Chapter3Reliability.html#cb5-1" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="Chapter3Reliability.html#cb5-2" tabindex="-1"></a><span class="kw">def</span> create_confidence_band_hourly(df, xd_id_list, output, lower_df, upper_df, name):</span>
+<span id="cb5-3"><a href="Chapter3Reliability.html#cb5-3" tabindex="-1"></a>    xaxis <span class="op">=</span> <span class="st">&quot;hour&quot;</span></span>
+<span id="cb5-4"><a href="Chapter3Reliability.html#cb5-4" tabindex="-1"></a>    df_perc <span class="op">=</span> df.groupby([<span class="st">&quot;xd_id&quot;</span>, xaxis]).agg({<span class="st">&quot;speed&quot;</span>: [percentile(lower_df), percentile(upper_df), <span class="st">&quot;median&quot;</span>]})</span>
+<span id="cb5-5"><a href="Chapter3Reliability.html#cb5-5" tabindex="-1"></a>    df_perc.columns <span class="op">=</span> df_perc.columns.<span class="bu">map</span>(<span class="st">&#39;|&#39;</span>.join).<span class="bu">str</span>.strip(<span class="st">&#39;|&#39;</span>)</span>
+<span id="cb5-6"><a href="Chapter3Reliability.html#cb5-6" tabindex="-1"></a>    df_perc.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-7"><a href="Chapter3Reliability.html#cb5-7" tabindex="-1"></a>    df_perc <span class="op">=</span> df_perc.rename(columns<span class="op">=</span>{<span class="st">&#39;speed|percentile_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(lower_df): <span class="st">&#39;speed_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(lower_df) <span class="op">+</span> <span class="st">&#39;th&#39;</span>,</span>
+<span id="cb5-8"><a href="Chapter3Reliability.html#cb5-8" tabindex="-1"></a>                                      <span class="st">&#39;speed|percentile_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(upper_df): <span class="st">&#39;speed_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(upper_df) <span class="op">+</span> <span class="st">&#39;th&#39;</span>,</span>
+<span id="cb5-9"><a href="Chapter3Reliability.html#cb5-9" tabindex="-1"></a>                                      <span class="st">&#39;speed|median&#39;</span>: <span class="st">&#39;speed_median&#39;</span>})</span>
+<span id="cb5-10"><a href="Chapter3Reliability.html#cb5-10" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="Chapter3Reliability.html#cb5-11" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Creating &quot;</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">&quot; Confidence Band Plot ...&quot;</span>)</span>
+<span id="cb5-12"><a href="Chapter3Reliability.html#cb5-12" tabindex="-1"></a>    bins <span class="op">=</span> np.linspace(<span class="dv">5</span>, <span class="dv">23</span>, num<span class="op">=</span><span class="dv">19</span>)</span>
+<span id="cb5-13"><a href="Chapter3Reliability.html#cb5-13" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, segments):</span>
+<span id="cb5-14"><a href="Chapter3Reliability.html#cb5-14" tabindex="-1"></a>        df_print <span class="op">=</span> df_perc[df_perc[<span class="st">&quot;xd_id&quot;</span>] <span class="op">==</span> xd_id_list[i]]</span>
+<span id="cb5-15"><a href="Chapter3Reliability.html#cb5-15" tabindex="-1"></a>        df_print.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-16"><a href="Chapter3Reliability.html#cb5-16" tabindex="-1"></a>        plt.figure()</span>
+<span id="cb5-17"><a href="Chapter3Reliability.html#cb5-17" tabindex="-1"></a>        plt.plot(df_print[xaxis], df_print[<span class="st">&#39;speed_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(lower_df) <span class="op">+</span> <span class="st">&#39;th&#39;</span>], label<span class="op">=</span><span class="bu">str</span>(lower_df) <span class="op">+</span> <span class="st">&quot;th </span><span class="sc">%i</span><span class="st">le&quot;</span>, marker<span class="op">=</span><span class="st">&quot;o&quot;</span>)</span>
+<span id="cb5-18"><a href="Chapter3Reliability.html#cb5-18" tabindex="-1"></a>        plt.plot(df_print[xaxis], df_print[<span class="st">&quot;speed_median&quot;</span>], label<span class="op">=</span><span class="st">&quot;median&quot;</span>, marker<span class="op">=</span><span class="st">&quot;*&quot;</span>)</span>
+<span id="cb5-19"><a href="Chapter3Reliability.html#cb5-19" tabindex="-1"></a>        plt.plot(df_print[xaxis], df_print[<span class="st">&#39;speed_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(upper_df) <span class="op">+</span> <span class="st">&#39;th&#39;</span>], label<span class="op">=</span><span class="bu">str</span>(upper_df) <span class="op">+</span> <span class="st">&quot;th </span><span class="sc">%i</span><span class="st">le&quot;</span>, marker<span class="op">=</span><span class="st">&quot;o&quot;</span>)</span>
+<span id="cb5-20"><a href="Chapter3Reliability.html#cb5-20" tabindex="-1"></a>        plt.legend(loc<span class="op">=</span><span class="st">&quot;best&quot;</span>, fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb5-21"><a href="Chapter3Reliability.html#cb5-21" tabindex="-1"></a>        plt.xlabel(<span class="st">&quot;Time of Day&quot;</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb5-22"><a href="Chapter3Reliability.html#cb5-22" tabindex="-1"></a>        plt.ylabel(<span class="st">&quot;Speed (mi/h)&quot;</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb5-23"><a href="Chapter3Reliability.html#cb5-23" tabindex="-1"></a>        plt.title(name <span class="op">+</span> <span class="st">&quot; Confidence Band Plot Seg: &quot;</span> <span class="op">+</span> <span class="bu">str</span>(i <span class="op">+</span> <span class="dv">1</span>) <span class="op">+</span> <span class="st">&quot; XD: &quot;</span> <span class="op">+</span> <span class="bu">str</span>(xd_id_list[i]))</span>
+<span id="cb5-24"><a href="Chapter3Reliability.html#cb5-24" tabindex="-1"></a>        plt.grid()</span>
+<span id="cb5-25"><a href="Chapter3Reliability.html#cb5-25" tabindex="-1"></a>        plt.ylim(<span class="dv">0</span>, <span class="dv">80</span>)</span>
+<span id="cb5-26"><a href="Chapter3Reliability.html#cb5-26" tabindex="-1"></a>        plt.xticks(df_print[xaxis], bins.astype(<span class="st">&#39;int64&#39;</span>))</span>
+<span id="cb5-27"><a href="Chapter3Reliability.html#cb5-27" tabindex="-1"></a>        plt.fill_between(df_print[xaxis], df_print[<span class="st">&#39;speed_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(lower_df) <span class="op">+</span> <span class="st">&#39;th&#39;</span>],</span>
+<span id="cb5-28"><a href="Chapter3Reliability.html#cb5-28" tabindex="-1"></a>                         df_print[<span class="st">&#39;speed_&#39;</span> <span class="op">+</span> <span class="bu">str</span>(upper_df) <span class="op">+</span> <span class="st">&#39;th&#39;</span>], alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb5-29"><a href="Chapter3Reliability.html#cb5-29" tabindex="-1"></a>        plt.savefig(output <span class="op">+</span> name <span class="op">+</span> <span class="st">&quot;_&quot;</span> <span class="op">+</span> <span class="bu">str</span>(lower_df) <span class="op">+</span> <span class="st">&quot;_&quot;</span> <span class="op">+</span> <span class="bu">str</span>(upper_df) <span class="op">+</span> <span class="st">&quot;_&quot;</span> <span class="op">+</span> <span class="bu">str</span>(i <span class="op">+</span> <span class="dv">1</span>) <span class="op">+</span> <span class="st">&quot;.png&quot;</span>,</span>
+<span id="cb5-30"><a href="Chapter3Reliability.html#cb5-30" tabindex="-1"></a>                    bbox_inches<span class="op">=</span><span class="st">&#39;tight&#39;</span>, pad_inches<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb5-31"><a href="Chapter3Reliability.html#cb5-31" tabindex="-1"></a>    <span class="cf">return</span> df_perc</span>
+<span id="cb5-32"><a href="Chapter3Reliability.html#cb5-32" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="Chapter3Reliability.html#cb5-33" tabindex="-1"></a>df_speedcb_15_85 <span class="op">=</span> create_confidence_band_hourly(ip_df, xd_id, op_path, <span class="dv">15</span>, <span class="dv">85</span>, <span class="st">&quot;Speed&quot;</span>)</span></code></pre></div>
+<p>An example of the speed confidence band plot for a segment of Ohio US 42 is shown below in Figure <a href="Chapter3Reliability.html#fig:SpeedBandOH42">3.6</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:SpeedBandOH42"></span>
+<img src="Images/Reliability/Speed_cb_15_85_48.png" alt="Speed Confidence Band Plot Example"  />
+<p class="caption">
+Figure 3.6: Speed Confidence Band Plot Example
+</p>
+</div>
+</div>
+<div id="travel-time-index-plots" class="section level3 hasAnchor" number="3.7.6">
+<h3><span class="header-section-number">3.7.6</span> Travel Time Index Plots<a href="Chapter3Reliability.html#travel-time-index-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A cumulative distribution function (CDF) plot of travel time indices can concisely describe how travel times or speeds are distributed across time or space. Because of the simple representation of the data (a single line), it can be particularly suitable for before-after comparisons. The code below is set to use a range of TTIs from 0.0 through 2.0 through the <em>bins</em> variable, although that can be easily adjusted for the range of TTIs in the data being analyzed. Increasing the number of TTI bins will reduce the size of the steps, leading to more continuous-looking plots.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="Chapter3Reliability.html#cb6-1" tabindex="-1"></a><span class="kw">def</span> create_tti(df, xd_id_list, output, tt_idx, name):</span>
+<span id="cb6-2"><a href="Chapter3Reliability.html#cb6-2" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Creating &quot;</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">&quot;Index Reliability Plot ...&quot;</span>)</span>
+<span id="cb6-3"><a href="Chapter3Reliability.html#cb6-3" tabindex="-1"></a>    df <span class="op">=</span> df.groupby([<span class="st">&quot;xd&quot;</span>, <span class="st">&quot;hour&quot;</span>]).agg({tt_idx: [<span class="st">&quot;mean&quot;</span>]})</span>
+<span id="cb6-4"><a href="Chapter3Reliability.html#cb6-4" tabindex="-1"></a>    df.columns <span class="op">=</span> df.columns.<span class="bu">map</span>(<span class="st">&#39;|&#39;</span>.join).<span class="bu">str</span>.strip(<span class="st">&#39;|&#39;</span>)</span>
+<span id="cb6-5"><a href="Chapter3Reliability.html#cb6-5" tabindex="-1"></a>    df.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-6"><a href="Chapter3Reliability.html#cb6-6" tabindex="-1"></a>    df <span class="op">=</span> df.rename(columns<span class="op">=</span>{tt_idx <span class="op">+</span> <span class="st">&#39;|mean&#39;</span>: tt_idx})</span>
+<span id="cb6-7"><a href="Chapter3Reliability.html#cb6-7" tabindex="-1"></a>    df[tt_idx] <span class="op">=</span> df[tt_idx].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="bu">round</span>(x, <span class="dv">2</span>))</span>
+<span id="cb6-8"><a href="Chapter3Reliability.html#cb6-8" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="Chapter3Reliability.html#cb6-9" tabindex="-1"></a>    df <span class="op">=</span> df.groupby([<span class="st">&quot;xd&quot;</span>, tt_idx]). agg({tt_idx: [<span class="st">&quot;count&quot;</span>]})</span>
+<span id="cb6-10"><a href="Chapter3Reliability.html#cb6-10" tabindex="-1"></a>    df.columns <span class="op">=</span> df.columns.<span class="bu">map</span>(<span class="st">&#39;|&#39;</span>.join).<span class="bu">str</span>.strip(<span class="st">&#39;|&#39;</span>)</span>
+<span id="cb6-11"><a href="Chapter3Reliability.html#cb6-11" tabindex="-1"></a>    df.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-12"><a href="Chapter3Reliability.html#cb6-12" tabindex="-1"></a>    df <span class="op">=</span> df.rename(columns<span class="op">=</span>{tt_idx <span class="op">+</span> <span class="st">&#39;|count&#39;</span>: <span class="st">&#39;count&#39;</span>})</span>
+<span id="cb6-13"><a href="Chapter3Reliability.html#cb6-13" tabindex="-1"></a>    bins <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span>, num<span class="op">=</span><span class="dv">21</span>)</span>
+<span id="cb6-14"><a href="Chapter3Reliability.html#cb6-14" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, segments):</span>
+<span id="cb6-15"><a href="Chapter3Reliability.html#cb6-15" tabindex="-1"></a>        df_print <span class="op">=</span> df[df[<span class="st">&quot;xd&quot;</span>] <span class="op">==</span> xd_id_list[i]]</span>
+<span id="cb6-16"><a href="Chapter3Reliability.html#cb6-16" tabindex="-1"></a>        df_print.reset_index(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-17"><a href="Chapter3Reliability.html#cb6-17" tabindex="-1"></a>        count, bins_count <span class="op">=</span> np.histogram(df_print[tt_idx], bins<span class="op">=</span>bins)</span>
+<span id="cb6-18"><a href="Chapter3Reliability.html#cb6-18" tabindex="-1"></a>        <span class="co"># print(count, bins_count)</span></span>
+<span id="cb6-19"><a href="Chapter3Reliability.html#cb6-19" tabindex="-1"></a>        pdf <span class="op">=</span> count <span class="op">/</span> <span class="bu">sum</span>(count) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb6-20"><a href="Chapter3Reliability.html#cb6-20" tabindex="-1"></a>        cdf <span class="op">=</span> np.cumsum(pdf)</span>
+<span id="cb6-21"><a href="Chapter3Reliability.html#cb6-21" tabindex="-1"></a>        <span class="co"># print(pdf)</span></span>
+<span id="cb6-22"><a href="Chapter3Reliability.html#cb6-22" tabindex="-1"></a>        <span class="co"># print(cdf)</span></span>
+<span id="cb6-23"><a href="Chapter3Reliability.html#cb6-23" tabindex="-1"></a></span>
+<span id="cb6-24"><a href="Chapter3Reliability.html#cb6-24" tabindex="-1"></a>        plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb6-25"><a href="Chapter3Reliability.html#cb6-25" tabindex="-1"></a>        plt.plot(bins_count[<span class="dv">1</span>:], cdf, label<span class="op">=</span><span class="st">&quot;CDF&quot;</span>, marker<span class="op">=</span><span class="st">&quot;o&quot;</span>)</span>
+<span id="cb6-26"><a href="Chapter3Reliability.html#cb6-26" tabindex="-1"></a>        plt.scatter(bins_count[<span class="dv">1</span>:], cdf, marker<span class="op">=</span><span class="st">&quot;o&quot;</span>)</span>
+<span id="cb6-27"><a href="Chapter3Reliability.html#cb6-27" tabindex="-1"></a>        plt.legend(loc<span class="op">=</span><span class="st">&quot;best&quot;</span>, fontsize<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb6-28"><a href="Chapter3Reliability.html#cb6-28" tabindex="-1"></a>        plt.xlabel(name <span class="op">+</span> <span class="st">&quot; Index&quot;</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb6-29"><a href="Chapter3Reliability.html#cb6-29" tabindex="-1"></a>        plt.ylabel(<span class="st">&quot;Percentage %&quot;</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb6-30"><a href="Chapter3Reliability.html#cb6-30" tabindex="-1"></a>        plt.title(name <span class="op">+</span> <span class="st">&quot; Index Reliability Plot Seg: &quot;</span> <span class="op">+</span> <span class="bu">str</span>(i<span class="op">+</span><span class="dv">1</span>) <span class="op">+</span> <span class="st">&quot; XD: &quot;</span> <span class="op">+</span> <span class="bu">str</span>(xd_id_list[i]))</span>
+<span id="cb6-31"><a href="Chapter3Reliability.html#cb6-31" tabindex="-1"></a>        plt.grid()</span>
+<span id="cb6-32"><a href="Chapter3Reliability.html#cb6-32" tabindex="-1"></a>        plt.ylim(<span class="dv">0</span>, <span class="dv">100</span>)</span>
+<span id="cb6-33"><a href="Chapter3Reliability.html#cb6-33" tabindex="-1"></a>        plt.xticks(bins_count[<span class="dv">1</span>:].tolist(), [<span class="bu">round</span>(num, <span class="dv">1</span>) <span class="cf">for</span> num <span class="kw">in</span> bins[<span class="dv">1</span>:]])</span>
+<span id="cb6-34"><a href="Chapter3Reliability.html#cb6-34" tabindex="-1"></a>        plt.savefig(output <span class="op">+</span> tt_idx <span class="op">+</span> <span class="st">&quot;_CDF_&quot;</span> <span class="op">+</span> <span class="bu">str</span>(i <span class="op">+</span> <span class="dv">1</span>) <span class="op">+</span> <span class="st">&quot;.png&quot;</span>, bbox_inches<span class="op">=</span><span class="st">&#39;tight&#39;</span>, pad_inches<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb6-35"><a href="Chapter3Reliability.html#cb6-35" tabindex="-1"></a>        <span class="co"># plt.close()</span></span>
+<span id="cb6-36"><a href="Chapter3Reliability.html#cb6-36" tabindex="-1"></a>    <span class="cf">return</span> df</span>
+<span id="cb6-37"><a href="Chapter3Reliability.html#cb6-37" tabindex="-1"></a>    </span>
+<span id="cb6-38"><a href="Chapter3Reliability.html#cb6-38" tabindex="-1"></a>df_tti_15 <span class="op">=</span> create_tti_non_agg(df_agg, xd_id, op_path, <span class="st">&quot;tti_15&quot;</span>, <span class="st">&quot;Travel Time&quot;</span>)</span></code></pre></div>
+<p>An example of the travel time index plot for a segment of Ohio US 42 is shown below in Figure <a href="Chapter3Reliability.html#fig:TTIOH42">3.7</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:TTIOH42"></span>
+<img src="Images/Reliability/tti_15_CDF_48.png" alt="Speed Confidence Band Plot Example"  />
+<p class="caption">
+Figure 3.7: Speed Confidence Band Plot Example
+</p>
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Chapter2LOS.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Chapter4Bicycle.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/NCHRP-08-135/Guidebook/edit/master/03-Reliability.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Rural Highway Analysis Guidebook.pdf", "Rural Highway Analysis Guidebook.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"toc_depth": 2
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

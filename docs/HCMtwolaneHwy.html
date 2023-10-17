@@ -1,0 +1,2351 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Two-Lane Highway Segment Analysis Methodology | Rural-Highway-Analysis-Guidebook.knit</title>
+  <meta name="description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Two-Lane Highway Segment Analysis Methodology | Rural-Highway-Analysis-Guidebook.knit" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Two-Lane Highway Segment Analysis Methodology | Rural-Highway-Analysis-Guidebook.knit" />
+  
+  <meta name="twitter:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+<meta name="author" content="" />
+
+
+<meta name="date" content="2023-09-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="HCMmultilaneHwy.html"/>
+<link rel="next" href="HCMsignal.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Rural Highway Analysis Guidebook</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="chapter" data-level="1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#purpose-of-guidebook"><i class="fa fa-check"></i><b>1.1</b> Purpose of Guidebook</a></li>
+<li class="chapter" data-level="1.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-scope-and-limitations"><i class="fa fa-check"></i><b>1.2</b> Guidebook Scope and Limitations</a></li>
+<li class="chapter" data-level="1.3" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-organization"><i class="fa fa-check"></i><b>1.3</b> Guidebook Organization</a></li>
+<li class="chapter" data-level="1.4" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-format"><i class="fa fa-check"></i><b>1.4</b> Guidebook Format</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#navigating-the-document"><i class="fa fa-check"></i><b>1.4.1</b> Navigating the document</a></li>
+<li class="chapter" data-level="1.4.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#ProvidingFeedback"><i class="fa fa-check"></i><b>1.4.2</b> How to provide feedback on this document</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#SupportingResources"><i class="fa fa-check"></i><b>1.5</b> Supporting Resources and Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html"><i class="fa fa-check"></i><b>2</b> Rural Highway Level of Service for Automobiles</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#LOSIntro"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#Segmentation"><i class="fa fa-check"></i><b>2.2</b> Facility Segmentation</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#CrossSection"><i class="fa fa-check"></i><b>2.2.1</b> Cross Section</a></li>
+<li class="chapter" data-level="2.2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#passing-accommodations-for-two-lane-highways"><i class="fa fa-check"></i><b>2.2.2</b> Passing Accommodations for Two-Lane Highways</a></li>
+<li class="chapter" data-level="2.2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#posted-speed-limit-changes"><i class="fa fa-check"></i><b>2.2.3</b> Posted Speed Limit Changes</a></li>
+<li class="chapter" data-level="2.2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#geometric-alignment-considerations"><i class="fa fa-check"></i><b>2.2.4</b> Geometric Alignment Considerations</a></li>
+<li class="chapter" data-level="2.2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#IntxInfluenceArea"><i class="fa fa-check"></i><b>2.2.5</b> Intersections and their Influence Area</a></li>
+<li class="chapter" data-level="2.2.6" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#UrbanStreetClassification"><i class="fa fa-check"></i><b>2.2.6</b> Classification of Urban Street</a></li>
+<li class="chapter" data-level="2.2.7" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#SegMinLength"><i class="fa fa-check"></i><b>2.2.7</b> Practical Minimum Segment Length</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#FacilityLOS"><i class="fa fa-check"></i><b>2.3</b> Segment and Facility LOS Calculation</a></li>
+<li class="chapter" data-level="2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#HotSpots"><i class="fa fa-check"></i><b>2.4</b> Hot Spot Identification</a></li>
+<li class="chapter" data-level="2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#additional-performance-measures-for-facility-evaluation"><i class="fa fa-check"></i><b>2.5</b> Additional Performance Measures for Facility Evaluation</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#emergency-traffic-demand-surge"><i class="fa fa-check"></i><b>2.5.1</b> Emergency Traffic Demand Surge</a></li>
+<li class="chapter" data-level="2.5.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#short-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.2</b> Short-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#seasonal-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.3</b> Seasonal Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#long-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.4</b> Long-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#use-of-probe-vehicle-measured-travel-timesspeeds"><i class="fa fa-check"></i><b>2.5.5</b> Use of Probe-Vehicle Measured Travel Times/Speeds</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html"><i class="fa fa-check"></i><b>3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityIntro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#approach-for-rural-highways"><i class="fa fa-check"></i><b>3.2</b> Approach for Rural Highways</a></li>
+<li class="chapter" data-level="3.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityData"><i class="fa fa-check"></i><b>3.3</b> Data Examined</a></li>
+<li class="chapter" data-level="3.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilitySegmentation"><i class="fa fa-check"></i><b>3.4</b> Segmentation</a></li>
+<li class="chapter" data-level="3.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityDataOverview"><i class="fa fa-check"></i><b>3.5</b> Data Overview</a></li>
+<li class="chapter" data-level="3.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityMethods"><i class="fa fa-check"></i><b>3.6</b> Evaluation Methodologies</a></li>
+<li class="chapter" data-level="3.7" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityHowTo"><i class="fa fa-check"></i><b>3.7</b> Assessing Reliability</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#load-the-data"><i class="fa fa-check"></i><b>3.7.1</b> Load the data</a></li>
+<li class="chapter" data-level="3.7.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#aggregate-the-data"><i class="fa fa-check"></i><b>3.7.2</b> Aggregate the data</a></li>
+<li class="chapter" data-level="3.7.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#heatmaps"><i class="fa fa-check"></i><b>3.7.3</b> Heatmaps</a></li>
+<li class="chapter" data-level="3.7.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.7.4</b> Box-and-Whisker Plots</a></li>
+<li class="chapter" data-level="3.7.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#speed-confidence-band-plots"><i class="fa fa-check"></i><b>3.7.5</b> Speed Confidence Band Plots</a></li>
+<li class="chapter" data-level="3.7.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#travel-time-index-plots"><i class="fa fa-check"></i><b>3.7.6</b> Travel Time Index Plots</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html"><i class="fa fa-check"></i><b>4</b> Bicycle Operations Analysis on Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#overview-of-bicycle-operations-analysis-methods"><i class="fa fa-check"></i><b>4.1</b> Overview of Bicycle Operations Analysis Methods</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#highway-capacity-manual-level-of-service-analysis-methodologies"><i class="fa fa-check"></i><b>4.1.1</b> Highway Capacity Manual Level of Service Analysis Methodologies</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.1.2</b> Level of Traffic Stress Analysis Methodology</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#bicycle-compatibility-index-analysis-methodology"><i class="fa fa-check"></i><b>4.1.3</b> Bicycle Compatibility Index Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#BikeLOS"><i class="fa fa-check"></i><b>4.2</b> Bicycle Level of Service Research Recommendations</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-highway-capacity-manual-level-of-service-for-rural-highways"><i class="fa fa-check"></i><b>4.2.1</b> Revisions to Highway Capacity Manual Level of Service for Rural Highways</a></li>
+<li class="chapter" data-level="4.2.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.2.2</b> Revisions to Level of Traffic Stress Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#guidance-on-current-methods-for-rural-highways"><i class="fa fa-check"></i><b>4.3</b> Guidance on Current Methods for Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#adaptation-to-rural-conditions"><i class="fa fa-check"></i><b>4.3.1</b> Adaptation to Rural Conditions</a></li>
+<li class="chapter" data-level="4.3.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#data-requirements"><i class="fa fa-check"></i><b>4.3.2</b> Data Requirements</a></li>
+<li class="chapter" data-level="4.3.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#applications"><i class="fa fa-check"></i><b>4.3.3</b> Applications</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Part II: HCM Calculations</b></span></li>
+<li class="chapter" data-level="5" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html"><i class="fa fa-check"></i><b>5</b> HCM Automobile LOS Methodologies</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html"><i class="fa fa-check"></i><b>6</b> Multilane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#equations-and-exhibits"><i class="fa fa-check"></i><b>6.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="6.2" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#nomenclature"><i class="fa fa-check"></i><b>6.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html"><i class="fa fa-check"></i><b>7</b> Two-Lane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#equations-and-exhibits-1"><i class="fa fa-check"></i><b>7.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="7.2" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#nomenclature-1"><i class="fa fa-check"></i><b>7.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="HCMsignal.html"><a href="HCMsignal.html"><i class="fa fa-check"></i><b>8</b> Signalized Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="HCMsignal.html"><a href="HCMsignal.html#equations-and-exhibits-2"><i class="fa fa-check"></i><b>8.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="8.2" data-path="HCMsignal.html"><a href="HCMsignal.html#nomenclature-2"><i class="fa fa-check"></i><b>8.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="HCMroundabout.html"><a href="HCMroundabout.html"><i class="fa fa-check"></i><b>9</b> Roundabout Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="HCMroundabout.html"><a href="HCMroundabout.html#equations-and-exhibits-3"><i class="fa fa-check"></i><b>9.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="9.2" data-path="HCMroundabout.html"><a href="HCMroundabout.html#nomenclature-3"><i class="fa fa-check"></i><b>9.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="HCMawsc.html"><a href="HCMawsc.html"><i class="fa fa-check"></i><b>10</b> All-Way Stop-Controlled Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="HCMawsc.html"><a href="HCMawsc.html#equations-and-exhibits-4"><i class="fa fa-check"></i><b>10.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="10.2" data-path="HCMawsc.html"><a href="HCMawsc.html#nomenclature-4"><i class="fa fa-check"></i><b>10.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html"><i class="fa fa-check"></i><b>11</b> Urban Street Facility Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#equations-and-exhibits-5"><i class="fa fa-check"></i><b>11.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="11.2" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#nomenclature-5"><i class="fa fa-check"></i><b>11.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="HCMbicycle.html"><a href="HCMbicycle.html"><i class="fa fa-check"></i><b>12</b> Bicycle LOS Methodologies</a></li>
+<li class="chapter" data-level="13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html"><i class="fa fa-check"></i><b>13</b> Rural Highway Example Calculations</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-input-data"><i class="fa fa-check"></i><b>13.1</b> Segment Input Data</a></li>
+<li class="chapter" data-level="13.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations"><i class="fa fa-check"></i><b>13.2</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#first-iteration-uses-input-segment-lengths"><i class="fa fa-check"></i><b>13.2.1</b> First iteration uses input segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#influence-area-calculations"><i class="fa fa-check"></i><b>13.3</b> Influence Area Calculations</a></li>
+<li class="chapter" data-level="13.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-segment-length-calculations"><i class="fa fa-check"></i><b>13.4</b> Adjusted Segment Length Calculations</a></li>
+<li class="chapter" data-level="13.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations-1"><i class="fa fa-check"></i><b>13.5</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#second-iteration-uses-adjusted-segment-lengths"><i class="fa fa-check"></i><b>13.5.1</b> Second iteration uses adjusted segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#facility-calculations"><i class="fa fa-check"></i><b>13.6</b> Facility Calculations</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#posted-speed-travel-time-s"><i class="fa fa-check"></i><b>13.6.1</b> Posted Speed Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#free-flow-travel-time-s"><i class="fa fa-check"></i><b>13.6.2</b> Free-Flow Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#average-travel-time-s"><i class="fa fa-check"></i><b>13.6.3</b> Average Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#travel-time-segment-weights"><i class="fa fa-check"></i><b>13.6.4</b> Travel Time Segment Weights</a></li>
+<li class="chapter" data-level="13.6.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-demand-volumes"><i class="fa fa-check"></i><b>13.6.5</b> Adjusted Demand Volumes</a></li>
+<li class="chapter" data-level="13.6.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-hours-traveled-veh-h"><i class="fa fa-check"></i><b>13.6.6</b> Vehicle Hours Traveled (veh-h)</a></li>
+<li class="chapter" data-level="13.6.7" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#total-delay-veh-h"><i class="fa fa-check"></i><b>13.6.7</b> Total Delay (veh-h)</a></li>
+<li class="chapter" data-level="13.6.8" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-miles-traveled-veh-mi"><i class="fa fa-check"></i><b>13.6.8</b> Vehicle Miles Traveled (veh-mi)</a></li>
+<li class="chapter" data-level="13.6.9" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#space-mean-speed-mih"><i class="fa fa-check"></i><b>13.6.9</b> Space Mean Speed (mi/h)</a></li>
+<li class="chapter" data-level="13.6.10" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#ffs-delay-sveh"><i class="fa fa-check"></i><b>13.6.10</b> FFS Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.11" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#threshold-delay-sveh"><i class="fa fa-check"></i><b>13.6.11</b> Threshold Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.12" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-constancy"><i class="fa fa-check"></i><b>13.6.12</b> LOS Constancy</a></li>
+<li class="chapter" data-level="13.6.13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-adjustment-factor"><i class="fa fa-check"></i><b>13.6.13</b> LOS Adjustment Factor</a></li>
+<li class="chapter" data-level="13.6.14" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#final-los-score"><i class="fa fa-check"></i><b>13.6.14</b> Final LOS Score</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="CompEngine.html"><a href="CompEngine.html"><i class="fa fa-check"></i><b>14</b> Computational Engine Overview</a></li>
+<li class="part"><span><b>Part III: Case Studies</b></span></li>
+<li class="chapter" data-level="15" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html"><i class="fa fa-check"></i><b>15</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#supporting-material"><i class="fa fa-check"></i><b>15.1</b> Supporting Material</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#kml-files"><i class="fa fa-check"></i>KML Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#computational-engine-input-files"><i class="fa fa-check"></i>Computational Engine Input Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#probe-vehicle-data-analysis-scripting-code"><i class="fa fa-check"></i>Probe Vehicle Data Analysis Scripting Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html"><i class="fa fa-check"></i><b>16</b> Case Study: Oregon US-20</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#route-description"><i class="fa fa-check"></i><b>16.1</b> Route Description</a></li>
+<li class="chapter" data-level="16.2" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#level-of-service"><i class="fa fa-check"></i><b>16.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#segmentation"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#traffic-data"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#additional-data-inputs-for-intersections"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#results"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#reliability"><i class="fa fa-check"></i><b>16.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-heatmaps"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-difference-heatmaps"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#box-and-whisker-speed-plots"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-confidence-band"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#travel-time-index"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html"><i class="fa fa-check"></i><b>17</b> Case Study: Tennessee SR-109</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#route-description-1"><i class="fa fa-check"></i><b>17.1</b> Route Description</a></li>
+<li class="chapter" data-level="17.2" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#level-of-service-1"><i class="fa fa-check"></i><b>17.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#segmentation-1"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#traffic-data-1"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#additional-data-inputs-for-intersections-1"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#results-1"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#reliability-1"><i class="fa fa-check"></i><b>17.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-heatmaps-1"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-difference-heatmaps-1"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#box-and-whisker-speed-plots-1"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-confidence-band-1"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#travel-time-index-1"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#summary-1"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html"><i class="fa fa-check"></i><b>18</b> Case Study: Ohio US-42</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#route-description-2"><i class="fa fa-check"></i><b>18.1</b> Route Description</a></li>
+<li class="chapter" data-level="18.2" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#level-of-service-2"><i class="fa fa-check"></i><b>18.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#segmentation-2"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#traffic-data-2"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#additional-data-inputs-for-intersections-2"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#results-2"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#reliability-2"><i class="fa fa-check"></i><b>18.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-heatmaps-2"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-difference-heatmaps-2"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#box-and-whisker-speed-plots-2"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-confidence-band-2"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#travel-time-index-2"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#summary-2"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html"><i class="fa fa-check"></i><b>19</b> Case Study: Montana US-287</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#route-description-3"><i class="fa fa-check"></i><b>19.1</b> Route Description</a></li>
+<li class="chapter" data-level="19.2" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#level-of-service-3"><i class="fa fa-check"></i><b>19.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#segmentation-3"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#traffic-data-3"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#results-3"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Appendixes</b></span></li>
+<li class="chapter" data-level="A" data-path="AppendixA.html"><a href="AppendixA.html"><i class="fa fa-check"></i><b>A</b> Mitigation Strategies</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="AppendixA.html"><a href="AppendixA.html#general"><i class="fa fa-check"></i><b>A.1</b> General</a></li>
+<li class="chapter" data-level="A.2" data-path="AppendixA.html"><a href="AppendixA.html#multilane-highways"><i class="fa fa-check"></i><b>A.2</b> Multilane Highways</a></li>
+<li class="chapter" data-level="A.3" data-path="AppendixA.html"><a href="AppendixA.html#two-lane-highways"><i class="fa fa-check"></i><b>A.3</b> Two-Lane Highways</a></li>
+<li class="chapter" data-level="A.4" data-path="AppendixA.html"><a href="AppendixA.html#intersections"><i class="fa fa-check"></i><b>A.4</b> Intersections</a></li>
+<li class="chapter" data-level="A.5" data-path="AppendixA.html"><a href="AppendixA.html#arterials"><i class="fa fa-check"></i><b>A.5</b> Arterials</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/NCHRP-08-135/Guidebook" target="blank">View Book Source</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="HCMtwolaneHwy" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Two-Lane Highway Segment Analysis Methodology<a href="HCMtwolaneHwy.html#HCMtwolaneHwy" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The core two-lane highway analysis methodology is contained in Chapter 15 (Two-Lane Highways). The motorized vehicle analysis methodology process is given in Exhibit 15-9 (p. 15-16). The specific equation and exhibit numbers utilized in the methodology, in the general order in which they are applied, are as follows.</p>
+<div id="equations-and-exhibits-1" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Equations and Exhibits<a href="HCMtwolaneHwy.html#equations-and-exhibits-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Step 1: Identify Facility Study Boundaries and Corresponding Segmentation</strong></p>
+<ul>
+<li>Exhibit 15-10: Minimum and Maximum Segment Lengths for Use in Computing Segment Speeds and Percent Followers</li>
+</ul>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong>Passing Constrained: Minimum - Maximum (mi)</strong></th>
+<th align="center"><strong>Passing Zone: Minimum - Maximum (mi)</strong></th>
+<th align="center"><strong>Passing Lane: Minimum - Maximum (mi)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">0.25 - 3.0</td>
+<td align="center">0.25 - 2.0</td>
+<td align="center">0.5 - 3.0</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">0.25 - 3.0</td>
+<td align="center">0.25 - 2.0</td>
+<td align="center">0.5 - 3.0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">0.25 - 1.1</td>
+<td align="center">0.25 - 1.1</td>
+<td align="center">0.5 - 1.1</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">0.5 - 3.0</td>
+<td align="center">0.5 - 2.0</td>
+<td align="center">0.5 - 3.0</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">0.5 - 3.0</td>
+<td align="center">0.5 - 2.0</td>
+<td align="center">0.5 - 3.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 2: Determine Demand Flow Rates, Capacity, and d/c Ratio</strong></p>
+<ul>
+<li>Equation 15-1: Analysis flow rate estimation; Uses results from Eq. 4-2</li>
+</ul>
+<p><span class="math display">\[v_{d} = \frac{V_{d}}{PHF} \tag{HCM Eq. 15-1}\]</span></p>
+<ul>
+<li>Equation 4-2: Peak hour factor (PHF); In HCM Chapter 4 (Traffic Operations and Capacity Concepts)</li>
+</ul>
+<p><span class="math display">\[PHF = \frac{V}{V_{15} \times 4} \tag{HCM Eq. 4-2}\]</span></p>
+<p><strong>Step 3: Determine Vertical Alignment Classification</strong></p>
+<ul>
+<li>Exhibit 15-11: Classifications for Vertical Alignment</li>
+</ul>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Segment Length (mi)</strong></th>
+<th align="center"></th>
+<th align="center"><strong>Segment</strong></th>
+<th align="center"><strong>Grade</strong></th>
+<th align="center"><strong>(%)</strong></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"><span class="math inline">\(\leq\)</span> 1</td>
+<td align="center">&gt;1 <span class="math inline">\(\leq\)</span> 2</td>
+<td align="center">&gt;2 <span class="math inline">\(\leq\)</span> 3</td>
+<td align="center">&gt;3 <span class="math inline">\(\leq\)</span> 4</td>
+<td align="center">&gt;4 <span class="math inline">\(\leq\)</span> 5</td>
+<td align="center">&gt;5 <span class="math inline">\(\leq\)</span> 6</td>
+<td align="center">&gt;6 <span class="math inline">\(\leq\)</span> 7</td>
+<td align="center">&gt;7 <span class="math inline">\(\leq\)</span> 8</td>
+<td align="center">&gt;8 <span class="math inline">\(\leq\)</span> 9</td>
+<td align="center">&gt;9</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\leq\)</span> 0.1</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">2 (1)</td>
+<td align="center">2 (2)</td>
+<td align="center">2 (2)</td>
+</tr>
+<tr class="odd">
+<td align="center">&gt;0.1 <span class="math inline">\(\leq\)</span> 0.2</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">2 (1)</td>
+<td align="center">2 (2)</td>
+<td align="center">2 (2)</td>
+<td align="center">3 (2)</td>
+<td align="center">3 (3)</td>
+<td align="center">3 (3)</td>
+</tr>
+<tr class="even">
+<td align="center">&gt;0.2 <span class="math inline">\(\leq\)</span> 0.3</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">2 (1)</td>
+<td align="center">2 (2)</td>
+<td align="center">3 (2)</td>
+<td align="center">3 (3)</td>
+<td align="center">4 (3)</td>
+<td align="center">4 (4)</td>
+<td align="center">5 (5)</td>
+</tr>
+<tr class="odd">
+<td align="center">&gt;0.3 <span class="math inline">\(\leq\)</span> 0.4</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">2 (1)</td>
+<td align="center">2 (2)</td>
+<td align="center">3 (2)</td>
+<td align="center">3 (3)</td>
+<td align="center">4 (4)</td>
+<td align="center">5 (4)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+</tr>
+<tr class="even">
+<td align="center">&gt;0.4 <span class="math inline">\(\leq\)</span> 0.5</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">2 (1)</td>
+<td align="center">2 (2)</td>
+<td align="center">3 (3)</td>
+<td align="center">4 (3)</td>
+<td align="center">5 (4)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+</tr>
+<tr class="odd">
+<td align="center">&gt;0.5 <span class="math inline">\(\leq\)</span> 0.6</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">2 (1)</td>
+<td align="center">3 (2)</td>
+<td align="center">3 (3)</td>
+<td align="center">4 (4)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+</tr>
+<tr class="even">
+<td align="center">&gt;0.6 <span class="math inline">\(\leq\)</span> 0.7</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">2 (1)</td>
+<td align="center">3 (2)</td>
+<td align="center">4 (3)</td>
+<td align="center">4 (4)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+</tr>
+<tr class="odd">
+<td align="center">&gt;0.7 <span class="math inline">\(\leq\)</span> 0.8</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">2 (1)</td>
+<td align="center">3 (3)</td>
+<td align="center">4 (4)</td>
+<td align="center">5 (4)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+</tr>
+<tr class="even">
+<td align="center">&gt;0.8 <span class="math inline">\(\leq\)</span> 0.9</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">2 (1)</td>
+<td align="center">3 (3)</td>
+<td align="center">4 (4)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+</tr>
+<tr class="odd">
+<td align="center">&gt;0.9 <span class="math inline">\(\leq\)</span> 1.0</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">2 (2)</td>
+<td align="center">3 (3)</td>
+<td align="center">4 (4)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+</tr>
+<tr class="even">
+<td align="center">&gt;1.0 <span class="math inline">\(\leq\)</span> 1.1</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">2 (2)</td>
+<td align="center">3 (3)</td>
+<td align="center">4 (4)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+</tr>
+<tr class="odd">
+<td align="center">&gt;1.1</td>
+<td align="center">1 (1)</td>
+<td align="center">1 (1)</td>
+<td align="center">2 (2)</td>
+<td align="center">4 (4)</td>
+<td align="center">4 (4)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+<td align="center">5 (5)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 4: Determine the Free-Flow Speed</strong></p>
+<ul>
+<li>Equation 15-3: Free-flow speed (FFS) estimation; Uses results from Eqs. 15-2, 15-4, 15-5, 15-6 and Exhibit 15-12</li>
+</ul>
+<p><span class="math display">\[FFS = BFFS-a(HV\%)-f_{ls}-f_A \tag{HCM Eq. 15-3}\]</span></p>
+<ul>
+<li>Equation 15-2: Base free-flow speed (BFFS) estimation</li>
+</ul>
+<p><span class="math display">\[BFFS = 1.14 \times S_{\text{p}} \tag{HCM Eq. 15-2}\]</span></p>
+<ul>
+<li>Equation 15-4: Coefficient estimation for heavy vehicle percentage (HV%) parameter in Eq. 15-3</li>
+</ul>
+<p><span class="math display">\[a = \text{max} \bigg\lbrack 0.0333,\ a_{0} + a_{1} \times BFFS + a_{2}\times L + \text{max}(0,\ a_{3} + a_{4} \times BFFS + a_{5}\times L) \times \frac{ {v_{0}}}{1,000}\bigg] \tag{HCM Eq. 15-4}\]</span></p>
+<ul>
+<li>Exhibit 15-12: Coefficient Values for Eq. 15-4</li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(a_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(a_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(a_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(a_3\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(a_4\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(a_5\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">0.00000</td>
+<td align="center">0.00000</td>
+<td align="center">0.00000</td>
+<td align="center">0.00000</td>
+<td align="center">0.00000</td>
+<td align="center">0.00000</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">-0.45036</td>
+<td align="center">0.00814</td>
+<td align="center">0.01543</td>
+<td align="center">0.01358</td>
+<td align="center">0.00000</td>
+<td align="center">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">-0.29591</td>
+<td align="center">0.00743</td>
+<td align="center">0.00000</td>
+<td align="center">0.01246</td>
+<td align="center">0.00000</td>
+<td align="center">0.00000</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">-0.40902</td>
+<td align="center">0.00975</td>
+<td align="center">0.00767</td>
+<td align="center">-0.18363</td>
+<td align="center">0.00423</td>
+<td align="center">0.00000</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">-0.38360</td>
+<td align="center">0.01074</td>
+<td align="center">0.01945</td>
+<td align="center">-0.69848</td>
+<td align="center">0.01069</td>
+<td align="center">0.12700</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Equation 15-5: Adjustment for lane and shoulder width</li>
+</ul>
+<p><span class="math display">\[f_{LS} = 0.6 \times (12 - LW) + 0.7 \times (6 - SW) \tag{HCM Eq. 15-5}\]</span></p>
+<ul>
+<li>Equation 15-6: Adjustment for access points</li>
+</ul>
+<p><span class="math display">\[f_{A} = \text{min}\left( \frac{ {APD}}{4},10 \right) \tag{HCM Eq. 15-6}\]</span></p>
+<p><strong>Step 5: Estimate the Average Speed</strong></p>
+<ul>
+<li>Equation 15-7: Average speed estimation; Uses results from Eqs. 15-8 - 15-16 and Exhibits 15-13 - 15-22</li>
+</ul>
+<p><span class="math display">\[S=\left\{\begin{array}{l l}
+FFS&amp;{v_{d} \leq {100}} \\
+FFS - m \bigg(\frac{v_{d}}{1,000}-0.1 \bigg)^{p} &amp; {v_{d} &gt; 100}\end{array}\right. \tag{HCM Eq. 15-7}\]</span></p>
+<ul>
+<li>Equation 15-8: Slope coefficient (<em>m</em>) for Eq. 15-7</li>
+</ul>
+<p><span class="math display">\[m = \text{max}\left\lbrack b_{5},b_{0} + b_{1} \times FFS + b_{2} \times \sqrt{\frac{v_{o}}{1,000}} + \text{max}\left( 0,b_{3} \right) \times \sqrt{L} + \text{max}\left( 0,b_{4} \right) \times \sqrt{HV\%} \right\rbrack \tag{HCM Eq. 15-8}\]</span></p>
+<ul>
+<li>Exhibit 15-13: Coefficient Values for Eq. 15-8 for Passing Zone and Passing Constrained Segments</li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(b_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_3\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_4\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_5\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">0.0558</td>
+<td align="center">0.0542</td>
+<td align="center">0.3278</td>
+<td align="center">0.1029</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">5.728</td>
+<td align="center">-0.0809</td>
+<td align="center">0.7404</td>
+<td align="center">Equation 15-9</td>
+<td align="center">Equation 15-10</td>
+<td align="center">3.1155</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">9.3079</td>
+<td align="center">-0.1706</td>
+<td align="center">1.1292</td>
+<td align="center">Equation 15-9</td>
+<td align="center">Equation 15-10</td>
+<td align="center">3.1155</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">9.0115</td>
+<td align="center">-0.1994</td>
+<td align="center">1.8252</td>
+<td align="center">Equation 15-9</td>
+<td align="center">Equation 15-10</td>
+<td align="center">3.2685</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">23.9144</td>
+<td align="center">-0.6925</td>
+<td align="center">1.9473</td>
+<td align="center">Equation 15-9</td>
+<td align="center">Equation 15-10</td>
+<td align="center">3.5115</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Exhibit 15-14: Coefficient Values for Eq. 15-8 for Passing Lane Segments</li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(b_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_3\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_4\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_5\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">-1.1379</td>
+<td align="center">0.0941</td>
+<td align="center">0</td>
+<td align="center">Equation 15-9</td>
+<td align="center">Equation 15-10</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">-2.0688</td>
+<td align="center">0.1053</td>
+<td align="center">0</td>
+<td align="center">Equation 15-9</td>
+<td align="center">Equation 15-10</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">-0.5074</td>
+<td align="center">0.0935</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">Equation 15-10</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">8.0354</td>
+<td align="center">-0.0860</td>
+<td align="center">0</td>
+<td align="center">Equation 15-9</td>
+<td align="center">Equation 15-10</td>
+<td align="center">4.19</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">7.2991</td>
+<td align="center">-0.3535</td>
+<td align="center">0</td>
+<td align="center">Equation 15-9</td>
+<td align="center">Equation 15-10</td>
+<td align="center">4.87</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Equation 15-9: Segment length coefficient (<span class="math inline">\(b_3\)</span>) for Eq. 15-8</li>
+</ul>
+<p><span class="math display">\[b_{3} = c_{0} + c_{1} \times \sqrt{L} + c_{2} \times FFS + c_{3} \times (FFS \times \sqrt{L}) \tag{HCM Eq. 15-9}\]</span></p>
+<ul>
+<li>Exhibit 15-15: Coefficient Values for Eq. 15-9 for Passing Zone and Passing Constrained Segments</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(c_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_3\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">0.1029</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">-13.8036</td>
+<td align="center">0</td>
+<td align="center">0.2446</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">-11.9703</td>
+<td align="center">0</td>
+<td align="center">0.2542</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">-12.5113</td>
+<td align="center">0</td>
+<td align="center">0.2656</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">-14.8961</td>
+<td align="center">0</td>
+<td align="center">0.437</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Exhibit 15-16: Coefficient Values for Eq. 15-9 for Passing Lane Segments</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(c_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_3\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0.2667</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">0.4479</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">-27.1244</td>
+<td align="center">11.5196</td>
+<td align="center">0.4681</td>
+<td align="center">-0.1873</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">-45.3391</td>
+<td align="center">17.3749</td>
+<td align="center">1.0587</td>
+<td align="center">-0.3729</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Equation 15-10: Heavy vehicle percentage coefficient (<span class="math inline">\(b_4\)</span>) for Eq. 15-8</li>
+</ul>
+<p><span class="math display">\[b_{4} = d_{0} + d_{1} \times \sqrt{HV\%} + d_{2} \times FFS + d_{3} \times (FFS \times \sqrt{HV\%}) \tag{HCM Eq. 15-10}\]</span></p>
+<ul>
+<li>Exhibit 15-17: Coefficient Values for Eq. 15-10 for Passing Zone and Passing Constrained Segments</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(d_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(d_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(d_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(d_3\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">-1.7765</td>
+<td align="center">0</td>
+<td align="center">0.0392</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">-3.5550</td>
+<td align="center">0</td>
+<td align="center">0.0826</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">-5.7775</td>
+<td align="center">0</td>
+<td align="center">0.1373</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">-18.2910</td>
+<td align="center">2.3875</td>
+<td align="center">0.4494</td>
+<td align="center">-0.0520</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Exhibit 15-18: Coefficient Values for Eq. 15-10 for Passing Lane Segments</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(d_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(d_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(d_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(d_3\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0.1252</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">0.1631</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">0</td>
+<td align="center">-0.2201</td>
+<td align="center">0</td>
+<td align="center">0.0072</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">-0.7506</td>
+<td align="center">0</td>
+<td align="center">0.0193</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">3.8457</td>
+<td align="center">-0.9112</td>
+<td align="center">0</td>
+<td align="center">0.017</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Equation 15-11: Power coefficient (<em>p</em>) for Eq. 15-7</li>
+</ul>
+<p><span class="math display">\[p = \text{max}\left\lbrack f_{8},f_{0} + f_{1} \times FFS + f_{2} \times L + f_{3} \times \frac{v_{o}}{1,000} + f_{4} \times \sqrt{\frac{v_{o}}{1,000}} \\ + f_{5} \times HV\% + f_{6} \times \sqrt{HV\%} + f_{7} \times (L \times HV\%) \right\rbrack \tag{HCM Eq. 15-11}\]</span></p>
+<ul>
+<li>Exhibit 15-19: Coefficient Values for Eq. 15-11 for Passing Zone and Passing Constrained Segments</li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(f_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_3\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_4\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_5\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_6\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_7\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_8\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">0.67576</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0.1206</td>
+<td align="center">−0.35919</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">0.34524</td>
+<td align="center">0.00591</td>
+<td align="center">0.02031</td>
+<td align="center">0.14911</td>
+<td align="center">-0.43784</td>
+<td align="center">−0.00296</td>
+<td align="center">0.02956</td>
+<td align="center">0</td>
+<td align="center">0.41622</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">0.17291</td>
+<td align="center">0.00917</td>
+<td align="center">0.05698</td>
+<td align="center">0.27734</td>
+<td align="center">-0.61893</td>
+<td align="center">−0.00918</td>
+<td align="center">0.09184</td>
+<td align="center">0</td>
+<td align="center">0.41622</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">0.67689</td>
+<td align="center">0.00534</td>
+<td align="center">-0.13037</td>
+<td align="center">0.25699</td>
+<td align="center">-0.68465</td>
+<td align="center">−0.00709</td>
+<td align="center">0.07087</td>
+<td align="center">0</td>
+<td align="center">0.3395</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">1.13262</td>
+<td align="center">0</td>
+<td align="center">-0.26367</td>
+<td align="center">0.18811</td>
+<td align="center">-0.64304</td>
+<td align="center">-0.00867</td>
+<td align="center">0.08675</td>
+<td align="center">0</td>
+<td align="center">0.3059</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Exhibit 15-20: Coefficient Values for Eq. 15-11 for Passing Lane Segments</li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(f_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_3\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_4\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_5\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_6\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_7\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(f_8\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">0.91793</td>
+<td align="center">-0.00557</td>
+<td align="center">0.36862</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0.00611</td>
+<td align="center">0</td>
+<td align="center">-0.00419</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">0.65105</td>
+<td align="center">0</td>
+<td align="center">0.34931</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0.00722</td>
+<td align="center">0</td>
+<td align="center">-0.00391</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">0.40117</td>
+<td align="center">0</td>
+<td align="center">0.68633</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0.0235</td>
+<td align="center">0</td>
+<td align="center">-0.02088</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">1.13282</td>
+<td align="center">-0.00798</td>
+<td align="center">0.35425</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0.01521</td>
+<td align="center">0</td>
+<td align="center">-0.00987</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">1.12077</td>
+<td align="center">-0.00550</td>
+<td align="center">0.25431</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0.01269</td>
+<td align="center">0</td>
+<td align="center">-0.01053</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p>The remainder of the calculations in step apply only if the segment contains horizontal curvature. Exhibit 15-21 provides a flowchart of the calculation procedure to adjust segment average speed for horizontal curvature. In lieu of presenting the flowchart here, the steps to the flowchart are described in the text as follows.</p>
+<p>For all horizontal curves within the segment:</p>
+<ul>
+<li>Determine the alignment classification using Exhibit 15-22</li>
+<li>Exhibit 15-22: Horizontal Alignment Classifications</li>
+</ul>
+<table>
+<colgroup>
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Radius (ft)</strong></th>
+<th align="center"><strong>Superelevation (%)</strong></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">&lt;1</td>
+<td align="center"><span class="math inline">\(\geq\)</span> 1 &lt;2</td>
+<td align="center"><span class="math inline">\(\geq\)</span> 2 &lt;3</td>
+<td align="center"><span class="math inline">\(\geq\)</span> 3 &lt;4</td>
+<td align="center"><span class="math inline">\(\geq\)</span> 4 &lt;5</td>
+<td align="center"><span class="math inline">\(\geq\)</span> 5 &lt;6</td>
+<td align="center"><span class="math inline">\(\geq\)</span> 6 &lt;7</td>
+<td align="center"><span class="math inline">\(\geq\)</span> 7 &lt;8</td>
+<td align="center"><span class="math inline">\(\geq\)</span> 8 &lt;9</td>
+<td align="center"><span class="math inline">\(\geq\)</span> 9 &lt;10</td>
+<td align="center"><span class="math inline">\(\geq\)</span> 10</td>
+</tr>
+<tr class="even">
+<td align="center">&lt;300</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">5</td>
+<td align="center">5</td>
+</tr>
+<tr class="odd">
+<td align="center">300-449</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">4</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="center">450-599</td>
+<td align="center">4</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+</tr>
+<tr class="odd">
+<td align="center">600-749</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">750-899</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">900-1,049</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">1,050-1,199</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">1,200-1,349</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">1,350-1,499</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">—</td>
+</tr>
+<tr class="odd">
+<td align="center">1,500-1,649</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+<tr class="even">
+<td align="center">1,650-1,799</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+<tr class="odd">
+<td align="center">1,800-1,949</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+<tr class="even">
+<td align="center">1,950-2,099</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+<tr class="odd">
+<td align="center">2,100-2,249</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+<tr class="even">
+<td align="center">2,250-2,399</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+<tr class="odd">
+<td align="center">2,400-2,549</td>
+<td align="center">1</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+<tr class="even">
+<td align="center">≥2550</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+<td align="center">—</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Calculate the horizontal curve base free-flow speed (BFFS) using Equation 15-14; Uses result from Exhibit 15-22</li>
+</ul>
+<p><span class="math display">\[{BFFS}_{{HCi}} = \text{min}\left( {BFFS}_{T},44.32 + 0.3728 \times {BFFS}_{T} - 6.868 \times {HorizClass}_{i} \right) \tag{HCM Eq. 15-14}\]</span></p>
+<ul>
+<li>Calculate the horizontal curve free-flow speed (FFS) using Equation 15-13; Uses result from Eq. 15-14</li>
+</ul>
+<p><span class="math display">\[{FFS}_{HCi} = {BFFS}_{HCi} - 0.0255 \times HV\% \tag{HCM Eq. 15-13}\]</span></p>
+<ul>
+<li>Calculate the <em>m</em> coefficient for Equation 15-12, using Equation 15-15</li>
+</ul>
+<p><span class="math display">\[m = \text{max}\left( 0.277, - 25.8993 - 0.7756 \times {FFS}_{HCi} + 10.6294 \times \sqrt{{FFS}_{HCi}} + 2.4766 \times {HorizClass}_{i} \\ - 9.8238 \times \sqrt{{HorizClass}_{i}} \right) \tag{HCM Eq. 15-15}\]</span></p>
+<ul>
+<li>Calculate the average speed on horizontal curve subsegment using Equation 15-12; Uses results from Eq. 15-13, 15-15</li>
+</ul>
+<p><span class="math display">\[S_{{HCi}} = \text{min}\left( S,{FFS}_{{HCi}} - m \times \sqrt{\frac{v_{d}}{1,000} - 0.1} \right) \tag{HCM Eq. 15-12}\]</span>
+- Set the horizontal curve average speed to the minimum value between the horizontal curve average speed and a comparable tangent segment.</p>
+<ul>
+<li>Once the above calculations have been performed for all horizontal curve subsegments within the segment, calculate the adjusted average speed for the segment using Equation 15-16.</li>
+</ul>
+<p><span class="math display">\[S = \frac{\sum_{i} \left({SubsegSpeed}_{i} \times{SubsegLength}_{i} \right)}{L} \tag{HCM Eq. 15-16}\]</span></p>
+<p><strong>Step 6: Estimate the Percent Followers</strong></p>
+<ul>
+<li>Equation 15-17: Percent followers estimation; Uses results from Eqs. 15-22, 15-23</li>
+</ul>
+<p><span class="math display">\[PF = 100 \times \left\lbrack 1 - e^{\left( m\  \times \left\{ \ \frac{v_{d}}{1,000} \right\}^{p} \right)} \right\rbrack \tag{HCM Eq. 15-17}\]</span></p>
+<ul>
+<li>Equation 15-18: Percent followers at capacity flow rate for passing zone and passing constrained segments; Uses results from Exhibit 15-24</li>
+</ul>
+<p><span class="math display">\[{PF}_{cap} = b_{0} + b_{1}(L) + b_{2}\left(\sqrt{L} \right) + b_{3}\left({FFS} \right) \\+ b_{4}\left( \sqrt{FFS} \right) + b_{5}(HV\%) + \ b_{6}\left( FFS \times \frac{v_{o}}{1,000} \right) + b_{7}\left( \sqrt{\frac{v_{0}}{1,000}} \right) \tag{HCM Eq. 15-18}\]</span></p>
+<ul>
+<li>Exhibit 15-24: Coefficient Values for Eq. 15-18</li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(b_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_3\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_4\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_5\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_6\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_7\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">37.6808</td>
+<td align="center">3.05089</td>
+<td align="center">-7.90866</td>
+<td align="center">-0.94321</td>
+<td align="center">13.64266</td>
+<td align="center">-0.00050</td>
+<td align="center">-0.05500</td>
+<td align="center">7.13758</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">58.21104</td>
+<td align="center">5.73387</td>
+<td align="center">-13.66293</td>
+<td align="center">-0.66126</td>
+<td align="center">9.08575</td>
+<td align="center">-0.00950</td>
+<td align="center">-0.03602</td>
+<td align="center">7.14619</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">113.20439</td>
+<td align="center">10.01778</td>
+<td align="center">-18.90000</td>
+<td align="center">0.46542</td>
+<td align="center">-6.75338</td>
+<td align="center">-0.03000</td>
+<td align="center">-0.05800</td>
+<td align="center">10.03239</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">58.29978</td>
+<td align="center">-0.53611</td>
+<td align="center">7.35076</td>
+<td align="center">-0.27046</td>
+<td align="center">4.4985</td>
+<td align="center">-0.01100</td>
+<td align="center">-0.02968</td>
+<td align="center">8.89680</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">3.32968</td>
+<td align="center">-0.84377</td>
+<td align="center">7.08952</td>
+<td align="center">-1.32089</td>
+<td align="center">19.98477</td>
+<td align="center">-0.01250</td>
+<td align="center">-0.02960</td>
+<td align="center">9.99453</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Equation 15-19: Percent followers at capacity flow rate for passing lane segments; Uses results from Exhibit 15-25</li>
+</ul>
+<p><span class="math display">\[{PF}_{cap} = b_{0} + b_{1}(L) + b_{2}\left(\sqrt{L} \right) + b_{3}\left({FFS} \right) + b_{4}\left( \sqrt{FFS} \right) + b_{5}(HV\%) + \ b_{6}(\sqrt{HV\%}) + b_{7}(FFS \times HV\%) \tag{HCM Eq. 15-19}\]</span></p>
+<ul>
+<li>Exhibit 15-25: Coefficient Values for Eq. 15-19</li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(b_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_3\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_4\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_5\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_6\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(b_7\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">61.73075</td>
+<td align="center">6.73922</td>
+<td align="center">-23.68853</td>
+<td align="center">-0.84126</td>
+<td align="center">11.44533</td>
+<td align="center">-1.05124</td>
+<td align="center">1.5039</td>
+<td align="center">0.00491</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">12.30096</td>
+<td align="center">9.57465</td>
+<td align="center">-30.79427</td>
+<td align="center">-1.79448</td>
+<td align="center">25.76436</td>
+<td align="center">-0.66350</td>
+<td align="center">1.26039</td>
+<td align="center">-0.00323</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">206.07369</td>
+<td align="center">-4.29885</td>
+<td align="center">0</td>
+<td align="center">1.96483</td>
+<td align="center">-30.32556</td>
+<td align="center">-0.75812</td>
+<td align="center">1.06453</td>
+<td align="center">-0.00839</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">263.13428</td>
+<td align="center">5.38749</td>
+<td align="center">-19.04859</td>
+<td align="center">2.73018</td>
+<td align="center">-42.76919</td>
+<td align="center">-1.31277</td>
+<td align="center">-0.32242</td>
+<td align="center">0.01412</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">126.95629</td>
+<td align="center">5.95754</td>
+<td align="center">-19.22229</td>
+<td align="center">0.43238</td>
+<td align="center">-7.35636</td>
+<td align="center">-1.03017</td>
+<td align="center">-2.66026</td>
+<td align="center">0.01389</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Equation 15-20: Percent followers at 25% of capacity flow rate for passing zone and passing constrained segments; Uses results from Exhibit 15-26</li>
+</ul>
+<p><span class="math display">\[{PF}_{25cap} = c_{0} + c_{1}(L) + c_{2}\left( \sqrt{L} \right) + c_{3}\left({FFS} \right) + c_{4}\left( \sqrt{\text{FFS}} \right) + c_{5}(HV\%) + c_{6}\left( FFS \times \frac{v_{o}}{1,000} \right) + c_{7}\left( \sqrt{\frac{v_{0}}{1,000}} \right) \tag{HCM Eq. 15-20}\]</span></p>
+<ul>
+<li>Exhibit 15-26: Coefficient Values for Eq. 15-20</li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(c_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_3\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_4\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_5\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_6\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_7\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">18.01780</td>
+<td align="center">10.00000</td>
+<td align="center">-21.60000</td>
+<td align="center">-0.97853</td>
+<td align="center">12.05214</td>
+<td align="center">-0.00750</td>
+<td align="center">-0.06700</td>
+<td align="center">11.60405</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">47.83887</td>
+<td align="center">12.80000</td>
+<td align="center">-28.20000</td>
+<td align="center">-0.61758</td>
+<td align="center">5.8</td>
+<td align="center">-0.04550</td>
+<td align="center">-0.03344</td>
+<td align="center">11.35573</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">125.40000</td>
+<td align="center">19.50000</td>
+<td align="center">-34.90000</td>
+<td align="center">0.90672</td>
+<td align="center">-16.10000</td>
+<td align="center">-0.11000</td>
+<td align="center">-0.06200</td>
+<td align="center">14.71136</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">103.13534</td>
+<td align="center">14.68459</td>
+<td align="center">-23.72704</td>
+<td align="center">0.664436</td>
+<td align="center">-11.95763</td>
+<td align="center">-0.10000</td>
+<td align="center">0.00172</td>
+<td align="center">14.70067</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">89</td>
+<td align="center">19.02642</td>
+<td align="center">-34.54240</td>
+<td align="center">0.29792</td>
+<td align="center">-6.62528</td>
+<td align="center">-0.16000</td>
+<td align="center">0.00480</td>
+<td align="center">17.56611</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Equation 15-21: Percent followers at 25% of capacity flow rate for passing lane segments; Uses results from Exhibit 15-27</li>
+</ul>
+<p><span class="math display">\[{PF}_{25cap} = c_{0} + c_{1}(L) + c_{2}\left( \sqrt{L} \right) + c_{3}\left({FFS} \right) + c_{4}\left( \sqrt{\text{FFS}} \right) + c_{5}(HV\%) + c_{6}(\sqrt{HV\%}) + c_{7}({FFS} \times {HV\%}) \tag{HCM Eq. 15-21}\]</span></p>
+<ul>
+<li>Exhibit 15-27: Coefficient Values for Eq. 15-21</li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Vertical Class</strong></th>
+<th align="center"><strong><span class="math inline">\(c_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_3\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_4\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_5\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_6\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(c_7\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">80.37105</td>
+<td align="center">14.44997</td>
+<td align="center">-46.41831</td>
+<td align="center">-0.23367</td>
+<td align="center">0.84914</td>
+<td align="center">-0.56747</td>
+<td align="center">0.89427</td>
+<td align="center">0.00119</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">18.37886</td>
+<td align="center">14.71856</td>
+<td align="center">-47.78892</td>
+<td align="center">-1.43373</td>
+<td align="center">18.3204</td>
+<td align="center">-0.13226</td>
+<td align="center">0.77217</td>
+<td align="center">-0.00778</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">239.9893</td>
+<td align="center">15.90683</td>
+<td align="center">-46.87525</td>
+<td align="center">2.73582</td>
+<td align="center">-42.88130</td>
+<td align="center">-0.53746</td>
+<td align="center">0.76271</td>
+<td align="center">-0.00428</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">223.68435</td>
+<td align="center">10.26908</td>
+<td align="center">-35.60830</td>
+<td align="center">2.31877</td>
+<td align="center">-38.30034</td>
+<td align="center">-0.60275</td>
+<td align="center">-0.67758</td>
+<td align="center">0.00117</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">137.37633</td>
+<td align="center">11.00106</td>
+<td align="center">-38.89043</td>
+<td align="center">0.78501</td>
+<td align="center">-14.88672</td>
+<td align="center">-0.72576</td>
+<td align="center">-2.49546</td>
+<td align="center">0.00872</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Equation 15-22: Slope coefficient (<em>m</em>) for Eq. 15-17; Uses results from Exhibit 15-28</li>
+</ul>
+<p><span class="math display">\[m = d_{1}\left( \frac{0 - \text{ln}\left\lbrack 1 - \frac{{PF}_{25cap}}{100} \right\rbrack}{0.25\left\lbrack \frac{{cap}}{1,000} \right\rbrack} \right) + d_{2}\left( \frac{0 - \text{ln}\left\lbrack 1 - \frac{{PF}_{\text{cap}}}{100} \right\rbrack}{\left\lbrack \frac{{cap}}{1,000} \right\rbrack} \right) \tag{HCM Eq. 15-22}\]</span></p>
+<ul>
+<li>Exhibit 15-28: Coefficient Values for Eq. 15-22</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Segment Type</strong></th>
+<th align="center"><strong><span class="math inline">\(d_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(d_2\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Passing Zone and Passing Constrained</td>
+<td align="center">-0.29764</td>
+<td align="center">-0.71917</td>
+</tr>
+<tr class="even">
+<td align="center">Passing Lane</td>
+<td align="center">-0.15808</td>
+<td align="center">-0.83732</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Equation 15-23: Power coefficient (<em>p</em>) for Eq. 15-17; Uses results from Exhibit 15-29</li>
+</ul>
+<p><span class="math display">\[p = e_{0} + e_{1}\left( \frac{0 - \text{ln}\left\lbrack 1 - \frac{{PF}_{25cap}}{100} \right\rbrack}{0.25\left\lbrack \frac{cap}{1,000} \right\rbrack} \right) + e_{2}\left( \frac{0 - \text{ln}\left\lbrack 1 - \frac{{PF}_{{cap}}}{100} \right\rbrack}{\left\lbrack \frac{cap}{1,000} \right\rbrack} \right) + \ e_{3}\sqrt{\frac{0 - \text{ln}\left( 1 - \frac{{PF}_{25cap}}{100} \right)}{0.25\left\lbrack \frac{cap}{1,000} \right\rbrack}} \\ + e_{4}\sqrt{\frac{0 - \text{ln}\left( 1 - \frac{{PF}_{cap}}{100} \right)}{\left\lbrack \frac{{cap}}{1,000} \right\rbrack}} \tag{HCM Eq. 15-23}\]</span></p>
+<ul>
+<li>Exhibit 15-29: Coefficient Values for Eq. 15-23</li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Segment Type</strong></th>
+<th align="center"><strong><span class="math inline">\(e_0\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(e_1\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(e_2\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(e_3\)</span></strong></th>
+<th align="center"><strong><span class="math inline">\(e_4\)</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Passing Zone and Passing Constrained</td>
+<td align="center">0.81165</td>
+<td align="center">0.3792</td>
+<td align="center">-0.49524</td>
+<td align="center">-2.11289</td>
+<td align="center">2.41146</td>
+</tr>
+<tr class="even">
+<td align="center">Passing Lane</td>
+<td align="center">-1.63246</td>
+<td align="center">1.6496</td>
+<td align="center">-4.45823</td>
+<td align="center">-4.89119</td>
+<td align="center">10.33057</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 7: Calculate Additional Performance Measure Values for a Passing Lane Segment</strong></p>
+<ul>
+<li>Equation 15-24: Estimate number of heavy vehicles entering the passing lane segment</li>
+</ul>
+<p><span class="math display">\[NumHV = {v}_d \times \frac{{HV\%}}{100} \tag{HCM Eq. 15-24}\]</span></p>
+<ul>
+<li>Equation 15-25: Estimate proportion of the demand flow in the faster lane (i.e., the lane used by passing vehicles); Uses result from Eq. 15-24</li>
+</ul>
+<p><span class="math display">\[PropFlowRate_{FL} = 0.92183 - 0.05022 \times \ln(v_{d})-0.00030 \times NumHV \tag{HCM Eq. 15-25}\]</span></p>
+<ul>
+<li>Equation 15-26: Estimate demand flow rate in the faster lane; Uses result from Eq. 15-25</li>
+</ul>
+<p><span class="math display">\[FlowRate_{FL} = v_{d} \times PropFlowRate_{FL} \tag{HCM Eq. 15-26}\]</span></p>
+<ul>
+<li>Equation 15-27: Estimate demand flow rate in the slower lane (i.e., the lane used by non-passing vehicles); Uses result from Eq. 15-25</li>
+</ul>
+<p><span class="math display">\[FlowRate_{SL} = v_{d} \times (1- PropFlowRate_{FL}) \tag{HCM Eq. 15-27}\]</span></p>
+<ul>
+<li>Equation 15-28: Estimate percentage of heavy vehicles in the faster lane</li>
+</ul>
+<p><span class="math display">\[HV\%_{FL} = HV\% \times HVPropMultiplier_{FL} \tag{HCM Eq. 15-28}\]</span></p>
+<ul>
+<li>Equation 15-29: Estimate number of heavy vehicles in the slower lane; Uses result from Eq. 15-28</li>
+</ul>
+<p><span class="math display">\[NumHV_{SL} = NumHV - \bigg(FlowRate_{FL} \times \frac{{HV\%_{FL}}}{100}\bigg) \tag{HCM Eq. 15-29}\]</span></p>
+<ul>
+<li>Equation 15-30: Estimate percentage of heavy vehicles in the slower lane; Uses result from Eq. 15-29</li>
+</ul>
+<p><span class="math display">\[HV\%_{SL} = \frac{{NumHV_{SL}}}{FlowRate_{SL}} \times {100} \tag{HCM Eq. 15-30}\]</span></p>
+<ul>
+<li>Equation 15-31: Estimate average speed lane differential adjustment</li>
+</ul>
+<p><span class="math display">\[AvgSpeedDiffAdj = 2.750 + 0.00056 \times v_{d} + 3.8521 \times \frac{HV\%}{100} \tag{HCM Eq. 15-31}\]</span></p>
+<ul>
+<li>Equation 15-32: Estimate average speed in the faster lane at the midpoint of the passing lane segment; Uses result from Eq. 15-31</li>
+</ul>
+<p><span class="math display">\[S_{PLmid\_FL} = S_{init\_FL} + \frac{AvgSpeedDiffAdj}{2} \tag{HCM Eq. 15-32}\]</span></p>
+<ul>
+<li>Equation 15-33: Estimate average speed in the slower lane at the midpoint of the passing lane segment; Uses result from Eq. 15-31</li>
+</ul>
+<p><span class="math display">\[S_{PLmid\_SL} = S_{init\_SL} - \frac{AvgSpeedDiffAdj}{2} \tag{HCM Eq. 15-33}\]</span></p>
+<p><strong>Step 8: Calculate Follower Density</strong></p>
+<ul>
+<li>Equation 15-34: Follower density estimation for passing lane segment midpoint</li>
+</ul>
+<p><span class="math display">\[FD_{PLmid} = \frac{ \left(\frac{PF_{PLmid\_FL}}{100} \times \frac{FlowRate_{FL}}{S_{PLmid\_FL}}\right) + \left(\frac{PF_{PLmid\_SL}}{100} \times \frac{FlowRate_{SL}}{S_{PLmid\_SL}}\right)}{2} \tag{HCM Eq. 15-34}\]</span></p>
+<ul>
+<li>Equation 15-35: Follower density estimation for passing zone and passing constrained segments</li>
+</ul>
+<p><span class="math display">\[FD = \frac {PF}{100} \times \frac{v_{d}}{S} \tag{HCM Eq. 15-35}\]</span></p>
+<p><strong>Step 9: Determine Potential Adjustment to Follower Density</strong></p>
+<ul>
+<li>Equation 15-36: Estimate percentage improvement to percent followers on a segment downstream of a passing lane segment</li>
+</ul>
+<p><span class="math display">\[\%Improve_{PF} = \text{max}(0,27 - 8.75 \times \ln[\text{max}(0.1,DownstreamDistance)] \\ +0.1 \times \text{max}[0,PF-30] + 3.5 \times \ln[\text{max}(0.3,PassLaneLength)] - 0.01 \times FlowRate) \tag{HCM Eq. 15-36}\]</span></p>
+<ul>
+<li>Equation 15-37: Estimate percentage improvement to the average speed on a segment downstream of a passing lane segment</li>
+</ul>
+<p><span class="math display">\[\%Improve_{s} = \text{max}(0,3 - 0.8 \times DownstreamDistance +0.1 \\ \times \text{max}[0,PF-30] + 0.75 \times PassLaneLength - 0.005 \times FlowRate) \tag{HCM Eq. 15-37}\]</span></p>
+<ul>
+<li>Equation 15-38: Adjusted follower density on a segment downstream of a passing lane segment; Uses results from Eqs. 15-36 and 15-37</li>
+</ul>
+<p><span class="math display">\[FD_{adj} = \frac{PF}{100} \times \left(1 - \frac {\%Improve_{PF}}{100}\right) \times \frac {FlowRate}{{S} \times \left(1 + \frac {\%Improve_{S}}{100}\right)} \tag{HCM Eq. 15-38}\]</span></p>
+<p><strong>Step 10: Determine LOS</strong></p>
+<ul>
+<li>Exhibit 15-6: Motorized Vehicle LOS Criteria for Two-Lane Highways</li>
+</ul>
+<p>Follower Density (followers/mi/ln)</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>LOS</strong></th>
+<th align="center"><strong>Posted Speed Limit <span class="math inline">\(\geq\)</span> 50 mi/h</strong></th>
+<th align="center"><strong>Posted Speed Limit &lt; 50 mi/h</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center"><span class="math inline">\(\leq\)</span> 2.0</td>
+<td align="center"><span class="math inline">\(\leq\)</span> 2.5</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">&gt; 2.0 - 4.0</td>
+<td align="center">&gt; 2.5 - 5.0</td>
+</tr>
+<tr class="odd">
+<td align="center">C</td>
+<td align="center">&gt; 4.0 - 8.0</td>
+<td align="center">&gt; 5.0 - 10.0</td>
+</tr>
+<tr class="even">
+<td align="center">D</td>
+<td align="center">&gt; 8.0 - 12.0</td>
+<td align="center">&gt; 10.0 - 15.0</td>
+</tr>
+<tr class="odd">
+<td align="center">E</td>
+<td align="center">&gt; 12.0</td>
+<td align="center">&gt; 15.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 11: Facility Analysis</strong></p>
+<p>This step is not included in the rural highway facility analysis</p>
+</div>
+<div id="nomenclature-1" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Nomenclature<a href="HCMtwolaneHwy.html#nomenclature-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math inline">\(a_{0}-a_{5}\)</span> = coefficient values from Exhibit 15-12<br />
+<span class="math inline">\(APD\)</span> = access-point density (access points/mi)<br />
+<span class="math inline">\(b_{0}-b_{5}\)</span> = coefficients for speed-flow slope model, from Exhibit 15-13 for Passing Zone and Passing Constrained segments, and from Exhibit 15-14 for Passing Lane segments<br />
+<span class="math inline">\(b_{0}-b_{7}\)</span> = coefficient values for Equation 15-18, from Exhibit 15-24<br />
+<span class="math inline">\(b_{0}-b_{7}\)</span> = coefficient values for Equation 15-19, from Exhibit 15-25<br />
+<span class="math inline">\(b_{3}\)</span> = segment length coefficient for speed-flow slope model (decimal)<br />
+<span class="math inline">\(b_{4}\)</span> = heavy vehicle percentage coefficient for speed-flow slope model (decimal)<br />
+<span class="math inline">\(BFFS\)</span> = base free-flow speed (mi/h)<br />
+<span class="math inline">\(BFFS_{HCi}\)</span> = base free-flow speed on horizontal curve subsegment <em>i</em> in the analysis direction (mi/h), from Equation 15-14<br />
+<span class="math inline">\(BFFS_{T}\)</span> = base free-flow speed on preceding tangent subsegment in the analysis direction (mi/h)<br />
+<span class="math inline">\(c_{0}-c_{3}\)</span> = coefficients for the b3 segment length coefficient model, from Exhibit 15-15 for Passing Zone and Passing Constrained segments, and from Exhibit 15-16 for Passing Lane segments<br />
+<span class="math inline">\(c_{0}-c_{7}\)</span> = coefficient values for Equation 15-20, from Exhibit 15-26<br />
+<span class="math inline">\(c_{0}-c_{7}\)</span> = coefficient values for Equation 15-21, from Exhibit 15-27<br />
+<span class="math inline">\(d_{0}-d_{3}\)</span> = coefficients for the b4 heavy vehicle percentage coefficient model, from Exhibit 15-17 for Passing Zone and Passing Constrained segments, and from Exhibit 15-18 for Passing Lane segments<br />
+<span class="math inline">\(d_{1}-d_{2}\)</span> = coefficient values for Equation 15-22, from Exhibit 15-28<br />
+<span class="math inline">\(DownstreamDistance\)</span> = distance downstream from the start of the passing lane segment (mi)<br />
+<span class="math inline">\(e_{0}-e_{4}\)</span> = coefficient values for Equation 15-23, from Exhibit 15-29<br />
+<span class="math inline">\(f_{0}-f_{8}\)</span> = coefficients for the power coefficient model, from Exhibit 15-19 for Passing Zone and Passing Constrained segments, and from Exhibit 15-20 for Passing Lane segments<br />
+<span class="math inline">\(f_{A}\)</span> = adjustment for access point density, from Equation 15-6 (mi/h)<br />
+<span class="math inline">\(f_{LS}\)</span> = adjustment for lane and shoulder width (mi/h), from Equation 15-5<br />
+<span class="math inline">\(FD_{adj}\)</span> = adjusted follower density on a segment downstream of a passing lane segment (followers/mi)<br />
+<span class="math inline">\(FD_{F}\)</span> = average follower density for the facility in the analysis direction (followers/mi)<br />
+<span class="math inline">\(FD_{i}\)</span> = follower density, or adjusted follower density, for segment <em>i</em> in the analysis direction (followers/mi)<br />
+<span class="math inline">\(FFS\)</span> = free-flow speed in the analysis direction (mi/h)<br />
+<span class="math inline">\(FFS_{HCi}\)</span> = free-flow speed on horizontal curve subsegment <em>i</em> in the analysis direction (mi/h), from Equation 15-13<br />
+<span class="math inline">\(FlowRate\)</span> = demand flow rate (veh/h)<br />
+<span class="math inline">\(FlowRate_{FL}\)</span> = demand flow rate in the faster lane (veh/h)<br />
+<span class="math inline">\(FlowRate_{SL}\)</span> = demand flow rate in the slower lane (i.e., the lane used by non-passing vehicles) (veh/h)<br />
+<span class="math inline">\(HorizClass_{i}\)</span> = horizontal classification for subsegment <em>i</em><br />
+<span class="math inline">\(HV\%\)</span> = percentage of heavy vehicles in the analysis direction (%)<br />
+<span class="math inline">\(HV\%_{FL}\)</span> = percentage of heavy vehicles in the faster lane (%)<br />
+<span class="math inline">\(HV\%_{SL}\)</span> = percentage of heavy vehicles in the faster lane (%)<br />
+<span class="math inline">\(HVPropMultiplier_{FL}\)</span> = 0.4<br />
+<span class="math inline">\(\%Improve_{PF}\)</span> = % improvement to percent followers on a segment downstream of a passing lane segment<br />
+<span class="math inline">\(\%Improve_{S}\)</span> = % improvement to the average speed on a segment downstream of a passing lane segment<br />
+<span class="math inline">\(L\)</span> = segment length (mi), subject to minima and maxima given in Step 1<br />
+<span class="math inline">\(L_{i}\)</span> = actual segment length for segment <em>i</em> (mi)<br />
+<span class="math inline">\(LW\)</span> = lane width (ft), constrained to minimum and maximum values of 9 ft and 12 ft, respectively<br />
+<span class="math inline">\(m\)</span> = slope coefficient (decimal), from Step 5a<br />
+<span class="math inline">\(NumHV\)</span> = number of heavy vehicles entering the passing lane segment (veh)<br />
+<span class="math inline">\(NumHV_{SL}\)</span> = number of heavy vehicles in the slower lane (veh)<br />
+<span class="math inline">\(p\)</span> = power coefficient (decimal), from Step 5b<br />
+<span class="math inline">\(PassLaneLength\)</span> = length of passing lane segment (mi)<br />
+<span class="math inline">\(PF\)</span> = percent followers in the analysis direction (%)<br />
+<span class="math inline">\(PF_{cap}\)</span> = percent followers at capacity flow rate in the analysis direction (%)<br />
+<span class="math inline">\(PF_{PLmid\_FL}\)</span> = percent followers in the faster lane at the midpoint of the passing lane segment (%)<br />
+<span class="math inline">\(PF_{PLmid\_SL}\)</span> = percent followers in the slower lane at the midpoint of the passing lane segment (%)<br />
+<span class="math inline">\(PF_{25cap}\)</span> = percent followers of 25% of the capacity flow rate in the analysis direction (%)<br />
+<span class="math inline">\(PHF\)</span> = peak hour factor (decimal)<br />
+<span class="math inline">\(PropFlowRate_{FL}\)</span> = proportion of the demand flow in the faster lane (i.e., the lane used by passing vehicles) (decimal)<br />
+<span class="math inline">\(S\)</span> = average speed in the analysis direction (mi/h), with consideration of horizontal curvature<br />
+<span class="math inline">\(S_{HCi}\)</span> = average speed on horizontal curve subsegment <em>i</em> in the analysis direction (mi/h)<br />
+<span class="math inline">\(S_{init\_FL}\)</span> = initial average speed in the faster lane (mi/h)<br />
+<span class="math inline">\(S_{init\_SL}\)</span> = initial average speed in the slower lane (mi/h)<br />
+<span class="math inline">\(S_{pl}\)</span> = posted speed limit (mi/h)<br />
+<span class="math inline">\(S_{PLmid-FL}\)</span> = average speed in the faster lane at the midpoint of the passing lane segment (mi/h)<br />
+<span class="math inline">\(S_{PLmid-SL}\)</span> = average speed in the slower lane at the midpoint of the passing lane segment (mi/h)<br />
+<span class="math inline">\(SubsegLength_{i}\)</span> = length of subsegment (horizontal curve or tangent) <em>i</em> (mi/h)<br />
+<span class="math inline">\(SubsegSpeed_{i}\)</span> = speed of subsegment (horizontal curve or tangent) <em>i</em> (mi/h)<br />
+<span class="math inline">\(SW\)</span> = shoulder width (ft), constrained to minimum and maximum values of 0 ft and 6 ft, respectively<br />
+<span class="math inline">\(V_{15}\)</span> = volume during the peak 15 min of the analysis hour (veh/15 min)<br />
+<span class="math inline">\(v_{d}\)</span> = flow rate in the analysis direction (veh/h)<br />
+<span class="math inline">\(v_{o}\)</span> = demand flow rate in opposing direction (veh/h); <span class="math inline">\(v_{o}\)</span> = 1,500 in Passing Constrained segments and <span class="math inline">\(v_{o}\)</span> = 0 in Passing Lane segments</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="HCMmultilaneHwy.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="HCMsignal.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/NCHRP-08-135/Guidebook/edit/master/07-HCMmethods-TwoLaneHwy.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Rural Highway Analysis Guidebook.pdf", "Rural Highway Analysis Guidebook.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"toc_depth": 2
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

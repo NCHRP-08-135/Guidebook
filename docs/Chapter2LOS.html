@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Rural Highway Level of Service for Automobiles | Rural-Highway-Analysis-Guidebook.knit</title>
+  <meta name="description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Rural Highway Level of Service for Automobiles | Rural-Highway-Analysis-Guidebook.knit" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Rural Highway Level of Service for Automobiles | Rural-Highway-Analysis-Guidebook.knit" />
+  
+  <meta name="twitter:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+<meta name="author" content="" />
+
+
+<meta name="date" content="2023-09-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="Chapter1Intro.html"/>
+<link rel="next" href="Chapter3Reliability.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Rural Highway Analysis Guidebook</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="chapter" data-level="1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#purpose-of-guidebook"><i class="fa fa-check"></i><b>1.1</b> Purpose of Guidebook</a></li>
+<li class="chapter" data-level="1.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-scope-and-limitations"><i class="fa fa-check"></i><b>1.2</b> Guidebook Scope and Limitations</a></li>
+<li class="chapter" data-level="1.3" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-organization"><i class="fa fa-check"></i><b>1.3</b> Guidebook Organization</a></li>
+<li class="chapter" data-level="1.4" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-format"><i class="fa fa-check"></i><b>1.4</b> Guidebook Format</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#navigating-the-document"><i class="fa fa-check"></i><b>1.4.1</b> Navigating the document</a></li>
+<li class="chapter" data-level="1.4.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#ProvidingFeedback"><i class="fa fa-check"></i><b>1.4.2</b> How to provide feedback on this document</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#SupportingResources"><i class="fa fa-check"></i><b>1.5</b> Supporting Resources and Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html"><i class="fa fa-check"></i><b>2</b> Rural Highway Level of Service for Automobiles</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#LOSIntro"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#Segmentation"><i class="fa fa-check"></i><b>2.2</b> Facility Segmentation</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#CrossSection"><i class="fa fa-check"></i><b>2.2.1</b> Cross Section</a></li>
+<li class="chapter" data-level="2.2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#passing-accommodations-for-two-lane-highways"><i class="fa fa-check"></i><b>2.2.2</b> Passing Accommodations for Two-Lane Highways</a></li>
+<li class="chapter" data-level="2.2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#posted-speed-limit-changes"><i class="fa fa-check"></i><b>2.2.3</b> Posted Speed Limit Changes</a></li>
+<li class="chapter" data-level="2.2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#geometric-alignment-considerations"><i class="fa fa-check"></i><b>2.2.4</b> Geometric Alignment Considerations</a></li>
+<li class="chapter" data-level="2.2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#IntxInfluenceArea"><i class="fa fa-check"></i><b>2.2.5</b> Intersections and their Influence Area</a></li>
+<li class="chapter" data-level="2.2.6" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#UrbanStreetClassification"><i class="fa fa-check"></i><b>2.2.6</b> Classification of Urban Street</a></li>
+<li class="chapter" data-level="2.2.7" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#SegMinLength"><i class="fa fa-check"></i><b>2.2.7</b> Practical Minimum Segment Length</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#FacilityLOS"><i class="fa fa-check"></i><b>2.3</b> Segment and Facility LOS Calculation</a></li>
+<li class="chapter" data-level="2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#HotSpots"><i class="fa fa-check"></i><b>2.4</b> Hot Spot Identification</a></li>
+<li class="chapter" data-level="2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#additional-performance-measures-for-facility-evaluation"><i class="fa fa-check"></i><b>2.5</b> Additional Performance Measures for Facility Evaluation</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#emergency-traffic-demand-surge"><i class="fa fa-check"></i><b>2.5.1</b> Emergency Traffic Demand Surge</a></li>
+<li class="chapter" data-level="2.5.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#short-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.2</b> Short-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#seasonal-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.3</b> Seasonal Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#long-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.4</b> Long-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#use-of-probe-vehicle-measured-travel-timesspeeds"><i class="fa fa-check"></i><b>2.5.5</b> Use of Probe-Vehicle Measured Travel Times/Speeds</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html"><i class="fa fa-check"></i><b>3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityIntro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#approach-for-rural-highways"><i class="fa fa-check"></i><b>3.2</b> Approach for Rural Highways</a></li>
+<li class="chapter" data-level="3.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityData"><i class="fa fa-check"></i><b>3.3</b> Data Examined</a></li>
+<li class="chapter" data-level="3.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilitySegmentation"><i class="fa fa-check"></i><b>3.4</b> Segmentation</a></li>
+<li class="chapter" data-level="3.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityDataOverview"><i class="fa fa-check"></i><b>3.5</b> Data Overview</a></li>
+<li class="chapter" data-level="3.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityMethods"><i class="fa fa-check"></i><b>3.6</b> Evaluation Methodologies</a></li>
+<li class="chapter" data-level="3.7" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityHowTo"><i class="fa fa-check"></i><b>3.7</b> Assessing Reliability</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#load-the-data"><i class="fa fa-check"></i><b>3.7.1</b> Load the data</a></li>
+<li class="chapter" data-level="3.7.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#aggregate-the-data"><i class="fa fa-check"></i><b>3.7.2</b> Aggregate the data</a></li>
+<li class="chapter" data-level="3.7.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#heatmaps"><i class="fa fa-check"></i><b>3.7.3</b> Heatmaps</a></li>
+<li class="chapter" data-level="3.7.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.7.4</b> Box-and-Whisker Plots</a></li>
+<li class="chapter" data-level="3.7.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#speed-confidence-band-plots"><i class="fa fa-check"></i><b>3.7.5</b> Speed Confidence Band Plots</a></li>
+<li class="chapter" data-level="3.7.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#travel-time-index-plots"><i class="fa fa-check"></i><b>3.7.6</b> Travel Time Index Plots</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html"><i class="fa fa-check"></i><b>4</b> Bicycle Operations Analysis on Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#overview-of-bicycle-operations-analysis-methods"><i class="fa fa-check"></i><b>4.1</b> Overview of Bicycle Operations Analysis Methods</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#highway-capacity-manual-level-of-service-analysis-methodologies"><i class="fa fa-check"></i><b>4.1.1</b> Highway Capacity Manual Level of Service Analysis Methodologies</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.1.2</b> Level of Traffic Stress Analysis Methodology</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#bicycle-compatibility-index-analysis-methodology"><i class="fa fa-check"></i><b>4.1.3</b> Bicycle Compatibility Index Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#BikeLOS"><i class="fa fa-check"></i><b>4.2</b> Bicycle Level of Service Research Recommendations</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-highway-capacity-manual-level-of-service-for-rural-highways"><i class="fa fa-check"></i><b>4.2.1</b> Revisions to Highway Capacity Manual Level of Service for Rural Highways</a></li>
+<li class="chapter" data-level="4.2.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.2.2</b> Revisions to Level of Traffic Stress Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#guidance-on-current-methods-for-rural-highways"><i class="fa fa-check"></i><b>4.3</b> Guidance on Current Methods for Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#adaptation-to-rural-conditions"><i class="fa fa-check"></i><b>4.3.1</b> Adaptation to Rural Conditions</a></li>
+<li class="chapter" data-level="4.3.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#data-requirements"><i class="fa fa-check"></i><b>4.3.2</b> Data Requirements</a></li>
+<li class="chapter" data-level="4.3.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#applications"><i class="fa fa-check"></i><b>4.3.3</b> Applications</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Part II: HCM Calculations</b></span></li>
+<li class="chapter" data-level="5" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html"><i class="fa fa-check"></i><b>5</b> HCM Automobile LOS Methodologies</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html"><i class="fa fa-check"></i><b>6</b> Multilane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#equations-and-exhibits"><i class="fa fa-check"></i><b>6.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="6.2" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#nomenclature"><i class="fa fa-check"></i><b>6.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html"><i class="fa fa-check"></i><b>7</b> Two-Lane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#equations-and-exhibits-1"><i class="fa fa-check"></i><b>7.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="7.2" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#nomenclature-1"><i class="fa fa-check"></i><b>7.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="HCMsignal.html"><a href="HCMsignal.html"><i class="fa fa-check"></i><b>8</b> Signalized Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="HCMsignal.html"><a href="HCMsignal.html#equations-and-exhibits-2"><i class="fa fa-check"></i><b>8.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="8.2" data-path="HCMsignal.html"><a href="HCMsignal.html#nomenclature-2"><i class="fa fa-check"></i><b>8.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="HCMroundabout.html"><a href="HCMroundabout.html"><i class="fa fa-check"></i><b>9</b> Roundabout Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="HCMroundabout.html"><a href="HCMroundabout.html#equations-and-exhibits-3"><i class="fa fa-check"></i><b>9.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="9.2" data-path="HCMroundabout.html"><a href="HCMroundabout.html#nomenclature-3"><i class="fa fa-check"></i><b>9.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="HCMawsc.html"><a href="HCMawsc.html"><i class="fa fa-check"></i><b>10</b> All-Way Stop-Controlled Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="HCMawsc.html"><a href="HCMawsc.html#equations-and-exhibits-4"><i class="fa fa-check"></i><b>10.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="10.2" data-path="HCMawsc.html"><a href="HCMawsc.html#nomenclature-4"><i class="fa fa-check"></i><b>10.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html"><i class="fa fa-check"></i><b>11</b> Urban Street Facility Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#equations-and-exhibits-5"><i class="fa fa-check"></i><b>11.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="11.2" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#nomenclature-5"><i class="fa fa-check"></i><b>11.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="HCMbicycle.html"><a href="HCMbicycle.html"><i class="fa fa-check"></i><b>12</b> Bicycle LOS Methodologies</a></li>
+<li class="chapter" data-level="13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html"><i class="fa fa-check"></i><b>13</b> Rural Highway Example Calculations</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-input-data"><i class="fa fa-check"></i><b>13.1</b> Segment Input Data</a></li>
+<li class="chapter" data-level="13.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations"><i class="fa fa-check"></i><b>13.2</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#first-iteration-uses-input-segment-lengths"><i class="fa fa-check"></i><b>13.2.1</b> First iteration uses input segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#influence-area-calculations"><i class="fa fa-check"></i><b>13.3</b> Influence Area Calculations</a></li>
+<li class="chapter" data-level="13.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-segment-length-calculations"><i class="fa fa-check"></i><b>13.4</b> Adjusted Segment Length Calculations</a></li>
+<li class="chapter" data-level="13.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations-1"><i class="fa fa-check"></i><b>13.5</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#second-iteration-uses-adjusted-segment-lengths"><i class="fa fa-check"></i><b>13.5.1</b> Second iteration uses adjusted segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#facility-calculations"><i class="fa fa-check"></i><b>13.6</b> Facility Calculations</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#posted-speed-travel-time-s"><i class="fa fa-check"></i><b>13.6.1</b> Posted Speed Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#free-flow-travel-time-s"><i class="fa fa-check"></i><b>13.6.2</b> Free-Flow Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#average-travel-time-s"><i class="fa fa-check"></i><b>13.6.3</b> Average Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#travel-time-segment-weights"><i class="fa fa-check"></i><b>13.6.4</b> Travel Time Segment Weights</a></li>
+<li class="chapter" data-level="13.6.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-demand-volumes"><i class="fa fa-check"></i><b>13.6.5</b> Adjusted Demand Volumes</a></li>
+<li class="chapter" data-level="13.6.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-hours-traveled-veh-h"><i class="fa fa-check"></i><b>13.6.6</b> Vehicle Hours Traveled (veh-h)</a></li>
+<li class="chapter" data-level="13.6.7" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#total-delay-veh-h"><i class="fa fa-check"></i><b>13.6.7</b> Total Delay (veh-h)</a></li>
+<li class="chapter" data-level="13.6.8" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-miles-traveled-veh-mi"><i class="fa fa-check"></i><b>13.6.8</b> Vehicle Miles Traveled (veh-mi)</a></li>
+<li class="chapter" data-level="13.6.9" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#space-mean-speed-mih"><i class="fa fa-check"></i><b>13.6.9</b> Space Mean Speed (mi/h)</a></li>
+<li class="chapter" data-level="13.6.10" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#ffs-delay-sveh"><i class="fa fa-check"></i><b>13.6.10</b> FFS Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.11" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#threshold-delay-sveh"><i class="fa fa-check"></i><b>13.6.11</b> Threshold Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.12" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-constancy"><i class="fa fa-check"></i><b>13.6.12</b> LOS Constancy</a></li>
+<li class="chapter" data-level="13.6.13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-adjustment-factor"><i class="fa fa-check"></i><b>13.6.13</b> LOS Adjustment Factor</a></li>
+<li class="chapter" data-level="13.6.14" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#final-los-score"><i class="fa fa-check"></i><b>13.6.14</b> Final LOS Score</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="CompEngine.html"><a href="CompEngine.html"><i class="fa fa-check"></i><b>14</b> Computational Engine Overview</a></li>
+<li class="part"><span><b>Part III: Case Studies</b></span></li>
+<li class="chapter" data-level="15" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html"><i class="fa fa-check"></i><b>15</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#supporting-material"><i class="fa fa-check"></i><b>15.1</b> Supporting Material</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#kml-files"><i class="fa fa-check"></i>KML Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#computational-engine-input-files"><i class="fa fa-check"></i>Computational Engine Input Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#probe-vehicle-data-analysis-scripting-code"><i class="fa fa-check"></i>Probe Vehicle Data Analysis Scripting Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html"><i class="fa fa-check"></i><b>16</b> Case Study: Oregon US-20</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#route-description"><i class="fa fa-check"></i><b>16.1</b> Route Description</a></li>
+<li class="chapter" data-level="16.2" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#level-of-service"><i class="fa fa-check"></i><b>16.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#segmentation"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#traffic-data"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#additional-data-inputs-for-intersections"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#results"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#reliability"><i class="fa fa-check"></i><b>16.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-heatmaps"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-difference-heatmaps"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#box-and-whisker-speed-plots"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-confidence-band"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#travel-time-index"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html"><i class="fa fa-check"></i><b>17</b> Case Study: Tennessee SR-109</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#route-description-1"><i class="fa fa-check"></i><b>17.1</b> Route Description</a></li>
+<li class="chapter" data-level="17.2" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#level-of-service-1"><i class="fa fa-check"></i><b>17.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#segmentation-1"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#traffic-data-1"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#additional-data-inputs-for-intersections-1"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#results-1"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#reliability-1"><i class="fa fa-check"></i><b>17.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-heatmaps-1"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-difference-heatmaps-1"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#box-and-whisker-speed-plots-1"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-confidence-band-1"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#travel-time-index-1"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#summary-1"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html"><i class="fa fa-check"></i><b>18</b> Case Study: Ohio US-42</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#route-description-2"><i class="fa fa-check"></i><b>18.1</b> Route Description</a></li>
+<li class="chapter" data-level="18.2" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#level-of-service-2"><i class="fa fa-check"></i><b>18.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#segmentation-2"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#traffic-data-2"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#additional-data-inputs-for-intersections-2"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#results-2"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#reliability-2"><i class="fa fa-check"></i><b>18.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-heatmaps-2"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-difference-heatmaps-2"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#box-and-whisker-speed-plots-2"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-confidence-band-2"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#travel-time-index-2"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#summary-2"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html"><i class="fa fa-check"></i><b>19</b> Case Study: Montana US-287</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#route-description-3"><i class="fa fa-check"></i><b>19.1</b> Route Description</a></li>
+<li class="chapter" data-level="19.2" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#level-of-service-3"><i class="fa fa-check"></i><b>19.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#segmentation-3"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#traffic-data-3"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#results-3"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Appendixes</b></span></li>
+<li class="chapter" data-level="A" data-path="AppendixA.html"><a href="AppendixA.html"><i class="fa fa-check"></i><b>A</b> Mitigation Strategies</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="AppendixA.html"><a href="AppendixA.html#general"><i class="fa fa-check"></i><b>A.1</b> General</a></li>
+<li class="chapter" data-level="A.2" data-path="AppendixA.html"><a href="AppendixA.html#multilane-highways"><i class="fa fa-check"></i><b>A.2</b> Multilane Highways</a></li>
+<li class="chapter" data-level="A.3" data-path="AppendixA.html"><a href="AppendixA.html#two-lane-highways"><i class="fa fa-check"></i><b>A.3</b> Two-Lane Highways</a></li>
+<li class="chapter" data-level="A.4" data-path="AppendixA.html"><a href="AppendixA.html#intersections"><i class="fa fa-check"></i><b>A.4</b> Intersections</a></li>
+<li class="chapter" data-level="A.5" data-path="AppendixA.html"><a href="AppendixA.html#arterials"><i class="fa fa-check"></i><b>A.5</b> Arterials</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/NCHRP-08-135/Guidebook" target="blank">View Book Source</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Chapter2LOS" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Rural Highway Level of Service for Automobiles<a href="Chapter2LOS.html#Chapter2LOS" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="LOSIntro" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Introduction<a href="Chapter2LOS.html#LOSIntro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This chapter describes the methodology to perform a traffic operations and level of service analysis, for the automobile mode on rural highways. This analysis methodology relies on the existing analysis methodologies in the Highway Capacity Manual (HCM). Specifically, it utilizes analysis methods for the following roadway types, all of which may be contained within a rural highway route:</p>
+<ul>
+<li>Multilane Highways</li>
+<li>Two-lane Highways</li>
+<li>Urban Streets</li>
+<li>Signalized Intersections</li>
+<li>All-way Stop Control (AWSC) Intersections</li>
+<li>Roundabout Intersections</li>
+</ul>
+<p>Part 3 of the Guidebook provides an overview of these analysis methods. This appendix is not intended to duplicate in full the analysis methodology material provided in the HCM, but rather to provide a concise summary of the applicable equations, exhibits, and nomenclature for each analysis methodology utilized in the rural highway LOS methodology.</p>
+<p>Because of the relatively long distances involved in a rural highway analysis and the corresponding volume of calculations, it is necessary to implement some simplifying assumptions into the analysis methodology. If the HCM contains alternative calculation procedures, such as those intended for planning and preliminary engineering applications, they are utilized in this methodology as appropriate. There are a few additional situations for which analysis simplifications are proposed for this methodology that are not currently addressed by the HCM. These simplifications are discussed further in this chapter and are clearly identified in the material in <a href="HCMmethodsIntro.html#HCMmethodsIntro">Part 3</a>.</p>
+<p>It should be noted that the analysis methodology is direction specific. That is, results are specific to a single direction. For some roadway configurations, information about other directions of travel (traffic, roadway, control) may be needed to determine the operational quality for the analysis direction of travel. For example, for a two-lane highway passing zone, it is necessary to know the traffic volume in the opposing direction. Likewise, for intersections, such as roundabouts and all-way stop controlled, traffic operations on a given approach are affected by traffic demands and lane configurations on other approaches.</p>
+<p>The remainder of this chapter describes:</p>
+<ul>
+<li>the process used to divide a rural highway into its component segments</li>
+<li>the calculation of segment and facility performance measures and LOS</li>
+<li>alternative performance measures that can be used to assess facility operational quality</li>
+</ul>
+</div>
+<div id="Segmentation" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Facility Segmentation<a href="Chapter2LOS.html#Segmentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A critical step in a facility-level analysis framework is facility segmentation; that is, dividing the facility in question into its basic components of segments and junctions. First, a description of the applicable roadway types for a rural highway analysis is provided.</p>
+<p><strong><em>Multilane Highway Segments</em></strong></p>
+<p>HCM Page 12-4: “<em>Multilane highways generally have four to six lanes (in both directions) and posted speed limits between 40 and 55 mi/h. In some states, speed limits of 60 or 65 mi/h or higher are used on some multilane highways. These highways may be undivided (with only a centerline separating the directions of flow) or divided (with a physical median separating the directions of flow), or may have a two-way left-turn lane (TWLTL). They are typically located in suburban areas, leading into city centers, and along high-volume rural corridors, connecting two cities or activity centers that generate a substantial number of daily trips.</em>”</p>
+<p>HCM Page 12-5: “<em>Uninterrupted flow on multilane highways is similar to that on basic freeway segments. However, there are several important differences. Because side frictions are present in varying degrees from uncontrolled driveways and intersections, as well as from opposing flows on undivided cross-sections, speeds on multilane highways tend to be lower than those on similar basic freeway segments. The basic geometry of multilane highways also tends to be more constrained than that of basic freeway segments, consistent with lower speed expectations. Finally, isolated signalized intersections can exist along multilane highways. The overall result is that speeds and capacities on multilane highways are lower than those on basic freeway segments with similar cross-sections.</em>”</p>
+<p><strong><em>Two-Lane Highway Segments</em></strong></p>
+<p>HCM Page 15-1: “<em>Two-lane highways have one lane for the use of traffic in each direction. The single lane in each direction may be supplemented with passing lanes, truck climbing lanes, turnouts, or pullouts. Two-lane highways with a continuous middle lane used for alternating passing lanes, referred to as a “2+1” configuration, is also addressed in Appendix A of this chapter.</em>”</p>
+<p>“<em>The principal characteristic that distinguishes the analysis of motor vehicle traffic on two-lane highways from other uninterrupted-flow facilities is that passing maneuvers take place in the opposing lane of traffic. Passing maneuvers are limited by the availability of gaps in the opposing traffic stream and by the availability of sufficient sight distance for a driver to discern the approach of an opposing vehicle safely. As demand flows and geometric restrictions increase, opportunities to pass decrease. This creates platoons within the traffic stream, with trailing vehicles subject to additional delay because of the inability to pass the lead vehicles. Consequently, operating quality on two-lane highways can become “unacceptable” at relatively low volume-to-capacity ratios and/or high average travel speeds. For this reason, few two-lane highways ever operate at flow rates approaching capacity; in most cases, poor operating quality leads to improvements or reconstruction long before demand reaches capacity.</em>”</p>
+<p><strong><em>Urban Streets</em></strong></p>
+<p>HCM Page 16-6: “<em>For the purpose of analysis, the urban street is separated into individual elements that are physically adjacent and operate as a single entity for the purpose of serving travelers. Two elements are commonly found on an urban street system: points and links. A point represents the boundary between links and is usually represented by an intersection or ramp terminal. A link represents a length of roadway between two points. A link and its boundary intersections are referred to as a segment. An urban street facility is a length of roadway that is composed of contiguous urban street segments and is typically functionally classified as an urban arterial or collector street.</em>”</p>
+<p>Thus, an urban street facility is the combination of contiguous urban street segments, and an urban street segment is the combination of a roadway link that connects to an intersection at its downstream boundary. Although the HCM uses the term ‘urban street’ to describe what is often referred to as an arterial, the corresponding analysis methodology may be applicable to sections of roadway in a rural setting. For the purposes of a rural highway analysis, a section of roadway that should be analyzed as an urban street facility is referred to as an ‘arterial segment’.</p>
+<p><strong><em>AWSC Intersections</em></strong></p>
+<p>HCM Page 21-1: “<em>All-way STOP-controlled (AWSC)intersections are characterized by having all approaches controlled by STOP signs without any street having priority.</em>”</p>
+<p><strong><em>Roundabout Intersections</em></strong></p>
+<p>HCM Page 22-1: “<em>Roundabouts are intersections with a generally circular shape, characterized by yield on entry and circulation around a central island (counterclockwise in the United States).</em>”</p>
+<p><strong><em>Signalized Intersections</em></strong></p>
+<p>A signalized intersection uses an electronic controller (signal controller) to communicate the right-of-way to vehicles on the approaches. This communication is implemented through a collection of light-emitting devices and lenses that are housed in cases of various configurations (referred to as signal heads) whose purpose is to display red, yellow, and green full circles and/or arrows. The signal controller may also make use of vehicle detection devices on one or more approaches to potentially factor into the utilized display patterns and durations.</p>
+<p>The process of partitioning a facility into its component segments considers the following factors:</p>
+<ul>
+<li>cross-section – number of lanes</li>
+<li>passing accommodations for two-lane highways – passing lanes, passing in the oncoming lane; because the analysis is direction specific, it is only the centerline marking applicable to the traffic stream moving in the analysis direction that is considered</li>
+<li>posted speed limit</li>
+<li>geometric alignment – grades and horizontal curves</li>
+<li>Intersections and their influence area – the distance upstream and downstream from the intersection where traffic operation is strongly influenced by intersection control (signalized, stop, or roundabout)</li>
+<li>Area context (rural versus rural town)</li>
+</ul>
+<div id="CrossSection" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Cross Section<a href="Chapter2LOS.html#CrossSection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For different segment types, the process is relatively straightforward. For example, the start (or end) of passing lane sections or multilane highway sections roughly coincide at the location of lane addition (or lane drop).</p>
+<div id="two-lane-highway-passing-lane-segment-versus-multilane-highway-segment" class="section level4 hasAnchor" number="2.2.1.1">
+<h4><span class="header-section-number">2.2.1.1</span> Two-lane highway passing lane segment versus multilane highway segment<a href="Chapter2LOS.html#two-lane-highway-passing-lane-segment-versus-multilane-highway-segment" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In most situations, it should be clear to the analyst whether a section of highway with two directional lanes should be analyzed with the multilane highway analysis methodology or two-lane highway passing lane segment analysis methodology. However, the HCM does not provide explicit guidance on this issue. This section provides such guidance for selecting the appropriate analysis methodology as well as situations in which both analysis methodologies may provide similar LOS results.</p>
+<p>A two-lane highway passing segment, referred to hereafter as a passing lane segment, is typically a short length (3 miles or less) of roadway with two directional lanes that is preceded and succeeded by relatively longer stretches of two-lane highway (1-lane per direction). Two-lane highway passing lane segments are intended to break up platoons of vehicles that have formed upstream due to extended stretches of two-lane highway with limited or no passing opportunities. Operations within the passing lane segment are typically marked by many lane changes at or near the beginning of the passing lane segment–slower or faster vehicles moving to the added lane, depending on signage–and many lane changes at or near the end of the passing lane segment due to the lane drop.</p>
+<p>The two-lane highway passing lane segment analysis methodology is not intended for application to stretches of two-lane roadway (one direction) in the following situations/configurations:</p>
+<ul>
+<li>an intersection is at the point of transition from one lane to two lanes (same direction) for the highway</li>
+<li>a single lane stretch of highway that expands to two lanes (same direction) due to a lane addition from an interchange on-ramp or similar</li>
+</ul>
+<p>To understand why it is important to apply the appropriate analysis methodology, a brief review of the key analysis components is first provided. Figure <a href="Chapter2LOS.html#fig:HCMMLHwySpeedFlowCurves">2.1</a> shows speed-flow curves for a multilane highway segment. Figure <a href="Chapter2LOS.html#fig:PassingLaneExample">2.2</a> shows an example speed-flow curve for a passing lane segment. There is a general similarity in the shape of the curves between the two segment types, as should be expected due to the multilane configuration of both segment types.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HCMMLHwySpeedFlowCurves"></span>
+<img src="Images/LOS/HCMMLHwySpeedFlowCurves.png" alt="Multilane Highway Segment Speed-Flow Curves Plot" width="45%" />
+<p class="caption">
+Figure 2.1: Multilane Highway Segment Speed-Flow Curves Plot
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:PassingLaneExample"></span>
+<img src="Images/LOS/PassingLaneSpeedFlowCurves.png" alt="Passing Lane Segment Speed-Flow Curve Plot" width="45%" />
+<p class="caption">
+Figure 2.2: Passing Lane Segment Speed-Flow Curve Plot
+</p>
+</div>
+<p>Note: Upper curve (blue) is for vertical class 1, 5% HV, lower curve (orange) is for vertical class 5, HV% = 15%, BFFS = 55 mi/h, segment length = 1.5 mi</p>
+<p>It should be noted that the flow rate units for the multilane highway speed-flow plot are pc/h; whereas the flow rate units for the passing lane segment are veh/h. The two-lane highway analysis methodology does not utilize the passenger car equivalence (PCE) concept. Increasing truck percentage in the traffic stream does not change the shape of the multilane highway speed-flow curve, rather, it just increases the analysis flow rate along the same curve (further to the right along the x axis). Because of limited passing opportunities along two-lane highways, heavy vehicles in the traffic stream can result in very significant speed reductions for the entire traffic stream, especially on upgrades. Thus, it is necessary to be able to change the shape of the speed-flow curve, such as shown with the lower curve in Figure <a href="Chapter2LOS.html#fig:PassingLaneExample">2.2</a>. With this approach, the percentage of heavy vehicles is used directly, rather indirectly through the PCE concept. For more information about this topic, please see <span class="citation">(<a href="#ref-NCHRP-Project-17-65">Washburn et al. 2018</a>)</span>. Additionally, the multilane highway performance measure results are considered to be ‘segment-wide’, whereas passing lane segment results apply to the midpoint of the segment.</p>
+<p>Other significant differences in the analysis methodology are with respect to segment length and grade, as follows:</p>
+<ul>
+<li>Segment length
+<ul>
+<li>Multilane highway segment: Length is only a factor for the multilane highway analysis when there is a specific grade (i.e., not level or rolling general terrain);</li>
+<li>Passing lane segment: Length is a factor for two-lane highway analysis, regardless of grade, up to the maximum practical length</li>
+</ul></li>
+<li>Segment grade
+<ul>
+<li>Multilane highway segment: Grades <span class="math inline">\(\ge\)</span> 6% give the same results due to the limits of the PCE values in HCM Exhibits 12-26 - 12-28</li>
+<li>Passing lane segment: Grade incline and length translated to appropriate vertical alignment class (1-5)</li>
+</ul></li>
+</ul>
+<p>An analysis of the differences in LOS results between multilane highway segments and passing lane segments is provided in the NCHRP 08-135 Project Final Report <span class="citation">(<a href="#ref-NCHRP-Project-08-135">Washburn et al. 2023</a>)</span>.</p>
+<p>Based on these results, the following conclusions and guidance are provided:</p>
+<p><strong>Multilane Highway Segment</strong></p>
+<ul>
+<li>The LOS results are generally insensitive to grade for 0% heavy vehicles.</li>
+<li>For level terrain, LOS will always be ‘A’ or very close, as the max flow rate that could enter a passing lane segment is around 1800 veh/h (900 veh/h/ln).</li>
+<li>For a specific grade analysis, the LOS results for grades of 6% and higher will be same because 6% is highest grade for which PCE values are provided.</li>
+<li>For a specific grade analysis, the LOS results will be the same for segment lengths of 1.5 miles for grades <span class="math inline">\(\le\)</span> 3.5% or 1.0 miles for grades <span class="math inline">\(\ge\)</span> 4.5%, due to the limits of the PCE values in HCM Exhibits 12-26 - 12-28.</li>
+</ul>
+<p><strong>Passing Lane Segment</strong></p>
+<ul>
+<li>The LOS results will be the same for lengths of 3 miles and greater, as a function of the segment length limits in HCM Exhibit 15-10. This generally reflects the diminishing returns in platoon dispersion for passing lane segment lengths greater than 3 mi in length.</li>
+</ul>
+<p>For the following conditions, the same LOS results can be expected from both the multilane highway and passing segment analysis methodologies. Note that these conditions are specific to resulting LOS values, not necessarily any specific performance measure results, such as average speed.</p>
+<ul>
+<li>Segment lengths <span class="math inline">\(\ge\)</span> 1.5 miles and flow rates <span class="math inline">\(\le\)</span> 300 veh/h.</li>
+<li>Segment lengths <span class="math inline">\(\ge\)</span> 2.5 miles and flow rates <span class="math inline">\(\le\)</span> 600 veh/h.</li>
+</ul>
+<p>For other conditions, it is important to choose the appropriate analysis methodology.</p>
+</div>
+</div>
+<div id="passing-accommodations-for-two-lane-highways" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Passing Accommodations for Two-Lane Highways<a href="Chapter2LOS.html#passing-accommodations-for-two-lane-highways" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The pavement centerline markings are used to delineate passing restricted sections and passing zones. Such pavement markings may also be accompanied by ‘DO NOT PASS’ and/or ‘NO PASSING ZONE’ signage. Such signs are designated in the Manual on Uniform Traffic Control Devices (<span class="citation">FHWA (<a href="#ref-MUTCD2009">2009</a>)</span>) as ‘R4-1’ and ‘W14-3’, respectively.</p>
+</div>
+<div id="posted-speed-limit-changes" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Posted Speed Limit Changes<a href="Chapter2LOS.html#posted-speed-limit-changes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Generally, a segment should have a consistent posted speed limit (PSL) across its length. If the length of roadway to which a specific PSL is applied is short, it may be reasonable to include this length of roadway with another segment. Such a scenario is described in the example in [Case Study 1: Oregon US-20].</p>
+</div>
+<div id="geometric-alignment-considerations" class="section level3 hasAnchor" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> Geometric Alignment Considerations<a href="Chapter2LOS.html#geometric-alignment-considerations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Vertical and horizontal alignment along a rural highway route can be quite variable and introducing a new segment for each change in grade and/or horizontal curvature will likely result in a large number of segments for a route of 20 miles or more. For this analysis methodology it is proposed to only introduce segmentation changes for geometry that will likely result in significant speed reductions for heavy vehicles. Consequently, the following segmentation guidelines with respect to geometric alignment are proposed to account for such speed impacts on heavy vehicles:</p>
+<ul>
+<li>Two-lane highway segments
+<ul>
+<li>Only consider vertical curves that are class 2 or higher (per the HCM two-lane highway methodology)</li>
+<li>Combine contiguous segments with the same vertical alignment classification</li>
+<li>Only consider horizontal curves that are class 3 or higher (per the HCM two-lane highway methodology)</li>
+<li>Combine contiguous segments with the same horizontal alignment classification</li>
+</ul></li>
+<li>Multilane highway segments
+<ul>
+<li>Current ‘level’ and ‘rolling’ terrain guidelines will apply; for steeper/longer grades, only the specific grade approach will be applied—the ‘mixed flow’ model will not be applied because of its complexity; when there are consecutive grades that should be analyzed with the specific grade approach, the following guidance applies: if the individual grades are less than or equal to 0.5 miles, they are combined into a single segment and the highest grade percentage is applied over the entire length. If a grade is longer than 0.5 miles, it is treated it as an individual segment.</li>
+</ul></li>
+</ul>
+</div>
+<div id="IntxInfluenceArea" class="section level3 hasAnchor" number="2.2.5">
+<h3><span class="header-section-number">2.2.5</span> Intersections and their Influence Area<a href="Chapter2LOS.html#IntxInfluenceArea" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Intersections that require the major street through movement to stop or yield should be treated as individual segments. A series of intersections may also be part of an urban street, also referred to as an arterial, segment. This distinction is discussed in the next section. Common intersection forms that apply stop or yield control to the major street through movement include signalized, roundabout, and all-way stop-controlled (AWSC) intersections. Intersection forms that do not apply control to the major street through movement, such as two-way stop-controlled (TWSC), restricted crossing U-turn (RCUT), and median U-turn (MUT) intersections should not be treated as separate segments. They could serve as a break-point between segments if the geometry changes from upstream to downstream of the intersection or if the turning movement volumes at the intersection result in a significant major street through movement volume difference from upstream to downstream of the intersection. Only a volume change of more than 5% is considered significant for the purposes of this analysis methodology. This same guidance applies to points along that highway that connect to an interchange (off-ramp and/or on-ramp connection).</p>
+<p>The geometric characteristics of the roadway immediately upstream and downstream of an intersection often change to accommodate features such as turn bays. These geometric changes are often manifested through tapering to lanes upstream and/or drop lanes downstream. In the initial setup of the facility, the length of the intersection segment should correspond to the distance between where the geometric characteristics start and end to accommodate the intersection area. This distance is referred to as the ‘geometric area’. By default, the methodology assumes a value of 660 ft for both the upstream and downstream geometric area distances, for a total length of 1320 ft (0.25 mi). The analyst can override these values as desired. While the geometric area essentially defines the physical spatial extent of the intersection, the traffic analysis methodology is dependent upon the operational influence area of the intersection.</p>
+<p>On interrupted-flow facilities such as urban street networks and non-freeway rural facilities, the need for the major street through movement to slow down or stop at signalized, roundabout, or AWSC intersections impacts traffic operations along the connecting highway segments. In practice, intersections are represented as point locations in a link-node network configuration; however, its operational effects extend for some distance on the connecting upstream (entry) and downstream (exit) approaches, thus affecting the operational performance of highway segments in the proximity of intersections. Specifically, vehicles may need to stop or slow down as they approach the intersection and then accelerate to the downstream segment running speed as they exit the intersection. Understanding the spatial extent of intersection impacts on connecting approaches is important for an accurate evaluation of operational performance along facilities consisting of multiple segments and junctions. For facility-level analysis, the quality-of-service assessment should not only include the physical intersection area, but also the lengths along all approaches that are affected by the intersection, commonly known as the “influence area” or “effective length.” An illustration of the influence area concept is shown in Figure <a href="Chapter2LOS.html#fig:InfluenceArea">2.3</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:InfluenceArea"></span>
+<img src="Images/LOS/Influence%20Area.png" alt="Illustration of Intersection Influence Areas" width="80%" />
+<p class="caption">
+Figure 2.3: Illustration of Intersection Influence Areas
+</p>
+</div>
+<p>Equations to calculate the upstream and downstream influence area (IA) for roadway approaches that are signal, roundabout, and stop controlled are as given by Eqs. <a href="Chapter2LOS.html#eq:InfluenceAreaEq1">(2.1)</a> - <a href="Chapter2LOS.html#eq:InfluenceAreaEq6">(2.6)</a>. Again, the influence area calculations are direction specific.</p>
+<p><span class="math display" id="eq:InfluenceAreaEq1">\[\begin{equation}
+\textit{IA-Signal}_{US} = -923.89 + 35.92 \times UpstreamAvgSpeed + \\ 1.23 \times PctHV - 374.05 \times I_{ML}
+\tag{2.1}
+\end{equation}\]</span></p>
+<p>Where:<br />
+<span class="math inline">\(\textit{IA-Signal}_{US} =\)</span> Influence area upstream of signalized intersection, ft<br />
+<span class="math inline">\(UpstreamAvgSpeed =\)</span> Mean speed of traffic approaching intersection, mi/h<br />
+<span class="math inline">\(PctHV =\)</span> Percentage of heavy vehicles in traffic stream approaching intersection, %<br />
+<span class="math inline">\(I_{ML} =\)</span> Indicator variable for directional number of through lanes on approach to intersection (0 = one lane, 1 = multiple lanes)</p>
+<p><span class="math display" id="eq:InfluenceAreaEq2">\[\begin{equation}
+\textit{IA-Signal}_{DS} = -1929.64 + 60.25 \times DownstreamAvgSpeed + \\ 7.23 \times PctHV - 154.15 \times I_{ML}
+\tag{2.2}
+\end{equation}\]</span></p>
+<p>Where:<br />
+<span class="math inline">\(\textit{IA-Signal}_{DS} =\)</span> Influence area downstream of signalized intersection, ft<br />
+<span class="math inline">\(DownstreamAvgSpeed =\)</span> Mean speed of traffic downstream of intersection influence area, mi/h
+Other variables as previously defined</p>
+<p><span class="math display" id="eq:InfluenceAreaEq3">\[\begin{equation}
+\textit{IA-Roundabout}_{US} = 402.15 + 10.21 \times UpstreamAvgSpeed - \\ 15.27 \times AvgCircSpeed
+\tag{2.3}
+\end{equation}\]</span></p>
+<p>Where:<br />
+<span class="math inline">\(\textit{IA-Roundabout}_{US} =\)</span> Influence area upstream of roundabout intersection, ft<br />
+<span class="math inline">\(AvgCircSpeed =\)</span> Average speed of traffic within roundabout circular roadway, mi/h<br />
+Other variables as previously defined</p>
+<p><span class="math display" id="eq:InfluenceAreaEq4">\[\begin{equation}
+\textit{IA-Roundabout}_{DS} = -313.80 + 32.73 \times DownstreamAvgSpeed - \\ 27.01 \times AvgCircSpeed
+\tag{2.4}
+\end{equation}\]</span></p>
+<p>Where:<br />
+<span class="math inline">\(\textit{IA-Roundabout}_{DS} =\)</span> Influence area downstream of roundabout intersection, ft<br />
+Other variables as previously defined</p>
+<p><span class="math display" id="eq:InfluenceAreaEq5">\[\begin{equation}
+\textit{IA-StopControl}_{US} = -1147.62 + 38.82 \times UpstreamAvgSpeed
+\tag{2.5}
+\end{equation}\]</span></p>
+<p>Where:<br />
+<span class="math inline">\(\textit{IA-StopControl}_{US} =\)</span> Influence area upstream of stop control intersection approach, ft<br />
+Other variables as previously defined</p>
+<p><span class="math display" id="eq:InfluenceAreaEq6">\[\begin{equation}
+\textit{IA-StopControl}_{DS} = -1067.63 + 44.38 \times DownstreamAvgSpeed
+\tag{2.6}
+\end{equation}\]</span></p>
+<p>Details on the development of these equations can be found in the NCHRP 08-135 Project Final Report <span class="citation">(<a href="#ref-NCHRP-Project-08-135">Washburn et al. 2023</a>)</span>. However, it should be noted here that these equations were developed based on data from roadways with posted speed limits of 45 mi/h and higher. Consequently, Eqs. <a href="Chapter2LOS.html#eq:InfluenceAreaEq1">(2.1)</a> - <a href="Chapter2LOS.html#eq:InfluenceAreaEq6">(2.6)</a> may yield unreasonable results for roadways with lower posted speed limits. Both the upstream and downstream influence distances are compared against practical minimum influence distances, namely, practical stopping distance for the upstream influence area and practical acceleration distance for the downstream influence area. In both cases, for simplicity, the reference speed is the posted speed limit.</p>
+<p>The calculated upstream influence area value should be compared to braking distance, per Eq. <a href="Chapter2LOS.html#eq:BrakingDistance">(2.7)</a>, and the maximum value used.</p>
+<p><span class="math display" id="eq:BrakingDistance">\[\begin{equation}
+BrakingDistance = \frac{V_{Init}^2}{2a}
+\tag{2.7}
+\end{equation}\]</span></p>
+<p>Where:<br />
+<span class="math inline">\(BrakingDistance =\)</span> distance for vehicle to decelerate from speed <span class="math inline">\(V_{Init}\)</span> to a stop, in feet<br />
+<span class="math inline">\(V_{Init} =\)</span> initial speed, in ft/s; posted speed limit is recommended value<br />
+<span class="math inline">\(a =\)</span> deceleration rate, 10.0 ft/s/s, based on Institute of Transportation Engineers (ITE) recommendations for slowing on an approach to a signalized intersection (<span class="citation">Institute of Transportation Engineers (ITE) (<a href="#ref-ITEtrafengr">2016</a>)</span>)</p>
+<p>Likewise, the calculated downstream influence area value should be compared to practical acceleration distance, per Eq. <a href="Chapter2LOS.html#eq:AccelDistance">(2.8)</a>, and the maximum value used. Note that this formula is simplified, by assuming level grade.</p>
+<p><span class="math display" id="eq:AccelDistance">\[\begin{equation}
+AccelDistance = 0.1655 \times {V_{Final}^{2.0917}}
+\tag{2.8}
+\end{equation}\]</span></p>
+<p>Where:<br />
+<span class="math inline">\(AccelDistance =\)</span> distance for vehicle to accelerate from a stop to speed <span class="math inline">\(V_{Final}\)</span>, in feet<br />
+<span class="math inline">\(V_{Final} =\)</span> final speed, in ft/s; posted speed limit is recommended value</p>
+<p>The adjusted length of an intersection segment is calculated by adding the difference between the upstream/downstream influence areas to the upstream/downstream geometric areas. This difference (delta) calculation is given by Eq. <a href="Chapter2LOS.html#eq:InfluenceAreaDeltaEq">(2.9)</a>.</p>
+<p><span class="math display" id="eq:InfluenceAreaDeltaEq">\[\begin{equation}
+\Delta = InfluenceArea - GeometricArea \tag{2.9}
+\end{equation}\]</span></p>
+<p>Note that if the upstream/downstream geometric area distance is greater than the upstream/downstream influence area distance, the delta value will be negative. While there are multiple distance calculations associated with this process, the intersection area is represented by a single segment within the facility with a length equal to the length resulting from this calculation process.</p>
+<p>There are two configurations for which an upstream or downstream influence area will not be calculated.</p>
+<ul>
+<li>Two closely-spaced intersections: This configuration applies to a situation where two intersections are relatively close to one another, such as for interchange ramp terminal intersections. In this situation, the two intersections would be represented in the facility as two consecutive intersection segments; that is, there would not be a two-lane or multilane highway segment in between the intersections). In a closely-spaced intersection configuration, the short distance between the upstream and downstream intersections largely controls acceleration and deceleration behavior. The guidelines for calculating the influence areas are as follows:
+<ul>
+<li>Upstream intersection: Calculate upstream influence area per Eq. <a href="Chapter2LOS.html#eq:InfluenceAreaEq1">(2.1)</a>, <a href="Chapter2LOS.html#eq:InfluenceAreaEq3">(2.3)</a>, or <a href="Chapter2LOS.html#eq:InfluenceAreaEq5">(2.5)</a>. Set the downstream influence area to the downstream physical length.</li>
+<li>Downstream intersection: Set the upstream influence area to the upstream physical length. Calculate downstream influence area per Eq. <a href="Chapter2LOS.html#eq:InfluenceAreaEq2">(2.2)</a>, <a href="Chapter2LOS.html#eq:InfluenceAreaEq4">(2.4)</a>, or <a href="Chapter2LOS.html#eq:InfluenceAreaEq6">(2.6)</a>.</li>
+</ul></li>
+<li>Urban street: The traffic flow operations between the upstream and downstream bounding intersections are directly accounted for by the Urban Street Facility analysis methodology. The guidelines for calculating the influence areas are as follows:
+<ul>
+<li>First intersection of urban street: Calculate upstream influence area per Eq. <a href="Chapter2LOS.html#eq:InfluenceAreaEq1">(2.1)</a>, <a href="Chapter2LOS.html#eq:InfluenceAreaEq3">(2.3)</a>, or <a href="Chapter2LOS.html#eq:InfluenceAreaEq5">(2.5)</a>. The downstream influence area is not calculated.</li>
+<li>Last intersection of urban street: Calculate downstream influence area per Eq. <a href="Chapter2LOS.html#eq:InfluenceAreaEq2">(2.2)</a>, <a href="Chapter2LOS.html#eq:InfluenceAreaEq4">(2.4)</a>, or <a href="Chapter2LOS.html#eq:InfluenceAreaEq6">(2.6)</a>. The upstream influence area is not calculated.</li>
+</ul></li>
+</ul>
+<p>It is also possible that the calculated adjusted length for a connecting upstream and/or downstream segment to an intersection segment may result in a negative value. This is likely to happen when such connecting segments are relatively short, on the order of a couple of hundred feet or less. In such a case, the connecting segment(s) with a negative adjusted length should be merged with the intersection segment.</p>
+<p>Examples of the segmentation process are provided in the case studies.</p>
+</div>
+<div id="UrbanStreetClassification" class="section level3 hasAnchor" number="2.2.6">
+<h3><span class="header-section-number">2.2.6</span> Classification of Urban Street<a href="Chapter2LOS.html#UrbanStreetClassification" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Rural highways often include short lengths of roadway (a few miles or less) that run through one or more small towns along the route. The first question to answer is whether such a stretch of roadway should be included in the rural highway facility analysis. In making this determination, the first consideration is to assess the context classification of the developed area that connects to a rural highway, per AASHTO’s <em>A Policy on Geometric Design of Highways and Streets</em> <span class="citation">(<a href="#ref-GreenBook7">AASHTO 2018</a>)</span>, hereafter referred to as the “Green Book”.</p>
+<p>The Green Book provides the following context classifications (from Section 1.5: Context Classification for Geometric Design):</p>
+<ul>
+<li>Rural</li>
+<li>Rural Town</li>
+<li>Suburban</li>
+<li>Urban</li>
+<li>Urban Core</li>
+</ul>
+<p>Regarding the definitions for these context classifications, the Green Book states:</p>
+<ul>
+<li>These contexts are defined based on development density (existence of structures and structure types), land uses (primarily residential, commercial, industrial, and/or agricultural), and building setbacks (distance of structures to adjacent roadways). These five contexts were initially presented in NCHRP Report 855, <em>An Expanded Functional Classification System for Highways and Streets</em> <span class="citation">(<a href="#ref-NCHRPRep855">Stamatiadis et al. 2018</a>)</span> , which has prepared a guide for classifying contexts and applying the context classes in design.</li>
+</ul>
+<p>Additionally, the Green Book states (p. 1-17):</p>
+<ul>
+<li>It is intended that the context for a road or street be identified through a simple review of the character of development in the field or using an aerial photograph, without the need for quantitative analysis. The primary factors that define the context classes—development density, land uses, and building setbacks—are easy to identify by observing the landscape adjacent to an existing or planned facility. Other factors including topography, soil type, land value, population density, and building square footage are related to context classification; however, data on these other factors are more quantitative and more difficult to acquire, so the context classification system does not rely on them.</li>
+</ul>
+<p>In terms of considering whether to include a stretch of roadway through a town as part of the rural highway facility, only roadways that would be classified as ‘rural town’ should be included. Roadways that fit in the suburban, urban, or urban core context should be excluded from the rural highway facility analysis methodology. In rural town areas, the highway passing through the town is generally the only major roadway in the town and a large percentage of traffic on the roadway is pass-through traffic. While the above discussion from the Green Book emphasizes a qualitative-based determination of the context, it should be noted that highways that fit within the rural town context are usually in towns with a population of 5000 or less. This population value is the threshold used in the FHWA classification for an urban versus a rural area.</p>
+<p>If the stretch of roadway through a developed area is consistent with the rural town context, and therefore should be included in the rural highway facility analysis, then the next determination is which analysis methodology, or methodologies, to apply to the stretch of roadway through the town. For example, for a stretch of roadway that includes a series of intersections with control on the major street (signalized, yield, stop), the operational characteristics of the roadway may make it most suitable for analysis with the ‘Urban Street Facilities’ analysis methodology (HCM Chapter 16). Otherwise, it may be more appropriate to treat the roadway section as a combination of uninterrupted flow segments (multilane or two-lane highway) and isolated intersections (with influence areas). This determination is generally a function of the following factors:</p>
+<ul>
+<li>Posted speed limit</li>
+<li>Roadway and roadside design</li>
+<li>Progression quality between signalized intersections if present</li>
+</ul>
+<div id="posted-speed-limit" class="section level4 hasAnchor" number="2.2.6.1">
+<h4><span class="header-section-number">2.2.6.1</span> Posted Speed Limit<a href="Chapter2LOS.html#posted-speed-limit" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The HCM Urban Street Facilities analysis methodology is designed for roadways that travel through urbanized or semi-urbanized environments and consequently can consider many of the conditions that are present in those environments–frequent intersections, roadside activity such as on-street parking, median restrictions, presence of curbs, and signal coordination. In some situations, however, the roadway characteristics may be similar to basic two-lane or multilane highways segments, but with low posted speed limits through the urbanized area (e.g., a small town). In these situations, it may be reasonable to apply the two-lane or multilane highway analysis methodology rather than the Urban Street Facilities analysis methodology.</p>
+<p>The text of HCM Chapter 15 (Two-Lane Highways) mentions that two-lane highways have posted speed limits of 35 mi/h and higher (p. 15-11), and free-flow speeds ranging from 40-75 mi/h (p. 15-19). The methodology does not explicitly state that it should not be applied to roadways with low posted speeds (20-30 mi/h); however, the development of the methodology did not explicitly consider data from such roadways.</p>
+<p>As an example, Figure <a href="Chapter2LOS.html#fig:HCMTwoLaneSpeedFlowPlots">2.4</a> shows speed-flow curves for a two-lane highway segment with the following characteristics.</p>
+<ul>
+<li>Segment type: Passing constrained</li>
+<li>Segment length: 1 mi</li>
+<li>Vertical alignment class: 1</li>
+<li>Base free-flow speed: 25 mi/h</li>
+<li>Percent heavy vehicles: 0 (blue), 5 (orange), 10 (red), 15 (green)</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HCMTwoLaneSpeedFlowPlots"></span>
+<img src="Images/LOS/HCMSpeedFlowCurvesLowPostedSpeed.png" alt="HCM Two-Lane Highway Speed-Flow Plots for Low Posted Speed" width="30%" />
+<p class="caption">
+Figure 2.4: HCM Two-Lane Highway Speed-Flow Plots for Low Posted Speed
+</p>
+</div>
+<p>HCM Exhibit 18-12, shown in Figure <a href="Chapter2LOS.html#fig:HCMExhibit18-12">2.5</a>, illustrates the general trend of the speed-flow relationship for an urban street. The lower trend line approximately corresponds to a posted limit of 25 mi/h.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:HCMExhibit18-12"></span>
+<img src="Images/LOS/HCMExhibit18-12.png" alt="HCM Exhibit 18-12" width="30%" />
+<p class="caption">
+Figure 2.5: HCM Exhibit 18-12
+</p>
+</div>
+<p>There is enough similarity between the two-lane highway and urban street facility speed-flow curves that it is reasonable to apply the two-lane highway analysis methodology to low posted speed roadways that do not include roadside characteristics that would necessitate application of the urban street facility methodology, as discussed in the following section.</p>
+<p>Despite a similarity in speed-flow relationship between two-lane highway segments and urban streets–when there is little to no roadside activity and no intersections that impose control on the major through movement–the service measures are different. Follower density is used to assess LOS for two-lane highway segments, whereas average speed is used to assess LOS for urban streets. Thus, this aspect should also be considered in choosing between the two approaches. In other words, the context of the roadway within the surrounding land uses may need to be the determining factor in this decision.</p>
+<p>The HCM multilane highway analysis methodology is intended for application to roadways with a posted speed limit of 40 mi/h and higher. Furthermore, the analysis methodology calculations are not designed to accommodate roadways with free-flow speeds less than 45 mi/h. Thus, for multilane roadways with posted speed limits less than 40 mi/h, the urban street facility methodology should be applied.</p>
+</div>
+<div id="roadway-and-roadside-design" class="section level4 hasAnchor" number="2.2.6.2">
+<h4><span class="header-section-number">2.2.6.2</span> Roadway and Roadside Design<a href="Chapter2LOS.html#roadway-and-roadside-design" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>There are certain roadway configurations where a section of roadway would classify it as an ‘urban street’ for analysis purposes:</p>
+<ul>
+<li>On-street parking</li>
+<li>Mid-block delay sources such as bus stops</li>
+<li>Frequent driveway access points with significant entering/exiting turning volumes</li>
+<li>Mid-block pedestrian crossings</li>
+</ul>
+<p>These conditions can be accommodated with the urban street analysis methodology, but not with the multilane or two-lane highway analysis methodologies.</p>
+</div>
+<div id="progression-quality-between-signalized-intersections" class="section level4 hasAnchor" number="2.2.6.3">
+<h4><span class="header-section-number">2.2.6.3</span> Progression Quality Between Signalized Intersections<a href="Chapter2LOS.html#progression-quality-between-signalized-intersections" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>If the roadway section does not include two or more signalized intersections, then progression quality is not relevant. In that case, the earlier guidance should be consulted.</p>
+<p>If the roadway consists of a series of signalized intersections and coordination is employed and other traffic and roadway characteristics are conducive to maintaining favorable signal progression, the urban streets analysis methodology should be employed. Favorable signal progression implies that the proportion of vehicles arriving on the green signal indication (PVG) is higher than the effective green-to-cycle length (<span class="math inline">\(g/C\)</span>) ratio. A PVG value approximately equal to the <span class="math inline">\(g/C\)</span> ratio is expected for random vehicle arrivals.</p>
+<p>If the signalized intersections along the roadway are spaced at 3/4 of a mile or greater, they should be considered isolated, in which case random arrivals can be assumed. Otherwise, signal progression should be taken into account. Refer to the NCHRP 08-135 final report <span class="citation">(<a href="#ref-NCHRP-Project-08-135">Washburn et al. 2023</a>)</span> for more detail on the development of this recommendation.</p>
+<p>When applying an urban street facility analysis to a stretch of rural highway, it is recommended that the planning-level analysis methodology be applied. This methodology is described in Section 5 of Chapter 30 of the HCM. The primary difference between the planning- and operational-level methodologies is the simplification of the process to account for signal progression quality on signal delay. Instead of the more complex platoon dispersion model, the planning-level analysis makes use of the simplified progression adjustment factor (PF). This process is shown in the application example for the Tennessee TN-109 route.</p>
+</div>
+</div>
+<div id="SegMinLength" class="section level3 hasAnchor" number="2.2.7">
+<h3><span class="header-section-number">2.2.7</span> Practical Minimum Segment Length<a href="Chapter2LOS.html#SegMinLength" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>During the segmentation process, overlap in changes to terrain, posted speed limit, number of lanes, and/or passing markings, can often lead to some relatively short segments along the route. Intersection segments will usually be relatively short, but the use of short multilane or two-lane highway segments is not reasonable for a rural highway analysis.</p>
+<p>For two-lane highway segments, see Exhibit 15-10 (Minimum and Maximum Segment Lengths for Use in Computing Segment Speeds and Percent Followers)</p>
+<p>Multilane highway segments
+- length is not a factor for general terrain (level or rolling) segments
+- for specific grades, using Exhibits 12-26 - 12-28, the minimum length category is 0.125 mi (use for distance between 0 - 0.125 mi)</p>
+<p>From a practical perspective, segments less than 0.25 mi in length should be combined with either the upstream or downstream connecting segment. This, of course, is not a strict rule, as there may still be valid reasons for including a segment shorter than this length.</p>
+</div>
+</div>
+<div id="FacilityLOS" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Segment and Facility LOS Calculation<a href="Chapter2LOS.html#FacilityLOS" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The rural highway analysis methodology retains the current service measures identified in the HCM, specific to each segment type, for segment LOS determination, as follows:</p>
+<ul>
+<li>density for multilane highways</li>
+<li>follower density for two-lane highways</li>
+<li>control delay for intersections (signalized, stop control, roundabout)</li>
+<li>average speed for urban streets</li>
+</ul>
+<p>Thus, segment LOS is determined per the existing HCM methods, as described in <a href="HCMmethodsIntro.html#HCMmethodsIntro">Part 3</a> of the Guidebook.</p>
+<p>Due to the lack of a common service measure across rural highway segment types, the facility LOS determination cannot be accomplished by using an aggregation method of the segment service measure values. Instead, the primary facility LOS determination is accomplished through an aggregation of the segment-level LOS values. As previously mentioned, the rural highway analysis is direction specific; that is, results are specific to a single direction, not both directions combined.</p>
+<p>The facility-level LOS is estimated using the following four steps.</p>
+<ol style="list-style-type: decimal">
+<li>Apply the guidance developed in this project to perform facility segmentation, i.e., partitioning the facility into its distinct segments.</li>
+<li>Apply the current HCM LOS methodologies for the different facility segments, estimating the performance measure and the corresponding LOS for each segment.</li>
+<li>Convert each segment LOS ranking to a numeric value, using a continuous scale, based on the specific service measure numeric scale.</li>
+<li>Aggregate the segment LOS numerical values, weighted by travel time, into an overall facility-level LOS numerical value. Convert the facility LOS numerical value to the corresponding letter ranking.</li>
+</ol>
+<p>A discussion of these steps follows.</p>
+<p><strong>Step 1: Facility segmentation</strong><br />
+Segment the rural facility according to the procedures documented in the previous section. <a href="Chapter2LOS.html#Segmentation">2.2</a></p>
+<p><strong>Step 2: Apply LOS procedures for facility segments</strong><br />
+The LOS is estimated for all facility segments using the respective HCM procedures. The respective service measure value as well as the LOS are determined in this step.</p>
+<p>It should be noted that this Guidebook does not make specific recommendations regarding the collection or determination of traffic demand volumes and associated parameters (e.g., PHF). Procedures and methods for obtaining traffic data and determining specific values for analysis purposes vary widely across agencies. Thus, this aspect of Step 2 is left solely to agency discretion. It is recognized, however, that it may be necessary or reasonable to implement some simplifying approximations for this process, given the accuracy/precision compromises made in other areas of the analysis methodology to make it tractable for such long roadway routes.</p>
+<p><strong>Step 3: Convert each segment service measure value to LOS numeric value</strong><br />
+Because of disparate service measures across facility segments (density, follower density, control delay, travel speed), and the range of uncertainty involved with the step-function nature of LOS, we propose a modification to the LOS value for the purpose of aggregating into a facility value.</p>
+<p>This modification consists of treating the LOS as a continuous variable, with the exact value determined using the segment-specific service measure. To address the different ranges assigned for various levels of service, these ranges are normalized to represent a 1.0 increment each on the LOS scale. Figures <a href="Chapter2LOS.html#fig:LOSscalesMultilaneHwy">2.6</a>-<a href="Chapter2LOS.html#fig:LOSscalesUrbanStreet">2.10</a> show how the service measure LOS scale is converted to a continuous LOS numeric value for the different types of facility segments. For example, in Figure <a href="Chapter2LOS.html#fig:LOSscalesMultilaneHwy">2.6</a>, the lower ‘Density’ scale corresponds to the HCM LOS density thresholds used for multilane highways. The upper scale is the LOS continuous scale used in this methodology to evaluate the quality of service. In this case, the density range for any level of service (e.g., 18 to 26 for LOS C) corresponds to a 1.0 increment between 2.0 and 3.0 on the LOS upper scale. Intermediate values are calculated using linear interpolation. So, if the density on a multilane highway is 20 pc/mi/lane, then it corresponds to 2.25 on the continuous LOS scale, as calculated via Eq. <a href="Chapter2LOS.html#eq:LOSsegmentNumericValue">(2.10)</a>.</p>
+<p><span class="math display" id="eq:LOSsegmentNumericValue">\[\begin{equation}
+LOS_{segment} = 2 + (3-2) \times (20-18)/(26-18) = 2.25 \tag{2.10}
+\end{equation}\]</span></p>
+<p>This approach provides the ability to perform a quantitative aggregation of the LOS values across segment types that do not have a consistent service measure into a facility LOS value. More background on the development of this approach is contained in the NCHRP 08-135 final report <span class="citation">(<a href="#ref-NCHRP-Project-08-135">Washburn et al. 2023</a>)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:LOSscalesMultilaneHwy"></span>
+<img src="Images/LOS/LOSscalesMultilaneHwy.jpg" alt="LOS service measure value conversion to continuous LOS numeric value for multilane highway segment" width="35%" />
+<p class="caption">
+Figure 2.6: LOS service measure value conversion to continuous LOS numeric value for multilane highway segment
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:LOSscalesTwoLaneHwy"></span>
+<img src="Images/LOS/LOSscalesTwoLaneHwy.jpg" alt="LOS service measure value conversion to continuous LOS numeric value for two-lane highway segment" width="35%" />
+<p class="caption">
+Figure 2.7: LOS service measure value conversion to continuous LOS numeric value for two-lane highway segment
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:LOSscalesSignal"></span>
+<img src="Images/LOS/LOSscalesSignal.jpg" alt="LOS service measure value conversion to continuous LOS numeric value for signalized intersection" width="35%" />
+<p class="caption">
+Figure 2.8: LOS service measure value conversion to continuous LOS numeric value for signalized intersection
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:LOSscalesUnsignalizedIntx"></span>
+<img src="Images/LOS/LOSscalesUnsignalizedIntx.jpg" alt="LOS service measure value conversion to continuous LOS numeric value for unsignalized intersection" width="35%" />
+<p class="caption">
+Figure 2.9: LOS service measure value conversion to continuous LOS numeric value for unsignalized intersection
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:LOSscalesUrbanStreet"></span>
+<img src="Images/LOS/LOSscalesUrbanStreet.jpg" alt="LOS service measure value conversion to continuous LOS numeric value for urban street (using 40 mi/h base free-flow speed as one example)" width="35%" />
+<p class="caption">
+Figure 2.10: LOS service measure value conversion to continuous LOS numeric value for urban street (using 40 mi/h base free-flow speed as one example)
+</p>
+</div>
+<p>Figure <a href="Chapter2LOS.html#fig:LOSconversion">2.11</a> illustrates the continuous LOS function for two-lane highway segments using the follower density service measure. Functions for the other segment types are developed in a similar manner. The LOS numeric value, referred to hereafter as LOS score, for a two-lane highway segment with a follower density of 6 followers/mi/ln would be 2.5, for example.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:LOSconversion"></span>
+<img src="Images/LOS/LOSconversion.jpg" alt="LOS score versus service measure value for two-lane highway segments" width="35%" />
+<p class="caption">
+Figure 2.11: LOS score versus service measure value for two-lane highway segments
+</p>
+</div>
+<p><strong>Step 4: Calculate the facility-level LOS</strong><br />
+The results from step 3 are used in estimating the quality of service on the rural facility using a composite LOS for the rural corridor in question.</p>
+<p>The segment LOS scores, weighted by travel time, are averaged to arrive at the facility LOS. Weighting by travel time is more realistic with driver perceptions than using a straight arithmetic average of segment LOS scores, or even weighting by segment length. The calculation for the facility LOS is given by Eqs. <a href="Chapter2LOS.html#eq:LOSfacilityCalc2">(2.11)</a> and <a href="Chapter2LOS.html#eq:PropTravelTime">(2.12)</a>.</p>
+<p><span class="math display" id="eq:LOSfacilityCalc2">\[\begin{equation}
+LOS_{Fac} = \sum_{i=1}^{n}LOSscore_{i} \times PropTravelTime_{i} \tag{2.11}
+\end{equation}\]</span></p>
+<p>where,<br />
+<span class="math inline">\(LOS_{Fac}=\)</span> Facility LOS score<br />
+<span class="math inline">\(LOSscore_{i}=\)</span> Numeric LOS score for segment <span class="math inline">\(i\)</span><br />
+<span class="math inline">\(n=\)</span> Number of segments in the facility<br />
+<span class="math inline">\(PropTravelTime_{i}=\)</span> Proportion of travel time for segment <span class="math inline">\(i\)</span> relative to the total travel time for the facility, calculated as follows</p>
+<p><span class="math display" id="eq:PropTravelTime">\[\begin{equation}
+PropTravelTime_{i} = \frac{TravelTime_{i}}{TotalTravelTime} \tag{2.12}
+\end{equation}\]</span></p>
+<p>It is also proposed that the facility LOS should be sensitive to the consistency, or lack thereof, of LOS from one segment to another along the length of the facility. For example, a facility that consists of multiple segments all operating at LOS C except for one or two segments operating at LOS B or D, is considered to be preferable from the quality-of-service perspective than the same facility with the same composite LOS but with frequent changes in segment levels of service. A proposed measure to capture the fluctuation in segment-level LOS both in frequency and magnitude is the LOS constancy, defined by Eq. <a href="Chapter2LOS.html#eq:LOSconstancy">(2.13)</a>.</p>
+<p><span class="math display" id="eq:LOSconstancy">\[\begin{equation}
+LOS Constancy = \frac{\sum_{i=2}^{n}|LOSvalue_{i} - LOSvalue_{i-1}|}{n-1} \tag{2.13}
+\end{equation}\]</span></p>
+<p>where,<br />
+<span class="math inline">\(LOS Constancy\)</span> = Consistency of LOS while traversing successive facility segments<br />
+<span class="math inline">\(LOSvalue_{i}\)</span> = Level of service for segment <span class="math inline">\(i\)</span><br />
+<span class="math inline">\(LOSvalue_{i-1}\)</span> = Level of service for segment <span class="math inline">\(i-1\)</span> (upstream of segment <span class="math inline">\(i\)</span>)</p>
+<p>The lower the LOS Constancy value, the less overall variability in LOS values across the facility segments. Thus, generally, lower values are indicative of a more desirable operational condition. While the standard deviation (or variance) captures the variability in LOS, the LOS constancy captures not only the variability in LOS, but also the frequency of the change. This is explained in the following hypothetical example using the values in Tables <a href="Chapter2LOS.html#tab:LOSConstancy1">2.1</a> and <a href="Chapter2LOS.html#tab:LOSConstancy2">2.2</a>. To simplify the example, LOS was expressed as a discrete variable (using a continuous variable will provide a more precise estimation).</p>
+<table>
+<caption><span id="tab:LOSConstancy1">Table 2.1: </span> LOS Constancy Example Calculation 1</caption>
+<thead>
+<tr class="header">
+<th align="center"><strong>Segment</strong></th>
+<th align="center"><strong>LOS (Letter)</strong></th>
+<th align="center"><strong>LOS (Value)</strong></th>
+<th align="center"><strong>LOS Change</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">B</td>
+<td align="center">1</td>
+<td align="center">—</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">B</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">B</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">11</td>
+<td align="center">D</td>
+<td align="center">3</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">12</td>
+<td align="center">D</td>
+<td align="center">3</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">13</td>
+<td align="center">D</td>
+<td align="center">3</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">14</td>
+<td align="center">D</td>
+<td align="center">3</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p>Standard Deviation = 0.73, LOS Constancy = 0.154</p>
+<table>
+<caption><span id="tab:LOSConstancy2">Table 2.2: </span> LOS Constancy Example Calculation 2</caption>
+<thead>
+<tr class="header">
+<th align="center"><strong>Segment</strong></th>
+<th align="center"><strong>LOS (Letter)</strong></th>
+<th align="center"><strong>LOS (Value)</strong></th>
+<th align="center"><strong>LOS Change</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">—</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">B</td>
+<td align="center">1</td>
+<td align="center">-1</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">B</td>
+<td align="center">1</td>
+<td align="center">-1</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">D</td>
+<td align="center">3</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">-1</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">D</td>
+<td align="center">3</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">-1</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">B</td>
+<td align="center">1</td>
+<td align="center">-1</td>
+</tr>
+<tr class="odd">
+<td align="center">11</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">12</td>
+<td align="center">D</td>
+<td align="center">3</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">13</td>
+<td align="center">C</td>
+<td align="center">2</td>
+<td align="center">-1</td>
+</tr>
+<tr class="even">
+<td align="center">14</td>
+<td align="center">D</td>
+<td align="center">3</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>Standard Deviation = 0.73, LOS Constancy = 1.0</p>
+<p>This aspect of the facility-level quality of service is incorporated in the analysis by adjusting the composite facility-level LOS using an adjustment factor, in the form of multiplier, to account for LOS Constancy along the facility. This adjustment factor is determined using a scale (1.0 to 1.2) and is a function of the consistency of segment LOS values as motorists traverse the facility in a given direction. This multiplier adjustment factor (<span class="math inline">\(\alpha\)</span>) is set according to Table <a href="Chapter2LOS.html#tab:LOSConstancyAdj">2.3</a> and is also illustrated in Figure <a href="Chapter2LOS.html#fig:LOSconstancyAdj">2.12</a>.</p>
+<table>
+<caption><span id="tab:LOSConstancyAdj">Table 2.3: </span> LOS Constancy Adjustment Value</caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><strong>Adjustment Factor Value (<span class="math inline">\(\alpha\)</span>)</strong></th>
+<th align="right"><strong>LOS Constancy Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\alpha\)</span> = 1.0</td>
+<td align="right">LOS constancy <span class="math inline">\(\leq\)</span> 0.2</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(\alpha\)</span> = 0.96 + 0.2 <span class="math inline">\(\times\)</span> LOS Constancy Value</td>
+<td align="right">0.2 &lt; LOS Constancy &lt; 1.0</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\alpha\)</span> = 1.2</td>
+<td align="right">LOS Constancy <span class="math inline">\(\geq\)</span> 1.0</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:LOSconstancyAdj"></span>
+<img src="Images/LOS/LOSconstancyAdj.png" alt="LOS adjustment factor (alpha)" width="50%" />
+<p class="caption">
+Figure 2.12: LOS adjustment factor (alpha)
+</p>
+</div>
+</div>
+<div id="HotSpots" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Hot Spot Identification<a href="Chapter2LOS.html#HotSpots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The facility LOS designation as obtained from the above-described segment LOS aggregation may be useful for reporting to the traveling public. It essentially provides an indication of the “average” driving conditions across the full length of the rural highway route. A single facility LOS value, however, is likely of limited value to the transportation agency if not used in conjunction with other information about segment-specific performance. Specifically, depending on the length and composition (segment and intersection types) of the facility, it is possible for some poor segment levels of service to not be readily apparent from an overall facility LOS value. Thus, it is also important for the analyst to be aware of any specific ‘hot spots’—that is, any segment that is likely experiencing very poor operational conditions. Travelers are also probably more likely to dwell on the choke/high friction points along the route than the locations where traffic was moving well. Thus, it is recommended that hot spot locations be reported along with the overall facility LOS. There is not necessarily one ideal indicator for a ‘hot spot’; therefore, multiple checks are proposed, as follows:</p>
+<ul>
+<li>LOS of E or F – the LOS assignment reflects the performance measure to which travelers most closely base their perceptions of the operational conditions. Any segment with an LOS rating worse than D is indicative of conditions that would be perceived by travelers as very poor.</li>
+<li>Demand-to-capacity (<span class="math inline">\(d/c\)</span>) ratio – the perception of operating conditions by travelers based on <span class="math inline">\(d/c\)</span> ratio varies by segment type. For example, on two-lane highways, high levels of percent followers can occur at moderate <span class="math inline">\(d/c\)</span> levels, whereas conditions may be perceived as very reasonable at intersections with relatively high <span class="math inline">\(d/c\)</span> levels. That being said, any segment that is approaching a <span class="math inline">\(d/c\)</span> ratio of 1.0 is certainly susceptible to very adverse operational conditions due to unexpected spikes in traffic demand. Any segment with a <span class="math inline">\(d/c\)</span> &gt; 0.95 should be reported.</li>
+<li>Threshold delay – Identify any segments where the threshold delay is greater than 25% for non-intersection segments and 150% for intersection segments. In other words, the experienced travel time is 25% and 150% more than the travel time that would occur at the posted speed limit, for non-intersection segments and intersection segments, respectively. The much higher percentage threshold for intersection segments is because even modest levels of control delay, over the short segment lengths, can result in threshold delay percentages of 75-100%.</li>
+</ul>
+<p>Where ‘hot-spots’ are identified, it is appropriate to analyze the individual segment(s) with a full operations-level analysis methodology.</p>
+</div>
+<div id="additional-performance-measures-for-facility-evaluation" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Additional Performance Measures for Facility Evaluation<a href="Chapter2LOS.html#additional-performance-measures-for-facility-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>While the LOS evaluation methodology described above may be appropriate for describing the general quality of service for the given conditions, it is acknowledged that transportation agencies may need to consider additional performance measures for a rural highway given the multiple regional mobility purposes such a highway may serve.</p>
+<p>The analysis methodology, and correspondingly the computational engine, provides numerous performance measures at the segment and/or facility level, as listed in Table <a href="Chapter2LOS.html#tab:PerformanceMeasures">2.4</a>.</p>
+<table>
+<caption><span id="tab:PerformanceMeasures">Table 2.4: </span> Additional Analysis Methodology Performance Measures</caption>
+<colgroup>
+<col width="55%" />
+<col width="44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><strong>Segment Level [1]</strong></th>
+<th align="left"><strong>Facility Level</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Average Speed (mi/h)</td>
+<td align="left">Average Speed (mi/h)</td>
+</tr>
+<tr class="even">
+<td align="left">Average Travel Time (min/veh)</td>
+<td align="left">Average Travel Time (min/veh)</td>
+</tr>
+<tr class="odd">
+<td align="left">Average Threshold Delay (s/veh) [2]</td>
+<td align="left">Average Threshold Delay (s/veh) [2]</td>
+</tr>
+<tr class="even">
+<td align="left">Average Threshold Delay (%)</td>
+<td align="left">Average Threshold Delay (%)</td>
+</tr>
+<tr class="odd">
+<td align="left">Average FFS Delay (s/veh) [3]</td>
+<td align="left">Average FFS Delay (s) [2]</td>
+</tr>
+<tr class="even">
+<td align="left">Average FFS Delay (%)</td>
+<td align="left">Average FFS Delay (%) [3]</td>
+</tr>
+<tr class="odd">
+<td align="left">Vehicle Miles Traveled (VMT) (veh-mi)</td>
+<td align="left">Vehicle Miles Traveled (VMT) (veh-mi)</td>
+</tr>
+<tr class="even">
+<td align="left">Vehicle Hours Traveled (VHT) (veh-h)</td>
+<td align="left">Vehicle Hours Traveled (VHT) (veh-h)</td>
+</tr>
+<tr class="odd">
+<td align="left">Vehicle Hours of Delay (VHD) (veh-h)</td>
+<td align="left">Vehicle Hours of Delay (VHD) (veh-h)</td>
+</tr>
+<tr class="even">
+<td align="left">Density (pc/mi/ln) – MH</td>
+<td align="left">Maximum d/c Ratio</td>
+</tr>
+<tr class="odd">
+<td align="left">Density (veh/mi/ln) – MH, TH</td>
+<td align="left">Momentum (veh-mi/h^2)</td>
+</tr>
+<tr class="even">
+<td align="left">Percent Followers (%) – TH</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Follower Density (followers/mi) – TH</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Demand/Capacity (d/c) Ratio</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Available Capacity (veh/h)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Momentum (veh-mi/h^2)</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>[1] Performance measures that are applicable to only certain segment types are designated accordingly: Multilane Highway - MH, Two-Lane Highway - TH, Arterial - Art, Intersection – Intx<br />
+[2] The reference speed (i.e., threshold) is the posted speed limit. Thus, delay is only considered to accrue when the average speed is less than the posted speed limit.<br />
+[3] For intersection segments, the free-flow speed is set to 110% of the posted speed limit (the HCM does not address FFS for intersections because they currently are treated as points, not segments, and delay at a point is not a function of FFS). For intersection segments, this value is equivalent to control delay.</p>
+<p>It is not the intent of this methodology to prescribe how agencies should evaluate the performance of the highway, or its sufficiency to meet desired performance objectives. Rather, the intent is to provide a wide variety of performance measures such that it will be possible to characterize many different aspects of facility performance. An agency can then choose from the available performance measures as appropriate for their specific evaluation needs. Some potential examples are discussed in the remainder of this section.</p>
+<div id="emergency-traffic-demand-surge" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Emergency Traffic Demand Surge<a href="Chapter2LOS.html#emergency-traffic-demand-surge" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suppose an agency may be concerned with assessing a highway’s ability to serve as an evacuation route, such as for a hurricane or wildfire event (for example, Figure <a href="Chapter2LOS.html#fig:LakeTahoeEvacuation">2.13</a>). In this situation, where there is expected to be a very large increase in traffic demand over a very short period of time, the total traffic carrying capacity of the roadway may be the primary concern. In this type of analysis, the agency can identify the traffic demand levels that result in segment d/c ratios of 1.0, or alternatively, available capacity values of zero. This can be useful in assessing the ability of an individual highway, or several highways in a region, to meet the potential evacuation demand under different disaster planning scenarios. It can also be useful for identifying specific potential bottleneck points that should be prioritized for capacity improvements and/or combined with roadway sections in the opposing direction if possible.</p>
+<p>Going a step further, it may be useful to consider a measure that considers both traffic volume and the average speed of the traffic. Such a measure is the product of volume and speed, referred to here as ‘momentum’ (units of veh-mi/h^2). Flow rate indicates the number of vehicles moved per hour, but generally speaking, and especially for evacuation scenarios, the faster that volume is moving, the better. The momentum measure will clearly highlight differences in segment types, where capacity flow rates can be significantly different (a multilane highway segment versus a two-lane highway segment) and speeds for a given flow rate, including capacity, are also different.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:LakeTahoeEvacuation"></span>
+<img src="Images/LOS/LakeTahoeEvacuation.jpg" alt="Traffic from fire evacuation from South Lake Tahoe, Calif., on Monday (8/30/21)."  />
+<p class="caption">
+Figure 2.13: Traffic from fire evacuation from South Lake Tahoe, Calif., on Monday (8/30/21).
+</p>
+</div>
+<p>© Josh Edelson/Agence France-Presse — Getty Images<br />
+Taken from (<a href="https://www.nytimes.com/2021/08/31/us/lake-tahoe-nevada-fire.html" class="uri">https://www.nytimes.com/2021/08/31/us/lake-tahoe-nevada-fire.html</a>)</p>
+</div>
+<div id="short-term-traffic-demand-increase" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> Short-Term Traffic Demand Increase<a href="Chapter2LOS.html#short-term-traffic-demand-increase" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This scenario primarily consists of significant increases in traffic demand, over days or weeks, due to traffic diversion from a significant route in the region. This temporary disruption to the significant route may be due to a full or partial closure (e.g., natural disaster, construction). For example, a section of I-70 in Colorado was temporarily shut down due to a mudslide during the summer of 2021 (Figure <a href="Chapter2LOS.html#fig:ColoradoLandslide">2.14</a>). This resulted in a large volume of traffic being diverted to connecting rural highways in the region (<a href="https://landline.media/natural-disasters-causing-highway-closures-across-nation-including-i-70-in-colorado" class="uri">https://landline.media/natural-disasters-causing-highway-closures-across-nation-including-i-70-in-colorado</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ColoradoLandslide"></span>
+<img src="Images/LOS/ColoradoI-70landslide.png" alt="Closure of I-70 in Colorado due to mudslide."  />
+<p class="caption">
+Figure 2.14: Closure of I-70 in Colorado due to mudslide.
+</p>
+</div>
+<p>Source: Colorado Department of Transportation<br />
+Taken from (<a href="https://www.nbcnews.com/news/us-news/mudslide-scenic-colorado-highway-tests-limits-aging-infrastructure-era-climate-n1278771" class="uri">https://www.nbcnews.com/news/us-news/mudslide-scenic-colorado-highway-tests-limits-aging-infrastructure-era-climate-n1278771</a>)</p>
+<p>Another example is the incapacitation of Coquihalla Highway, in the Vancouver, British Columbia area, due to flooding in November 2021 (see Figure <a href="Chapter2LOS.html#fig:VancouverFlooding">2.15</a>). Traffic diversion from this route to other highways in the region will significantly adversely impact mobility in the region (<a href="https://www.todayinbc.com/news/coquihalla-highway-will-take-months-to-rebuild-from-mud-and-rockslide-damage" class="uri">https://www.todayinbc.com/news/coquihalla-highway-will-take-months-to-rebuild-from-mud-and-rockslide-damage</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:VancouverFlooding"></span>
+<img src="Images/LOS/VancouverFlooding.png" alt="Coquihalla Highway, near Vancouver, British Columbia, damage from flooding."  />
+<p class="caption">
+Figure 2.15: Coquihalla Highway, near Vancouver, British Columbia, damage from flooding.
+</p>
+</div>
+<p>Source: Newspaper clipping, from The Globe and Mail (<a href="https://www.theglobeandmail.com/" class="uri">https://www.theglobeandmail.com/</a>), provided by Dr. Fred Hall (former HCQSC member)</p>
+<p>Another example is the collapse of a section of Highway 1 in California in January 2021 due to heavy rains (See Figure <a href="Chapter2LOS.html#fig:BigSurRoadFailure">2.16</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:BigSurRoadFailure"></span>
+<img src="Images/LOS/BigSurRoadFailure.png" alt="Collapse of section of Highway 1, near Big Sur, California."  />
+<p class="caption">
+Figure 2.16: Collapse of section of Highway 1, near Big Sur, California.
+</p>
+</div>
+<p>Source: <a href="https://www.nytimes.com/2021/01/30/us/highway-one-mudslide.html" class="uri">https://www.nytimes.com/2021/01/30/us/highway-one-mudslide.html</a></p>
+<p>Available capacity will likely be useful to an agency to evaluate the ability of alternative highway routes to handle the expected diverted traffic volume. Percent followers for two-lane highways may also be useful in assessing the possibility for risky passing behavior due to increased traffic demand. Percent delay may be a useful indicator of the expected level of traveler dissatisfaction with the roadway closure situation.</p>
+</div>
+<div id="seasonal-traffic-demand-increase" class="section level3 hasAnchor" number="2.5.3">
+<h3><span class="header-section-number">2.5.3</span> Seasonal Traffic Demand Increase<a href="Chapter2LOS.html#seasonal-traffic-demand-increase" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>During periods of heavy recreational/tourism traffic, such as weekends or holidays, a significant concern for an agency may be two-lane highway locations with average speeds significantly lower than the posted speed limit or with high follower percentages, which may lead to risky passing maneuvers. Threshold delay may also be relevant to this situation, as traveler dissatisfaction may not manifest itself until travel speeds drop below the posted speed limit.</p>
+</div>
+<div id="long-term-traffic-demand-increase" class="section level3 hasAnchor" number="2.5.4">
+<h3><span class="header-section-number">2.5.4</span> Long-Term Traffic Demand Increase<a href="Chapter2LOS.html#long-term-traffic-demand-increase" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This scenario is applicable to the assessment of a large increase in traffic demand as projected to occur as part of construction of a large generator for the purpose of regional economic development (e.g., tribal casino, Amazon distribution warehouse). In this case, available capacity and maximum d/c are key measures to identify maximum traffic loading levels along the route and potential locations for needed infrastructure improvement to meet the project traffic demands.</p>
+</div>
+<div id="use-of-probe-vehicle-measured-travel-timesspeeds" class="section level3 hasAnchor" number="2.5.5">
+<h3><span class="header-section-number">2.5.5</span> Use of Probe-Vehicle Measured Travel Times/Speeds<a href="Chapter2LOS.html#use-of-probe-vehicle-measured-travel-timesspeeds" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For the highway level of service analysis discussed in section <a href="Chapter2LOS.html#FacilityLOS">2.3</a>, the most significant input variable is traffic demand volume. The spatial and temporal measurement of demand volumes for rural highways is typically much coarser than in urban areas. Permanent/Continuous traffic detection stations (sometimes referred to as automatic traffic recorders, ATRs) may be present just every 20-30 miles. Temporary/portable measurement stations may be more frequent, but often only record measurements once or twice a year. This makes the task of determining input volumes for all segments along the highway facility to perform the facility LOS analysis more difficult than roadway facilities in urban areas with vastly more data collection infrastructure. Given this challenge, and the increasing prevalence of probe vehicle data, an agency may desire to use probe-vehicle measured travel times/speed to assess segment and/or facility LOS.</p>
+<p>Probe vehicle data (sometimes also referred to as floating car data) refers to information collected from vehicles within the traffic stream that are equipped with specific on-board electronics and communication devices. These vehicles act as probes that continuously gather data about their geospatial position, speed, and/or other relevant traffic information at regular time intervals as they travel along road networks. These data are then transmitted to a central location where it is compiled into relevant databases and used for different applications. Unlike sensors that are installed in or next to a roadway at specific locations within the network, probe vehicle data can be collected anywhere, not just where sensors are installed. However, one obvious limitation of probe vehicle data is that the data only relies on a sample of vehicles in the overall traffic stream, and therefore the assumption that probe data represent the characteristics of the traffic stream may involve some approximation.</p>
+<p>A method to assess facility operating conditions based upon probe-vehicle data is provided here. This method should be considered a supplemental or secondary method, not an equivalent alternative method to the LOS evaluation method of section <a href="Chapter2LOS.html#FacilityLOS">2.3</a>, for the following reasons:</p>
+<ul>
+<li>Probe vehicle data do not provide a direct measurement of flow rates. Further, the commercial probe vehicle data providers usually do not even report the sample size for their speed/travel time measurements.<br />
+</li>
+<li>Segment distances for which probe vehicle data are provided (i.e., traffic message channels) usually do match with HCM-defined segment boundaries.<br />
+</li>
+<li>Travel speed, while an indicator of performance, is only used as a service measure (i.e., LOS performance measure) for arterial streets. Travel speed is not a particularly good measure of traveler satisfaction for many roadway types, especially two-lane highways, where high levels of platooning can often be maintained with only small reductions in speed.</li>
+</ul>
+<p>Conceptually, this method is simply based on a travel time ratio, or index, across the length of the facility. The numerator for this ratio is the actual travel time. The denominator is the travel time based on the free-flow speed. Alternatively, an agency may feel it is more appropriate to measure actual travel time relative to the travel time at the posted speed limit. The calculation of the facility travel time index (TTI) must be based on an aggregation of travel time ratios at the segment level because a highway facility is likely to include several different posted speed limits. If free-flow speed is used as the reference speed, it is still influenced by posted speed limit. The resulting facility TTI value is a segment-length weighted average of the segment TTI values.</p>
+<p>It is recommended that TTI values be categorized into one of three general traffic flow characterizations, as follows:</p>
+<ul>
+<li>Uncongested, TTI &gt; 0.8333</li>
+<li>Mildly Congested, 0.667 &lt; TTI <span class="math inline">\(\leq\)</span> 0.833</li>
+<li>Heavily Congested, TTI <span class="math inline">\(\leq\)</span> 0.667</li>
+</ul>
+<p>These categories and thresholds are based on the values in <span class="citation">Florida Department of Transportation Forecasting and Trends Office (<a href="#ref-FDOTSourceBook">2023</a>)</span> (see Chapter 5). These threshold values also correspond to the LOS B and D proportion of FFS thresholds used for Class III two-lane highways in the previous HCM two-lane highway analysis methodology. The HCM Class III thresholds were based on research by <span class="citation">Washburn (<a href="#ref-WashburnFDOT2005">2005</a>)</span>.</p>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-GreenBook7" class="csl-entry">
+AASHTO. 2018. <em>A Policy on Geometric Design of Highways and Streets</em>. 7th ed. Washington, D.C.: American Association of State Highway; Transportation Officials; The National Academies Press.
+</div>
+<div id="ref-MUTCD2009" class="csl-entry">
+FHWA. 2009. <em>Manual on Uniform Traffic Control Devices</em>. 2009th ed. Washington, D.C.: Federal Highway Administration; FHWA. <a href="https://mutcd.fhwa.dot.gov/pdfs/2009/pdf_index.htm">https://mutcd.fhwa.dot.gov/pdfs/2009/pdf_index.htm</a>.
+</div>
+<div id="ref-FDOTSourceBook" class="csl-entry">
+Florida Department of Transportation Forecasting and Trends Office. 2023. <em>Methodologies for the FDOT Source Book, a Technical Report</em>. Tallahassee, FL: Florida Department of Transportation. <a href="https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/planning/fto/sourcebook/sbmethodology.pdf">https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/planning/fto/sourcebook/sbmethodology.pdf</a>.
+</div>
+<div id="ref-ITEtrafengr" class="csl-entry">
+Institute of Transportation Engineers (ITE). 2016. <em>Traffic Engineering Handbook</em>. 7th ed. Hoboken, New Jersey: John Wiley &amp; Sons.
+</div>
+<div id="ref-NCHRPRep855" class="csl-entry">
+Stamatiadis, Nikiforos, Adam Kirk, Don Hartman, Jeff Jasper, Samantha Wright, Michael King, and Rick Chellman. 2018. <em>An Expanded Functional Classification System for Highways and Streets</em>. Washington, DC: The National Academies Press. <a href="https://doi.org/10.17226/24775">https://doi.org/10.17226/24775</a>.
+</div>
+<div id="ref-WashburnFDOT2005" class="csl-entry">
+Washburn, Scott S. 2005. <em>Improvement of Planning Level Analysis Procedures for Two-Lane Highways, Final Report, Prepared for the Florida Department of Transportation</em>. Tallahassee, FL.
+</div>
+<div id="ref-NCHRP-Project-08-135" class="csl-entry">
+Washburn, Scott S., Ahmed Al-Kaisy, Sajid Raza, Ana Moreno, Bastian Schroeder, and Jorge Barrios. 2023. <em>Reliability and Quality of Service Evaluation Methods for Rural Highways</em>. Washington, D.C.: Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://doi.org/10.17226/">https://doi.org/10.17226/</a>.
+</div>
+<div id="ref-NCHRP-Project-17-65" class="csl-entry">
+Washburn, Scott S., Donald Watson, Zilin Bian, Tapio Luttinen, Ahmed Al-Kaisy, Amirhossein Jafari, Richard Dowling, and Aaron Elias. 2018. <em>Improved Analysis of Two-Lane Highway Capacity and Operational Performance</em>. Washington, D.C.: Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://doi.org/10.17226/25179">https://doi.org/10.17226/25179</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Chapter1Intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Chapter3Reliability.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/NCHRP-08-135/Guidebook/edit/master/02-LevelOfService.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Rural Highway Analysis Guidebook.pdf", "Rural Highway Analysis Guidebook.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"toc_depth": 2
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

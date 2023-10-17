@@ -1,0 +1,7305 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>19 Case Study: Montana US-287 | Rural-Highway-Analysis-Guidebook.knit</title>
+  <meta name="description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="19 Case Study: Montana US-287 | Rural-Highway-Analysis-Guidebook.knit" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="19 Case Study: Montana US-287 | Rural-Highway-Analysis-Guidebook.knit" />
+  
+  <meta name="twitter:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+<meta name="author" content="" />
+
+
+<meta name="date" content="2023-09-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="CaseStudyOH42.html"/>
+<link rel="next" href="AppendixA.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Rural Highway Analysis Guidebook</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="chapter" data-level="1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#purpose-of-guidebook"><i class="fa fa-check"></i><b>1.1</b> Purpose of Guidebook</a></li>
+<li class="chapter" data-level="1.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-scope-and-limitations"><i class="fa fa-check"></i><b>1.2</b> Guidebook Scope and Limitations</a></li>
+<li class="chapter" data-level="1.3" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-organization"><i class="fa fa-check"></i><b>1.3</b> Guidebook Organization</a></li>
+<li class="chapter" data-level="1.4" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-format"><i class="fa fa-check"></i><b>1.4</b> Guidebook Format</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#navigating-the-document"><i class="fa fa-check"></i><b>1.4.1</b> Navigating the document</a></li>
+<li class="chapter" data-level="1.4.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#ProvidingFeedback"><i class="fa fa-check"></i><b>1.4.2</b> How to provide feedback on this document</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#SupportingResources"><i class="fa fa-check"></i><b>1.5</b> Supporting Resources and Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html"><i class="fa fa-check"></i><b>2</b> Rural Highway Level of Service for Automobiles</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#LOSIntro"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#Segmentation"><i class="fa fa-check"></i><b>2.2</b> Facility Segmentation</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#CrossSection"><i class="fa fa-check"></i><b>2.2.1</b> Cross Section</a></li>
+<li class="chapter" data-level="2.2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#passing-accommodations-for-two-lane-highways"><i class="fa fa-check"></i><b>2.2.2</b> Passing Accommodations for Two-Lane Highways</a></li>
+<li class="chapter" data-level="2.2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#posted-speed-limit-changes"><i class="fa fa-check"></i><b>2.2.3</b> Posted Speed Limit Changes</a></li>
+<li class="chapter" data-level="2.2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#geometric-alignment-considerations"><i class="fa fa-check"></i><b>2.2.4</b> Geometric Alignment Considerations</a></li>
+<li class="chapter" data-level="2.2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#IntxInfluenceArea"><i class="fa fa-check"></i><b>2.2.5</b> Intersections and their Influence Area</a></li>
+<li class="chapter" data-level="2.2.6" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#UrbanStreetClassification"><i class="fa fa-check"></i><b>2.2.6</b> Classification of Urban Street</a></li>
+<li class="chapter" data-level="2.2.7" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#SegMinLength"><i class="fa fa-check"></i><b>2.2.7</b> Practical Minimum Segment Length</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#FacilityLOS"><i class="fa fa-check"></i><b>2.3</b> Segment and Facility LOS Calculation</a></li>
+<li class="chapter" data-level="2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#HotSpots"><i class="fa fa-check"></i><b>2.4</b> Hot Spot Identification</a></li>
+<li class="chapter" data-level="2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#additional-performance-measures-for-facility-evaluation"><i class="fa fa-check"></i><b>2.5</b> Additional Performance Measures for Facility Evaluation</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#emergency-traffic-demand-surge"><i class="fa fa-check"></i><b>2.5.1</b> Emergency Traffic Demand Surge</a></li>
+<li class="chapter" data-level="2.5.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#short-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.2</b> Short-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#seasonal-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.3</b> Seasonal Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#long-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.4</b> Long-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#use-of-probe-vehicle-measured-travel-timesspeeds"><i class="fa fa-check"></i><b>2.5.5</b> Use of Probe-Vehicle Measured Travel Times/Speeds</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html"><i class="fa fa-check"></i><b>3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityIntro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#approach-for-rural-highways"><i class="fa fa-check"></i><b>3.2</b> Approach for Rural Highways</a></li>
+<li class="chapter" data-level="3.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityData"><i class="fa fa-check"></i><b>3.3</b> Data Examined</a></li>
+<li class="chapter" data-level="3.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilitySegmentation"><i class="fa fa-check"></i><b>3.4</b> Segmentation</a></li>
+<li class="chapter" data-level="3.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityDataOverview"><i class="fa fa-check"></i><b>3.5</b> Data Overview</a></li>
+<li class="chapter" data-level="3.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityMethods"><i class="fa fa-check"></i><b>3.6</b> Evaluation Methodologies</a></li>
+<li class="chapter" data-level="3.7" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityHowTo"><i class="fa fa-check"></i><b>3.7</b> Assessing Reliability</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#load-the-data"><i class="fa fa-check"></i><b>3.7.1</b> Load the data</a></li>
+<li class="chapter" data-level="3.7.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#aggregate-the-data"><i class="fa fa-check"></i><b>3.7.2</b> Aggregate the data</a></li>
+<li class="chapter" data-level="3.7.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#heatmaps"><i class="fa fa-check"></i><b>3.7.3</b> Heatmaps</a></li>
+<li class="chapter" data-level="3.7.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.7.4</b> Box-and-Whisker Plots</a></li>
+<li class="chapter" data-level="3.7.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#speed-confidence-band-plots"><i class="fa fa-check"></i><b>3.7.5</b> Speed Confidence Band Plots</a></li>
+<li class="chapter" data-level="3.7.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#travel-time-index-plots"><i class="fa fa-check"></i><b>3.7.6</b> Travel Time Index Plots</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html"><i class="fa fa-check"></i><b>4</b> Bicycle Operations Analysis on Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#overview-of-bicycle-operations-analysis-methods"><i class="fa fa-check"></i><b>4.1</b> Overview of Bicycle Operations Analysis Methods</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#highway-capacity-manual-level-of-service-analysis-methodologies"><i class="fa fa-check"></i><b>4.1.1</b> Highway Capacity Manual Level of Service Analysis Methodologies</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.1.2</b> Level of Traffic Stress Analysis Methodology</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#bicycle-compatibility-index-analysis-methodology"><i class="fa fa-check"></i><b>4.1.3</b> Bicycle Compatibility Index Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#BikeLOS"><i class="fa fa-check"></i><b>4.2</b> Bicycle Level of Service Research Recommendations</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-highway-capacity-manual-level-of-service-for-rural-highways"><i class="fa fa-check"></i><b>4.2.1</b> Revisions to Highway Capacity Manual Level of Service for Rural Highways</a></li>
+<li class="chapter" data-level="4.2.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.2.2</b> Revisions to Level of Traffic Stress Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#guidance-on-current-methods-for-rural-highways"><i class="fa fa-check"></i><b>4.3</b> Guidance on Current Methods for Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#adaptation-to-rural-conditions"><i class="fa fa-check"></i><b>4.3.1</b> Adaptation to Rural Conditions</a></li>
+<li class="chapter" data-level="4.3.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#data-requirements"><i class="fa fa-check"></i><b>4.3.2</b> Data Requirements</a></li>
+<li class="chapter" data-level="4.3.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#applications"><i class="fa fa-check"></i><b>4.3.3</b> Applications</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Part II: HCM Calculations</b></span></li>
+<li class="chapter" data-level="5" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html"><i class="fa fa-check"></i><b>5</b> HCM Automobile LOS Methodologies</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html"><i class="fa fa-check"></i><b>6</b> Multilane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#equations-and-exhibits"><i class="fa fa-check"></i><b>6.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="6.2" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#nomenclature"><i class="fa fa-check"></i><b>6.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html"><i class="fa fa-check"></i><b>7</b> Two-Lane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#equations-and-exhibits-1"><i class="fa fa-check"></i><b>7.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="7.2" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#nomenclature-1"><i class="fa fa-check"></i><b>7.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="HCMsignal.html"><a href="HCMsignal.html"><i class="fa fa-check"></i><b>8</b> Signalized Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="HCMsignal.html"><a href="HCMsignal.html#equations-and-exhibits-2"><i class="fa fa-check"></i><b>8.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="8.2" data-path="HCMsignal.html"><a href="HCMsignal.html#nomenclature-2"><i class="fa fa-check"></i><b>8.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="HCMroundabout.html"><a href="HCMroundabout.html"><i class="fa fa-check"></i><b>9</b> Roundabout Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="HCMroundabout.html"><a href="HCMroundabout.html#equations-and-exhibits-3"><i class="fa fa-check"></i><b>9.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="9.2" data-path="HCMroundabout.html"><a href="HCMroundabout.html#nomenclature-3"><i class="fa fa-check"></i><b>9.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="HCMawsc.html"><a href="HCMawsc.html"><i class="fa fa-check"></i><b>10</b> All-Way Stop-Controlled Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="HCMawsc.html"><a href="HCMawsc.html#equations-and-exhibits-4"><i class="fa fa-check"></i><b>10.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="10.2" data-path="HCMawsc.html"><a href="HCMawsc.html#nomenclature-4"><i class="fa fa-check"></i><b>10.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html"><i class="fa fa-check"></i><b>11</b> Urban Street Facility Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#equations-and-exhibits-5"><i class="fa fa-check"></i><b>11.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="11.2" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#nomenclature-5"><i class="fa fa-check"></i><b>11.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="HCMbicycle.html"><a href="HCMbicycle.html"><i class="fa fa-check"></i><b>12</b> Bicycle LOS Methodologies</a></li>
+<li class="chapter" data-level="13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html"><i class="fa fa-check"></i><b>13</b> Rural Highway Example Calculations</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-input-data"><i class="fa fa-check"></i><b>13.1</b> Segment Input Data</a></li>
+<li class="chapter" data-level="13.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations"><i class="fa fa-check"></i><b>13.2</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#first-iteration-uses-input-segment-lengths"><i class="fa fa-check"></i><b>13.2.1</b> First iteration uses input segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#influence-area-calculations"><i class="fa fa-check"></i><b>13.3</b> Influence Area Calculations</a></li>
+<li class="chapter" data-level="13.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-segment-length-calculations"><i class="fa fa-check"></i><b>13.4</b> Adjusted Segment Length Calculations</a></li>
+<li class="chapter" data-level="13.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations-1"><i class="fa fa-check"></i><b>13.5</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#second-iteration-uses-adjusted-segment-lengths"><i class="fa fa-check"></i><b>13.5.1</b> Second iteration uses adjusted segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#facility-calculations"><i class="fa fa-check"></i><b>13.6</b> Facility Calculations</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#posted-speed-travel-time-s"><i class="fa fa-check"></i><b>13.6.1</b> Posted Speed Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#free-flow-travel-time-s"><i class="fa fa-check"></i><b>13.6.2</b> Free-Flow Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#average-travel-time-s"><i class="fa fa-check"></i><b>13.6.3</b> Average Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#travel-time-segment-weights"><i class="fa fa-check"></i><b>13.6.4</b> Travel Time Segment Weights</a></li>
+<li class="chapter" data-level="13.6.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-demand-volumes"><i class="fa fa-check"></i><b>13.6.5</b> Adjusted Demand Volumes</a></li>
+<li class="chapter" data-level="13.6.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-hours-traveled-veh-h"><i class="fa fa-check"></i><b>13.6.6</b> Vehicle Hours Traveled (veh-h)</a></li>
+<li class="chapter" data-level="13.6.7" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#total-delay-veh-h"><i class="fa fa-check"></i><b>13.6.7</b> Total Delay (veh-h)</a></li>
+<li class="chapter" data-level="13.6.8" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-miles-traveled-veh-mi"><i class="fa fa-check"></i><b>13.6.8</b> Vehicle Miles Traveled (veh-mi)</a></li>
+<li class="chapter" data-level="13.6.9" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#space-mean-speed-mih"><i class="fa fa-check"></i><b>13.6.9</b> Space Mean Speed (mi/h)</a></li>
+<li class="chapter" data-level="13.6.10" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#ffs-delay-sveh"><i class="fa fa-check"></i><b>13.6.10</b> FFS Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.11" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#threshold-delay-sveh"><i class="fa fa-check"></i><b>13.6.11</b> Threshold Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.12" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-constancy"><i class="fa fa-check"></i><b>13.6.12</b> LOS Constancy</a></li>
+<li class="chapter" data-level="13.6.13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-adjustment-factor"><i class="fa fa-check"></i><b>13.6.13</b> LOS Adjustment Factor</a></li>
+<li class="chapter" data-level="13.6.14" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#final-los-score"><i class="fa fa-check"></i><b>13.6.14</b> Final LOS Score</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="CompEngine.html"><a href="CompEngine.html"><i class="fa fa-check"></i><b>14</b> Computational Engine Overview</a></li>
+<li class="part"><span><b>Part III: Case Studies</b></span></li>
+<li class="chapter" data-level="15" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html"><i class="fa fa-check"></i><b>15</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#supporting-material"><i class="fa fa-check"></i><b>15.1</b> Supporting Material</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#kml-files"><i class="fa fa-check"></i>KML Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#computational-engine-input-files"><i class="fa fa-check"></i>Computational Engine Input Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#probe-vehicle-data-analysis-scripting-code"><i class="fa fa-check"></i>Probe Vehicle Data Analysis Scripting Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html"><i class="fa fa-check"></i><b>16</b> Case Study: Oregon US-20</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#route-description"><i class="fa fa-check"></i><b>16.1</b> Route Description</a></li>
+<li class="chapter" data-level="16.2" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#level-of-service"><i class="fa fa-check"></i><b>16.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#segmentation"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#traffic-data"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#additional-data-inputs-for-intersections"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#results"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#reliability"><i class="fa fa-check"></i><b>16.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-heatmaps"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-difference-heatmaps"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#box-and-whisker-speed-plots"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-confidence-band"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#travel-time-index"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html"><i class="fa fa-check"></i><b>17</b> Case Study: Tennessee SR-109</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#route-description-1"><i class="fa fa-check"></i><b>17.1</b> Route Description</a></li>
+<li class="chapter" data-level="17.2" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#level-of-service-1"><i class="fa fa-check"></i><b>17.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#segmentation-1"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#traffic-data-1"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#additional-data-inputs-for-intersections-1"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#results-1"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#reliability-1"><i class="fa fa-check"></i><b>17.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-heatmaps-1"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-difference-heatmaps-1"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#box-and-whisker-speed-plots-1"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-confidence-band-1"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#travel-time-index-1"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#summary-1"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html"><i class="fa fa-check"></i><b>18</b> Case Study: Ohio US-42</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#route-description-2"><i class="fa fa-check"></i><b>18.1</b> Route Description</a></li>
+<li class="chapter" data-level="18.2" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#level-of-service-2"><i class="fa fa-check"></i><b>18.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#segmentation-2"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#traffic-data-2"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#additional-data-inputs-for-intersections-2"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#results-2"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#reliability-2"><i class="fa fa-check"></i><b>18.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-heatmaps-2"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-difference-heatmaps-2"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#box-and-whisker-speed-plots-2"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-confidence-band-2"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#travel-time-index-2"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#summary-2"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html"><i class="fa fa-check"></i><b>19</b> Case Study: Montana US-287</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#route-description-3"><i class="fa fa-check"></i><b>19.1</b> Route Description</a></li>
+<li class="chapter" data-level="19.2" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#level-of-service-3"><i class="fa fa-check"></i><b>19.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#segmentation-3"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#traffic-data-3"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#results-3"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Appendixes</b></span></li>
+<li class="chapter" data-level="A" data-path="AppendixA.html"><a href="AppendixA.html"><i class="fa fa-check"></i><b>A</b> Mitigation Strategies</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="AppendixA.html"><a href="AppendixA.html#general"><i class="fa fa-check"></i><b>A.1</b> General</a></li>
+<li class="chapter" data-level="A.2" data-path="AppendixA.html"><a href="AppendixA.html#multilane-highways"><i class="fa fa-check"></i><b>A.2</b> Multilane Highways</a></li>
+<li class="chapter" data-level="A.3" data-path="AppendixA.html"><a href="AppendixA.html#two-lane-highways"><i class="fa fa-check"></i><b>A.3</b> Two-Lane Highways</a></li>
+<li class="chapter" data-level="A.4" data-path="AppendixA.html"><a href="AppendixA.html#intersections"><i class="fa fa-check"></i><b>A.4</b> Intersections</a></li>
+<li class="chapter" data-level="A.5" data-path="AppendixA.html"><a href="AppendixA.html#arterials"><i class="fa fa-check"></i><b>A.5</b> Arterials</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/NCHRP-08-135/Guidebook" target="blank">View Book Source</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="CaseStudyMT287" class="section level1 hasAnchor" number="19">
+<h1><span class="header-section-number">19</span> Case Study: Montana US-287<a href="CaseStudyMT287.html#CaseStudyMT287" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="route-description-3" class="section level2 hasAnchor" number="19.1">
+<h2><span class="header-section-number">19.1</span> Route Description<a href="CaseStudyMT287.html#route-description-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This route extends from 1.0 mile south of the small rural town of <a href="https://www.google.com/maps/place/46%C2%B017&#39;36.9%22N+111%C2%B030&#39;15.2%22W/@46.293643,-111.5045169,19z/data=!4m4!3m3!8m2!3d46.2935846!4d-111.5042084?entry=ttu">Townsend</a> to the center of <a href="https://www.google.com/maps/place/46%C2%B035&#39;25.4%22N+111%C2%B056&#39;15.9%22W/@46.5917945,-111.9566068,13.5z/data=!4m4!3m3!8m2!3d46.5903932!4d-111.9377508?entry=ttu">East Helena, Montana</a>. US-287 serves as an important connection between Helena and I-90. This section of US-287 is approximately 30 miles in length.</p>
+<p>The highest posted speed limit is 70 mi/h for the rural parts of the corridor (majority distance by length) and the lowest posted speed limit is 25 mi/h in the town of Townsend. The route is shown in Figure <a href="CaseStudyMT287.html#fig:US287RouteMap">19.1</a>, as well as the <a href="https://www.google.com/maps/dir/46.293584644800966,+-111.50420836367195/46.59039324407053,+-111.93775081845547/@46.4923603,-111.8630877,10.75z/data=!4m10!4m9!1m3!2m2!1d-111.5042084!2d46.2935846!1m3!2m2!1d-111.9377508!2d46.5903932!3e0?hl=en&amp;authuser=0">linked online map</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:US287RouteMap"></span>
+<img src="Images/CaseStudyMT287/US-287.png" alt="Montanta US-287 Study Route Boundaries. Source: Map data from [©OpenStreetMap](https://www.openstreetmap.org/copyright)" width="60%" />
+<p class="caption">
+Figure 19.1: Montanta US-287 Study Route Boundaries. Source: Map data from <a href="https://www.openstreetmap.org/copyright">©OpenStreetMap</a>
+</p>
+</div>
+</div>
+<div id="level-of-service-3" class="section level2 hasAnchor" number="19.2">
+<h2><span class="header-section-number">19.2</span> Level of service<a href="CaseStudyMT287.html#level-of-service-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="segmentation-3" class="section level3 unnumbered hasAnchor">
+<h3>Segmentation<a href="CaseStudyMT287.html#segmentation-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This route is mainly comprised of a two-lane highway segments–passing constrained, passing zones, and two stretches of passing lanes. Unlike the other case study routes, this route contains an All-Way Stop-Control (AWSC) intersection, in the town of Townsend.</p>
+<p>The facility segmentation, in the northbound direction, for this route was performed based on the change in cross-section, change in passing restrictions, and change in the posted speed limit. This resulted in a total of 38 segments including two passing lane segments, seven segments (with different speed limits) through the town of Townsend, two signal-control intersections, two multilane highway segments, and one All-Way Stop-Control (AWSC) intersection in Townsend. The remaining segments are two-lane highways (with passing or no-passing restrictions).</p>
+<p>The final segmentation is shown in Table <a href="CaseStudyMT287.html#tab:SegmentationUS287">19.1</a>. The total length is 30.934 mi.</p>
+<div style="border: 0px;overflow-x: scroll; width:100%; ">
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:SegmentationUS287">Table 19.1: </span>Final Segmentation for Montana US-287 Study Route
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Seg ID
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Hwy Seg Type
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Two-Lane Seg Type
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+# Dir Lanes
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Length (ft)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Grade (%)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Vertical Align Class
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+# Horiz Curves
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Posted Speed (mi/h)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1515
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2670
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+530
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+530
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2650
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1580
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+530
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+AWSC
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+965
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1580
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2100
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3170
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+5500
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3700
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+9500
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4225
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+5280
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingLane
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+12670
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1056
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+13730
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4225
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4225
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3170
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+13728
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4750
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingLane
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+7400
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3700
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4750
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1590
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2100
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3170
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+19536
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4752
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+5800
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:left;">
+Signalized Intersection
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+120
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:left;">
+Multilane Highway
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3580
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:left;">
+Signalized Intersection
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+120
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:left;">
+Multilane Highway
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+3050
+</td>
+<td style="text-align:left;">
+&lt;2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+R&gt;3000 ft
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="segmentation-through-the-town-of-townsend-mt" class="section level4 unnumbered hasAnchor">
+<h4>Segmentation Through the Town of Townsend, MT<a href="CaseStudyMT287.html#segmentation-through-the-town-of-townsend-mt" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Townsend is a small rural town on US-287 Highway, about 32 miles southeast of Helena. The total population of Townsend is 2080 people (according to 2020 census data). The stretch of road through the town of Townsend is comprised of 8 segments as indicated in Table <a href="CaseStudyMT287.html#tab:TownsendSegmentation">19.2</a> (starting at the southeast end of the town).</p>
+<div style="border: 0px;overflow-x: scroll; width:100%; ">
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:TownsendSegmentation">Table 19.2: </span>Segments through Townsend, MT (US-287)
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Seg ID
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Hwy Seg Type
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Two-Lane Seg Type
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+# Dir Lanes
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Length (ft)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Grade (%)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Vertical Align Class
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Posted Speed (mi/h)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+530
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2650
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1580
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+530
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+AWSC
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+85
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+965
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+1580
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+Two-Lane Highway
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+2100
+</td>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The stretch of road through the town of Townsend is approximately 1.9 mi in length, as shown in Figure <a href="CaseStudyMT287.html#fig:US287Townsend">19.2</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:US287Townsend"></span>
+<img src="Images/CaseStudyMT287/US-287throughTownsend.png" alt="US-287 Stretch Through Townsend. Source: Map data ©2022 Google" width="60%" />
+<p class="caption">
+Figure 19.2: US-287 Stretch Through Townsend. Source: Map data ©2022 Google
+</p>
+</div>
+<p>The speed limits are 45, 35, and 25 mi/h entering the town and in the reverse order exiting the town. The roadway characteristics through the town are as follows:</p>
+<ul>
+<li>1 lane in the analysis direction</li>
+<li>Two-way left-turn lane in the center</li>
+<li>AWSC intersection</li>
+<li>No curb and gutter in the beginning of town, and then curb on both sides (starts at E-street)</li>
+<li>Sidewalk on the east-side of the roadway only</li>
+<li>Numerous driveways and access roads within the town limits</li>
+<li>25 mi/h zone in Townsend is about 0.32 mi (1700 ft) long</li>
+</ul>
+<p><strong><em>Influence area and adjusted length calculations</em></strong></p>
+<p>For the AWSC intersection (Segment 8), the upstream and downstream influence areas are initially calculated per Eq. <a href="Chapter2LOS.html#eq:InfluenceAreaEq5">(2.5)</a> and Eq. <a href="Chapter2LOS.html#eq:InfluenceAreaEq6">(2.6)</a>, respectively. However, because of the low posted speed limit in this location, the practical braking and acceleration distance equations govern (Eq. <a href="Chapter2LOS.html#eq:BrakingDistance">(2.7)</a> and Eq. <a href="Chapter2LOS.html#eq:AccelDistance">(2.8)</a>). For the signal control intersections (Segments 35 and 37), the upstream influence area is calculated per Eq. <a href="Chapter2LOS.html#eq:InfluenceAreaEq1">(2.1)</a> and the downstream influence area per Eq. <a href="Chapter2LOS.html#eq:InfluenceAreaEq2">(2.2)</a>.</p>
+<p>The resulting influence area values are:</p>
+<ul>
+<li>Segment 8, Upstream influence area = 151 ft (0.0286 mi), Downstream influence area = 125 ft (0.0237 mi)</li>
+<li>Segment 35, Upstream influence area = 1220 ft (0.2309 mi), Downstream influence area = 1906 ft (0.2077 mi)</li>
+<li>Segment 37, Upstream influence area = 643 ft (0.1218 mi), Downstream influence area = 1114 ft (0.2110 mi)</li>
+</ul>
+</div>
+</div>
+<div id="traffic-data-3" class="section level3 unnumbered hasAnchor">
+<h3>Traffic Data<a href="CaseStudyMT287.html#traffic-data-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Traffic data were obtained from the Montana Department of Transportation (MDOT) <a href="https://www.mdt.mt.gov/publications/datastats/traffic-maps.aspx">Traffic Data Portal</a>. Traffic sensor coverage of the area is shown in Figure <a href="CaseStudyMT287.html#fig:TrafficDataSensorsMT287">19.3</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:TrafficDataSensorsMT287"></span>
+<img src="Images/CaseStudyMT287/TrafficDataSensorsMT287.png" alt="Traffic Data Sensors on US-287 - Townsend Route" width="60%" />
+<p class="caption">
+Figure 19.3: Traffic Data Sensors on US-287 - Townsend Route
+</p>
+</div>
+<p>Detector data from the study route are summarized in Table <a href="CaseStudyMT287.html#tab:TrafficDataMT287">19.3</a>.</p>
+<table>
+<caption><span id="tab:TrafficDataMT287">Table 19.3: </span> US-287 Townsend Route Traffic Data</caption>
+<colgroup>
+<col width="12%" />
+<col width="12%" />
+<col width="12%" />
+<col width="12%" />
+<col width="12%" />
+<col width="12%" />
+<col width="12%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><strong>Sensor No.</strong></th>
+<th align="left"><strong>Sensor ID</strong></th>
+<th align="center"><strong>AADT (veh/day)</strong></th>
+<th align="center"><strong>K (%)</strong></th>
+<th align="center"><strong>D (%)</strong></th>
+<th align="center"><strong>Truck (%)</strong></th>
+<th align="center"><strong>Dir. Demand (veh/h)</strong></th>
+<th align="center"><strong>Opp. Demand (veh/h)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="left">04-1-011</td>
+<td align="center">4381</td>
+<td align="center">11</td>
+<td align="center">60</td>
+<td align="center">10</td>
+<td align="center">289</td>
+<td align="center">193</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="left">04-1-010</td>
+<td align="center">6863</td>
+<td align="center">12</td>
+<td align="center">60</td>
+<td align="center">6</td>
+<td align="center">494</td>
+<td align="center">329</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="left">04-1-009</td>
+<td align="center">7531</td>
+<td align="center">11</td>
+<td align="center">60</td>
+<td align="center">6</td>
+<td align="center">497</td>
+<td align="center">331</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="left">04-1-008</td>
+<td align="center">7169</td>
+<td align="center">11</td>
+<td align="center">60</td>
+<td align="center">6</td>
+<td align="center">473</td>
+<td align="center">315</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="left">04-1-002</td>
+<td align="center">6431</td>
+<td align="center">11</td>
+<td align="center">60</td>
+<td align="center">7</td>
+<td align="center">424</td>
+<td align="center">283</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="left">W-101</td>
+<td align="center">6537</td>
+<td align="center">12</td>
+<td align="center">54</td>
+<td align="center">7</td>
+<td align="center">471</td>
+<td align="center">314</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="left">A-002</td>
+<td align="center">7055</td>
+<td align="center">11</td>
+<td align="center">54</td>
+<td align="center">6</td>
+<td align="center">419</td>
+<td align="center">357</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="left">25-7B-002</td>
+<td align="center">11445</td>
+<td align="center">9</td>
+<td align="center">60</td>
+<td align="center">4</td>
+<td align="center">618</td>
+<td align="center">412</td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="left">25-7B-024</td>
+<td align="center">14013</td>
+<td align="center">10</td>
+<td align="center">63</td>
+<td align="center">8</td>
+<td align="center">883</td>
+<td align="center">518</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="left">25-7B-019</td>
+<td align="center">17196</td>
+<td align="center">10</td>
+<td align="center">63</td>
+<td align="center">7</td>
+<td align="center">1083</td>
+<td align="center">636</td>
+</tr>
+</tbody>
+</table>
+<p>The assignment of volumes to segments are as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><strong>Sensor No.</strong></th>
+<th align="center"><strong>Corresponding Segment(s) for Volume</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">1-2</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">3-7</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">8-10</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">11-12</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">13-16</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">17-30</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">31-33</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">34-35</td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">36-37</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">38</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="results-3" class="section level3 unnumbered hasAnchor">
+<h3>Results<a href="CaseStudyMT287.html#results-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The segment LOS results are shown in Tables <a href="CaseStudyMT287.html#tab:MT287LOSresults1">19.4</a> and <a href="CaseStudyMT287.html#tab:MT287LOSresults2">19.5</a>.</p>
+<div style="border: 0px;overflow-x: scroll; width:100%; ">
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:MT287LOSresults1">Table 19.4: </span>US-287 Segment LOS Analysis Results, Part 1
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Seg ID
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Hwy Seg Type
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Two-Lane Seg Type
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+# Dir Lanes
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Length (mi)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Eff. Len. Upstream (mi)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Eff. Len. Downstream (mi)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Adj. Length (mi)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Posted Speed (mi/h)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Dir Volume (veh/h)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Opp Volume (veh/h)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+PHF
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Dir Truck%
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Analysis Flow Rate (veh/h/ln)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Analysis Flow Rate (pc/h/ln)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Vertical Align Class
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+FFS (mi/h)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Free-Flow Trav Time (s)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Avg Speed (mi/h)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Avg Travel Time (s)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.2869
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.2869
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+289
+</td>
+<td style="text-align:left;">
+193
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+<td style="text-align:right;">
+304.2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.60
+</td>
+<td style="text-align:left;">
+12.98
+</td>
+<td style="text-align:right;">
+77.11
+</td>
+<td style="text-align:right;">
+13.39
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.5057
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.5057
+</td>
+<td style="text-align:left;">
+55
+</td>
+<td style="text-align:left;">
+289
+</td>
+<td style="text-align:left;">
+193
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+<td style="text-align:right;">
+304.2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+62.50
+</td>
+<td style="text-align:left;">
+29.13
+</td>
+<td style="text-align:right;">
+60.94
+</td>
+<td style="text-align:right;">
+29.87
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.1004
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.1004
+</td>
+<td style="text-align:left;">
+55
+</td>
+<td style="text-align:left;">
+494
+</td>
+<td style="text-align:left;">
+329
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+3.60
+</td>
+<td style="text-align:right;">
+520.0
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+62.58
+</td>
+<td style="text-align:left;">
+5.78
+</td>
+<td style="text-align:right;">
+59.86
+</td>
+<td style="text-align:right;">
+6.04
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.1004
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.1004
+</td>
+<td style="text-align:left;">
+45
+</td>
+<td style="text-align:left;">
+494
+</td>
+<td style="text-align:left;">
+329
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+3.40
+</td>
+<td style="text-align:right;">
+520.0
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+51.19
+</td>
+<td style="text-align:left;">
+7.06
+</td>
+<td style="text-align:right;">
+48.90
+</td>
+<td style="text-align:right;">
+7.39
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.5019
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.5019
+</td>
+<td style="text-align:left;">
+45
+</td>
+<td style="text-align:left;">
+494
+</td>
+<td style="text-align:left;">
+329
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+3.60
+</td>
+<td style="text-align:right;">
+520.0
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+51.18
+</td>
+<td style="text-align:left;">
+35.3
+</td>
+<td style="text-align:right;">
+48.88
+</td>
+<td style="text-align:right;">
+36.97
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.2992
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.2992
+</td>
+<td style="text-align:left;">
+35
+</td>
+<td style="text-align:left;">
+494
+</td>
+<td style="text-align:left;">
+329
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+3.60
+</td>
+<td style="text-align:right;">
+520.0
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+39.78
+</td>
+<td style="text-align:left;">
+27.08
+</td>
+<td style="text-align:right;">
+37.92
+</td>
+<td style="text-align:right;">
+28.40
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.1004
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.0718
+</td>
+<td style="text-align:left;">
+25
+</td>
+<td style="text-align:left;">
+494
+</td>
+<td style="text-align:left;">
+329
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+5.00
+</td>
+<td style="text-align:right;">
+520.0
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+28.33
+</td>
+<td style="text-align:left;">
+9.12
+</td>
+<td style="text-align:right;">
+26.91
+</td>
+<td style="text-align:right;">
+9.61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+AWSCIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.0161
+</td>
+<td style="text-align:left;">
+0.0286
+</td>
+<td style="text-align:left;">
+0.0237
+</td>
+<td style="text-align:left;">
+0.0523
+</td>
+<td style="text-align:left;">
+25
+</td>
+<td style="text-align:left;">
+497
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+3.00
+</td>
+<td style="text-align:right;">
+523.2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+27.50
+</td>
+<td style="text-align:left;">
+6.84
+</td>
+<td style="text-align:right;">
+5.72
+</td>
+<td style="text-align:right;">
+32.92
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.1828
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.1752
+</td>
+<td style="text-align:left;">
+25
+</td>
+<td style="text-align:left;">
+497
+</td>
+<td style="text-align:left;">
+331
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+<td style="text-align:right;">
+523.2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+28.30
+</td>
+<td style="text-align:left;">
+22.29
+</td>
+<td style="text-align:right;">
+26.87
+</td>
+<td style="text-align:right;">
+23.47
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.2992
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.2992
+</td>
+<td style="text-align:left;">
+35
+</td>
+<td style="text-align:left;">
+497
+</td>
+<td style="text-align:left;">
+331
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+<td style="text-align:right;">
+523.2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+39.70
+</td>
+<td style="text-align:left;">
+27.13
+</td>
+<td style="text-align:right;">
+37.84
+</td>
+<td style="text-align:right;">
+28.47
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.3977
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.3977
+</td>
+<td style="text-align:left;">
+45
+</td>
+<td style="text-align:left;">
+473
+</td>
+<td style="text-align:left;">
+315
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+<td style="text-align:right;">
+497.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+51.10
+</td>
+<td style="text-align:left;">
+28.02
+</td>
+<td style="text-align:right;">
+48.86
+</td>
+<td style="text-align:right;">
+29.30
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.6004
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.6004
+</td>
+<td style="text-align:left;">
+55
+</td>
+<td style="text-align:left;">
+473
+</td>
+<td style="text-align:left;">
+315
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+6.00
+</td>
+<td style="text-align:right;">
+497.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+62.50
+</td>
+<td style="text-align:left;">
+34.58
+</td>
+<td style="text-align:right;">
+59.83
+</td>
+<td style="text-align:right;">
+36.13
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+1.0417
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1.0417
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+424
+</td>
+<td style="text-align:left;">
+283
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+446.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+47.08
+</td>
+<td style="text-align:right;">
+76.97
+</td>
+<td style="text-align:right;">
+48.72
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.701
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.701
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+424
+</td>
+<td style="text-align:left;">
+283
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+446.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+31.68
+</td>
+<td style="text-align:right;">
+76.54
+</td>
+<td style="text-align:right;">
+32.97
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+1.799
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1.799
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+424
+</td>
+<td style="text-align:left;">
+283
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+446.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+81.3
+</td>
+<td style="text-align:right;">
+76.95
+</td>
+<td style="text-align:right;">
+84.17
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.8
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+424
+</td>
+<td style="text-align:left;">
+361
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+446.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+36.15
+</td>
+<td style="text-align:right;">
+76.53
+</td>
+<td style="text-align:right;">
+37.63
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+45.19
+</td>
+<td style="text-align:right;">
+76.75
+</td>
+<td style="text-align:right;">
+46.91
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingLane
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+2.4
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+2.4
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+108.46
+</td>
+<td style="text-align:right;">
+79.36
+</td>
+<td style="text-align:right;">
+108.87
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+Faster Lane
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1.68
+</td>
+<td style="text-align:right;">
+299.4
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+79.70
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+80.53
+</td>
+<td style="text-align:right;">
+107.30
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+Slower Lane
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+8.00
+</td>
+<td style="text-align:right;">
+196.4
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+79.50
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+77.58
+</td>
+<td style="text-align:right;">
+111.37
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.2
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+9.04
+</td>
+<td style="text-align:right;">
+76.38
+</td>
+<td style="text-align:right;">
+9.43
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+2.6
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+2.6
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+117.5
+</td>
+<td style="text-align:right;">
+76.72
+</td>
+<td style="text-align:right;">
+122.00
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.8
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+36.15
+</td>
+<td style="text-align:right;">
+76.35
+</td>
+<td style="text-align:right;">
+37.72
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.8
+</td>
+<td style="text-align:left;">
+55
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+62.56
+</td>
+<td style="text-align:left;">
+46.04
+</td>
+<td style="text-align:right;">
+60.23
+</td>
+<td style="text-align:right;">
+47.81
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.6
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.6
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+27.12
+</td>
+<td style="text-align:right;">
+76.36
+</td>
+<td style="text-align:right;">
+28.29
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+2.6
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+2.6
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+117.5
+</td>
+<td style="text-align:right;">
+76.72
+</td>
+<td style="text-align:right;">
+122.00
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.9
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+40.67
+</td>
+<td style="text-align:right;">
+76.35
+</td>
+<td style="text-align:right;">
+42.44
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingLane
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+1.402
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1.402
+</td>
+<td style="text-align:left;">
+55
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+62.56
+</td>
+<td style="text-align:left;">
+80.68
+</td>
+<td style="text-align:right;">
+62.14
+</td>
+<td style="text-align:right;">
+81.22
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+Faster Lane
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+1.68
+</td>
+<td style="text-align:right;">
+299.4
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+62.60
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+63.31
+</td>
+<td style="text-align:right;">
+79.72
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+Slower Lane
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+8.00
+</td>
+<td style="text-align:right;">
+196.4
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+62.40
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+60.36
+</td>
+<td style="text-align:right;">
+83.62
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.701
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.701
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+31.68
+</td>
+<td style="text-align:right;">
+76.36
+</td>
+<td style="text-align:right;">
+33.05
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.9
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+40.67
+</td>
+<td style="text-align:right;">
+76.75
+</td>
+<td style="text-align:right;">
+42.21
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.301
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.301
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.66
+</td>
+<td style="text-align:left;">
+13.6
+</td>
+<td style="text-align:right;">
+76.38
+</td>
+<td style="text-align:right;">
+14.19
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.398
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.398
+</td>
+<td style="text-align:left;">
+55
+</td>
+<td style="text-align:left;">
+471
+</td>
+<td style="text-align:left;">
+314
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+4.20
+</td>
+<td style="text-align:right;">
+495.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+62.56
+</td>
+<td style="text-align:left;">
+22.9
+</td>
+<td style="text-align:right;">
+60.25
+</td>
+<td style="text-align:right;">
+23.78
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.6
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.6
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+419
+</td>
+<td style="text-align:left;">
+357
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+3.60
+</td>
+<td style="text-align:right;">
+441.1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.68
+</td>
+<td style="text-align:left;">
+27.11
+</td>
+<td style="text-align:right;">
+76.58
+</td>
+<td style="text-align:right;">
+28.21
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingZone
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+3.7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+3.7
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+466
+</td>
+<td style="text-align:left;">
+357
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+3.60
+</td>
+<td style="text-align:right;">
+490.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.68
+</td>
+<td style="text-align:left;">
+167.17
+</td>
+<td style="text-align:right;">
+76.73
+</td>
+<td style="text-align:right;">
+173.59
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+0.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.9
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+466
+</td>
+<td style="text-align:left;">
+310
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+3.60
+</td>
+<td style="text-align:right;">
+490.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+79.68
+</td>
+<td style="text-align:left;">
+40.66
+</td>
+<td style="text-align:right;">
+76.39
+</td>
+<td style="text-align:right;">
+42.42
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:left;">
+TwoLaneHwy
+</td>
+<td style="text-align:left;">
+PassingConstrained
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+1.098
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.8671
+</td>
+<td style="text-align:left;">
+55
+</td>
+<td style="text-align:left;">
+618
+</td>
+<td style="text-align:left;">
+412
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+2.40
+</td>
+<td style="text-align:right;">
+650.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+62.62
+</td>
+<td style="text-align:left;">
+49.85
+</td>
+<td style="text-align:right;">
+59.54
+</td>
+<td style="text-align:right;">
+52.43
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+0.0227
+</td>
+<td style="text-align:left;">
+0.2309
+</td>
+<td style="text-align:left;">
+0.2077
+</td>
+<td style="text-align:left;">
+0.4386
+</td>
+<td style="text-align:left;">
+45
+</td>
+<td style="text-align:left;">
+711
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+2.40
+</td>
+<td style="text-align:right;">
+680.0
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+49.50
+</td>
+<td style="text-align:left;">
+31.9
+</td>
+<td style="text-align:right;">
+29.79
+</td>
+<td style="text-align:right;">
+52.99
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+0.678
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.3712
+</td>
+<td style="text-align:left;">
+45
+</td>
+<td style="text-align:left;">
+841
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+885.3
+</td>
+<td style="text-align:left;">
+463.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+52.50
+</td>
+<td style="text-align:left;">
+25.46
+</td>
+<td style="text-align:right;">
+52.50
+</td>
+<td style="text-align:right;">
+25.46
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:left;">
+SigIntersection
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+0.0227
+</td>
+<td style="text-align:left;">
+0.1218
+</td>
+<td style="text-align:left;">
+0.211
+</td>
+<td style="text-align:left;">
+0.3328
+</td>
+<td style="text-align:left;">
+45
+</td>
+<td style="text-align:left;">
+883
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:right;">
+4.80
+</td>
+<td style="text-align:right;">
+783.0
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+49.50
+</td>
+<td style="text-align:left;">
+24.2
+</td>
+<td style="text-align:right;">
+25.69
+</td>
+<td style="text-align:right;">
+46.62
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:left;">
+MultilaneHwy
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+0.5777
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.3894
+</td>
+<td style="text-align:left;">
+55
+</td>
+<td style="text-align:left;">
+1080
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0.95
+</td>
+<td style="text-align:right;">
+2.00
+</td>
+<td style="text-align:right;">
+1136.8
+</td>
+<td style="text-align:left;">
+592.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+52.50
+</td>
+<td style="text-align:left;">
+26.7
+</td>
+<td style="text-align:right;">
+52.50
+</td>
+<td style="text-align:right;">
+26.70
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="border: 0px;overflow-x: scroll; width:100%; ">
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:MT287LOSresults2">Table 19.5: </span>US-287 Segment LOS Analysis Results, Part 2
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Seg ID
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+% Followers
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Density (pc/mi/ln)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Density (veh/mi/ln)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Follower Density (veh/mi/ln)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Adj. Follower Density (veh/mi/ln)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Avg. Thresh. Delay (s/veh)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Avg. Thresh. Delay (%)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Avg. FFS Delay (s/veh)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Avg. FFS Delay (%)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+LOS
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+LOS Value
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Demand/Capacity
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Available Capacity (veh/h)
+</th>
+<th style="text-align:left;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+Momentum (vol x speed)
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+VMT
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+VHT
+</th>
+<th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
+VHD
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+36.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+3.9
+</td>
+<td style="text-align:left;">
+1.5
+</td>
+<td style="text-align:left;">
+1.5
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.4
+</td>
+<td style="text-align:left;">
+3.2
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+0.73
+</td>
+<td style="text-align:left;">
+0.179
+</td>
+<td style="text-align:left;">
+1396
+</td>
+<td style="text-align:left;">
+23458.2
+</td>
+<td style="text-align:right;">
+87.30
+</td>
+<td style="text-align:right;">
+1.130
+</td>
+<td style="text-align:right;">
+0.035
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+37.6
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+1.9
+</td>
+<td style="text-align:left;">
+1.9
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.7
+</td>
+<td style="text-align:left;">
+2.6
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+0.94
+</td>
+<td style="text-align:left;">
+0.179
+</td>
+<td style="text-align:left;">
+1396
+</td>
+<td style="text-align:left;">
+18539.6
+</td>
+<td style="text-align:right;">
+153.80
+</td>
+<td style="text-align:right;">
+2.520
+</td>
+<td style="text-align:right;">
+0.063
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+57
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+8.7
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.3
+</td>
+<td style="text-align:left;">
+4.5
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+2.24
+</td>
+<td style="text-align:left;">
+0.306
+</td>
+<td style="text-align:left;">
+1180
+</td>
+<td style="text-align:left;">
+31128.8
+</td>
+<td style="text-align:right;">
+52.20
+</td>
+<td style="text-align:right;">
+0.870
+</td>
+<td style="text-align:right;">
+0.038
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+60.1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+10.6
+</td>
+<td style="text-align:left;">
+6.4
+</td>
+<td style="text-align:left;">
+6.4
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.3
+</td>
+<td style="text-align:left;">
+4.7
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+2.28
+</td>
+<td style="text-align:left;">
+0.306
+</td>
+<td style="text-align:left;">
+1180
+</td>
+<td style="text-align:left;">
+25428
+</td>
+<td style="text-align:right;">
+52.20
+</td>
+<td style="text-align:right;">
+1.070
+</td>
+<td style="text-align:right;">
+0.048
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+58.2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+10.6
+</td>
+<td style="text-align:left;">
+6.2
+</td>
+<td style="text-align:left;">
+6.2
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.7
+</td>
+<td style="text-align:left;">
+4.7
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+2.24
+</td>
+<td style="text-align:left;">
+0.306
+</td>
+<td style="text-align:left;">
+1180
+</td>
+<td style="text-align:left;">
+25416.8
+</td>
+<td style="text-align:right;">
+261.00
+</td>
+<td style="text-align:right;">
+5.340
+</td>
+<td style="text-align:right;">
+0.240
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+61.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+13.7
+</td>
+<td style="text-align:left;">
+8.4
+</td>
+<td style="text-align:left;">
+8.4
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.3
+</td>
+<td style="text-align:left;">
+4.9
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+2.69
+</td>
+<td style="text-align:left;">
+0.306
+</td>
+<td style="text-align:left;">
+1180
+</td>
+<td style="text-align:left;">
+19718.7
+</td>
+<td style="text-align:right;">
+155.60
+</td>
+<td style="text-align:right;">
+4.100
+</td>
+<td style="text-align:right;">
+0.192
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+62.1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+19.3
+</td>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.5
+</td>
+<td style="text-align:left;">
+5.3
+</td>
+<td style="text-align:left;">
+D
+</td>
+<td style="text-align:left;">
+3.4
+</td>
+<td style="text-align:left;">
+0.306
+</td>
+<td style="text-align:left;">
+1180
+</td>
+<td style="text-align:left;">
+13992.9
+</td>
+<td style="text-align:right;">
+37.30
+</td>
+<td style="text-align:right;">
+1.390
+</td>
+<td style="text-align:right;">
+0.070
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+25.4
+</td>
+<td style="text-align:left;">
+371.1
+</td>
+<td style="text-align:left;">
+26.1
+</td>
+<td style="text-align:left;">
+381.1
+</td>
+<td style="text-align:left;">
+D
+</td>
+<td style="text-align:left;">
+3.11
+</td>
+<td style="text-align:left;">
+0.781
+</td>
+<td style="text-align:left;">
+147
+</td>
+<td style="text-align:left;">
+2990.5
+</td>
+<td style="text-align:right;">
+27.30
+</td>
+<td style="text-align:right;">
+4.780
+</td>
+<td style="text-align:right;">
+3.790
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:left;">
+62.2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+19.5
+</td>
+<td style="text-align:left;">
+12.1
+</td>
+<td style="text-align:left;">
+12.1
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.2
+</td>
+<td style="text-align:left;">
+5.3
+</td>
+<td style="text-align:left;">
+D
+</td>
+<td style="text-align:left;">
+3.42
+</td>
+<td style="text-align:left;">
+0.308
+</td>
+<td style="text-align:left;">
+1177
+</td>
+<td style="text-align:left;">
+14058.9
+</td>
+<td style="text-align:right;">
+91.70
+</td>
+<td style="text-align:right;">
+3.410
+</td>
+<td style="text-align:right;">
+0.172
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+61.6
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+13.8
+</td>
+<td style="text-align:left;">
+8.5
+</td>
+<td style="text-align:left;">
+8.5
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.3
+</td>
+<td style="text-align:left;">
+4.9
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+2.7
+</td>
+<td style="text-align:left;">
+0.308
+</td>
+<td style="text-align:left;">
+1177
+</td>
+<td style="text-align:left;">
+19795.3
+</td>
+<td style="text-align:right;">
+156.50
+</td>
+<td style="text-align:right;">
+4.140
+</td>
+<td style="text-align:right;">
+0.194
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+57.7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+10.2
+</td>
+<td style="text-align:left;">
+5.9
+</td>
+<td style="text-align:left;">
+5.9
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.3
+</td>
+<td style="text-align:left;">
+4.6
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+2.18
+</td>
+<td style="text-align:left;">
+0.293
+</td>
+<td style="text-align:left;">
+1202
+</td>
+<td style="text-align:left;">
+24326.2
+</td>
+<td style="text-align:right;">
+198.00
+</td>
+<td style="text-align:right;">
+4.050
+</td>
+<td style="text-align:right;">
+0.178
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+53.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+8.3
+</td>
+<td style="text-align:left;">
+4.5
+</td>
+<td style="text-align:left;">
+4.5
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.5
+</td>
+<td style="text-align:left;">
+4.5
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+2.11
+</td>
+<td style="text-align:left;">
+0.293
+</td>
+<td style="text-align:left;">
+1202
+</td>
+<td style="text-align:left;">
+29787.6
+</td>
+<td style="text-align:right;">
+298.90
+</td>
+<td style="text-align:right;">
+5.000
+</td>
+<td style="text-align:right;">
+0.214
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+42.1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+5.8
+</td>
+<td style="text-align:left;">
+2.4
+</td>
+<td style="text-align:left;">
+2.4
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.6
+</td>
+<td style="text-align:left;">
+3.5
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.22
+</td>
+<td style="text-align:left;">
+0.263
+</td>
+<td style="text-align:left;">
+1254
+</td>
+<td style="text-align:left;">
+34351.1
+</td>
+<td style="text-align:right;">
+464.90
+</td>
+<td style="text-align:right;">
+6.040
+</td>
+<td style="text-align:right;">
+0.204
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+44
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+5.8
+</td>
+<td style="text-align:left;">
+2.6
+</td>
+<td style="text-align:left;">
+2.6
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.3
+</td>
+<td style="text-align:left;">
+4.1
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.28
+</td>
+<td style="text-align:left;">
+0.263
+</td>
+<td style="text-align:left;">
+1254
+</td>
+<td style="text-align:left;">
+34159.6
+</td>
+<td style="text-align:right;">
+312.90
+</td>
+<td style="text-align:right;">
+4.090
+</td>
+<td style="text-align:right;">
+0.160
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:left;">
+42.7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+5.8
+</td>
+<td style="text-align:left;">
+2.5
+</td>
+<td style="text-align:left;">
+2.5
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+2.9
+</td>
+<td style="text-align:left;">
+3.5
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.24
+</td>
+<td style="text-align:left;">
+0.263
+</td>
+<td style="text-align:left;">
+1254
+</td>
+<td style="text-align:left;">
+34342.5
+</td>
+<td style="text-align:right;">
+802.90
+</td>
+<td style="text-align:right;">
+10.430
+</td>
+<td style="text-align:right;">
+0.355
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:left;">
+43.7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+5.8
+</td>
+<td style="text-align:left;">
+2.6
+</td>
+<td style="text-align:left;">
+2.6
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.5
+</td>
+<td style="text-align:left;">
+4.1
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.28
+</td>
+<td style="text-align:left;">
+0.263
+</td>
+<td style="text-align:left;">
+1254
+</td>
+<td style="text-align:left;">
+34157.9
+</td>
+<td style="text-align:right;">
+357.10
+</td>
+<td style="text-align:right;">
+4.670
+</td>
+<td style="text-align:right;">
+0.183
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:left;">
+45.2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.5
+</td>
+<td style="text-align:left;">
+2.9
+</td>
+<td style="text-align:left;">
+2.9
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.7
+</td>
+<td style="text-align:left;">
+3.8
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.46
+</td>
+<td style="text-align:left;">
+0.292
+</td>
+<td style="text-align:left;">
+1204
+</td>
+<td style="text-align:left;">
+38051.5
+</td>
+<td style="text-align:right;">
+495.80
+</td>
+<td style="text-align:right;">
+6.460
+</td>
+<td style="text-align:right;">
+0.236
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:left;">
+23.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.2
+</td>
+<td style="text-align:left;">
+0.7
+</td>
+<td style="text-align:left;">
+0.7
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.4
+</td>
+<td style="text-align:left;">
+0.4
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+0.36
+</td>
+<td style="text-align:left;">
+0.165
+</td>
+<td style="text-align:left;">
+1004
+</td>
+<td style="text-align:left;">
+39345.7
+</td>
+<td style="text-align:right;">
+1189.90
+</td>
+<td style="text-align:right;">
+15.000
+</td>
+<td style="text-align:right;">
+0.057
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:left;">
+26.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+3.7
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+718.59
+</td>
+<td style="text-align:right;">
+8.924
+</td>
+<td style="text-align:right;">
+-0.087
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:left;">
+17.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+2.5
+</td>
+<td style="text-align:left;">
+0.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+471.31
+</td>
+<td style="text-align:right;">
+6.075
+</td>
+<td style="text-align:right;">
+0.149
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:left;">
+49.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.5
+</td>
+<td style="text-align:left;">
+3.2
+</td>
+<td style="text-align:left;">
+2.6
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.4
+</td>
+<td style="text-align:left;">
+4.3
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.29
+</td>
+<td style="text-align:left;">
+0.292
+</td>
+<td style="text-align:left;">
+1204
+</td>
+<td style="text-align:left;">
+37868.3
+</td>
+<td style="text-align:right;">
+99.20
+</td>
+<td style="text-align:right;">
+1.300
+</td>
+<td style="text-align:right;">
+0.053
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+46.1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.5
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+2.6
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+4.5
+</td>
+<td style="text-align:left;">
+3.8
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.31
+</td>
+<td style="text-align:left;">
+0.292
+</td>
+<td style="text-align:left;">
+1204
+</td>
+<td style="text-align:left;">
+38038.3
+</td>
+<td style="text-align:right;">
+1289.10
+</td>
+<td style="text-align:right;">
+16.800
+</td>
+<td style="text-align:right;">
+0.620
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:left;">
+46.6
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.5
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+2.7
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.6
+</td>
+<td style="text-align:left;">
+4.3
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.35
+</td>
+<td style="text-align:left;">
+0.292
+</td>
+<td style="text-align:left;">
+1204
+</td>
+<td style="text-align:left;">
+37854.6
+</td>
+<td style="text-align:right;">
+396.60
+</td>
+<td style="text-align:right;">
+5.190
+</td>
+<td style="text-align:right;">
+0.216
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:left;">
+50.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+8.2
+</td>
+<td style="text-align:left;">
+4.1
+</td>
+<td style="text-align:left;">
+3.7
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.8
+</td>
+<td style="text-align:left;">
+3.9
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.87
+</td>
+<td style="text-align:left;">
+0.292
+</td>
+<td style="text-align:left;">
+1204
+</td>
+<td style="text-align:left;">
+29863.6
+</td>
+<td style="text-align:right;">
+396.60
+</td>
+<td style="text-align:right;">
+6.580
+</td>
+<td style="text-align:right;">
+0.245
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:left;">
+47.2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.5
+</td>
+<td style="text-align:left;">
+3.1
+</td>
+<td style="text-align:left;">
+2.8
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.2
+</td>
+<td style="text-align:left;">
+4.3
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.39
+</td>
+<td style="text-align:left;">
+0.292
+</td>
+<td style="text-align:left;">
+1204
+</td>
+<td style="text-align:left;">
+37858.7
+</td>
+<td style="text-align:right;">
+297.50
+</td>
+<td style="text-align:right;">
+3.900
+</td>
+<td style="text-align:right;">
+0.161
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:left;">
+46.1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.5
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+2.8
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+4.5
+</td>
+<td style="text-align:left;">
+3.8
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.39
+</td>
+<td style="text-align:left;">
+0.292
+</td>
+<td style="text-align:left;">
+1204
+</td>
+<td style="text-align:left;">
+38038.3
+</td>
+<td style="text-align:right;">
+1289.10
+</td>
+<td style="text-align:right;">
+16.800
+</td>
+<td style="text-align:right;">
+0.620
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:left;">
+46.4
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.5
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+2.8
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.8
+</td>
+<td style="text-align:left;">
+4.3
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.42
+</td>
+<td style="text-align:left;">
+0.292
+</td>
+<td style="text-align:left;">
+1204
+</td>
+<td style="text-align:left;">
+37852.7
+</td>
+<td style="text-align:right;">
+446.20
+</td>
+<td style="text-align:right;">
+5.840
+</td>
+<td style="text-align:right;">
+0.243
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:left;">
+28.4
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+1.1
+</td>
+<td style="text-align:left;">
+1.1
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.5
+</td>
+<td style="text-align:left;">
+0.7
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+0.56
+</td>
+<td style="text-align:left;">
+0.165
+</td>
+<td style="text-align:left;">
+1004
+</td>
+<td style="text-align:left;">
+30810.7
+</td>
+<td style="text-align:right;">
+695.10
+</td>
+<td style="text-align:right;">
+11.190
+</td>
+<td style="text-align:right;">
+0.074
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:left;">
+32.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+4.7
+</td>
+<td style="text-align:left;">
+1.5
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+419.78
+</td>
+<td style="text-align:right;">
+6.630
+</td>
+<td style="text-align:right;">
+-0.071
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+26
+</td>
+<td style="text-align:left;">
+22.2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+3.3
+</td>
+<td style="text-align:left;">
+0.7
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:right;">
+275.32
+</td>
+<td style="text-align:right;">
+4.561
+</td>
+<td style="text-align:right;">
+0.151
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:left;">
+46.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.5
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+2.4
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.4
+</td>
+<td style="text-align:left;">
+4.3
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.22
+</td>
+<td style="text-align:left;">
+0.292
+</td>
+<td style="text-align:left;">
+1204
+</td>
+<td style="text-align:left;">
+37856.6
+</td>
+<td style="text-align:right;">
+347.50
+</td>
+<td style="text-align:right;">
+4.550
+</td>
+<td style="text-align:right;">
+0.189
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+28
+</td>
+<td style="text-align:left;">
+45.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.5
+</td>
+<td style="text-align:left;">
+2.9
+</td>
+<td style="text-align:left;">
+2.5
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.5
+</td>
+<td style="text-align:left;">
+3.8
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.23
+</td>
+<td style="text-align:left;">
+0.292
+</td>
+<td style="text-align:left;">
+1204
+</td>
+<td style="text-align:left;">
+38053.1
+</td>
+<td style="text-align:right;">
+446.20
+</td>
+<td style="text-align:right;">
+5.810
+</td>
+<td style="text-align:right;">
+0.212
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:left;">
+49
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.5
+</td>
+<td style="text-align:left;">
+3.2
+</td>
+<td style="text-align:left;">
+2.7
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.6
+</td>
+<td style="text-align:left;">
+4.3
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.35
+</td>
+<td style="text-align:left;">
+0.292
+</td>
+<td style="text-align:left;">
+1204
+</td>
+<td style="text-align:left;">
+37866.6
+</td>
+<td style="text-align:right;">
+149.20
+</td>
+<td style="text-align:right;">
+1.950
+</td>
+<td style="text-align:right;">
+0.081
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:left;">
+51.9
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+8.2
+</td>
+<td style="text-align:left;">
+4.3
+</td>
+<td style="text-align:left;">
+3.7
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.9
+</td>
+<td style="text-align:left;">
+3.8
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.85
+</td>
+<td style="text-align:left;">
+0.292
+</td>
+<td style="text-align:left;">
+1204
+</td>
+<td style="text-align:left;">
+29871.9
+</td>
+<td style="text-align:right;">
+197.30
+</td>
+<td style="text-align:right;">
+3.280
+</td>
+<td style="text-align:right;">
+0.121
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+31
+</td>
+<td style="text-align:left;">
+44
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+5.8
+</td>
+<td style="text-align:left;">
+2.5
+</td>
+<td style="text-align:left;">
+2.2
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.1
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.11
+</td>
+<td style="text-align:left;">
+0.259
+</td>
+<td style="text-align:left;">
+1259
+</td>
+<td style="text-align:left;">
+33775.4
+</td>
+<td style="text-align:right;">
+264.60
+</td>
+<td style="text-align:right;">
+3.460
+</td>
+<td style="text-align:right;">
+0.134
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:left;">
+46
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.4
+</td>
+<td style="text-align:left;">
+2.9
+</td>
+<td style="text-align:left;">
+2.7
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+6.4
+</td>
+<td style="text-align:left;">
+3.8
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.37
+</td>
+<td style="text-align:left;">
+0.289
+</td>
+<td style="text-align:left;">
+1209
+</td>
+<td style="text-align:left;">
+37638.4
+</td>
+<td style="text-align:right;">
+1814.90
+</td>
+<td style="text-align:right;">
+23.650
+</td>
+<td style="text-align:right;">
+0.876
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+33
+</td>
+<td style="text-align:left;">
+46.1
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+6.4
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+2.8
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.8
+</td>
+<td style="text-align:left;">
+4.3
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.4
+</td>
+<td style="text-align:left;">
+0.289
+</td>
+<td style="text-align:left;">
+1209
+</td>
+<td style="text-align:left;">
+37468.9
+</td>
+<td style="text-align:right;">
+441.50
+</td>
+<td style="text-align:right;">
+5.780
+</td>
+<td style="text-align:right;">
+0.239
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+34
+</td>
+<td style="text-align:left;">
+60.2
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+10.9
+</td>
+<td style="text-align:left;">
+6.6
+</td>
+<td style="text-align:left;">
+6.6
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+2.6
+</td>
+<td style="text-align:left;">
+5.2
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+2.64
+</td>
+<td style="text-align:left;">
+0.383
+</td>
+<td style="text-align:left;">
+1049
+</td>
+<td style="text-align:left;">
+38733.2
+</td>
+<td style="text-align:right;">
+564.10
+</td>
+<td style="text-align:right;">
+9.470
+</td>
+<td style="text-align:right;">
+0.466
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+35
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+17.9
+</td>
+<td style="text-align:left;">
+51
+</td>
+<td style="text-align:left;">
+21.1
+</td>
+<td style="text-align:left;">
+66.1
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+2.07
+</td>
+<td style="text-align:left;">
+0.46
+</td>
+<td style="text-align:left;">
+784
+</td>
+<td style="text-align:left;">
+20260.4
+</td>
+<td style="text-align:right;">
+298.20
+</td>
+<td style="text-align:right;">
+10.010
+</td>
+<td style="text-align:right;">
+3.985
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+8.8
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+A
+</td>
+<td style="text-align:left;">
+0.8
+</td>
+<td style="text-align:left;">
+0.226
+</td>
+<td style="text-align:left;">
+3027
+</td>
+<td style="text-align:left;">
+46476.3
+</td>
+<td style="text-align:right;">
+328.60
+</td>
+<td style="text-align:right;">
+6.260
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+37
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+75.1
+</td>
+<td style="text-align:left;">
+22.4
+</td>
+<td style="text-align:left;">
+92.7
+</td>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+2.16
+</td>
+<td style="text-align:left;">
+0.55
+</td>
+<td style="text-align:left;">
+639
+</td>
+<td style="text-align:left;">
+20118.5
+</td>
+<td style="text-align:right;">
+260.60
+</td>
+<td style="text-align:right;">
+10.140
+</td>
+<td style="text-align:right;">
+4.877
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+38
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+11.3
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+—
+</td>
+<td style="text-align:left;">
+1.2
+</td>
+<td style="text-align:left;">
+4.8
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+B
+</td>
+<td style="text-align:left;">
+1.04
+</td>
+<td style="text-align:left;">
+0.289
+</td>
+<td style="text-align:left;">
+2798
+</td>
+<td style="text-align:left;">
+59684.2
+</td>
+<td style="text-align:right;">
+442.70
+</td>
+<td style="text-align:right;">
+8.430
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The facility LOS results are shown in Table <a href="CaseStudyMT287.html#tab:MT287FacilityResults">19.6</a></p>
+<table>
+<caption><span id="tab:MT287FacilityResults">Table 19.6: </span> US-287 Facility Analysis Results</caption>
+<thead>
+<tr class="header">
+<th align="left"><strong>Performance Measure</strong></th>
+<th align="center"><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Free Flow Travel Time (s)</td>
+<td align="center">1571.8</td>
+</tr>
+<tr class="even">
+<td align="left">Avg. Travel Time (s)</td>
+<td align="center">1693.79</td>
+</tr>
+<tr class="odd">
+<td align="left">Avg. Speed (mi/h)</td>
+<td align="center">65.75</td>
+</tr>
+<tr class="even">
+<td align="left">VMT (veh-mi)</td>
+<td align="center">15660.32</td>
+</tr>
+<tr class="odd">
+<td align="left">VHT (veh-h)</td>
+<td align="center">244.907</td>
+</tr>
+<tr class="even">
+<td align="left">Delay (veh-h)</td>
+<td align="center">19.839</td>
+</tr>
+<tr class="odd">
+<td align="left">Avg. FFS Delay (s/veh)</td>
+<td align="center">122.02</td>
+</tr>
+<tr class="even">
+<td align="left">Avg. FFS Delay (%)</td>
+<td align="center">7.8</td>
+</tr>
+<tr class="odd">
+<td align="left">Avg. Threshold Delay (s/veh)</td>
+<td align="center">64.52</td>
+</tr>
+<tr class="even">
+<td align="left">Avg. Threshold Delay (%)</td>
+<td align="center">4.1</td>
+</tr>
+<tr class="odd">
+<td align="left">LOS Score (Weighted-Travel Time)</td>
+<td align="center">1.493</td>
+</tr>
+<tr class="even">
+<td align="left">LOS Constancy</td>
+<td align="center">0.479</td>
+</tr>
+<tr class="odd">
+<td align="left">LOS Adjustment Factor</td>
+<td align="center">1.056</td>
+</tr>
+<tr class="even">
+<td align="left">LOS Score (Weighted-Travel Time and Adjusted)</td>
+<td align="center">1.577</td>
+</tr>
+<tr class="odd">
+<td align="left">Maximum d/c</td>
+<td align="center">0.781</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Discussion</strong></p>
+<p>The overall facility LOS, based on a LOS score of 1.58, is B. This is indicative of very good operations of the overall facility. This conclusion is further corroborated by an average facility speed of 65.8 mi/h and an average free-flow speed delay of 7.8%. Further, LOS at the segment level indicates that all segments operate at LOS C or better except for three segments in the rural town of Townsend that were found to operate at LOS D. These three segments have a posted speed limit of 25 mi/h. Notably, the maximum d/c of 0.781 occurs at the AWSC intersection located within Townsend. The signal-control intersections in East Helena operate at LOS C, whereas the segments of multilane highway have densities of 8.8 veh/mi/ln and 11.3 veh/mi/ln with LOS A and B, respectively. The LOS constancy of the facility is 0.479. This relatively low value suggests minimal variability or fluctuations in the LOS from one segment to another along the facility.</p>
+
+</div>
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="CaseStudyOH42.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="AppendixA.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/NCHRP-08-135/Guidebook/edit/master/19-CaseStudy-MontanaUS287.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Rural Highway Analysis Guidebook.pdf", "Rural Highway Analysis Guidebook.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"toc_depth": 2
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

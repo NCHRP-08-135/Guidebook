@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Bicycle Operations Analysis on Rural Highways | Rural-Highway-Analysis-Guidebook.knit</title>
+  <meta name="description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Bicycle Operations Analysis on Rural Highways | Rural-Highway-Analysis-Guidebook.knit" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Bicycle Operations Analysis on Rural Highways | Rural-Highway-Analysis-Guidebook.knit" />
+  
+  <meta name="twitter:description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
+  
+
+<meta name="author" content="" />
+
+
+<meta name="date" content="2023-09-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="Chapter3Reliability.html"/>
+<link rel="next" href="HCMmethodsIntro.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Rural Highway Analysis Guidebook</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
+<li class="part"><span><b>Part I</b></span></li>
+<li class="chapter" data-level="1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#purpose-of-guidebook"><i class="fa fa-check"></i><b>1.1</b> Purpose of Guidebook</a></li>
+<li class="chapter" data-level="1.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-scope-and-limitations"><i class="fa fa-check"></i><b>1.2</b> Guidebook Scope and Limitations</a></li>
+<li class="chapter" data-level="1.3" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-organization"><i class="fa fa-check"></i><b>1.3</b> Guidebook Organization</a></li>
+<li class="chapter" data-level="1.4" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#guidebook-format"><i class="fa fa-check"></i><b>1.4</b> Guidebook Format</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#navigating-the-document"><i class="fa fa-check"></i><b>1.4.1</b> Navigating the document</a></li>
+<li class="chapter" data-level="1.4.2" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#ProvidingFeedback"><i class="fa fa-check"></i><b>1.4.2</b> How to provide feedback on this document</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#SupportingResources"><i class="fa fa-check"></i><b>1.5</b> Supporting Resources and Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html"><i class="fa fa-check"></i><b>2</b> Rural Highway Level of Service for Automobiles</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#LOSIntro"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#Segmentation"><i class="fa fa-check"></i><b>2.2</b> Facility Segmentation</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#CrossSection"><i class="fa fa-check"></i><b>2.2.1</b> Cross Section</a></li>
+<li class="chapter" data-level="2.2.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#passing-accommodations-for-two-lane-highways"><i class="fa fa-check"></i><b>2.2.2</b> Passing Accommodations for Two-Lane Highways</a></li>
+<li class="chapter" data-level="2.2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#posted-speed-limit-changes"><i class="fa fa-check"></i><b>2.2.3</b> Posted Speed Limit Changes</a></li>
+<li class="chapter" data-level="2.2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#geometric-alignment-considerations"><i class="fa fa-check"></i><b>2.2.4</b> Geometric Alignment Considerations</a></li>
+<li class="chapter" data-level="2.2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#IntxInfluenceArea"><i class="fa fa-check"></i><b>2.2.5</b> Intersections and their Influence Area</a></li>
+<li class="chapter" data-level="2.2.6" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#UrbanStreetClassification"><i class="fa fa-check"></i><b>2.2.6</b> Classification of Urban Street</a></li>
+<li class="chapter" data-level="2.2.7" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#SegMinLength"><i class="fa fa-check"></i><b>2.2.7</b> Practical Minimum Segment Length</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#FacilityLOS"><i class="fa fa-check"></i><b>2.3</b> Segment and Facility LOS Calculation</a></li>
+<li class="chapter" data-level="2.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#HotSpots"><i class="fa fa-check"></i><b>2.4</b> Hot Spot Identification</a></li>
+<li class="chapter" data-level="2.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#additional-performance-measures-for-facility-evaluation"><i class="fa fa-check"></i><b>2.5</b> Additional Performance Measures for Facility Evaluation</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#emergency-traffic-demand-surge"><i class="fa fa-check"></i><b>2.5.1</b> Emergency Traffic Demand Surge</a></li>
+<li class="chapter" data-level="2.5.2" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#short-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.2</b> Short-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.3" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#seasonal-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.3</b> Seasonal Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.4" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#long-term-traffic-demand-increase"><i class="fa fa-check"></i><b>2.5.4</b> Long-Term Traffic Demand Increase</a></li>
+<li class="chapter" data-level="2.5.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#use-of-probe-vehicle-measured-travel-timesspeeds"><i class="fa fa-check"></i><b>2.5.5</b> Use of Probe-Vehicle Measured Travel Times/Speeds</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html"><i class="fa fa-check"></i><b>3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityIntro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#approach-for-rural-highways"><i class="fa fa-check"></i><b>3.2</b> Approach for Rural Highways</a></li>
+<li class="chapter" data-level="3.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityData"><i class="fa fa-check"></i><b>3.3</b> Data Examined</a></li>
+<li class="chapter" data-level="3.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilitySegmentation"><i class="fa fa-check"></i><b>3.4</b> Segmentation</a></li>
+<li class="chapter" data-level="3.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityDataOverview"><i class="fa fa-check"></i><b>3.5</b> Data Overview</a></li>
+<li class="chapter" data-level="3.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityMethods"><i class="fa fa-check"></i><b>3.6</b> Evaluation Methodologies</a></li>
+<li class="chapter" data-level="3.7" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityHowTo"><i class="fa fa-check"></i><b>3.7</b> Assessing Reliability</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#load-the-data"><i class="fa fa-check"></i><b>3.7.1</b> Load the data</a></li>
+<li class="chapter" data-level="3.7.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#aggregate-the-data"><i class="fa fa-check"></i><b>3.7.2</b> Aggregate the data</a></li>
+<li class="chapter" data-level="3.7.3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#heatmaps"><i class="fa fa-check"></i><b>3.7.3</b> Heatmaps</a></li>
+<li class="chapter" data-level="3.7.4" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#box-and-whisker-plots"><i class="fa fa-check"></i><b>3.7.4</b> Box-and-Whisker Plots</a></li>
+<li class="chapter" data-level="3.7.5" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#speed-confidence-band-plots"><i class="fa fa-check"></i><b>3.7.5</b> Speed Confidence Band Plots</a></li>
+<li class="chapter" data-level="3.7.6" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#travel-time-index-plots"><i class="fa fa-check"></i><b>3.7.6</b> Travel Time Index Plots</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html"><i class="fa fa-check"></i><b>4</b> Bicycle Operations Analysis on Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#overview-of-bicycle-operations-analysis-methods"><i class="fa fa-check"></i><b>4.1</b> Overview of Bicycle Operations Analysis Methods</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#highway-capacity-manual-level-of-service-analysis-methodologies"><i class="fa fa-check"></i><b>4.1.1</b> Highway Capacity Manual Level of Service Analysis Methodologies</a></li>
+<li class="chapter" data-level="4.1.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.1.2</b> Level of Traffic Stress Analysis Methodology</a></li>
+<li class="chapter" data-level="4.1.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#bicycle-compatibility-index-analysis-methodology"><i class="fa fa-check"></i><b>4.1.3</b> Bicycle Compatibility Index Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#BikeLOS"><i class="fa fa-check"></i><b>4.2</b> Bicycle Level of Service Research Recommendations</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-highway-capacity-manual-level-of-service-for-rural-highways"><i class="fa fa-check"></i><b>4.2.1</b> Revisions to Highway Capacity Manual Level of Service for Rural Highways</a></li>
+<li class="chapter" data-level="4.2.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#revisions-to-level-of-traffic-stress-analysis-methodology"><i class="fa fa-check"></i><b>4.2.2</b> Revisions to Level of Traffic Stress Analysis Methodology</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#guidance-on-current-methods-for-rural-highways"><i class="fa fa-check"></i><b>4.3</b> Guidance on Current Methods for Rural Highways</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#adaptation-to-rural-conditions"><i class="fa fa-check"></i><b>4.3.1</b> Adaptation to Rural Conditions</a></li>
+<li class="chapter" data-level="4.3.2" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#data-requirements"><i class="fa fa-check"></i><b>4.3.2</b> Data Requirements</a></li>
+<li class="chapter" data-level="4.3.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#applications"><i class="fa fa-check"></i><b>4.3.3</b> Applications</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>Part II: HCM Calculations</b></span></li>
+<li class="chapter" data-level="5" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html"><i class="fa fa-check"></i><b>5</b> HCM Automobile LOS Methodologies</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html"><i class="fa fa-check"></i><b>6</b> Multilane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#equations-and-exhibits"><i class="fa fa-check"></i><b>6.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="6.2" data-path="HCMmultilaneHwy.html"><a href="HCMmultilaneHwy.html#nomenclature"><i class="fa fa-check"></i><b>6.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html"><i class="fa fa-check"></i><b>7</b> Two-Lane Highway Segment Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#equations-and-exhibits-1"><i class="fa fa-check"></i><b>7.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="7.2" data-path="HCMtwolaneHwy.html"><a href="HCMtwolaneHwy.html#nomenclature-1"><i class="fa fa-check"></i><b>7.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="HCMsignal.html"><a href="HCMsignal.html"><i class="fa fa-check"></i><b>8</b> Signalized Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="HCMsignal.html"><a href="HCMsignal.html#equations-and-exhibits-2"><i class="fa fa-check"></i><b>8.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="8.2" data-path="HCMsignal.html"><a href="HCMsignal.html#nomenclature-2"><i class="fa fa-check"></i><b>8.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="HCMroundabout.html"><a href="HCMroundabout.html"><i class="fa fa-check"></i><b>9</b> Roundabout Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="HCMroundabout.html"><a href="HCMroundabout.html#equations-and-exhibits-3"><i class="fa fa-check"></i><b>9.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="9.2" data-path="HCMroundabout.html"><a href="HCMroundabout.html#nomenclature-3"><i class="fa fa-check"></i><b>9.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="HCMawsc.html"><a href="HCMawsc.html"><i class="fa fa-check"></i><b>10</b> All-Way Stop-Controlled Intersection Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="HCMawsc.html"><a href="HCMawsc.html#equations-and-exhibits-4"><i class="fa fa-check"></i><b>10.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="10.2" data-path="HCMawsc.html"><a href="HCMawsc.html#nomenclature-4"><i class="fa fa-check"></i><b>10.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html"><i class="fa fa-check"></i><b>11</b> Urban Street Facility Analysis Methodology</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#equations-and-exhibits-5"><i class="fa fa-check"></i><b>11.1</b> Equations and Exhibits</a></li>
+<li class="chapter" data-level="11.2" data-path="HCMurbanStreet.html"><a href="HCMurbanStreet.html#nomenclature-5"><i class="fa fa-check"></i><b>11.2</b> Nomenclature</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="HCMbicycle.html"><a href="HCMbicycle.html"><i class="fa fa-check"></i><b>12</b> Bicycle LOS Methodologies</a></li>
+<li class="chapter" data-level="13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html"><i class="fa fa-check"></i><b>13</b> Rural Highway Example Calculations</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-input-data"><i class="fa fa-check"></i><b>13.1</b> Segment Input Data</a></li>
+<li class="chapter" data-level="13.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations"><i class="fa fa-check"></i><b>13.2</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#first-iteration-uses-input-segment-lengths"><i class="fa fa-check"></i><b>13.2.1</b> First iteration uses input segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#influence-area-calculations"><i class="fa fa-check"></i><b>13.3</b> Influence Area Calculations</a></li>
+<li class="chapter" data-level="13.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-segment-length-calculations"><i class="fa fa-check"></i><b>13.4</b> Adjusted Segment Length Calculations</a></li>
+<li class="chapter" data-level="13.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#segment-los-calculations-1"><i class="fa fa-check"></i><b>13.5</b> Segment LOS Calculations</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#second-iteration-uses-adjusted-segment-lengths"><i class="fa fa-check"></i><b>13.5.1</b> Second iteration uses adjusted segment lengths</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#facility-calculations"><i class="fa fa-check"></i><b>13.6</b> Facility Calculations</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#posted-speed-travel-time-s"><i class="fa fa-check"></i><b>13.6.1</b> Posted Speed Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.2" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#free-flow-travel-time-s"><i class="fa fa-check"></i><b>13.6.2</b> Free-Flow Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.3" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#average-travel-time-s"><i class="fa fa-check"></i><b>13.6.3</b> Average Travel Time (s)</a></li>
+<li class="chapter" data-level="13.6.4" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#travel-time-segment-weights"><i class="fa fa-check"></i><b>13.6.4</b> Travel Time Segment Weights</a></li>
+<li class="chapter" data-level="13.6.5" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#adjusted-demand-volumes"><i class="fa fa-check"></i><b>13.6.5</b> Adjusted Demand Volumes</a></li>
+<li class="chapter" data-level="13.6.6" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-hours-traveled-veh-h"><i class="fa fa-check"></i><b>13.6.6</b> Vehicle Hours Traveled (veh-h)</a></li>
+<li class="chapter" data-level="13.6.7" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#total-delay-veh-h"><i class="fa fa-check"></i><b>13.6.7</b> Total Delay (veh-h)</a></li>
+<li class="chapter" data-level="13.6.8" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#vehicle-miles-traveled-veh-mi"><i class="fa fa-check"></i><b>13.6.8</b> Vehicle Miles Traveled (veh-mi)</a></li>
+<li class="chapter" data-level="13.6.9" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#space-mean-speed-mih"><i class="fa fa-check"></i><b>13.6.9</b> Space Mean Speed (mi/h)</a></li>
+<li class="chapter" data-level="13.6.10" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#ffs-delay-sveh"><i class="fa fa-check"></i><b>13.6.10</b> FFS Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.11" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#threshold-delay-sveh"><i class="fa fa-check"></i><b>13.6.11</b> Threshold Delay (s/veh)</a></li>
+<li class="chapter" data-level="13.6.12" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-constancy"><i class="fa fa-check"></i><b>13.6.12</b> LOS Constancy</a></li>
+<li class="chapter" data-level="13.6.13" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#los-adjustment-factor"><i class="fa fa-check"></i><b>13.6.13</b> LOS Adjustment Factor</a></li>
+<li class="chapter" data-level="13.6.14" data-path="ExampleCalcs.html"><a href="ExampleCalcs.html#final-los-score"><i class="fa fa-check"></i><b>13.6.14</b> Final LOS Score</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="CompEngine.html"><a href="CompEngine.html"><i class="fa fa-check"></i><b>14</b> Computational Engine Overview</a></li>
+<li class="part"><span><b>Part III: Case Studies</b></span></li>
+<li class="chapter" data-level="15" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html"><i class="fa fa-check"></i><b>15</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#supporting-material"><i class="fa fa-check"></i><b>15.1</b> Supporting Material</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#kml-files"><i class="fa fa-check"></i>KML Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#computational-engine-input-files"><i class="fa fa-check"></i>Computational Engine Input Files</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#probe-vehicle-data-analysis-scripting-code"><i class="fa fa-check"></i>Probe Vehicle Data Analysis Scripting Code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html"><i class="fa fa-check"></i><b>16</b> Case Study: Oregon US-20</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#route-description"><i class="fa fa-check"></i><b>16.1</b> Route Description</a></li>
+<li class="chapter" data-level="16.2" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#level-of-service"><i class="fa fa-check"></i><b>16.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#segmentation"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#traffic-data"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#additional-data-inputs-for-intersections"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#results"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#reliability"><i class="fa fa-check"></i><b>16.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-heatmaps"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-difference-heatmaps"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#box-and-whisker-speed-plots"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#speed-confidence-band"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#travel-time-index"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOR20.html"><a href="CaseStudyOR20.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html"><i class="fa fa-check"></i><b>17</b> Case Study: Tennessee SR-109</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#route-description-1"><i class="fa fa-check"></i><b>17.1</b> Route Description</a></li>
+<li class="chapter" data-level="17.2" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#level-of-service-1"><i class="fa fa-check"></i><b>17.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#segmentation-1"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#traffic-data-1"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#additional-data-inputs-for-intersections-1"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#results-1"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#reliability-1"><i class="fa fa-check"></i><b>17.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-heatmaps-1"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-difference-heatmaps-1"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#box-and-whisker-speed-plots-1"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#speed-confidence-band-1"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#travel-time-index-1"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyTN109.html"><a href="CaseStudyTN109.html#summary-1"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html"><i class="fa fa-check"></i><b>18</b> Case Study: Ohio US-42</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#route-description-2"><i class="fa fa-check"></i><b>18.1</b> Route Description</a></li>
+<li class="chapter" data-level="18.2" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#level-of-service-2"><i class="fa fa-check"></i><b>18.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#segmentation-2"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#traffic-data-2"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#additional-data-inputs-for-intersections-2"><i class="fa fa-check"></i>Additional Data Inputs for Intersections</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#results-2"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#reliability-2"><i class="fa fa-check"></i><b>18.3</b> Reliability</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-heatmaps-2"><i class="fa fa-check"></i>Speed Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-difference-heatmaps-2"><i class="fa fa-check"></i>Speed Difference Heatmaps</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#box-and-whisker-speed-plots-2"><i class="fa fa-check"></i>Box-and-Whisker Speed Plots</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#speed-confidence-band-2"><i class="fa fa-check"></i>Speed Confidence Band</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#travel-time-index-2"><i class="fa fa-check"></i>Travel Time Index</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyOH42.html"><a href="CaseStudyOH42.html#summary-2"><i class="fa fa-check"></i>Summary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html"><i class="fa fa-check"></i><b>19</b> Case Study: Montana US-287</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#route-description-3"><i class="fa fa-check"></i><b>19.1</b> Route Description</a></li>
+<li class="chapter" data-level="19.2" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#level-of-service-3"><i class="fa fa-check"></i><b>19.2</b> Level of service</a>
+<ul>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#segmentation-3"><i class="fa fa-check"></i>Segmentation</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#traffic-data-3"><i class="fa fa-check"></i>Traffic Data</a></li>
+<li class="chapter" data-level="" data-path="CaseStudyMT287.html"><a href="CaseStudyMT287.html#results-3"><i class="fa fa-check"></i>Results</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Appendixes</b></span></li>
+<li class="chapter" data-level="A" data-path="AppendixA.html"><a href="AppendixA.html"><i class="fa fa-check"></i><b>A</b> Mitigation Strategies</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="AppendixA.html"><a href="AppendixA.html#general"><i class="fa fa-check"></i><b>A.1</b> General</a></li>
+<li class="chapter" data-level="A.2" data-path="AppendixA.html"><a href="AppendixA.html#multilane-highways"><i class="fa fa-check"></i><b>A.2</b> Multilane Highways</a></li>
+<li class="chapter" data-level="A.3" data-path="AppendixA.html"><a href="AppendixA.html#two-lane-highways"><i class="fa fa-check"></i><b>A.3</b> Two-Lane Highways</a></li>
+<li class="chapter" data-level="A.4" data-path="AppendixA.html"><a href="AppendixA.html#intersections"><i class="fa fa-check"></i><b>A.4</b> Intersections</a></li>
+<li class="chapter" data-level="A.5" data-path="AppendixA.html"><a href="AppendixA.html#arterials"><i class="fa fa-check"></i><b>A.5</b> Arterials</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/NCHRP-08-135/Guidebook" target="blank">View Book Source</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Chapter4Bicycle" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Bicycle Operations Analysis on Rural Highways<a href="Chapter4Bicycle.html#Chapter4Bicycle" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This chapter provides an overview of commonly used methods for assessing bicycle operations on rural highways, guidance on current methods and recommendations for enhancements to analysis methods.</p>
+<p>The 2017 National Household Travel Survey estimated that about 16% of the U.S. population cycled on their travel day for any reason; and that people in urban households were more likely to walk or bike daily. On the other hand, recreational bicycling has grown, including long-distance bicycle travel on rural areas.</p>
+<p>Cyclists on rural highways usually travel on designated facilities, although if they travel with motorized vehicles, they usually travel more slowly than the prevailing traffic flow, staying as far to the right as possible, and using paved shoulders when available. Design criteria commonly use automobile travel speed and volume to establish which facility is more appropriate for cycling under given traffic conditions.</p>
+<p>There are multiple published methods to establish and measure the level of service for cyclists and/or to measure the experience of cyclists making use of the infrastructure available in their area (Table <a href="Chapter4Bicycle.html#tab:BicyclistExperience">4.1</a>). Among the methods, there are three main approaches:</p>
+<ul>
+<li>Highway Capacity Manual Level of Service (LOS)</li>
+<li>Level of Traffic Stress (LTS)</li>
+<li>Bicycle Compatibility Index (BCI)</li>
+</ul>
+<table>
+<caption><span id="tab:BicyclistExperience">Table 4.1: </span> Methods to measure experience of the cyclist on rural highways</caption>
+<colgroup>
+<col width="2%" />
+<col width="4%" />
+<col width="8%" />
+<col width="29%" />
+<col width="38%" />
+<col width="4%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><strong>ID</strong></th>
+<th align="left"><strong>Type</strong></th>
+<th align="left"><strong>Year</strong></th>
+<th align="left"><strong>Reference</strong></th>
+<th align="left"><strong>Name</strong></th>
+<th align="left"><strong>Rural?</strong></th>
+<th align="right"><strong>Study Area</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">LOS</td>
+<td align="left">1985</td>
+<td align="left"><span class="citation">Botma (<a href="#ref-Botma1995">1995</a>)</span></td>
+<td align="left">Proposed Dutch HCM Bicycle LOS</td>
+<td align="left">No</td>
+<td align="right">The Netherlands</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">LOS</td>
+<td align="left">1996</td>
+<td align="left"><span class="citation">Dixon (<a href="#ref-dixon_bicycle_1996">1996</a>)</span></td>
+<td align="left">City of Gainesville Bicycle LOS</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">LOS</td>
+<td align="left">1997</td>
+<td align="left"><span class="citation">Landis, Vattikuti, and Brannick (<a href="#ref-landis_real-time_1997">1997</a>)</span></td>
+<td align="left">Proposed HCM Bicycle LOS</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">LOS</td>
+<td align="left">2007</td>
+<td align="left"><span class="citation">Jensen (<a href="#ref-jensen_pedestrian_2007">2007</a>)</span></td>
+<td align="left">Danish Bicycle LOS</td>
+<td align="left">Yes</td>
+<td align="right">Denmark</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">LOS</td>
+<td align="left">2009</td>
+<td align="left"><span class="citation">(BEQI) and Draft (<a href="#ref-SanFranciscoDepartmentofPublicHealth2010">2009</a>)</span></td>
+<td align="left">San Francisco BEQI</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">LOS</td>
+<td align="left">2010, 2016</td>
+<td align="left"><span class="citation">Transportation Research Board and National Academies of Sciences, Engineering, and Medicine (<a href="#ref-hcm2010">2010</a>)</span></td>
+<td align="left">HCM Bicycle LOS</td>
+<td align="left">Yes</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">LOS</td>
+<td align="left">2012</td>
+<td align="left"><span class="citation">Kang and Lee (<a href="#ref-kang_development_2012">2012</a>)</span></td>
+<td align="left">South Korea HCM adaptation of Bicycle LOS</td>
+<td align="left">No</td>
+<td align="right">South Korea</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">LOS</td>
+<td align="left">2014</td>
+<td align="left"><span class="citation">Foster et al. (<a href="#ref-foster_level_service_2015">2015</a>)</span></td>
+<td align="left">Bicycle LOS</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">LOS</td>
+<td align="left">2015</td>
+<td align="left"><span class="citation">Strassen und Verkehrswesen (<a href="#ref-hbs2015">2015</a>)</span></td>
+<td align="left">German HCM Bicycle LOS</td>
+<td align="left">No</td>
+<td align="right">Germany</td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="left">LOS</td>
+<td align="left">2020</td>
+<td align="left"><span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span></td>
+<td align="left">Oregon DOT simplified Bicycle LOS</td>
+<td align="left">Yes</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">11</td>
+<td align="left">LTS</td>
+<td align="left">1980</td>
+<td align="left"><span class="citation">New Jersey Department of Transportation (<a href="#ref-NJDOTBikeGuide">1980</a>)</span></td>
+<td align="left">NJ DOT Bicycle Compatible Roadways and Bikeways</td>
+<td align="left">Yes</td>
+<td align="right">USA</td>
+</tr>
+<tr class="even">
+<td align="left">12</td>
+<td align="left">LTS</td>
+<td align="left">2007</td>
+<td align="left"><span class="citation">New Jork State Department of Transportation (<a href="#ref-NYSDOTBikeGuide">2015</a>)</span></td>
+<td align="left">Highway Design Manual. Bicycle Facility Design</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">13</td>
+<td align="left">LTS</td>
+<td align="left">2012</td>
+<td align="left"><span class="citation">Maaza C. Mekuria, Furth, and Nixon (<a href="#ref-mekuria_low-stress_2012">2012</a>)</span></td>
+<td align="left">Low Stress Bicycling and Network Connectivity</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="even">
+<td align="left">14</td>
+<td align="left">LTS</td>
+<td align="left">2012</td>
+<td align="left"><span class="citation">Minnesota Department of Transportation (<a href="#ref-MnDOTBikeGuide">2020</a>)</span></td>
+<td align="left">Minnesota Bicycle Facility Design Manual</td>
+<td align="left">Yes</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">15</td>
+<td align="left">LTS</td>
+<td align="left">2014</td>
+<td align="left"><span class="citation">Kittelson &amp; Associates and Toole Design Group (<a href="#ref-MontgomeryBikeGuide">2014</a>)</span></td>
+<td align="left">Montgomery County Bicycle Planning Guidance</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="even">
+<td align="left">16</td>
+<td align="left">LTS</td>
+<td align="left">2015</td>
+<td align="left"><span class="citation">Massachusetts Department of Transportation (<a href="#ref-MassDOTBikeGuide">2015</a>)</span></td>
+<td align="left">Separated bicycle lane Planning And Design Guide</td>
+<td align="left">Yes</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">17</td>
+<td align="left">LTS</td>
+<td align="left">2015</td>
+<td align="left"><span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span></td>
+<td align="left">Network Connectivity for Low-Stress Bicycling</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="even">
+<td align="left">18</td>
+<td align="left">LTS</td>
+<td align="left">2018</td>
+<td align="left"><span class="citation">Sagar Onta (<a href="#ref-OntaAASHTOBikeGuide">2018</a>)</span></td>
+<td align="left">AASHTO Guide for the development of bicycle facilities</td>
+<td align="left">Yes</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">19</td>
+<td align="left">LTS</td>
+<td align="left">2019</td>
+<td align="left"><span class="citation">Schultheiss et al. (<a href="#ref-schultheiss_bikeway">2019</a>)</span></td>
+<td align="left">FHWA Bikeway selection guide</td>
+<td align="left">Yes</td>
+<td align="right">USA</td>
+</tr>
+<tr class="even">
+<td align="left">20</td>
+<td align="left">LTS</td>
+<td align="left">2020</td>
+<td align="left"><span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span></td>
+<td align="left">Analysis Procedures Manual</td>
+<td align="left">Yes</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">21</td>
+<td align="left">LTS</td>
+<td align="left">2021</td>
+<td align="left"><span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTDesign">2021</a>)</span></td>
+<td align="left">WSDOT Design Manual</td>
+<td align="left">Yes</td>
+<td align="right">USA</td>
+</tr>
+<tr class="even">
+<td align="left">22</td>
+<td align="left">LTS</td>
+<td align="left">2021</td>
+<td align="left"><span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTActivePlan">2020</a>)</span></td>
+<td align="left">WSDOT Active Transportation Plan</td>
+<td align="left">Yes</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">23</td>
+<td align="left">LTS</td>
+<td align="left">2021</td>
+<td align="left"><span class="citation">Maryland Department of Transportation (<a href="#ref-MaryDOTBikeGuide">2022</a>)</span></td>
+<td align="left">MDOT LTS Technical Memo</td>
+<td align="left">Yes</td>
+<td align="right">USA</td>
+</tr>
+<tr class="even">
+<td align="left">24</td>
+<td align="left">BCI</td>
+<td align="left">1998</td>
+<td align="left"><span class="citation">Harkey (<a href="#ref-Harkey1998">1998</a>)</span></td>
+<td align="left">Bicycle Compatibility Index (BCI)</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">25</td>
+<td align="left">BCI</td>
+<td align="left">2003</td>
+<td align="left"><span class="citation">Nathalie Noël, Carole Leclerc, and Martin Lee-Gosselin (<a href="#ref-nathalie_noel_crc_2003">2003</a>)</span></td>
+<td align="left">Compatibility of roads for cyclists</td>
+<td align="left">Yes</td>
+<td align="right">Canada</td>
+</tr>
+<tr class="even">
+<td align="left">26</td>
+<td align="left">BCI</td>
+<td align="left">2003</td>
+<td align="left"><span class="citation">Jones and Carlson (<a href="#ref-jones_development_2003">2003</a>)</span></td>
+<td align="left">Rural Bicycle Compatibility Index (RBCI)</td>
+<td align="left">Yes</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">27</td>
+<td align="left">BCI</td>
+<td align="left">2013</td>
+<td align="left"><span class="citation">Vale, Saraiva, and Pereira (<a href="#ref-vale_active_2015">2015</a>)</span></td>
+<td align="left">Bikeability Index</td>
+<td align="left">No</td>
+<td align="right">Canada</td>
+</tr>
+<tr class="even">
+<td align="left">28</td>
+<td align="left">Other</td>
+<td align="left">1987</td>
+<td align="left"><span class="citation">J. Davis (<a href="#ref-davis_bicycle_1987">1987</a>)</span></td>
+<td align="left">Bicycle Safety index rating (BSIR)</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">29</td>
+<td align="left">Other</td>
+<td align="left">1994</td>
+<td align="left"><span class="citation">Epperson (<a href="#ref-epperson_evaluating_1994">1994</a>)</span></td>
+<td align="left">Modified-roadway condition index</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="even">
+<td align="left">30</td>
+<td align="left">Other</td>
+<td align="left">1994</td>
+<td align="left"><span class="citation">Landis (<a href="#ref-landis_bicycle_1994">1994</a>)</span></td>
+<td align="left">Bicycle interaction hazard score</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">31</td>
+<td align="left">Other</td>
+<td align="left">2000</td>
+<td align="left"><span class="citation">Borgman (<a href="#ref-Borgman2003">2003</a>)</span></td>
+<td align="left">Dutch Cyclist Union Balance Index</td>
+<td align="left">No</td>
+<td align="right">The Netherlands</td>
+</tr>
+<tr class="even">
+<td align="left">32</td>
+<td align="left">Other</td>
+<td align="left">2003</td>
+<td align="left"><span class="citation">Saelens et al. (<a href="#ref-saelens_neighborhood-based_2003">2003</a>)</span></td>
+<td align="left">Neighbourhood Environment Walkability Scale (NEWS)</td>
+<td align="left">No</td>
+<td align="right">USA</td>
+</tr>
+<tr class="odd">
+<td align="left">33</td>
+<td align="left">Other</td>
+<td align="left">2010</td>
+<td align="left"><span class="citation">Hoedl, Titze, and Oja (<a href="#ref-hoedl_bikeability_2010">2010</a>)</span></td>
+<td align="left">Bikeability and Walkability Evaluation Table (BiWET)</td>
+<td align="left">No</td>
+<td align="right">Austria</td>
+</tr>
+</tbody>
+</table>
+<p>The bicycle level of service is the method that was implemented first in the US, followed by the bicycle compatibility index. Recently, the level of traffic stress is gaining more interest by practitioners and planners due to its simplicity. An overview of the three approaches is provided in Section 1. Section 2 summarizes the conclusions of two qualitative studies to identify potential revisions to the HCM methodology and user classifications. Finally, Section 3 provides recommendations on how to use current methods to evaluate the quality of service for rural cyclists.</p>
+<div id="overview-of-bicycle-operations-analysis-methods" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Overview of Bicycle Operations Analysis Methods<a href="Chapter4Bicycle.html#overview-of-bicycle-operations-analysis-methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="highway-capacity-manual-level-of-service-analysis-methodologies" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Highway Capacity Manual Level of Service Analysis Methodologies<a href="Chapter4Bicycle.html#highway-capacity-manual-level-of-service-analysis-methodologies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Highway Capacity Manual (HCM) includes bicycle level of service (LOS) analysis methodologies for the following facilities:</p>
+<ul>
+<li>Multilane highways</li>
+<li>Two-lane highways</li>
+<li>Urban Street Segments</li>
+<li>Signalized Intersections</li>
+<li>Urban Street Facilities</li>
+<li>Off-street Paths</li>
+</ul>
+<p>Bicycle and pedestrian operations, as counterparts to motor vehicle measures, are included in all editions of the HCM since the 1985 HCM. The concepts include delay, density, space or capacity for bicycle and pedestrian modes, and have been currently expanded to bicycle flow parameters, capacity concepts and delay. Since the 2010 HCM, measures are included that consider how well bicycle facilities operate from a bicyclist’s perspective. These measures incorporate multiple factors that a roadway agency can influence, such as bicycle lane width, traffic volume, traffic speed, and pavement quality. The analysis is intended to reflect the perspective of the mainstream cyclist while cycling on a given facility.</p>
+<p>Bicycle level of service (BLOS) was firstly proposed by <span class="citation">Botma (<a href="#ref-Botma1995">1995</a>)</span> in the Dutch Manual on Bicycle Infrastructure. This measure of quality was developed adapting the US-HCM concept of LOS for bicycles. After considering mean speed, density or percent of bicyclists following, the selected performance measure was hindrance; which used frequencies of events between bicyclists and other facility users to arrive at various levels of service.</p>
+<p>Seminal works in the US include the traveler perception model from <span class="citation">Landis, Vattikuti, and Brannick (<a href="#ref-landis_real-time_1997">1997</a>)</span>. They used 150 cyclists in actual urban traffic and roadway conditions, in a looped course of 30 road segments along collectors, arterials and some local streets. Their model used the posted speed limit as surrogate for actual motorized vehicle speeds and included as significant variables trip generation intensity of the land use and frequency per mile of non-controlled vehicular access. A key finding was the importance of pavement surface conditions and striping of bicycle lanes for quality of service for bicyclists. In parallel, <span class="citation">Allen et al. (<a href="#ref-allen_operational_1998">1998</a>)</span> recommended the frequency of events (passings and meetings) for uninterrupted off-street bicycle facilities. Hindrance depended on bicycle traffic volume in the same and opposite direction. For on-street bicycle facilities, they suggest complementing the frequency of events with the impact of prevailing geometric and traffic conditions on the average and standard deviation of bicycle speeds.</p>
+<p>Subsequent works included BLOS at arterials (<span class="citation">Jensen (<a href="#ref-jensen_pedestrian_2007">2007</a>)</span>; <span class="citation">Kang and Lee (<a href="#ref-kang_development_2012">2012</a>)</span>), roundabouts (<span class="citation">Jensen (<a href="#ref-jensen_pedestrian_2007">2007</a>)</span>), networks (<span class="citation">Zolnik and Cromley (<a href="#ref-zolnik_poisson_2007">2007</a>)</span>) and tools for identifying bicycle route suitability based on BLOS (<span class="citation">Lowry et al. (<a href="#ref-Lowry2012">2012</a>)</span>; <span class="citation">Callister and Lowry (<a href="#ref-callister_tools_nodate">2013</a>)</span>).</p>
+<p>This section provides a brief overview of the bicycle LOS analysis methodologies in the 7th Edition of the HCM. A more detailed overview of each methodology is contained in Part 3 of the Guidebook.</p>
+<p><strong>Multilane and Two-Lane Highways</strong></p>
+<p>As stated in the HCM, “the calculation of bicycle LOS on multilane and two-lane highways shares the same methodology, since multilane and two-lane highways operate in fundamentally the same manner for bicyclists and motorized vehicle drivers. Bicyclists travel much more slowly than the prevailing traffic flow and stay as far to the right as possible, including using paved shoulders when available. This similarity indicates the need for only one model.” The model is applicable to bicycle operations in a shared lane, bicycle lane or paved shoulder. The quality of bicycle flow, safety, and the bicycling environment are all considerations for these types of facilities. Complete details on the bicycle LOS methodology and calculation procedures are provided in Chapter 15 of the HCM.</p>
+<p>Bicycle levels of service for multilane and two-lane highway segments are based on a bicycle LOS (BLOS) score. The bicycle LOS model uses a traveler perception index calibrated by using a linear regression model. The BLOS model fits independent variables associated with roadway characteristics to the results of a user survey that rates the comfort of various bicycle facilities. The BLOS score is based, in order of importance, on five variables:</p>
+<ul>
+<li>Average effective width of the outside through lane,</li>
+<li>Motorized vehicle volumes,</li>
+<li>Motorized vehicle speeds,</li>
+<li>Heavy vehicle (truck) volumes, and</li>
+<li>Pavement condition.</li>
+</ul>
+<p>The resulting bicycle LOS index computes a numerical LOS score, generally ranging from 0.5 to 6.5, which is stratified to produce a LOS A to F result by using Table <a href="Chapter4Bicycle.html#tab:BLOSscore">4.2</a>.</p>
+<table>
+<caption><span id="tab:BLOSscore">Table 4.2: </span> HCM Bicycle LOS Score Thresholds for Multilane and Two-Lane Highways</caption>
+<thead>
+<tr class="header">
+<th align="center"><strong>LOS</strong></th>
+<th align="center"><strong>BLOS Score</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">BLOS Score <span class="math inline">\(\leq\)</span> 1.5</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">1.5 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 2.5</td>
+</tr>
+<tr class="odd">
+<td align="center">C</td>
+<td align="center">2.5 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 3.5</td>
+</tr>
+<tr class="even">
+<td align="center">D</td>
+<td align="center">3.5 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 4.5</td>
+</tr>
+<tr class="odd">
+<td align="center">E</td>
+<td align="center">4.5 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 5.5</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">BLOS Score &gt; 5.5</td>
+</tr>
+</tbody>
+</table>
+<p>Source: HCM Exhibit 12-31 and 15-7</p>
+<p>Required input data to calculate BLOS include lane and shoulder width, speed limit, number of directional through lanes, pavement condition (FHWA 5-point scale), hourly motor vehicle demand, directional volume split, peak hour factor, percent of heavy vehicles and percent of segment with occupied on-highway parking.</p>
+<p>Higher vehicle volumes, a greater proportion of trucks, higher vehicle speeds, and poor pavement quality, all act to decrease cyclist’s perceived comfort. LOS is high sensible to shoulder width and heavy vehicle percentage (modification of 2 LOS letters), and moderate sensible to lane width, pavement condition and percent of segment with occupied on-highway parking (modification of 1 LOS letter).</p>
+<p>The methodology was developed with data collected on urban and suburban streets (<span class="citation">Petritsch et al. (<a href="#ref-petritsch_bicycle_2007">2007</a>)</span>), and is limited to the range of observed values, such as width of the outside through lane between 10 and 16 ft; shoulder width between 0 and 6 ft; motorized vehicle volumes up to 36,000 annual average daily traffic; posted speed limits from 25 to 50 mi/h; heavy vehicle percentage up to 2%; and pavement condition from 2 to 5 on the Federal Highway Administration (FHWA) 5-point pavement rating scale.</p>
+<p><strong>Urban Street Segments</strong></p>
+<p>The bicycle urban street analysis methodology is contained in Chapter 18 (Urban Street Segments). It relates to cyclists’ experiences at signalized intersections and the links between signalized intersections. The bicycle analysis methodology process is given in Exhibit 18-24. The methodology can be used to evaluate the service provided to bicyclists when sharing a lane with motorized vehicles or when traveling in an exclusive bicycle lane.</p>
+<p>LOS criteria are based on the bicycle LOS index (HCM Exhibit 18-3), as summarized in Table <a href="Chapter4Bicycle.html#tab:BLOSscoreUrbanLink">4.3</a>.</p>
+<table>
+<caption><span id="tab:BLOSscoreUrbanLink">Table 4.3: </span> HCM Bicycle LOS Score Thresholds for Urban Segments (link-based)</caption>
+<thead>
+<tr class="header">
+<th align="center"><strong>LOS</strong></th>
+<th align="center"><strong>BLOS Score</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">BLOS Score <span class="math inline">\(\leq\)</span> 1.5</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">1.5 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 2.5</td>
+</tr>
+<tr class="odd">
+<td align="center">C</td>
+<td align="center">2.5 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 3.5</td>
+</tr>
+<tr class="even">
+<td align="center">D</td>
+<td align="center">3.5 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 4.5</td>
+</tr>
+<tr class="odd">
+<td align="center">E</td>
+<td align="center">4.5 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 5.5</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">BLOS Score &gt; 5.5</td>
+</tr>
+</tbody>
+</table>
+<p>Source: HCM Exhibit 18-3</p>
+<p>Required input data to calculate BLOS include bicycle lane width, paved outside shoulder width, striped parking lane width, median type, curb presence, number of access point approaches, pavement conditions, number of midsegment through lanes, midsegment motorized vehicle flow rate, heavy vehicle percentage, proportion of on-street parking occupied, pavement condition and motorized vehicle midsegment running speed.</p>
+<p>As for multilane and two-lane highways, higher vehicle volumes, a greater proportion of heavy vehicles, and higher speeds decrease perceived comfort. Furthermore, the presence of parking and pavement quality also decrease the level of service. LOS is high sensible to bicycle lane width and paved outside shoulder width (modification of 2 LOS letters) and moderate sensible to outside through lane width and pavement condition (modification of 1 LOS letter).</p>
+<p><strong>Signalized Intersections</strong></p>
+<p>The bicycle signalized intersection analysis methodology is contained in Chapter 19 (Signalized Intersections). The bicycle analysis methodology process is given in Exhibit 19-40. Intersection performance is evaluated separately for each intersection approach; and the bicyclists are assumed to travel in the street sharing a lane with motorized vehicles or when traveling in an exclusive bicycle lane and in the same direction as adjacent motorized vehicles. Table <a href="Chapter4Bicycle.html#tab:BLOSscoreSignalizedIntersection">4.4</a> shows the Bicycle LOS Score thresholds for signalized intersections.</p>
+<table>
+<caption><span id="tab:BLOSscoreSignalizedIntersection">Table 4.4: </span> HCM Bicycle LOS Score Thresholds for Signalized Intersections</caption>
+<thead>
+<tr class="header">
+<th align="center"><strong>LOS</strong></th>
+<th align="center"><strong>BLOS Score</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">BLOS Score <span class="math inline">\(\leq\)</span> 1.5</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">1.5 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 2.5</td>
+</tr>
+<tr class="odd">
+<td align="center">C</td>
+<td align="center">2.5 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 3.5</td>
+</tr>
+<tr class="even">
+<td align="center">D</td>
+<td align="center">3.5 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 4.5</td>
+</tr>
+<tr class="odd">
+<td align="center">E</td>
+<td align="center">4.5 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 5.5</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">BLOS Score &gt; 5.5</td>
+</tr>
+</tbody>
+</table>
+<p>Source: HCM Exhibit 19-3</p>
+<p>The input data requires traffic characteristics, as the motorized vehicle demand flow rate, bicycle flow rate, and proportion of on-street parking occupied; geometric design data, as number of lanes, street width, and width of cross-street elements; and signal control data, with the cycle length, yellow change and red clearance, and duration of phase serving bicycles.</p>
+<p>Higher vehicle volumes, reduced perceived separation from motorized vehicle traffic, shorter cross-street widths, and increased on-street parking reduce the level of service.</p>
+<p><strong>All-Way Stop-Controlled (AWSC) Intersections</strong></p>
+<p>There is no specific analysis procedure for bicycle mode. The procedures described to estimate motor vehicle delay can be applied to bicycles that queue with motor vehicles on AWSC approaches. Specific considerations could be applied as bicycles do not queue linearly at STOP signs or the presence of a bicycle lane may reduce bicycle delay.</p>
+<p><strong>Roundabout Intersections</strong></p>
+<p>No methodology specific to bicyclists has been developed to assess the performance of bicyclists at roundabouts, as limited data are available in the United States to support model calibration. A bicyclist may either navigate the roundabout in the same manner as a motorized vehicle or use sidewalks and crossings as would a pedestrian. If bicyclists are circulating in the same manner as motorized vehicles, their effect can be approximated by combining bicyclist flow rates with other vehicles by using a passenger-car-equivalent factor of 0.5 for the bicycles. If bicyclists are navigating the roundabout in the same manner as pedestrians, their effect can be analyzed by using the methodology described previously for pedestrians.</p>
+<p><strong>Urban Street Facilities</strong></p>
+<p>The bicycle urban street facility analysis methodology is contained in Chapter 16 (Urban Street Facility). The bicycle analysis methodology process is given in Exhibit 16-13. The bicycle methodology aggregates the performance of the segments that make up the facility. In this regard, it considers the performance of each link and boundary intersection. The methodologies for evaluating the link and boundary (signalized) intersection are described in Chapters 18 and 19, respectively. Table <a href="Chapter4Bicycle.html#tab:BLOSscoreUrbanSegment">4.5</a> summarized the thresholds of Bicycle LOS Score.</p>
+<table>
+<caption><span id="tab:BLOSscoreUrbanSegment">Table 4.5: </span> HCM Bicycle LOS Score Thresholds for Urban Segments (segment-based)</caption>
+<thead>
+<tr class="header">
+<th align="center"><strong>LOS</strong></th>
+<th align="center"><strong>BLOS Score</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">BLOS Score <span class="math inline">\(\leq\)</span> 2.00</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">2.00 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 2.75</td>
+</tr>
+<tr class="odd">
+<td align="center">C</td>
+<td align="center">2.75 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 3.50</td>
+</tr>
+<tr class="even">
+<td align="center">D</td>
+<td align="center">3.50 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 4.25</td>
+</tr>
+<tr class="odd">
+<td align="center">E</td>
+<td align="center">4.25 &lt; BLOS Score <span class="math inline">\(\leq\)</span> 5.00</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">BLOS Score &gt; 5.00</td>
+</tr>
+</tbody>
+</table>
+<p>Source: HCM Exhibit 19-3</p>
+<p>The methodology can be used to evaluate the service provided to bicyclists when sharing a lane with motorized vehicles or when traveling in an exclusive bicycle lane.</p>
+<p>The bicycle LOS score for the segment is computed by using Equation 18-46; which averages the bicycle LOS score for the boundary intersection and the link; and accounts for unsignalized conflicts along the link. Bicycle LOS for link is weighted using the segment running time of through bicycles, while the bicycle LOS score for the intersection uses the bicycle control delay.</p>
+</div>
+<div id="level-of-traffic-stress-analysis-methodology" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Level of Traffic Stress Analysis Methodology<a href="Chapter4Bicycle.html#level-of-traffic-stress-analysis-methodology" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Level of Traffic Stress (LTS) analysis methodology provides a set of criteria that indicates how stressful (or uncomfortable) a given facility is for cyclists. The LTS analysis methodology relies on simple rules based on data that are available for most agencies or are easy to obtain; and it is gaining interest among practitioners and planners in the US due to its simplicity.</p>
+<p>The LTS methodology has its foundation on the design principles for the Dutch cycling network. The Dutch design guidelines propose infrastructure features so that the resulting cycling infrastructure enables “direct, comfortable journeys by bicycle in a safe and attractive (traffic) environment”; as the main possibility to compete with the car and increase bicycle mode share (<span class="citation">Groot and Centrum voor Regelgeving en Onderzoek in de Grond- (<a href="#ref-crow2007">2007</a>)</span>, <span class="citation">Groot and CROW kenniscentrum voor verkeer (<a href="#ref-crow2016">2016</a>)</span>). The target user is the mainstream population, which includes cyclists for all ages and purposes; and has the cyclist as a measure for the design. Comfort, in terms of minimizing stress, anxiety and safety concerns for the target design user, is one of the five design principles for Dutch cycling networks, together with cohesion, safety, attractiveness and directness. Following this concept, LTS-based design criteria are developed according to the maximum tolerance for traffic stress that a certain type of bicyclist may have.</p>
+<p>The Dutch cycling network is already a cycle-friendly infrastructure that is part of the “cycle culture” of the country. As result, it does not provide indications of which design features produce which level of stress to users. To fill this gap, the Mineta Transport Institute started to operationalize the LTS theory into design criteria for the US conditions (<span class="citation">Maaza C. Mekuria, Furth, and Nixon (<a href="#ref-mekuria_low-stress_2012">2012</a>)</span>; <span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span>). For more details, visit <a href="https://peterfurth.sites.northeastern.edu/level-of-traffic-stress/">here</a>.</p>
+<p>Design criteria is applied for a given set of cyclist types. Usually, four categories are considered, being 1 the lowest stress level and 4 the highest stress level. The lowest stress level (LTS1) is usually associated with child cyclists while the highest stress level (LTS4) is only acceptable for those that are highly tolerant to stress. The categories follow the classification proposed by Geller in 2006 to describe the overall cycling population of Portland, OR (<span class="citation">Geller (<a href="#ref-Geller2006">2006</a>)</span>). He distinguished four classes of cyclists: “no way, no how”, “interested but concerned”, “enthused and confident” and “strong and fearless”. The distinction deviates from actual cycling behavior and is aimed to design cycling facilities that attract potential cyclists in order to increase cycling ridership.</p>
+<p>The LTS methodology operationalized by <span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span> considers the following descriptions:</p>
+<ul>
+<li><em>LTS1: tolerable to child bicyclists</em>. Little attention to traffic is demanded from cyclists and the facilities are attractive for relaxing bike rides. In mixed traffic, there is low-speed differential with motor vehicles and demands only occasional interactions with them.</li>
+<li><em>LTS2: tolerable to “interested but concerned”</em>. “Demands more attention than might be expected from children and presents little traffic stress”.</li>
+<li><em>LTS3: tolerable to “enthused and confident”</em>. “Offers cyclists and exclusive cycling zone requiring little negotiation with motor traffic, but in close proximity to moderately-high speed traffic”.</li>
+<li><em>LTS4: tolerable to “strong and fearless”</em>. “Requires riding near to high-speed traffic, or regularly negotiating with moderate-speed traffic or making dangerous crossings”.</li>
+</ul>
+<p>Design users and similar concepts lay the foundation for the FHWA Bikeway Selection Guide (<span class="citation">Schultheiss et al. (<a href="#ref-schultheiss_bikeway">2019</a>)</span>), AASHTO Guide for the Development of Bicycle Facilities (draft 2020, <span class="citation">Sagar Onta (<a href="#ref-OntaAASHTOBikeGuide">2018</a>)</span>), MnDOT Bikeway facility design manual (<span class="citation">Minnesota Department of Transportation (<a href="#ref-MnDOTBikeGuide">2020</a>)</span>), MassDOT Separated bike lane planning and design guide (<span class="citation">Massachusetts Department of Transportation (<a href="#ref-MassDOTBikeGuide">2015</a>)</span>), Oregon DOT Analysis Procedures Manual (<span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span>), Washington State DOT Roadway Bicycle Facilities (<span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTDesign">2021</a>)</span>), or Montgomery County Bicycle Planning Guidance (<span class="citation">Kittelson &amp; Associates and Toole Design Group (<a href="#ref-MontgomeryBikeGuide">2014</a>)</span>) or the Maryland DOT LTS Technical Memo (<span class="citation">Maryland Department of Transportation (<a href="#ref-MaryDOTBikeGuide">2022</a>)</span>). These references are summarized in Table <a href="Chapter4Bicycle.html#tab:BicycleUserProfiles">4.6</a>. Figure <a href="Chapter4Bicycle.html#fig:BicycleUserProfilesFHWA">4.1</a> illustrates the three user types that the Bikeway Selection Guide from FHWA considers: “interested but concerned” (for LTS2), “somewhat confident” (for LTS3), and “highly confident” (for LTS4). They depend on comfort level, bicycling skill and experience, age, and trip purpose; but no specific thresholds are provided.</p>
+<table>
+<caption><span id="tab:BicycleUserProfiles">Table 4.6: </span> Bicyclist Design User References</caption>
+<colgroup>
+<col width="22%" />
+<col width="12%" />
+<col width="32%" />
+<col width="34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Reference</strong></th>
+<th align="center"><strong>Year</strong></th>
+<th align="left"><strong>Criteria</strong></th>
+<th align="left"><strong>Classes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="citation">New Jersey Department of Transportation (<a href="#ref-NJDOTBikeGuide">1980</a>)</span></td>
+<td align="center">1980s</td>
+<td align="left">Experience</td>
+<td align="left">Children, Basic, Advanced</td>
+</tr>
+<tr class="even">
+<td><span class="citation">New Jork State Department of Transportation (<a href="#ref-NYSDOTBikeGuide">2015</a>)</span></td>
+<td align="center">2007, 2015</td>
+<td align="left">Skills, confidence, and preferences</td>
+<td align="left">Children, Basic, Advanced</td>
+</tr>
+<tr class="odd">
+<td><span class="citation">Minnesota Department of Transportation (<a href="#ref-MnDOTBikeGuide">2020</a>)</span></td>
+<td align="center">2012</td>
+<td align="left">Attitudes towards bicycling at certain traffic environments</td>
+<td align="left">Children, Interested but concerned, Enthused and confident, Strong and fearless</td>
+</tr>
+<tr class="even">
+<td><span class="citation">Kittelson &amp; Associates and Toole Design Group (<a href="#ref-MontgomeryBikeGuide">2014</a>)</span></td>
+<td align="center">2014</td>
+<td align="left">Attitudes towards bicycling at certain traffic environments</td>
+<td align="left">Most children, Most adults (Interested but concerned), All bicyclists (Enthused and confident), Experienced bicyclists (strong and fearless)</td>
+</tr>
+<tr class="odd">
+<td><span class="citation">Massachusetts Department of Transportation (<a href="#ref-MassDOTBikeGuide">2015</a>)</span></td>
+<td align="center">2015</td>
+<td align="left">Tolerances caused by interactions with motor vehicles</td>
+<td align="left">Children, Interested but concerned, Casual and somewhat confident, Experienced and confident</td>
+</tr>
+<tr class="even">
+<td><span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span></td>
+<td align="center">2016</td>
+<td align="left">Attitudes towards bicycling at certain traffic environments</td>
+<td align="left">Children, Interested but concerned, Enthused and confident, Strong and fearless</td>
+</tr>
+<tr class="odd">
+<td><span class="citation">Sagar Onta (<a href="#ref-OntaAASHTOBikeGuide">2018</a>)</span></td>
+<td align="center">2018</td>
+<td align="left">Comfort, skill</td>
+<td align="left">Children, Interested but concerned, Somewhat confident, Highly confident bicyclist</td>
+</tr>
+<tr class="even">
+<td><span class="citation">Schultheiss et al. (<a href="#ref-schultheiss_bikeway">2019</a>)</span></td>
+<td align="center">2019</td>
+<td align="left">Comfort, skill, and age</td>
+<td align="left">Children, Interested but concerned, Somewhat confident, Highly confident bicyclist</td>
+</tr>
+<tr class="odd">
+<td><span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span></td>
+<td align="center">2020</td>
+<td align="left">Attitudes towards bicycling at certain traffic environments</td>
+<td align="left">Children, Interested but concerned, Enthused and confident, Strong and fearless</td>
+</tr>
+<tr class="even">
+<td><span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTDesign">2021</a>)</span></td>
+<td align="center">2021</td>
+<td align="left">Attitudes towards bicycling at certain traffic environments</td>
+<td align="left">Children, Interested but concerned, Enthused and confident, Strong and fearless</td>
+</tr>
+<tr class="odd">
+<td><span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTActivePlan">2020</a>)</span></td>
+<td align="center">2021</td>
+<td align="left">Attitudes towards bicycling at certain traffic environments</td>
+<td align="left">Children, Interested but concerned, Enthused and confident, Strong and fearless</td>
+</tr>
+<tr class="even">
+<td><span class="citation">Maryland Department of Transportation (<a href="#ref-MaryDOTBikeGuide">2022</a>)</span></td>
+<td align="center">2022</td>
+<td align="left">Attitudes towards bicycling at certain traffic environments</td>
+<td align="left">All ages and abilities, Almost everyone, Interested but concerned, Enthused and confident, Strong and fearless, Bicycle access prohibited</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:BicycleUserProfilesFHWA"></span>
+<img src="Images/Bicycle/UserProfilesFHWA.png" alt="Bicyclist design user profiles (FHWA, 2019)" width="60%" />
+<p class="caption">
+Figure 4.1: Bicyclist design user profiles (FHWA, 2019)
+</p>
+</div>
+<p><span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span> set criteria to classify urban streets by LTS, following the seminal work of <span class="citation">Maaza C. Mekuria, Furth, and Nixon (<a href="#ref-mekuria_low-stress_2012">2012</a>)</span> at the Mineta Transportation Institute. Criteria for LTS2 are based on the Dutch design standards, as “the Dutch standards were proven on a population basis to be acceptable to the general traveler” (<span class="citation">Maaza C. Mekuria, Appleyard, and Nixon (<a href="#ref-mekuria2017improving">2017</a>)</span>). The Dutch “cycle culture” has achieved high proportion of bicycle use by providing a good cycle infrastructure, with equal age and gender distributions of users. Criteria for less traffic stress (LTS1) were provided by increasing the separation to motorized traffic and easier crossing, while criteria for more traffic stress (LTS 3 or 4) presented less separation to motorized traffic and/or higher speed differentials. Specifically, LTS3 criteria were targeted to “enthused and confident” cyclists that would cycle on arterials, and LTS4 criteria were mapped to cyclists that feel comfortable riding in mixed traffic at 35 mi/h or more, or next to traffic at higher speeds. Interestingly, the Maryland DOT LTS Technical Memo includes LTS5, as roadways on where cycling is not suitable and therefore it is prohibited by the roadway agency.</p>
+<p>The criteria required easily obtainable data, such as speed limit, street width, on-street parking, bike lane blockage, number of through lanes or average daily traffic, which are available to most planners. Specific input data by facility will be summarized in the following sections.</p>
+<p>LTS analysis methodology has been applied to evaluate bicycle network connectivity (<span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span>), detours (<span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span>) and propose bicycle facilities based on clearance, motorized vehicle speeds and traffic volumes (<span class="citation">Minnesota Department of Transportation (<a href="#ref-MnDOTBikeGuide">2020</a>)</span>, <span class="citation">Kittelson &amp; Associates and Toole Design Group (<a href="#ref-MontgomeryBikeGuide">2014</a>)</span>, <span class="citation">Massachusetts Department of Transportation (<a href="#ref-MassDOTBikeGuide">2015</a>)</span>, <span class="citation">Sagar Onta (<a href="#ref-OntaAASHTOBikeGuide">2018</a>)</span>, <span class="citation">Schultheiss et al. (<a href="#ref-schultheiss_bikeway">2019</a>)</span>, <span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span>, <span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTDesign">2021</a>)</span>).</p>
+<p><strong>Multilane and Two-Lane Highways</strong></p>
+<p>The LTS analysis methodology has been applied to propose recommendation criteria of facility type in rural applications (<span class="citation">Minnesota Department of Transportation (<a href="#ref-MnDOTBikeGuide">2020</a>)</span>, <span class="citation">Schultheiss et al. (<a href="#ref-schultheiss_bikeway">2019</a>)</span>, <span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span>, <span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTDesign">2021</a>)</span>). Segregation to main traffic and shoulder width are important considerations to accommodate rural bicyclists based on the expected traffic volume and traffic speed in the rural highway. For LTS rural applications, rural bicyclists are likely more stress tolerant than their urban counterparts. Therefore, the design-based criteria are usually developed to accommodate either somewhat confident cyclists (LTS3) or highly confident (LTS4).</p>
+<p>The FHWA Bikeway Selection Guide (<span class="citation">Schultheiss et al. (<a href="#ref-schultheiss_bikeway">2019</a>)</span>) proposes shared lanes or paved shoulder to accommodate cyclists (see Figure 10 of the Guide). The stress of cyclists depends on:</p>
+<ul>
+<li>Presence of shoulder and shoulder width</li>
+<li>Operating speed (or posted speed limit)</li>
+<li>Traffic volume</li>
+<li>Percentage of heavy vehicles</li>
+</ul>
+<p>Criteria are based on motorized vehicle speeds (25–60 mi/h) and traffic volumes (500–20,000 veh/day) (Figure <a href="Chapter4Bicycle.html#fig:BicycleShoulderWidths">4.2</a>). Shared lanes are preferred on highways with less than 1000 vehicles per day. Paved shoulders from 4 to 10 feet wide are preferred as volume and posted speed limit increase. It is also noted that wide shoulder or a separated pathway are preferred if the percentage of heavy vehicles is greater than 5%.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:BicycleShoulderWidths"></span>
+<img src="Images/Bicycle/DesignCriteriaRuralFHWA.png" alt="Shoulder Widths for Rural Roadways (FHWA, 2019)" width="50%" />
+<p class="caption">
+Figure 4.2: Shoulder Widths for Rural Roadways (FHWA, 2019)
+</p>
+</div>
+<p>Some State DOTs developed a similar framework. In the state of Washington, bicycle facility needs should be accounted for within the design if the state highway is identified as a bike route, intersects with an existing route, or if bicycle users are modal priority in the route. It is indicated that bicycle users are usually accommodated on the shoulder and shoulder improvements include widening to a minimum of 4 feet and maintaining the shoulder usable, either by improving road side maintenance or removing surface obstacles. If shoulder rumble strips are present, provide for at least 4 feet of usable shoulder between the rumble strip and the outside edge of shoulder. If guardrail or barrier is present, increase the dimension to 5 feet of usable shoulder. Different facility types are recommended depending on traffic volume and vehicle speeds for interested but concerned and for confident cyclists.</p>
+<p><span class="citation">Minnesota Department of Transportation (<a href="#ref-MnDOTBikeGuide">2020</a>)</span> proposes paved shoulder width, shared lanes, shared-use paths and wide outside lane based on traffic volume, number of lanes and vehicle speeds for rural applications (see Table 4-2). Shared lanes are recommended for very low traffic volume (500 veh per day or less) and low speed (speed limit of 40 mi/h or less); while wide outside lanes are allowed for low traffic volume (1000 veh per day or less) and speed limits below 40 mi/h. For highways with high speed limit (45 mi/h or more) and high traffic volume (10,000 veh per day or more) should consider the use of shared=use paths. Paved shoulders are preferred in other combinations of traffic volume and vehicle speeds; with increasing width (4 to 8 ft) as volume and or speed increases.</p>
+<p>In the case of <span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span>, it is indicated that rural bicyclists may tolerate higher level of stress than their urban counterparts and it uses a different nomenclature for rural (RLTS) and urban (BLTS) applications. The prefix helps to set off the environmental difference, as an urban BLTS 2 is not the same experience as a rural BLTS R2. For rural applications with posted or operating speeds less than 45 mi/h, urban applications methods can be used. For highways with posted or operating speeds equal or higher than 45 mi/h, specific criteria for RLTS R1 to RTLS R4 are provided. Criteria depend on:</p>
+<ul>
+<li>Paved shoulder width</li>
+<li>Daily bi-directional (combined) volumes.</li>
+</ul>
+<p>Rural Interstate highways are coded as BLTS R4; as posted speeds could be up to 70 mi/h and shoulder width equal to 10 feet.</p>
+<p>Washington State initially considered setting LTS-based criteria for rural bicyclists. However, this approach was abandoned because the LTS methodology appeared less suited in rural contexts compared to population centers (<span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTActivePlan">2020</a>)</span>). The baseline assumption was that “the population center method would apply to users of all ages and abilities, and the rural high-speed method would apply to the subset of the population willing to travel along high-speed roadways between population centers”.</p>
+<p><span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span> does not propose criteria for rural applications.</p>
+<p><strong>Urban Street Segments</strong></p>
+<p>The LTS analysis methodology has been applied to propose recommendation criteria of facility type in urban applications (<span class="citation">Schultheiss et al. (<a href="#ref-schultheiss_bikeway">2019</a>)</span>). The target user in urban, urban core, suburban and rural town context is the interested but concerned group. The level of stress of bicyclists in urban areas depends on:</p>
+<ul>
+<li>Facility type (shared lane, bike boulevard, bike lane with optional buffer, separated bike lane, shared use path)</li>
+<li>Operating speed (or posted speed limit)</li>
+<li>Traffic volume</li>
+</ul>
+<p>Shared lane or bike boulevard are preferred for low operating speeds (or posted speeds) and low traffic volume. As traffic volume and speed increase (up to 6000 veh per day and 30 mi/h), bike lane with buffer are preferred. For other conditions, separated bike lane or shared use path are recommended.</p>
+<p><span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTDesign">2021</a>)</span>, <span class="citation">Minnesota Department of Transportation (<a href="#ref-MnDOTBikeGuide">2020</a>)</span> and <span class="citation">Kittelson &amp; Associates and Toole Design Group (<a href="#ref-MontgomeryBikeGuide">2014</a>)</span> propose similar criteria for facility selection in urban areas. They are based on operating speed and traffic volume.</p>
+<p><span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span> propose LTS segment criteria based on facility type: bike lane or mixed traffic. Oregon DOT developed the criteria to be applied in Oregon based on the seminal work of <span class="citation">Maaza C. Mekuria, Furth, and Nixon (<a href="#ref-mekuria_low-stress_2012">2012</a>)</span>. For bike lanes, LTS criteria depend on:</p>
+<ul>
+<li>Prevailing or posted speed</li>
+<li>Number of lanes</li>
+<li>Bike lane width</li>
+<li>Presence of adjacent parking lane</li>
+<li>Bike lane blockage</li>
+</ul>
+<p>For <span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span>, it is noted that existing bike lanes that have less than 4 feet of useable width should be considered as mixed traffic. Further, poor pavement conditions in the bike-traveled portion of the roadway should have the BLTS increased by one level. Frequent drainage grates, requiring movement into the travel lanes may, also increase the BLTS a level. The <span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTActivePlan">2020</a>)</span> adapted the <span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span> LTS criteria to their local conditions. Network scoring tables devepend on:</p>
+<ul>
+<li>Prevailing or posted speed</li>
+<li>Number of lanes</li>
+<li>Presence of bike lane</li>
+<li>If bike lane is present, bike lane width</li>
+</ul>
+<p>The 20 mph speed limit threshold for roadways was included to account for roadways with unmarked centerlines. The speed limit threshold of 20 mph is intended to identify low-speed roadways that are consistent with LTS 1 conditions.</p>
+<p><span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span> set LTS criteria for mixed traffic based on:</p>
+<ul>
+<li>Speed limit</li>
+<li>Number of through lanes per direction</li>
+<li>Average daily traffic</li>
+<li>Presence of marked centerline</li>
+</ul>
+<p>Only roadways with no marked centerline, AADT lower or equal to 3,000 veh/day and speed limit up to 25 mi/h were classified as LTS1 (<a href="http://www.northeastern.edu/peter.furth/wp-content/uploads/2014/05/LTS-Tables-v2-June-1.pdf" class="uri">http://www.northeastern.edu/peter.furth/wp-content/uploads/2014/05/LTS-Tables-v2-June-1.pdf</a>).</p>
+<p><span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span> uses the same variables and additionally distinguishes by functional class (arterial, collector, local). Local streets generally have LTS1 or LTS2, and arterials LTS3 or more. Only for arterials with prevailing speed equal or lower than 20 mi/h could be suited for LTS2. It is indicated that BLTS should be increased by one level when poor pavement conditions in the bike-traveled portion of the roadway are present. Poor pavement conditions are defined as having potholes, large cracks, heavy raveling with loose aggregate, or spalling. Gravel and other debris is common in the shoulders and may limit their use.</p>
+<p><strong>Signalized Intersections</strong></p>
+<p><span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span>, <span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span>, and <span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTActivePlan">2020</a>)</span> indicate that signalized crossings are assumed to pose no traffic stress to cyclists because the signal provides a protected way across. Therefore, LTS1 is assigned.</p>
+<p>Engineering judgement is required to assign higher stress levels at signalized intersections; as, at certain locations, the level of traffic stress can be increased. Examples provided by Oregon DOT are locations with difficulties triggering the signal detection, intersectionw that may not have the proper striping, and push button accommodations for bicyclists, or crossing locations on where the bicyclists uses the crosswalk like a pedestrian.</p>
+<p>At intersection approaches, level of traffic stress could be increased with:</p>
+<ul>
+<li>Presence of right turn lane(s)</li>
+<li>Length of right turn lane</li>
+<li>Turn lane configuration (bike lane shifts vs. bike lane continues straight)</li>
+</ul>
+<p><span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTActivePlan">2020</a>)</span> does not propose LTS criteria for signalized intersections.</p>
+<p><strong>Unsignalized Intersections</strong></p>
+<p>Unsignalized intersection crossings can pose significant challenges for bicyclists, particularly in situations where there are multiple lanes or high speeds involved; and the intersection must be crossed in one phase. <span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span> and <span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span> propose level of traffic stress for unsignalized intersections depending on:</p>
+<ul>
+<li>Width of cross street</li>
+<li>Speed limit of cross street</li>
+<li>Presence or absence of median refuge</li>
+</ul>
+<p>The ODOT method for unsignalized intersection crossing without a median refuge was adapted to Washington State local conditions. The scores are generally higher, consistent with WSDOT policy. The level of traffic stress for unsignalized intersections in the <span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTActivePlan">2020</a>)</span> is based on:</p>
+<ul>
+<li>Speed limit of cross street</li>
+<li>Total lanes crossed (in both directions)</li>
+</ul>
+<p>It is worth noting that bicycle over/underpasses should be considered as separate facilities where the crossing is safe and accessible to cyclists; and, therefore do not generate stress to cyclists. LTS 1 is assigned to overpassess and underpasses.</p>
+<p><strong>Roundabout Intersections</strong></p>
+<p>Stress while crossing a roundabout differs if the crossing follows a path around the roundabout or is carried out in mixed traffic. For paths around a roundabout, <span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span> and <span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span> indicate that the only traffic stress arises from crossings and depends on:</p>
+<ul>
+<li>Non‐tangential or tangential entry or exit lane</li>
+<li>Type of entry / exit being crossed (single lane, dual lane)</li>
+</ul>
+<p>If there is no adequate alternative path or sidewalk to use around the roundabout, bicyclists need to use the vehicle lane under mixed traffic conditions through the roundabout. Both <span class="citation">Furth, Mekuria, and Nixon (<a href="#ref-furth_network_2016">2016</a>)</span> and <span class="citation">Oregon Department of Transportation (<a href="#ref-oregonDOT">2020</a>)</span> criteria are based on:</p>
+<ul>
+<li>Number of circulating lanes</li>
+<li>ADT (sum over all entry legs)</li>
+</ul>
+<p><span class="citation">Washington State Department of Transportation (<a href="#ref-WashDOTActivePlan">2020</a>)</span> does not propose LTS criteria for roundabouts.</p>
+<!-- # ```{r BicycleShoulderWidths, echo=FALSE, fig.cap='Shoulder Widths for Rural Roadways (FHWA, 2019)',fig.width=4, fig.align='center'} -->
+<!-- # knitr::include_graphics("./Images/Bicycle/DesignCriteriaRuralFHWA.png") -->
+<!-- ``` -->
+</div>
+<div id="bicycle-compatibility-index-analysis-methodology" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Bicycle Compatibility Index Analysis Methodology<a href="Chapter4Bicycle.html#bicycle-compatibility-index-analysis-methodology" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Bicycle Compatibility Index (BCI) was developed from the perspectives of bicyclists and incorporates “the variables that bicyclists typically use to assess how compatible a roadway segment is for bicycle travel” (<span class="citation">Harkey (<a href="#ref-Harkey1998">1998</a>)</span>). It uses a 6-point scale to evaluate comfort level ratings and bicycle LOS criteria.</p>
+<p>Initially developed for urban and suburban segments, <span class="citation">Jones and Carlson (<a href="#ref-jones_development_2003">2003</a>)</span> adapted to rural conditions in Nebraska. An online survey was used to distribute video recordings of rural highways in Nebraska under different traffic conditions (vehicle and truck traffic volume) and geometric conditions (with and without shoulder). Three groups of bicyclists were defined: experienced commuter, experienced recreational, and casual recreational. The results indicate that the overall comfort level rating depended on two variables:</p>
+<ul>
+<li>Shoulder width</li>
+<li>Flow rate of heavy vehicles</li>
+</ul>
+<p>Other variables, such as intersection density, observed 85th percentile speed, traffic volumes or number of lanes, were not statistically significant.</p>
+<p>Comfort level ratings were developed for all cyclists and by cyclist type. Experienced and casual riders provided different mean comfort level ratings, being experienced riders more comfortable than casual riders for the same conditions.</p>
+</div>
+</div>
+<div id="BikeLOS" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Bicycle Level of Service Research Recommendations<a href="Chapter4Bicycle.html#BikeLOS" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section is intended to provide 1) recommendations for future research needs to improve/enhance the bicycle LOS analysis methodologies for rural facilities in the HCM, and 2) point readers to appropriate bicycle analysis method(s), HCM and/or other, for common analysis scenarios. This material is based on the results of the two surveys conducted as part of this project.</p>
+<p>Two online surveys were conducted to identify potential revisions/improvements to the HCM LOS methodology and/or the AASHTO Green Book design elements to help agencies better evaluate the impact of traffic, roadway, and control characteristics on bicyclist LOS.</p>
+<ul>
+<li><p>The practitioner online survey was designed to solicit input from State DOTs to identify, based on expert opinions, which elements are more sensitive to rural bicyclists’ perception on shared and exclusive bicycle lanes and how rural bicycle design users can be classified, if needed. Expert opinions from 52 individuals with experience in designing bicycle facilities and/or evaluating bicycling operational conditions were collected and analyzed (<span class="citation">Moreno et al. (<a href="#ref-Moreno2023">2023</a>)</span>).</p></li>
+<li><p>The user online survey was designed to identify the drives and constraints on rural cycling, either for commuting or leisure, for different user types. The results suggested which variables are more relevant to users to cycle (or not) on rural highways. A total of 1650 individuals entered the survey, and 1032 complete responses were collected and analyzed. In the survey,</p></li>
+</ul>
+<p>In the first survey, practitioners were asked to: 1) select which of the bicycle operations quality assessment methodologies do they apply, 2) indicate their concerns regarding bicycle indicators and to what extent do they make use of different data sources for bicycle analyses, 3) select how sensitive they consider that rural cyclist perceptions of quality of service would be to 52 different elements, and 4) rank different according to how their importance to assess the quality of service for rural cyclist. Socio-demographic attributes, employment data, and cycling behavior were also collected.</p>
+<p>In the second survey, users were asked to: 1) select whether to cycle or not at different rural settings varying 6 attributes, 2) rank different elements according to how important they were when riding their bike, 3) indicate how comfortable would they cycle in given urban scenarios, and 4) select which statement defined best as a cyclist. Socio-demographic attributes and cycling behavior were also collected. The elements identified by the practitioners’ survey were used to design the user survey. reduce the number of elements to be presented to users.</p>
+<p>The results of the practitioner survey were used to design the second survey. Specifically, the rural scenarios presented to users were selected based on the six most important elements to rural cyclists in assessing the quality of service that practitioners identified.</p>
+<p>Please refer to the NCHRP 08-135 Project Final Report <span class="citation">(<a href="#ref-NCHRP-Project-08-135">Washburn et al. 2023</a>)</span> for the complete description of the surveys, the analysis of results, and the main conclusions.</p>
+<p>The conclusions of the surveys are limited to the designed questionnaires and the collected responses. The practitioner survey collected 52 expert opinions. The extrapolation of these results should be cautiously undertaken since the sample size was limited. The user survey targeted individuals who cycle on rural highways. Therefore, the extrapolation of these results to the overall cycling population or urban cyclists in specific geographical areas should be undertaken with caution.</p>
+<div id="revisions-to-highway-capacity-manual-level-of-service-for-rural-highways" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Revisions to Highway Capacity Manual Level of Service for Rural Highways<a href="Chapter4Bicycle.html#revisions-to-highway-capacity-manual-level-of-service-for-rural-highways" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The main conclusions of the two qualitative assessments regarding the HCM analysis methodology are:</p>
+<ul>
+<li><p>Bicyclists felt that the most important element for them to cycle on a rural highway was related to lateral clearance, paved shoulder width, or lane width. The presence of a shoulder had the highest impact on the odds of cycling in a given scenario. Furthermore, the strength of this effect was different by context class: rural areas without shoulders were less likely to be selected compared to rural-town areas without shoulders. This result validates the practitioner survey’s conclusions, in which respondents felt that bicyclists would have different sensitivity to context class in shared lanes than in paved shoulders. Responses also expressed that shoulders are rideable when clear of debris, gravel, or obstacles and that rumble strips make it challenging to navigate the shoulder when debris is present.</p></li>
+<li><p>The analyses of user responses revealed a high sensitivity to speed and automobile traffic volume. These results are consistent with the practitioner survey, previous studies, and design guidelines, which indicate that the two main criteria for selecting specific bicycle infrastructure and its width are average daily traffic and posted speed limit. Cyclists could tolerate high speed limits if automobile traffic is meager, reinforcing the importance of a combined analysis of speed and traffic volume.</p></li>
+<li><p>Pavement conditions and context classification (or activity-volume-related elements) were equally important for users and experts. While bicyclists ranked them with lower relative importance than clearance, speed, or traffic volume, the choice experiments revealed a significant negative impact of deteriorated pavement and rural context on the cycling odds in a given scenario. While the differences between acceptable and good pavement conditions were substantial, the differences between rural-town and suburban contexts were minor than between rural and rural-town contexts.</p></li>
+<li><p>There was a division of opinions about the influence of terrain and environment-related variables. A substantial number of respondents ranked the environment among the most important elements, while an equal amount of users stated that they were the least important. A general agreement was on ranking other cyclists as the least essential elements. Terrain-related elements, such as elevation, grade, or sequence of curves, ranked low. However, scenarios with higher grades presented higher odds of being cycled on. High grades could have been associated with more beautiful scenery in rolling terrain; therefore, this variable was misrepresented in the images.</p></li>
+<li><p>For rural scenarios, “interested but concerned” cyclists were less likely to select to cycle than the other more confident groups. There were no apparent differences in preference between” enthused and confident” cyclists and “strong and fearless” cyclists.</p></li>
+</ul>
+<p>Based on these conclusions, the revisions to the HCM analysis procedure are:</p>
+<ul>
+<li><p>The HCM bicycle analysis procedure should be revisited for rural highways, as the perception of cyclists differs from urban segments. BLOS scores by context classification (rural, rural-town) and facility type (shared lanes, paved shoulder) should be distinct, as their sensitivity to variables differs. For that, subjective comfort levels should be collected at least based on shoulder width, speed, automobile traffic volume, presence of heavy vehicles, pavement conditions, and context classification. Other aspects include maintenance of paved shoulders, grades, or intersections. The grade should be represented with caution, as it could be misinterpreted by scenery quality. Furthermore, it is recommended to repeat rephrased questions to improve results fidelity.</p></li>
+<li><p>The HCM analysis procedure should account for data limitations. Sensitivity analysis of the input data could reduce the number of inputs to the most significant and, preferably, available to most agencies.</p></li>
+<li><p>The consideration of environmental factors on bicycle LOS should be revisited, as non-motorized users are more sensitive to weather and lighting conditions than their motorized counterparts. However, only a share of the most confident cyclists cycle under adverse environmental conditions, and weather data could be challenging to collect.</p></li>
+<li><p>Different LOS thresholds could be considered for different bicycle users if bicycle user classification for operational analyses becomes relevant. The most essential characteristics for bicyclist classification have been identified, but specific criteria and thresholds still need to be defined. Furthermore, the target user for rural highways still needs to be selected.</p></li>
+<li><p>An HCM planning methodology for bicycle mode based on the Level of Traffic Stress could be developed based on users’ perceptions. This methodology could be incorporated into the “Planning and Preliminary Engineering Applications Guide to the Highway Capacity Manual” (PPEAG) by the National Academies of Sciences.</p></li>
+</ul>
+</div>
+<div id="revisions-to-level-of-traffic-stress-analysis-methodology" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Revisions to Level of Traffic Stress Analysis Methodology<a href="Chapter4Bicycle.html#revisions-to-level-of-traffic-stress-analysis-methodology" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The main conclusions of the two qualitative assessments regarding the LTS analysis methodology are:</p>
+<ul>
+<li><p>The distribution of cyclist types for rural conditions differed substantially from the overall cycling population. The largest segment was for “enthused and confident” cyclists, compared to “interested but concerned” in urban applications. It follows the criteria from FHWA, which identified “confident” cyclists as the rural target users in rural applications. Many “interested but concerned” cyclists cycled on rural highways.</p></li>
+<li><p>Stated cyclist type classification (“no way, no how,” “interested but concerned,” “enthused and confident,” “strong and fearless”) aligned with declared comfort levels at different urban cycling environments. Compared to the “interested but concerned” group, “enthused and confident” cyclists showed increased levels of comfort, while “strong and fearless” cyclists declared the highest comfort levels. The most critical elements were facility type and traffic volume.</p></li>
+<li><p>For rural scenarios, “interested but concerned” cyclists were less likely to select to cycle than the other two groups; however, there were no apparent differences between” enthused and confident” cyclists and “strong and fearless” cyclists.</p></li>
+<li><p>Interactions between cyclist type and scenario elements were tested but were not statistically significant. It indicated that the effect of the elements did not depend on cyclist types but rather that more confident cyclists had, in general, a more significant likelihood of selecting to cycle in a given scenario. Only “strong and fearless” and “enthused and confident” cyclists were less challenged by terrain.</p></li>
+<li><p>All-year-round cyclists presented different sensitivity to which elements they considered the most important while riding, with relatively lower importance of clearance, pavement quality, environment, and terrain.</p></li>
+</ul>
+<p>Based on these conclusions, the revisions to the LTS analysis methodology are:</p>
+<ul>
+<li><p>The bicyclist classification criteria should differ for rural highways and urban environments. On one hand, rural bicyclists may be more aware and are likely to tolerate higher stress levels than urban cyclists. On the other hand, rural bicyclists may not be used to cycling in urban low-speed environments, where traffic disruptions may be more frequent and, therefore, may generate higher stress levels. More research is needed to identify their main characteristics and how they relate to rural bicycling infrastructure.</p></li>
+<li><p>The target user for rural highways should be “enthused and confident.” For some locations where general cyclists are expected, the target user should be “interested but concerned” as a significant share of “interested but concerned” still cycled on rural highways.</p></li>
+<li><p>Further research could relate different bicycle user classifications to their comfort level in different environments. A combination of stated cyclist type and seasonal variation may better capture bicyclists’ attitudes and comfort levels on rural highways.</p></li>
+<li><p>The LTS analysis methodology should be revisited for rural highways. LTS criteria should account for clearance and traffic volume and include the effect of speed, pavement quality, and terrain. Sensitivity to elements was equal across all groups, and the more confident groups had, in general, a more significant likelihood of selecting to cycle in a given scenario. More research is required to validate LTS-based design criteria with user comfort perception.</p></li>
+</ul>
+</div>
+</div>
+<div id="guidance-on-current-methods-for-rural-highways" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Guidance on Current Methods for Rural Highways<a href="Chapter4Bicycle.html#guidance-on-current-methods-for-rural-highways" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="adaptation-to-rural-conditions" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Adaptation to Rural Conditions<a href="Chapter4Bicycle.html#adaptation-to-rural-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The HCM methodology for multilane and two-lane highways was adopted from the methodology for arterials. Given the unique challenges faced by rural cyclists, such as limited infrastructure and higher speeds on rural roads, the HCM analysis methodology provides a first assessment of their safety and accessibility needs. However, it should be further adapted to rural conditions.</p>
+<p>The effect of segregating bicycle and automobile flow may become more critical. Further, some elements may not apply to rural conditions (such as on-street parking), and rural corridors may be composed of several sections in rural and/or rural town contexts, where traffic operations are affected by increased width from new general purpose. Additionally, the HCM method does not distinguish between bicyclists riding in bicycle lanes or sharing the road with motorized vehicles. For that, the current HCM analysis procedure should be used with caution.</p>
+<p>The LTS analysis methodology distinguishes between bicycle lanes and mixed-use. While this methodology has proven useful in evaluating the stress levels experienced by cyclists in urban environments, its effectiveness in rural settings has yet to be fully explored. Only Oregon DOT has provided an adaptation of LTS-based criteria for rural settings based on simple input data available for most agencies.</p>
+<p>Nevertheless, the LTS analysis methodology must still be validated with user perceptions. Notable exceptions were the work of Ferenchak et al. (2020), who indicated that the LTS score correlates well with biking allowance for children, and the work of Dill and McNeil (2016), who collected the percentage of respondents who were comfortable or very comfortable at different urban cycling infrastructure scenarios, with unclear trends by cyclist type. Further, how to determine cyclists’ comfort level in rural settings still needs to be determined.</p>
+<p>On the other hand, future research should also consider the overall suitability of a roadway for cycling. Not all facility types are suitable for cycling, and the managing roadway agency can prohibit bicycle access.</p>
+</div>
+<div id="data-requirements" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Data Requirements<a href="Chapter4Bicycle.html#data-requirements" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Analysis methodologies should account for data limitations. Data availability was the highest concern for practitioners regarding bicycle indicators, followed by insufficient staff to estimate the indicators and expensive input data.</p>
+<p>Complex traveler perception methods, such as the HCM or BCI, require specific data that may only be available for some agencies or companies. The HCM analysis procedure is highly sensitive to heavy vehicle volume and moderately sensitive to pavement quality and shoulder width. These two parameters may be complicated to obtain for large networks.</p>
+<p>Specifically, the HCM method is the one that requires more input data, with ten different attributes compared to the two attributes required in the LTS analysis methodology from Oregon DOT (paved shoulder width and daily bi-directional volume) or the four attributes in the HCM simplified analysis methodology from Oregon DOT (number of through traffic lanes per direction, bike lane or paved shoulder present, posted speed limit, and unsignalized conflicts).</p>
+<p>Sensitivity analysis of the input data could be performed to reduce the number of inputs to the most significant and, preferably, readily available to most agencies.</p>
+</div>
+<div id="applications" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Applications<a href="Chapter4Bicycle.html#applications" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The recommendation of using one method over another depends on the application. High-level applications, such as regional transport planning or transportation system plans, may not require a specific analysis of the facility but rather an overview of which users it would serve to identify critical locations where the bicycle network should be improved. For such applications, the LTS analysis procedure is preferred. The HCM analysis procedure should not be used, as data availability would be limited.</p>
+<p>Simplicity, transparency, and easiness of application are the main advantages of the LTS analysis methodology. Nevertheless, the methodology must be more sensitive to infrastructure countermeasures (e.g., increased bike lane width or improved pavement quality) or traffic conditions (e.g., reduced percentage of heavy vehicles). Furthermore, it needs to be clarified how to define bicyclist types for rural conditions and who may be the target users.</p>
+<p>For more specific applications with an increased project complexity and detail level, the HCM analysis procedure is preferred. This method is sensitive to more variables; therefore, specific countermeasures’ impact is covered (e.g., increasing bicycle lane width). The LTS analysis methodology could also be used, although the results may be less sensitive to improvements beyond changes to facility type, automobile running speed, or automobile traffic volume.</p>
+
+</div>
+</div>
+</div>
+
+
+
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-allen_operational_1998" class="csl-entry">
+Allen, D. Patrick, Nagui Rouphail, Joseph E. Hummer, and Joseph S. Milazzo. 1998. <span>“Operational <span>Analysis</span> of <span>Uninterrupted</span> <span>Bicycle</span> <span>Facilities</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 1636 (1): 29–36. <a href="https://doi.org/10.3141/1636-05">https://doi.org/10.3141/1636-05</a>.
+</div>
+<div id="ref-SanFranciscoDepartmentofPublicHealth2010" class="csl-entry">
+(BEQI), Bicycle Environmental Quality Index, and Draft. 2009. <em>San Francisco Department of Public Health, San Francisco, California</em>.
+</div>
+<div id="ref-Borgman2003" class="csl-entry">
+Borgman, Frank. 2003. <span>“<span class="nocase">The Cycle Balance: benchmarking local cycling conditions</span>.”</span> In <em>Sustainable Transport: Planning for Walking and Cycling in Urban Environments</em>, 713. Taylor &amp; Francis Inc.
+</div>
+<div id="ref-Botma1995" class="csl-entry">
+Botma, Hein. 1995. <span>“<span class="nocase">Method to determine level of service for bicycle paths and pedestrian-bicycle paths</span>.”</span> <em>Transportation Research Record</em>, no. 1502: 38–44.
+</div>
+<div id="ref-callister_tools_nodate" class="csl-entry">
+Callister, D, and M Lowry. 2013. <span>“Tools and <span>Strategies</span> for <span>Wide</span>-<span>Scale</span> <span>Bicycle</span> <span>Level</span>-of-<span>Service</span> <span>Analysis</span>”</span> 139: 250–57.
+</div>
+<div id="ref-davis_bicycle_1987" class="csl-entry">
+Davis, J. 1987. <span>“Bicycle <span>Safety</span> <span>Evaluation</span>,”</span> June.
+</div>
+<div id="ref-dixon_bicycle_1996" class="csl-entry">
+Dixon, Linda B. 1996. <span>“Bicycle and <span>Pedestrian</span> <span>Level</span>-of-<span>Service</span> <span>Performance</span> <span>Measures</span> and <span>Standards</span> for <span>Congestion</span> <span>Management</span> <span>Systems</span>.”</span> <em>Transportation Research Record</em> 1538 (1): 1–9. <a href="https://doi.org/10.1177/0361198196153800101">https://doi.org/10.1177/0361198196153800101</a>.
+</div>
+<div id="ref-epperson_evaluating_1994" class="csl-entry">
+Epperson, Bruce. 1994. <span>“Evaluating Suitability of Roadways for Bicycle Use: Toward a Cycling Level-of-Service Standard.”</span> <em>Transportatio6 Research Record</em> 1438: 9–16. <a href="http://dx.doi.org/">http://dx.doi.org/</a>.
+</div>
+<div id="ref-foster_level_service_2015" class="csl-entry">
+Foster, Nick, Christopher M. Monsere, Jennifer Dill, and Kelly Clifton. 2015. <span>“Level-of-<span>Service</span> <span>Model</span> for <span>Protected</span> <span>Bike</span> <span>Lanes</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 2520 (1): 90–99. <a href="https://doi.org/10.3141/2520-11">https://doi.org/10.3141/2520-11</a>.
+</div>
+<div id="ref-furth_network_2016" class="csl-entry">
+Furth, Peter G., Maaza C. Mekuria, and Hilary Nixon. 2016. <span>“Network <span>Connectivity</span> for <span>Low</span>-<span>Stress</span> <span>Bicycling</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 2587 (1): 41–49. <a href="https://doi.org/10.3141/2587-06">https://doi.org/10.3141/2587-06</a>.
+</div>
+<div id="ref-Geller2006" class="csl-entry">
+Geller, Roger. 2006. <span>“<span class="nocase">Four Types of Cyclists</span>.”</span> Portland, Oregon: Portland Office of Transportation. <a href="https://www.portland.gov/sites/default/files/2022/Four Types of Cyclists updated 2009.pdf">https://www.portland.gov/sites/default/files/2022/Four Types of Cyclists updated 2009.pdf</a>.
+</div>
+<div id="ref-crow2007" class="csl-entry">
+Groot, R. de, and en Wegenbouw en de Verkeerstechniek Centrum voor Regelgeving en Onderzoek in de Grond-Water-. 2007. <em>Design Manual for Bicycle Traffic</em>. C.r.o.w. Record. CROW. <a href="https://books.google.de/books?id=v69iNAAACAAJ">https://books.google.de/books?id=v69iNAAACAAJ</a>.
+</div>
+<div id="ref-crow2016" class="csl-entry">
+Groot, R. de, and vervoer en infrastructuur CROW kenniscentrum voor verkeer. 2016. <em>Design Manual for Bicycle Traffic</em>. C.r.o.w. Record. CROW. <a href="https://books.google.de/books?id=FMZOtAEACAAJ">https://books.google.de/books?id=FMZOtAEACAAJ</a>.
+</div>
+<div id="ref-Harkey1998" class="csl-entry">
+Harkey, David L. 1998. <span>“<span class="nocase">The Bicycle Compatibility Index: A Level of Service Concept</span>,”</span> no. December 1998: 4. <a href="http://www.hsrc.unc.edu/research/pedbike/98095 and http://www.hsrc.unc.edu/research/pedbike/98072">http://www.hsrc.unc.edu/research/pedbike/98095 and http://www.hsrc.unc.edu/research/pedbike/98072</a>.
+</div>
+<div id="ref-hoedl_bikeability_2010" class="csl-entry">
+Hoedl, Simon, Sylvia Titze, and Pekka Oja. 2010. <span>“The <span>Bikeability</span> and <span>Walkability</span> <span>Evaluation</span> <span>Table</span>.”</span> <em>American Journal of Preventive Medicine</em> 39 (5): 457–59. <a href="https://doi.org/10.1016/j.amepre.2010.07.005">https://doi.org/10.1016/j.amepre.2010.07.005</a>.
+</div>
+<div id="ref-jensen_pedestrian_2007" class="csl-entry">
+Jensen, Soren Underlien. 2007. <span>“Pedestrian and <span>Bicyclist</span> <span>Level</span> of <span>Service</span> on <span>Roadway</span> <span>Segments</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 2031 (1): 43–51. <a href="https://doi.org/10.3141/2031-06">https://doi.org/10.3141/2031-06</a>.
+</div>
+<div id="ref-jones_development_2003" class="csl-entry">
+Jones, Elizabeth G., and Timothy D. Carlson. 2003. <span>“Development of <span>Bicycle</span> <span>Compatibility</span> <span>Index</span> for <span>Rural</span> <span>Roads</span> in <span>Nebraska</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 1828 (1): 124–32. <a href="https://doi.org/10.3141/1828-15">https://doi.org/10.3141/1828-15</a>.
+</div>
+<div id="ref-kang_development_2012" class="csl-entry">
+Kang, Kyungwoo, and Kyeora Lee. 2012. <span>“Development of a Bicycle Level of Service Model from the User’s Perspective.”</span> <em>KSCE Journal of Civil Engineering</em> 16 (6): 1032–39. <a href="https://doi.org/10.1007/s12205-012-1146-z">https://doi.org/10.1007/s12205-012-1146-z</a>.
+</div>
+<div id="ref-MontgomeryBikeGuide" class="csl-entry">
+Kittelson &amp; Associates, and Toole Design Group. 2014. <em><span>Montgomery County Bicycle Planning Guidance</span></em>. 1st ed. Montgomery. <a href="http://www.montgomeryplanning.org/transportation/bikeways/documents/FINALBicyclePlanningGuidance.pdf">http://www.montgomeryplanning.org/transportation/bikeways/documents/FINALBicyclePlanningGuidance.pdf</a>.
+</div>
+<div id="ref-landis_bicycle_1994" class="csl-entry">
+Landis, Bruce W. 1994. <span>“<span>Bicycle</span> <span>Interaction</span> <span>Hazard</span> <span>Score</span>: <span>A</span> <span>Theoretical</span> <span>Model</span>.”</span> <em>Transportation Research Record</em>, no. 1438. <a href="https://trid.trb.org/view/413761">https://trid.trb.org/view/413761</a>.
+</div>
+<div id="ref-landis_real-time_1997" class="csl-entry">
+Landis, Bruce W., Venkat R. Vattikuti, and Michael T. Brannick. 1997. <span>“Real-<span>Time</span> <span>Human</span> <span>Perceptions</span>: <span>Toward</span> a <span>Bicycle</span> <span>Level</span> of <span>Service</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 1578 (1): 119–26. <a href="https://doi.org/10.3141/1578-15">https://doi.org/10.3141/1578-15</a>.
+</div>
+<div id="ref-Lowry2012" class="csl-entry">
+Lowry, Michael, Daniel Callister, Maureen Gresham, and Brandon Moore. 2012. <span>“<span class="nocase">Assessment of communitywide bikeability with bicycle level of service</span>.”</span> <em>Transportation Research Record</em>, no. 2314: 41–48. <a href="https://doi.org/10.3141/2314-06">https://doi.org/10.3141/2314-06</a>.
+</div>
+<div id="ref-MaryDOTBikeGuide" class="csl-entry">
+Maryland Department of Transportation. 2022. <em><span>MDOT LTS Technical Memo</span></em>. 1st ed. <a href="https://www.mdot.maryland.gov/OPCP/MDOT_LTS_Metadata_Methodology_Full.pdf">https://www.mdot.maryland.gov/OPCP/MDOT_LTS_Metadata_Methodology_Full.pdf</a>.
+</div>
+<div id="ref-MassDOTBikeGuide" class="csl-entry">
+Massachusetts Department of Transportation. 2015. <em><span>Separated Bike Lane Planning &amp; Design Guide</span></em>. <a href="https://www.mass.gov/lists/separated-bike-lane-planning-design-guide">https://www.mass.gov/lists/separated-bike-lane-planning-design-guide</a>.
+</div>
+<div id="ref-mekuria2017improving" class="csl-entry">
+Mekuria, Maaza C., Bruce Appleyard, and Hilary Nixon. 2017. <em>Improving Livability Using Green and Active Modes: A Traffic Stress Level Analysis of Transit, Bicycle, and Pedestrian Access and Mobility</em>.
+</div>
+<div id="ref-mekuria_low-stress_2012" class="csl-entry">
+Mekuria, Maaza C, Peter G Furth, and Hilary Nixon. 2012. <span>“<span>Low</span>-<span>Stress</span> <span>Bicycling</span> <span class="nocase">and</span> <span>Network</span> <span>Connectivity</span>,”</span> 84. <a href="https://rosap.ntl.bts.gov/view/dot/24453/dot_24453_DS1.pdf">https://rosap.ntl.bts.gov/view/dot/24453/dot_24453_DS1.pdf</a>.
+</div>
+<div id="ref-MnDOTBikeGuide" class="csl-entry">
+Minnesota Department of Transportation. 2020.<em><span> 2020 Minnesota Bicycle Facility Design Manual</span></em>. 5th ed. <a href="https://www.dot.state.mn.us/bike/bicycle-facility-design-manual.html">https://www.dot.state.mn.us/bike/bicycle-facility-design-manual.html</a>.
+</div>
+<div id="ref-Moreno2023" class="csl-entry">
+Moreno, Ana Tsui, Santiago Linares-Ramirez, Scott S. Washburn, Ahmed Al-Kaisy, Jorge Barrios, and Bastian Schroeder. 2023. <span>“<a href="">Identification of Potential Improvements to the Highway Capacity Manual Methodology for Rural Bicyclists and Bicyclist Classification</a>.”</span> In <em>Annual Meeting of the Transportation Research Board</em>.
+</div>
+<div id="ref-nathalie_noel_crc_2003" class="csl-entry">
+Nathalie Noël, Carole Leclerc, and Martin Lee-Gosselin. 2003. <span>“<span>CRC</span> <span>INDEX</span> : <span>Compatibility</span> of <span>Roads</span> for <span>Cyclists</span> in <span>Rural</span> and <span>Urban</span> <span>Fringe</span> <span>Areas</span>.”</span> <em>TRB 2003 Annual Meeting CD-ROM</em>.
+</div>
+<div id="ref-NJDOTBikeGuide" class="csl-entry">
+New Jersey Department of Transportation. 1980. <em><span class="nocase">NJ DOT Bicycle Compatible Roadways and Bikeways</span></em>. 5th ed. <a href="https://www.state.nj.us/transportation/about/publicat/pdf/BikeComp/introtofac.pdf">https://www.state.nj.us/transportation/about/publicat/pdf/BikeComp/introtofac.pdf</a>.
+</div>
+<div id="ref-NYSDOTBikeGuide" class="csl-entry">
+New Jork State Department of Transportation. 2015. <em><span>Highway Design Manual. Chapter 17 - Bicycle Facility Design</span></em>. 83rd ed. <a href="https://www.dot.ny.gov/divisions/engineering/design/dqab/hdm/hdm-repository/chapt_17.pdf">https://www.dot.ny.gov/divisions/engineering/design/dqab/hdm/hdm-repository/chapt_17.pdf</a>.
+</div>
+<div id="ref-oregonDOT" class="csl-entry">
+Oregon Department of Transportation. 2020. <span>“Analysis Procedures Manual.”</span> In, 2nd ed., 1–1205.
+</div>
+<div id="ref-petritsch_bicycle_2007" class="csl-entry">
+Petritsch, Theodore A., Bruce W. Landis, Herman F. Huang, Peyton S. McLeod, Daniel Lamb, Waddah Farah, and Martin Guttenplan. 2007. <span>“Bicycle <span>Level</span> of <span>Service</span> for <span>Arterials</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 2031 (1): 34–42. <a href="https://doi.org/10.3141/2031-05">https://doi.org/10.3141/2031-05</a>.
+</div>
+<div id="ref-saelens_neighborhood-based_2003" class="csl-entry">
+Saelens, Brian E., James F. Sallis, Jennifer B. Black, and Diana Chen. 2003. <span>“Neighborhood-<span>Based</span> <span>Differences</span> in <span>Physical</span> <span>Activity</span>: <span>An</span> <span>Environment</span> <span>Scale</span> <span>Evaluation</span>.”</span> <em>American Journal of Public Health</em> 93 (9): 1552–58. <a href="https://doi.org/10.2105/AJPH.93.9.1552">https://doi.org/10.2105/AJPH.93.9.1552</a>.
+</div>
+<div id="ref-OntaAASHTOBikeGuide" class="csl-entry">
+Sagar Onta, (Denver Engineering). 2018. <span>“<span>2018 AASHTO Bike Guide</span>.”</span>
+</div>
+<div id="ref-schultheiss_bikeway" class="csl-entry">
+Schultheiss, Bill, Dan Goodman, Lauren Blackburn, Wood Adam, Dan Reed, and Mary Elbech. 2019. <em>Bikeway Selection Guide</em>. Washington, D.C.: Federal Highway Administration. <a href="https://highways.dot.gov/sites/fhwa.dot.gov/files/2022-07/fhwasa18077.pdf">https://highways.dot.gov/sites/fhwa.dot.gov/files/2022-07/fhwasa18077.pdf</a>.
+</div>
+<div id="ref-hbs2015" class="csl-entry">
+Strassen und Verkehrswesen, Forschungsgesellschaft für. 2015. <em>Handbuch f<span>ü</span>r Die Bemessung von Stra<span>ß</span>enverkehrsanlagen:stadtstra<span>ß</span>en. Buch. Teil <span>S</span></em>. Forschungsgesellschaft für Strassen und Verkehrswesen.
+</div>
+<div id="ref-hcm2010" class="csl-entry">
+Transportation Research Board and National Academies of Sciences, Engineering, and Medicine. 2010. <em>Highway Capacity Manual 2010 (HCM2010)</em>. Washington, DC: The National Academies Press.
+</div>
+<div id="ref-vale_active_2015" class="csl-entry">
+Vale, David S., Miguel Saraiva, and Mauro Pereira. 2015. <span>“Active Accessibility: <span>A</span> Review of Operational Measures of Walking and Cycling Accessibility.”</span> <em>Journal of Transport and Land Use</em>, June. <a href="https://doi.org/10.5198/jtlu.2015.593">https://doi.org/10.5198/jtlu.2015.593</a>.
+</div>
+<div id="ref-NCHRP-Project-08-135" class="csl-entry">
+Washburn, Scott S., Ahmed Al-Kaisy, Sajid Raza, Ana Moreno, Bastian Schroeder, and Jorge Barrios. 2023. <em>Reliability and Quality of Service Evaluation Methods for Rural Highways</em>. Washington, D.C.: Transportation Research Board; National Academies of Sciences, Engineering,; Medicine. <a href="https://doi.org/10.17226/">https://doi.org/10.17226/</a>.
+</div>
+<div id="ref-WashDOTActivePlan" class="csl-entry">
+Washington State Department of Transportation. 2020. <em><span class="nocase">Washington State Active Transportation Plan: 2020 and Beyond</span></em>. <span>Washington State Department of Transportation</span>. <a href="https://wsdot.wa.gov/sites/default/files/2021-12/ATP-2020-and-Beyond.pdf">https://wsdot.wa.gov/sites/default/files/2021-12/ATP-2020-and-Beyond.pdf</a>.
+</div>
+<div id="ref-WashDOTDesign" class="csl-entry">
+———. 2021. <span>“<span>Chapter 1520. Roadway Bicycle Facilities</span>.”</span> In <em>WSDOT Design Manual m 22-01.20</em>, 30. <a href="https://wsdot.wa.gov/publications/manuals/fulltext/M22-01/1520.pdf">https://wsdot.wa.gov/publications/manuals/fulltext/M22-01/1520.pdf</a>.
+</div>
+<div id="ref-zolnik_poisson_2007" class="csl-entry">
+Zolnik, Edmund J., and Ellen K. Cromley. 2007. <span>“Poisson <span>Multilevel</span> <span>Methodology</span> of <span>Bicycle</span> <span>Levels</span> of <span>Service</span> for <span>Road</span> <span>Networks</span>.”</span> <em>Transportation Research Record: Journal of the Transportation Research Board</em> 2031 (1): 1–8. <a href="https://doi.org/10.3141/2031-01">https://doi.org/10.3141/2031-01</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Chapter3Reliability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="HCMmethodsIntro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/NCHRP-08-135/Guidebook/edit/master/04-BicycleRecommendations.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Rural Highway Analysis Guidebook.pdf", "Rural Highway Analysis Guidebook.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"toc_depth": 2
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
