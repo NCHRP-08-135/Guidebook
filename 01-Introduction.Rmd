@@ -1,4 +1,4 @@
-# (PART\*) Part I {-}
+# (PART) Foundations {-}
 
 # Introduction {#Chapter1Intro}
 

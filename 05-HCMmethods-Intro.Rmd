@@ -1,4 +1,4 @@
-# (PART\*) Part II: HCM Calculations {-} 
+# (PART) HCM Calculations {-} 
 
 # HCM Automobile LOS Methodologies {#HCMmethodsIntro}
 

@@ -26,68 +26,9 @@ if (knitr::is_latex_output() == TRUE){
 }
 ```
 
-# {-}
 
-:::: {.graybox data-latex=""}
-::: {.center data-latex=""}
-<h2 style="text-align: center;"><b>Guidebook for Quality of Service and Reliability Analyses of Rural Highways</h2>
-:::
-::::
 
-<p></p>
 
-<p style="text-align: center;"><b>Scott S. Washburn</b></br>University of Florida</p>
-
-<p style="text-align: center;"><b>Ahmed Al-kaisy, Sajid Raza</b></br>Montana State University</p>
-
-<p style="text-align: center;"><b>Ana Tsui Moreno</b></br>Technical University of Munich</p>
-
-<p style="text-align: center;"><b>Bastian Schroeder, Jorge Barrios</b></br>Kittelson & Associates, Inc.</p>
-
-<p></p>
-<p></p>
-
-<p style="text-align: center;"><b>CRP Staff</b></br>David Jared, Senior Program Officer</p>
-
-**NCHRP Project 08-135 Panel**
-
-**Name**|**Role**|**Organization**|
-:-----:|:-----:|:-----:|
-Michael Iacono|Chair|Minnesota DOT
-Mei Chen|Member|University of Kentucky
-Daniel Cook|Member|HDR
-Marlene Vivian Delgadillo Canizares|Member|Georgia DOT
-Philip Demosthenes|Member|Philip B. Demosthenes, LLC
-Jeremy Jewkes|Member|Washington State DOT
-Camden Palvino|Member|Delaware Valley Regional Planning Commission
-Eugene Russell|Member|Kansas State University
-Taylor Sisson|Member|Vermont Agency of Transportation
-Chung Tran|FHWA Liaison|FHWA
-
-**Acknowledgements**
-
-The research team would like to thank the following individuals for their contributions to the successful completion of this project.
-
-Brian Dunn, Oregon Department of Transportation (retired)  
-Jessie Jones, Arkansas Department of Transportation  
-Ryan Kenis, University of Florida graduate student  
-Emily Dang, University of Florida undergraduate student  
-Jonathan Crosby, University of Florida undergraduate student  
-Santiago Linares-Ramirez, Technical University of Munich graduate student  
-Yangqian Cai, Technical University of Munich graduate student
-Azhagan Avr, Transportation Data Analyst, Kittelson & Associates, Inc.  
-Dr. Nagui Rouphail, Kittelson & Associates, Inc.  
-Dr. Rick Dowling, Kittelson & Associates, Inc.
-
-**Acronyms**
-
-AASHTO - American Association of State Highway and Transportation Officials  
-HCM - Highway Capacity Manual  
-FHWA - Federal Highway Administration  
-HCQSC - Highway Capacity and Quality and Service Committee  
-NCHRP - National Cooperative Highway Research Program  
-TRB - Transportation Research Board  
-USDOT - United States Department of Transportation  
 
 
 ```{r include=FALSE}

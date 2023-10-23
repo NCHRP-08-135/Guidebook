@@ -1,6 +1,6 @@
-# (PART\*) Part III: Case Studies {-}
+# (PART) Case Studies {-}
 
-# Introduction {#CaseStudyIntro}
+# Case Studies Introduction {#CaseStudyIntro}
 
 This part of the Guidebook presents several case studies for the purpose of demonstrating the application of the analysis methods presented in Part 1 of the Guidebook. The case studies include rural highway routes from several locations around the United States and consist of a variety of configurations. The case studies include the following:
 
