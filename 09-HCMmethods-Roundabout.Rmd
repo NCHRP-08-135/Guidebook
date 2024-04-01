@@ -34,7 +34,7 @@ Heavy vehicle |2
   
   - Equation 22-10: Heavy vehicle adjustment factor
   
-$$f_{hv} = \frac{1}{1 + P_{T}(E_{T} - 1)} \tag{HCM Eq. 22-10}$$
+$$f_{HV} = \frac{1}{1 + P_{T}(E_{T} - 1)} \tag{HCM Eq. 22-10}$$
 
 **Step 3: Determine Circulating and Exiting Flow Rates**
 
@@ -94,11 +94,11 @@ This step is not implemented.
 
 - Equation 22-13: Convert lane *i* flow rate from units of pc/h to veh/h; Uses results from Eq. 22-9 and Eq. 22-15
 
-$$v_{i} = v_{i,PCE}\times f_{hv,e} \tag{HCM Eq. 22-13}$$
+$$v_{i} = v_{i,PCE}\times f_{HV,e} \tag{HCM Eq. 22-13}$$
 
 - Equation 22-14: Calculate lane *i* capacity, in units of veh/h; Uses results from Eq. 22-15
 
-$$c_{i} = c_{i,PCE}\times f_{hv,e} \times f_{ped} \tag{HCM Eq. 22-14}$$
+$$c_{i} = c_{i,PCE}\times f_{HV,e} \times f_{ped} \tag{HCM Eq. 22-14}$$
 
 - Equation 22-15: Heavy vehicle adjustment factor for the entry lane; Uses results from Eq. 22-9
 
@@ -181,7 +181,7 @@ $v_{c,pce}$ = conflicting flow rate (pc/h)
 $v_{e,i,pce}$ = entry flow rate for movement *i* (pc/h)  
 $v_{ex,i,pce}$ = exit flow rate for movement *i* (pc/h)  
 $v_{i}$ =	demand flow rate in direction *i* (veh/h)  
-$v_{i,pce}$ = demand flow rate for movement *i* (pc/h)  
+$v_{i,PCE}$ = demand flow rate for movement *i* (pc/h)  
 $V_{i}$ =	demand volume for direction *i* (veh/h)  
 $x$ = volume-to-capacity ratio of the subject lane  
 

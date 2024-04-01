@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>16 Case Study: Oregon US-20 | Rural-Highway-Analysis-Guidebook.knit</title>
   <meta name="description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
   <meta property="og:title" content="16 Case Study: Oregon US-20 | Rural-Highway-Analysis-Guidebook.knit" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="" />
 
 
-<meta name="date" content="2023-09-29" />
+<meta name="date" content="2024-04-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -167,7 +167,7 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li><a href="index.html#section" id="toc-section"></a></li>
-<li class="part"><span><b>Part I</b></span></li>
+<li class="part"><span><b>I Foundations</b></span></li>
 <li class="chapter" data-level="1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#purpose-of-guidebook"><i class="fa fa-check"></i><b>1.1</b> Purpose of Guidebook</a></li>
@@ -204,7 +204,7 @@ div.csl-indent {
 <li class="chapter" data-level="2.5.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#use-of-probe-vehicle-measured-travel-timesspeeds"><i class="fa fa-check"></i><b>2.5.5</b> Use of Probe-Vehicle Measured Travel Times/Speeds</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html"><i class="fa fa-check"></i><b>3</b> Reliability</a>
+<li class="chapter" data-level="3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html"><i class="fa fa-check"></i><b>3</b> Automobile Travel Time Reliability</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityIntro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
 <li class="chapter" data-level="3.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#approach-for-rural-highways"><i class="fa fa-check"></i><b>3.2</b> Approach for Rural Highways</a></li>
@@ -242,7 +242,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.3.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#applications"><i class="fa fa-check"></i><b>4.3.3</b> Applications</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>Part II: HCM Calculations</b></span></li>
+<li class="part"><span><b>II HCM Calculations</b></span></li>
 <li class="chapter" data-level="5" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html"><i class="fa fa-check"></i><b>5</b> HCM Automobile LOS Methodologies</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
@@ -310,8 +310,8 @@ div.csl-indent {
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="CompEngine.html"><a href="CompEngine.html"><i class="fa fa-check"></i><b>14</b> Computational Engine Overview</a></li>
-<li class="part"><span><b>Part III: Case Studies</b></span></li>
-<li class="chapter" data-level="15" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html"><i class="fa fa-check"></i><b>15</b> Introduction</a>
+<li class="part"><span><b>III Case Studies</b></span></li>
+<li class="chapter" data-level="15" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html"><i class="fa fa-check"></i><b>15</b> Case Studies Introduction</a>
 <ul>
 <li class="chapter" data-level="15.1" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#supporting-material"><i class="fa fa-check"></i><b>15.1</b> Supporting Material</a>
 <ul>
@@ -399,6 +399,7 @@ div.csl-indent {
 <li class="chapter" data-level="A.4" data-path="AppendixA.html"><a href="AppendixA.html#intersections"><i class="fa fa-check"></i><b>A.4</b> Intersections</a></li>
 <li class="chapter" data-level="A.5" data-path="AppendixA.html"><a href="AppendixA.html#arterials"><i class="fa fa-check"></i><b>A.5</b> Arterials</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/NCHRP-08-135/Guidebook" target="blank">View Book Source</a></li>
 
@@ -439,7 +440,7 @@ Figure 16.1: Oregon US-20 Study Route Boundaries. Source: Map data from <a href=
 <p>This route consists of sections of two-lane highway, with passing constrained, passing zone, and passing lane segments, as well as an arterial street section that passes through the small city of Sisters, Oregon. The arterial section includes several two-way stop-controlled intersections (control only on the minor street). Just prior to the downtown area of Sisters, the route also includes a roundabout intersection. The analysis direction is the southeast direction of travel.</p>
 <p>The first step in the segmentation process was to identify segments based on cross section and passing configuration (for two-lane highways). This is shown in Figure <a href="CaseStudyOR20.html#fig:US20SegmentationFullRoute">16.2</a>, with the color coding as defined in <a href="CaseStudyIntro.html#kml-files">KML Files</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:US20SegmentationFullRoute"></span>
-<img src="Images/CaseStudyUS20/US20_Full.png" alt="Oregon US-20 Full Route, with segmentation shown for cross section and passing designation. Source: Map data ©2022 Google"  />
+<img src="Images/CaseStudyUS20/US20_Full.png" alt="Oregon US-20 Full Route, with segmentation shown for cross section and passing designation. Source: Map data ©2022 Google" width="557" />
 <p class="caption">
 Figure 16.2: Oregon US-20 Full Route, with segmentation shown for cross section and passing designation. Source: Map data ©2022 Google
 </p>
@@ -2253,9 +2254,14 @@ Volume
 <p>No signalized intersections are present along this route.</p>
 <p><strong>Two-Way Stop Controlled (TWSC) Intersections</strong></p>
 <p>These locations are typically used as segment break points to allow for a change in traffic volume. However, because it assumed that the major through movement does not incur delay due to any turning vehicles, no specific intersection analysis is required at these locations. For locations where intersection geometry upgrades are necessary because of delay due to turning movements, the reader is referred to some recommended studies listed in <a href="AppendixA.html#AppendixA">Appendix A</a>.</p>
-<p>Along the arterial 10% left and right turns where there is an exclusive left turn bay (Pine St and Locust St).
-5% left and right turns where there is no exclusive left turn bay (Larch St)
-The intersection with E Jefferson Ave does not include a leg on the northeast side of US-20. Thus, there are 0% left turns. 5% right turns is assumed.</p>
+<p>The following is assumed about turning movement volumes at these intersections:</p>
+<ul>
+<li>10% left and right turns where there is an exclusive left turn bay (Pine St and Locust St)<br />
+</li>
+<li>5% left and right turns where there is no exclusive left turn bay (Larch St)<br />
+</li>
+<li>The intersection with E Jefferson Ave does not include a leg on the northeast side of US-20. Thus, there are 0% left turns and 5% right turns is assumed.</li>
+</ul>
 <p><strong>All-Way Stop Controlled (AWSC) Intersections</strong></p>
 <p>No AWSC intersections are present along this route.</p>
 <p><strong>Roundabout Intersections</strong></p>
@@ -4687,13 +4693,13 @@ Available Capacity (veh/h)
 Momentum (vol x speed)
 </th>
 <th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
-VMT
+Veh-Miles-Traveled (VMT)
 </th>
 <th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
-VHT
+Veh-Hours-Traveled (VHT)
 </th>
 <th style="text-align:right;-webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);">
-VHD
+Veh-Hours-Delayed (VHD)
 </th>
 </tr>
 </thead>
@@ -6850,13 +6856,13 @@ D
 <p>Volume to capacity ratios generally range from 0.2-0.35. The maximum <span class="math inline">\(d/c\)</span> of 0.529 occurs in last two-lane highway (passing constrained) segment in Tumalo, as a result of the significant demand volume increase in this area. The roundabout intersection in Sisters has a <span class="math inline">\(d/c\)</span> of 0.4 and a control delay of approximately 8 s/veh for the major street through movement, corresponding to an LOS of A (0-10 s/veh = LOS A).</p>
 <p>The average speed along the arterial through Sisters is 30.6 mi/h. This is well above the posted speed limit–it is the correct value per the urban streets methodology, but this kind of result is a noted criticism of the HCM methodology. Since the intersections along the arterial segment through Sisters are all TWSC intersections, a <span class="math inline">\(d/c\)</span> value is not reported. This is because the effects of the intersections are modeled as access points along the links (i.e., subsegments) and not modeled directly with the TWSC methodology, where delays due to left turns, for those intersections without separate left-turn bays, may be more accurately modeled.</p>
 <p>Local observations of the operations, particularly at the TWSC intersections, should be made to determine the most appropriate way to analyze this stretch of roadway through Sisters.</p>
-<p>According to the guidelines in the <a href="Chapter2LOS.html#HotSpots">Hot Spot Identification</a> section, no segments within the facility would be considered hot spots. For much higher demand volume scenarios, such as Labor Day weekend, there are several two-lane highway segments that would likely reach LOS E or F. The arterial segment through Sisters may also become a hot spot under this demand volume condition, especially if left-turn movement volumes are moderate or higher. Under these conditions, it may be necessary to restrict left turns from US-20 through Sisters, where no separate left turn bay is provided. For a more permanent traffic growth situation, it may be necessary to consider converting the TWSC intersections to an alternate intersection form, such as a roundabout. See the Ohio US-42 Case Study (3) for an example of testing different demand volume conditions on the route.</p>
+<p>According to the guidelines in the <a href="Chapter2LOS.html#HotSpots">Hot Spot Identification</a> section, no segments within the facility would be considered hot spots. For much higher demand volume scenarios, such as Labor Day weekend, there are several two-lane highway segments that would likely reach LOS E or F. The arterial segment through Sisters may also become a hot spot under this demand volume condition, especially if left-turn movement volumes are moderate or higher. Under these conditions, it may be necessary to restrict left turns from US-20 through Sisters, where no separate left turn bay is provided. For a more permanent traffic growth situation, it may be necessary to consider converting the TWSC intersections to an alternate intersection form, such as a roundabout. See the <a href="CaseStudyOH42.html#CaseStudyOH42">Ohio US-42 Case Study</a> for an example of testing different demand volume conditions on the route.</p>
 </div>
 </div>
 <div id="reliability" class="section level2 hasAnchor" number="16.3">
 <h2><span class="header-section-number">16.3</span> Reliability<a href="CaseStudyOR20.html#reliability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="Note" class="ThreshValue message" style="color: orange;">
-<p>It should be noted that in the US-20 (Oregon) sample data, the vendor’s sample size was not sufficient to produce one minute-resolution data. Although the data file reports for each minute of the day, the travel time column remains constant for long stretches of time, indicating that data for those minutes is being imputed with historical data or modeled sources.</p>
+<p>It should be noted that in the US-20 (Oregon) sample data, the vendor’s sample size was not sufficient to produce one-minute-resolution data. Although the data file reports for each minute of the day, the travel time column remains constant for long stretches of time, indicating that data for those minutes is being imputed with historical data or modeled sources.</p>
 </div>
 <p>The reliability analysis focused on a 6-mile stretch of US-20 in the rural town of Sisters, Oregon (see Figure <a href="CaseStudyOR20.html#fig:US20ReliabilitySection1">16.14</a>). For the analysis, the facility was divided into 10 segments with each segment measuring approximately 0.6 miles in length.</p>
 <p><a href="https://www.google.com/maps/dir/44.331102,-121.589774/44.2699705,-121.5119487/@44.3009858,-121.5863162,14221m/am=t/data=!3m2!1e3!4b1" class="uri">https://www.google.com/maps/dir/44.331102,-121.589774/44.2699705,-121.5119487/@44.3009858,-121.5863162,14221m/am=t/data=!3m2!1e3!4b1</a></p>
@@ -6881,7 +6887,7 @@ Figure 16.15: Speed Heatmaps
 </div>
 <div id="speed-difference-heatmaps" class="section level3 unnumbered hasAnchor">
 <h3>Speed Difference Heatmaps<a href="CaseStudyOR20.html#speed-difference-heatmaps" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Speed difference heatmaps shown in Figure <a href="CaseStudyOR20.html#fig:SpeedDiffUS20">16.16</a>. The speed difference heatmap normalizes the display relative to the estimated free-flow speed for the segment (using the 85th percentile speed) making it much easier to visually infer periods of recurring and non-recurring congestion. In addition to the previously noted recurring congestion in the downtown area of Sisters and the non-recurring congestion in the December/January timeframe, the speed difference heat map shows periods of apparent unreliable travel during nighttime conditions. There is a potential bias here with low sample sizes on rural segments. For example, the low speeds could be due to a single (slow moving) truck being the only source of probe data, which then translates into a slow recorded speed. However, low sample size is expected to be less than an issue when a segment shows congestion for multiple time periods, which may then more likely be attributable to an incident, special event traffic, or severe weather event.</p>
+<p>Speed difference heatmaps shown in Figure <a href="CaseStudyOR20.html#fig:SpeedDiffUS20">16.16</a>. The speed difference heatmap normalizes the display relative to the estimated free-flow speed for the segment (using the 85th percentile speed) making it much easier to visually infer periods of recurring and non-recurring congestion. In addition to the previously noted recurring congestion in the downtown area of Sisters and the non-recurring congestion in the December/January timeframe, the speed difference heat map shows periods of apparent unreliable travel during nighttime conditions. There is a potential bias here with low sample sizes on rural segments. For example, the low speeds could be due to a single (slow moving) truck being the only source of probe data, which then translates into a slow recorded speed. However, low sample size is expected to be less of an issue when a segment shows congestion for multiple time periods, which may then more likely be attributable to an incident, special event traffic, or severe weather event.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:SpeedDiffUS20"></span>
 <img src="Images/CaseStudyUS20/Reliability/SpeedDiff.png" alt="Speed Difference Heatmaps" width="95%" />
 <p class="caption">
@@ -6976,7 +6982,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["Rural Highway Analysis Guidebook.pdf", "Rural Highway Analysis Guidebook.epub"],
+"download": ["Rural Highway Analysis Guidebook.pdf"],
 "search": {
 "engine": "fuse",
 "options": null

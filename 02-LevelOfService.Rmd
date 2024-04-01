@@ -11,9 +11,9 @@ This chapter describes the methodology to perform a traffic operations and level
 - All-way Stop Control (AWSC) Intersections
 - Roundabout Intersections
 
-Part 3 of the Guidebook provides an overview of these analysis methods. This appendix is not intended to duplicate in full the analysis methodology material provided in the HCM, but rather to provide a concise summary of the applicable equations, exhibits, and nomenclature for each analysis methodology utilized in the rural highway LOS methodology. 
+Part 2 of the Guidebook provides an overview of these analysis methods. Chapters 6-12 of this section of the Guidebook are not intended to duplicate in full the analysis methodology material provided in the HCM, but rather to provide a concise summary of the applicable equations, exhibits, and nomenclature for each analysis methodology utilized in the rural highway LOS methodology. 
 
-Because of the relatively long distances involved in a rural highway analysis and the corresponding volume of calculations, it is necessary to implement some simplifying assumptions into the analysis methodology. If the HCM contains alternative calculation procedures, such as those intended for planning and preliminary engineering applications, they are utilized in this methodology as appropriate. There are a few additional situations for which analysis simplifications are proposed for this methodology that are not currently addressed by the HCM. These simplifications are discussed further in this chapter and are clearly identified in the material in [Part 3](#HCMmethodsIntro).
+Because of the relatively long distances involved in a rural highway analysis and the corresponding volume of calculations, it is necessary to implement some simplifying assumptions into the analysis methodology. If the HCM contains alternative calculation procedures, such as those intended for planning and preliminary engineering applications, they are utilized in this methodology as appropriate. There are a few additional situations for which analysis simplifications are proposed for this methodology that are not currently addressed by the HCM. These simplifications are discussed further in this chapter and are clearly identified in the material in [Part 2](#HCMmethodsIntro).
 
 It should be noted that the analysis methodology is direction specific. That is, results are specific to a single direction. For some roadway configurations, information about other directions of travel (traffic, roadway, control) may be needed to determine the operational quality for the analysis direction of travel. For example, for a two-lane highway passing zone, it is necessary to know the traffic volume in the opposing direction. Likewise, for intersections, such as roundabouts and all-way stop controlled, traffic operations on a given approach are affected by traffic demands and lane configurations on other approaches.
 
@@ -85,7 +85,7 @@ The two-lane highway passing lane segment analysis methodology is not intended f
 To understand why it is important to apply the appropriate analysis methodology, a brief review of the key analysis components is first provided. Figure \@ref(fig:HCMMLHwySpeedFlowCurves) shows speed-flow curves for a multilane highway segment. Figure \@ref(fig:PassingLaneExample) shows an example speed-flow curve for a passing lane segment. There is a general similarity in the shape of the curves between the two segment types, as should be expected due to the multilane configuration of both segment types.
 
 
-```{r HCMMLHwySpeedFlowCurves, echo=FALSE, fig.cap='Multilane Highway Segment Speed-Flow Curves Plot',out.width="45%", fig.align='center'}
+```{r HCMMLHwySpeedFlowCurves, echo=FALSE, fig.cap='Multilane Highway Segment Speed-Flow Curves Plot',out.width="55%", fig.align='center'}
 knitr::include_graphics("./Images/LOS/HCMMLHwySpeedFlowCurves.png")
 ```
 
@@ -276,7 +276,7 @@ The Green Book provides the following context classifications (from Section 1.5:
 * Urban
 * Urban Core
 
-Regarding the definitions for these context classifications, the Green Book states:
+Regarding the definitions for these context classifications, the Green Book states (p. 1-17):
 
 - These contexts are defined based on development density (existence of structures and structure types), land uses (primarily residential, commercial, industrial, and/or agricultural), and building setbacks (distance of structures to adjacent roadways). These five contexts were initially presented in NCHRP Report 855, *An Expanded Functional Classification System for Highways and Streets* [@NCHRPRep855] , which has prepared a guide for classifying contexts and applying the context classes in design.
 
@@ -294,7 +294,9 @@ If the stretch of roadway through a developed area is consistent with the rural 
 
 #### Posted Speed Limit
 
-The HCM Urban Street Facilities analysis methodology is designed for roadways that travel through urbanized or semi-urbanized environments and consequently can consider many of the conditions that are present in those environments--frequent intersections, roadside activity such as on-street parking, median restrictions, presence of curbs, and signal coordination. In some situations, however, the roadway characteristics may be similar to basic two-lane or multilane highways segments, but with low posted speed limits through the urbanized area (e.g., a small town). In these situations, it may be reasonable to apply the two-lane or multilane highway analysis methodology rather than the Urban Street Facilities analysis methodology.
+The HCM Urban Street Facilities analysis methodology is designed for roadways that travel through urbanized or semi-urbanized environments, 
+
+The HCM Urban Street Facilities analysis methodology is designed for roadways that travel through urbanized or semi-urbanized environments, and consequently, it can consider many of the conditions that are present in those environments— signal coordination, frequent intersections, median restrictions, presence of curbs, and roadside activity such as on-street parking. In some situations, however, the roadway characteristics may be similar to basic two-lane or multilane highways segments, but with low posted speed limits through the urbanized area (e.g., a small town). In these situations, it may be reasonable to apply the two-lane or multilane highway analysis methodology rather than the Urban Street Facilities analysis methodology.
 
 The text of HCM Chapter 15 (Two-Lane Highways) mentions that two-lane highways have posted speed limits of 35 mi/h and higher (p. 15-11), and free-flow speeds ranging from 40-75 mi/h (p. 15-19). The methodology does not explicitly state that it should not be applied to roadways with low posted speeds (20-30 mi/h); however, the development of the methodology did not explicitly consider data from such roadways. 
 
@@ -318,7 +320,7 @@ knitr::include_graphics("./Images/LOS/HCMExhibit18-12.png")
 
 There is enough similarity between the two-lane highway and urban street facility speed-flow curves that it is reasonable to apply the two-lane highway analysis methodology to low posted speed roadways that do not include roadside characteristics that would necessitate application of the urban street facility methodology, as discussed in the following section.
 
-Despite a similarity in speed-flow relationship between two-lane highway segments and urban streets--when there is little to no roadside activity and no intersections that impose control on the major through movement--the service measures are different. Follower density is used to assess LOS for two-lane highway segments, whereas average speed is used to assess LOS for urban streets. Thus, this aspect should also be considered in choosing between the two approaches. In other words, the context of the roadway within the surrounding land uses may need to be the determining factor in this decision.
+Despite a similarity in speed-flow relationship between two-lane highway segments and urban streets--when there is little to no roadside activity and no intersections that impose control on the major through movement--the service measures are different. Follower density is used to assess LOS for two-lane highway segments, whereas average speed is used to assess LOS for urban streets. Thus, this service measure aspect should also be considered in choosing between the two approaches. In other words, the context of the roadway within the surrounding land uses may need to be the determining factor in this decision.
 
 The HCM multilane highway analysis methodology is intended for application to roadways with a posted speed limit of 40 mi/h and higher. Furthermore, the analysis methodology calculations are not designed to accommodate roadways with free-flow speeds less than 45 mi/h. Thus, for multilane roadways with posted speed limits less than 40 mi/h, the urban street facility methodology should be applied.   
 
@@ -337,21 +339,22 @@ These conditions can be accommodated with the urban street analysis methodology,
 
 If the roadway section does not include two or more signalized intersections, then progression quality is not relevant. In that case, the earlier guidance should be consulted.
 
-If the roadway consists of a series of signalized intersections and coordination is employed and other traffic and roadway characteristics are conducive to maintaining favorable signal progression, the urban streets analysis methodology should be employed. Favorable signal progression implies that the proportion of vehicles arriving on the green signal indication (PVG) is higher than the effective green-to-cycle length ($g/C$) ratio. A PVG value approximately equal to the $g/C$ ratio is expected for random vehicle arrivals.
+If the roadway consists of a series of signalized intersections, signal coordination is employed, and other traffic and roadway characteristics are conducive to maintaining favorable signal progression, the urban streets analysis methodology should be employed. Favorable signal progression implies that the proportion of vehicles arriving on the green signal indication (PVG) is higher than the effective green-to-cycle length ($g/C$) ratio. A PVG value approximately equal to the $g/C$ ratio is expected for random vehicle arrivals.
 
 If the signalized intersections along the roadway are spaced at 3/4 of a mile or greater, they should be considered isolated, in which case random arrivals can be assumed. Otherwise, signal progression should be taken into account. Refer to the NCHRP 08-135 final report [@NCHRP-Project-08-135] for more detail on the development of this recommendation.
 
-When applying an urban street facility analysis to a stretch of rural highway, it is recommended that the planning-level analysis methodology be applied. This methodology is described in Section 5 of Chapter 30 of the HCM. The primary difference between the planning- and operational-level methodologies is the simplification of the process to account for signal progression quality on signal delay. Instead of the more complex platoon dispersion model, the planning-level analysis makes use of the simplified progression adjustment factor (PF). This process is shown in the application example for the Tennessee TN-109 route.
+When applying an urban street facility analysis to a stretch of rural highway, it is recommended that the planning-level analysis methodology be applied. This methodology is described in Section 5 of Chapter 30 of the HCM. The primary difference between the planning- and operational-level methodologies is the simplification of the process to account for signal progression quality on signal delay. Instead of the more complex platoon dispersion model, the planning-level analysis makes use of the simplified progression adjustment factor (PF). This process is shown in the case study for the Tennessee TN-109 route.
 
 ### Practical Minimum Segment Length {#SegMinLength}
 
 During the segmentation process, overlap in changes to terrain, posted speed limit, number of lanes, and/or passing markings, can often lead to some relatively short segments along the route. Intersection segments will usually be relatively short, but the use of short multilane or two-lane highway segments is not reasonable for a rural highway analysis.
 
-For two-lane highway segments, see Exhibit 15-10 (Minimum and Maximum Segment Lengths for Use in Computing Segment Speeds and Percent Followers)
+For two-lane highway segments, see Exhibit 15-10 (Minimum and Maximum Segment Lengths for Use in Computing Segment Speeds and Percent Followers).
 
-Multilane highway segments
-- length is not a factor for general terrain (level or rolling) segments
-- for specific grades, using Exhibits 12-26 - 12-28, the minimum length category is 0.125 mi (use for distance between 0 - 0.125 mi)
+For multilane highway segments:  
+
+* length is not a factor for general terrain (level or rolling) segments  
+* for specific grades, using Exhibits 12-26 - 12-28, the minimum length category is 0.125 mi (use for distance between 0 - 0.125 mi)
 
 From a practical perspective, segments less than 0.25 mi in length should be combined with either the upstream or downstream connecting segment. This, of course, is not a strict rule, as there may still be valid reasons for including a segment shorter than this length. 
 
@@ -504,7 +507,7 @@ Table: (\#tab:LOSConstancyAdj) LOS Constancy Adjustment Value
 
 **Adjustment Factor Value  ($\alpha$)**|**LOS Constancy Value**|
 :-----|-----:|
-| $\alpha$ = 1.0 | LOS constancy $\leq$ 0.2
+| $\alpha$ = 1.0 | LOS Constancy $\leq$ 0.2
 | $\alpha$ = 0.96 + 0.2 $\times$ LOS Constancy Value | 0.2 < LOS Constancy < 1.0 
 | $\alpha$ = 1.2 | LOS Constancy $\geq$ 1.0  
 
@@ -565,7 +568,7 @@ Suppose an agency may be concerned with assessing a highway’s ability to serve
 
 Going a step further, it may be useful to consider a measure that considers both traffic volume and the average speed of the traffic. Such a measure is the product of volume and speed, referred to here as ‘momentum’ (units of veh-mi/h^2). Flow rate indicates the number of vehicles moved per hour, but generally speaking, and especially for evacuation scenarios, the faster that volume is moving, the better. The momentum measure will clearly highlight differences in segment types, where capacity flow rates can be significantly different (a multilane highway segment versus a two-lane highway segment) and speeds for a given flow rate, including capacity, are also different.
 
-```{r LakeTahoeEvacuation, echo=FALSE, fig.cap='Traffic from fire evacuation from South Lake Tahoe, Calif., on Monday (8/30/21).',fig.width=6, fig.align='center'}
+```{r LakeTahoeEvacuation, echo=FALSE, fig.cap='Traffic from fire evacuation from South Lake Tahoe, Calif., on Monday (8/30/21).',out.width="50%", fig.align='center'}
 knitr::include_graphics("./Images/LOS/LakeTahoeEvacuation.jpg")
 ```
 © Josh Edelson/Agence France-Presse — Getty Images  
@@ -575,7 +578,7 @@ Taken from (<a href="https://www.nytimes.com/2021/08/31/us/lake-tahoe-nevada-fir
 
 This scenario primarily consists of significant increases in traffic demand, over days or weeks, due to traffic diversion from a significant route in the region. This temporary disruption to the significant route may be due to a full or partial closure (e.g., natural disaster, construction). For example, a section of I-70 in Colorado was temporarily shut down due to a mudslide during the summer of 2021 (Figure \@ref(fig:ColoradoLandslide)). This resulted in a large volume of traffic being diverted to connecting rural highways in the region (https://landline.media/natural-disasters-causing-highway-closures-across-nation-including-i-70-in-colorado).
 
-```{r ColoradoLandslide, echo=FALSE, fig.cap='Closure of I-70 in Colorado due to mudslide.',fig.width=6, fig.align='center'}
+```{r ColoradoLandslide, echo=FALSE, fig.cap='Closure of I-70 in Colorado due to mudslide.',out.width="50%", fig.align='center'}
 knitr::include_graphics("./Images/LOS/ColoradoI-70landslide.png")
 ```
 Source: Colorado Department of Transportation  
@@ -583,14 +586,14 @@ Taken from (<a href="https://www.nbcnews.com/news/us-news/mudslide-scenic-colora
 
 Another example is the incapacitation of Coquihalla Highway, in the Vancouver, British Columbia area, due to flooding in November 2021 (see Figure \@ref(fig:VancouverFlooding)). Traffic diversion from this route to other highways in the region will significantly adversely impact mobility in the region (https://www.todayinbc.com/news/coquihalla-highway-will-take-months-to-rebuild-from-mud-and-rockslide-damage). 
 
-```{r VancouverFlooding, echo=FALSE, fig.cap='Coquihalla Highway, near Vancouver, British Columbia, damage from flooding.',fig.width=6, fig.align='center'}
+```{r VancouverFlooding, echo=FALSE, fig.cap='Coquihalla Highway, near Vancouver, British Columbia, damage from flooding.',out.width="50%", fig.align='center'}
 knitr::include_graphics("./Images/LOS/VancouverFlooding.png")
 ```
 Source: Newspaper clipping, from The Globe and Mail (<a href="https://www.theglobeandmail.com/" class="uri">https://www.theglobeandmail.com/</a>), provided by Dr. Fred Hall (former HCQSC member)
 
 Another example is the collapse of a section of Highway 1 in California in January 2021 due to heavy rains (See Figure \@ref(fig:BigSurRoadFailure)).
 
-```{r BigSurRoadFailure, echo=FALSE, fig.cap='Collapse of section of Highway 1, near Big Sur, California.',fig.width=6, fig.align='center'}
+```{r BigSurRoadFailure, echo=FALSE, fig.cap='Collapse of section of Highway 1, near Big Sur, California.',out.width="50%", fig.align='center'}
 knitr::include_graphics("./Images/LOS/BigSurRoadFailure.png")
 ```
 Source: https://www.nytimes.com/2021/01/30/us/highway-one-mudslide.html

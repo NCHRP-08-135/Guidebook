@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>12 Bicycle LOS Methodologies | Rural-Highway-Analysis-Guidebook.knit</title>
   <meta name="description" content="This document provides guidance on applying the Highway Capacity Manual and probe vehicle data analysis methodologies to rural highways. Rural highways are comprised of contiguous segments of multilane highway, two-lane highways, intersections (signalized, roundabout, stop control), and arterials through rural towns." />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.38 and GitBook 2.6.7" />
 
   <meta property="og:title" content="12 Bicycle LOS Methodologies | Rural-Highway-Analysis-Guidebook.knit" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="" />
 
 
-<meta name="date" content="2023-09-29" />
+<meta name="date" content="2024-04-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -167,7 +167,7 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li><a href="index.html#section" id="toc-section"></a></li>
-<li class="part"><span><b>Part I</b></span></li>
+<li class="part"><span><b>I Foundations</b></span></li>
 <li class="chapter" data-level="1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="Chapter1Intro.html"><a href="Chapter1Intro.html#purpose-of-guidebook"><i class="fa fa-check"></i><b>1.1</b> Purpose of Guidebook</a></li>
@@ -204,7 +204,7 @@ div.csl-indent {
 <li class="chapter" data-level="2.5.5" data-path="Chapter2LOS.html"><a href="Chapter2LOS.html#use-of-probe-vehicle-measured-travel-timesspeeds"><i class="fa fa-check"></i><b>2.5.5</b> Use of Probe-Vehicle Measured Travel Times/Speeds</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html"><i class="fa fa-check"></i><b>3</b> Reliability</a>
+<li class="chapter" data-level="3" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html"><i class="fa fa-check"></i><b>3</b> Automobile Travel Time Reliability</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#ReliabilityIntro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
 <li class="chapter" data-level="3.2" data-path="Chapter3Reliability.html"><a href="Chapter3Reliability.html#approach-for-rural-highways"><i class="fa fa-check"></i><b>3.2</b> Approach for Rural Highways</a></li>
@@ -242,7 +242,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.3.3" data-path="Chapter4Bicycle.html"><a href="Chapter4Bicycle.html#applications"><i class="fa fa-check"></i><b>4.3.3</b> Applications</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>Part II: HCM Calculations</b></span></li>
+<li class="part"><span><b>II HCM Calculations</b></span></li>
 <li class="chapter" data-level="5" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html"><i class="fa fa-check"></i><b>5</b> HCM Automobile LOS Methodologies</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="HCMmethodsIntro.html"><a href="HCMmethodsIntro.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
@@ -310,8 +310,8 @@ div.csl-indent {
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="CompEngine.html"><a href="CompEngine.html"><i class="fa fa-check"></i><b>14</b> Computational Engine Overview</a></li>
-<li class="part"><span><b>Part III: Case Studies</b></span></li>
-<li class="chapter" data-level="15" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html"><i class="fa fa-check"></i><b>15</b> Introduction</a>
+<li class="part"><span><b>III Case Studies</b></span></li>
+<li class="chapter" data-level="15" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html"><i class="fa fa-check"></i><b>15</b> Case Studies Introduction</a>
 <ul>
 <li class="chapter" data-level="15.1" data-path="CaseStudyIntro.html"><a href="CaseStudyIntro.html#supporting-material"><i class="fa fa-check"></i><b>15.1</b> Supporting Material</a>
 <ul>
@@ -399,6 +399,7 @@ div.csl-indent {
 <li class="chapter" data-level="A.4" data-path="AppendixA.html"><a href="AppendixA.html#intersections"><i class="fa fa-check"></i><b>A.4</b> Intersections</a></li>
 <li class="chapter" data-level="A.5" data-path="AppendixA.html"><a href="AppendixA.html#arterials"><i class="fa fa-check"></i><b>A.5</b> Arterials</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/NCHRP-08-135/Guidebook" target="blank">View Book Source</a></li>
 
@@ -426,25 +427,41 @@ div.csl-indent {
 <h4>Multilane and Two-Lane Highways<a href="HCMbicycle.html#multilane-and-two-lane-highways" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The calculation of bicycle LOS on multilane and two-lane highways shares the same methodology. Full details on the bicycle LOS methodology and calculation procedures are provided in HCM Chapter 15 (Two-Lane Highways). The bicycle analysis methodology process is given in Exhibit 15-31.</p>
 <p>The specific equation and exhibit numbers utilized in the methodology, in the general order in which they are applied, are as follows.</p>
-<p><strong>Step 1: Gather Input Data</strong>
-- Exhibit 15-31: Required input data and default values when neither site-specific data nor local default values are available.</p>
-<p>The following data, and applicable ranges, are required:
-- Width of the outside through lane: 10 to 16 ft,
-- Shoulder width: 0 to 6 ft,
-- Motorized vehicle volumes: up to 36,000 annual average daily traffic (AADT),
-- Number of directional through lanes (for multilane),
-- Posted speed: 25 to 50 mi/h,
-- Heavy-vehicle percentage: 0% to 2%, and
-- Pavement condition: 2 to 5 on the Federal Highway Administration (FHWA) 5-point pavement rating scale</p>
+<p><strong>Step 1: Gather Input Data</strong></p>
+<ul>
+<li>Exhibit 15-31: Required input data and default values when neither site-specific data nor local default values are available.</li>
+</ul>
+<p>The following data, and applicable ranges, are required:</p>
+<ul>
+<li>Width of the outside through lane: 10 to 16 ft,<br />
+</li>
+<li>Shoulder width: 0 to 6 ft,<br />
+</li>
+<li>Motorized vehicle volumes: up to 36,000 annual average daily traffic (AADT),<br />
+</li>
+<li>Number of directional through lanes (for multilane),<br />
+</li>
+<li>Posted speed: 25 to 50 mi/h,<br />
+</li>
+<li>Heavy-vehicle percentage: 0% to 2%, and<br />
+</li>
+<li>Pavement condition: 2 to 5 on the Federal Highway Administration (FHWA) 5-point pavement rating scale</li>
+</ul>
 <p><strong>Step 2: Calculate the Directional Flow Rate in the Outside Lane</strong>
 - Equation 15-40: Directional demand flow rate in the outside lane</p>
 <p><strong>Step 3: Calculate the Effective Width</strong></p>
-<p>Uses Eq. 15-41, 15-42, 15-43 or 15-44 depending on paved shoulder width and hourly directional volume
-- Equation 15-41: If paved shoulder width is greater than or equal to 8 ft
-- Equation 15-42: If paved shoulder width is greater than or equal to 4 ft and less than 8 ft
-- Equation 15-43: If paved shoulder width is less than 4 ft. Uses Eq. 15-44 or 15-45 to determine effective width as a function of traffic volume
-- Equation 15-44: If hourly directional volume is greater than 150 veh/h
-- Equation 15-44: Otherwise</p>
+<p>Uses Eq. 15-41, 15-42, 15-43 or 15-44 depending on paved shoulder width and hourly directional volume</p>
+<ul>
+<li>Equation 15-41: If paved shoulder width is greater than or equal to 8 ft<br />
+</li>
+<li>Equation 15-42: If paved shoulder width is greater than or equal to 4 ft and less than 8 ft<br />
+</li>
+<li>Equation 15-43: If paved shoulder width is less than 4 ft. Uses Eq. 15-44 or 15-45 to determine effective width as a function of traffic volume<br />
+</li>
+<li>Equation 15-44: If hourly directional volume is greater than 150 veh/h<br />
+</li>
+<li>Equation 15-44: Otherwise</li>
+</ul>
 <p><strong>Step 4: Calculate the Effective Speed Factor</strong>
 - Equation 15-46: Effective Speed Factor</p>
 <p><strong>Step 5: Determine the LOS</strong>
@@ -495,24 +512,40 @@ div.csl-indent {
 Based on field measurement of midsegment bicycle speed on representative streets in the vicinity of the subject street. A default value of 15 mi/h could be used in absence of data.</p>
 <p><strong>Step 2: Determine Bicycle Delay at Intersection</strong>
 If the boundary intersection is two-way STOP controlled (where the subject approach is uncontrolled), the delay is equal to 0.0 s/bicycle. If the boundary intersection is signalized, the delay is computed by using the motorized vehicle methodology described in Chapter 19.</p>
-<p><strong>Step 3: Determine Bicycle Travel Speed</strong>
-- Equation 18-40: travel speed of through bicycles along the segment</p>
+<p><strong>Step 3: Determine Bicycle Travel Speed</strong></p>
+<ul>
+<li>Equation 18-40: travel speed of through bicycles along the segment</li>
+</ul>
 <p><strong>Step 4: Determine Bicycle LOS Score for Intersection</strong>
 If the boundary intersection is two-way STOP controlled (where the subject approach is uncontrolled), the score is equal to 0.0. If the boundary intersection is signalized, the score is computed by using the bicycle methodology described in Chapter 19.</p>
-<p><strong>Step 5: Determine Bicycle LOS Score for Link</strong>
-- Equation 18-41: bicycle LOS score for link. Uses Eq. 18-42, 18-43 and 18-44
-- Equation 18-42: cross-section adjustment factor. Uses Exhibit 18-25
-- Exhibit 18-25: Variables for Bicycle LOS Score for Link
-- Equation 18-43: motorized vehicle volume adjustment factor. Uses Exhibit 18-25
-- Equation 18-44: motorized vehicle speed adjustment factor. Uses Exhibit 18-25
-- Equation 18-45: pavement condition adjustment factor</p>
-<p><strong>Step 6: Determine Link LOS</strong>
-- Exhibit 18-3: Variables for Bicycle LOS criteria for link</p>
-<p><strong>Step 7: Determine Bicycle LOS Score for Segment</strong>
-- Equation 18-46: bicycle LOS score for segment. Uses Eq. 18-47
-- Equation 18-47: unsignalized conflicts factor</p>
-<p><strong>Step 8: Determine Segment LOS</strong>
-- Exhibit 18-3: Variables for Bicycle LOS criteria for segment</p>
+<p><strong>Step 5: Determine Bicycle LOS Score for Link</strong></p>
+<ul>
+<li>Equation 18-41: bicycle LOS score for link. Uses Eq. 18-42, 18-43 and 18-44<br />
+</li>
+<li>Equation 18-42: cross-section adjustment factor. Uses Exhibit 18-25<br />
+</li>
+<li>Exhibit 18-25: Variables for Bicycle LOS Score for Link<br />
+</li>
+<li>Equation 18-43: motorized vehicle volume adjustment factor. Uses Exhibit 18-25<br />
+</li>
+<li>Equation 18-44: motorized vehicle speed adjustment factor. Uses Exhibit 18-25<br />
+</li>
+<li>Equation 18-45: pavement condition adjustment factor</li>
+</ul>
+<p><strong>Step 6: Determine Link LOS</strong></p>
+<ul>
+<li>Exhibit 18-3: Variables for Bicycle LOS criteria for link</li>
+</ul>
+<p><strong>Step 7: Determine Bicycle LOS Score for Segment</strong></p>
+<ul>
+<li>Equation 18-46: bicycle LOS score for segment. Uses Eq. 18-47<br />
+</li>
+<li>Equation 18-47: unsignalized conflicts factor</li>
+</ul>
+<p><strong>Step 8: Determine Segment LOS</strong></p>
+<ul>
+<li>Exhibit 18-3: Variables for Bicycle LOS criteria for segment</li>
+</ul>
 </div>
 <div id="signalized-intersections" class="section level4 unnumbered hasAnchor">
 <h4>Signalized Intersections<a href="HCMbicycle.html#signalized-intersections" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -524,13 +557,20 @@ Bicycle delay can be calculated only for intersection approaches that have an on
 <li>Equation 19-107: Bicycle delay. Uses result from Eq. 19-106.</li>
 <li>Equation 19-106: Capacity of the bicycle lane.</li>
 </ul>
-<p><strong>Step 2: Determine Bicycle LOS Score for Intersection</strong>
-- Equation 19-108: bicycle LOS score for intersection. Uses results from Eq. 19-109, 19-110 and 19-111.
-- Equation 19-109: cross-section adjustment factor
-- Equation 19-110: motorized vehicle volume adjustment factor
-- Equation 19-111: total width of the outside through lane, bicycle lane, and paved shoulder</p>
-<p><strong>Step 3: Determine LOS</strong>
-- Exhibit 19-9: Bicycle LOS criteria for signalized intersections</p>
+<p><strong>Step 2: Determine Bicycle LOS Score for Intersection</strong></p>
+<ul>
+<li>Equation 19-108: bicycle LOS score for intersection. Uses results from Eq. 19-109, 19-110 and 19-111.<br />
+</li>
+<li>Equation 19-109: cross-section adjustment factor<br />
+</li>
+<li>Equation 19-110: motorized vehicle volume adjustment factor<br />
+</li>
+<li>Equation 19-111: total width of the outside through lane, bicycle lane, and paved shoulder</li>
+</ul>
+<p><strong>Step 3: Determine LOS</strong></p>
+<ul>
+<li>Exhibit 19-9: Bicycle LOS criteria for signalized intersections</li>
+</ul>
 </div>
 <div id="all-way-stop-controlled-intersections" class="section level4 unnumbered hasAnchor">
 <h4>All-Way Stop-Controlled Intersections<a href="HCMbicycle.html#all-way-stop-controlled-intersections" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -551,7 +591,8 @@ Bicycle delay can be calculated only for intersection approaches that have an on
 </ul>
 <p><strong>Step 2: Determine Bicycle LOS Score</strong></p>
 <ul>
-<li>Equation 16-10: Bicycle LOS score for the facility. Uses Eq. 16-11</li>
+<li>Equation 16-10: Bicycle LOS score for the facility. Uses Eq. 16-11<br />
+</li>
 <li>Equation 16-11: Travel-time-weighted average bicycle LOS score for segment <em>i</em></li>
 </ul>
 <p><strong>Step 3: Determine Bicycle LOS</strong></p>
@@ -609,7 +650,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["Rural Highway Analysis Guidebook.pdf", "Rural Highway Analysis Guidebook.epub"],
+"download": ["Rural Highway Analysis Guidebook.pdf"],
 "search": {
 "engine": "fuse",
 "options": null

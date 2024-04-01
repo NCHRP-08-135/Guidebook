@@ -27,7 +27,7 @@ See HCM Chapter 18, Section 3 for more information about this step.
 
 - Equation 18-3: Estimate base free-flow speed (BFFS); Uses value from Exhibit 18-11
 
-$$S_{fo} = {S_{calib}} + {S_{0}} + {f_{cs}} + {f_{A}} + {f_{pk}} \tag{HCM Eq. 18-3}$$
+$$S_{fo} = {S_{calib}} + {S_{0}} + {f_{CS}} + {f_{A}} + {f_{pk}} \tag{HCM Eq. 18-3}$$
 
 - Exhibit 18-11: BFFS Adjustment Factors for Eq. 18-3
 
@@ -97,7 +97,7 @@ Equation 18-7 includes a term to account for the delay imposed on through traffi
 ::::
 
 
-- Exhibit 18-13: Through Vehicle Delay (s/veh/pt) by Number of Through Lanes
+- Exhibit 18-13: Through Vehicle Delay (s/veh/point) by Number of Through Lanes
 
 **Midsegment Volume (veh/h/ln)**|**1 Lane**|**2 Lanes**|**3 Lanes**
 :-----:|:-----:|:-----:|:-----:

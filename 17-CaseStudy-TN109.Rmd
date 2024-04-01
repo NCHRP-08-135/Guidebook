@@ -94,7 +94,7 @@ knitr::kable(
 ```
 
 
-The vertical alignment generally ranges from level to rolling terrain. The changes in terrain along the route are shown in Table \@ref(tab:TerrainTN109)
+The vertical alignment generally ranges from level to rolling terrain. NA = Not Applicable. The changes in terrain along the route are shown in Table \@ref(tab:TerrainTN109)
 
 Table: (\#tab:TerrainTN109) Terrain changes for Tennessee SR-109 Study Route
 
@@ -198,7 +198,7 @@ Table: (\#tab:TN109TrafficHourlyVolumes) SR-109 Sensor Data -- Northbound PM Pea
 
 With a total of nine sensor locations spatially distributed across 22 miles of highway, determining locations to affect volume changes along the route is a very approximate process. To inform this process, satellite photography of the route and its surrounding area was reviewed. More major intersecting roadways--indicated by number of lanes, turning movement accommodation from the major roadway, and/or density of land use accessed by intersecting road within immediate area--were typically chosen as the locations to implement the volume changes.
 
-For two-lane highway segments, the opposing direction volume is needed. Based on Detector 83000133 (in Segment 34), the one sensor within the two-lane highway portion of the route, the *D* factor value of 65% was used to set the opposing direction volume for the PM peak hour; that is, opposing direction volume = peak direction volume / 0.65 -  peak direction volume (rounded to the nearest 50 veh).
+For two-lane highway segments, the opposing direction volume is needed. Based on Detector 83000133 (in Segment 34), the one sensor within the two-lane highway portion of the route, the *D* factor value of 65% was used to set the opposing direction volume for the PM peak hour; that is, opposing direction volume = peak direction volume / 0.65 $-$ peak direction volume (rounded to the nearest 50 veh).
 
 The assignment of volumes (rounded to nearest 50 vehicles) to segments, and locations where volume changes are implemented are as follows:
 
@@ -320,7 +320,7 @@ No roundabout intersections are present along this route.
 
 ### Results {-}
 
-For multilane highway segments, the base free-flow speed (BFFS) was set per the HCM guidance; that is BFFS = Posted Speed Limit (PSL) + 5, for posted speeds <= 45 mi/h and BFFS = PSL + 7 for posted speeds > 45 mi/h.
+For multilane highway segments, the base free-flow speed (BFFS) was set per the HCM guidance; that is BFFS = Posted Speed Limit (PSL) + 5, for posted speeds $\leq$ 45 mi/h and BFFS = PSL + 7 for posted speeds > 45 mi/h.
 
 The segment LOS results are shown in Tables \@ref(tab:TN109LOSresults1) and \@ref(tab:TN109LOSresults2).
 

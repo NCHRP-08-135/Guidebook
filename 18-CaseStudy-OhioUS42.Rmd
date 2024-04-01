@@ -40,7 +40,7 @@ There was no significant horizontal or vertical curvature along this route; thus
 
 With respect to the intersection locations, this route includes many examples of the situation discussed in Section \@IntxInfluenceArea in which the adjusted length for segments immediately upstream or downstream of the intersection have a negative value.
 
-More specifically, for intersection locations along this route, there is always a distance of at least a few hundred feet upstream and downstream marked for no passing. For intersection locations where the no-passing restriction connects directly to an extended distance of no-passing; that is, a length of roadway that would be classified as a passing constrained segment, the intersection segment boundaries should set according to the geometric area guidelines provided in Chapter 2. When a relatively short distance of passing constrained connects to a passing zone segment, either upstream or downstream, that passing constrained distance should be used as the geometric area distance for the intersection.
+More specifically, for intersection locations along this route, there is always a distance of at least a few hundred feet upstream and downstream marked for no passing. For intersection locations where the no-passing restriction connects directly to an extended distance of no-passing; that is, a length of roadway that would be classified as a passing constrained segment, the intersection segment boundaries should be set according to the geometric area guidelines provided in Chapter 2. When a relatively short distance of passing constrained connects to a passing zone segment, either upstream or downstream, that passing constrained distance should be used as the geometric area distance for the intersection.
 
 The intersection locations where short upstream and/or downstream distances of passing constrained were included as part of the intersection segment are as follows:
 
@@ -51,9 +51,9 @@ The intersection locations where short upstream and/or downstream distances of p
 
 Other unique route configuration issues and the resulting segmentation are as follows:
 
-- The combination of the downstream influence area for the signalized intersection at Riverside Dr/Klondike Rd and the upstream influence area for the signalized intersection at Dublin Rd results in a very short length of road (< 50 ft) in between the influence area distances. Thus, these two signalized intersections are set up as consecutive segments and the total distance between is split between the two intersections. 
+- The combination of the downstream influence area for the signalized intersection at Riverside Dr/Klondike Rd and the upstream influence area for the signalized intersection at Dublin Rd results in a very short length of road (< 50 ft) in between the influence area distances. Thus, these two signalized intersections are set up as consecutive segments and the total distance between them is split between the two intersections. 
 - Between the signalized intersections at Dublin Rd and Watkins Rd are 1.46 miles of passing allowed, 647 ft of no passing, 800 ft of passing allowed, and 325 ft of no passing. The 800 feet of roadway marked as passing allowed is too short to be very effective as a passing zone, especially because it is in close proximity to a downstream signalized intersection (Watkins Rd). The upstream influence area of the Watkins Rd intersection segment will also extend into the passing zone. Thus, these three stretches of roadway (647 ft, 800 ft, and 325 ft) are combined and included as part of the Watkins Rd signalized intersection segment.
-- The signalized intersections at the [US-33 interchange](https://www.google.com/maps/place/40%C2%B009'40.0%22N+83%C2%B013'53.9%22W/@40.1611002,-83.2338141,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa36325f6064e0f72!8m2!3d40.1611002!4d-83.2316254) and the signalized intersection at Industrial Pkwy to the southwest are spaced relatively closely and have overlapping influence areas. Thus, they are set up as consecutive signalized intersection segments.
+- The signalized intersections at the [US-33 interchange](https://www.google.com/maps/place/40%C2%B009'40.0%22N+83%C2%B013'53.9%22W/@40.1611002,-83.2338141,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa36325f6064e0f72!8m2!3d40.1611002!4d-83.2316254) and the signalized intersection at Industrial Pkwy to the southwest are closely spaced and have overlapping influence areas. Thus, they are set up as consecutive signalized intersection segments.
 - Just south of the signalized intersection at industrial parkway is a passing zone of only 850 ft. Again, this distance is too short to be very effective as a passing zone. Thus, this stretch of roadway is combined with the connecting upstream and downstream stretches of passing constrained roadway to make a single passing constrained segment.
 - Just south of the signalized intersection at W Main St is a passing zone of only 711 ft. This stretch of roadway is combined with the connecting upstream and downstream stretches of passing constrained roadway to make a single passing constrained segment between the signalized intersections at W Main St and West Ave.
 
@@ -72,12 +72,12 @@ knitr::kable(
   HighwayData,
   col.names = ColumnLabels,
   booktabs = TRUE,
-  caption = 'Final Segmentation for Tennessee SR-109 Study Route') %>%
+  caption = 'Final Segmentation for Ohio US-42 Study Route') %>%
   row_spec(0, angle = TableColumnHeaderTextAngle) %>%
   kable_styling(latex_options = "scale_down") %>%
   scroll_box(width = "100%", box_css = "border: 0px;")
 ```
-
+* NA - Not Applicable
 
 ### Traffic Data {-}
 
@@ -191,7 +191,7 @@ The assignment of volumes to segments, and locations where volume changes are im
 - Analysis direction volume in Segment 29 is 750 veh/h. Opposing direction volume is 600 veh/h.
 
 
-Vehicle classification data are available from all sensor locations. However, for sensor 17980 the vehicle are binned into three length categories. For this sensor location, the average of the upstream and downstream sensor truck percentage values are used. The truck percentages for the hour of 5:00-6:00 PM for the southwest-bound direction, rounded to the nearest integer value, and the segments to which they are applied, are given in Table \@ref(tab:US42TruckPercentages).
+Vehicle classification data are available from all sensor locations. However, for sensor 17980 the vehicle data are binned into three length categories. For this sensor location, the average of the upstream and downstream sensor truck percentage values are used. The truck percentages for the hour of 5:00-6:00 PM for the southwest-bound direction, rounded to the nearest integer value, and the segments to which they are applied, are given in Table \@ref(tab:US42TruckPercentages).
 
 Table: (\#tab:US42TruckPercentages) US-42 Sensor Data -- PM Peak Hour Truck Percentages
 
@@ -343,7 +343,7 @@ LOS|C|C|D
 
 For the 25% demand volume increase scenario, segment LOS values are still mostly B and C, except for the two-lane highway segments in the latter part of the facility, where the LOS is D for segments 23-26 and LOS E for segment 28. With the 25% increase in volume, the speed reductions along the two-lane highway segments are minor, on the order of 0.5 mi/h. However, the percentage follower values increase approximately 6-7% across the segments. This generally results in a one letter grade reduction in LOS for the two-lane highway segments relative to the 'typical' volume conditions. The other intersection $d/c$ ratios range from 0.7-0.9, up from the range of 0.4-0.6 for the 'typical' demand volume scenario. Generally, operating conditions across the entire route would be considered reasonable. However, some improvement to passing opportunities in the southern portion of the route and minor upgrades to the signalized intersection geometries at the southern end of the route would provide LOS C or better for all segments within the facility.
 
-For the 50% demand volume increase scenario, segment LOS values are mostly C and D. Many of the two-lane highway passing constrained segments are LOS D. To accommodate any higher demand volumes, some of these segments should be considered for upgrading, such as improving sight distance to be able to convert to a passing zone, or possibly consider a passing lane. The intersections at West Ave and W Main St are over capacity ($d/c$ = 1.27 and 1.07, respectively) and thus have LOS values of F. The intersection with Riverside Dr/Klondike Rd is very close to capacity ($d/c$ = 0.99). Several other intersection $d/c$ ratios are in 0.8-0.9 range. Thus, there are several intersection hot spots under this demand volume scenario, and would need to be considered for geometric upgrades to improve the facility LOS to C or better. 
+For the 50% demand volume increase scenario, segment LOS values are mostly C and D. Many of the two-lane highway passing constrained segments are LOS D. To accommodate any higher demand volumes, some of these segments should be considered for upgrading, such as improving sight distance to be able to convert to a passing zone, or possibly consider a passing lane. The intersections at West Ave and W Main St are over capacity ($d/c$ = 1.27 and 1.07, respectively) and thus have LOS values of F. The intersection with Riverside Dr/Klondike Rd is very close to capacity ($d/c$ = 0.99). Several other intersection $d/c$ ratios are in 0.8-0.9 range. Thus, there are several intersection hot spots under this demand volume scenario that would need to be considered for geometric upgrades to improve the facility LOS to C or better. 
 
 
 ## Reliability

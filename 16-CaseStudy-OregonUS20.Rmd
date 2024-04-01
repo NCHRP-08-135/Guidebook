@@ -334,9 +334,11 @@ No signalized intersections are present along this route.
 
 These locations are typically used as segment break points to allow for a change in traffic volume. However, because it assumed that the major through movement does not incur delay due to any turning vehicles, no specific intersection analysis is required at these locations. For locations where intersection geometry upgrades are necessary because of delay due to turning movements, the reader is referred to some recommended studies listed in [Appendix A](#AppendixA).
 
-Along the arterial 10% left and right turns where there is an exclusive left turn bay (Pine St and Locust St).
-5% left and right turns where there is no exclusive left turn bay (Larch St)
-The intersection with E Jefferson Ave does not include a leg on the northeast side of US-20. Thus, there are 0% left turns. 5% right turns is assumed. 
+The following is assumed about turning movement volumes at these intersections:
+
+- 10% left and right turns where there is an exclusive left turn bay (Pine St and Locust St)  
+- 5% left and right turns where there is no exclusive left turn bay (Larch St)  
+- The intersection with E Jefferson Ave does not include a leg on the northeast side of US-20. Thus, there are 0% left turns and 5% right turns is assumed. 
 
 **All-Way Stop Controlled (AWSC) Intersections**
 
@@ -376,7 +378,7 @@ knitr::kable(
 Filename <- "./DataTables/CaseStudyOR20Table8.csv"
 HighwayData2 <- read.csv(file = Filename, header = TRUE)
 
-ColumnLabels2 <- c("Seg ID","% Followers","Density (pc/mi/ln)","Density (veh/mi/ln)","Follower Density (veh/mi/ln)","Adj. Follower Density (veh/mi/ln)","Avg. Thresh. Delay (s/veh)","Avg. Thresh. Delay (%)","Avg. FFS Delay (s/veh)","Avg. FFS Delay (%)","LOS","LOS Value","Demand/Capacity","Available Capacity (veh/h)","Momentum (vol x speed)","VMT","VHT","VHD")
+ColumnLabels2 <- c("Seg ID","% Followers","Density (pc/mi/ln)","Density (veh/mi/ln)","Follower Density (veh/mi/ln)","Adj. Follower Density (veh/mi/ln)","Avg. Thresh. Delay (s/veh)","Avg. Thresh. Delay (%)","Avg. FFS Delay (s/veh)","Avg. FFS Delay (%)","LOS","LOS Value","Demand/Capacity","Available Capacity (veh/h)","Momentum (vol x speed)","Veh-Miles-Traveled (VMT)","Veh-Hours-Traveled (VHT)","Veh-Hours-Delayed (VHD)")
 
 knitr::kable(
   HighwayData2,
@@ -424,13 +426,13 @@ The average speed along the arterial through Sisters is 30.6 mi/h. This is well 
 
 Local observations of the operations, particularly at the TWSC intersections, should be made to determine the most appropriate way to analyze this stretch of roadway through Sisters.
 
-According to the guidelines in the [Hot Spot Identification](#HotSpots) section, no segments within the facility would be considered hot spots. For much higher demand volume scenarios, such as Labor Day weekend, there are several two-lane highway segments that would likely reach LOS E or F. The arterial segment through Sisters may also become a hot spot under this demand volume condition, especially if left-turn movement volumes are moderate or higher. Under these conditions, it may be necessary to restrict left turns from US-20 through Sisters, where no separate left turn bay is provided. For a more permanent traffic growth situation, it may be necessary to consider converting the TWSC intersections to an alternate intersection form, such as a roundabout. See the Ohio US-42 Case Study (3) for an example of testing different demand volume conditions on the route.
+According to the guidelines in the [Hot Spot Identification](#HotSpots) section, no segments within the facility would be considered hot spots. For much higher demand volume scenarios, such as Labor Day weekend, there are several two-lane highway segments that would likely reach LOS E or F. The arterial segment through Sisters may also become a hot spot under this demand volume condition, especially if left-turn movement volumes are moderate or higher. Under these conditions, it may be necessary to restrict left turns from US-20 through Sisters, where no separate left turn bay is provided. For a more permanent traffic growth situation, it may be necessary to consider converting the TWSC intersections to an alternate intersection form, such as a roundabout. See the [Ohio US-42 Case Study](#CaseStudyOH42) for an example of testing different demand volume conditions on the route.
 
 
 ## Reliability
 
 ::: {#Note .ThreshValue .message style="color: orange;"}
-It should be noted that in the US-20 (Oregon) sample data, the vendor’s sample size was not sufficient to produce one minute-resolution data. Although the data file reports for each minute of the day, the travel time column remains constant for long stretches of time, indicating that data for those minutes is being imputed with historical data or modeled sources.
+It should be noted that in the US-20 (Oregon) sample data, the vendor’s sample size was not sufficient to produce one-minute-resolution data. Although the data file reports for each minute of the day, the travel time column remains constant for long stretches of time, indicating that data for those minutes is being imputed with historical data or modeled sources.
 :::
 
 The reliability analysis focused on a 6-mile stretch of US-20 in the rural town of Sisters, Oregon (see Figure \@ref(fig:US20ReliabilitySection1)). For the analysis, the facility was divided into 10 segments with each segment measuring approximately 0.6 miles in length.
@@ -464,7 +466,7 @@ Nonrecurring congestion is more evident in the days spanning from Christmas to N
 
 ### Speed Difference Heatmaps {-}
 
-Speed difference heatmaps shown in Figure \@ref(fig:SpeedDiffUS20). The speed difference heatmap normalizes the display relative to the estimated free-flow speed for the segment (using the 85th percentile speed) making it much easier to visually infer periods of recurring and non-recurring congestion. In addition to the previously noted recurring congestion in the downtown area of Sisters and the non-recurring congestion in the December/January timeframe, the speed difference heat map shows periods of apparent unreliable travel during nighttime conditions. There is a potential bias here with low sample sizes on rural segments. For example, the low speeds could be due to a single (slow moving) truck being the only source of probe data, which then translates into a slow recorded speed. However, low sample size is expected to be less than an issue when a segment shows congestion for multiple time periods, which may then more likely be attributable to an incident, special event traffic, or severe weather event.
+Speed difference heatmaps shown in Figure \@ref(fig:SpeedDiffUS20). The speed difference heatmap normalizes the display relative to the estimated free-flow speed for the segment (using the 85th percentile speed) making it much easier to visually infer periods of recurring and non-recurring congestion. In addition to the previously noted recurring congestion in the downtown area of Sisters and the non-recurring congestion in the December/January timeframe, the speed difference heat map shows periods of apparent unreliable travel during nighttime conditions. There is a potential bias here with low sample sizes on rural segments. For example, the low speeds could be due to a single (slow moving) truck being the only source of probe data, which then translates into a slow recorded speed. However, low sample size is expected to be less of an issue when a segment shows congestion for multiple time periods, which may then more likely be attributable to an incident, special event traffic, or severe weather event.
 
 ```{r SpeedDiffUS20, echo=FALSE, fig.cap='Speed Difference Heatmaps',out.width="95%", fig.align='center'}
 

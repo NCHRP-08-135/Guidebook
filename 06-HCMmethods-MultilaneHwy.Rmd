@@ -100,7 +100,7 @@ Current ‘level’ and ‘rolling’ terrain guidelines will apply; for steeper
 
 **Specific Grades**
 
-When the analysis segment consists of terrain that cannot be considered as an extended general segment (i.e., level, rolling), Exhibits 12-26, 12-27, and 12-28 can be used to determine PCE values for specific upgrades and/or downgrades.  
+When the analysis segment consists of terrain that cannot be considered as an extended general segment (i.e., level, rolling), Exhibits 12-26, 12-27, and 12-28 can be used to determine PCE values for specific upgrades and/or downgrades. Note that 'SUT' and 'TT' in these exhibits refers to 'single-unit trucks' and 'tractor-trailers', respectively.  
 
 \newpage
 **Exhibit 12-26** Passenger Car Equivalents (*E~T~*) for Heavy Vehicles\

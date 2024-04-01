@@ -182,7 +182,7 @@ $$p = \text{max}\left\lbrack f_{8},f_{0} + f_{1} \times FFS + f_{2} \times L + f
 4|1.13282|-0.00798|0.35425|0|0|0.01521|0|-0.00987|0
 5|1.12077|-0.00550|0.25431|0|0|0.01269|0|-0.01053|0
 
-The remainder of the calculations in step apply only if the segment contains horizontal curvature. Exhibit 15-21 provides a flowchart of the calculation procedure to adjust segment average speed for horizontal curvature. In lieu of presenting the flowchart here, the steps to the flowchart are described in the text as follows.
+The remainder of the calculations in step 5 apply only if the segment contains horizontal curvature. Exhibit 15-21 provides a flowchart of the calculation procedure to adjust segment average speed for horizontal curvature. In lieu of presenting the flowchart here, the steps to the flowchart are described in the text as follows.
 
 For all horizontal curves within the segment:
 
@@ -440,10 +440,10 @@ $\%Improve_{S}$	= % improvement to the average speed on a segment downstream of 
 $L$	=	segment length (mi), subject to minima and maxima given in Step 1  
 $L_{i}$	=	actual segment length for segment *i* (mi)  
 $LW$ = lane width (ft), constrained to minimum and maximum values of 9 ft and 12 ft, respectively  
-$m$	=	slope coefficient (decimal), from Step 5a  
+$m$	=	slope coefficient (decimal)  
 $NumHV$ = number of heavy vehicles entering the passing lane segment (veh)  
 $NumHV_{SL}$ = number of heavy vehicles in the slower lane (veh)  
-$p$	=	power coefficient (decimal), from Step 5b  
+$p$	=	power coefficient (decimal)  
 $PassLaneLength$ = length of passing lane segment (mi)  
 $PF$ = percent followers in the analysis direction (%)  
 $PF_{cap}$ = percent followers at capacity flow rate in the analysis direction (%)  

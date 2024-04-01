@@ -9,15 +9,17 @@ The calculation of bicycle LOS on multilane and two-lane highways shares the sam
 The specific equation and exhibit numbers utilized in the methodology, in the general order in which they are applied, are as follows.
 
 **Step 1: Gather Input Data**
+
 - Exhibit 15-31: Required input data and default values when neither site-specific data nor local default values are available.
 
-The following data, and applicable ranges, are required:
-- Width of the outside through lane: 10 to 16 ft,
-- Shoulder width: 0 to 6 ft,
-- Motorized vehicle volumes: up to 36,000 annual average daily traffic (AADT),
-- Number of directional through lanes (for multilane),
-- Posted speed: 25 to 50 mi/h,
-- Heavy-vehicle percentage: 0% to 2%, and
+The following data, and applicable ranges, are required:  
+
+- Width of the outside through lane: 10 to 16 ft,  
+- Shoulder width: 0 to 6 ft,  
+- Motorized vehicle volumes: up to 36,000 annual average daily traffic (AADT),  
+- Number of directional through lanes (for multilane),  
+- Posted speed: 25 to 50 mi/h,  
+- Heavy-vehicle percentage: 0% to 2%, and  
 - Pavement condition: 2 to 5 on the Federal Highway Administration (FHWA) 5-point pavement rating scale
 
 **Step 2: Calculate the Directional Flow Rate in the Outside Lane**
@@ -25,12 +27,13 @@ The following data, and applicable ranges, are required:
 
 **Step 3: Calculate the Effective Width**
 
-Uses Eq. 15-41, 15-42, 15-43 or 15-44 depending on paved shoulder width and hourly directional volume
-- Equation 15-41: If paved shoulder width is greater than or equal to 8 ft
-- Equation 15-42: If paved shoulder width is greater than or equal to 4 ft and less than 8 ft
-- Equation 15-43: If paved shoulder width is less than 4 ft. Uses Eq. 15-44 or 15-45 to determine effective width as a function of traffic volume
-- Equation 15-44: If hourly directional volume is greater than 150 veh/h
-- Equation 15-44: Otherwise
+Uses Eq. 15-41, 15-42, 15-43 or 15-44 depending on paved shoulder width and hourly directional volume  
+
+- Equation 15-41: If paved shoulder width is greater than or equal to 8 ft  
+- Equation 15-42: If paved shoulder width is greater than or equal to 4 ft and less than 8 ft  
+- Equation 15-43: If paved shoulder width is less than 4 ft. Uses Eq. 15-44 or 15-45 to determine effective width as a function of traffic volume  
+- Equation 15-44: If hourly directional volume is greater than 150 veh/h  
+- Equation 15-44: Otherwise  
 
 **Step 4: Calculate the Effective Speed Factor**
 - Equation 15-46: Effective Speed Factor 
@@ -64,27 +67,32 @@ Based on field measurement of midsegment bicycle speed on representative streets
 If the boundary intersection is two-way STOP controlled (where the subject approach is uncontrolled), the delay is equal to 0.0 s/bicycle. If the boundary intersection is signalized, the delay is computed by using the motorized vehicle methodology described in Chapter 19.
 
 **Step 3: Determine Bicycle Travel Speed**
+
 - Equation 18-40: travel speed of through bicycles along the segment
 
 **Step 4: Determine Bicycle LOS Score for Intersection**
 If the boundary intersection is two-way STOP controlled (where the subject approach is uncontrolled), the score is equal to 0.0. If the boundary intersection is signalized, the score is computed by using the bicycle methodology described in Chapter 19.
 
 **Step 5: Determine Bicycle LOS Score for Link**
-- Equation 18-41: bicycle LOS score for link. Uses Eq. 18-42, 18-43 and 18-44
-- Equation 18-42: cross-section adjustment factor. Uses Exhibit 18-25
-- Exhibit 18-25: Variables for Bicycle LOS Score for Link
-- Equation 18-43: motorized vehicle volume adjustment factor. Uses Exhibit 18-25
-- Equation 18-44: motorized vehicle speed adjustment factor. Uses Exhibit 18-25
-- Equation 18-45: pavement condition adjustment factor
+
+- Equation 18-41: bicycle LOS score for link. Uses Eq. 18-42, 18-43 and 18-44  
+- Equation 18-42: cross-section adjustment factor. Uses Exhibit 18-25  
+- Exhibit 18-25: Variables for Bicycle LOS Score for Link  
+- Equation 18-43: motorized vehicle volume adjustment factor. Uses Exhibit 18-25  
+- Equation 18-44: motorized vehicle speed adjustment factor. Uses Exhibit 18-25  
+- Equation 18-45: pavement condition adjustment factor  
 
 **Step 6: Determine Link LOS**
+
 - Exhibit 18-3: Variables for Bicycle LOS criteria for link
 
 **Step 7: Determine Bicycle LOS Score for Segment**
-- Equation 18-46: bicycle LOS score for segment. Uses Eq. 18-47
-- Equation 18-47: unsignalized conflicts factor
+
+- Equation 18-46: bicycle LOS score for segment. Uses Eq. 18-47  
+- Equation 18-47: unsignalized conflicts factor  
 
 **Step 8: Determine Segment LOS**
+
 - Exhibit 18-3: Variables for Bicycle LOS criteria for segment
 
 
@@ -101,12 +109,14 @@ Bicycle delay can be calculated only for intersection approaches that have an on
 - Equation 19-106: Capacity of the bicycle lane.
 
 **Step 2: Determine Bicycle LOS Score for Intersection**
-- Equation 19-108: bicycle LOS score for intersection. Uses results from Eq. 19-109, 19-110 and 19-111.
-- Equation 19-109: cross-section adjustment factor
-- Equation 19-110: motorized vehicle volume  adjustment factor
-- Equation 19-111: total width of the outside through lane, bicycle lane, and paved shoulder 
+
+- Equation 19-108: bicycle LOS score for intersection. Uses results from Eq. 19-109, 19-110 and 19-111.  
+- Equation 19-109: cross-section adjustment factor  
+- Equation 19-110: motorized vehicle volume  adjustment factor  
+- Equation 19-111: total width of the outside through lane, bicycle lane, and paved shoulder   
 
 **Step 3: Determine LOS**
+
 - Exhibit 19-9: Bicycle LOS criteria for signalized intersections
 
 
@@ -132,7 +142,7 @@ The specific equation and exhibit numbers utilized in the methodology, in the ge
 
 **Step 2: Determine Bicycle LOS Score**
 
-- Equation 16-10: Bicycle LOS score for the facility. Uses Eq. 16-11
+- Equation 16-10: Bicycle LOS score for the facility. Uses Eq. 16-11  
 - Equation 16-11: Travel-time-weighted average bicycle LOS score for segment *i*
 
 **Step 3: Determine Bicycle LOS**

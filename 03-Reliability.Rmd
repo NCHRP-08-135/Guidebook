@@ -1,4 +1,4 @@
-# Reliability {#Chapter3Reliability}
+# Automobile Travel Time Reliability {#Chapter3Reliability}
 
 ## Introduction {#ReliabilityIntro}
 
@@ -90,7 +90,7 @@ The case study facilities were evaluated using five data analysis and visualizat
 - **Speed confidence band plots** highlight the reliability of speeds at different hours using a years' worth of data. They are a more easily interpreted visualization by removing the date dimension in the reliability data and showing reliability patterns by time-of-day only. The speed confidence band plots are especially useful when combined with a speed difference heatmap. In this combination, the speed confidence band plot can be used to infer which segment and which time periods experience unreliable travel; the speed difference heatmap can then be used to infer what date ranges contribute to the unreliability.
 - **Travel time index plots** show the cumulative distribution of travel times along the segment, normalized by the free-flow travel time—which was estimated from the data as the 15th percentile travel time. The travel time index (TTI) metric is commonly used in congestion and reliability reporting and is defined in the [FHWA Travel Time Reliability guidance](https://ops.fhwa.dot.gov/perf_measurement/reliability_measures/index.htm). Due to its simple line representation, a TTI plot can be an effective tool to convey before-after comparisons.
 
-Python snippets to load, analyze, and visualize probe data using these five techniques are included in their respective sections. A complete Python script can be obtained from [this](https://github.com/NCHRP-08-135-Team/Rural-Highway-Analysis-Guidebook/blob/ae2697ed69fbc3295905b37f61a8d1dca503d1da/docs/script/ReliabilityScript.py) link. 
+Python snippets to load, analyze, and visualize probe data using these five techniques are included in their respective sections. A complete Python script can be obtained from [this](https://github.com/NCHRP-08-135/Resources/tree/main/Reliability) link. 
 
 ## Assessing Reliability {#ReliabilityHowTo}
 
@@ -265,7 +265,7 @@ Box-and-whisker plots display the minimum value, maximum value and three in-betw
 knitr::include_graphics("./Images/Reliability/BoxWhisker.png")
 ```
 
-The following code can be used to create weekly box-and-whisker plots to display the spread in travel times. The _lower_df_ and _upper_df parameters can be modified to display the desired lower and upper percentile bounds. In this case, the 15th and 85th percentile travel times are used.
+The following code can be used to create weekly box-and-whisker plots to display the spread in travel times. The 'lower_df' and 'upper_df' parameters can be modified to display the desired lower and upper percentile bounds. In this case, the 15th and 85th percentile travel times are used.
 
 ```python
 def create_box_whisker_weekly(df, xd_id_list, output, lower_df, upper_df, name):
