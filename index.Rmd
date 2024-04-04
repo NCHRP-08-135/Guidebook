@@ -32,7 +32,7 @@ if (knitr::is_latex_output() == TRUE){
      comment
      example -->
 
-<!-- If outputing to PDF, comment the material between the dashed lines. This information is included in the PDFtemplate.tex file -->
+<!-- If outputting to PDF, comment the material between the dashed lines. This information is included in the PDFtemplate.tex file -->
 
 <!-- ----------------------------------- -->
 

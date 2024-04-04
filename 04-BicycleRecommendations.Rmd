@@ -74,13 +74,13 @@ Seminal works in the US include the traveler perception model from @landis_real-
 
 Subsequent works included BLOS at arterials (@jensen_pedestrian_2007; @kang_development_2012), roundabouts (@jensen_pedestrian_2007), networks (@zolnik_poisson_2007) and tools for identifying bicycle route suitability based on BLOS (@Lowry2012; @callister_tools_nodate).
 
-This section provides a brief overview of the bicycle LOS analysis methodologies in the 7th Edition of the HCM. A more detailed overview of each methodology is contained in Part 3 of the Guidebook.
+This section provides a brief overview of the BLOS analysis methodologies in the 7th Edition of the HCM. A more detailed overview of each methodology is contained in Part 3 of the Guidebook.
 
 **Multilane and Two-Lane Highways**
 
-As stated in the HCM, "the calculation of bicycle LOS on multilane and two-lane highways shares the same methodology, since multilane and two-lane highways operate in fundamentally the same manner for bicyclists and motorized vehicle drivers. Bicyclists travel much more slowly than the prevailing traffic flow and stay as far to the right as possible, including using paved shoulders when available. This similarity indicates the need for only one model." The model is applicable to bicycle operations in a shared lane, bicycle lane or paved shoulder. The quality of bicycle flow, safety, and the bicycling environment are all considerations for these types of facilities. Complete details on the bicycle LOS methodology and calculation procedures are provided in Chapter 15 of the HCM.
+As stated in the HCM, "the calculation of BLOS on multilane and two-lane highways shares the same methodology, since multilane and two-lane highways operate in fundamentally the same manner for bicyclists and motorized vehicle drivers. Bicyclists travel much more slowly than the prevailing traffic flow and stay as far to the right as possible, including using paved shoulders when available. This similarity indicates the need for only one model." The model is applicable to bicycle operations in a shared lane, bicycle lane or paved shoulder. The quality of bicycle flow, safety, and the bicycling environment are all considerations for these types of facilities. Complete details on the BLOS methodology and calculation procedures are provided in Chapter 15 of the HCM.
 
-Bicycle levels of service for multilane and two-lane highway segments are based on a bicycle LOS (BLOS) score. The bicycle LOS model uses a traveler perception index calibrated by using a linear regression model. The BLOS model fits independent variables associated with roadway characteristics to the results of a user survey that rates the comfort of various bicycle facilities. The BLOS score is based, in order of importance, on five variables:
+Bicycle levels of service for multilane and two-lane highway segments are based on a BLOS score. The BLOS model uses a traveler perception index calibrated by using a linear regression model. The BLOS model fits independent variables associated with roadway characteristics to the results of a user survey that rates the comfort of various bicycle facilities. The BLOS score is based, in order of importance, on five variables:
 
 * Average effective width of the outside through lane,
 * Motorized vehicle volumes,
@@ -88,7 +88,7 @@ Bicycle levels of service for multilane and two-lane highway segments are based 
 * Heavy vehicle (truck) volumes, and
 * Pavement condition.
 
-The resulting bicycle LOS index computes a numerical LOS score, generally ranging from 0.5 to 6.5, which is stratified to produce a LOS A to F result by using Table \@ref(tab:BLOSscore).
+The resulting BLOS index computes a numerical LOS score, generally ranging from 0.5 to 6.5, which is stratified to produce a LOS A to F result by using Table \@ref(tab:BLOSscore).
 
 Table: (\#tab:BLOSscore) HCM Bicycle LOS Score Thresholds for Multilane and Two-Lane Highways
 
@@ -113,7 +113,7 @@ The methodology was developed with data collected on urban and suburban streets 
 
 The bicycle urban street analysis methodology is contained in Chapter 18 (Urban Street Segments). It relates to cyclists' experiences at signalized intersections and the links between signalized intersections. The bicycle analysis methodology process is given in Exhibit 18-24. The methodology can be used to evaluate the service provided to bicyclists when sharing a lane with motorized vehicles or when traveling in an exclusive bicycle lane.
 
-LOS criteria are based on the bicycle LOS index (HCM Exhibit 18-3), as summarized in Table \@ref(tab:BLOSscoreUrbanLink). 
+LOS criteria are based on the BLOS index (HCM Exhibit 18-3), as summarized in Table \@ref(tab:BLOSscoreUrbanLink). 
 
 Table: (\#tab:BLOSscoreUrbanLink) HCM Bicycle LOS Score Thresholds for Urban Segments (link-based)
 
@@ -133,7 +133,7 @@ As for multilane and two-lane highways, higher vehicle volumes, a greater propor
 
 **Signalized Intersections**
 
-The bicycle signalized intersection analysis methodology is contained in Chapter 19 (Signalized Intersections). The bicycle analysis methodology process is given in Exhibit 19-40. Intersection performance is evaluated separately for each intersection approach; and the bicyclists are assumed to travel in the street sharing a lane with motorized vehicles or when traveling in an exclusive bicycle lane and in the same direction as adjacent motorized vehicles. Table  \@ref(tab:BLOSscoreSignalizedIntersection) shows the Bicycle LOS Score thresholds for signalized intersections. 
+The bicycle signalized intersection analysis methodology is contained in Chapter 19 (Signalized Intersections). The bicycle analysis methodology process is given in Exhibit 19-40. Intersection performance is evaluated separately for each intersection approach; and the bicyclists are assumed to travel in the street sharing a lane with motorized vehicles or when traveling in an exclusive bicycle lane and in the same direction as adjacent motorized vehicles. Table  \@ref(tab:BLOSscoreSignalizedIntersection) shows the BLOS Score thresholds for signalized intersections. 
 
 Table: (\#tab:BLOSscoreSignalizedIntersection) HCM Bicycle LOS Score Thresholds for Signalized Intersections
 
@@ -147,7 +147,7 @@ Table: (\#tab:BLOSscoreSignalizedIntersection) HCM Bicycle LOS Score Thresholds 
 | F   |  BLOS Score > 5.5      |
 Source: HCM Exhibit 19-3
 
-The input data requires traffic characteristics, as the motorized vehicle demand flow rate, bicycle flow rate, and proportion of on-street parking occupied; geometric design data, as number of lanes, street width, and width of cross-street elements; and signal control data, with the cycle length, yellow change and red clearance, and duration of phase serving bicycles. 
+The input data requires traffic characteristics, such as the motorized vehicle demand flow rate, bicycle flow rate, and proportion of on-street parking occupied; geometric design data, such as number of lanes, street width, and width of cross-street elements; and signal control data, such as the cycle length, yellow change and red clearance, and duration of the signal phase that serves bicycles.  
 
 Higher vehicle volumes, reduced perceived separation from motorized vehicle traffic, shorter cross-street widths, and increased on-street parking reduce the level of service. 
 
@@ -161,7 +161,7 @@ No methodology specific to bicyclists has been developed to assess the performan
 
 **Urban Street Facilities**
 
-The bicycle urban street facility analysis methodology is contained in Chapter 16 (Urban Street Facility). The bicycle analysis methodology process is given in Exhibit 16-13. The bicycle methodology aggregates the performance of the segments that make up the facility. In this regard, it considers the performance of each link and boundary intersection. The methodologies for evaluating the link and boundary (signalized) intersection are described in Chapters 18 and 19, respectively. Table \@ref(tab:BLOSscoreUrbanSegment) summarized the thresholds of Bicycle LOS Score.
+The bicycle urban street facility analysis methodology is contained in Chapter 16 (Urban Street Facility). The bicycle analysis methodology process is given in Exhibit 16-13. The bicycle methodology aggregates the performance of the segments that make up the facility. In this regard, it considers the performance of each link and boundary intersection. The methodologies for evaluating the link and boundary (signalized) intersection are described in Chapters 18 and 19, respectively. Table \@ref(tab:BLOSscoreUrbanSegment) summarized the thresholds of BLOS Score.
 
 Table: (\#tab:BLOSscoreUrbanSegment) HCM Bicycle LOS Score Thresholds for Urban Segments (segment-based)
 
@@ -177,7 +177,7 @@ Source: HCM Exhibit 19-3
 
 The methodology can be used to evaluate the service provided to bicyclists when sharing a lane with motorized vehicles or when traveling in an exclusive bicycle lane.
 
-The bicycle LOS score for the segment is computed by using Equation 18-46; which averages the bicycle LOS score for the boundary intersection and the link; and accounts for unsignalized conflicts along the link. Bicycle LOS for link is weighted using the segment running time of through bicycles, while the bicycle LOS score for the intersection uses the bicycle control delay.
+The BLOS score for the segment is computed by using Equation 18-46; which averages the BLOS score for the boundary intersection and the link; and accounts for unsignalized conflicts along the link. BLOS for the link is weighted using the segment running time of through bicycles, while the BLOS score for the intersection uses the bicycle control delay.
 
 ### Level of Traffic Stress Analysis Methodology
 
@@ -196,7 +196,7 @@ The LTS methodology operationalized by @furth_network_2016 considers the followi
 * *LTS3: tolerable to “enthused and confident”*. “Offers cyclists and exclusive cycling zone requiring little negotiation with motor traffic, but in close proximity to moderately-high speed traffic”.
 * *LTS4: tolerable to “strong and fearless”*. “Requires riding near to high-speed traffic, or regularly negotiating with moderate-speed traffic or making dangerous crossings”.
 
-Design users and similar concepts lay the foundation for the FHWA Bikeway Selection Guide (@schultheiss_bikeway), AASHTO Guide for the Development of Bicycle Facilities (draft 2020, @OntaAASHTOBikeGuide), MnDOT Bikeway facility design manual (@MnDOTBikeGuide), MassDOT Separated bike lane planning and design guide (@MassDOTBikeGuide), Oregon DOT Analysis Procedures Manual (@oregonDOT), Washington State DOT Roadway Bicycle Facilities (@WashDOTDesign), or Montgomery County Bicycle Planning Guidance (@MontgomeryBikeGuide) or the Maryland DOT LTS Technical Memo (@MaryDOTBikeGuide). These references are summarized in Table \@ref(tab:BicycleUserProfiles). Figure \@ref(fig:BicycleUserProfilesFHWA) illustrates the three user types that the Bikeway Selection Guide from FHWA considers: “interested but concerned” (for LTS2), “somewhat confident” (for LTS3), and “highly confident” (for LTS4). They depend on comfort level, bicycling skill and experience, age, and trip purpose; but no specific thresholds are provided.
+LTS-based design criteria were developed for the FHWA Bikeway Selection Guide (@schultheiss_bikeway), AASHTO Guide for the Development of Bicycle Facilities (draft 2020, @OntaAASHTOBikeGuide), MnDOT Bikeway facility design manual (@MnDOTBikeGuide), MassDOT Separated bike lane planning and design guide (@MassDOTBikeGuide), Oregon DOT Analysis Procedures Manual (@oregonDOT), Washington State DOT Roadway Bicycle Facilities (@WashDOTDesign), Montgomery County Bicycle Planning Guidance (@MontgomeryBikeGuide), and the Maryland DOT LTS Technical Memo (@MaryDOTBikeGuide). These references are summarized in Table \@ref(tab:BicycleUserProfiles). Figure \@ref(fig:BicycleUserProfilesFHWA) illustrates the three user types that the Bikeway Selection Guide from FHWA considers: “interested but concerned” (for LTS2), “somewhat confident” (for LTS3), and “highly confident” (for LTS4). They depend on comfort level, bicycling skill and experience, age, and trip purpose; but no specific thresholds are provided.
 
 Table: (\#tab:BicycleUserProfiles) Bicyclist Design User References
 
@@ -247,7 +247,7 @@ Some State DOTs developed a similar framework. In the state of Washington, bicyc
 
 @MnDOTBikeGuide proposes paved shoulder width, shared lanes, shared-use paths and wide outside lane based on traffic volume, number of lanes and vehicle speeds for rural applications (see Table 4-2). Shared lanes are recommended for very low traffic volume (500 veh per day or less) and low speed (speed limit of 40 mi/h or less); while wide outside lanes are allowed for low traffic volume (1000 veh per day or less) and speed limits below 40 mi/h. For highways with high speed limit (45 mi/h or more) and high traffic volume (10,000 veh per day or more) should consider the use of shared=use paths. Paved shoulders are preferred in other combinations of traffic volume and vehicle speeds; with increasing width (4 to 8 ft) as volume and or speed increases.  
 
-In the case of @oregonDOT, it is indicated that rural bicyclists may tolerate higher level of stress than their urban counterparts and it uses a different nomenclature for rural (RLTS) and urban (BLTS) applications. The prefix helps to set off the environmental difference, as an urban BLTS 2 is not the same experience as a rural BLTS R2. For rural applications with posted or operating speeds less than 45 mi/h, urban applications methods can be used. For highways with posted or operating speeds equal or higher than 45 mi/h, specific criteria for RLTS R1 to RTLS R4 are provided. Criteria depend on:
+In the case of @oregonDOT, it is indicated that rural bicyclists may tolerate higher level of stress than their urban counterparts and it uses a different nomenclature for rural (RLTS) and urban (BLTS) applications. The prefix ('R' or 'B') in the nomenclature ('RLTS', 'BLTS') highlights the environmental difference, as an urban BLTS 2 is not the same experience as a rural BLTS R2. For rural applications with posted or operating speeds less than 45 mi/h, urban applications methods can be used. For highways with posted or operating speeds equal or higher than 45 mi/h, specific criteria for RLTS R1 to RTLS R4 are provided. Criteria depend on:
 
 * Paved shoulder width
 * Daily bi-directional (combined) volumes. 
@@ -262,11 +262,11 @@ Washington State initially considered setting LTS-based criteria for rural bicyc
 
 The LTS analysis methodology has been applied to propose recommendation criteria of facility type in urban applications (@schultheiss_bikeway). The target user in urban, urban core, suburban and rural town context is the interested but concerned group. The level of stress of bicyclists in urban areas depends on:
 
-* Facility type (shared lane, bike boulevard, bike lane with optional buffer, separated bike lane, shared use path)
+* Facility type (shared lane, bike boulevard, bike lane with optional buffer, separated bike lane, shared-use path)
 * Operating speed (or posted speed limit)
 * Traffic volume
 
-Shared lane or bike boulevard are preferred for low operating speeds (or posted speeds) and low traffic volume. As traffic volume and speed increase (up to 6000 veh per day and 30 mi/h), bike lane with buffer are preferred. For other conditions, separated bike lane or shared use path are recommended.
+Shared lane or bike boulevard are preferred for low operating speeds (or posted speeds) and low traffic volume. As traffic volume and speed increase (up to 6000 veh per day and 30 mi/h), bike lane with buffer are preferred. For other conditions, separated bike lane or shared-use path are recommended.
 
 @WashDOTDesign, @MnDOTBikeGuide and @MontgomeryBikeGuide propose similar criteria for facility selection in urban areas. They are based on operating speed and traffic volume.
 
@@ -302,7 +302,7 @@ Only roadways with no marked centerline, AADT lower or equal to 3,000 veh/day an
 
 @furth_network_2016, @oregonDOT, and @WashDOTActivePlan indicate that signalized crossings are assumed to pose no traffic stress to cyclists because the signal provides a protected way across. Therefore, LTS1 is assigned.
 
-Engineering judgement is required to assign higher stress levels at signalized intersections; as, at certain locations, the level of traffic stress can be increased. Examples provided by Oregon DOT are locations with difficulties triggering the signal detection, intersectionw that may not have the proper striping, and push button accommodations for bicyclists, or crossing locations on where the bicyclists uses the crosswalk like a pedestrian.  
+Engineering judgement is required to assign higher stress levels at signalized intersections; as, at certain locations, the level of traffic stress can be increased. Examples provided by Oregon DOT are locations that have difficulties with triggering the signal detection, intersections that may not have the proper striping, locations that have no push button accommodations for bicyclists, and crossing locations where bicyclists uses the crosswalk like pedestrians.  
 
 At intersection approaches, level of traffic stress could be increased with:
 
@@ -348,7 +348,7 @@ If there is no adequate alternative path or sidewalk to use around the roundabou
 
 ### Bicycle Compatibility Index Analysis Methodology
 
-The Bicycle Compatibility Index (BCI) was developed from the perspectives of bicyclists and incorporates “the variables that bicyclists typically use to assess how compatible a roadway segment is for bicycle travel” (@Harkey1998). It uses a 6-point scale to evaluate comfort level ratings and bicycle LOS criteria.
+The Bicycle Compatibility Index (BCI) was developed from the perspectives of bicyclists and incorporates “the variables that bicyclists typically use to assess how compatible a roadway segment is for bicycle travel” (@Harkey1998). It uses a 6-point scale to evaluate comfort level ratings and BLOS criteria.
 
 Initially developed for urban and suburban segments, @jones_development_2003 adapted to rural conditions in Nebraska. An online survey was used to distribute video recordings of rural highways in Nebraska under different traffic conditions (vehicle and truck traffic volume) and geometric conditions (with and without shoulder). Three groups of bicyclists were defined: experienced commuter, experienced recreational, and casual recreational. The results indicate that the overall comfort level rating depended on two variables:
 
@@ -357,11 +357,11 @@ Initially developed for urban and suburban segments, @jones_development_2003 ada
 
 Other variables, such as intersection density, observed 85th percentile speed, traffic volumes or number of lanes, were not statistically significant. 
 
-Comfort level ratings were developed for all cyclists and by cyclist type. Experienced and casual riders provided different mean comfort level ratings, being experienced riders more comfortable than casual riders for the same conditions. 
+Comfort level ratings were developed for all cyclists and by cyclist type. Experienced and casual riders provided different mean comfort level ratings (i.e., experienced riders were more comfortable than casual riders for the same conditions). 
 
 ## Bicycle Level of Service Research Recommendations {#BikeLOS}
 
-This section is intended to provide 1) recommendations for future research needs to improve/enhance the bicycle LOS analysis methodologies for rural facilities in the HCM, and 2) point readers to appropriate bicycle analysis method(s), HCM and/or other, for common analysis scenarios. This material is based on the results of the two surveys conducted as part of this project.
+This section is intended to provide 1) recommendations for future research needs to improve/enhance the BLOS analysis methodologies for rural facilities in the HCM, and 2) point readers to appropriate bicycle analysis method(s), HCM and/or other, for common analysis scenarios. This material is based on the results of the two surveys conducted as part of this project.
 
 Two online surveys were conducted to identify potential revisions/improvements to the HCM LOS methodology and/or the AASHTO Green Book design elements to help agencies better evaluate the impact of traffic, roadway, and control characteristics on bicyclist LOS.
 
@@ -387,19 +387,19 @@ The main conclusions of the two qualitative assessments regarding the HCM analys
 
 * The analyses of user responses revealed a high sensitivity to speed and automobile traffic volume. These results are consistent with the practitioner survey, previous studies, and design guidelines, which indicate that the two main criteria for selecting specific bicycle infrastructure and its width are average daily traffic and posted speed limit. Cyclists could tolerate high speed limits if automobile traffic is meager, reinforcing the importance of a combined analysis of speed and traffic volume.
 
-* Pavement conditions and context classification (or activity-volume-related elements) were equally important for users and experts. While bicyclists ranked them with lower relative importance than clearance, speed, or traffic volume, the choice experiments revealed a significant negative impact of deteriorated pavement and rural context on the cycling odds in a given scenario. While the differences between acceptable and good pavement conditions were substantial, the differences between rural-town and suburban contexts were minor than between rural and rural-town contexts.
+* Pavement conditions and context classification (or activity-volume-related elements) were equally important for users and experts. While bicyclists ranked them with lower relative importance than clearance, speed, or traffic volume, the choice experiments revealed a significant negative impact of deteriorated pavement and rural context on the cycling odds in a given scenario. While the differences between acceptable and good pavement conditions were substantial, the differences between rural-town and suburban contexts were less pronounced compared to those between rural and rural-town contexts.
 
-* There was a division of opinions about the influence of terrain and environment-related variables. A substantial number of respondents ranked the environment among the most important elements, while an equal amount of users stated that they were the least important. A general agreement was on ranking other cyclists as the least essential elements. Terrain-related elements, such as elevation, grade, or sequence of curves, ranked low. However, scenarios with higher grades presented higher odds of being cycled on. High grades could have been associated with more beautiful scenery in rolling terrain; therefore, this variable was misrepresented in the images. 
+* There was a division of opinions about the influence of terrain and environment-related variables. A significant portion of respondents considered the environment to be among the most crucial factors, while an equal number of users stated that it was the least significant factor. A consensus among respondents was the ranking of other cyclists as the least essential element. Terrain-related elements, such as elevation, grade, or sequence of curves, ranked low. However, scenarios with higher grades presented in the images yielded higher odds of being cycled on. Scenarios with high grades were more appealing to cyclists, suggesting that high grades could have been associated with more interesting scenery in rolling terrain and, therefore, less monotonous to cycle. 
 
 * For rural scenarios, "interested but concerned" cyclists were less likely to select to cycle than the other more confident groups. There were no apparent differences in preference between" enthused and confident" cyclists and "strong and fearless" cyclists. 
 
-Based on these conclusions, the revisions to the HCM analysis procedure are:
+Based on these conclusions, the proposed revisions to the HCM analysis procedure are:
 
 * The HCM bicycle analysis procedure should be revisited for rural highways, as the perception of cyclists differs from urban segments. BLOS scores by context classification (rural, rural-town) and facility type (shared lanes, paved shoulder) should be distinct, as their sensitivity to variables differs. For that, subjective comfort levels should be collected at least based on shoulder width, speed, automobile traffic volume, presence of heavy vehicles, pavement conditions, and context classification. Other aspects include maintenance of paved shoulders, grades, or intersections. The grade should be represented with caution, as it could be misinterpreted by scenery quality. Furthermore, it is recommended to repeat rephrased questions to improve results fidelity.
 
 * The HCM analysis procedure should account for data limitations. Sensitivity analysis of the input data could reduce the number of inputs to the most significant and, preferably, available to most agencies.
 
-* The consideration of environmental factors on bicycle LOS should be revisited, as non-motorized users are more sensitive to weather and lighting conditions than their motorized counterparts. However, only a share of the most confident cyclists cycle under adverse environmental conditions, and weather data could be challenging to collect. 
+* The consideration of environmental factors on BLOS should be revisited, as non-motorized users are more sensitive to weather and lighting conditions than their motorized counterparts. However, only a share of the most confident cyclists cycle under adverse environmental conditions, and weather data could be challenging to collect. 
 
 * Different LOS thresholds could be considered for different bicycle users if bicycle user classification for operational analyses becomes relevant. The most essential characteristics for bicyclist classification have been identified, but specific criteria and thresholds still need to be defined. Furthermore, the target user for rural highways still needs to be selected.
 
@@ -436,11 +436,11 @@ Based on these conclusions, the revisions to the LTS analysis methodology are:
 
 The HCM methodology for multilane and two-lane highways was adopted from the methodology for arterials. Given the unique challenges faced by rural cyclists, such as limited infrastructure and higher speeds on rural roads, the HCM analysis methodology provides a first assessment of their safety and accessibility needs. However, it should be further adapted to rural conditions. 
 
-The effect of segregating bicycle and automobile flow may become more critical. Further, some elements may not apply to rural conditions (such as on-street parking), and rural corridors may be composed of several sections in rural and/or rural town contexts, where traffic operations are affected by increased width from new general purpose. Additionally, the HCM method does not distinguish between bicyclists riding in bicycle lanes or sharing the road with motorized vehicles. For that, the current HCM analysis procedure should be used with caution.
+The effect of segregating bicycle and automobile flow may become more critical. Further, some elements may not apply to rural conditions (such as on-street parking), and rural corridors may be composed of several sections in rural and/or rural town contexts, where traffic operations are affected by the new functionalities of the road in rural town contexts. Additionally, the HCM method does not distinguish between bicyclists riding in bicycle lanes or sharing the road with motorized vehicles. For that, the current HCM analysis procedure should be used with caution.
 
 The LTS analysis methodology distinguishes between bicycle lanes and mixed-use. While this methodology has proven useful in evaluating the stress levels experienced by cyclists in urban environments, its effectiveness in rural settings has yet to be fully explored. Only Oregon DOT has provided an adaptation of LTS-based criteria for rural settings based on simple input data available for most agencies.  
 
-Nevertheless, the LTS analysis methodology must still be validated with user perceptions. Notable exceptions were the work of Ferenchak et al. (2020), who indicated that the LTS score correlates well with biking allowance for children, and the work of Dill and McNeil (2016), who collected the percentage of respondents who were comfortable or very comfortable at different urban cycling infrastructure scenarios, with unclear trends by cyclist type. Further, how to determine cyclists' comfort level in rural settings still needs to be determined. 
+Nevertheless, the LTS analysis methodology must still be validated with user perceptions. Notable exceptions were the work of @ferenchak_validation_2020, who indicated that the LTS score correlates well with biking allowance for children, and the work of @dillCyclistTypes, who collected the percentage of respondents who were comfortable or very comfortable at different urban cycling infrastructure scenarios, with unclear trends by cyclist type. Further, how to assess cyclists' comfort level in rural settings still needs to be determined. 
 
 On the other hand, future research should also consider the overall suitability of a roadway for cycling. Not all facility types are suitable for cycling, and the managing roadway agency can prohibit bicycle access. 
 
